@@ -1,0 +1,74 @@
+sentence:پسرک در راه خانه چشمش به یک کبوتر زخمی افتاد
+
+name:پسرک	POS:NOUN	SRL:SBJ	WSD:پسرک	sub_part:پسر+ک
+name:پسر	POS:NOUN	SRL:SBJ_P	WSD:پسر#n2	sub_part:-
+name:ک	POS:UNKNOWN	SRL:SBJ_P	WSD:کوچک#a2	sub_part:-
+
+name:در راه خانه	POS:NOUN	SRL:ADV	WSD:-	sub_part:در+راه+خانه
+name:در	POS:UNKNOWN	SRL:ADV_P	WSD:-	sub_part:-
+name:راه	POS:NOUN	SRL:ADV_P	WSD:راه#n8	sub_part:-
+name:خانه	POS:NOUN	SRL:ADV_P	WSD:خانه#n10	sub_part:-
+
+
+name:به یک کبوتر زخمی	POS:NOUN	SRL:OBJ	WSD:-	sub_part:به+یک+کبوتر+زخمی
+name:به	POS:UNKNOWN	SRL:OBJ_P	WSD:-	sub_part:-
+name:یک	POS:NOUN	SRL:OBJ_P	WSD:یک#n1	sub_part:-
+name:کبوتر	POS:NOUN	SRL:OBJ_P	WSD:;کبوتر#n1	sub_part:-
+name:زخمی	POS:ADJECTIVE	SRL:OBJ_P	WSD:زخمی#a1	sub_part:-
+
+name:چشمش افتاد	POS:VERB	SRL:VERB	WSD:چشم افتادن	sub_part:چشمش+افتاد
+name:چشم	POS:NOUN	SRL:VERB_P	WSD:چشم#n2	sub_part:-
+name:ش	POS:UNKNOWN	SRL:VERB_P	WSD:-	sub_part:-
+name:افتاد	POS:VERB	SRL:VERB_P	WSD:افتادن3#V3	sub_part:-
+
+#------------------------------------------------------
+sentence:کبوتر را برداشته
+sbj:پسرک
+verb:برداشته
+obj:کبوتر را
+adv:
+#------------------------------------------------------
+sentence:و شروع به دویدن به سمت خانه کرد
+sbj:پسرک
+verb:شروع به دویدن کرد
+obj:
+adv:به سمت خانه
+#------------------------------------------------------
+sentence:وارد خانه شد
+sbj:پسرک
+verb:وارد شد
+obj:
+adv:خانه
+#------------------------------------------------------
+sentence:و کبوتر را به مادر خود داد
+sbj:پسرک
+verb:داد
+obj:کبوتر را
+adv:به مادر خود
+#------------------------------------------------------
+sentence:سپس به طرف اتاقش دوید
+sbj:پسرک
+verb:دوید
+obj:
+adv:به طرف اتاقش
+#------------------------------------------------------
+sentence:تیروکمان خود را برداشت 
+sbj:پسرک
+verb:برداشت
+obj:تیروکمان خود را
+adv:
+#------------------------------------------------------
+sentence:و شکست
+sbj:پسرک
+verb:شکست
+obj:تیروکمان خود را
+adv:
+#------------------------------------------------------
+sentence:دور انداخت
+sbj:پسرک
+verb:دور انداخت
+obj:تیروکمان خود را
+adv:
+#------------------------------------------------------
+
+
