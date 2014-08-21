@@ -63,7 +63,7 @@ public class Preprocessor {
 								
 				if (line.equals("sentence:" + NLsentence)){					
 					ArrayList<String> senParts = readSentenceParts(stream, sentence);
-					createSentence(sentence, senParts);
+					Part p = createPart(senParts);
 					break;
 				}
 			}
@@ -118,7 +118,7 @@ public class Preprocessor {
 	 * @param sentence
 	 * @return
 	 */
-	private void createSentence(SentenceInfo sentence, ArrayList<String> senParts){
+	private Part createPart(ArrayList<String> senParts){
 		String[] parts;
 		
 		for(String partStr:senParts){
@@ -127,14 +127,13 @@ public class Preprocessor {
 			
 			if(parts.length != 5){
 				print("bad sentence Info format: " + partStr);
-				return;
+				return null;
 			}
 						
 			for(int i = 0;i<parts.length;i++)
 				parts[i] = parts[i].substring(parts[i].indexOf(":")+1);				
 			
-			Part newPart = new Part(parts[0]);
-			
+			Part newPart = new Part(parts[0]);			
 			
 			switch(parts[1]){
 				case "NOUN": newPart._pos = POS.NOUN; break;
@@ -160,13 +159,22 @@ public class Preprocessor {
 			}
 			
 			Node wsd = null;
-			if(!parts[3].equals("")){
+			if(!parts[3].equals(""))
 				wsd = _kb.findConcept(parts[3]);
-				if(wsd != null)
-					newPart._wsd = wsd;
+			newPart._wsd = wsd;
+			
+			if(parts[4] != null & !parts[4].trim().equals("-")){
+				String[] subs = parts[4].split("+");
+				ArrayList<Part> subParts = new ArrayList<Part>();
+				for(String s:subs){					
+					subParts.add(new Part(s));
+				}
+				newPart.sub_parts = subParts;
+				
 			}
 			
 			print(newPart.toString() + "\n");
+			
 			/*
 			 * ک		wsd
 			 *  
@@ -182,6 +190,7 @@ public class Preprocessor {
 			
 			
 		}
+		return null;
 		
 		
 	}

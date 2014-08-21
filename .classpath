@@ -2,19 +2,18 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="D:/education/PhD khanom/project/source/SceneReasoner/lib/collections-generic-4.01.jar"/>
-	<classpathentry kind="lib" path="D:/education/PhD khanom/project/source/SceneReasoner/lib/commons-io-2.3.jar"/>
-	<classpathentry kind="lib" path="D:/education/PhD khanom/project/source/SceneReasoner/lib/commons-lang3-3.3.2.jar"/>
-	<classpathentry kind="lib" path="D:/education/PhD khanom/project/source/SceneReasoner/lib/guava-14.0.1.jar"/>
-	<classpathentry kind="lib" path="D:/education/PhD khanom/project/source/SceneReasoner/lib/hpr.jar" sourcepath="/HPR2"/>
-	<classpathentry kind="lib" path="D:/education/PhD khanom/project/source/SceneReasoner/lib/jung-algorithms-2.0.1.jar"/>
-	<classpathentry kind="lib" path="D:/education/PhD khanom/project/source/SceneReasoner/lib/jung-api-2.0.1.jar"/>
-	<classpathentry kind="lib" path="D:/education/PhD khanom/project/source/SceneReasoner/lib/jung-graph-impl-2.0.1.jar"/>
-	<classpathentry kind="lib" path="D:/education/PhD khanom/project/source/SceneReasoner/lib/jung-io-2.0.1.jar"/>
-	<classpathentry kind="lib" path="D:/education/PhD khanom/project/source/SceneReasoner/lib/jung-visualization-2.0.1.jar"/>
-	<classpathentry kind="lib" path="D:/education/PhD khanom/project/source/SceneReasoner/lib/opencsv-2.3.jar"/>
-	<classpathentry kind="lib" path="D:/education/PhD khanom/project/source/SceneReasoner/lib/pipe-status-1.1.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/HPR2"/>
-	<classpathentry kind="lib" path="lib/hpr.jar"/>
+	<classpathentry kind="lib" path="D:/education/PhD khanom/project/src/TTS/lib/collections-generic-4.01.jar"/>
+	<classpathentry kind="lib" path="D:/education/PhD khanom/project/src/TTS/lib/commons-io-2.3.jar"/>
+	<classpathentry kind="lib" path="D:/education/PhD khanom/project/src/TTS/lib/commons-lang3-3.3.2.jar"/>
+	<classpathentry kind="lib" path="D:/education/PhD khanom/project/src/TTS/lib/guava-14.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/education/PhD khanom/project/src/TTS/lib/jung-algorithms-2.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/education/PhD khanom/project/src/TTS/lib/jung-api-2.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/education/PhD khanom/project/src/TTS/lib/jung-graph-impl-2.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/education/PhD khanom/project/src/TTS/lib/jung-io-2.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/education/PhD khanom/project/src/TTS/lib/jung-visualization-2.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/education/PhD khanom/project/src/TTS/lib/opencsv-2.3.jar"/>
+	<classpathentry kind="lib" path="D:/education/PhD khanom/project/src/TTS/lib/pipe-status-1.1.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Semantic"/>
+	<classpathentry kind="lib" path="D:/education/PhD khanom/project/src/TTS/lib/hpr.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -26,7 +26,7 @@ public class SceneReasoner {
 	public SceneReasoner(KnowledgeBase kb){
 		this._kb = kb;
 		_re = new SemanticReasoner(_kb, ExecutionMode.RELEASE);
-		_re.SetMaxReasoningDepth(10);
+		_re.setMaxReasoningDepth(10);
 		_re.setMaximumAnswers(10);
 		
 	}
