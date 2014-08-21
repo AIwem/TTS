@@ -186,8 +186,7 @@ public class Preprocessor {
 			 * زخمی	wsd
 			 * 
 			 * افتاد	wsd
-			 */
-			
+			 */		
 			
 		}
 		return null;
