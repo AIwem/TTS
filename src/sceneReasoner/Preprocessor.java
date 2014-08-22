@@ -207,7 +207,7 @@ public class Preprocessor {
 						if(currentPart != null && currentPart.sub_parts != null && currentPart.sub_parts.size() > 0){
 							ArrayList<Part> subParts = new ArrayList<Part> (currentPart.sub_parts.size());
 							
-							for(int j = 0; j < currentPart.sub_parts.size(); j++){
+							for(int j = 0; j < currentPart.sub_parts.size() && (i+1)<senPartStrs.size(); j++){
 								i++;
 								String subPartStr = senPartStrs.get(i);
 								Part sPart = createPart(subPartStr);
@@ -223,7 +223,7 @@ public class Preprocessor {
 					//now senParts has all parts object of this sentence.						
 					sentence = SentenceInfo.createSentence(NLsentence, senParts);
 					
-					print("sentence:"+ sentence + "\n");
+					print(sentence + "\n");
 					break;
 				}
 			}

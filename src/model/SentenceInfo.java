@@ -262,14 +262,32 @@ public class SentenceInfo {
 			rs += sbj.toString();
 		Part verb = getVerb();
 		if(verb != null)
-			rs += " "+ verb.toString();
+			rs += "\t"+ verb.toString();
 		Part obj = getSingleObject();
 		if(obj != null)
-			rs += " " +obj.toString();
+			rs += "\t" +obj.toString();
 		Part adv = getSingleAdverb();
 		if(adv != null)
-			rs += " " + adv.toString();		
-		return rs;
+			rs += "\t" + adv.toString();		
+		
+		String wsd = "";		
+		if(sbj != null && sbj._wsd != null)
+			wsd += sbj._wsd + "\t";
+		else
+			wsd += "null\t";
+		if(verb != null && verb._wsd != null)
+			wsd += verb._wsd + "\t";
+		else
+			wsd += "null\t";
+		if(obj != null && obj._wsd != null)
+			wsd += obj._wsd + "\t";		
+		else
+			wsd += "null\t";
+		if(adv != null && adv._wsd != null)
+			wsd += adv._wsd + "\t";
+		else
+			wsd += "null";
+		return rs + "\n" + wsd;
 	}
 	
 	
