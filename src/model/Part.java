@@ -6,11 +6,25 @@ import ir.ac.itrc.qqa.semantic.enums.POS;
 import ir.ac.itrc.qqa.semantic.kb.Node;
 
 public class Part {
-	
+	/**
+	 * name of this part
+	 */
 	public String _name;
-	public ArrayList<Part> sub_parts;
+	
+	/**
+	 * this part Part-Of-Speech.
+	 */
 	public POS	_pos;
+	
+	/**
+	 * this part Semantic-Role-Label.
+	 */
 	public SRL _srl;
+	
+	/**
+	 * this part Word_Sense_Disambiguation. 
+	 * It means mapping of this part to KB concepts.
+	 */
 	public Node _wsd;
 	
 	/**
@@ -19,6 +33,12 @@ public class Part {
 	public Part(String _name) {
 		this._name = _name;
 	}
+	
+	/**
+	 * sub_part of this part. for example "Å”—ò" has sub_parts of "Å”—", "ò".
+	 * we have assumed that sub_parts has depth of 1. It means each sub_part has no sub_part in itself.
+	 */
+	public ArrayList<Part> sub_parts;
 	
 	/**
 	 * @param _name
@@ -36,16 +56,55 @@ public class Part {
 	 * @param _srl
 	 * @param wSD
 	 */
-	public Part(String _name, ArrayList<Part> sub_parts, POS _pos, SRL _srl, Node wSD) {
-		this._name = _name;
-		this.sub_parts = sub_parts;
+	public Part(String _name, POS _pos, SRL _srl, Node wSD, ArrayList<Part> sub_parts) {
+		this._name = _name;		
 		this._pos = _pos;
 		this._srl = _srl;
 		_wsd = wSD;
+		this.sub_parts = sub_parts;
 	}
-
-	@Override
-	public String toString() {
+	
+	/**
+	 * checks weather this part object _srl is SBJ or not?
+	 * @return
+	 */
+	public boolean isSubject(){
+		if(_srl == SRL.SBJ)
+			return true;
+		return false;		
+	}
+	
+	/**
+	 * checks weather this part object _srl is OBJ or not?
+	 * @return
+	 */
+	public boolean isObject(){
+		if(_srl == SRL.OBJ)
+			return true;
+		return false;		
+	}
+	
+	/**
+	 * checks weather this part object _srl is VERB or not?
+	 * @return
+	 */
+	public boolean isVerb(){
+		if(_srl == SRL.VERB)
+			return true;
+		return false;		
+	}
+	
+	/**
+	 * checks weather this part object _srl is ADVERB or not?
+	 * @return
+	 */
+	public boolean isAdverb(){
+		if(_srl == SRL.ADV)
+			return true;
+		return false;		
+	}
+	
+	public String getStr() {
 		String rs = "name=";
 		if(_name != null) rs += "" + _name; 
 		else rs += "-";
@@ -59,9 +118,15 @@ public class Part {
 		if(_wsd != null) rs += _wsd;
 		else rs += "-";
 		rs += " sub_parts=";
-		if(sub_parts != null) rs += "" + sub_parts;
+		if(sub_parts != null && sub_parts.size() > 0) rs += "" + sub_parts;
 		else rs += "-";			
 		return rs;
+	}	
+
+
+	@Override
+	public String toString() {
+		return _name;
 	}	
 	
 	

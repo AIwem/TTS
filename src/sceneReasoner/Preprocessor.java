@@ -23,17 +23,147 @@ import model.SentenceInfo;
  */
 public class Preprocessor {
 	
+	/**
+	 * We have no NLP module to process input text and convert it to related part,
+	 * so temporarily we aught to read these processed information from a file named  SentenceInfosFileName. 
+	 */
 	private String SentenceInfosFileName = "inputStory/sentenceInfos.txt";
 	private KnowledgeBase _kb;
 		
 	public Preprocessor(KnowledgeBase kb) {
 		this._kb = kb;
 	}
+	
+	/**
+	 * This method gets the stream of SentenceInfosFileName file and reads information 
+	 * related to a specific sentence from it, 
+	 * then return those lines of file which have information of different parts of this sentence.
+	 * 
+	 * @param stream  stream of SentenceInfosFileName file.
+	 * @return those lines of file which have information of different parts of this sentence.
+	 */
+	private ArrayList<String> readSentenceParts(BufferedReader stream){		
+				
+		ArrayList<String> senParts = new ArrayList<String>(); 
+		String content = "";
 
-
-	public SentenceInfo preprocessSentence(String NLsentence){
+		try {
+			content = stream.readLine();
+			
+			if (content == null)
+				return null;
+			//when loop terminates, stream has reached to the information of the next sentence.
+			while(!content.contains("sentence:")){
+				
+				if(!content.startsWith("#"))// not comment line
+					
+					if(!content.equals(""))
+						senParts.add(content);
+				
+				content = stream.readLine();
+				
+				if(content == null)
+					break;
+			}
 		
-		SentenceInfo sentence = new SentenceInfo(NLsentence);
+		} catch (IOException e) {				
+			e.printStackTrace();
+		}
+		return senParts;
+	}
+	
+	/**
+	 * This method gets partStr and return the its equivalent Part object.
+	 * partStr has all information about current Part. 
+	 * this information has a format like this:
+	 * name:پسرک	POS:NOUN	SRL:SBJ	WSD:پسرک	sub_part:پسر+ک
+	 * name:پسر	POS:NOUN	SRL:SBJ-P	WSD:پسر#n2	sub_part:-
+	 * name:ک	POS:UNKNOWN	SRL:SBJ-P	WSD:کوچک#a2	sub_part:-
+	 * 
+	 * @param partStr partStr has all information about current Part.
+	 * @return equivalent Part Object.
+	 */
+	private Part createPart(String partStr){
+		//print("--------------" + partStr);			
+		String[] parts = partStr.split("\t");
+		
+		if(parts.length != 5){
+			print("bad part info format: " + partStr);
+			return null;
+		}
+					
+		for(int i = 0;i<parts.length;i++)
+			parts[i] = parts[i].substring(parts[i].indexOf(":")+1);				
+		
+		Part newPart = new Part(parts[0]);			
+		
+		switch(parts[1]){
+			case "NOUN": newPart._pos = POS.NOUN; break;
+			case "VERB": newPart._pos = POS.VERB; break;
+			case "ADJECTIVE": newPart._pos = POS.ADJECTIVE; break;
+			case "SETELLITE_ADJECTIVE": newPart._pos = POS.SETELLITE_ADJECTIVE; break;
+			case "ADVERB": newPart._pos = POS.ADVERB; break;
+			case "ANY": newPart._pos = POS.ANY; break;
+			case "UNKNOWN": newPart._pos = POS.UNKNOWN; break;
+			default: newPart._pos = POS.UNKNOWN;
+		}
+			
+		switch(parts[2]){
+			case "SBJ": newPart._srl = SRL.SBJ; break;
+			case "SBJ_P": newPart._srl = SRL.SBJ_P; break;
+			case "VERB": newPart._srl = SRL.VERB; break;
+			case "VERB_P": newPart._srl = SRL.VERB_P; break;
+			case "OBJ": newPart._srl = SRL.OBJ; break;
+			case "OBJ_P": newPart._srl = SRL.OBJ_P; break;
+			case "ADV": newPart._srl = SRL.ADV; break;
+			case "ADV_P": newPart._srl = SRL.ADV_P; break;
+			default: newPart._srl = SRL.UNKNOWN;
+		}
+		
+		Node wsd = null;
+		if(!parts[3].equals("") && !parts[3].equals("-"))			
+			wsd = _kb.findConcept(parts[3]);
+		newPart._wsd = wsd;
+		
+		if(parts[4] != null && !parts[4].trim().equals("-")){				
+			String[] subs = parts[4].split("،");
+			
+			ArrayList<Part> subParts = new ArrayList<Part>();
+			for(String s:subs){					
+				subParts.add(new Part(s));
+			}
+			newPart.sub_parts = subParts;
+		}
+		//print(newPart.toString() + "\n");
+		return newPart;
+		/* buuuuuuuuuuug کانسپب پیدا نمی شود
+		 * ک		wsd
+		 *  
+		 * راه	wsd
+		 * خانه	wsd
+		 *  
+		 * یک	wsd
+		 * کبوتر	wsd
+		 * زخمی	wsd
+		 * 
+		 * افتاد	wsd
+		 * 
+		 * ************************** کانسپت هایی که پیدا می شود
+		 * پسرک
+		 * پسر
+		 * چشم افتادن
+		 * چشم
+		 */		
+	}
+
+	/**
+	 * This method gets NLsentence as input and finds its processed information in SentenceInfosFileName file.
+	 * then
+	 * @param NLsentence
+	 * @return
+	 */
+	public SentenceInfo preprocessSentence(String NLsentence){		
+		SentenceInfo sentence = null;
 		BufferedReader stream = null;
 		
 		try
@@ -61,9 +191,39 @@ public class Preprocessor {
 				if (line.startsWith("#")) // comment line
 					continue;
 								
-				if (line.equals("sentence:" + NLsentence)){					
-					ArrayList<String> senParts = readSentenceParts(stream, sentence);
-					Part p = createPart(senParts);
+				//it means the next sentence in file has reached!
+				if (line.equals("sentence:" + NLsentence)){
+					//all of this array are informations of parts of this sentence. 
+					ArrayList<String> senPartStrs = readSentenceParts(stream);
+					
+					ArrayList<Part> senParts = new ArrayList<Part> ();
+					
+					for(int i = 0; i<senPartStrs.size();i++){
+						String currentPartStr = senPartStrs.get(i);
+						Part currentPart = createPart(currentPartStr);		
+						
+						//it means next line are informations of sub_parts of this current_part.
+						// we have assumed that sub_parts has depth of 1. It means each sub_part has no sub_part in itself.
+						if(currentPart != null && currentPart.sub_parts != null && currentPart.sub_parts.size() > 0){
+							ArrayList<Part> subParts = new ArrayList<Part> (currentPart.sub_parts.size());
+							
+							for(int j = 0; j < currentPart.sub_parts.size(); j++){
+								i++;
+								String subPartStr = senPartStrs.get(i);
+								Part sPart = createPart(subPartStr);
+								//print("	sub part " + j + " " + sPart + "\n");
+								if(sPart != null)
+									subParts.add(sPart);							
+							}
+							currentPart.sub_parts = subParts;							
+						}						
+						senParts.add(currentPart);
+					}
+
+					//now senParts has all parts object of this sentence.						
+					sentence = SentenceInfo.createSentence(NLsentence, senParts);
+					
+					print("sentence:"+ sentence + "\n");
 					break;
 				}
 			}
@@ -77,127 +237,9 @@ public class Preprocessor {
 	}
 	
 	
-	private ArrayList<String> readSentenceParts(BufferedReader stream, SentenceInfo sentence){		
-				
-		ArrayList<String> senParts = new ArrayList<String>(); 
-		String content = "";
-
-		try {
-			content = stream.readLine();
-			
-			if (content == null)
-				return null;
-			
-			while(!content.contains("sentence:")){
-				
-				if(!content.startsWith("#"))// not comment line
-					
-					if(!content.equals(""))
-						senParts.add(content);
-				
-				content = stream.readLine();
-				
-				if(content == null)
-					break;
-			}
-		
-		} catch (IOException e) {				
-			e.printStackTrace();
-		}
-		return senParts;
-	}
-	
-	/**senParts has all parts of preprocessed  information about current sentence.
-	 * this information has a format like this:
-	 * sentence:پسرک در راه خانه چشمش به یک کبوتر زخمی افتاد
-	 * name:پسرک	POS:NOUN	SRL:SBJ	WSD:پسرک	sub_part:پسر+ک
-	 * name:پسر	POS:NOUN	SRL:SBJ-P	WSD:پسر#n2	sub_part:-
-	 * name:ک	POS:UNKNOWN	SRL:SBJ-P	WSD:کوچک#a2	sub_part:-
-	 *
-	 * @param stream
-	 * @param sentence
-	 * @return
-	 */
-	private Part createPart(ArrayList<String> senParts){
-		String[] parts;
-		
-		for(String partStr:senParts){
-			print(partStr);			
-			parts = partStr.split("\t");
-			
-			if(parts.length != 5){
-				print("bad sentence Info format: " + partStr);
-				return null;
-			}
-						
-			for(int i = 0;i<parts.length;i++)
-				parts[i] = parts[i].substring(parts[i].indexOf(":")+1);				
-			
-			Part newPart = new Part(parts[0]);			
-			
-			switch(parts[1]){
-				case "NOUN": newPart._pos = POS.NOUN; break;
-				case "VERB": newPart._pos = POS.VERB; break;
-				case "ADJECTIVE": newPart._pos = POS.ADJECTIVE; break;
-				case "SETELLITE_ADJECTIVE": newPart._pos = POS.SETELLITE_ADJECTIVE; break;
-				case "ADVERB": newPart._pos = POS.ADVERB; break;
-				case "ANY": newPart._pos = POS.ANY; break;
-				case "UNKNOWN": newPart._pos = POS.UNKNOWN; break;
-				default: newPart._pos = POS.UNKNOWN;
-			}
-				
-			switch(parts[2]){
-				case "SBJ": newPart._srl = SRL.SBJ; break;
-				case "SBJ_P": newPart._srl = SRL.SBJ_P; break;
-				case "VERB": newPart._srl = SRL.VERB; break;
-				case "VERB_P": newPart._srl = SRL.VERB_P; break;
-				case "OBJ": newPart._srl = SRL.OBJ; break;
-				case "OBJ_P": newPart._srl = SRL.OBJ_P; break;
-				case "ADV": newPart._srl = SRL.ADV; break;
-				case "ADV_P": newPart._srl = SRL.ADV_P; break;
-				default: newPart._srl = SRL.UNKNOWN;
-			}
-			
-			Node wsd = null;
-			if(!parts[3].equals(""))
-				wsd = _kb.findConcept(parts[3]);
-			newPart._wsd = wsd;
-			
-			if(parts[4] != null & !parts[4].trim().equals("-")){
-				String[] subs = parts[4].split("+");
-				ArrayList<Part> subParts = new ArrayList<Part>();
-				for(String s:subs){					
-					subParts.add(new Part(s));
-				}
-				newPart.sub_parts = subParts;
-				
-			}
-			
-			print(newPart.toString() + "\n");
-			
-			/*
-			 * ک		wsd
-			 *  
-			 * راه	wsd
-			 * خانه	wsd
-			 *  
-			 * یک	wsd
-			 * کبوتر	wsd
-			 * زخمی	wsd
-			 * 
-			 * افتاد	wsd
-			 */		
-			
-		}
-		return null;
-		
-		
-	}
-	
 	public void print(String s){
 		System.out.println(s);
 	}
-
 	
 	public SceneModel preprocessScene(SentenceInfo sentenceInfo){
 		return null;		

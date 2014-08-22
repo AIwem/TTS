@@ -15,5 +15,6 @@
 	<classpathentry kind="lib" path="D:/education/PhD khanom/project/src/TTS/lib/pipe-status-1.1.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Semantic"/>
 	<classpathentry kind="lib" path="D:/education/PhD khanom/project/src/TTS/lib/hpr.jar"/>
+	<classpathentry kind="lib" path="lib/hpr.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
