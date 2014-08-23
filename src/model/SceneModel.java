@@ -1,6 +1,14 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Locale;
+
+import sceneElement.DynamicObject;
+import sceneElement.Goal;
+import sceneElement.Location;
+import sceneElement.Role;
+import sceneElement.StaticObject;
+import sceneElement.Time;
 
 /**
  * 
@@ -13,7 +21,16 @@ public class SceneModel {
 	
 	private ArrayList<SentenceModel> sentences;
 	
-	private ArrayList<Part> roles;	
+	private ArrayList<Role> roles;
 	
+	private ArrayList<StaticObject> static_obj;
+	
+	private ArrayList<DynamicObject> dynamic_obj;
+	
+	private Location location;
+	
+	private Time time;
+	
+	private Goal scene_goal;
 
 }

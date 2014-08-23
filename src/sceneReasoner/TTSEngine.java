@@ -55,6 +55,48 @@ public class TTSEngine {
 		return richSM;
 	}
 		
+	public void checkSemanticReasoner()
+	{
+		SemanticReasoner _re = new SemanticReasoner(_kb, ExecutionMode.RELEASE);
+		PlausibleQuestion pq = new PlausibleQuestion();
+		pq.argument = _kb.addConcept("پسرک");
+		pq.referent = _kb.addConcept("انسان");		
+		pq.descriptor = _kb.addConcept("چشم افتادن");
+
+//		pq.argument = kb.addConcept("پسر بچه");
+//		pq.referent = kb.addConcept("بچه");
+//		pq.descriptor = KnowledgeBase.HPR_ISA;
+		
+		System.out.print(pq.toString() + " ... ");
+		
+		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
+		
+		System.out.println("done");
+		
+		System.out.println("Answers:");
+		
+		int count = 0;
+		for (PlausibleAnswer answer: answers)
+		{
+			System.out.println(++count + ". " + answer.toString());
+			
+			ArrayList<String> justifications = answer.GetTechnicalJustifications();
+			
+			int countJustification = 0;
+			for (String justification: justifications)
+			{
+				System.out.println("-------" + ++countJustification + "--------");
+				System.out.println(justification);
+			}
+		}
+		
+		System.out.println("Summary:");
+		System.out.println("\tInferences: " + _re.totalCalls);
+		System.out.println("\tTime: " + _re.reasoningTime / 100 + " ms");
+		System.out.println("\tThroughput: " + (_re.totalCalls / _re.reasoningTime) * 1000 + " inference/s");
+	}	
+	
+
 	
 	public int loadKb(String path)
 	{
@@ -73,7 +115,10 @@ public class TTSEngine {
 		return loaded;
 	}
 	
-	
-	
-
+	/*
+	public static void main(String[] args) {
+		TTSEngine tts = new TTSEngine();
+		tts.checkSemanticReasoner();
+	}
+	*/
 }

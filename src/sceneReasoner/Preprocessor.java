@@ -3,6 +3,11 @@ package sceneReasoner;
 import ir.ac.itrc.qqa.semantic.enums.POS;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
 import ir.ac.itrc.qqa.semantic.kb.Node;
+//import ir.ac.itrc.qqa.semantic.util.MyError;
+
+
+
+
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -14,6 +19,7 @@ import model.Part;
 import model.SRL;
 import model.SceneModel;
 import model.SentenceModel;
+
 /**
  * Preprocessor preprocesses the input natural language sentences.  
  * It can convert sentence in natural language to their SentenceModel.
@@ -140,7 +146,9 @@ public class Preprocessor {
 		String[] parts = partStr.split("\t");
 		
 		if(parts.length != 5){
-			print("bad part info format: " + partStr);
+			//MyError.exit("Bad information format " + partStr);
+			//MyError.error("Bad information format " + partStr);
+			print("Bad information format" + partStr);
 			return null;
 		}
 					
@@ -173,8 +181,10 @@ public class Preprocessor {
 		}
 		
 		Node wsd = null;
-		if(!parts[3].equals("") && !parts[3].equals("-"))			
-			wsd = _kb.findConcept(parts[3]);
+		if(!parts[3].equals("") && !parts[3].equals("-"))
+			wsd = _kb.addConcept(parts[3]);
+			//wsd = _kb.findConcept(parts[3]);  why addConcept instead of findConcept		
+		
 		newPart._wsd = wsd;
 		
 		if(parts[4] != null && !parts[4].trim().equals("-")){				
@@ -187,25 +197,7 @@ public class Preprocessor {
 			newPart.sub_parts = subParts;
 		}
 		//print(newPart.toString() + "\n");
-		return newPart;
-		/* buuuuuuuuuuug کانسپب پیدا نمی شود
-		 * ک		wsd
-		 *  
-		 * راه	wsd
-		 * خانه	wsd
-		 *  
-		 * یک	wsd
-		 * کبوتر	wsd
-		 * زخمی	wsd
-		 * 
-		 * افتاد	wsd
-		 * 
-		 * ************************** کانسپت هایی که پیدا می شود
-		 * پسرک
-		 * پسر
-		 * چشم افتادن
-		 * چشم
-		 */		
+		return newPart;		
 	}
 
 	private void print(String s){
@@ -253,7 +245,7 @@ public class Preprocessor {
 		//now senParts has all parts object of this sentence.						
 		sentence = SentenceModel.arrageSentenceParts(NLsentence, senParts);
 		print("natural sentence: " + NLsentence);
-		print("preproc sentence: " + sentence);
+		print("preproc sentence: " + sentence);		
 		return sentence;
 		
 	}

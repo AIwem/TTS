@@ -1,5 +1,11 @@
 package userInterface;
 
+import ir.ac.itrc.qqa.semantic.enums.ExecutionMode;
+import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
+import ir.ac.itrc.qqa.semantic.reasoning.PlausibleAnswer;
+import ir.ac.itrc.qqa.semantic.reasoning.PlausibleQuestion;
+import ir.ac.itrc.qqa.semantic.reasoning.SemanticReasoner;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -103,7 +109,7 @@ public class UI {
 		}
 		return inputs;
 	}
-	
+
 	public static void main(String[] args) {
 		System.out.println("بسم الله الرحمن الرحیم و توکلت علی الله");
 	
