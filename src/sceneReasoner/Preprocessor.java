@@ -13,11 +13,12 @@ import java.util.ArrayList;
 import model.Part;
 import model.SRL;
 import model.SceneModel;
-import model.SentenceInfo;
+import model.SentenceModel;
 /**
- * Preprocessor preprocesses the input natural language sentences and 
- * first converts it to the SentenceInfo
- * second converts the SentenceInfo to primary sceneModel. 
+ * Preprocessor preprocesses the input natural language sentences.  
+ * It can convert sentence in natural language to their SentenceModel.
+ * It can also convert the SentenceModel to primary sceneModel.
+ *  
  * @author hashemi
  *
  */
@@ -70,6 +71,57 @@ public class Preprocessor {
 			e.printStackTrace();
 		}
 		return senParts;
+	}
+		
+	/**
+	 * This method gets NLsentence as input and finds its processed information in SentenceInfosFileName file.
+	 * 
+	 * @param NLsentence
+	 * @return informations of parts of this sentence.
+	 */
+	private ArrayList<String> findSentenceInfos(String NLsentence){		
+		ArrayList<String> senPartStrs = null;
+		BufferedReader stream = null;		
+		try
+		{
+			stream = new BufferedReader(new InputStreamReader(new FileInputStream(SentenceInfosFileName), "utf-8"));			
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error opening `" + SentenceInfosFileName + "` for reading input natural language texts!");
+			e.printStackTrace();		
+		}
+			
+		try {
+			String line = "";
+			while (line != null)
+			{				
+				line = stream.readLine();
+				
+				if(line == null)
+					break;
+				
+				if(line.equals(""))
+					continue;	
+												
+				if (line.startsWith("#")) // comment line
+					continue;
+								
+				//it means the next sentence in file has reached!
+				if (line.equals("sentence:" + NLsentence)){
+
+					//all of this array are informations of parts of this sentence. 
+					senPartStrs = readSentenceParts(stream);					
+					break;
+				}
+			}
+			stream.close();
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+		return senPartStrs;		
 	}
 	
 	/**
@@ -156,92 +208,59 @@ public class Preprocessor {
 		 */		
 	}
 
-	/**
-	 * This method gets NLsentence as input and finds its processed information in SentenceInfosFileName file.
-	 * then
-	 * @param NLsentence
-	 * @return
-	 */
-	public SentenceInfo preprocessSentence(String NLsentence){		
-		SentenceInfo sentence = null;
-		BufferedReader stream = null;
-		
-		try
-		{
-			stream = new BufferedReader(new InputStreamReader(new FileInputStream(SentenceInfosFileName), "utf-8"));
-		}
-		catch(Exception e)
-		{
-			System.out.println("Error opening `" + SentenceInfosFileName + "` for reading input natural language texts!");
-			e.printStackTrace();
-		}
-			
-		try {
-			String line = "";
-			while (line != null)
-			{				
-				line = stream.readLine();
-				
-				if(line == null)
-					break;
-				
-				if(line.equals(""))
-					continue;	
-												
-				if (line.startsWith("#")) // comment line
-					continue;
-								
-				//it means the next sentence in file has reached!
-				if (line.equals("sentence:" + NLsentence)){
-					//all of this array are informations of parts of this sentence. 
-					ArrayList<String> senPartStrs = readSentenceParts(stream);
-					
-					ArrayList<Part> senParts = new ArrayList<Part> ();
-					
-					for(int i = 0; i<senPartStrs.size();i++){
-						String currentPartStr = senPartStrs.get(i);
-						Part currentPart = createPart(currentPartStr);		
-						
-						//it means next line are informations of sub_parts of this current_part.
-						// we have assumed that sub_parts has depth of 1. It means each sub_part has no sub_part in itself.
-						if(currentPart != null && currentPart.sub_parts != null && currentPart.sub_parts.size() > 0){
-							ArrayList<Part> subParts = new ArrayList<Part> (currentPart.sub_parts.size());
-							
-							for(int j = 0; j < currentPart.sub_parts.size() && (i+1)<senPartStrs.size(); j++){
-								i++;
-								String subPartStr = senPartStrs.get(i);
-								Part sPart = createPart(subPartStr);
-								//print("	sub part " + j + " " + sPart + "\n");
-								if(sPart != null)
-									subParts.add(sPart);							
-							}
-							currentPart.sub_parts = subParts;							
-						}						
-						senParts.add(currentPart);
-					}
-
-					//now senParts has all parts object of this sentence.						
-					sentence = SentenceInfo.createSentence(NLsentence, senParts);
-					
-					print(sentence + "\n");
-					break;
-				}
-			}
-			stream.close();
-		}
-		catch (IOException e)
-		{
-			e.printStackTrace();
-		}
-		return sentence;		
-	}
-	
-	
-	public void print(String s){
+	private void print(String s){
 		System.out.println(s);
 	}
+		
+	/**
+	 * preprocessSentence first finds preprocessed information of this sentence from its related file.
+	 * then convert this information to SentenceModel object 
+	 * @param NLsentence sentence in natural language.
+	 * @param senPartStrs contains informations of parts of this sentence.
+	 * @return
+	 */
+	public SentenceModel preprocessSentence(String NLsentence) {
+		SentenceModel sentence = null;
+		ArrayList<String> senPartStrs = findSentenceInfos(NLsentence);
+		
+		if(senPartStrs == null)
+			return sentence; // it is null
+		
+		ArrayList<Part> senParts = new ArrayList<Part> ();
+		
+		for(int i = 0; i<senPartStrs.size();i++){
+			String currentPartStr = senPartStrs.get(i);
+			Part currentPart = createPart(currentPartStr);		
+			
+			//it means next line are informations of sub_parts of this current_part.
+			// we have assumed that sub_parts has depth of 1. It means each sub_part has no sub_part in itself.
+			if(currentPart != null && currentPart.sub_parts != null && currentPart.sub_parts.size() > 0){
+				ArrayList<Part> subParts = new ArrayList<Part> (currentPart.sub_parts.size());
+				
+				for(int j = 0; j < currentPart.sub_parts.size() && (i+1)<senPartStrs.size(); j++){
+					i++;
+					String subPartStr = senPartStrs.get(i);
+					Part sPart = createPart(subPartStr);
+					//print("	sub part " + j + " " + sPart + "\n");
+					if(sPart != null)
+						subParts.add(sPart);							
+				}
+				currentPart.sub_parts = subParts;							
+			}						
+			senParts.add(currentPart);
+		}
+
+		//now senParts has all parts object of this sentence.						
+		sentence = SentenceModel.arrageSentenceParts(NLsentence, senParts);
+		print("natural sentence: " + NLsentence);
+		print("preproc sentence: " + sentence);
+		return sentence;
+		
+	}
 	
-	public SceneModel preprocessScene(SentenceInfo sentenceInfo){
+	
+	public SceneModel preprocessScene(SentenceModel sentenceModel){
+	
 		return null;		
 	}
 

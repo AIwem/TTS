@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * @author hashemi
  *
  */
-public class SentenceInfo {
+public class SentenceModel{
 		
 	/**
 	 * the scene which this sentence belongs to. 
@@ -42,11 +42,11 @@ public class SentenceInfo {
 	 */
 	private ArrayList<Part> adverbs;
 	
-	public SentenceInfo(String originalSentence){
+	public SentenceModel(String originalSentence){
 		this.originalSentence = originalSentence;			
 	}
 	
-	public SentenceInfo(String originalSentence, SceneModel sceneModel){
+	public SentenceModel(String originalSentence, SceneModel sceneModel){
 		this.originalSentence = originalSentence;
 		this.scene = sceneModel;		
 	}
@@ -226,8 +226,8 @@ public class SentenceInfo {
 	 * @param sentence sentence object which is to be completed.
 	 * @param senParts different part object of this sentence.
 	 */
-	public static SentenceInfo createSentence(String NLSentence, ArrayList<Part> senParts) {
-		SentenceInfo sentence = new SentenceInfo(NLSentence);
+	public static SentenceModel arrageSentenceParts(String NLSentence, ArrayList<Part> senParts) {
+		SentenceModel sentence = new SentenceModel(NLSentence);
 		for(Part part:senParts){
 			if(part == null)
 				continue;			
@@ -294,7 +294,7 @@ public class SentenceInfo {
 	
 	/*
 	public static void main(String[] args){
-		SentenceInfo sen1 = new SentenceInfo("");
+		SentenceModel sen1 = new SentenceModel("");
 		sen1.setSubjects("pesarak","ali");
 		
 		ArrayList<Part> sbjs = sen1.getSubjects();

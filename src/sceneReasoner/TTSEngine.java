@@ -9,7 +9,7 @@ import ir.ac.itrc.qqa.semantic.reasoning.SemanticReasoner;
 import java.util.ArrayList;
 
 import model.SceneModel;
-import model.SentenceInfo;
+import model.SentenceModel;
 
 /**
  * TTSEngine is an engine that converts natural language texts to Scene. 
@@ -47,7 +47,7 @@ public class TTSEngine {
 			case "new scene": break;
 			default: break;
 		}
-		SentenceInfo sen = _pp.preprocessSentence(inputNLSentence);
+		SentenceModel sen = _pp.preprocessSentence(inputNLSentence);
 		SceneModel primarySM = _pp.preprocessScene(sen);
 		
 		SceneModel richSM = _sr.enrichSceneModel(primarySM);		 

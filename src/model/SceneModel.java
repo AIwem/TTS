@@ -11,7 +11,7 @@ public class SceneModel {
 	
 	private StoryModel story;
 	
-	private ArrayList<SentenceInfo> sentences;
+	private ArrayList<SentenceModel> sentences;
 	
 	private ArrayList<Part> roles;	
 	
