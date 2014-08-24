@@ -7,6 +7,7 @@ import sceneElement.DynamicObject;
 import sceneElement.Goal;
 import sceneElement.Location;
 import sceneElement.Role;
+import sceneElement.SceneEmotion;
 import sceneElement.StaticObject;
 import sceneElement.Time;
 
@@ -31,6 +32,8 @@ public class SceneModel {
 	
 	private Time time;
 	
-	private Goal scene_goal;
+	private ArrayList<Goal> scene_goal;
+		
+	private ArrayList<SceneEmotion> emotions;
 
 }

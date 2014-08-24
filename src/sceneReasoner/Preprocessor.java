@@ -40,7 +40,7 @@ public class Preprocessor {
 	public Preprocessor(KnowledgeBase kb) {
 		this._kb = kb;
 	}
-	
+		
 	/**
 	 * This method gets the stream of SentenceInfosFileName file and reads information 
 	 * related to a specific sentence from it, 
@@ -116,7 +116,7 @@ public class Preprocessor {
 				//it means the next sentence in file has reached!
 				if (line.equals("sentence:" + NLsentence)){
 
-					//all of this array are informations of parts of this sentence. 
+					//this array has information of all parts of this sentence. 
 					senPartStrs = readSentenceParts(stream);					
 					break;
 				}
@@ -213,6 +213,8 @@ public class Preprocessor {
 	 */
 	public SentenceModel preprocessSentence(String NLsentence) {
 		SentenceModel sentence = null;
+		
+		//this array has information of all parts of this sentence.
 		ArrayList<String> senPartStrs = findSentenceInfos(NLsentence);
 		
 		if(senPartStrs == null)
@@ -232,8 +234,7 @@ public class Preprocessor {
 				for(int j = 0; j < currentPart.sub_parts.size() && (i+1)<senPartStrs.size(); j++){
 					i++;
 					String subPartStr = senPartStrs.get(i);
-					Part sPart = createPart(subPartStr);
-					//print("	sub part " + j + " " + sPart + "\n");
+					Part sPart = createPart(subPartStr);					
 					if(sPart != null)
 						subParts.add(sPart);							
 				}
@@ -242,7 +243,7 @@ public class Preprocessor {
 			senParts.add(currentPart);
 		}
 
-		//now senParts has all parts object of this sentence.						
+		//now senParts has all part objects of this sentence.						
 		sentence = SentenceModel.arrageSentenceParts(NLsentence, senParts);
 		print("natural sentence: " + NLsentence);
 		print("preproc sentence: " + sentence);		

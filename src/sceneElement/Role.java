@@ -13,14 +13,12 @@ import model.Part;
  * @author hashemi
  *
  */
-public class Role extends SceneElement{
+public class Role extends SceneElement{	
 	
-	private Node concept;
+	private ArrayList<RoleAction> actions;
 	
-	private ArrayList<Part> actions;
-	
-	private ArrayList<Part> goals;
+	private ArrayList<RoleGoal> goals;
 
-	private ArrayList<Part> emotions;
+	private ArrayList<RoleEmotion> emotions;
 
 }

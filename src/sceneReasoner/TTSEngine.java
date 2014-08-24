@@ -115,10 +115,10 @@ public class TTSEngine {
 		return loaded;
 	}
 	
-	/*
+	
 	public static void main(String[] args) {
 		TTSEngine tts = new TTSEngine();
 		tts.checkSemanticReasoner();
 	}
-	*/
+	
 }
