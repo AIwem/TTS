@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import ir.ac.itrc.qqa.semantic.enums.POS;
 import ir.ac.itrc.qqa.semantic.kb.Node;
+import ir.ac.itrc.qqa.semantic.util.MyError;
 
 public class Part {
 	/**
@@ -28,6 +29,11 @@ public class Part {
 	public Node _wsd;
 	
 	/**
+	 * this part dependency in noun-phrase or verb-phrase.
+	 */
+	public DEP _dep;
+	
+	/**
 	 * @param _name
 	 */
 	public Part(String _name) {
@@ -35,7 +41,7 @@ public class Part {
 	}
 	
 	/**
-	 * sub_part of this part. for example "��ј" has sub_parts of "���", "�".
+	 * sub_part of this part. for example "کبوتر زخمی" has sub_parts of "کبوتر" and "زخمی".
 	 * we have assumed that sub_parts has depth of 1. It means each sub_part has no sub_part in itself.
 	 */
 	public ArrayList<Part> sub_parts;
@@ -104,7 +110,42 @@ public class Part {
 		return false;		
 	}
 	
-	public String getStr() {
+	public boolean hasSub_parts(){
+		if(sub_parts != null && sub_parts.size() > 0)
+			return true;
+		return false;
+	}
+	
+	public boolean isPreSub_part(){
+		if(_dep == DEP.PRE)
+			return true;
+		return false;
+	}
+	
+	public boolean isPostSub_part(){
+		if(_dep == DEP.POST)
+			return true;
+		return false;
+	}
+	
+	public boolean isMainSub_part(){
+		if(_dep == DEP.MAIN)
+			return true;
+		return false;
+	}
+	
+	public Part getMainSub_part(){
+		if(!hasSub_parts())
+			return this;
+		
+		for(Part p:sub_parts)
+			if(p._dep == DEP.MAIN)
+				return p;
+		MyError.error("sub_parts has no MAIN part!" + this.getStr());
+		return null;
+	}
+	
+ 	public String getStr() {
 		String rs = "name=";
 		if(_name != null) rs += "" + _name; 
 		else rs += "-";
@@ -118,8 +159,11 @@ public class Part {
 		if(_wsd != null) rs += _wsd;
 		else rs += "-";
 		rs += " sub_parts=";
-		if(sub_parts != null && sub_parts.size() > 0) rs += "" + sub_parts;
-		else rs += "-";			
+		if(hasSub_parts()) rs += "" + sub_parts;
+		else rs += "-";
+		rs += " dep=";
+		if(_dep != null) rs += _dep;
+		else rs += "-";
 		return rs;
 	}	
 

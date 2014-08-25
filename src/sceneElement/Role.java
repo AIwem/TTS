@@ -15,10 +15,14 @@ import model.Part;
  */
 public class Role extends SceneElement{	
 	
-	private ArrayList<RoleAction> actions;
-	
-	private ArrayList<RoleGoal> goals;
+	public Role(String _name, Node _node) {
+		super(_name, _node);
+	}
 
-	private ArrayList<RoleEmotion> emotions;
+	private ArrayList<RoleAction> role_actions;
+	
+	private ArrayList<RoleGoal> role_goals;
+
+	private ArrayList<RoleEmotion> role_emotions;
 
 }

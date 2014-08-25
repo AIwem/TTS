@@ -9,12 +9,18 @@ import ir.ac.itrc.qqa.semantic.kb.Node;
 
 
 
+
+
+import ir.ac.itrc.qqa.semantic.util.MyError;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+import sceneElement.Role;
+import model.DEP;
 import model.Part;
 import model.SRL;
 import model.SceneModel;
@@ -142,13 +148,13 @@ public class Preprocessor {
 	 * @return equivalent Part Object.
 	 */
 	private Part createPart(String partStr){
-		//print("--------------" + partStr);			
+		//print(partStr);			
 		String[] parts = partStr.split("\t");
 		
-		if(parts.length != 5){
+		if(parts.length != 6){
 			//MyError.exit("Bad information format " + partStr);
 			//MyError.error("Bad information format " + partStr);
-			print("Bad information format" + partStr);
+			print("Bad information format " + partStr);
 			return null;
 		}
 					
@@ -196,7 +202,14 @@ public class Preprocessor {
 			}
 			newPart.sub_parts = subParts;
 		}
-		//print(newPart.toString() + "\n");
+		
+		switch(parts[5]){
+			case "MAIN": newPart._dep = DEP.MAIN; break;
+			case "PRE": newPart._dep = DEP.PRE; break;
+			case "POST": newPart._dep = DEP.POST; break;
+			default: newPart._dep = DEP.UNKOWN;
+		}		
+		//print(newPart.getStr() + "\n");
 		return newPart;		
 	}
 
@@ -228,7 +241,7 @@ public class Preprocessor {
 			
 			//it means next line are informations of sub_parts of this current_part.
 			// we have assumed that sub_parts has depth of 1. It means each sub_part has no sub_part in itself.
-			if(currentPart != null && currentPart.sub_parts != null && currentPart.sub_parts.size() > 0){
+			if(currentPart != null && currentPart.hasSub_parts()){
 				ArrayList<Part> subParts = new ArrayList<Part> (currentPart.sub_parts.size());
 				
 				for(int j = 0; j < currentPart.sub_parts.size() && (i+1)<senPartStrs.size(); j++){
@@ -244,17 +257,60 @@ public class Preprocessor {
 		}
 
 		//now senParts has all part objects of this sentence.						
-		sentence = SentenceModel.arrageSentenceParts(NLsentence, senParts);
-		print("natural sentence: " + NLsentence);
-		print("preproc sentence: " + sentence);		
+		sentence = SentenceModel.arrageSentenceParts(NLsentence, senParts);			
 		return sentence;
 		
 	}
 	
-	
+	/**
+	 * preprocessScene preprocesses input SentenceModel and convert it to its equivalent SceneModel object.
+	 * TODO: we have temporarily assumed that every sentence has single subject, single object (if any), and single adverb (if any).
+	 *   
+	 * @param sentenceModel the SenetenceModel to be converted.
+	 * @return SceneModel equivalent to input SentenceModel
+	 */
 	public SceneModel preprocessScene(SentenceModel sentenceModel){
-	
-		return null;		
+		
+		SceneModel sm = new SceneModel();
+		
+		if(sentenceModel == null)
+			return null;
+		
+		//Part sbj = sentenceModel.getSingleSubject();
+		//if(sbj != null && sbj.isSubject()){
+		Part obj = sentenceModel.getSingleObject();
+		if(obj != null && obj.isObject()){
+			Node wsd = obj._wsd;			
+			if(wsd != null){// it means that the subject itself has a WSD object and has an equivalent concept in KB.
+				Role role = new Role(obj._name, wsd);			
+				sm.addRole(role);							
+			}
+			else{ // it means that the subject is a noun-phrase and has sub_parts.
+				if(obj.hasSub_parts()){
+					Part mainPart = obj.getMainSub_part();
+					if(mainPart == null){
+						MyError.error("subject's sub_parts has no main part!");
+						return null;
+					}					
+					wsd = mainPart._wsd;		
+					if(wsd != null){// TODO: create pluasibleTerm
+						obj._wsd = wsd;
+						Role role = new Role(obj._name, wsd);			
+						sm.addRole(role);							
+					}
+					
+				}
+				else{
+					MyError.error("bad sentence obj, no wsd in it nor in sub_parts! " + sentenceModel);
+					return null;					
+				}				
+			}
+			return sm;
+		}
+		else{
+			MyError.error("bad sentence obj, no subject included! " + sentenceModel);
+			return null;
+		}				
 	}
 
 	/*public static void main(String[] args) {

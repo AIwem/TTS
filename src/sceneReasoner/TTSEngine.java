@@ -47,8 +47,15 @@ public class TTSEngine {
 			case "new scene": break;
 			default: break;
 		}
+		System.out.println("natural sentence: " + inputNLSentence);
+		
 		SentenceModel sen = _pp.preprocessSentence(inputNLSentence);
+		
+		System.out.println("preproc sentence: " + sen);	
+		
 		SceneModel primarySM = _pp.preprocessScene(sen);
+		
+		System.out.println("preprocess scene: " + sen + "\n\n");
 		
 		SceneModel richSM = _sr.enrichSceneModel(primarySM);		 
 		
@@ -116,9 +123,10 @@ public class TTSEngine {
 	}
 	
 	
+	/*
 	public static void main(String[] args) {
 		TTSEngine tts = new TTSEngine();
 		tts.checkSemanticReasoner();
 	}
-	
+	*/
 }
