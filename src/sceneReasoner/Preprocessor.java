@@ -289,7 +289,7 @@ public class Preprocessor {
 				if(obj.hasSub_parts()){
 					Part mainPart = obj.getMainSub_part();
 					if(mainPart == null){
-						MyError.error("subject's sub_parts has no main part!");
+						//MyError.error("subject's sub_parts has no main part!");
 						return null;
 					}					
 					wsd = mainPart._wsd;		
@@ -301,14 +301,14 @@ public class Preprocessor {
 					
 				}
 				else{
-					MyError.error("bad sentence obj, no wsd in it nor in sub_parts! " + sentenceModel);
+					//MyError.error("bad sentence obj, no wsd in it nor in sub_parts! " + sentenceModel);
 					return null;					
 				}				
 			}
 			return sm;
 		}
 		else{
-			MyError.error("bad sentence obj, no subject included! " + sentenceModel);
+			//MyError.error("bad sentence obj, no subject included! " + sentenceModel);
 			return null;
 		}				
 	}
