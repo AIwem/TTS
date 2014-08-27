@@ -44,7 +44,7 @@ name:سمت	POS:NOUN	SRL:ADV_P	WSD:سمت#n4	sub_part:-	dep:PRE
 name:خانه	POS:NOUN	SRL:ADV_P	WSD:خانه#n10	sub_part:-	dep:MAIN
 
 #------------------------------------------------------
-sentence:وارد خانه شد
+sentence:‌وارد خانه شد
 
 name:پسرک	POS:NOUN	SRL:SBJ	WSD:پسرک	sub_part:پسر،ک	dep:-
 name:پسر	POS:NOUN	SRL:SBJ_P	WSD:پسر#n2	sub_part:-	dep:MAIN
