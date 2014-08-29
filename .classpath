@@ -3,17 +3,16 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/Semantic"/>
-	<classpathentry kind="lib" path="E:/hashemi/Documents/education/phd khanom/project/source/TTS/lib/collections-generic-4.01.jar"/>
-	<classpathentry kind="lib" path="E:/hashemi/Documents/education/phd khanom/project/source/TTS/lib/commons-io-2.3.jar"/>
-	<classpathentry kind="lib" path="E:/hashemi/Documents/education/phd khanom/project/source/TTS/lib/commons-lang3-3.3.2.jar"/>
-	<classpathentry kind="lib" path="E:/hashemi/Documents/education/phd khanom/project/source/TTS/lib/guava-14.0.1.jar"/>
-	<classpathentry kind="lib" path="E:/hashemi/Documents/education/phd khanom/project/source/TTS/lib/hpr.jar" sourcepath="/Semantic"/>
-	<classpathentry kind="lib" path="E:/hashemi/Documents/education/phd khanom/project/source/TTS/lib/jung-algorithms-2.0.1.jar"/>
-	<classpathentry kind="lib" path="E:/hashemi/Documents/education/phd khanom/project/source/TTS/lib/jung-api-2.0.1.jar"/>
-	<classpathentry kind="lib" path="E:/hashemi/Documents/education/phd khanom/project/source/TTS/lib/jung-graph-impl-2.0.1.jar"/>
-	<classpathentry kind="lib" path="E:/hashemi/Documents/education/phd khanom/project/source/TTS/lib/jung-io-2.0.1.jar"/>
-	<classpathentry kind="lib" path="E:/hashemi/Documents/education/phd khanom/project/source/TTS/lib/jung-visualization-2.0.1.jar"/>
-	<classpathentry kind="lib" path="E:/hashemi/Documents/education/phd khanom/project/source/TTS/lib/opencsv-2.3.jar"/>
-	<classpathentry kind="lib" path="E:/hashemi/Documents/education/phd khanom/project/source/TTS/lib/pipe-status-1.1.jar"/>
+	<classpathentry kind="lib" path="./lib/collections-generic-4.01.jar"/>
+	<classpathentry kind="lib" path="./lib/commons-io-2.3.jar"/>
+	<classpathentry kind="lib" path="./lib/commons-lang3-3.3.2.jar"/>
+	<classpathentry kind="lib" path="./lib/guava-14.0.1.jar"/>
+	<classpathentry kind="lib" path="./lib/jung-algorithms-2.0.1.jar"/>
+	<classpathentry kind="lib" path="./lib/jung-api-2.0.1.jar"/>
+	<classpathentry kind="lib" path="./lib/jung-graph-impl-2.0.1.jar"/>
+	<classpathentry kind="lib" path="./lib/jung-io-2.0.1.jar"/>
+	<classpathentry kind="lib" path="./lib/jung-visualization-2.0.1.jar"/>
+	<classpathentry kind="lib" path="./lib/opencsv-2.3.jar"/>
+	<classpathentry kind="lib" path="./lib/pipe-status-1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
