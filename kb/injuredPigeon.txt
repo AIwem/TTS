@@ -3,16 +3,20 @@
 # Relation for relations start with a star (*). They come immediately after the original relation.
 # Concept names (constituents of triples) are unique. The may start with a letter + unicode character \02F8 '?'; please notice though very similar to a normal colon sign but it is not!)
 # The letter determines the source of the concept (if any).
-# For Injured bird system these sources are supported
+# For TTS system these sources are supported
 # 	f? Farsnet
 # 	w? Wordnet
-# 	i? Injured pigeon
+# 	s? TTS
 # All comment lines in this file start with a nubmber sign '#'
 # ------------------------------------------------------------------------------------------
-1	i˸چشم افتادن	f˸مشابه	f˸به چشم خوردن§v-8071
-2	i˸انسان	f˸مشابه	f˸نفر§n-13075 
-3	i˸پسرک	f˸مشابه	f˸پسر بچه#n1
-5	f˸به چشم خوردن§v-8071	f˸ISA	i˸مواجهه
-6	i˸شنیدن	f˸ISA	i˸مواجهه
-7	i˸باخبر شدن	f˸ISA	i˸مواجهه
-8	i˸پسرک	i˸مواجهه	i˸انسان
+1	s˸چشم افتادن	f˸مشابه	f˸به چشم خوردن§v-8071
+3	s˸انسان	f˸مشابه	f˸نفر§n-13075 
+4	s˸پسرک	f˸مشابه	f˸پسر بچه#n1
+5	f˸به چشم خوردن§v-8071	f˸ISA	s˸مواجهه
+6	s˸شنیدن	f˸ISA	s˸مواجهه
+7	s˸باخبر شدن	f˸ISA	s˸مواجهه
+8	s˸پسرک	s˸مواجهه	s˸انسان
+9	f˸حیوان#n1	s˸وضعیت سلامتی	s˸سلامتی حیوان
+10	f˸سالم#a3	f˸ISA	s˸سلامتی حیوان
+11	f˸زخمی#a1	f˸ISA	s˸سلامتی حیوان
+12	f˸مرده#a1	f˸ISA	s˸سلامتی حیوان
