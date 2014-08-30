@@ -2,6 +2,7 @@ package sceneReasoner;
 
 import ir.ac.itrc.qqa.semantic.enums.ExecutionMode;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
+import ir.ac.itrc.qqa.semantic.kb.Node;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleAnswer;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleQuestion;
 import ir.ac.itrc.qqa.semantic.reasoning.SemanticReasoner;
@@ -23,16 +24,21 @@ import model.SentenceModel;
  */
 public class TTSEngine {
 	private boolean isKbInitialized = false;	
-	private KnowledgeBase _kb;
+	private KnowledgeBase _TTSKb;	
+	private String kbFilePath;
+	private String storyFilePath;
 	
 	private Preprocessor _pp;
 	private SceneReasoner _sr;
 	
-	public TTSEngine(){
-		_kb = new KnowledgeBase();
-		loadKb("kb");
-		_pp = new Preprocessor(_kb);
-		_sr = new SceneReasoner(_kb);
+	public TTSEngine(String kbFilePath, String storyFilePath){
+		this.kbFilePath = kbFilePath;
+		this.storyFilePath = storyFilePath;
+		
+		this._TTSKb = new KnowledgeBase();		
+		loadKb();
+		_pp = new Preprocessor(_TTSKb);
+		_sr = new SceneReasoner(_TTSKb);
 	}
 	
 	/**
@@ -42,11 +48,13 @@ public class TTSEngine {
 	 * @param command three possible commands: new story, new scene, or new sentence.
 	 */
 	public SceneModel TextToScene(String inputNLSentence, String command){
-		switch(command){
-			case "new story": break;
-			case "new scene": break;
-			default: break;
+		if(command == "new story"){
+			
 		}
+		if(command == "new scene"){
+			//TODO
+		}	
+		
 		System.out.println("natural sentence: " + inputNLSentence);
 		
 		SentenceModel sen = _pp.preprocessSentence(inputNLSentence);
@@ -54,9 +62,9 @@ public class TTSEngine {
 		System.out.println("preproc sentence: " + sen);	
 		
 		SceneModel primarySM = _pp.preprocessScene(sen);
-		
-		System.out.println("preprocess scene: " + sen + "\n\n");
-		
+						
+		//System.out.println("scene      model: " + sen + "\n\n");		
+					
 		SceneModel richSM = _sr.enrichSceneModel(primarySM);		 
 		
 		return richSM;
@@ -64,11 +72,11 @@ public class TTSEngine {
 		
 	public void checkSemanticReasoner()
 	{
-		SemanticReasoner _re = new SemanticReasoner(_kb, ExecutionMode.RELEASE);
+		SemanticReasoner _re = new SemanticReasoner(_TTSKb, ExecutionMode.RELEASE);
 		PlausibleQuestion pq = new PlausibleQuestion();
-		pq.argument = _kb.addConcept("پسرک");
-		pq.referent = _kb.addConcept("انسان");		
-		pq.descriptor = _kb.addConcept("چشم افتادن");
+		pq.argument = _TTSKb.addConcept("پسرک");
+		pq.referent = _TTSKb.addConcept("انسان");		
+		pq.descriptor = _TTSKb.addConcept("چشم افتادن");
 
 //		pq.argument = kb.addConcept("پسر بچه");
 //		pq.referent = kb.addConcept("بچه");
@@ -105,13 +113,13 @@ public class TTSEngine {
 	
 
 	
-	public int loadKb(String path)
+	public int loadKb()
 	{
 		int loaded = 0;
 		Long start = System.currentTimeMillis();
 		
-		loaded = _kb.importKb(path+"/farsnet--3.txt");		
-		loaded = _kb.importKb(path+"/injuredPigeon.txt");	
+		loaded = _TTSKb.importKb(kbFilePath);		
+		loaded = _TTSKb.importKb(storyFilePath);	
 		
 		Long end = System.currentTimeMillis();
 				

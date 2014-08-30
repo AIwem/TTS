@@ -40,11 +40,12 @@ public class Preprocessor {
 	 * We have no NLP module to process input text and convert it to related part,
 	 * so temporarily we aught to read these processed information from a file named  SentenceInfosFileName. 
 	 */
-	private String SentenceInfosFileName = "inputStory/sentenceInfos.txt";
+	private String SentenceInfosFileName = "inputStory/sentenceInfos2.txt";
 	private KnowledgeBase _kb;
+
 		
 	public Preprocessor(KnowledgeBase kb) {
-		this._kb = kb;
+		this._kb = kb;		
 	}
 		
 	/**
@@ -151,10 +152,9 @@ public class Preprocessor {
 		//print(partStr);			
 		String[] parts = partStr.split("\t");
 		
-		if(parts.length != 6){
-			//MyError.exit("Bad information format " + partStr);
+		if(parts.length != 6){			
 			//MyError.error("Bad information format " + partStr);
-			print("Bad information format " + partStr);
+			print("Bad sentence information format " + partStr);
 			return null;
 		}
 					
@@ -163,35 +163,15 @@ public class Preprocessor {
 		
 		Part newPart = new Part(parts[0]);			
 		
-		switch(parts[1]){
-			case "NOUN": newPart._pos = POS.NOUN; break;
-			case "VERB": newPart._pos = POS.VERB; break;
-			case "ADJECTIVE": newPart._pos = POS.ADJECTIVE; break;
-			case "SETELLITE_ADJECTIVE": newPart._pos = POS.SETELLITE_ADJECTIVE; break;
-			case "ADVERB": newPart._pos = POS.ADVERB; break;
-			case "ANY": newPart._pos = POS.ANY; break;
-			case "UNKNOWN": newPart._pos = POS.UNKNOWN; break;
-			default: newPart._pos = POS.UNKNOWN;
-		}
+		newPart.set_pos(parts[1]);
 			
-		switch(parts[2]){
-			case "SBJ": newPart._srl = SRL.SBJ; break;
-			case "SBJ_P": newPart._srl = SRL.SBJ_P; break;
-			case "VERB": newPart._srl = SRL.VERB; break;
-			case "VERB_P": newPart._srl = SRL.VERB_P; break;
-			case "OBJ": newPart._srl = SRL.OBJ; break;
-			case "OBJ_P": newPart._srl = SRL.OBJ_P; break;
-			case "ADV": newPart._srl = SRL.ADV; break;
-			case "ADV_P": newPart._srl = SRL.ADV_P; break;
-			default: newPart._srl = SRL.UNKNOWN;
-		}
+		newPart.set_srl(parts[2]);
 		
-		Node wsd = null;
-		if(!parts[3].equals("") && !parts[3].equals("-"))
-			wsd = _kb.addConcept(parts[3]);
-			//wsd = _kb.findConcept(parts[3]);  why addConcept instead of findConcept		
-		
-		newPart._wsd = wsd;
+		//TODO we have temporarily assumed that every redundant input concept refers to the old seen one, not the new, 
+		//for example all "پسرک" in the story refers to "*پسرک )1("
+		//for the new concept of "پسرک" the forth parameter must be set to true.
+		newPart.set_wsd(parts[3]);
+		//newPart.set_wsd(parts[3],_kb, false);
 		
 		if(parts[4] != null && !parts[4].trim().equals("-")){				
 			String[] subs = parts[4].split("،");
@@ -203,12 +183,8 @@ public class Preprocessor {
 			newPart.sub_parts = subParts;
 		}
 		
-		switch(parts[5]){
-			case "MAIN": newPart._dep = DEP.MAIN; break;
-			case "PRE": newPart._dep = DEP.PRE; break;
-			case "POST": newPart._dep = DEP.POST; break;
-			default: newPart._dep = DEP.UNKOWN;
-		}		
+		newPart.set_dep(parts[5]);	
+		
 		//print(newPart.getStr() + "\n");
 		return newPart;		
 	}
@@ -272,6 +248,8 @@ public class Preprocessor {
 	public SceneModel preprocessScene(SentenceModel sentenceModel){
 		
 		SceneModel sm = new SceneModel();
+		
+		//TODO: allocate WSD Nodes
 		
 		if(sentenceModel == null)
 			return null;

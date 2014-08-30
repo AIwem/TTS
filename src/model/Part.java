@@ -3,6 +3,7 @@ package model;
 import java.util.ArrayList;
 
 import ir.ac.itrc.qqa.semantic.enums.POS;
+import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
 import ir.ac.itrc.qqa.semantic.kb.Node;
 import ir.ac.itrc.qqa.semantic.util.MyError;
 
@@ -28,6 +29,10 @@ public class Part {
 	 */
 	public Node _wsd;
 	
+	/**
+	 * this part Word_Sense_Disambiguation name. 
+	 */
+	public String _wsd_name;
 	/**
 	 * this part dependency in noun-phrase or verb-phrase.
 	 */
@@ -145,7 +150,8 @@ public class Part {
 		return null;
 	}
 	
- 	public String getStr() {
+	public String toString() {
+ 	//public String getStr() {
 		String rs = "name=";
 		if(_name != null) rs += "" + _name; 
 		else rs += "-";
@@ -159,19 +165,111 @@ public class Part {
 		if(_wsd != null) rs += _wsd;
 		else rs += "-";
 		rs += " sub_parts=";
-		if(hasSub_parts()) rs += "" + sub_parts;
+		if(hasSub_parts()) rs += "\n" + sub_parts;
 		else rs += "-";
 		rs += " dep=";
 		if(_dep != null) rs += _dep;
 		else rs += "-";
+		rs += "\n";
 		return rs;
 	}	
 
 
-	@Override
-	public String toString() {
+	//@Override
+	public String getStr() {
+	//public String toString() {
 		return _name;
-	}	
+	}
+
+	public void set_pos(String pos) {		
+		switch(pos){
+			case "NOUN": _pos = POS.NOUN; break;
+			case "VERB": _pos = POS.VERB; break;
+			case "ADJECTIVE": _pos = POS.ADJECTIVE; break;
+			case "SETELLITE_ADJECTIVE": _pos = POS.SETELLITE_ADJECTIVE; break;
+			case "ADVERB": _pos = POS.ADVERB; break;
+			case "ANY": _pos = POS.ANY; break;
+			case "UNKNOWN": _pos = POS.UNKNOWN; break;
+			default: _pos = POS.UNKNOWN;
+		}
+	}
+
+	public void set_srl(String srl) {
+		switch(srl){
+			case "SBJ": _srl = SRL.SBJ; break;
+			case "SBJ_P": _srl = SRL.SBJ_P; break;
+			case "VERB": _srl = SRL.VERB; break;
+			case "VERB_P": _srl = SRL.VERB_P; break;
+			case "OBJ": _srl = SRL.OBJ; break;
+			case "OBJ_P": _srl = SRL.OBJ_P; break;
+			case "ADV": _srl = SRL.ADV; break;
+			case "ADV_P": _srl = SRL.ADV_P; break;
+			default: _srl = SRL.UNKNOWN;
+		}	
+	}
 	
+	
+	public void set_wsd(String wsd) {
+		this._wsd_name = wsd;
+	}
+	
+	/*
+	 * 
+	 * 
+	 * @param wsd the concept name to be Word-Sense-Disambiguated.
+	 * @param _stroyKb the knowledgeBase to Word-Sense-Disambiguate to.
+	 */
+	/**
+	 * This setter maps wsd input string to a concept in _kb.
+	 * if wsd is - no mapping occurs.
+	 * if wsd has just one part, it is the main concept name, so it must directly maps to a node in _kb.
+	 * if wsd has more than one part which includes one MAIN and probably a PRE or POST, so it must be mapped to a triple in a _kb.
+	 * TODO: correct logic, the redundant name may be a new concept, for example two "پسر" in a stroy.
+	 * 	 * 
+	 * @param wsd the concept name to be Word-Sense-Disambiguated.
+	 * @param _kb the knowledgeBase to Word-Sense-Disambiguate to.	 * 
+	 * @param newConcept is it the new occurrence of a concept or is redundant! TODO: it is always false temporarily! 
+	 */
+	public void allocate_wsd(String wsd, KnowledgeBase _kb, boolean newConcept) {
+		if(wsd.equals("") || wsd.equals("-"))
+			MyError.error("no Word-Sense-Disambiguate concept provided!");
+		else{
+			/**
+			 * faghat پسرک peida mishe
+			 * baghiye peiyda nemishan dar storyKb
+			 * vali hame joz پسر#n2 numberOfInstances hamishe 0 ast va shomare 1 bamigarde 
+			 */
+			if(!newConcept){//this concept has been seen before in input.
+				//TODO: it is very bad implementation!
+				Node mainConcept = null;//_stroyKb.findConcept("*" + wsd + " (1)");//addConcept(wsd);
+				
+				// wsd exists before in _storyKb 
+				if(mainConcept != null){
+					_wsd = mainConcept;
+					return;
+				}				
+			}
+			//it is the first occurrence of this concept or  it must be added to the _storyKb.				
+			Node mainConcept = _kb.addConcept(wsd);
+			
+			// wsd exists before in _kb 
+			if(mainConcept != null){
+				//this constructor creates a Node object exactly like mainConcept, with a "*" and number added to its name. 
+				Node storyConcept = new Node(mainConcept);
+				_wsd = null;//_stroyKb.addConcept(storyConcept.getName(), storyConcept.getSourceType());
+			}
+			else // it dose not exist in _kb.
+				MyError.error("bad Word-Sense-Disambiguate concept name " + wsd);		
+		}			
+	}
+
+	public void set_dep(String dep) {
+		switch(dep){
+			case "MAIN": _dep = DEP.MAIN; break;
+			case "PRE": _dep = DEP.PRE; break;
+			case "POST": _dep = DEP.POST; break;
+			default: _dep = DEP.UNKOWN;
+		}	
+	}	
 	
 }

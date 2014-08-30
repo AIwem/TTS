@@ -1,5 +1,7 @@
 package userInterface;
 
+import ir.ac.itrc.qqa.semantic.kb.Node;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -15,7 +17,7 @@ public class UI {
 	private TTSEngine tts;
 	
 	public UI(){
-		tts = new TTSEngine();
+		tts = new TTSEngine("kb/farsnet--3.txt", "kb/injuredPigeon.txt");
 	}
 	
 	private void print(String s){
@@ -32,6 +34,7 @@ public class UI {
 		ArrayList<String> inputs = importInputTexts(inputTextFileName);
 		
 		String command = "";
+		//ArrayList<Node> nodes = null;
 		for(String line:inputs){
 			
 			if(line.equals("«داستان جدید»")){				
@@ -45,12 +48,13 @@ public class UI {
 			//Then give the sentence to TTSEngine to enrich. 
 			SceneModel  enrichedScene = tts.TextToScene(line, command);
 			
+			//nodes = tts.TextToScene(line, command);
+			
 			//Then shows this enriched SceneModel to the user which contains enriched information about input sentence.
 			if (enrichedScene!= null)
-				print(enrichedScene.toString());
-			
+				print(enrichedScene.toString());			
 		}
-		
+		//System.out.println("" + nodes);
 	}
 	public ArrayList<String> importInputTexts(String filename)
 	{

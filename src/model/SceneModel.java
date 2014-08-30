@@ -1,5 +1,7 @@
 package model;
 
+import ir.ac.itrc.qqa.semantic.kb.Node;
+
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -22,6 +24,8 @@ public class SceneModel {
 	private StoryModel story;
 	
 	private ArrayList<SentenceModel> sentences = new ArrayList<SentenceModel>();
+	
+	private ArrayList<Node> scene_nodes = new ArrayList<Node>();
 	
 	private ArrayList<Role> roles = new ArrayList<Role>();
 	
@@ -178,6 +182,14 @@ public class SceneModel {
 		
 		if(scene_emotion != null)
 			this.scene_emotions.add(scene_emotion);
+	}
+	
+	public Node findNode(String name){
+		for (Node node:scene_nodes){
+			if(node.getName().equals(name))
+				return node;
+		}
+		return null;
 	}
 
 }
