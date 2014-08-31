@@ -16,7 +16,7 @@ import model.Part;
 public class Role extends SceneElement{	
 	
 	public Role(String _name, Node _node) {
-		super(_name, _node);
+		super(_name, _node);		
 	}
 
 	private ArrayList<RoleAction> role_actions;

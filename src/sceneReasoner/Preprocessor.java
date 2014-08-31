@@ -1,17 +1,11 @@
 package sceneReasoner;
 
-import ir.ac.itrc.qqa.semantic.enums.POS;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
 import ir.ac.itrc.qqa.semantic.kb.Node;
-//import ir.ac.itrc.qqa.semantic.util.MyError;
-
-
-
-
-
-
-
 import ir.ac.itrc.qqa.semantic.util.MyError;
+import ir.ac.itrc.qqa.semantic.reasoning.PlausibleAnswer;
+import ir.ac.itrc.qqa.semantic.reasoning.PlausibleQuestion;
+import ir.ac.itrc.qqa.semantic.reasoning.SemanticReasoner;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -19,10 +13,16 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+import javax.annotation.PostConstruct;
+
+import org.omg.PortableServer.POA;
+
+import sceneElement.DynamicObject;
 import sceneElement.Role;
+import sceneElement.SceneObject;
+import sceneElement.StaticObject;
 import model.DEP;
 import model.Part;
-import model.SRL;
 import model.SceneModel;
 import model.SentenceModel;
 
@@ -36,18 +36,20 @@ import model.SentenceModel;
  */
 public class Preprocessor {
 	
+	private KnowledgeBase _kb;
+	private SemanticReasoner _re;
+	
 	/**
 	 * We have no NLP module to process input text and convert it to related part,
 	 * so temporarily we aught to read these processed information from a file named  SentenceInfosFileName. 
 	 */
 	private String SentenceInfosFileName = "inputStory/sentenceInfos2.txt";
-	private KnowledgeBase _kb;
-
 		
-	public Preprocessor(KnowledgeBase kb) {
-		this._kb = kb;		
-	}
-		
+	public Preprocessor(KnowledgeBase kb, SemanticReasoner re) {
+		this._kb = kb;
+		this._re = re;
+	}		
+	
 	/**
 	 * This method gets the stream of SentenceInfosFileName file and reads information 
 	 * related to a specific sentence from it, 
@@ -167,11 +169,8 @@ public class Preprocessor {
 			
 		newPart.set_srl(parts[2]);
 		
-		//TODO we have temporarily assumed that every redundant input concept refers to the old seen one, not the new, 
-		//for example all "پسرک" in the story refers to "*پسرک )1("
-		//for the new concept of "پسرک" the forth parameter must be set to true.
-		newPart.set_wsd(parts[3]);
-		//newPart.set_wsd(parts[3],_kb, false);
+		newPart.set_wsd_name(parts[3]);
+		
 		
 		if(parts[4] != null && !parts[4].trim().equals("-")){				
 			String[] subs = parts[4].split("،");
@@ -238,61 +237,220 @@ public class Preprocessor {
 		
 	}
 	
+	
 	/**
-	 * preprocessScene preprocesses input SentenceModel and convert it to its equivalent SceneModel object.
-	 * TODO: we have temporarily assumed that every sentence has single subject, single object (if any), and single adverb (if any).
-	 *   
+	 * preprocessScene preprocesses input SentenceModel and adds it to the primarySceneModel.
+	 * TODO: we have temporarily assumed that every sentence has single subject, single object (if any), and single adverb (if any).   
+	 * 
 	 * @param sentenceModel the SenetenceModel to be converted.
-	 * @return SceneModel equivalent to input SentenceModel
-	 */
-	public SceneModel preprocessScene(SentenceModel sentenceModel){
+	 * @param primarySceneModel the primary SceneModel which information of sentenceModel is to be added.
+	 * @return SceneModel equivalent to input SentenceModel 
+	 */	 
+	public void preprocessScene(SentenceModel sentenceModel, SceneModel primarySceneModel){
 		
-		SceneModel sm = new SceneModel();
-		
-		//TODO: allocate WSD Nodes
-		
-		if(sentenceModel == null)
-			return null;
-		
-		//Part sbj = sentenceModel.getSingleSubject();
-		//if(sbj != null && sbj.isSubject()){
-		Part obj = sentenceModel.getSingleObject();
-		if(obj != null && obj.isObject()){
-			Node wsd = obj._wsd;			
-			if(wsd != null){// it means that the subject itself has a WSD object and has an equivalent concept in KB.
-				Role role = new Role(obj._name, wsd);			
-				sm.addRole(role);							
-			}
-			else{ // it means that the subject is a noun-phrase and has sub_parts.
-				if(obj.hasSub_parts()){
-					Part mainPart = obj.getMainSub_part();
-					if(mainPart == null){
-						//MyError.error("subject's sub_parts has no main part!");
-						return null;
-					}					
-					wsd = mainPart._wsd;		
-					if(wsd != null){// TODO: create pluasibleTerm
-						obj._wsd = wsd;
-						Role role = new Role(obj._name, wsd);			
-						sm.addRole(role);							
-					}
-					
-				}
-				else{
-					//MyError.error("bad sentence obj, no wsd in it nor in sub_parts! " + sentenceModel);
-					return null;					
-				}				
-			}
-			return sm;
+		if(sentenceModel == null){
+			MyError.error("senetecenModel should not be null! " + sentenceModel);
+			return;		
+		}		
+		if(primarySceneModel == null){
+			MyError.error("primarySceneModel should not be null! " + primarySceneModel);
+			return;		
 		}
-		else{
-			//MyError.error("bad sentence obj, no subject included! " + sentenceModel);
-			return null;
-		}				
+		preprocessSubject(sentenceModel, primarySceneModel);
+		
+		preprocessVerb(sentenceModel, primarySceneModel);
+		
+		preprocessObject(sentenceModel, primarySceneModel);
+		
+		preprocessAdverb(sentenceModel, primarySceneModel);
+		
+				 
+	}	
+
+	/**
+	 * This method maps part's wsd parameter to a concept in _kb based on part's wsd_name parameter.
+	 * if part's wsd_name is "-" no mapping occurs.
+	 * if part's wsd_name has just one part, it is the main concept name, so it must directly maps to a node in _kb.
+	 * if part's wsd_name has more than one part which includes one MAIN and probably a PRE or POST, so it must be mapped to a plausible statement in a _kb.
+	 * 
+	 * @param part the part its wsd parameter to be set.
+	 * @param sceneModel the sceneModel which part belongs to.
+	 */
+	public void allocate_wsd(Part part, SceneModel sceneModel){
+		if(part == null || sceneModel == null)
+			return;
+			
+		String wsd_name = part._wsd_name;
+		
+		if(wsd_name == null || wsd_name.equals("-"))
+			return;
+		
+		//it means that it is not just node but plausible statement for example MAIN_وضعیت سلامتی_POST
+		if(wsd_name.indexOf("_") != -1){
+			String[] sp = wsd_name.split("_"); //[MAIN, وضعیت سلامتی, POST]
+			
+			if(sp.length != part.sub_parts.size()){ //[ name=یک POS=NOUN SRL=OBJ_P WSD=- WSD_name=یک#n1 sub_parts=- dep=PRE
+													//, name=کبوتر POS=NOUN SRL=OBJ_P WSD=- WSD_name=کبوتر#n1 sub_parts=- dep=MAIN
+													//, name=زخمی POS=ADJECTIVE SRL=OBJ_P WSD=- WSD_name=زخمی#a1 sub_parts=- dep=POST]
+				MyError.error("bad Word-Sense-Disambiguate foramt " + wsd_name + " for " + part.sub_parts);
+			}
+			
+			Node argument = null;
+			Node referent = null;
+			Node descriptor = null;
+			
+			//node position in plausible statement, PRE, MAIN, POST, or a descriptor name
+			for(String node_pos:sp){				
+				
+				//node_pos is node's position in plausible statement, PRE, MAIN, POST, or a descriptor name
+				switch(node_pos){
+				case("MAIN"):
+					Part main_sub_part = part.getMainSub_part();
+					argument = sceneModel.findorAddNode(main_sub_part._wsd_name, false, _kb);
+					main_sub_part.set_wsd(argument);
+					break;
+				case("PRE"):
+					Part pre_sub_part = part.getPreSub_part();
+					//TODO: to complete the "PRE" DEP  
+					MyError.error("I don't know what to do with this PRE DEP sub_part " + pre_sub_part);
+					break;
+				case("POST"):										
+					Part post_sub_part = part.getPostSub_part();
+					referent = sceneModel.findorAddNode(post_sub_part._wsd_name, false, _kb);
+					post_sub_part.set_wsd(referent);
+					break;
+				//node_pos is a descriptor_name.
+				default:
+					descriptor = _kb.addConcept(node_pos);										 
+				}
+			}
+			
+			Node wsd = _kb.addRelation(argument, referent, descriptor);
+			
+			//add this plausibleStatement as a Node to scene_nodes of sceneModel.
+			sceneModel.addScene_node(wsd);
+			part.set_wsd(wsd);
+			return;
+		}
+		if(part.hasSub_parts()){
+			for(Part p:part.sub_parts){
+				Node wsd = sceneModel.findorAddNode(p._wsd_name, false, _kb);
+				p.set_wsd(wsd);
+			}
+			
+		}
+		//it means this part wsd_name is just one cocept name, so we find or add it in sceneModel.
+		Node wsd = sceneModel.findorAddNode(wsd_name, false, _kb);
+		part.set_wsd(wsd);		
 	}
 
-	/*public static void main(String[] args) {
+	private boolean isHuman(Node node){
+		PlausibleQuestion pq = new PlausibleQuestion();
+		pq.descriptor = KnowledgeBase.HPR_ISA;
+		pq.argument = node;			
+		pq.referent = _kb.addConcept("نفر§n-13075");
+		
+		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
+		if(answers != null)
+			for(PlausibleAnswer ans:answers){
+				print("answer: " + ans);
+				if(ans.answer == KnowledgeBase.HPR_YES)
+					return true;				
+			}
+		
+		return false;
+	}
+	
+	private boolean isAnimal(Node node){
+		PlausibleQuestion pq = new PlausibleQuestion();
+		pq.descriptor = KnowledgeBase.HPR_ISA;
+		pq.argument = node;			
+		pq.referent = _kb.addConcept("جانور§n-12239");
+		
+		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
+		if(answers != null)
+			for(PlausibleAnswer ans:answers){
+				print("answer: " + ans);
+				if(ans.answer == KnowledgeBase.HPR_YES)
+					return true;				
+			}
+		
+		return false;
+	}
 
-	}*/
-
+	private void preprocessSubject(SentenceModel sentenceModel, SceneModel primarySceneModel){
+		Part sbj = sentenceModel.getSingleSubject();
+		
+		if(sbj != null && !sbj.isSubject()){
+			MyError.error("bad subjct part " + sbj);
+			return;
+		}		
+		if(sbj != null && sbj.isSubject()){
+			
+			//_wsd of sbj is set to proper Node of KB.
+			allocate_wsd(sbj, primarySceneModel);
+		
+			//TODO: It must be improved: recognizing that obj._wsd is a Role (human) or DynamicObject or StaticObject?!
+			//it is a human, so it is a Role of scene.
+			if(isHuman(sbj._wsd)){
+				Role role = new Role(sbj._name, sbj._wsd);				
+				primarySceneModel.addRole(role);				
+			}
+			//it is an animal, so it is a DynamicObject of a scene.
+			else if(isAnimal(sbj._wsd)){
+				DynamicObject dynObj = new DynamicObject(sbj._name, sbj._wsd);
+				primarySceneModel.addDynamic_object(dynObj);				
+			}
+			//it is not human nor animal, so it is a StaticObject.
+			else{
+				StaticObject staObj = new StaticObject(sbj._name, sbj._wsd);
+				primarySceneModel.addStatic_object(staObj);				
+			}
+			
+		}		
+	}
+	
+	private void preprocessVerb(SentenceModel sentenceModel,
+			SceneModel primarySceneModel) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	private void preprocessObject(SentenceModel sentenceModel, SceneModel primarySceneModel){
+		Part obj = sentenceModel.getSingleObject();
+		
+		if(obj != null && !obj.isObject()){
+			MyError.error("bad obejct part " + obj);
+			return;
+		}		
+		if(obj != null && obj.isObject()){
+			
+			//_wsd of obj is set to proper Node of KB.
+			allocate_wsd(obj, primarySceneModel);
+		
+			//TODO: It must be improved: recognizing that obj._wsd is a Role (human) or DynamicObject or StaticObject?!
+			//it is a human, so it is a Role of scene.
+			if(isHuman(obj._wsd)){
+				Role role = new Role(obj._name, obj._wsd);				
+				primarySceneModel.addRole(role);				
+			}
+			//it is an animal, so it is a DynamicObject of a scene.
+			else if(isAnimal(obj._wsd)){
+				DynamicObject dynObj = new DynamicObject(obj._name, obj._wsd);
+				primarySceneModel.addDynamic_object(dynObj);				
+			}
+			//it is not human nor animal, so it is a StaticObject.
+			else{
+				StaticObject staObj = new StaticObject(obj._name, obj._wsd);
+				primarySceneModel.addStatic_object(staObj);				
+			}
+			
+		}		
+	}
+	
+	private void preprocessAdverb(SentenceModel sentenceModel,
+			SceneModel primarySceneModel) {
+		// TODO Auto-generated method stub
+		
+	}	
 }

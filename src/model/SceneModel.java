@@ -1,12 +1,22 @@
 package model;
 
+import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
 import ir.ac.itrc.qqa.semantic.kb.Node;
+import ir.ac.itrc.qqa.semantic.util.MyError;
 
 import java.util.ArrayList;
-import java.util.Locale;
+
+
+
+
+import java.util.Dictionary;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.sun.org.apache.xalan.internal.xsltc.runtime.Hashtable;
 
 import sceneElement.DynamicObject;
-import sceneElement.Goal;
 import sceneElement.Location;
 import sceneElement.Role;
 import sceneElement.SceneEmotion;
@@ -27,6 +37,8 @@ public class SceneModel {
 	
 	private ArrayList<Node> scene_nodes = new ArrayList<Node>();
 	
+	private HashMap<String,Node> scene_nodes_dic = new HashMap<String, Node>(); 		
+		
 	private ArrayList<Role> roles = new ArrayList<Role>();
 	
 	private ArrayList<StaticObject> static_objs = new ArrayList<StaticObject>();
@@ -183,13 +195,63 @@ public class SceneModel {
 		if(scene_emotion != null)
 			this.scene_emotions.add(scene_emotion);
 	}
-	
-	public Node findNode(String name){
-		for (Node node:scene_nodes){
-			if(node.getName().equals(name))
-				return node;
+	/**
+	 * findorAddNode searches this sceneModel scene_nodes to find a Node named "name".
+	 * if it didn't find it, then load it from _kb and adds it to the scene_nodes.
+	 * 
+	 * TODO: we have temporarily assumed that every redundant input concept refers to the old seen one, not the new,
+	 * for example all "پسرک" in the story refers to "*پسرک )1("
+	 * for the new concept of "پسرک" the newNode parameter must be set to true.
+	 * 
+	 * @param name name of Node to be searched in sceneModel scene_nodes or _kb.
+	 * @return Node object named "name".
+	 */	
+	public Node findorAddNode(String name, boolean newNode, KnowledgeBase kb){
+		if(name == null || name.equals("-"))
+			return null;
+		
+		if(!newNode){
+			for (Node node:scene_nodes){
+				String name_str = node.getName();				 
+				if(name_str.indexOf("*") == 0)
+					name_str = name_str.substring(1);
+				
+				int bracketIndex = name_str.indexOf("(");					
+				if(bracketIndex != -1)
+					name_str = name_str.substring(0,bracketIndex);
+				System.out.println("\n\n name to be found " + name_str);
+				
+				if(name.equals(name_str))
+					return node;
+			}
 		}
-		return null;
+		//it is a new Node or this sceneModel object has not a Node named "name".
+		
+		//the method addConcept of _kb searches the existing node, if not found adds it to the knowledgeBase.
+		//we want the find part of it, but findConcept dosen't work correctly!!! we aught to use addConcept.
+		Node node = kb.addConcept(name);
+		
+		if(node == null){
+			MyError.error("knowledge base has not such a node " + node);
+			return null;
+		}
+		Node cloneNode = cloneNode(node); 
+		scene_nodes.add(cloneNode);
+		
+		return cloneNode;
+	}
+	
+	private Node cloneNode(Node node){
+		if(node == null)
+			return null;
+		
+		Node cloneNode = new Node(node);
+		return cloneNode;		
+	}
+	
+	public void addScene_node(Node node){
+		if(node != null)
+			scene_nodes.add(node);
 	}
 
 }

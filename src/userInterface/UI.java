@@ -1,7 +1,5 @@
 package userInterface;
 
-import ir.ac.itrc.qqa.semantic.kb.Node;
-
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -17,7 +15,7 @@ public class UI {
 	private TTSEngine tts;
 	
 	public UI(){
-		tts = new TTSEngine("kb/farsnet--3.txt", "kb/injuredPigeon.txt");
+		tts = new TTSEngine("kb/farsnet--4.txt", "kb/injuredPigeon.txt");
 	}
 	
 	private void print(String s){

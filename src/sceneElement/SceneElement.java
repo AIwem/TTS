@@ -10,13 +10,8 @@ public class SceneElement {
 	
 	public SceneElement(){
 		super();
-	}
+	}	
 	
-	public SceneElement(String _name) {
-		super();
-		this._name = _name;
-	}
-
 	public SceneElement(String _name, Node _node) {
 		super();
 		this._name = _name;

@@ -150,8 +150,30 @@ public class Part {
 		return null;
 	}
 	
+	public Part getPreSub_part() {
+		if(!hasSub_parts())
+			return null;
+		
+		for(Part p:sub_parts)
+			if(p._dep == DEP.PRE)
+				return p;
+		MyError.error("sub_parts has no PRE part!" + this.getStr());
+		return null;
+	}	
+	
+	public Part getPostSub_part() {
+		if(!hasSub_parts())
+			return null;
+		
+		for(Part p:sub_parts)
+			if(p._dep == DEP.POST)
+				return p;
+		MyError.error("sub_parts has no POST part!" + this.getStr());
+		return null;
+	}
+	
 	public String toString() {
- 	//public String getStr() {
+ 	//public String getStr() {		
 		String rs = "name=";
 		if(_name != null) rs += "" + _name; 
 		else rs += "-";
@@ -164,13 +186,16 @@ public class Part {
 		rs += " WSD=";
 		if(_wsd != null) rs += _wsd;
 		else rs += "-";
+		rs += " WSD_name=";
+		if(_wsd_name != null) rs += _wsd_name;
+		else rs += "-";
 		rs += " sub_parts=";
 		if(hasSub_parts()) rs += "\n" + sub_parts;
 		else rs += "-";
 		rs += " dep=";
 		if(_dep != null) rs += _dep;
 		else rs += "-";
-		rs += "\n";
+		rs += "\n\n";
 		return rs;
 	}	
 
@@ -209,60 +234,10 @@ public class Part {
 	}
 	
 	
-	public void set_wsd(String wsd) {
-		this._wsd_name = wsd;
+	public void set_wsd_name(String wsd_name) {
+		this._wsd_name = wsd_name;
 	}
 	
-	/*
-	 * 
-	 * 
-	 * @param wsd the concept name to be Word-Sense-Disambiguated.
-	 * @param _stroyKb the knowledgeBase to Word-Sense-Disambiguate to.
-	 */
-	/**
-	 * This setter maps wsd input string to a concept in _kb.
-	 * if wsd is - no mapping occurs.
-	 * if wsd has just one part, it is the main concept name, so it must directly maps to a node in _kb.
-	 * if wsd has more than one part which includes one MAIN and probably a PRE or POST, so it must be mapped to a triple in a _kb.
-	 * TODO: correct logic, the redundant name may be a new concept, for example two "پسر" in a stroy.
-	 * 	 * 
-	 * @param wsd the concept name to be Word-Sense-Disambiguated.
-	 * @param _kb the knowledgeBase to Word-Sense-Disambiguate to.	 * 
-	 * @param newConcept is it the new occurrence of a concept or is redundant! TODO: it is always false temporarily! 
-	 */
-	public void allocate_wsd(String wsd, KnowledgeBase _kb, boolean newConcept) {
-		if(wsd.equals("") || wsd.equals("-"))
-			MyError.error("no Word-Sense-Disambiguate concept provided!");
-		else{
-			/**
-			 * faghat پسرک peida mishe
-			 * baghiye peiyda nemishan dar storyKb
-			 * vali hame joz پسر#n2 numberOfInstances hamishe 0 ast va shomare 1 bamigarde 
-			 */
-			if(!newConcept){//this concept has been seen before in input.
-				//TODO: it is very bad implementation!
-				Node mainConcept = null;//_stroyKb.findConcept("*" + wsd + " (1)");//addConcept(wsd);
-				
-				// wsd exists before in _storyKb 
-				if(mainConcept != null){
-					_wsd = mainConcept;
-					return;
-				}				
-			}
-			//it is the first occurrence of this concept or  it must be added to the _storyKb.				
-			Node mainConcept = _kb.addConcept(wsd);
-			
-			// wsd exists before in _kb 
-			if(mainConcept != null){
-				//this constructor creates a Node object exactly like mainConcept, with a "*" and number added to its name. 
-				Node storyConcept = new Node(mainConcept);
-				_wsd = null;//_stroyKb.addConcept(storyConcept.getName(), storyConcept.getSourceType());
-			}
-			else // it dose not exist in _kb.
-				MyError.error("bad Word-Sense-Disambiguate concept name " + wsd);		
-		}			
-	}
-
 	public void set_dep(String dep) {
 		switch(dep){
 			case "MAIN": _dep = DEP.MAIN; break;
@@ -270,6 +245,10 @@ public class Part {
 			case "POST": _dep = DEP.POST; break;
 			default: _dep = DEP.UNKOWN;
 		}	
+	}
+
+	public void set_wsd(Node wsd) {
+		this._wsd = wsd;
 	}	
 	
 }

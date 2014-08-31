@@ -2,7 +2,6 @@ package sceneReasoner;
 
 import ir.ac.itrc.qqa.semantic.enums.ExecutionMode;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
-import ir.ac.itrc.qqa.semantic.kb.Node;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleAnswer;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleQuestion;
 import ir.ac.itrc.qqa.semantic.reasoning.SemanticReasoner;
@@ -24,7 +23,9 @@ import model.SentenceModel;
  */
 public class TTSEngine {
 	private boolean isKbInitialized = false;	
-	private KnowledgeBase _TTSKb;	
+	private KnowledgeBase _TTSKb;
+	private SemanticReasoner _re;
+	
 	private String kbFilePath;
 	private String storyFilePath;
 	
@@ -35,9 +36,14 @@ public class TTSEngine {
 		this.kbFilePath = kbFilePath;
 		this.storyFilePath = storyFilePath;
 		
-		this._TTSKb = new KnowledgeBase();		
+		this._TTSKb = new KnowledgeBase();
+		this._re = new SemanticReasoner(_TTSKb, ExecutionMode.RELEASE);
+		_re.setMaxReasoningDepth(10);
+		_re.setMaximumAnswers(3);
+		
 		loadKb();
-		_pp = new Preprocessor(_TTSKb);
+		
+		_pp = new Preprocessor(_TTSKb, _re);
 		_sr = new SceneReasoner(_TTSKb);
 	}
 	
@@ -48,26 +54,30 @@ public class TTSEngine {
 	 * @param command three possible commands: new story, new scene, or new sentence.
 	 */
 	public SceneModel TextToScene(String inputNLSentence, String command){
+		if(!isKbInitialized)
+			loadKb();
+		
 		if(command == "new story"){
 			
 		}
 		if(command == "new scene"){
-			//TODO
+			
 		}	
 		
-		System.out.println("natural sentence: " + inputNLSentence);
+		System.out.println("natural   sentence: " + inputNLSentence);
 		
 		SentenceModel sen = _pp.preprocessSentence(inputNLSentence);
 		
-		System.out.println("preproc sentence: " + sen);	
+		//System.out.println("preproc sentence: \n" + sen);
+		SceneModel primarySceneModel = new SceneModel();
 		
-		SceneModel primarySM = _pp.preprocessScene(sen);
+		_pp.preprocessScene(sen, primarySceneModel);
 						
-		//System.out.println("scene      model: " + sen + "\n\n");		
+		System.out.println("primary sceneModel: " + sen + "\n\n");		
 					
-		SceneModel richSM = _sr.enrichSceneModel(primarySM);		 
+		//SceneModel richSM = _sr.enrichSceneModel(primarySM);		 
 		
-		return richSM;
+		return null; //richSM;
 	}
 		
 	public void checkSemanticReasoner()
