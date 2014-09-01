@@ -15,7 +15,7 @@ public class UI {
 	private TTSEngine tts;
 	
 	public UI(){
-		tts = new TTSEngine("kb/farsnet--4.txt", "kb/injuredPigeon.txt");
+		tts = new TTSEngine("kb/farsnet--6.txt", "kb/injuredPigeon.txt");
 	}
 	
 	private void print(String s){

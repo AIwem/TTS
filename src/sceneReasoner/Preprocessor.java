@@ -5,6 +5,7 @@ import ir.ac.itrc.qqa.semantic.kb.Node;
 import ir.ac.itrc.qqa.semantic.util.MyError;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleAnswer;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleQuestion;
+import ir.ac.itrc.qqa.semantic.reasoning.PlausibleStatement;
 import ir.ac.itrc.qqa.semantic.reasoning.SemanticReasoner;
 
 import java.io.BufferedReader;
@@ -258,11 +259,23 @@ public class Preprocessor {
 		}
 		preprocessSubject(sentenceModel, primarySceneModel);
 		
+		print("after subject");
+		primarySceneModel.printDictionary();
+		
 		preprocessVerb(sentenceModel, primarySceneModel);
+		
+		print("after verb");
+		primarySceneModel.printDictionary();
 		
 		preprocessObject(sentenceModel, primarySceneModel);
 		
+		print("after object");
+		primarySceneModel.printDictionary();
+		
 		preprocessAdverb(sentenceModel, primarySceneModel);
+		
+		print("after adverb");
+		primarySceneModel.printDictionary();
 		
 				 
 	}	
@@ -289,15 +302,22 @@ public class Preprocessor {
 		if(wsd_name.indexOf("_") != -1){
 			String[] sp = wsd_name.split("_"); //[MAIN, وضعیت سلامتی, POST]
 			
+			/*unnecessary or wrong checking
 			if(sp.length != part.sub_parts.size()){ //[ name=یک POS=NOUN SRL=OBJ_P WSD=- WSD_name=یک#n1 sub_parts=- dep=PRE
 													//, name=کبوتر POS=NOUN SRL=OBJ_P WSD=- WSD_name=کبوتر#n1 sub_parts=- dep=MAIN
 													//, name=زخمی POS=ADJECTIVE SRL=OBJ_P WSD=- WSD_name=زخمی#a1 sub_parts=- dep=POST]
 				MyError.error("bad Word-Sense-Disambiguate foramt " + wsd_name + " for " + part.sub_parts);
 			}
-			
+			*/
 			Node argument = null;
 			Node referent = null;
 			Node descriptor = null;
+			
+			PlausibleStatement wsd = null;
+			
+			Part main_sub_part = null;
+			Part pre_sub_part = null;
+			Part post_sub_part = null;
 			
 			//node position in plausible statement, PRE, MAIN, POST, or a descriptor name
 			for(String node_pos:sp){				
@@ -305,31 +325,35 @@ public class Preprocessor {
 				//node_pos is node's position in plausible statement, PRE, MAIN, POST, or a descriptor name
 				switch(node_pos){
 				case("MAIN"):
-					Part main_sub_part = part.getMainSub_part();
+					main_sub_part = part.getMainSub_part();
 					argument = sceneModel.findorAddNode(main_sub_part._wsd_name, false, _kb);
 					main_sub_part.set_wsd(argument);
 					break;
 				case("PRE"):
-					Part pre_sub_part = part.getPreSub_part();
+					pre_sub_part = part.getPreSub_part();
 					//TODO: to complete the "PRE" DEP  
 					MyError.error("I don't know what to do with this PRE DEP sub_part " + pre_sub_part);
 					break;
 				case("POST"):										
-					Part post_sub_part = part.getPostSub_part();
+					post_sub_part = part.getPostSub_part();
 					referent = sceneModel.findorAddNode(post_sub_part._wsd_name, false, _kb);
 					post_sub_part.set_wsd(referent);
 					break;
 				//node_pos is a descriptor_name.
 				default:
-					descriptor = _kb.addConcept(node_pos);										 
+					wsd = sceneModel.findRelation(node_pos, _kb);
+					if(wsd == null){
+						//it must got directly fetched from kb, and then addRelation will clone it.
+						descriptor = _kb.addConcept(node_pos);
+					}
 				}
 			}
 			
-			Node wsd = _kb.addRelation(argument, referent, descriptor);
-			
-			//add this plausibleStatement as a Node to scene_nodes of sceneModel.
-			sceneModel.addScene_node(wsd);
-			part.set_wsd(wsd);
+			if(descriptor != null){//it means that findRelation has not found it and it is newly fetched from kb.
+				wsd = _kb.addRelation(argument, referent, descriptor);
+				sceneModel.addRelationWithoutClone(descriptor.getName(), wsd);
+			}
+			part.set_wsd(main_sub_part._wsd);
 			return;
 		}
 		if(part.hasSub_parts()){
@@ -365,7 +389,7 @@ public class Preprocessor {
 		PlausibleQuestion pq = new PlausibleQuestion();
 		pq.descriptor = KnowledgeBase.HPR_ISA;
 		pq.argument = node;			
-		pq.referent = _kb.addConcept("جانور§n-12239");
+		pq.referent = _kb.addConcept("جانور§n-12239");//TODO: add طیور و ومهر دار
 		
 		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
 		if(answers != null)
@@ -431,16 +455,19 @@ public class Preprocessor {
 			//TODO: It must be improved: recognizing that obj._wsd is a Role (human) or DynamicObject or StaticObject?!
 			//it is a human, so it is a Role of scene.
 			if(isHuman(obj._wsd)){
+				print(obj._wsd.getName() + " isHuman");
 				Role role = new Role(obj._name, obj._wsd);				
 				primarySceneModel.addRole(role);				
 			}
 			//it is an animal, so it is a DynamicObject of a scene.
 			else if(isAnimal(obj._wsd)){
+				print(obj._wsd.getName() + " isAnimal");
 				DynamicObject dynObj = new DynamicObject(obj._name, obj._wsd);
 				primarySceneModel.addDynamic_object(dynObj);				
 			}
 			//it is not human nor animal, so it is a StaticObject.
 			else{
+				print(obj._wsd.getName() + " isStaticObj");
 				StaticObject staObj = new StaticObject(obj._name, obj._wsd);
 				primarySceneModel.addStatic_object(staObj);				
 			}
