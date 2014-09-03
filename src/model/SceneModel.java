@@ -224,8 +224,8 @@ public class SceneModel {
 					 return seenNodes.get(seenNodes.size()-1);
 			 }
 			 else{//It is a new Node, so a new cloned instance must be added to scene_nodes_dic.
-				 if(seenNodes.size() > 0){
-					 Node newlyCloned = new Node(seenNodes.get(0));//clone a node from its pure version fetched from kb.
+				 if(seenNodes.size() > 0){					 
+					 Node newlyCloned = cloneNode(seenNodes.get(0), kb); //clone a node from its pure version fetched from kb.
 					 seenNodes.add(newlyCloned);
 					 return newlyCloned;
 				 }
@@ -233,6 +233,7 @@ public class SceneModel {
 					 MyError.error(name + " key exists in scene_nodes_dic but no Node exists! probably the map is corrupted!");
 					 Node n = kb.addConcept(name);
 					 if(n!= null){
+						 seenNodes.add(n);
 						 Node cloned = cloneNode(n, kb);//clone a node from its pure version fetched from kb.
 						 seenNodes.add(cloned);
 						 return cloned;
@@ -249,7 +250,7 @@ public class SceneModel {
 			if(n!= null){
 				ArrayList<Node> newlySeen = new ArrayList<Node>();
 				newlySeen.add(n);
-				Node cloned = cloneNode(n,kb);//clone a node from its pure version fetched from kb.
+				Node cloned = cloneNode(n, kb);//clone a node from its pure version fetched from kb.
 				newlySeen.add(cloned);
 				scene_nodes_dic.put(name, newlySeen);
 				return cloned;
@@ -269,7 +270,7 @@ public class SceneModel {
 	 * @param pure_name the name of PlausibleStatement to be added.
 	 * @param clonedRelation the cloned PlausibleStatement to be added.
 	 */
-	public void addRelationWithoutClone(String pure_name, PlausibleStatement clonedRelation){
+	public void addClonedRelation(String pure_name, PlausibleStatement clonedRelation){
 		if(pure_name == null || pure_name.equals("") || clonedRelation == null)
 			return;
 		
@@ -290,7 +291,7 @@ public class SceneModel {
 				MyError.error(pure_name + " key exists in scene_nodes_dic but no relation exists! probably the map is corrupted!");
 				seenRelation.add(clonedRelation.relationType);
 			}
-			seenRelation.add(clonedRelation);			
+			seenRelation.add(clonedRelation);		//TODO check name of وضعیت سلامتی	
 		}
 	}
 	
@@ -328,9 +329,9 @@ public class SceneModel {
 			return null;
 		
 		Node cloneNode = new Node(node);
-		Node fromKB = kb.addConcept(cloneNode.getName());//TODO: %%%%%%%%%%%%%%%%%%%% check it		
+		Node fromKB = kb.addConcept(cloneNode.getName());//TODO: %%%%%%%%%%%%%%%%%%%% check it	
 		
-		kb.addRelation(fromKB, node, KnowledgeBase.HPR_SIM);
+		kb.addRelation(fromKB, node, KnowledgeBase.HPR_ISA);
 		return fromKB;		
 	}
 	

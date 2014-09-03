@@ -15,7 +15,7 @@ public class UI {
 	private TTSEngine tts;
 	
 	public UI(){
-		tts = new TTSEngine("kb/farsnet--6.txt", "kb/injuredPigeon.txt");
+		tts = new TTSEngine("kb/farsnet.txt", "kb/injuredPigeon.txt");
 	}
 	
 	private void print(String s){
@@ -31,6 +31,8 @@ public class UI {
 		//temporarily it reads all input story from file instead of getting from user!
 		ArrayList<String> inputs = importInputTexts(inputTextFileName);
 		
+		SceneModel primarySceneModel = new SceneModel();
+		
 		String command = "";
 		//ArrayList<Node> nodes = null;
 		for(String line:inputs){
@@ -43,8 +45,9 @@ public class UI {
 				command = "new scene";
 				continue;
 			}
+			
 			//Then give the sentence to TTSEngine to enrich. 
-			SceneModel  enrichedScene = tts.TextToScene(line, command);
+			SceneModel  enrichedScene = tts.TextToScene(line, command, primarySceneModel);
 			
 			//nodes = tts.TextToScene(line, command);
 			
@@ -110,7 +113,10 @@ public class UI {
 		System.out.println("بسم الله الرحمن الرحیم و توکلت علی الله");
 	
 		UI ui = new UI();
-		ui.TTS();		
+		ui.TTS();
+		ui.tts.checkSemanticReasoner();
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~");
+		ui.tts.checkSemanticReasoner2();
 		
 	/*	ArrayList<PlausibleAnswer> pas = ui.testSemanticReasoner();
 		ui.printPlausibleAnswers(pas);

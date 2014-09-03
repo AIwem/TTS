@@ -38,8 +38,8 @@ public class TTSEngine {
 		
 		this._TTSKb = new KnowledgeBase();
 		this._re = new SemanticReasoner(_TTSKb, ExecutionMode.RELEASE);
-		_re.setMaxReasoningDepth(10);
-		_re.setMaximumAnswers(3);
+		_re.setMaxReasoningDepth(14);
+		_re.setMaximumAnswers(4);
 		
 		loadKb();
 		
@@ -52,8 +52,9 @@ public class TTSEngine {
 	 * 
 	 * @param inputNLSentence input natural language sentence
 	 * @param command three possible commands: new story, new scene, or new sentence.
+	 * @param primarySceneModel 
 	 */
-	public SceneModel TextToScene(String inputNLSentence, String command){
+	public SceneModel TextToScene(String inputNLSentence, String command, SceneModel primarySceneModel){
 		if(!isKbInitialized)
 			loadKb();
 		
@@ -69,7 +70,7 @@ public class TTSEngine {
 		SentenceModel sen = _pp.preprocessSentence(inputNLSentence);
 		
 		//System.out.println("preproc sentence: \n" + sen);
-		SceneModel primarySceneModel = new SceneModel();
+		
 		
 		_pp.preprocessScene(sen, primarySceneModel);
 						
@@ -80,17 +81,51 @@ public class TTSEngine {
 		return null; //richSM;
 	}
 		
-	public void checkSemanticReasoner()
-	{
+	public void checkSemanticReasoner()	{
 		SemanticReasoner _re = new SemanticReasoner(_TTSKb, ExecutionMode.RELEASE);
 		PlausibleQuestion pq = new PlausibleQuestion();
 		pq.argument = _TTSKb.addConcept("پسرک");
-		pq.referent = _TTSKb.addConcept("انسان");		
-		pq.descriptor = _TTSKb.addConcept("چشم افتادن");
+		pq.referent = _TTSKb.addConcept("نفر§n-13075");		
+		pq.descriptor = _TTSKb.HPR_ISA;//_TTSKb.addConcept("چشم افتادن");
 
 //		pq.argument = kb.addConcept("پسر بچه");
 //		pq.referent = kb.addConcept("بچه");
 //		pq.descriptor = KnowledgeBase.HPR_ISA;
+		
+		System.out.print(pq.toString() + " ... ");
+		
+		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
+		
+		System.out.println("done");
+		
+		System.out.println("Answers:");
+		
+		int count = 0;
+		for (PlausibleAnswer answer: answers)
+		{
+			System.out.println(++count + ". " + answer.toString());
+			
+			ArrayList<String> justifications = answer.GetTechnicalJustifications();
+			
+			int countJustification = 0;
+			for (String justification: justifications)
+			{
+				System.out.println("-------" + ++countJustification + "--------");
+				System.out.println(justification);
+			}
+		}
+	}
+		
+	public void checkSemanticReasoner2(){
+		SemanticReasoner _re = new SemanticReasoner(_TTSKb, ExecutionMode.RELEASE);
+		PlausibleQuestion pq = new PlausibleQuestion();
+		pq.argument = _TTSKb.addConcept("*پسرک (1)");
+		pq.referent = _TTSKb.addConcept("نفر§n-13075");		
+		pq.descriptor = _TTSKb.HPR_ISA;//_TTSKb.addConcept("چشم افتادن");
+
+//			pq.argument = kb.addConcept("پسر بچه");
+//			pq.referent = kb.addConcept("بچه");
+//			pq.descriptor = KnowledgeBase.HPR_ISA;
 		
 		System.out.print(pq.toString() + " ... ");
 		

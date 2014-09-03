@@ -351,7 +351,7 @@ public class Preprocessor {
 			
 			if(descriptor != null){//it means that findRelation has not found it and it is newly fetched from kb.
 				wsd = _kb.addRelation(argument, referent, descriptor);
-				sceneModel.addRelationWithoutClone(descriptor.getName(), wsd);
+				sceneModel.addClonedRelation(descriptor.getName(), wsd);
 			}
 			part.set_wsd(main_sub_part._wsd);
 			return;
@@ -375,13 +375,16 @@ public class Preprocessor {
 		pq.referent = _kb.addConcept("نفر§n-13075");
 		
 		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
-		if(answers != null)
-			for(PlausibleAnswer ans:answers){
-				print("answer: " + ans);
-				if(ans.answer == KnowledgeBase.HPR_YES)
-					return true;				
-			}
 		
+		for(PlausibleAnswer ans:answers){
+				print("answer: " + ans);
+				if(ans.answer == KnowledgeBase.HPR_YES){
+					print(node.getName() + " isHuman");
+					return true;
+				}
+					
+		}
+		print(node.getName() + " is NOT Human");
 		return false;
 	}
 	
@@ -395,10 +398,12 @@ public class Preprocessor {
 		if(answers != null)
 			for(PlausibleAnswer ans:answers){
 				print("answer: " + ans);
-				if(ans.answer == KnowledgeBase.HPR_YES)
+				if(ans.answer == KnowledgeBase.HPR_YES){
+					print(node.getName() + " isAnimal");
 					return true;				
+				}
 			}
-		
+		print(node.getName() + " is NOT Animal");
 		return false;
 	}
 
@@ -454,20 +459,17 @@ public class Preprocessor {
 		
 			//TODO: It must be improved: recognizing that obj._wsd is a Role (human) or DynamicObject or StaticObject?!
 			//it is a human, so it is a Role of scene.
-			if(isHuman(obj._wsd)){
-				print(obj._wsd.getName() + " isHuman");
+			if(isHuman(obj._wsd)){				
 				Role role = new Role(obj._name, obj._wsd);				
 				primarySceneModel.addRole(role);				
 			}
 			//it is an animal, so it is a DynamicObject of a scene.
-			else if(isAnimal(obj._wsd)){
-				print(obj._wsd.getName() + " isAnimal");
+			else if(isAnimal(obj._wsd)){				
 				DynamicObject dynObj = new DynamicObject(obj._name, obj._wsd);
 				primarySceneModel.addDynamic_object(dynObj);				
 			}
 			//it is not human nor animal, so it is a StaticObject.
-			else{
-				print(obj._wsd.getName() + " isStaticObj");
+			else{				
 				StaticObject staObj = new StaticObject(obj._name, obj._wsd);
 				primarySceneModel.addStatic_object(staObj);				
 			}
