@@ -37,8 +37,8 @@ public class TTSEngine {
 		this.storyFilePath = storyFilePath;
 		
 		this._TTSKb = new KnowledgeBase();
-		this._re = new SemanticReasoner(_TTSKb, ExecutionMode.RELEASE);
-		_re.setMaxReasoningDepth(12);
+		this._re = new SemanticReasoner(_TTSKb, ExecutionMode.DEBUG);
+		_re.setMaxReasoningDepth(19);
 		_re.setMaximumAnswers(4);
 		
 		loadKb();

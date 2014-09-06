@@ -45,7 +45,7 @@ public class Preprocessor {
 	 * We have no NLP module to process input text and convert it to related part,
 	 * so temporarily we aught to read these processed information from a file named  SentenceInfosFileName. 
 	 */
-	private String SentenceInfosFileName = "inputStory/sentenceInfos2.txt";
+	private String SentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
 		
 	public Preprocessor(KnowledgeBase kb, SemanticReasoner re) {
 		this._kb = kb;
@@ -206,7 +206,7 @@ public class Preprocessor {
 		
 		//this array has information of all parts of this sentence.
 		ArrayList<String> senPartStrs = findSentenceInfos(NLsentence);
-		
+		int dss = 0;
 		if(senPartStrs == null)
 			return sentence; // it is null
 		
@@ -380,36 +380,7 @@ public class Preprocessor {
 		part.set_wsd(wsd);		
 	}
 
-	private ArrayList<PlausibleAnswer> writeAnswersTo(Node descriptor, Node argument, Node referent){
-		PlausibleQuestion pq = new PlausibleQuestion();
-		pq.argument = argument;		
-		pq.referent = referent;
-		pq.descriptor = descriptor;
-		
-		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
-		
-		System.out.println("Answers:");
-		
-		int count = 0;
-		for (PlausibleAnswer answer: answers)
-		{
-			System.out.println(++count + ". " + answer.toString());
-			
-			ArrayList<String> justifications = answer.GetTechnicalJustifications();
-			
-			int countJustification = 0;
-			for (String justification: justifications)
-			{
-				System.out.println("-------" + ++countJustification + "--------");
-				System.out.println(justification);
-			}
-		}
-		print("\tInferences: " + _re.totalCalls);
-		print("\tTime: " + _re.reasoningTime / 1000);
-		print("\tThroughput: " + (_re.totalCalls / _re.reasoningTime) * 1000 + " inference/s");
-		return answers;
-		
-	}
+	
 	
 	private void preprocessSubject(SentenceModel sentenceModel, SceneModel primarySceneModel){
 		Part sbj = sentenceModel.getSingleSubject();
@@ -421,8 +392,7 @@ public class Preprocessor {
 		if(sbj != null && sbj.isSubject()){
 			
 			//_wsd of sbj is set to proper Node of KB.
-			allocate_wsd(sbj, primarySceneModel);
-		
+			allocate_wsd(sbj, primarySceneModel);			
 			
 			ScenePart sp = primarySceneModel.whichScenePart(sbj._wsd);
 			
@@ -461,6 +431,14 @@ public class Preprocessor {
 			
 			//_wsd of obj is set to proper Node of KB.
 			allocate_wsd(obj, primarySceneModel);
+			
+			print("^^^^^^^^^^^^ test ^^^^^^^^^^^^");
+			Node kabotar1 = obj.sub_parts.get(0)._wsd;
+			for(PlausibleAnswer ans: kabotar1.findTargetNodes(KnowledgeBase.HPR_ISA))
+				print(kabotar1 +" isa " + ans.answer);
+			primarySceneModel.isAnimal(kabotar1);
+		
+			
 		
 			ScenePart sp = primarySceneModel.whichScenePart(obj._wsd);
 			

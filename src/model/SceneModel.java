@@ -379,13 +379,24 @@ public class SceneModel {
 	 		index = 1;
 	 	else
 	 		index = instances.size();
-	 			  
-		String instanceName = originalName +"-"+ index;
+	 	
+	 	String instanceName = "";
+	 	int s = originalName.indexOf("#");
+	 	if(s != -1)
+	 		instanceName = originalName.substring(0, s);
+	 	
+	 	s = originalName.indexOf("§");
+	 	if(s != -1)
+	 		instanceName = originalName.substring(0, s);
+	 	
+	 	
+	 	
+		instanceName = instanceName + "-"+ index;
 		
 		Node fromKB = _kb.addConcept(instanceName);		
 		
-		//kb.addRelation(fromKB, originalNode, KnowledgeBase.HPR_ISA);
-		_kb.addRelation(fromKB, originalNode, KnowledgeBase.HPR_SIM);
+		_kb.addRelation(fromKB, originalNode, KnowledgeBase.HPR_ISA);
+		//_kb.addRelation(fromKB, originalNode, KnowledgeBase.HPR_SIM);
 		
 		
 		return fromKB;		
@@ -412,16 +423,28 @@ public class SceneModel {
 	private boolean isInstanceNode(Node node){
 		if(node == null)
 			return false;
+		
 		String name = node.getName();
 		if(name == null)
 			return false;
+		
+		boolean isInstance = true;
 		int index = name.indexOf("-");
 		if(index != -1)
-			return true;
+			isInstance = true;
+		
+		index = name.indexOf("#");		
+		if(index != -1)
+			isInstance = false;
+		
+		index = name.indexOf("§");
+		if(index != -1)
+			isInstance = false;
+			
 		index = name.indexOf("*");
 		if(index != -1)
-			return true;
-		return false;
+			isInstance = true;
+		return isInstance;
 	}
 	
 	/**
@@ -430,6 +453,7 @@ public class SceneModel {
 	 * @return
 	 */
 	private String getPureName(Node node){
+		//TODO correct it!
 		if(node == null)
 			return null;
 		
@@ -438,8 +462,12 @@ public class SceneModel {
 			if(name == null)
 				return null;
 			int index = name.indexOf("-");
-			if(index != -1)
-				return name.substring(0,index);
+			String pure_name = "";
+			if(index != -1){
+				pure_name = name.substring(0, index);
+				pure_name += "#n1";
+				return pure_name;
+			}
 			int index1 = name.indexOf("*");
 			int index2 = name.indexOf("(");
 			return name.substring(index1+1, index2);
@@ -464,11 +492,11 @@ public class SceneModel {
 		if(pos == POS.NOUN){
 			
 			//TODO: I must remove these lines!-------
-			if(node.getName().equals("پسرک#n"))
-				return ScenePart.ROLE;
-			if(node.getName().equals("پسر#n2"))
-				return ScenePart.ROLE;
-			//---------------------------------------
+//			if(node.getName().equals("پسرک#n"))
+//				return ScenePart.ROLE;
+//			if(node.getName().equals("پسر#n2"))
+//				return ScenePart.ROLE;
+//			//---------------------------------------
 			
 
 			if(isHuman(node))
@@ -493,7 +521,7 @@ public class SceneModel {
 	 * @param node the pure node fetched from kb.
 	 * @return
 	 */
-	private boolean isHuman(Node node){
+	public boolean isHuman(Node node){
 		if(node == null)
 			return false;
 		
@@ -504,8 +532,8 @@ public class SceneModel {
 		pq.argument = node;			
 		pq.referent = _kb.addConcept("نفر§n-13075");
 		
-		//ArrayList<PlausibleAnswer> answers = writeAnswersTo(pq.descriptor, node, pq.referent);
-		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);	
+		ArrayList<PlausibleAnswer> answers = writeAnswersTo(pq.descriptor, node, pq.referent);
+		//ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);	
 		for(PlausibleAnswer ans:answers){
 				print("answer: " + ans);					
 				if(ans.answer == KnowledgeBase.HPR_YES){
@@ -522,7 +550,7 @@ public class SceneModel {
 	 * @param node the pure node fetched from kb.
 	 * @return
 	 */
-	private boolean isAnimal(Node node){		
+	public boolean isAnimal(Node node){		
 		if(node == null)
 			return false;
 		
@@ -533,8 +561,8 @@ public class SceneModel {
 		pq.argument = node;			
 		pq.referent = _kb.addConcept("جانور§n-12239");
 		
-		//ArrayList<PlausibleAnswer> answers = writeAnswersTo(pq.descriptor, node, pq.referent);
-		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
+		ArrayList<PlausibleAnswer> answers = writeAnswersTo(pq.descriptor, node, pq.referent);
+		//ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
 		for(PlausibleAnswer ans:answers ){
 			print("answer: " + ans);
 			if(ans.answer == KnowledgeBase.HPR_YES){
@@ -625,6 +653,37 @@ public class SceneModel {
 			print(node + " pos is " + sp);
 			return sp;
 		}
+	}
+	
+	private ArrayList<PlausibleAnswer> writeAnswersTo(Node descriptor, Node argument, Node referent){
+		PlausibleQuestion pq = new PlausibleQuestion();
+		pq.argument = argument;		
+		pq.referent = referent;
+		pq.descriptor = descriptor;
+		
+		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
+		
+		System.out.println("Answers:");
+		
+		int count = 0;
+		for (PlausibleAnswer answer: answers)
+		{
+			System.out.println(++count + ". " + answer.toString());
+			
+			ArrayList<String> justifications = answer.GetTechnicalJustifications();
+			
+			int countJustification = 0;
+			for (String justification: justifications)
+			{
+				System.out.println("-------" + ++countJustification + "--------");
+				System.out.println(justification);
+			}
+		}
+		print("\tInferences: " + _re.totalCalls);
+		print("\tTime: " + _re.reasoningTime / 1000);
+		print("\tThroughput: " + (_re.totalCalls / _re.reasoningTime) * 1000 + " inference/s");
+		return answers;
+		
 	}
 }
 			

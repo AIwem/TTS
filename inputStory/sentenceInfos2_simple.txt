@@ -1,6 +1,6 @@
 sentence:پسرک در راه خانه چشمش به یک کبوتر زخمی افتاد
 
-name:پسرک	POS:NOUN	SRL:SBJ	WSD:پسرک#n	sub_part:پسر،ک	dep:-
+name:پسرک	POS:NOUN	SRL:SBJ	WSD:پسرک	sub_part:پسر،ک	dep:-
 name:پسر	POS:NOUN	SRL:SBJ_P	WSD:پسر#n2	sub_part:-	dep:MAIN
 name:ک	POS:UNKNOWN	SRL:SBJ_P	WSD:کوچک#a2	sub_part:-	dep:POST
 
@@ -14,12 +14,12 @@ name:یک	POS:NOUN	SRL:OBJ_P	WSD:یک#n1	sub_part:-	dep:PRE
 name:کبوتر	POS:NOUN	SRL:OBJ_P	WSD:کبوتر#n1	sub_part:-	dep:MAIN
 name:زخمی	POS:ADJECTIVE	SRL:OBJ_P	WSD:زخمی#a1	sub_part:-	dep:POST
 
-name:چشمش افتاد	POS:VERB	SRL:VERB	WSD:چشم افتادن#v	sub_part:-	dep:-
+name:چشمش افتاد	POS:VERB	SRL:VERB	WSD:چشم افتادن	sub_part:-	dep:-
 
 #------------------------------------------------------
 sentence:کبوتر را برداشته
 
-name:پسرک	POS:NOUN	SRL:SBJ	WSD:پسرک#n	sub_part:پسر،ک	dep:-
+name:پسرک	POS:NOUN	SRL:SBJ	WSD:پسرک	sub_part:پسر،ک	dep:-
 name:پسر	POS:NOUN	SRL:SBJ_P	WSD:پسر#n2	sub_part:-	dep:MAIN
 name:ک	POS:UNKNOWN	SRL:SBJ_P	WSD:کوچک#a2	sub_part:-	dep:POST
 
@@ -31,7 +31,7 @@ name:کبوتر	POS:NOUN	SRL:OBJـP	WSD:کبوتر#n1	sub_part:-	dep:MAIN
 #------------------------------------------------------
 sentence:و شروع به دویدن به سمت خانه کرد
 
-name:پسرک	POS:NOUN	SRL:SBJ	WSD:پسرک#n	sub_part:پسر،ک	dep:-
+name:پسرک	POS:NOUN	SRL:SBJ	WSD:پسرک	sub_part:پسر،ک	dep:-
 name:پسر	POS:NOUN	SRL:SBJ_P	WSD:پسر#n2	sub_part:-	dep:MAIN
 name:ک	POS:UNKNOWN	SRL:SBJ_P	WSD:کوچک#a2	sub_part:-	dep:POST
 
@@ -46,14 +46,10 @@ name:خانه	POS:NOUN	SRL:ADV_P	WSD:خانه#n10	sub_part:-	dep:MAIN
 #------------------------------------------------------
 sentence:‌وارد خانه شد
 
-name:پسرک	POS:NOUN	SRL:SBJ	WSD:پسرک#n	sub_part:پسر،ک	dep:-
+name:پسرک	POS:NOUN	SRL:SBJ	WSD:پسرک	sub_part:پسر،ک	dep:-
 name:پسر	POS:NOUN	SRL:SBJ_P	WSD:پسر#n2	sub_part:-	dep:MAIN
 name:ک	POS:UNKNOWN	SRL:SBJ_P	WSD:کوچک#a2	sub_part:-	dep:POST
 
 name:وارد شد	POS:VERB	SRL:VERB	WSD:وارد شدن#v2	sub_part:-	dep:-
 
 name:خانه	POS:NOUN	SRL:ADV	WSD:خانه#n10	sub_part:-	dep:-
-
-#------------------------------------------------------
-
-
