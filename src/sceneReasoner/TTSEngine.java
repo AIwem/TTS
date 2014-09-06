@@ -23,14 +23,14 @@ import model.SentenceModel;
  */
 public class TTSEngine {
 	private boolean isKbInitialized = false;	
-	private KnowledgeBase _TTSKb;
-	private SemanticReasoner _re;
+	public KnowledgeBase _TTSKb;
+	public SemanticReasoner _re;
 	
 	private String kbFilePath;
 	private String storyFilePath;
 	
 	private Preprocessor _pp;
-	private SceneReasoner _sr;
+	//private SceneReasoner _sr;
 	
 	public TTSEngine(String kbFilePath, String storyFilePath){
 		this.kbFilePath = kbFilePath;
@@ -38,13 +38,13 @@ public class TTSEngine {
 		
 		this._TTSKb = new KnowledgeBase();
 		this._re = new SemanticReasoner(_TTSKb, ExecutionMode.RELEASE);
-		_re.setMaxReasoningDepth(14);
+		_re.setMaxReasoningDepth(12);
 		_re.setMaximumAnswers(4);
 		
 		loadKb();
 		
 		_pp = new Preprocessor(_TTSKb, _re);
-		_sr = new SceneReasoner(_TTSKb);
+		//_sr = new SceneReasoner(_TTSKb);
 	}
 	
 	/**

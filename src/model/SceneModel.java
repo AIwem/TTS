@@ -1,12 +1,15 @@
 package model;
 
+import ir.ac.itrc.qqa.semantic.enums.POS;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
 import ir.ac.itrc.qqa.semantic.kb.Node;
+import ir.ac.itrc.qqa.semantic.reasoning.PlausibleAnswer;
+import ir.ac.itrc.qqa.semantic.reasoning.PlausibleQuestion;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleStatement;
+import ir.ac.itrc.qqa.semantic.reasoning.SemanticReasoner;
 import ir.ac.itrc.qqa.semantic.util.MyError;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Hashtable;
 
 import sceneElement.DynamicObject;
@@ -24,6 +27,16 @@ import sceneElement.Time;
  */
 public class SceneModel {
 	
+	public SceneModel(KnowledgeBase _kb, SemanticReasoner _re) {		
+		this._kb = _kb;
+		this._re = _re;
+	}
+
+
+	private KnowledgeBase _kb = null;
+	
+	private SemanticReasoner _re = null;
+	
 	private StoryModel story;
 	
 	private ArrayList<SentenceModel> sentences = new ArrayList<SentenceModel>();
@@ -32,9 +45,11 @@ public class SceneModel {
 	 * this map holds the Node object seen yet in this SceneModel object. 
 	 * It maps the Node pure name as key to the ArrayList<Node> of seen Nodes with this name in this SceneModel object.
 	 * for each key, the first Node in ArrayList contains the pure Node object fetched from kb.
-	 * the others are different clone of that pure Node.
+	 * the others are different instances of that pure Node.
 	 */	
-	public Hashtable<String, ArrayList<Node>> scene_nodes_dic = new Hashtable<String,ArrayList<Node>>();
+	private Hashtable<String, ArrayList<Node>> scene_nodes_dic = new Hashtable<String,ArrayList<Node>>();
+	
+	private Hashtable<String, ScenePart> scene_parts = new Hashtable<String, ScenePart>();
 		
 	private ArrayList<Role> roles = new ArrayList<Role>();
 	
@@ -49,6 +64,8 @@ public class SceneModel {
 	private ArrayList<SceneGoal> scene_goals = new ArrayList<SceneGoal>();
 		
 	private ArrayList<SceneEmotion> scene_emotions = new ArrayList<SceneEmotion>();
+		
+	
 	
 	
 	public StoryModel getStory() {
@@ -193,21 +210,23 @@ public class SceneModel {
 			this.scene_emotions.add(scene_emotion);
 	}
 	/**
-	 * findorAddNode searches this sceneModel scene_nodes to find a Node named "name".
-	 * if it didn't find it, then load it from _kb and adds it to the scene_nodes.
+	 * findorCreateInstace searches this sceneModel scene_nodes to find a Node named "name".
+	 * if it didn't find it, then load it from kb and adds it to the scene_nodes_dic.
 	 * 
 	 * TODO: we have temporarily assumed that every redundant input concept refers to the old seen one, not the new,
-	 * for example all "پسرک" in the story refers to "*پسرک )1("
+	 * for example all "پسرک" in the story refers to "پسرک1"
 	 * for the new concept of "پسرک" the newNode parameter must be set to true.
 	 * 
-	 * @param name name of Node to be searched in sceneModel scene_nodes or _kb.
+	 * @param name name of Node to be searched in sceneModel's scene_nodes_dic or kb.
+	 * @param newNode is it a new Node or it is previously seen!
+	 * @param _kb
 	 * @return Node object named "name".
 	 */	
-	public Node findorAddNode(String name, boolean newNode, KnowledgeBase kb){
+	public Node findorCreateInstance(String name, boolean newNode){
 		if(name == null || name.equals("-"))
 			return null;		
 		
-		//a cloned Node with name "name" exists in scene_nodes_dic.
+		//an instance with name "name" exists in scene_nodes_dic.
 		if(scene_nodes_dic.containsKey(name)){
 			
 			ArrayList<Node> seenNodes = scene_nodes_dic.get(name);
@@ -217,26 +236,35 @@ public class SceneModel {
 			 if(seenNodes.size() == 0)
 				 MyError.error(name + " key exists in scene_nodes_dic but no Node exists! probably the map is corrupted!");
 			 
-			 if(!newNode){//It is not a new Node, so return the seenNode
-				 if(seenNodes.size() == 2)//the first Node is the pure Node fetched from kb, and the second is the only cloned node.
+			//It is not a new Node, so return the seenNode
+			 if(!newNode){
+				 
+				//the first Node is the pure Node fetched from kb, and the second is the only instance of it.
+				 if(seenNodes.size() == 2)
 					 return seenNodes.get(1);
-				 else//TODO: I must select the really desired one, but temporarily I return the last one!
+				 
+				//TODO: I must select the really desired one, but temporarily I return the last one!
+				 else
 					 return seenNodes.get(seenNodes.size()-1);
 			 }
-			 else{//It is a new Node, so a new cloned instance must be added to scene_nodes_dic.
+			 
+			//It is a new Node, so a new instance must be created and added to scene_nodes_dic.
+			 else{
 				 if(seenNodes.size() > 0){					 
-					 Node newlyCloned = cloneNode(seenNodes.get(0), kb); //clone a node from its pure version fetched from kb.
-					 seenNodes.add(newlyCloned);
-					 return newlyCloned;
+					 
+					//creates an instance from its pure version fetched from kb.
+					 Node newInstance = createInstance(name, seenNodes.get(0)); 
+					 seenNodes.add(newInstance);
+					 return newInstance;
 				 }
 				 else{
 					 MyError.error(name + " key exists in scene_nodes_dic but no Node exists! probably the map is corrupted!");
-					 Node n = kb.addConcept(name);
+					 Node n = _kb.addConcept(name);
 					 if(n!= null){
 						 seenNodes.add(n);
-						 Node cloned = cloneNode(n, kb);//clone a node from its pure version fetched from kb.
-						 seenNodes.add(cloned);
-						 return cloned;
+						 Node instance = createInstance(name, n);//creates an instance from its pure version fetched from kb.
+						 seenNodes.add(instance);
+						 return instance;
 					 }
 					 else{
 						 MyError.error("the node named " + name + " could not be found or even added to the knowledgebase!");
@@ -245,15 +273,17 @@ public class SceneModel {
 				 }
 			 }
 		}
-		else{//scene_nodes_dic dose not contain this name, so it is not seen yet.			
-			Node n = kb.addConcept(name);
+		//scene_nodes_dic dose not contain this name, so it is not seen yet.
+		else{			
+			Node n = _kb.addConcept(name.toLowerCase());
 			if(n!= null){
-				ArrayList<Node> newlySeen = new ArrayList<Node>();
+				ArrayList<Node> newlySeen = new ArrayList<Node>();				
 				newlySeen.add(n);
-				Node cloned = cloneNode(n, kb);//clone a node from its pure version fetched from kb.
-				newlySeen.add(cloned);
-				scene_nodes_dic.put(name, newlySeen);
-				return cloned;
+				Node instance = createInstance(name, n);//creates an instance from its pure version fetched from kb.
+				newlySeen.add(instance);
+				addNodeToScene_nodes_dic(name, newlySeen, null);
+				
+				return instance;
 			 }
 			 else{
 				 MyError.error("the node named " + name + " could not be found or even added to the knowledgebase!");
@@ -263,22 +293,24 @@ public class SceneModel {
 	}
 	
 	/**
-	 * addRelationWithoutClone searches the scene_nodes_dic for pure_name, 
-	 * if it dosen't find it add pure_name as key and an ArrayList of Node with pure relation as first element and its cloned version as second element.
-	 * if it finds pure_name, adds its cloned version to the end of the list of pure_name mapped ArrayList<Nodes>.
+	 * addRelationInstance searches the scene_nodes_dic for pure_name, 
+	 * if it dosen't find it add pure_name as key and an ArrayList of Node with pure relation as first element and its instance as second element.
+	 * if it finds pure_name, adds its instance to the end of the list of pure_name mapped ArrayList<Nodes>.
+	 * it is important to note that this method dose NOE CREATE an instance, just add the given instance to the scene_nodes_dic. 
 	 *  
 	 * @param pure_name the name of PlausibleStatement to be added.
-	 * @param clonedRelation the cloned PlausibleStatement to be added.
+	 * @param relationInstance the instance of PlausibleStatement to be added.
 	 */
-	public void addClonedRelation(String pure_name, PlausibleStatement clonedRelation){
-		if(pure_name == null || pure_name.equals("") || clonedRelation == null)
+	public void addRelationInstance(String pure_name, PlausibleStatement relationInstance){
+		if(pure_name == null || pure_name.equals("") || relationInstance == null)
 			return;
 		
 		//it is the first time this relation is seen.
 		if(!scene_nodes_dic.containsKey(pure_name)){
 			ArrayList<Node> seenRelation = new ArrayList<Node>();
-			seenRelation.add(clonedRelation.relationType);
-			seenRelation.add(clonedRelation);
+			seenRelation.add(relationInstance.relationType);
+			seenRelation.add(relationInstance);
+			//addNodeToScene_nodes_dic(pure_name, seenRelation); it is not a concept, so it shouldn;t added to scene_parts
 			scene_nodes_dic.put(pure_name, seenRelation);
 		}
 		else{// we have seen this relation before
@@ -289,9 +321,9 @@ public class SceneModel {
 			
 			if(seenRelation.size() == 0){
 				MyError.error(pure_name + " key exists in scene_nodes_dic but no relation exists! probably the map is corrupted!");
-				seenRelation.add(clonedRelation.relationType);
+				seenRelation.add(relationInstance.relationType);
 			}
-			seenRelation.add(clonedRelation);		//TODO check name of وضعیت سلامتی	
+			seenRelation.add(relationInstance);		//TODO check name of وضعیت سلامتی	
 		}
 	}
 	
@@ -303,7 +335,7 @@ public class SceneModel {
 	 * @param kb 
 	 * @return the PlausibleStatement object previously seen, it is cloned PlausibleStatement.
 	 */
-	public PlausibleStatement findRelation(String relation_name, KnowledgeBase kb){
+	public PlausibleStatement findRelation(String relation_name){
 		if(relation_name == null || relation_name.equals("-"))
 			return null;		
 		try{
@@ -311,7 +343,7 @@ public class SceneModel {
 				ArrayList<Node> seenRelations = scene_nodes_dic.get(relation_name);
 				if(seenRelations == null || seenRelations.size() == 0)
 					return null;
-				if(seenRelations.size() == 2)//the first Relation is the pure Node fetched from kb, and the second is the only cloned Relation.
+				if(seenRelations.size() == 2)//the first Relation is the pure Node fetched from kb, and the second is the only instance of the Relation.
 					return (PlausibleStatement)seenRelations.get(1);
 				else//TODO: I must select the really desired one, but temporarily I return the last one!
 					return (PlausibleStatement)seenRelations.get(seenRelations.size()-1);
@@ -324,22 +356,277 @@ public class SceneModel {
 		}			
 	}
 	
-	private Node cloneNode(Node node, KnowledgeBase kb){
-		if(node == null)
+	/**
+	 * this method adds an instance from originalNode by adding a unique index to the end of its name, 
+	 * then adds this instance to kb,
+	 * then adds an ISA relation between this instance and the originalNode.
+	 *   
+	 * @param originalNode the original Node the instance to be created from.
+	 * @param kb
+	 * @return the instance created from originalNode. 
+	 */
+	private Node createInstance(String originalName, Node originalNode){
+		if(originalNode == null)
 			return null;
 		
-		Node cloneNode = new Node(node);
-		Node fromKB = kb.addConcept(cloneNode.getName());//TODO: %%%%%%%%%%%%%%%%%%%% check it	
+		if(originalName == null || originalName.equals(""))
+			originalName = originalNode.getName();
 		
-		kb.addRelation(fromKB, node, KnowledgeBase.HPR_ISA);
+	 	ArrayList<Node> instances = scene_nodes_dic.get(originalName);
+	 	
+	 	int index = 0;
+	 	if(instances == null || instances.size() == 0)
+	 		index = 1;
+	 	else
+	 		index = instances.size();
+	 			  
+		String instanceName = originalName +"-"+ index;
+		
+		Node fromKB = _kb.addConcept(instanceName);		
+		
+		//kb.addRelation(fromKB, originalNode, KnowledgeBase.HPR_ISA);
+		_kb.addRelation(fromKB, originalNode, KnowledgeBase.HPR_SIM);
+		
+		
 		return fromKB;		
 	}
 	
 	public void printDictionary(){
-		System.out.println("\n scene_node_dic");
+		print("\n scene_node_dic");
 		for(String key:scene_nodes_dic.keySet()){
-			System.out.println(key +":\n " + scene_nodes_dic.get(key));
+			print(key +":\n " + scene_nodes_dic.get(key));
 		}
 			
+		print("\n scene_parts");
+		for(String key:scene_parts.keySet()){
+			print(key +":\n " + scene_parts.get(key));
+		}
+	}
+	
+	/**
+	 * checks if this node name is a pure node fetched from kb or 
+	 * it is an instance created by "createInstance" method or a relation cloned by addRelation.
+	 * @param node 
+	 * @return
+	 */
+	private boolean isInstanceNode(Node node){
+		if(node == null)
+			return false;
+		String name = node.getName();
+		if(name == null)
+			return false;
+		int index = name.indexOf("-");
+		if(index != -1)
+			return true;
+		index = name.indexOf("*");
+		if(index != -1)
+			return true;
+		return false;
+	}
+	
+	/**
+	 * returns the pure version of concept name as are in kb.
+	 * @param node
+	 * @return
+	 */
+	private String getPureName(Node node){
+		if(node == null)
+			return null;
+		
+		if(isInstanceNode(node)){
+			String name = node.getName();
+			if(name == null)
+				return null;
+			int index = name.indexOf("-");
+			if(index != -1)
+				return name.substring(0,index);
+			int index1 = name.indexOf("*");
+			int index2 = name.indexOf("(");
+			return name.substring(index1+1, index2);
+		}
+		return node.getName();
+	}
+	
+	/**
+	 * TODO: It must be improved: recognizing that which scenePart has the node: a Role (human) or DynamicObject or StaticObject?!
+	 * this method checks if node is a child of "نفر§n-13075" returns ROLE,
+	 *  if node is a child of "جانور§n-12239" returns DYNAMIC_OBJ,
+	 *  otherwise return STATIC_OBJ.
+	 *  
+	 * @param node the pure node fetched from kb.
+	 * @param pos the part of speech this node has, only POS of NOUN,VERB, and ADVERB comes here!
+	 * @return
+	 */
+	private ScenePart getScenePart(Node node, POS pos){
+		if(node == null)
+			return ScenePart.UNKNOWN;
+		
+		if(pos == POS.NOUN){
+			
+			//TODO: I must remove these lines!-------
+			if(node.getName().equals("پسرک#n"))
+				return ScenePart.ROLE;
+			if(node.getName().equals("پسر#n2"))
+				return ScenePart.ROLE;
+			//---------------------------------------
+			
+
+			if(isHuman(node))
+				return ScenePart.ROLE;
+			
+			if(isAnimal(node))
+				return ScenePart.DYNAMIC_OBJ;
+			
+			return ScenePart.STATIC_OBJ;
+		}
+		if(pos == POS.VERB)
+			return null;
+		
+		if(pos == POS.ADVERB)
+			return null;
+		
+		return ScenePart.UNKNOWN;
+	}
+	
+	/**
+	 * checks if node is a child of "نفر§n-13075" returns true.
+	 * @param node the pure node fetched from kb.
+	 * @return
+	 */
+	private boolean isHuman(Node node){
+		if(node == null)
+			return false;
+		
+		print(node + "~~~~~~~~~~~~~~~~in isHuman ~~~~~~~~~~~~~~~~~");
+		
+		PlausibleQuestion pq = new PlausibleQuestion();
+		pq.descriptor = KnowledgeBase.HPR_ISA;
+		pq.argument = node;			
+		pq.referent = _kb.addConcept("نفر§n-13075");
+		
+		//ArrayList<PlausibleAnswer> answers = writeAnswersTo(pq.descriptor, node, pq.referent);
+		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);	
+		for(PlausibleAnswer ans:answers){
+				print("answer: " + ans);					
+				if(ans.answer == KnowledgeBase.HPR_YES){
+					print(node.getName() + " isHuman");
+					return true;
+				}			
+		}	
+		print(node + " is NOT Human");
+		return false;
+	}
+	
+	/**
+	 * checks if node is a child of "جانور§n-12239" returns true.
+	 * @param node the pure node fetched from kb.
+	 * @return
+	 */
+	private boolean isAnimal(Node node){		
+		if(node == null)
+			return false;
+		
+		print(node + "~~~~~~~~~~~~~~~~in isAnimal ~~~~~~~~~~~~~~~~~");
+		
+		PlausibleQuestion pq = new PlausibleQuestion();
+		pq.descriptor = KnowledgeBase.HPR_ISA;
+		pq.argument = node;			
+		pq.referent = _kb.addConcept("جانور§n-12239");
+		
+		//ArrayList<PlausibleAnswer> answers = writeAnswersTo(pq.descriptor, node, pq.referent);
+		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
+		for(PlausibleAnswer ans:answers ){
+			print("answer: " + ans);
+			if(ans.answer == KnowledgeBase.HPR_YES){
+				print(node.getName() + " isAnimal");
+				return true;				
+			}
+		}		
+		print(node + " is NOT Animal");
+		return false;
+	}
+	
+	private void addNodeToScene_nodes_dic(String pure_name, ArrayList<Node> instances, POS pos){
+		if(pure_name == null || instances == null)
+			return;
+		
+		scene_nodes_dic.put(pure_name, instances);
+		
+		if(pos == null){
+			Node pure_node = null;
+			
+			if(instances.size() > 0)
+				pure_node = instances.get(0);
+			else
+				pure_node = _kb.addConcept(pure_name);
+			
+			pos = pure_node.getPos();
+			
+			if(pos == POS.ADJECTIVE || pos == POS.SETELLITE_ADJECTIVE || pos == POS.UNKNOWN || pos == POS.ANY){
+				print(pure_node + "skipped  from getScenePart!!!!!!!!!!!!!!!!!!!!!!1");
+				return;
+			}
+			
+			if(!scene_parts.containsKey(pure_name)){
+				ScenePart sp = getScenePart(pure_node, pos);
+				if(sp != ScenePart.UNKNOWN)
+					scene_parts.put(pure_name, sp);
+			}
+		}
+		
+	}
+		
+	private void print(String toPrint){
+		System.out.println(toPrint);
+		
+	}
+	
+	public ScenePart whichScenePart(Node node){
+		print(node + "~~~~~~~~~~~~~~~ in whichScenePart ~~~~~~~~~~~~");
+		if(node == null)
+			return ScenePart.UNKNOWN;
+		
+		String pure_name = "";
+		
+		if(isInstanceNode(node))
+			pure_name = getPureName(node);
+		else
+			pure_name = node.getName();
+		
+		//if it is seen before!
+		if(scene_parts.containsKey(pure_name)){
+			print(node + " is" + scene_parts.get(pure_name));
+			return scene_parts.get(pure_name);
+		}
+		//if it isn't seen before!
+		else{
+			Node pure_node  = null;
+			ScenePart sp = ScenePart.UNKNOWN;
+			
+			if(scene_nodes_dic.containsKey(pure_name)){
+				ArrayList<Node> instances = scene_nodes_dic.get(pure_name);
+				if(instances.size() > 0)
+					pure_node = instances.get(0);				
+			}
+//			else{
+//				findorCreateInstance(pure_name, false);
+//			}
+//				
+			else
+				pure_node = _kb.addConcept(pure_name);
+			
+			if(pure_node != null){
+				sp = getScenePart(pure_node, pure_node.getPos());
+				if(sp != null){
+//					addNodeToScene_nodes_dic(pure_name, instances, pos);
+					scene_parts.put(pure_name, sp);					
+				}
+			}
+			print(node + " pos is " + sp);
+			return sp;
+		}
 	}
 }
+			
+		
+	

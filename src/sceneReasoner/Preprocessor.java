@@ -25,6 +25,7 @@ import sceneElement.StaticObject;
 import model.DEP;
 import model.Part;
 import model.SceneModel;
+import model.ScenePart;
 import model.SentenceModel;
 
 /**
@@ -315,6 +316,8 @@ public class Preprocessor {
 			
 			PlausibleStatement wsd = null;
 			
+			String relation_name = null;
+			
 			Part main_sub_part = null;
 			Part pre_sub_part = null;
 			Part post_sub_part = null;
@@ -326,7 +329,7 @@ public class Preprocessor {
 				switch(node_pos){
 				case("MAIN"):
 					main_sub_part = part.getMainSub_part();
-					argument = sceneModel.findorAddNode(main_sub_part._wsd_name, false, _kb);
+					argument = sceneModel.findorCreateInstance(main_sub_part._wsd_name, false);
 					main_sub_part.set_wsd(argument);
 					break;
 				case("PRE"):
@@ -336,77 +339,78 @@ public class Preprocessor {
 					break;
 				case("POST"):										
 					post_sub_part = part.getPostSub_part();
-					referent = sceneModel.findorAddNode(post_sub_part._wsd_name, false, _kb);
+					referent = sceneModel.findorCreateInstance(post_sub_part._wsd_name, false);
 					post_sub_part.set_wsd(referent);
 					break;
 				//node_pos is a descriptor_name.
 				default:
-					wsd = sceneModel.findRelation(node_pos, _kb);
+					relation_name = node_pos;
+					wsd = sceneModel.findRelation(relation_name);
 					if(wsd == null){
 						//it must got directly fetched from kb, and then addRelation will clone it.
-						descriptor = _kb.addConcept(node_pos);
+						descriptor = _kb.addConcept(relation_name);
 					}
 				}
 			}
 			
 			if(descriptor != null){//it means that findRelation has not found it and it is newly fetched from kb.
 				wsd = _kb.addRelation(argument, referent, descriptor);
-				sceneModel.addClonedRelation(descriptor.getName(), wsd);
+				sceneModel.addRelationInstance(descriptor.getName(), wsd);
+			}
+			else{//it means that findRelation has found this relation.
+				//it means that this relation must be different with the seen one!
+				if(wsd.argument != argument || wsd.referent != referent){//TODO check is it correct or not!
+					descriptor = _kb.addConcept(relation_name);
+					wsd = _kb.addRelation(argument, referent, descriptor);
+					sceneModel.addRelationInstance(relation_name, wsd);					
+				}
 			}
 			part.set_wsd(main_sub_part._wsd);
 			return;
 		}
 		if(part.hasSub_parts()){
 			for(Part p:part.sub_parts){
-				Node wsd = sceneModel.findorAddNode(p._wsd_name, false, _kb);
+				Node wsd = sceneModel.findorCreateInstance(p._wsd_name, false);
 				p.set_wsd(wsd);
 			}
 			
 		}
-		//it means this part wsd_name is just one cocept name, so we find or add it in sceneModel.
-		Node wsd = sceneModel.findorAddNode(wsd_name, false, _kb);
+		//it means this part wsd_name is just one concept name, so we find or add it in sceneModel.
+		Node wsd = sceneModel.findorCreateInstance(wsd_name, false);
 		part.set_wsd(wsd);		
 	}
 
-	private boolean isHuman(Node node){
+	private ArrayList<PlausibleAnswer> writeAnswersTo(Node descriptor, Node argument, Node referent){
 		PlausibleQuestion pq = new PlausibleQuestion();
-		pq.descriptor = KnowledgeBase.HPR_ISA;
-		pq.argument = node;			
-		pq.referent = _kb.addConcept("نفر§n-13075");
+		pq.argument = argument;		
+		pq.referent = referent;
+		pq.descriptor = descriptor;
 		
 		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
 		
-		for(PlausibleAnswer ans:answers){
-				print("answer: " + ans);
-				if(ans.answer == KnowledgeBase.HPR_YES){
-					print(node.getName() + " isHuman");
-					return true;
-				}
-					
+		System.out.println("Answers:");
+		
+		int count = 0;
+		for (PlausibleAnswer answer: answers)
+		{
+			System.out.println(++count + ". " + answer.toString());
+			
+			ArrayList<String> justifications = answer.GetTechnicalJustifications();
+			
+			int countJustification = 0;
+			for (String justification: justifications)
+			{
+				System.out.println("-------" + ++countJustification + "--------");
+				System.out.println(justification);
+			}
 		}
-		print(node.getName() + " is NOT Human");
-		return false;
+		print("\tInferences: " + _re.totalCalls);
+		print("\tTime: " + _re.reasoningTime / 1000);
+		print("\tThroughput: " + (_re.totalCalls / _re.reasoningTime) * 1000 + " inference/s");
+		return answers;
+		
 	}
 	
-	private boolean isAnimal(Node node){
-		PlausibleQuestion pq = new PlausibleQuestion();
-		pq.descriptor = KnowledgeBase.HPR_ISA;
-		pq.argument = node;			
-		pq.referent = _kb.addConcept("جانور§n-12239");//TODO: add طیور و ومهر دار
-		
-		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
-		if(answers != null)
-			for(PlausibleAnswer ans:answers){
-				print("answer: " + ans);
-				if(ans.answer == KnowledgeBase.HPR_YES){
-					print(node.getName() + " isAnimal");
-					return true;				
-				}
-			}
-		print(node.getName() + " is NOT Animal");
-		return false;
-	}
-
 	private void preprocessSubject(SentenceModel sentenceModel, SceneModel primarySceneModel){
 		Part sbj = sentenceModel.getSingleSubject();
 		
@@ -419,23 +423,24 @@ public class Preprocessor {
 			//_wsd of sbj is set to proper Node of KB.
 			allocate_wsd(sbj, primarySceneModel);
 		
-			//TODO: It must be improved: recognizing that obj._wsd is a Role (human) or DynamicObject or StaticObject?!
-			//it is a human, so it is a Role of scene.
-			if(isHuman(sbj._wsd)){
+			
+			ScenePart sp = primarySceneModel.whichScenePart(sbj._wsd);
+			
+			if(sp == ScenePart.ROLE){
 				Role role = new Role(sbj._name, sbj._wsd);				
 				primarySceneModel.addRole(role);				
 			}
-			//it is an animal, so it is a DynamicObject of a scene.
-			else if(isAnimal(sbj._wsd)){
+			else if(sp == ScenePart.DYNAMIC_OBJ){
 				DynamicObject dynObj = new DynamicObject(sbj._name, sbj._wsd);
 				primarySceneModel.addDynamic_object(dynObj);				
 			}
-			//it is not human nor animal, so it is a StaticObject.
-			else{
+			else if(sp == ScenePart.STATIC_OBJ){
 				StaticObject staObj = new StaticObject(sbj._name, sbj._wsd);
 				primarySceneModel.addStatic_object(staObj);				
 			}
-			
+			else{
+				MyError.error(sbj + "has no ScenePart!");
+			}
 		}		
 	}
 	
@@ -457,23 +462,23 @@ public class Preprocessor {
 			//_wsd of obj is set to proper Node of KB.
 			allocate_wsd(obj, primarySceneModel);
 		
-			//TODO: It must be improved: recognizing that obj._wsd is a Role (human) or DynamicObject or StaticObject?!
-			//it is a human, so it is a Role of scene.
-			if(isHuman(obj._wsd)){				
+			ScenePart sp = primarySceneModel.whichScenePart(obj._wsd);
+			
+			if(sp == ScenePart.ROLE){				
 				Role role = new Role(obj._name, obj._wsd);				
 				primarySceneModel.addRole(role);				
 			}
-			//it is an animal, so it is a DynamicObject of a scene.
-			else if(isAnimal(obj._wsd)){				
+			else if(sp == ScenePart.DYNAMIC_OBJ){				
 				DynamicObject dynObj = new DynamicObject(obj._name, obj._wsd);
 				primarySceneModel.addDynamic_object(dynObj);				
 			}
-			//it is not human nor animal, so it is a StaticObject.
-			else{				
+			else if(sp == ScenePart.STATIC_OBJ){				
 				StaticObject staObj = new StaticObject(obj._name, obj._wsd);
 				primarySceneModel.addStatic_object(staObj);				
 			}
-			
+			else{
+				MyError.error(obj + "has no ScenePart!");
+			}
 		}		
 	}
 	

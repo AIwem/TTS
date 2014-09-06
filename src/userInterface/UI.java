@@ -15,7 +15,8 @@ public class UI {
 	private TTSEngine tts;
 	
 	public UI(){
-		tts = new TTSEngine("kb/farsnet.txt", "kb/injuredPigeon.txt");
+		//tts = new TTSEngine("kb/farsnet.txt", "kb/injuredPigeon.txt");
+		tts = new TTSEngine("kb/farsnet--7.txt", "kb/injuredPigeon.txt");
 	}
 	
 	private void print(String s){
@@ -31,7 +32,7 @@ public class UI {
 		//temporarily it reads all input story from file instead of getting from user!
 		ArrayList<String> inputs = importInputTexts(inputTextFileName);
 		
-		SceneModel primarySceneModel = new SceneModel();
+		SceneModel primarySceneModel = new SceneModel(tts._TTSKb, tts._re);
 		
 		String command = "";
 		//ArrayList<Node> nodes = null;
@@ -114,9 +115,9 @@ public class UI {
 	
 		UI ui = new UI();
 		ui.TTS();
-		ui.tts.checkSemanticReasoner();
-		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~");
-		ui.tts.checkSemanticReasoner2();
+		//ui.tts.checkSemanticReasoner();
+		//System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~");
+		//ui.tts.checkSemanticReasoner2();
 		
 	/*	ArrayList<PlausibleAnswer> pas = ui.testSemanticReasoner();
 		ui.printPlausibleAnswers(pas);
