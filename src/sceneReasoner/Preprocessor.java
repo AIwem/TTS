@@ -45,7 +45,8 @@ public class Preprocessor {
 	 * We have no NLP module to process input text and convert it to related part,
 	 * so temporarily we aught to read these processed information from a file named  SentenceInfosFileName. 
 	 */
-	private String SentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
+	//private String SentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
+	private String SentenceInfosFileName = "inputStory/sentenceInfos2.txt";
 		
 	public Preprocessor(KnowledgeBase kb, SemanticReasoner re) {
 		this._kb = kb;
@@ -431,15 +432,7 @@ public class Preprocessor {
 			
 			//_wsd of obj is set to proper Node of KB.
 			allocate_wsd(obj, primarySceneModel);
-			
-			print("^^^^^^^^^^^^ test ^^^^^^^^^^^^");
-			Node kabotar1 = obj.sub_parts.get(1)._wsd;
-			for(PlausibleAnswer ans: kabotar1.findTargetNodes(KnowledgeBase.HPR_ISA))
-				print(kabotar1 +" isa " + ans.answer);
-			primarySceneModel.isAnimal(kabotar1);
-		
-			
-		
+					
 			ScenePart sp = primarySceneModel.whichScenePart(obj._wsd);
 			
 			if(sp == ScenePart.ROLE){				

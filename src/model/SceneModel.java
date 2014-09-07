@@ -381,25 +381,27 @@ public class SceneModel {
 	 		index = instances.size();
 	 	
 	 	String instanceName = originalName;
-	 	int s = originalName.indexOf("#");
-	 	if(s != -1)
-	 		instanceName = originalName.substring(0, s);
 	 	
-	 	s = originalName.indexOf("§");
-	 	if(s != -1)
-	 		instanceName = originalName.substring(0, s);
-	 	
+//	 	int s = originalName.indexOf("#");
+//	 	if(s != -1)
+//	 		instanceName = originalName.substring(0, s);
+//	 	
+//	 	s = originalName.indexOf("§");
+//	 	if(s != -1)
+//	 		instanceName = originalName.substring(0, s);
+//	 	
 	 	
 	 	
 		instanceName = instanceName + "-"+ index;
 		
+		//adding this instance concept to the knowledge base.
 		Node fromKB = _kb.addConcept(instanceName);
-		Node SSNode = _kb.addConcept("کبوتر§n-24403");
+		//Node SSNode = _kb.addConcept("کبوتر§n-24403");
 		
 		
-		_kb.addRelation(fromKB, SSNode, KnowledgeBase.HPR_ISA);
+		//_kb.addRelation(fromKB, SSNode, KnowledgeBase.HPR_ISA);
 		//_kb.addRelation(fromKB, originalNode, KnowledgeBase.HPR_ISA);
-		//_kb.addRelation(fromKB, originalNode, KnowledgeBase.HPR_SIM);
+		_kb.addRelation(fromKB, originalNode, KnowledgeBase.HPR_SIM);
 		
 		
 		return fromKB;		
@@ -436,13 +438,13 @@ public class SceneModel {
 		if(index != -1)
 			isInstance = true;
 		
-		index = name.indexOf("#");		
-		if(index != -1)
-			isInstance = false;
-		
-		index = name.indexOf("§");
-		if(index != -1)
-			isInstance = false;
+//		index = name.indexOf("#");		
+//		if(index != -1)
+//			isInstance = false;
+//		
+//		index = name.indexOf("§");
+//		if(index != -1)
+//			isInstance = false;
 			
 		index = name.indexOf("*");
 		if(index != -1)
@@ -455,23 +457,20 @@ public class SceneModel {
 	 * @param node
 	 * @return
 	 */
-	private String getPureName(Node node){
-		//TODO correct it!
+	private String getPureName(Node node){		
 		if(node == null)
 			return null;
 		
 		if(isInstanceNode(node)){
 			String name = node.getName();
-			print(name);
+			
 			if(name == null)
 				return null;
+			
 			int index = name.indexOf("-");
 			String pure_name = "";
 			if(index != -1){
 				pure_name = name.substring(0, index);
-				print(pure_name);
-				pure_name += "#n1";
-				print(pure_name);
 				return pure_name;
 			}
 			int index1 = name.indexOf("*");
@@ -498,11 +497,11 @@ public class SceneModel {
 		if(pos == POS.NOUN){
 			
 			//TODO: I must remove these lines!-------
-		if(node.getName().equals("پسرک"))
-			return ScenePart.ROLE;
-		if(node.getName().equals("پسر#n2"))
-			return ScenePart.ROLE;
-			//---------------------------------------
+//			if(node.getName().equals("پسرک#n"))
+//				return ScenePart.ROLE;
+//			if(node.getName().equals("پسر#n2"))
+//				return ScenePart.ROLE;
+//			//---------------------------------------
 			
 
 			if(isHuman(node))
@@ -527,7 +526,7 @@ public class SceneModel {
 	 * @param node the pure node fetched from kb.
 	 * @return
 	 */
-	public boolean isHuman(Node node){
+	private boolean isHuman(Node node){
 		if(node == null)
 			return false;
 		
@@ -556,7 +555,7 @@ public class SceneModel {
 	 * @param node the pure node fetched from kb.
 	 * @return
 	 */
-	public boolean isAnimal(Node node){		
+	private boolean isAnimal(Node node){		
 		if(node == null)
 			return false;
 		
@@ -579,7 +578,16 @@ public class SceneModel {
 		print(node + " is NOT Animal");
 		return false;
 	}
-	
+	/**
+	 * this method adds a row to scene_nodes_dic with pure_name as key and instances arrayList as values.
+	 * beside this, it detects the ScenePart of the original node (Node directly fetched from FarsNet) with name pure_name.
+	 * then it adds this row to the scene_parts with pure_name as key and the detected ScenePart as value.
+	 * this is done in order to preventing re-querying the kb to detect ScenePart of every instance of a original node in this sceneModel. 
+	 * 
+	 * @param pure_name the name of original node fetched from FarsNet.
+	 * @param instances the list of instances of original node in this sceneModel.
+	 * @param scenePart
+	 */
 	private void addNodeToScene_nodes_dic(String pure_name, ArrayList<Node> instances, POS pos){
 		if(pure_name == null || instances == null)
 			return;
@@ -597,7 +605,7 @@ public class SceneModel {
 			pos = pure_node.getPos();
 			
 			if(pos == POS.ADJECTIVE || pos == POS.SETELLITE_ADJECTIVE){// || pos == POS.UNKNOWN || pos == POS.ANY){
-				print(pure_node + " skipped  from getScenePart!!!!!!!!!!!!!!!!!!!!!!1");
+				print(pure_node + " skipped  from getScenePart!!!!!!!!!!!!!!!!!!!!!!!");
 				return;
 			}
 			
@@ -634,6 +642,15 @@ public class SceneModel {
 		}
 		//if it isn't seen before!
 		else{
+			
+			POS pos = node.getPos();
+			
+			//we don't make a ScenePart for an adjective.
+			if(pos == POS.ADJECTIVE || pos == POS.SETELLITE_ADJECTIVE){
+				print(node + " skipped  from getScenePart!!!!!!!!!!!!!!!!!!!!!!");
+				return ScenePart.UNKNOWN;
+			}
+			
 			Node pure_node  = null;
 			ScenePart sp = ScenePart.UNKNOWN;
 			
@@ -641,20 +658,15 @@ public class SceneModel {
 				ArrayList<Node> instances = scene_nodes_dic.get(pure_name);
 				if(instances.size() > 0)
 					pure_node = instances.get(0);				
-			}
-//			else{
-//				findorCreateInstance(pure_name, false);
-//			}
-//				
+			}	
 			else
-				pure_node = _kb.addConcept(pure_name);
+				pure_node = _kb.addConcept(pure_name);//find node from kb.
 			
 			if(pure_node != null){
 				sp = getScenePart(pure_node, pure_node.getPos());
-				if(sp != null){
-//					addNodeToScene_nodes_dic(pure_name, instances, pos);
+				if(sp != null && sp != ScenePart.UNKNOWN)					
 					scene_parts.put(pure_name, sp);					
-				}
+				
 			}
 			print(node + " pos is " + sp);
 			return sp;
