@@ -433,7 +433,7 @@ public class Preprocessor {
 			allocate_wsd(obj, primarySceneModel);
 			
 			print("^^^^^^^^^^^^ test ^^^^^^^^^^^^");
-			Node kabotar1 = obj.sub_parts.get(0)._wsd;
+			Node kabotar1 = obj.sub_parts.get(1)._wsd;
 			for(PlausibleAnswer ans: kabotar1.findTargetNodes(KnowledgeBase.HPR_ISA))
 				print(kabotar1 +" isa " + ans.answer);
 			primarySceneModel.isAnimal(kabotar1);

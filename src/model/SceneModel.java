@@ -380,7 +380,7 @@ public class SceneModel {
 	 	else
 	 		index = instances.size();
 	 	
-	 	String instanceName = "";
+	 	String instanceName = originalName;
 	 	int s = originalName.indexOf("#");
 	 	if(s != -1)
 	 		instanceName = originalName.substring(0, s);
@@ -393,9 +393,12 @@ public class SceneModel {
 	 	
 		instanceName = instanceName + "-"+ index;
 		
-		Node fromKB = _kb.addConcept(instanceName);		
+		Node fromKB = _kb.addConcept(instanceName);
+		Node SSNode = _kb.addConcept("کبوتر§n-24403");
 		
-		_kb.addRelation(fromKB, originalNode, KnowledgeBase.HPR_ISA);
+		
+		_kb.addRelation(fromKB, SSNode, KnowledgeBase.HPR_ISA);
+		//_kb.addRelation(fromKB, originalNode, KnowledgeBase.HPR_ISA);
 		//_kb.addRelation(fromKB, originalNode, KnowledgeBase.HPR_SIM);
 		
 		
@@ -459,13 +462,16 @@ public class SceneModel {
 		
 		if(isInstanceNode(node)){
 			String name = node.getName();
+			print(name);
 			if(name == null)
 				return null;
 			int index = name.indexOf("-");
 			String pure_name = "";
 			if(index != -1){
 				pure_name = name.substring(0, index);
+				print(pure_name);
 				pure_name += "#n1";
+				print(pure_name);
 				return pure_name;
 			}
 			int index1 = name.indexOf("*");
@@ -492,11 +498,11 @@ public class SceneModel {
 		if(pos == POS.NOUN){
 			
 			//TODO: I must remove these lines!-------
-//			if(node.getName().equals("پسرک#n"))
-//				return ScenePart.ROLE;
-//			if(node.getName().equals("پسر#n2"))
-//				return ScenePart.ROLE;
-//			//---------------------------------------
+		if(node.getName().equals("پسرک"))
+			return ScenePart.ROLE;
+		if(node.getName().equals("پسر#n2"))
+			return ScenePart.ROLE;
+			//---------------------------------------
 			
 
 			if(isHuman(node))
@@ -590,8 +596,8 @@ public class SceneModel {
 			
 			pos = pure_node.getPos();
 			
-			if(pos == POS.ADJECTIVE || pos == POS.SETELLITE_ADJECTIVE || pos == POS.UNKNOWN || pos == POS.ANY){
-				print(pure_node + "skipped  from getScenePart!!!!!!!!!!!!!!!!!!!!!!1");
+			if(pos == POS.ADJECTIVE || pos == POS.SETELLITE_ADJECTIVE){// || pos == POS.UNKNOWN || pos == POS.ANY){
+				print(pure_node + " skipped  from getScenePart!!!!!!!!!!!!!!!!!!!!!!1");
 				return;
 			}
 			

@@ -1,5 +1,6 @@
 bin
 backup
+log
 lib
 *.class
 *.metadata
