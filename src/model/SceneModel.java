@@ -1,6 +1,7 @@
 package model;
 
 import ir.ac.itrc.qqa.semantic.enums.POS;
+import ir.ac.itrc.qqa.semantic.enums.SourceType;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
 import ir.ac.itrc.qqa.semantic.kb.Node;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleAnswer;
@@ -275,18 +276,18 @@ public class SceneModel {
 		}
 		//scene_nodes_dic dose not contain this name, so it is not seen yet.
 		else{			
-			Node n = _kb.addConcept(name.toLowerCase());
+			Node n = _kb.addConcept(name);
 			if(n!= null){
 				ArrayList<Node> newlySeen = new ArrayList<Node>();				
 				newlySeen.add(n);
 				Node instance = createInstance(name, n);//creates an instance from its pure version fetched from kb.
 				newlySeen.add(instance);
-				addNodeToScene_nodes_dic(name, newlySeen, null);
+				addNodeToScene_nodes_dic(name, newlySeen, instance.getPos());
 				
 				return instance;
 			 }
 			 else{
-				 MyError.error("the node named " + name + " could not be found or even added to the knowledgebase!");
+				 MyError.error("the node  named " + name + " could not be found or even added to the knowledgebase!");
 				 return null;
 			 }
 		}
@@ -310,8 +311,8 @@ public class SceneModel {
 			ArrayList<Node> seenRelation = new ArrayList<Node>();
 			seenRelation.add(relationInstance.relationType);
 			seenRelation.add(relationInstance);
-			//addNodeToScene_nodes_dic(pure_name, seenRelation); it is not a concept, so it shouldn;t added to scene_parts
-			scene_nodes_dic.put(pure_name, seenRelation);
+			addNodeToScene_nodes_dic(pure_name, seenRelation, relationInstance.getPos());// it is not a concept, so it shouldn't added to scene_parts
+			//scene_nodes_dic.put(pure_name, seenRelation);
 		}
 		else{// we have seen this relation before
 			ArrayList<Node> seenRelation = scene_nodes_dic.get(pure_name);
@@ -323,19 +324,20 @@ public class SceneModel {
 				MyError.error(pure_name + " key exists in scene_nodes_dic but no relation exists! probably the map is corrupted!");
 				seenRelation.add(relationInstance.relationType);
 			}
-			seenRelation.add(relationInstance);		//TODO check name of وضعیت سلامتی	
+			seenRelation.add(relationInstance);	
 		}
 	}
 	
 	/**
 	 * findRelation searches the scene_nodes_dic to find the previous seen plausibleStatement with name "relation_name", if any.
-	 * if found returns it, if scene_nodes_dic dosen't have such a relation_name as key, it return null.
+	 * if found returns its pure version, means first element of its list, 
+	 * if scene_nodes_dic dosen't have such a relation_name as key, it return null.
 	 * 
 	 * @param relation_name the name of PlausibleStatement to be search
 	 * @param kb 
 	 * @return the PlausibleStatement object previously seen, it is cloned PlausibleStatement.
 	 */
-	public PlausibleStatement findRelation(String relation_name){
+	public PlausibleStatement findRelationInstance(String relation_name){
 		if(relation_name == null || relation_name.equals("-"))
 			return null;		
 		try{
@@ -392,10 +394,10 @@ public class SceneModel {
 //	 	
 	 	
 	 	
-		instanceName = instanceName + "-"+ index;
+		instanceName = instanceName + " ("+ index + ")";
 		
 		//adding this instance concept to the knowledge base.
-		Node fromKB = _kb.addConcept(instanceName);
+		Node fromKB = _kb.addConcept(instanceName, false, SourceType.TTS);
 		//Node SSNode = _kb.addConcept("کبوتر§n-24403");
 		
 		
@@ -410,13 +412,14 @@ public class SceneModel {
 	public void printDictionary(){
 		print("\n scene_node_dic");
 		for(String key:scene_nodes_dic.keySet()){
-			print(key +":\n " + scene_nodes_dic.get(key));
+			print(key +": " + scene_nodes_dic.get(key));
 		}
 			
 		print("\n scene_parts");
 		for(String key:scene_parts.keySet()){
-			print(key +":\n " + scene_parts.get(key));
+			print(key +": " + scene_parts.get(key));
 		}
+		print("\n");
 	}
 	
 	/**
@@ -433,8 +436,9 @@ public class SceneModel {
 		if(name == null)
 			return false;
 		
-		boolean isInstance = true;
-		int index = name.indexOf("-");
+		boolean isInstance = false;
+		//both instances created by "createInstance" and relations added by addRelation have (index) at the end of their names. 
+		int index = name.indexOf("(");
 		if(index != -1)
 			isInstance = true;
 		
@@ -445,10 +449,10 @@ public class SceneModel {
 //		index = name.indexOf("§");
 //		if(index != -1)
 //			isInstance = false;
-			
-		index = name.indexOf("*");
-		if(index != -1)
-			isInstance = true;
+//			
+//		index = name.indexOf("*");
+//		if(index != -1)
+//			isInstance = true;
 		return isInstance;
 	}
 	
@@ -467,15 +471,15 @@ public class SceneModel {
 			if(name == null)
 				return null;
 			
-			int index = name.indexOf("-");
-			String pure_name = "";
-			if(index != -1){
-				pure_name = name.substring(0, index);
-				return pure_name;
-			}
-			int index1 = name.indexOf("*");
-			int index2 = name.indexOf("(");
-			return name.substring(index1+1, index2);
+			String pure_name = name;
+			int index1 = name.indexOf("(");			
+			if(index1 != -1)
+				pure_name = pure_name.substring(0, index1).trim();
+				
+			int index2 = name.indexOf("*");
+			if(index2 != -1)
+				pure_name =  pure_name.substring(index2);
+			return pure_name;
 		}
 		return node.getName();
 	}
@@ -496,12 +500,10 @@ public class SceneModel {
 		
 		if(pos == POS.NOUN){
 			
-			//TODO: I must remove these lines!-------
-//			if(node.getName().equals("پسرک#n"))
-//				return ScenePart.ROLE;
-//			if(node.getName().equals("پسر#n2"))
-//				return ScenePart.ROLE;
-//			//---------------------------------------
+			//TODO: I must remove these lines!-------			
+			if(node.getName().equals("پسر#n2"))
+				return ScenePart.ROLE;
+			//---------------------------------------
 			
 
 			if(isHuman(node))
@@ -594,27 +596,28 @@ public class SceneModel {
 		
 		scene_nodes_dic.put(pure_name, instances);
 		
-		if(pos == null){
-			Node pure_node = null;
+		Node pure_node = null;
+		
+		if(instances.size() > 0)
+			pure_node = instances.get(0);
+		else
+			pure_node = _kb.addConcept(pure_name);
 			
-			if(instances.size() > 0)
-				pure_node = instances.get(0);
-			else
-				pure_node = _kb.addConcept(pure_name);
-			
+		if(pos == null)			
 			pos = pure_node.getPos();
+		
 			
-			if(pos == POS.ADJECTIVE || pos == POS.SETELLITE_ADJECTIVE){// || pos == POS.UNKNOWN || pos == POS.ANY){
-				print(pure_node + " skipped  from getScenePart!!!!!!!!!!!!!!!!!!!!!!!");
-				return;
-			}
-			
-			if(!scene_parts.containsKey(pure_name)){
-				ScenePart sp = getScenePart(pure_node, pos);
-				if(sp != ScenePart.UNKNOWN)
-					scene_parts.put(pure_name, sp);
-			}
+		if(pos == POS.ADJECTIVE || pos == POS.SETELLITE_ADJECTIVE){// || pos == POS.UNKNOWN || pos == POS.ANY){
+			print(pure_node + " skipped  from getScenePart!!!!!!!!!!!!!!!!!!!!!!!");
+			return;
 		}
+		
+		if(!scene_parts.containsKey(pure_name)){
+			ScenePart sp = getScenePart(pure_node, pos);
+			if(sp != ScenePart.UNKNOWN)
+				scene_parts.put(pure_name, sp);
+		}
+		
 		
 	}
 		
@@ -688,14 +691,14 @@ public class SceneModel {
 		{
 			System.out.println(++count + ". " + answer.toString());
 			
-			ArrayList<String> justifications = answer.GetTechnicalJustifications();
-			
-			int countJustification = 0;
-			for (String justification: justifications)
-			{
-				System.out.println("-------" + ++countJustification + "--------");
-				System.out.println(justification);
-			}
+//			ArrayList<String> justifications = answer.GetTechnicalJustifications();
+//			
+//			int countJustification = 0;
+//			for (String justification: justifications)
+//			{
+//				System.out.println("-------" + ++countJustification + "--------");
+//				System.out.println(justification);
+//			}
 		}
 		print("\tInferences: " + _re.totalCalls);
 		print("\tTime: " + _re.reasoningTime / 1000);

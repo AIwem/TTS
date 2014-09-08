@@ -6,18 +6,20 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+
 import model.SceneModel;
 import sceneReasoner.TTSEngine;
 
 public class UI {
 	
-	private String inputTextFileName = "inputStory/inputStrory.txt";
+	private String inputTextFileName = "inputStory/inputStrory3.txt";
 	private TTSEngine tts;
 	
 	public UI(){
 		//tts = new TTSEngine("kb/farsnet.txt", "kb/injuredPigeon_simple.txt");
 		//tts = new TTSEngine("kb/farsnet.txt", "kb/injuredPigeon.txt");
-		tts = new TTSEngine("kb/farsnet--8.txt", "kb/injuredPigeon.txt");
+		//tts = new TTSEngine("kb/farsnet.txt", "kb/injuredPigeon_SS.txt");
+		tts = new TTSEngine("kb/farsnet--10.txt", "kb/injuredPigeon2.txt");
 	}
 	
 	private void print(String s){
@@ -116,6 +118,8 @@ public class UI {
 	
 		UI ui = new UI();
 		ui.TTS();
+		
+		
 		//ui.tts.checkSemanticReasoner();
 		//System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~");
 		//ui.tts.checkSemanticReasoner2();

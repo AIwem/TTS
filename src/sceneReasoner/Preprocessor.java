@@ -46,7 +46,8 @@ public class Preprocessor {
 	 * so temporarily we aught to read these processed information from a file named  SentenceInfosFileName. 
 	 */
 	//private String SentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
-	private String SentenceInfosFileName = "inputStory/sentenceInfos2.txt";
+	//private String SentenceInfosFileName = "inputStory/sentenceInfos_SS.txt";
+	private String SentenceInfosFileName = "inputStory/sentenceInfos3.txt";
 		
 	public Preprocessor(KnowledgeBase kb, SemanticReasoner re) {
 		this._kb = kb;
@@ -261,22 +262,22 @@ public class Preprocessor {
 		}
 		preprocessSubject(sentenceModel, primarySceneModel);
 		
-		print("after subject");
+		print("\nafter subject");
 		primarySceneModel.printDictionary();
 		
-		preprocessVerb(sentenceModel, primarySceneModel);
-		
-		print("after verb");
-		primarySceneModel.printDictionary();
+//		preprocessVerb(sentenceModel, primarySceneModel);
+//		
+//		print("after verb");
+//		primarySceneModel.printDictionary();
 		
 		preprocessObject(sentenceModel, primarySceneModel);
 		
-		print("after object");
+		print("\nafter object");
 		primarySceneModel.printDictionary();
 		
 		preprocessAdverb(sentenceModel, primarySceneModel);
 		
-		print("after adverb");
+		print("\nafter adverb");
 		primarySceneModel.printDictionary();
 		
 				 
@@ -308,7 +309,7 @@ public class Preprocessor {
 			if(sp.length != part.sub_parts.size()){ //[ name=یک POS=NOUN SRL=OBJ_P WSD=- WSD_name=یک#n1 sub_parts=- dep=PRE
 													//, name=کبوتر POS=NOUN SRL=OBJ_P WSD=- WSD_name=کبوتر#n1 sub_parts=- dep=MAIN
 													//, name=زخمی POS=ADJECTIVE SRL=OBJ_P WSD=- WSD_name=زخمی#a1 sub_parts=- dep=POST]
-				MyError.error("bad Word-Sense-Disambiguate foramt " + wsd_name + " for " + part.sub_parts);
+				MyError.error("bad Word-Sense-Disambiguate format " + wsd_name + " for " + part.sub_parts);
 			}
 			*/
 			Node argument = null;
@@ -335,6 +336,8 @@ public class Preprocessor {
 					break;
 				case("PRE"):
 					pre_sub_part = part.getPreSub_part();
+					Node pre = sceneModel.findorCreateInstance(post_sub_part._wsd_name, false);
+					pre_sub_part.set_wsd(pre);				
 					//TODO: to complete the "PRE" DEP  
 					MyError.error("I don't know what to do with this PRE DEP sub_part " + pre_sub_part);
 					break;
@@ -346,7 +349,7 @@ public class Preprocessor {
 				//node_pos is a descriptor_name.
 				default:
 					relation_name = node_pos;
-					wsd = sceneModel.findRelation(relation_name);
+					wsd = sceneModel.findRelationInstance(relation_name);
 					if(wsd == null){
 						//it must got directly fetched from kb, and then addRelation will clone it.
 						descriptor = _kb.addConcept(relation_name);
@@ -359,26 +362,31 @@ public class Preprocessor {
 				sceneModel.addRelationInstance(descriptor.getName(), wsd);
 			}
 			else{//it means that findRelation has found this relation.
-				//it means that this relation must be different with the seen one!
-				if(wsd.argument != argument || wsd.referent != referent){//TODO check is it correct or not!
+				
+				//it means that this relation must be different with the seen one! I have checked this logic it seems to be correct! 
+				if(wsd.argument != argument || wsd.referent != referent){
 					descriptor = _kb.addConcept(relation_name);
 					wsd = _kb.addRelation(argument, referent, descriptor);
 					sceneModel.addRelationInstance(relation_name, wsd);					
 				}
 			}
 			part.set_wsd(main_sub_part._wsd);
-			return;
+			//return;
+		}
+		else{
+			//it means this part wsd_name is just one concept name, so we find or add it in sceneModel.
+			Node wsd = sceneModel.findorCreateInstance(wsd_name, false);
+			part.set_wsd(wsd);
 		}
 		if(part.hasSub_parts()){
 			for(Part p:part.sub_parts){
-				Node wsd = sceneModel.findorCreateInstance(p._wsd_name, false);
-				p.set_wsd(wsd);
-			}
-			
+				if(p._wsd == null){
+					Node wsd = sceneModel.findorCreateInstance(p._wsd_name, false);
+					p.set_wsd(wsd);
+				}
+			}			
 		}
-		//it means this part wsd_name is just one concept name, so we find or add it in sceneModel.
-		Node wsd = sceneModel.findorCreateInstance(wsd_name, false);
-		part.set_wsd(wsd);		
+				
 	}
 
 	
@@ -410,7 +418,7 @@ public class Preprocessor {
 				primarySceneModel.addStatic_object(staObj);				
 			}
 			else{
-				MyError.error(sbj + "has no ScenePart!");
+				MyError.error(sbj._wsd_name + "has no ScenePart!");
 			}
 		}		
 	}
@@ -448,7 +456,7 @@ public class Preprocessor {
 				primarySceneModel.addStatic_object(staObj);				
 			}
 			else{
-				MyError.error(obj + "has no ScenePart!");
+				MyError.error(obj._wsd.getName() + " has no ScenePart!");
 			}
 		}		
 	}
