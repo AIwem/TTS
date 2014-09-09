@@ -1,9 +1,9 @@
 package model;
 
-import java.util.ArrayList;
+
 
 public class StoryModel {
 	
-	private ArrayList<SceneModel> scenes;
+	//private ArrayList<SceneModel> scenes;
 
 }

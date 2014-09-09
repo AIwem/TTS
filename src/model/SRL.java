@@ -1,13 +1,13 @@
 package model;
 
 public enum SRL {
-	SBJ,
-	SBJ_P,
+	SUBJECT,
+	SUBJECT_PART,
 	VERB,
-	VERB_P,
-	OBJ,
-	OBJ_P,
-	ADV,
-	ADV_P,
+	VERB_PART,
+	OBJECT,
+	OBJECT_PART,
+	ADVERB,
+	ADVERB_PART,
 	UNKNOWN
 }

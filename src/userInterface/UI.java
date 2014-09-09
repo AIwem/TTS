@@ -12,7 +12,7 @@ import sceneReasoner.TTSEngine;
 
 public class UI {
 	
-	private String inputTextFileName = "inputStory/inputStrory3.txt";
+	private String inputStoryFilePath = "inputStory/inputStrory3.txt";
 	private TTSEngine tts;
 	
 	public UI(){
@@ -33,7 +33,7 @@ public class UI {
 		
 		//It must read sentence from user input.
 		//temporarily it reads all input story from file instead of getting from user!
-		ArrayList<String> inputs = importInputTexts(inputTextFileName);
+		ArrayList<String> inputs = importInputTexts(inputStoryFilePath);
 		
 		SceneModel primarySceneModel = new SceneModel(tts._TTSKb, tts._re);
 		

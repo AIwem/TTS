@@ -3,11 +3,24 @@ package model;
 import java.util.ArrayList;
 
 import ir.ac.itrc.qqa.semantic.enums.POS;
-import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
 import ir.ac.itrc.qqa.semantic.kb.Node;
 import ir.ac.itrc.qqa.semantic.util.MyError;
 
-public class Part {
+/**
+ * some SentencePart objects together make a sentence. one or multiple SentencePart objects for sentence subject.
+ * only one SentencePart object for sentence verb.
+ * one or multiple SentencePart objects for sentence object.
+ * one or multiple SentencePart objects for sentence adverb.
+ * 
+ * each SentencePart object holds different information about the single noun/verb or noun-phrase/verb-phrase.
+ * information like its name, 
+ * its Part-Of-Speech (e.g. NOUN, ADJECTIVE, VERB, ...)
+ * its Semantic-Role-Label (e.g. SUBJECT, VERB, OBJECT, ...)
+ *  
+ * @author hashemi
+ *
+ */
+public class SentencePart {
 	/**
 	 * name of this part
 	 */
@@ -41,7 +54,7 @@ public class Part {
 	/**
 	 * @param _name
 	 */
-	public Part(String _name) {
+	public SentencePart(String _name) {
 		this._name = _name;
 	}
 	
@@ -49,13 +62,13 @@ public class Part {
 	 * sub_part of this part. for example "کبوتر زخمی" has sub_parts of "کبوتر" and "زخمی".
 	 * we have assumed that sub_parts has depth of 1. It means each sub_part has no sub_part in itself.
 	 */
-	public ArrayList<Part> sub_parts;
+	public ArrayList<SentencePart> sub_parts;
 	
 	/**
 	 * @param _name
 	 * @param _srl
 	 */
-	public Part(String _name, SRL _srl) {
+	public SentencePart(String _name, SRL _srl) {
 		this._name = _name;
 		this._srl = _srl;
 	}
@@ -67,7 +80,7 @@ public class Part {
 	 * @param _srl
 	 * @param wSD
 	 */
-	public Part(String _name, POS _pos, SRL _srl, Node wSD, ArrayList<Part> sub_parts) {
+	public SentencePart(String _name, POS _pos, SRL _srl, Node wSD, ArrayList<SentencePart> sub_parts) {
 		this._name = _name;		
 		this._pos = _pos;
 		this._srl = _srl;
@@ -80,7 +93,7 @@ public class Part {
 	 * @return
 	 */
 	public boolean isSubject(){
-		if(_srl == SRL.SBJ)
+		if(_srl == SRL.SUBJECT)
 			return true;
 		return false;		
 	}
@@ -90,7 +103,7 @@ public class Part {
 	 * @return
 	 */
 	public boolean isObject(){
-		if(_srl == SRL.OBJ)
+		if(_srl == SRL.OBJECT)
 			return true;
 		return false;		
 	}
@@ -110,7 +123,7 @@ public class Part {
 	 * @return
 	 */
 	public boolean isAdverb(){
-		if(_srl == SRL.ADV)
+		if(_srl == SRL.ADVERB)
 			return true;
 		return false;		
 	}
@@ -139,33 +152,33 @@ public class Part {
 		return false;
 	}
 	
-	public Part getMainSub_part(){
+	public SentencePart getMainSub_part(){
 		if(!hasSub_parts())
 			return this;
 		
-		for(Part p:sub_parts)
+		for(SentencePart p:sub_parts)
 			if(p._dep == DEP.MAIN)
 				return p;
 		MyError.error("sub_parts has no MAIN part!" + this.getStr());
 		return null;
 	}
 	
-	public Part getPreSub_part() {
+	public SentencePart getPreSub_part() {
 		if(!hasSub_parts())
 			return null;
 		
-		for(Part p:sub_parts)
+		for(SentencePart p:sub_parts)
 			if(p._dep == DEP.PRE)
 				return p;
 		MyError.error("sub_parts has no PRE part!" + this.getStr());
 		return null;
 	}	
 	
-	public Part getPostSub_part() {
+	public SentencePart getPostSub_part() {
 		if(!hasSub_parts())
 			return null;
 		
-		for(Part p:sub_parts)
+		for(SentencePart p:sub_parts)
 			if(p._dep == DEP.POST)
 				return p;
 		MyError.error("sub_parts has no POST part!" + this.getStr());
@@ -221,14 +234,14 @@ public class Part {
 
 	public void set_srl(String srl) {
 		switch(srl){
-			case "SBJ": _srl = SRL.SBJ; break;
-			case "SBJ_P": _srl = SRL.SBJ_P; break;
+			case "SBJ": _srl = SRL.SUBJECT; break;
+			case "SBJ_P": _srl = SRL.SUBJECT_PART; break;
 			case "VERB": _srl = SRL.VERB; break;
-			case "VERB_P": _srl = SRL.VERB_P; break;
-			case "OBJ": _srl = SRL.OBJ; break;
-			case "OBJ_P": _srl = SRL.OBJ_P; break;
-			case "ADV": _srl = SRL.ADV; break;
-			case "ADV_P": _srl = SRL.ADV_P; break;
+			case "VERB_P": _srl = SRL.VERB_PART; break;
+			case "OBJ": _srl = SRL.OBJECT; break;
+			case "OBJ_P": _srl = SRL.OBJECT_PART; break;
+			case "ADV": _srl = SRL.ADVERB; break;
+			case "ADV_P": _srl = SRL.ADVERB_PART; break;
 			default: _srl = SRL.UNKNOWN;
 		}	
 	}

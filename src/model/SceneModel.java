@@ -1,11 +1,8 @@
 package model;
 
-import ir.ac.itrc.qqa.semantic.enums.POS;
 import ir.ac.itrc.qqa.semantic.enums.SourceType;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
 import ir.ac.itrc.qqa.semantic.kb.Node;
-import ir.ac.itrc.qqa.semantic.reasoning.PlausibleAnswer;
-import ir.ac.itrc.qqa.semantic.reasoning.PlausibleQuestion;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleStatement;
 import ir.ac.itrc.qqa.semantic.reasoning.SemanticReasoner;
 import ir.ac.itrc.qqa.semantic.util.MyError;
@@ -28,15 +25,9 @@ import sceneElement.Time;
  */
 public class SceneModel {
 	
-	public SceneModel(KnowledgeBase _kb, SemanticReasoner _re) {		
-		this._kb = _kb;
-		this._re = _re;
-	}
-
-
 	private KnowledgeBase _kb = null;
 	
-	private SemanticReasoner _re = null;
+//	private SemanticReasoner _re = null;
 	
 	private StoryModel story;
 	
@@ -66,7 +57,21 @@ public class SceneModel {
 		
 	private ArrayList<SceneEmotion> scene_emotions = new ArrayList<SceneEmotion>();
 		
+	public SceneModel(KnowledgeBase _kb, SemanticReasoner _re) {		
+		this._kb = _kb;
+//		this._re = _re;
+				
+		this.sentences = new ArrayList<SentenceModel>();
+		this.scene_nodes_dic = new Hashtable<String, ArrayList<Node>>();
+		this.scene_parts = new Hashtable<String, ScenePart>();
+		
+		this.roles = new ArrayList<Role>();
+		this.static_objs = new ArrayList<StaticObject>();
+		this.dynamic_objs = new ArrayList<DynamicObject>();
+		this.scene_goals = new ArrayList<SceneGoal>();
+		this.scene_emotions = new ArrayList<SceneEmotion>();
 	
+	}
 	
 	
 	public StoryModel getStory() {
@@ -81,15 +86,16 @@ public class SceneModel {
 		return sentences;
 	}
 
-	public void addSentences(ArrayList<SentenceModel> sentences) {
-		if(this.sentences != null)
+	public void addAllSentences(ArrayList<SentenceModel> sentences) {
+		if(this.sentences == null)
 			this.sentences = new ArrayList<SentenceModel>();
+		
 		if(sentences != null && sentences.size()>0)
 			this.sentences.addAll(sentences);
 	}
 	
 	public void addSentence(SentenceModel sentence) {
-		if(this.sentences != null)
+		if(this.sentences == null)
 			this.sentences = new ArrayList<SentenceModel>();
 		
 		if(sentence != null)
@@ -100,8 +106,8 @@ public class SceneModel {
 		return roles;
 	}
 
-	public void addRoles(ArrayList<Role> roles) {
-		if(this.roles != null)
+	public void addAllRoles(ArrayList<Role> roles) {
+		if(this.roles == null)
 			this.roles = new ArrayList<Role>();
 		
 		if(roles != null && roles.size()>0)
@@ -109,19 +115,19 @@ public class SceneModel {
 	}
 	
 	public void addRole(Role role) {
-		if(this.roles != null)
+		if(this.roles == null)
 			this.roles = new ArrayList<Role>();
 		
 		if(role != null)
 			this.roles.add(role);
 	}
 
-	public ArrayList<StaticObject> getStatic_obj() {
+	public ArrayList<StaticObject> getStatic_objects() {
 		return static_objs;
 	}
 	
-	public void addStatic_bjects(ArrayList<StaticObject> static_objects) {
-		if(this.static_objs != null)
+	public void addAllStatic_bjects(ArrayList<StaticObject> static_objects) {
+		if(this.static_objs == null)
 			this.static_objs = new ArrayList<StaticObject>();
 		
 		if(static_objects != null && static_objects.size()>0)
@@ -129,19 +135,19 @@ public class SceneModel {
 	}
 	
 	public void addStatic_object(StaticObject static_object) {
-		if(this.static_objs != null)
+		if(this.static_objs == null)
 			this.static_objs = new ArrayList<StaticObject>();
 		
 		if(static_object != null)
 			this.static_objs.add(static_object);
 	}
 
-	public ArrayList<DynamicObject> getDynamic_obj() {
+	public ArrayList<DynamicObject> getDynamic_objects() {
 		return dynamic_objs;
 	}
 
-	public void addDynamic_objects(ArrayList<DynamicObject> dynamic_objects) {
-		if(this.dynamic_objs != null)
+	public void addAllDynamic_objects(ArrayList<DynamicObject> dynamic_objects) {
+		if(this.dynamic_objs == null)
 			this.dynamic_objs = new ArrayList<DynamicObject>();
 		
 		if(dynamic_objects != null && dynamic_objects.size()>0)
@@ -149,7 +155,7 @@ public class SceneModel {
 	}
 	
 	public void addDynamic_object(DynamicObject dynamic_object) {
-		if(this.dynamic_objs != null)
+		if(this.dynamic_objs == null)
 			this.dynamic_objs = new ArrayList<DynamicObject>();
 		
 		if(dynamic_object != null)
@@ -175,8 +181,8 @@ public class SceneModel {
 		return scene_goals;
 	}
 
-	public void addScene_goals(ArrayList<SceneGoal> scene_goals) {
-		if(this.scene_goals != null)
+	public void addAllScene_goals(ArrayList<SceneGoal> scene_goals) {
+		if(this.scene_goals == null)
 			this.scene_goals = new ArrayList<SceneGoal>();
 		
 		if(scene_goals != null && scene_goals.size()>0)
@@ -184,7 +190,7 @@ public class SceneModel {
 	}
 	
 	public void addScene_goal(SceneGoal scene_goal) {
-		if(this.scene_goals != null)
+		if(this.scene_goals == null)
 			this.scene_goals = new ArrayList<SceneGoal>();
 		
 		if(scene_goal != null)
@@ -195,8 +201,8 @@ public class SceneModel {
 		return scene_emotions;
 	}
 
-	public void addScene_emotions(ArrayList<SceneEmotion> scene_emotions) {
-		if(this.scene_emotions != null)
+	public void addAllScene_emotions(ArrayList<SceneEmotion> scene_emotions) {
+		if(this.scene_emotions == null)
 			this.scene_emotions = new ArrayList<SceneEmotion>();
 		
 		if(scene_emotions != null && scene_emotions.size()>0)
@@ -204,12 +210,13 @@ public class SceneModel {
 	}
 	
 	public void addScene_emotion(SceneEmotion scene_emotion) {
-		if(this.scene_emotions != null)
+		if(this.scene_emotions == null)
 			this.scene_emotions = new ArrayList<SceneEmotion>();
 		
 		if(scene_emotion != null)
 			this.scene_emotions.add(scene_emotion);
 	}
+	
 	/**
 	 * findorCreateInstace searches this sceneModel scene_nodes to find a Node named "name".
 	 * if it didn't find it, then load it from kb and adds it to the scene_nodes_dic.
@@ -223,7 +230,7 @@ public class SceneModel {
 	 * @param _kb
 	 * @return Node object named "name".
 	 */	
-	public Node findorCreateInstance(String name, boolean newNode){
+	public Node findorCreateInstance(String name, boolean newNode, ScenePart scenePart){
 		if(name == null || name.equals("-"))
 			return null;		
 		
@@ -282,8 +289,7 @@ public class SceneModel {
 				newlySeen.add(n);
 				Node instance = createInstance(name, n);//creates an instance from its pure version fetched from kb.
 				newlySeen.add(instance);
-				addNodeToScene_nodes_dic(name, newlySeen, instance.getPos());
-				
+				addNodeToScene_nodes_dic(name, newlySeen, scenePart);				
 				return instance;
 			 }
 			 else{
@@ -302,7 +308,7 @@ public class SceneModel {
 	 * @param pure_name the name of PlausibleStatement to be added.
 	 * @param relationInstance the instance of PlausibleStatement to be added.
 	 */
-	public void addRelationInstance(String pure_name, PlausibleStatement relationInstance){
+	public void addRelationInstance(String pure_name, PlausibleStatement relationInstance, ScenePart scenePart){
 		if(pure_name == null || pure_name.equals("") || relationInstance == null)
 			return;
 		
@@ -311,7 +317,7 @@ public class SceneModel {
 			ArrayList<Node> seenRelation = new ArrayList<Node>();
 			seenRelation.add(relationInstance.relationType);
 			seenRelation.add(relationInstance);
-			addNodeToScene_nodes_dic(pure_name, seenRelation, relationInstance.getPos());// it is not a concept, so it shouldn't added to scene_parts
+			addNodeToScene_nodes_dic(pure_name, seenRelation);// it is not a concept, so it shouldn't added to scene_parts
 			//scene_nodes_dic.put(pure_name, seenRelation);
 		}
 		else{// we have seen this relation before
@@ -357,6 +363,22 @@ public class SceneModel {
 			return null;
 		}			
 	}
+	
+	public void printDictionary(){
+		print("\n scene_node_dic");
+		for(String key:scene_nodes_dic.keySet()){
+			print(key +": " + scene_nodes_dic.get(key));
+		}
+			
+		print("\n scene_parts");
+		for(String key:scene_parts.keySet()){
+			print(key +": " + scene_parts.get(key));
+		}
+		print("\n");
+	}
+	
+
+	
 	
 	/**
 	 * this method adds an instance from originalNode by adding a unique index to the end of its name, 
@@ -409,215 +431,104 @@ public class SceneModel {
 		return fromKB;		
 	}
 	
-	public void printDictionary(){
-		print("\n scene_node_dic");
-		for(String key:scene_nodes_dic.keySet()){
-			print(key +": " + scene_nodes_dic.get(key));
-		}
-			
-		print("\n scene_parts");
-		for(String key:scene_parts.keySet()){
-			print(key +": " + scene_parts.get(key));
-		}
-		print("\n");
-	}
 	
-	/**
-	 * checks if this node name is a pure node fetched from kb or 
-	 * it is an instance created by "createInstance" method or a relation cloned by addRelation.
-	 * @param node 
-	 * @return
-	 */
-	private boolean isInstanceNode(Node node){
-		if(node == null)
-			return false;
-		
-		String name = node.getName();
-		if(name == null)
-			return false;
-		
-		boolean isInstance = false;
-		//both instances created by "createInstance" and relations added by addRelation have (index) at the end of their names. 
-		int index = name.indexOf("(");
-		if(index != -1)
-			isInstance = true;
-		
-//		index = name.indexOf("#");		
-//		if(index != -1)
-//			isInstance = false;
+//	/**
+//	 * checks if this node name is a pure node fetched from kb or 
+//	 * it is an instance created by "createInstance" method or a relation cloned by addRelation.
+//	 * @param node 
+//	 * @return
+//	 */
+//	private boolean isInstanceNode(Node node){
+//		if(node == null)
+//			return false;
 //		
-//		index = name.indexOf("§");
-//		if(index != -1)
-//			isInstance = false;
-//			
-//		index = name.indexOf("*");
+//		String name = node.getName();
+//		if(name == null)
+//			return false;
+//		
+//		boolean isInstance = false;
+//		//both instances created by "createInstance" and relations added by addRelation have (index) at the end of their names. 
+//		int index = name.indexOf("(");
 //		if(index != -1)
 //			isInstance = true;
-		return isInstance;
+//		
+////		index = name.indexOf("#");		
+////		if(index != -1)
+////			isInstance = false;
+////		
+////		index = name.indexOf("§");
+////		if(index != -1)
+////			isInstance = false;
+////			
+////		index = name.indexOf("*");
+////		if(index != -1)
+////			isInstance = true;
+//		return isInstance;
+//	}
+//	
+//	/**
+//	 * returns the pure version of concept name as are in kb.
+//	 * @param node
+//	 * @return
+//	 */
+//	private String getPureName(Node node){		
+//		if(node == null)
+//			return null;
+//		
+//		if(isInstanceNode(node)){
+//			String name = node.getName();
+//			
+//			if(name == null)
+//				return null;
+//			
+//			String pure_name = name;
+//			int index1 = name.indexOf("(");			
+//			if(index1 != -1)
+//				pure_name = pure_name.substring(0, index1).trim();
+//				
+//			int index2 = name.indexOf("*");
+//			if(index2 != -1)
+//				pure_name =  pure_name.substring(index2);
+//			return pure_name;
+//		}
+//		return node.getName();
+//	}
+	
+	
+	private void addNodeToScene_nodes_dic(String pure_name, ArrayList<Node> seenRelation) {
+		addNodeToScene_nodes_dic(pure_name, seenRelation, ScenePart.UNKNOWN);		
 	}
 	
-	/**
-	 * returns the pure version of concept name as are in kb.
-	 * @param node
-	 * @return
-	 */
-	private String getPureName(Node node){		
-		if(node == null)
-			return null;
-		
-		if(isInstanceNode(node)){
-			String name = node.getName();
-			
-			if(name == null)
-				return null;
-			
-			String pure_name = name;
-			int index1 = name.indexOf("(");			
-			if(index1 != -1)
-				pure_name = pure_name.substring(0, index1).trim();
-				
-			int index2 = name.indexOf("*");
-			if(index2 != -1)
-				pure_name =  pure_name.substring(index2);
-			return pure_name;
-		}
-		return node.getName();
-	}
 	
-	/**
-	 * TODO: It must be improved: recognizing that which scenePart has the node: a Role (human) or DynamicObject or StaticObject?!
-	 * this method checks if node is a child of "نفر§n-13075" returns ROLE,
-	 *  if node is a child of "جانور§n-12239" returns DYNAMIC_OBJ,
-	 *  otherwise return STATIC_OBJ.
-	 *  
-	 * @param node the pure node fetched from kb.
-	 * @param pos the part of speech this node has, only POS of NOUN,VERB, and ADVERB comes here!
-	 * @return
-	 */
-	private ScenePart getScenePart(Node node, POS pos){
-		if(node == null)
-			return ScenePart.UNKNOWN;
-		
-		if(pos == POS.NOUN){
-			
-			//TODO: I must remove these lines!-------			
-			if(node.getName().equals("پسر#n2"))
-				return ScenePart.ROLE;
-			//---------------------------------------
-			
-
-			if(isHuman(node))
-				return ScenePart.ROLE;
-			
-			if(isAnimal(node))
-				return ScenePart.DYNAMIC_OBJ;
-			
-			return ScenePart.STATIC_OBJ;
-		}
-		if(pos == POS.VERB)
-			return null;
-		
-		if(pos == POS.ADVERB)
-			return null;
-		
-		return ScenePart.UNKNOWN;
-	}
-	
-	/**
-	 * checks if node is a child of "نفر§n-13075" returns true.
-	 * @param node the pure node fetched from kb.
-	 * @return
-	 */
-	private boolean isHuman(Node node){
-		if(node == null)
-			return false;
-		
-		print(node + "~~~~~~~~~~~~~~~~in isHuman ~~~~~~~~~~~~~~~~~");
-		
-		PlausibleQuestion pq = new PlausibleQuestion();
-		pq.descriptor = KnowledgeBase.HPR_ISA;
-		pq.argument = node;			
-		pq.referent = _kb.addConcept("نفر§n-13075");
-		
-		ArrayList<PlausibleAnswer> answers = writeAnswersTo(pq.descriptor, node, pq.referent);
-		//ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);	
-		for(PlausibleAnswer ans:answers){
-				print("answer: " + ans);					
-				if(ans.answer == KnowledgeBase.HPR_YES){
-					print(node.getName() + " isHuman");
-					return true;
-				}			
-		}	
-		print(node + " is NOT Human");
-		return false;
-	}
-	
-	/**
-	 * checks if node is a child of "جانور§n-12239" returns true.
-	 * @param node the pure node fetched from kb.
-	 * @return
-	 */
-	private boolean isAnimal(Node node){		
-		if(node == null)
-			return false;
-		
-		print(node + "~~~~~~~~~~~~~~~~in isAnimal ~~~~~~~~~~~~~~~~~");
-		
-		PlausibleQuestion pq = new PlausibleQuestion();
-		pq.descriptor = KnowledgeBase.HPR_ISA;
-		pq.argument = node;			
-		pq.referent = _kb.addConcept("جانور§n-12239");
-		
-		ArrayList<PlausibleAnswer> answers = writeAnswersTo(pq.descriptor, node, pq.referent);
-		//ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
-		for(PlausibleAnswer ans:answers ){
-			print("answer: " + ans);
-			if(ans.answer == KnowledgeBase.HPR_YES){
-				print(node.getName() + " isAnimal");
-				return true;				
-			}
-		}		
-		print(node + " is NOT Animal");
-		return false;
-	}
 	/**
 	 * this method adds a row to scene_nodes_dic with pure_name as key and instances arrayList as values.
-	 * beside this, it detects the ScenePart of the original node (Node directly fetched from FarsNet) with name pure_name.
-	 * then it adds this row to the scene_parts with pure_name as key and the detected ScenePart as value.
+	 * then it adds a row to the scene_parts with pure_name as key and the scenePart as value.
 	 * this is done in order to preventing re-querying the kb to detect ScenePart of every instance of a original node in this sceneModel. 
 	 * 
 	 * @param pure_name the name of original node fetched from FarsNet.
-	 * @param instances the list of instances of original node in this sceneModel.
-	 * @param scenePart
+	 * @param instances the list of instances of this original node in this sceneModel.
+	 * @param scenePart the ScenePart of this original node in this sceneModel.
 	 */
-	private void addNodeToScene_nodes_dic(String pure_name, ArrayList<Node> instances, POS pos){
-		if(pure_name == null || instances == null)
+	private void addNodeToScene_nodes_dic(String pure_name, ArrayList<Node> instances, ScenePart scenePart){
+		if(pure_name == null || instances == null) 
 			return;
 		
-		scene_nodes_dic.put(pure_name, instances);
-		
-		Node pure_node = null;
-		
-		if(instances.size() > 0)
-			pure_node = instances.get(0);
-		else
-			pure_node = _kb.addConcept(pure_name);
-			
-		if(pos == null)			
-			pos = pure_node.getPos();
-		
-			
-		if(pos == POS.ADJECTIVE || pos == POS.SETELLITE_ADJECTIVE){// || pos == POS.UNKNOWN || pos == POS.ANY){
-			print(pure_node + " skipped  from getScenePart!!!!!!!!!!!!!!!!!!!!!!!");
-			return;
+		if(!scene_nodes_dic.containsKey(pure_name))
+			scene_nodes_dic.put(pure_name, instances);
+		else{
+			MyError.error("scene_nodes_dic previosly contains this pure name " + scene_nodes_dic.get(pure_name));
+			scene_nodes_dic.put(pure_name, instances);
 		}
+						
+		if(scenePart != ScenePart.UNKNOWN)
+			if(!scene_parts.containsKey(pure_name))
+				scene_parts.put(pure_name, scenePart);			
+			else{
+				MyError.error("scene_parts previosly contains this pure name " + scene_parts.get(pure_name));
+				scene_parts.put(pure_name, scenePart);
+			}
 		
-		if(!scene_parts.containsKey(pure_name)){
-			ScenePart sp = getScenePart(pure_node, pos);
-			if(sp != ScenePart.UNKNOWN)
-				scene_parts.put(pure_name, sp);
-		}
-		
+	
 		
 	}
 		
@@ -625,87 +536,23 @@ public class SceneModel {
 		System.out.println(toPrint);
 		
 	}
-	
-	public ScenePart whichScenePart(Node node){
-		print(node + "~~~~~~~~~~~~~~~ in whichScenePart ~~~~~~~~~~~~");
-		if(node == null)
-			return ScenePart.UNKNOWN;
-		
-		String pure_name = "";
-		
-		if(isInstanceNode(node))
-			pure_name = getPureName(node);
-		else
-			pure_name = node.getName();
-		
-		//if it is seen before!
-		if(scene_parts.containsKey(pure_name)){
-			print(node + " is" + scene_parts.get(pure_name));
-			return scene_parts.get(pure_name);
-		}
-		//if it isn't seen before!
-		else{
-			
-			POS pos = node.getPos();
-			
-			//we don't make a ScenePart for an adjective.
-			if(pos == POS.ADJECTIVE || pos == POS.SETELLITE_ADJECTIVE){
-				print(node + " skipped  from getScenePart!!!!!!!!!!!!!!!!!!!!!!");
-				return ScenePart.UNKNOWN;
-			}
-			
-			Node pure_node  = null;
-			ScenePart sp = ScenePart.UNKNOWN;
-			
-			if(scene_nodes_dic.containsKey(pure_name)){
-				ArrayList<Node> instances = scene_nodes_dic.get(pure_name);
-				if(instances.size() > 0)
-					pure_node = instances.get(0);				
-			}	
-			else
-				pure_node = _kb.addConcept(pure_name);//find node from kb.
-			
-			if(pure_node != null){
-				sp = getScenePart(pure_node, pure_node.getPos());
-				if(sp != null && sp != ScenePart.UNKNOWN)					
-					scene_parts.put(pure_name, sp);					
-				
-			}
-			print(node + " pos is " + sp);
-			return sp;
-		}
-	}
-	
-	private ArrayList<PlausibleAnswer> writeAnswersTo(Node descriptor, Node argument, Node referent){
-		PlausibleQuestion pq = new PlausibleQuestion();
-		pq.argument = argument;		
-		pq.referent = referent;
-		pq.descriptor = descriptor;
-		
-		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
-		
-		System.out.println("Answers:");
-		
-		int count = 0;
-		for (PlausibleAnswer answer: answers)
-		{
-			System.out.println(++count + ". " + answer.toString());
-			
-//			ArrayList<String> justifications = answer.GetTechnicalJustifications();
-//			
-//			int countJustification = 0;
-//			for (String justification: justifications)
-//			{
-//				System.out.println("-------" + ++countJustification + "--------");
-//				System.out.println(justification);
-//			}
-		}
-		print("\tInferences: " + _re.totalCalls);
-		print("\tTime: " + _re.reasoningTime / 1000);
-		print("\tThroughput: " + (_re.totalCalls / _re.reasoningTime) * 1000 + " inference/s");
-		return answers;
+
+
+	public void addToScene_Parts(String pure_name, ScenePart scenePart) {
+
 		
 	}
+
+
+	public Node getPureNode(String instance_name) {
+		return null;		
+	}
+	
+	public ScenePart getPureNodeScenePart(String instance_name) {
+		return null;		
+	}
+		
+	
 }
 			
 		

@@ -25,22 +25,22 @@ public class SentenceModel{
 	/**
 	 * subject(s) of this sentence.
 	 */
-	private ArrayList<Part> subjects;
+	private ArrayList<SentencePart> subjects;
 	
 	/**
 	 * The only verb of this sentence.
 	 */
-	private Part verb;
+	private SentencePart verb;
 	
 	/**
 	 * object(s) of this sentence, if any.
 	 */
-	private ArrayList<Part> objects;
+	private ArrayList<SentencePart> objects;
 	
 	/**
 	 * adverb(s) of this sentence, if any.
 	 */
-	private ArrayList<Part> adverbs;
+	private ArrayList<SentencePart> adverbs;
 	
 	public SentenceModel(String originalSentence){
 		this.originalSentence = originalSentence;			
@@ -59,14 +59,14 @@ public class SentenceModel{
 		this.scene = scene;
 	}
 		
-	public ArrayList<Part> getSubjects() {
+	public ArrayList<SentencePart> getSubjects() {
 		return subjects;
 	}
 	
 	/** 
 	 * @return the single (probably the first) subject.
 	 */
-	public Part getSingleSubject(){
+	public SentencePart getSingleSubject(){
 		if(subjects != null && subjects.size() > 0)
 			return subjects.get(0);
 		return null;	
@@ -74,18 +74,18 @@ public class SentenceModel{
 	
 	public ArrayList<String> getSubjectsString() {
 		ArrayList<String> sbjStr = new ArrayList<String>(); 
-		for(Part sbj:subjects)
+		for(SentencePart sbj:subjects)
 			sbjStr.add(sbj._name);			
 		return sbjStr;
 	}
 	
-	public void setSubjects(ArrayList<Part> subjects) {
+	public void setSubjects(ArrayList<SentencePart> subjects) {
 		this.subjects = subjects;
 	}
 	
-	public void setSingleSubject(Part subject) {
+	public void setSingleSubject(SentencePart subject) {
 		if(subject != null){
-			ArrayList<Part> sbjs = new ArrayList<Part>();
+			ArrayList<SentencePart> sbjs = new ArrayList<SentencePart>();
 			sbjs.add(subject);
 			this.subjects = sbjs;
 		}
@@ -98,14 +98,14 @@ public class SentenceModel{
 	 * @param subjects list of subjects of this sentence.
 	 */
 	public void setSubjects(String... subjects) {
-		this.subjects = new ArrayList<Part>();
+		this.subjects = new ArrayList<SentencePart>();
 		for(String sbj:subjects)
 			if(sbj!= null)
-				this.subjects.add(new Part(sbj,SRL.SBJ));			
+				this.subjects.add(new SentencePart(sbj,SRL.SUBJECT));			
 				
 	}
 	
-	public Part getVerb() {
+	public SentencePart getVerb() {
 		return verb;
 	}
 	
@@ -113,7 +113,7 @@ public class SentenceModel{
 		return verb._name;
 	}
 
-	public void setVerb(Part verb) {
+	public void setVerb(SentencePart verb) {
 		this.verb = verb;
 	}
 	
@@ -122,17 +122,17 @@ public class SentenceModel{
 	 * @param verb verb of this sentence.
 	 */
 	public void setVerb(String verb) {
-		this.verb = new Part(verb,SRL.VERB);
+		this.verb = new SentencePart(verb,SRL.VERB);
 	}
 
-	public ArrayList<Part> getObjects() {
+	public ArrayList<SentencePart> getObjects() {
 		return objects;
 	}
 	
 	/** 
 	 * @return the single (probably the first) object.
 	 */
-	public Part getSingleObject(){
+	public SentencePart getSingleObject(){
 		if(objects != null && objects.size() > 0)
 			return objects.get(0);
 		return null;		
@@ -140,18 +140,18 @@ public class SentenceModel{
 	
 	public ArrayList<String> getObjectsString() {
 		ArrayList<String> objStr = new ArrayList<String>(); 
-		for(Part obj:objects)
+		for(SentencePart obj:objects)
 			objStr.add(obj._name);			
 		return objStr;
 	}
 
-	public void setObjects(ArrayList<Part> objects) {
+	public void setObjects(ArrayList<SentencePart> objects) {
 		this.objects = objects;
 	}
 	
-	public void setSingleObject(Part object) {
+	public void setSingleObject(SentencePart object) {
 		if(object != null){
-			ArrayList<Part> objs = new ArrayList<Part>();
+			ArrayList<SentencePart> objs = new ArrayList<SentencePart>();
 			objs.add(object);
 			this.objects = objs;
 		}
@@ -164,20 +164,20 @@ public class SentenceModel{
 	 * @param objects list of objects of this sentence.
 	 */
 	public void setObjects(String... objects) {
-		this.objects = new ArrayList<Part>();
+		this.objects = new ArrayList<SentencePart>();
 		for(String obj:objects)
 			if(obj!= null)
-				this.objects.add(new Part(obj,SRL.OBJ));		
+				this.objects.add(new SentencePart(obj,SRL.OBJECT));		
 	}
 
-	public ArrayList<Part> getAdverbs() {
+	public ArrayList<SentencePart> getAdverbs() {
 		return adverbs;
 	}
 	
 	/** 
 	 * @return the single (probably the first) adverb.
 	 */
-	public Part getSingleAdverb(){	
+	public SentencePart getSingleAdverb(){	
 		if(adverbs != null && adverbs.size() > 0)
 			return adverbs.get(0);
 		return null;	
@@ -187,18 +187,18 @@ public class SentenceModel{
 	
 	public ArrayList<String> getAdverbsString() {
 		ArrayList<String> advStr = new ArrayList<String>(); 
-		for(Part adv:adverbs)
+		for(SentencePart adv:adverbs)
 			advStr.add(adv._name);			
 		return advStr;
 	}
 	
-	public void setAdverbs(ArrayList<Part> adverbs) {
+	public void setAdverbs(ArrayList<SentencePart> adverbs) {
 		this.adverbs = adverbs;
 	}
 	
-	public void setSingleAdverb(Part adverb) {
+	public void setSingleAdverb(SentencePart adverb) {
 		if(adverb != null){
-			ArrayList<Part> advs = new ArrayList<Part>();
+			ArrayList<SentencePart> advs = new ArrayList<SentencePart>();
 			advs.add(adverb);
 			this.adverbs = advs;
 		}
@@ -211,10 +211,10 @@ public class SentenceModel{
 	 * @param adverbs list of adverbs of this sentence.
 	 */
 	public void setAdverbs(String... adverbs) {
-		this.adverbs = new ArrayList<Part>();
+		this.adverbs = new ArrayList<SentencePart>();
 		for(String adv:adverbs)
 			if(adv!= null)
-				this.adverbs.add(new Part(adv,SRL.ADV));
+				this.adverbs.add(new SentencePart(adv,SRL.ADVERB));
 	}
 	
 	/**
@@ -226,9 +226,9 @@ public class SentenceModel{
 	 * @param sentence sentence object which is to be completed.
 	 * @param senParts different part object of this sentence.
 	 */
-	public static SentenceModel arrageSentenceParts(String NLSentence, ArrayList<Part> senParts) {
+	public static SentenceModel arrageSentenceParts(String NLSentence, ArrayList<SentencePart> senParts) {
 		SentenceModel sentence = new SentenceModel(NLSentence);
-		for(Part part:senParts){
+		for(SentencePart part:senParts){
 			if(part == null)
 				continue;			
 			if(part.isSubject()){
@@ -257,16 +257,16 @@ public class SentenceModel{
 	@Override
 	public String toString() {
 		String rs = "";
-		Part sbj = getSingleSubject();
+		SentencePart sbj = getSingleSubject();
 		if(sbj != null)
 			rs += sbj.toString();
-		Part verb = getVerb();
+		SentencePart verb = getVerb();
 		if(verb != null)
 			rs += "\t"+ verb.toString();
-		Part obj = getSingleObject();
+		SentencePart obj = getSingleObject();
 		if(obj != null)
 			rs += "\t" +obj.toString();
-		Part adv = getSingleAdverb();
+		SentencePart adv = getSingleAdverb();
 		if(adv != null)
 			rs += "\t" + adv.toString();		
 		
@@ -289,9 +289,11 @@ public class SentenceModel{
 			wsd += "null";
 		return rs + "\n" + wsd;
 	}
-	
-	
-	
+
+	public String getOriginalSentence() {
+		return originalSentence;
+	}
+
 	/*
 	public static void main(String[] args){
 		SentenceModel sen1 = new SentenceModel("");

@@ -26,15 +26,15 @@ public class TTSEngine {
 	public KnowledgeBase _TTSKb;
 	public SemanticReasoner _re;
 	
-	private String kbFilePath;
-	private String storyFilePath;
+	private String mainKbFilePath;
+	private String myKbFilePath;
 	
 	private Preprocessor _pp;
 	//private SceneReasoner _sr;
 	
-	public TTSEngine(String kbFilePath, String storyFilePath){
-		this.kbFilePath = kbFilePath;
-		this.storyFilePath = storyFilePath;
+	public TTSEngine(String mainKbFilePath, String myKbFilePath){
+		this.mainKbFilePath = mainKbFilePath;
+		this.myKbFilePath = myKbFilePath;
 		
 		this._TTSKb = new KnowledgeBase();
 		this._re = new SemanticReasoner(_TTSKb, ExecutionMode.RELEASE);
@@ -86,7 +86,7 @@ public class TTSEngine {
 		PlausibleQuestion pq = new PlausibleQuestion();
 		pq.argument = _TTSKb.addConcept("پسرک");
 		pq.referent = _TTSKb.addConcept("نفر§n-13075");		
-		pq.descriptor = _TTSKb.HPR_ISA;//_TTSKb.addConcept("چشم افتادن");
+		pq.descriptor = KnowledgeBase.HPR_ISA;//_TTSKb.addConcept("چشم افتادن");
 
 //		pq.argument = kb.addConcept("پسر بچه");
 //		pq.referent = kb.addConcept("بچه");
@@ -121,7 +121,7 @@ public class TTSEngine {
 		PlausibleQuestion pq = new PlausibleQuestion();
 		pq.argument = _TTSKb.addConcept("*پسرک (1)");
 		pq.referent = _TTSKb.addConcept("نفر§n-13075");		
-		pq.descriptor = _TTSKb.HPR_ISA;//_TTSKb.addConcept("چشم افتادن");
+		pq.descriptor = KnowledgeBase.HPR_ISA;//_TTSKb.addConcept("چشم افتادن");
 
 //			pq.argument = kb.addConcept("پسر بچه");
 //			pq.referent = kb.addConcept("بچه");
@@ -163,8 +163,8 @@ public class TTSEngine {
 		int loaded = 0;
 		Long start = System.currentTimeMillis();
 		
-		loaded = _TTSKb.importKb(kbFilePath);		
-		loaded = _TTSKb.importKb(storyFilePath);	
+		loaded = _TTSKb.importKb(mainKbFilePath);		
+		loaded = _TTSKb.importKb(myKbFilePath);	
 		
 		Long end = System.currentTimeMillis();
 				
