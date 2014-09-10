@@ -226,32 +226,31 @@ public class SentenceModel{
 	 * @param sentence sentence object which is to be completed.
 	 * @param senParts different part object of this sentence.
 	 */
-	public static SentenceModel arrageSentenceParts(String NLSentence, ArrayList<SentencePart> senParts) {
-		SentenceModel sentence = new SentenceModel(NLSentence);
+	public void arrageSentenceParts(String NLSentence, ArrayList<SentencePart> senParts) {
+		
 		for(SentencePart part:senParts){
 			if(part == null)
 				continue;			
 			if(part.isSubject()){
-				sentence.setSingleSubject(part);
+				this.setSingleSubject(part);
 				continue;
 			}
 			if(part.isVerb()){
-				sentence.setVerb(part);
+				this.setVerb(part);
 				continue;
 			}
 			if(part.isObject()){
-				sentence.setSingleObject(part);
+				this.setSingleObject(part);
 				continue;
 			}
 			if(part.isSubject()){
-				sentence.setSingleSubject(part);
+				this.setSingleSubject(part);
 				continue;
 			}
 			if(part.isAdverb()){
-				sentence.setSingleAdverb(part);				
+				this.setSingleAdverb(part);				
 			}			
-		}
-		return sentence;
+		}		
 	}
 
 	@Override

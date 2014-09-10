@@ -21,6 +21,11 @@ import ir.ac.itrc.qqa.semantic.util.MyError;
  *
  */
 public class SentencePart {
+	
+	/**
+	 * senteceModel which this part belongs to.
+	 */
+	public SentenceModel _senteceModel;
 	/**
 	 * name of this part
 	 */
@@ -54,8 +59,9 @@ public class SentencePart {
 	/**
 	 * @param _name
 	 */
-	public SentencePart(String _name) {
+	public SentencePart(String _name, SentenceModel senteceModel) {
 		this._name = _name;
+		this._senteceModel = senteceModel;
 	}
 	
 	/**

@@ -19,7 +19,7 @@ public class UI {
 		//tts = new TTSEngine("kb/farsnet.txt", "kb/injuredPigeon_simple.txt");
 		//tts = new TTSEngine("kb/farsnet.txt", "kb/injuredPigeon.txt");
 		//tts = new TTSEngine("kb/farsnet.txt", "kb/injuredPigeon_SS.txt");
-		tts = new TTSEngine("kb/farsnet--10.txt", "kb/injuredPigeon2.txt");
+		tts = new TTSEngine("kb/farsnet--11.txt", "kb/injuredPigeon2.txt");
 	}
 	
 	private void print(String s){
