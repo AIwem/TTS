@@ -12,7 +12,7 @@ import sceneReasoner.TTSEngine;
 
 public class UI {
 	
-	private String inputStoryFilePath = "inputStory/inputStrory3.txt";
+	private String inputStoryFilePath = "inputStory/inputStrory2.txt";
 	private TTSEngine tts;
 	
 	public UI(){
@@ -29,7 +29,7 @@ public class UI {
 	 * main cycle of reading input sentences from user input file, and giving sentence to TTSEngine,
 	 * and showing its output to the user.
 	 */
-	public void TTS(){
+	public SceneModel TTS(){
 		
 		//It must read sentence from user input.
 		//temporarily it reads all input story from file instead of getting from user!
@@ -51,16 +51,18 @@ public class UI {
 			}
 			
 			//Then give the sentence to TTSEngine to enrich. 
-			SceneModel  enrichedScene = tts.TextToScene(line, command, primarySceneModel);
-			
+			tts.TextToScene(line, command, primarySceneModel);
+		}
+		return primarySceneModel;
 			//nodes = tts.TextToScene(line, command);
 			
 			//Then shows this enriched SceneModel to the user which contains enriched information about input sentence.
-			if (enrichedScene!= null)
-				print(enrichedScene.toString());			
-		}
+//			if (enrichedScene!= null)
+//				print(enrichedScene.toString());			
+//		}
 		//System.out.println("" + nodes);
 	}
+	
 	public ArrayList<String> importInputTexts(String filename)
 	{
 		ArrayList<String> inputs = new ArrayList<>();
@@ -117,16 +119,11 @@ public class UI {
 		System.out.println("بسم الله الرحمن الرحیم و توکلت علی الله");
 	
 		UI ui = new UI();
-		ui.TTS();
+		SceneModel psm = ui.TTS();
 		
-		
-		//ui.tts.checkSemanticReasoner();
-		//System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~");
-		//ui.tts.checkSemanticReasoner2();
-		
-	/*	ArrayList<PlausibleAnswer> pas = ui.testSemanticReasoner();
-		ui.printPlausibleAnswers(pas);
-	*/
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~");
+		ui.tts.checkSemanticReasoner(psm.getRoles().get(0)._node, psm.getRoles().get(0).getRole_actions().get(0)._node);
+	
 		System.out.println("الحمدلله");
 	}
 	

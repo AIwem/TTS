@@ -31,7 +31,7 @@ public class Role extends SceneElement{
 		return role_actions;
 	}
 
-	public void addRole_actions(RoleAction role_action) {
+	public void addRole_action(RoleAction role_action) {
 		this.role_actions.add(role_action);
 	}
 
@@ -39,7 +39,7 @@ public class Role extends SceneElement{
 		return role_goals;
 	}
 
-	public void addRole_goals(RoleGoal role_goal) {
+	public void addRole_goal(RoleGoal role_goal) {
 		this.role_goals.add(role_goal);
 	}
 
@@ -47,8 +47,16 @@ public class Role extends SceneElement{
 		return role_emotions;
 	}
 
-	public void addRole_emotions(RoleEmotion role_emotion) {
+	public void addRole_emotion(RoleEmotion role_emotion) {
 		this.role_emotions.add(role_emotion);
+	}
+	
+	@Override
+	public String toString() {
+		return  "[" + _node + "= " + _name + 
+				" role_actions= " + role_actions + 
+				" role_goals= " + role_goals + 
+				" role_emotions= " + role_emotions + "]";
 	}
 
 }

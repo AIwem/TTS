@@ -191,8 +191,8 @@ public class SentencePart {
 		return null;
 	}
 	
-	public String toString() {
- 	//public String getStr() {		
+	//public String toString() {
+ 	public String getStr() {		
 		String rs = "name=";
 		if(_name != null) rs += "" + _name; 
 		else rs += "-";
@@ -219,9 +219,9 @@ public class SentencePart {
 	}	
 
 
-	//@Override
-	public String getStr() {
-	//public String toString() {
+	@Override
+	//public String getStr() {
+	public String toString() {
 		return _name;
 	}
 

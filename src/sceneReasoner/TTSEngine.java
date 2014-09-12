@@ -2,6 +2,7 @@ package sceneReasoner;
 
 import ir.ac.itrc.qqa.semantic.enums.ExecutionMode;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
+import ir.ac.itrc.qqa.semantic.kb.Node;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleAnswer;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleQuestion;
 import ir.ac.itrc.qqa.semantic.reasoning.SemanticReasoner;
@@ -54,17 +55,16 @@ public class TTSEngine {
 	 * @param command three possible commands: new story, new scene, or new sentence.
 	 * @param primarySceneModel 
 	 */
-	public SceneModel TextToScene(String inputNLSentence, String command, SceneModel primarySceneModel){
+	public void TextToScene(String inputNLSentence, String command, SceneModel primarySceneModel){
 		if(!isKbInitialized)
 			loadKb();
 		
-		if(command == "new story"){
-			
-		}
-		if(command == "new scene"){
-			
-		}	
-		
+//		if(command == "new story"){
+//			return;
+//		}
+//		if(command == "new scene"){			
+//		}	return;
+//		
 		System.out.println("natural   sentence: " + inputNLSentence);
 		
 		SentenceModel sen = _pp.preprocessSentence(inputNLSentence);
@@ -74,23 +74,21 @@ public class TTSEngine {
 		
 		_pp.preprocessScene(sen, primarySceneModel);
 						
-		System.out.println("primary sceneModel: " + sen + "\n\n");		
+		System.out.println("sentenceModel after preprocess: \n" + sen + "\n\n");		
 					
-		//SceneModel richSM = _sr.enrichSceneModel(primarySM);		 
+		//SceneModel richSM = _sr.enrichSceneModel(primarySM);
 		
-		return null; //richSM;
 	}
 		
-	public void checkSemanticReasoner()	{
-		SemanticReasoner _re = new SemanticReasoner(_TTSKb, ExecutionMode.RELEASE);
-		PlausibleQuestion pq = new PlausibleQuestion();
-		pq.argument = _TTSKb.addConcept("پسرک");
-		pq.referent = _TTSKb.addConcept("نفر§n-13075");		
-		pq.descriptor = KnowledgeBase.HPR_ISA;//_TTSKb.addConcept("چشم افتادن");
+	public void checkSemanticReasoner(Node argument, Node descriptor)	{
+		
 
-//		pq.argument = kb.addConcept("پسر بچه");
-//		pq.referent = kb.addConcept("بچه");
-//		pq.descriptor = KnowledgeBase.HPR_ISA;
+		PlausibleQuestion pq = new PlausibleQuestion();
+		pq.argument = argument;
+		pq.referent = null;		
+		//pq.descriptor = descriptor;
+		pq.descriptor = KnowledgeBase.HPR_ANY;
+
 		
 		System.out.print(pq.toString() + " ... ");
 		
@@ -103,7 +101,7 @@ public class TTSEngine {
 		int count = 0;
 		for (PlausibleAnswer answer: answers)
 		{
-			System.out.println(++count + ". " + answer.toString());
+			System.out.println("\n\n\n" + ++count + ". " + answer.toString() + ">>>>>>>>>>>>>>>>>>");
 			
 			ArrayList<String> justifications = answer.GetTechnicalJustifications();
 			
@@ -114,50 +112,17 @@ public class TTSEngine {
 				System.out.println(justification);
 			}
 		}
+		print("\tInferences: " + _re.totalCalls);
+		print("\tTime: " + _re.reasoningTime / 100 + " ms");
+//		print("\tThroughput: " + (_re.totalCalls / _re.reasoningTime) * 1000 + " inference/s");
 	}
-		
-	public void checkSemanticReasoner2(){
-		SemanticReasoner _re = new SemanticReasoner(_TTSKb, ExecutionMode.RELEASE);
-		PlausibleQuestion pq = new PlausibleQuestion();
-		pq.argument = _TTSKb.addConcept("*پسرک (1)");
-		pq.referent = _TTSKb.addConcept("نفر§n-13075");		
-		pq.descriptor = KnowledgeBase.HPR_ISA;//_TTSKb.addConcept("چشم افتادن");
-
-//			pq.argument = kb.addConcept("پسر بچه");
-//			pq.referent = kb.addConcept("بچه");
-//			pq.descriptor = KnowledgeBase.HPR_ISA;
-		
-		System.out.print(pq.toString() + " ... ");
-		
-		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
-		
-		System.out.println("done");
-		
-		System.out.println("Answers:");
-		
-		int count = 0;
-		for (PlausibleAnswer answer: answers)
-		{
-			System.out.println(++count + ". " + answer.toString());
-			
-			ArrayList<String> justifications = answer.GetTechnicalJustifications();
-			
-			int countJustification = 0;
-			for (String justification: justifications)
-			{
-				System.out.println("-------" + ++countJustification + "--------");
-				System.out.println(justification);
-			}
-		}
-		
-		System.out.println("Summary:");
-		System.out.println("\tInferences: " + _re.totalCalls);
-		System.out.println("\tTime: " + _re.reasoningTime / 100 + " ms");
-		System.out.println("\tThroughput: " + (_re.totalCalls / _re.reasoningTime) * 1000 + " inference/s");
-	}	
 	
-
 	
+	private void print(String toPrint) {
+		System.out.println(toPrint);
+		
+	}
+
 	public int loadKb()
 	{
 		int loaded = 0;

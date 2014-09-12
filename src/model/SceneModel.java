@@ -32,7 +32,7 @@ public class SceneModel {
 	
 	private SemanticReasoner _re = null;
 	
-	private StoryModel story;
+	private StoryModel storyModel;
 	
 	private ArrayList<SentenceModel> sentences = new ArrayList<SentenceModel>();
 	
@@ -45,8 +45,9 @@ public class SceneModel {
 	private Hashtable<String, ArrayList<Node>> scene_nodes_dic = new Hashtable<String,ArrayList<Node>>();
 	
 	private Hashtable<String, ScenePart> scene_parts = new Hashtable<String, ScenePart>();
+	
 		
-	private ArrayList<Role> roles = new ArrayList<Role>();
+	private ArrayList<Role> roles = new ArrayList<Role>();	
 	
 	private ArrayList<StaticObject> static_objs = new ArrayList<StaticObject>();
 	
@@ -59,6 +60,7 @@ public class SceneModel {
 	private ArrayList<SceneGoal> scene_goals = new ArrayList<SceneGoal>();
 		
 	private ArrayList<SceneEmotion> scene_emotions = new ArrayList<SceneEmotion>();
+	
 		
 	public SceneModel(KnowledgeBase _kb, SemanticReasoner _re) {		
 		this._kb = _kb;
@@ -77,12 +79,14 @@ public class SceneModel {
 	}
 	
 	
+	
+	
 	public StoryModel getStory() {
-		return story;
+		return storyModel;
 	}
 
 	public void setStory(StoryModel story) {
-		this.story = story;
+		this.storyModel = story;
 	}
 
 	public ArrayList<SentenceModel> getSentences() {
@@ -410,7 +414,7 @@ public class SceneModel {
 		
 		//_kb.addRelation(fromKB, SSNode, KnowledgeBase.HPR_ISA);
 		//_kb.addRelation(fromKB, originalNode, KnowledgeBase.HPR_ISA);
-		_kb.addRelation(fromKB, originalNode, KnowledgeBase.HPR_SIM);
+		_kb.addRelation(fromKB, originalNode, KnowledgeBase.HPR_SIM, SourceType.TTS);
 		
 		
 		return fromKB;		
@@ -760,6 +764,59 @@ public class SceneModel {
 
 		print(node + " pos is " + sp);			
 		return sp;
+	}
+
+
+
+
+	@Override
+	public String toString() {
+		String st = "SceneModel [" + "\nroles= "; 
+		for (Role r : this.roles)
+			st += "\n" + r;
+		
+		st+= "\ndynamic_objs= ";
+		for(DynamicObject dOb:this.dynamic_objs)
+			st += "\n" + dOb;
+		
+		st += "\nstatic_objs= ";
+		for(StaticObject stOb:this.static_objs)
+			st += "\n" + stOb;
+		
+		st += "\nlocation= " + location + 
+		"\ntime= " + time +
+		"\nscene_goals= " + scene_goals + 
+		"\nscene_emotions= " + scene_emotions + "]\n";
+		
+		return st;
+	}
+
+
+
+
+	public Role getRole(Node role_node) {
+		if(role_node == null)
+			return null;
+		
+		for(Role role:this.roles)
+			if(role._node == role_node)
+				return role;
+		
+		MyError.error(this + " SceneModel has no such a " + role_node + " Role.");
+		return null;
+	}
+
+
+	public DynamicObject getDynamic_object(Node dynamin_object_node) {
+		if(dynamin_object_node == null)
+			return null;
+		
+		for(DynamicObject dynObj: this.dynamic_objs)
+			if(dynObj._node == dynamin_object_node)
+				return dynObj;
+		
+		MyError.error(this + " SceneModel has no such a " + dynamin_object_node + " DynamicObject.");
+		return null;
 	}
 }
 			
