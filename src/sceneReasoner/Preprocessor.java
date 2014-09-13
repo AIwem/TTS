@@ -19,6 +19,7 @@ import model.SceneModel;
 import model.ScenePart;
 import model.SentenceModel;
 
+
 /**
  * Preprocessor preprocesses the input natural language sentences.  
  * It can convert sentence in natural language to their SentenceModel.
@@ -239,10 +240,9 @@ public class Preprocessor {
 	 * 
 	 * @param sentenceModel the SenetenceModel to be converted.
 	 * @param primarySceneModel the primary SceneModel which information of sentenceModel is to be added.
-	 * @param command 
 	 * @return SceneModel equivalent to input SentenceModel 
 	 */	 
-	public void preprocessScene(SentenceModel sentenceModel, SceneModel primarySceneModel, String command){
+	public void preprocessScene(SentenceModel sentenceModel, SceneModel primarySceneModel){
 		
 		if(sentenceModel == null){
 			MyError.error("senetecenModel should not be null! " + sentenceModel);
@@ -253,11 +253,11 @@ public class Preprocessor {
 			return;		
 		}
 		primarySceneModel.addSentence(sentenceModel);
-		// وارد خانه شد  all pars null
+		
 		preprocessSubject(sentenceModel, primarySceneModel);		
 				
 		preprocessObject(sentenceModel, primarySceneModel);		
-		//به سمت خانه
+		
 		preprocessAdverb(sentenceModel, primarySceneModel);		
 		print("\n before verb");
 		primarySceneModel.printDictionary();
@@ -367,7 +367,9 @@ public class Preprocessor {
 	}
 
 	/**
-	 * this method based on the ScenePart of the part adds a Role, DynamicObject, StaticObject, or ... to primarySceneModel. 
+	 * this method based on the ScenePart of the part adds a Role, DynamicObject, StaticObject, or ... to primarySceneModel.
+	 * TODO: we have assumed for simplicity which every scene has a unique Role, DyanamicObject, and StaticObject with a one name.
+	 * for example all «پسرک» refer to just one Role. 
 	 * 
 	 * @param part the _wsd of this SentencePart object is set.
 	 * @param primarySceneModel
@@ -378,19 +380,25 @@ public class Preprocessor {
 		
 		ScenePart sp = primarySceneModel.whichScenePart(part._wsd);				
 		
-		if(sp == ScenePart.ROLE){				
-			Role role = new Role(part._name, part._wsd);				
-			primarySceneModel.addRole(role);				
+		if(sp == ScenePart.ROLE){
+			if(!primarySceneModel.hasRole(part._wsd)){				
+				Role role = new Role(part._name, part._wsd);				
+				primarySceneModel.addRole(role);			
+			}		
 		}
-		else if(sp == ScenePart.DYNAMIC_OBJECT){				
-			DynamicObject dynObj = new DynamicObject(part._name, part._wsd);
-			primarySceneModel.addDynamic_object(dynObj);				
+		else if(sp == ScenePart.DYNAMIC_OBJECT){		
+			if(!primarySceneModel.hasDynamic_object(part._wsd)){				
+				DynamicObject dynObj = new DynamicObject(part._name, part._wsd);
+				primarySceneModel.addDynamic_object(dynObj);				
+			}
 		}
-		else if(sp == ScenePart.STATIC_OBJECT){				
-			StaticObject staObj = new StaticObject(part._name, part._wsd);
-			primarySceneModel.addStatic_object(staObj);				
+		else if(sp == ScenePart.STATIC_OBJECT){
+			if(!primarySceneModel.hasStatic_object(part._wsd)){				
+				StaticObject staObj = new StaticObject(part._name, part._wsd);
+				primarySceneModel.addStatic_object(staObj);
+			}
 		}
-		else if(sp == ScenePart.LOCATION){
+		else if(sp == ScenePart.LOCATION){//TODO: check what else shall I do for this case!
 			Location location = new Location(part._name, part._wsd);
 			primarySceneModel.setLocation(location);			
 		}

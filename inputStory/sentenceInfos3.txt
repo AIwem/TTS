@@ -39,9 +39,9 @@ name:شروع به دویدن کرد	POS:VERB	SRL:VERB	WSD:دویدن#v1	sub_par
 name:شروع کرد	POS:VERB	SRL:VERB_P	WSD:شروع کردن#v1	sub_part:-	dep:PRE
 name:دویدن	POS:VERB	SRL:VERB_P	WSD:دویدن#v1	sub_part:-	dep:MAIN
 
-name:به سمت خانه	POS:NOUN	SRL:ADV	WSD:-	sub_part:سمت،خانه	dep:-
-name:سمت	POS:NOUN	SRL:ADV_P	WSD:سمت#n4	sub_part:-	dep:PRE
-name:خانه	POS:NOUN	SRL:ADV_P	WSD:خانه#n10	sub_part:-	dep:MAIN
+name:به سمت خانه	POS:NOUN	SRL:ADV	WSD:MAIN_مسیر§n-14355_POST	sub_part:سمت،خانه	dep:-
+name:سمت	POS:NOUN	SRL:ADV_P	WSD:سمت#n4	sub_part:-	dep:MAIN
+name:خانه	POS:NOUN	SRL:ADV_P	WSD:خانه#n10	sub_part:-	dep:POST
 
 #------------------------------------------------------
 sentence:‌وارد خانه شد

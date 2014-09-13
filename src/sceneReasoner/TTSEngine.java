@@ -6,11 +6,13 @@ import ir.ac.itrc.qqa.semantic.kb.Node;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleAnswer;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleQuestion;
 import ir.ac.itrc.qqa.semantic.reasoning.SemanticReasoner;
+import ir.ac.itrc.qqa.semantic.util.MyError;
 
 import java.util.ArrayList;
 
 import model.SceneModel;
 import model.SentenceModel;
+import model.StoryModel;
 
 /**
  * TTSEngine is an engine that converts natural language texts to Scene. 
@@ -49,38 +51,47 @@ public class TTSEngine {
 	}
 	
 	/**
-	 * main cycle of converting text to scene.
+	 * main cycle of converting a text about a single scene to its enriched SceneModel.
+	 * this method receives sentences of a scene (total sentences describing that scene)
+	 * first convert each sentence to its equivalent ScntenceModel.
+	 * then adds each of these sentences to a sceneModel called primarySceneModel through preprocessor.
+	 * then SceneReasoner enriches this primarySceneModel to enrichedSceneModel, means filling its missing information through reasoning.  
 	 * 
-	 * @param inputNLSentence input natural language sentence
-	 * @param command three possible commands: new story, new scene, or new sentence.
-	 * @param primarySceneModel 
+	 * @param scene_inputNL input natural language sentences describing a single scene.
+	 * @param storyModel the stroyModel which this scene belongs to. 
+	 * @return 
 	 */
-	public void TextToScene(String inputNLSentence, String command, SceneModel primarySceneModel){
+	public SceneModel TextToScene(ArrayList<String> scene_inputNL, StoryModel storyModel){
+		if(scene_inputNL == null || scene_inputNL.size() == 0 || storyModel == null){
+			MyError.error("bad inputs!");
+			return null;
+		}
+			
+		
 		if(!isKbInitialized)
 			loadKb();
 		
-		if(command == "new story"){
-			return;
-		}
-		if(command == "new scene"){			
-			return;
-		}
-		System.out.println("natural   sentence: " + inputNLSentence);
+		SceneModel primarySceneModel = new SceneModel(_TTSKb, _re, storyModel);
 		
-		SentenceModel sen = _pp.preprocessSentence(inputNLSentence);
+		storyModel.addScene(primarySceneModel);
 		
-		//System.out.println("preproc sentence: \n" + sen);
-		
-		
-		_pp.preprocessScene(sen, primarySceneModel, command);
+				
+		for(String NLsentence:scene_inputNL){
+			
+			print("natural sentence: " + NLsentence);
+			
+			SentenceModel sen = _pp.preprocessSentence(NLsentence);
+			 
+			_pp.preprocessScene(sen, primarySceneModel);
+							
+			System.out.println("sentenceModel after preprocess: \n" + sen + "\n\n");		
 						
-		System.out.println("sentenceModel after preprocess: \n" + sen + "\n\n");		
-					
-		//SceneModel richSM = _sr.enrichSceneModel(primarySM);
-		
+			//SceneModel richSM = _sr.enrichSceneModel(primarySM);
+		}
+		return primarySceneModel;
 	}
 		
-	public void checkSemanticReasoner(Node argument, Node descriptor)	{
+	public void checkSemanticReasoner1(Node argument, Node descriptor)	{
 		
 
 		PlausibleQuestion pq = new PlausibleQuestion();
@@ -117,6 +128,41 @@ public class TTSEngine {
 //		print("\tThroughput: " + (_re.totalCalls / _re.reasoningTime) * 1000 + " inference/s");
 	}
 	
+	
+public void checkSemanticReasoner2(Node argument)	{
+		
+
+		PlausibleQuestion pq = new PlausibleQuestion();
+		pq.argument = argument;
+		pq.referent = _TTSKb.addConcept("جانور§n-12239");		
+		pq.descriptor = KnowledgeBase.HPR_ISA;
+		
+		System.out.print(pq.toString() + " ... ");
+		
+		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
+		
+		System.out.println("done");
+		
+		System.out.println("Answers:");
+		
+		int count = 0;
+		for (PlausibleAnswer answer: answers)
+		{
+			System.out.println("\n\n\n" + ++count + ". " + answer.toString() + ">>>>>>>>>>>>>>>>>>");
+			
+			ArrayList<String> justifications = answer.GetTechnicalJustifications();
+			
+			int countJustification = 0;
+			for (String justification: justifications)
+			{
+				System.out.println("-------" + ++countJustification + "--------");
+				System.out.println(justification);
+			}
+		}
+		print("\tInferences: " + _re.totalCalls);
+		print("\tTime: " + _re.reasoningTime / 100 + " ms");
+//		print("\tThroughput: " + (_re.totalCalls / _re.reasoningTime) * 1000 + " inference/s");
+	}
 	
 	private void print(String toPrint) {
 		System.out.println(toPrint);

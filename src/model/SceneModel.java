@@ -1,6 +1,5 @@
 package model;
 
-import ir.ac.itrc.qqa.semantic.enums.ConditionalType;
 import ir.ac.itrc.qqa.semantic.enums.POS;
 import ir.ac.itrc.qqa.semantic.enums.SourceType;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
@@ -63,9 +62,10 @@ public class SceneModel {
 	private ArrayList<SceneEmotion> scene_emotions = new ArrayList<SceneEmotion>();
 	
 		
-	public SceneModel(KnowledgeBase _kb, SemanticReasoner _re) {		
+	public SceneModel(KnowledgeBase _kb, SemanticReasoner _re, StoryModel storyModel) {		
 		this._kb = _kb;
 		this._re = _re;
+		this.storyModel = storyModel;
 				
 		this.sentences = new ArrayList<SentenceModel>();
 		this.scene_nodes_dic = new Hashtable<String, ArrayList<Node>>();
@@ -174,6 +174,8 @@ public class SceneModel {
 	}
 
 	public void setLocation(Location location) {
+		if(this.location != null)
+			MyError.error("this SceneModel previouly has a location " + this.location);
 		this.location = location;
 	}
 
@@ -411,7 +413,7 @@ public class SceneModel {
 		//adding this instance concept to the knowledge base.
 		Node instanceNode = _kb.addConcept(instanceName, false, SourceType.TTS);
 		
-		//---------- finding the synset Node of original Node
+		//---------- finding the synset Node of original Node ---------------------------
 		ArrayList<PlausibleAnswer> answers = originalNode.findTargetNodes(KnowledgeBase.HPR_SYN);
 		
 		Node SynSetNode = null;
@@ -420,10 +422,19 @@ public class SceneModel {
 				SynSetNode = answer.answer;
 				break;
 			}		
-		
+		//option a: instaceNode ISA originalNode --> dose not work !!!!!!
 		//_kb.addRelation(instanceNode, originalNode, KnowledgeBase.HPR_ISA, SourceType.TTS);
-		_kb.addRelation(instanceNode, SynSetNode, KnowledgeBase.HPR_ISA, SourceType.TTS);		
-		//_kb.addRelation(instanceNode, originalNode, KnowledgeBase.HPR_SIM, SourceType.TTS);
+		
+		//option b: instaceNode ISA synSetNode --> works :)
+		if(SynSetNode != null){
+			print("option b: " + instanceNode + " ISA " + SynSetNode);
+			_kb.addRelation(instanceNode, SynSetNode, KnowledgeBase.HPR_ISA, SourceType.TTS);
+		}
+		//option c: instaceNode SIM originalNode  --> works :)
+		else{
+			print("option c: " + instanceNode + " SIM " + originalNode + " ------ NOTE ---- NOTE ---- NOTE ---- NOTE ---- NOTE ----");		
+			_kb.addRelation(instanceNode, originalNode, KnowledgeBase.HPR_SIM, SourceType.TTS);
+		}
 		
 		
 		return instanceNode;		
@@ -614,7 +625,7 @@ public class SceneModel {
 	}	
 	
 	/**
-	 * checks if node is a child of "راه§n-12894" returns true.
+	 * checks if node is a child of "راه§n-12894" or "جا§n-12733" returns true.
 	 * @param node
 	 * @return
 	 */
@@ -634,10 +645,26 @@ public class SceneModel {
 		for(PlausibleAnswer ans:answers ){
 			print("answer: " + ans);
 			if(ans.answer == KnowledgeBase.HPR_YES){
-				print(node.getName() + " isLocation \n");
+				print(node.getName() + " isLocation راه \n");
+				return true;				
+			}
+		}	
+		
+		pq = new PlausibleQuestion();
+		pq.descriptor = KnowledgeBase.HPR_ISA;
+		pq.argument = node;			
+		pq.referent = _kb.addConcept("جا§n-12733");
+		
+		answers = writeAnswersTo(pq.descriptor, node, pq.referent);
+		//ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
+		for(PlausibleAnswer ans:answers ){
+			print("answer: " + ans);
+			if(ans.answer == KnowledgeBase.HPR_YES){
+				print(node.getName() + " isLocation جا \n");
 				return true;				
 			}
 		}		
+		
 		print(node + " is NOT Loation \n");
 		return false;
 	}
@@ -686,7 +713,7 @@ public class SceneModel {
 	 * <ul> if node POS is NOUN:
 	 * 		<li> if node is a child of "نفر§n-13075" returns ROLE </li>
 	 * 		<li> if node is a child of "جانور§n-12239" returns DYNAMIC_OBJ </li>
-	 * 		<li> if node is a child of "راه§n-12894" returns LOCATION </li>
+	 * 		<li> if node is a child of "راه§n-12894" or "جا§n-12733" returns LOCATION </li>
 	 * 		<li> otherwise returns STATIC_OBJ </li>  			
 	 * </ul> 
 	 * <ul> if node POS is ADVERB: 		
@@ -712,6 +739,8 @@ public class SceneModel {
 			if(pure_node.getName().equals("یک#n1"))
 				return ScenePart.SCENE_OBJECT;
 			if(pure_node.getName().equals("راه#n9"))
+				return ScenePart.LOCATION;
+			if(pure_node.getName().equals("سمت#n4"))
 				return ScenePart.LOCATION;
 			if(pure_node.getName().equals("خانه#n10"))
 				return ScenePart.SCENE_OBJECT;
@@ -811,11 +840,21 @@ public class SceneModel {
 			if(role._node == role_node)
 				return role;
 		
-		MyError.error(this + " SceneModel has no such a " + role_node + " Role.");
+		MyError.error("this SceneModel has no such a " + role_node + " Role.");
 		return null;
 	}
 
-
+	public boolean hasRole(Node role_node) {
+		if(role_node == null)
+			return false;
+		
+		for(Role role:this.roles)
+			if(role._node == role_node)
+				return true;
+		return false;
+	}
+	
+	
 	public DynamicObject getDynamic_object(Node dynamin_object_node) {
 		if(dynamin_object_node == null)
 			return null;
@@ -824,10 +863,46 @@ public class SceneModel {
 			if(dynObj._node == dynamin_object_node)
 				return dynObj;
 		
-		MyError.error(this + " SceneModel has no such a " + dynamin_object_node + " DynamicObject.");
+		MyError.error("this SceneModel has no such a " + dynamin_object_node + " DynamicObject.");
 		return null;
 	}
-}
+	
+	public boolean hasDynamic_object(Node dynamin_object_node) {
+		if(dynamin_object_node == null)
+			return false;
+		
+		for(DynamicObject dynObj: this.dynamic_objs)
+			if(dynObj._node == dynamin_object_node)
+				return true;
+		return false;
+	}
+
+	public StaticObject getStatic_object(Node static_object_node) {
+		if(static_object_node == null)
+			return null;
+		
+		for(StaticObject staObj: this.static_objs)
+			if(staObj._node == static_object_node)
+				return staObj;
+		
+		MyError.error("this SceneModel has no such a " + static_object_node + " StaticObject.");
+		return null;
+	}
+
+	public boolean hasStatic_object(Node static_object_node) {
+		if(static_object_node == null)
+			return false;
+		
+		for(StaticObject staObj: this.static_objs)
+			if(staObj._node == static_object_node)
+				return true;
+		return false;
+	}
+
+
+
+
+	}
 			
 		
 	

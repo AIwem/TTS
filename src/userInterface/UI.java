@@ -7,7 +7,10 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 
+
+
 import model.SceneModel;
+import model.StoryModel;
 import sceneReasoner.TTSEngine;
 
 public class UI {
@@ -19,7 +22,7 @@ public class UI {
 		//tts = new TTSEngine("kb/farsnet.txt", "kb/injuredPigeon_simple.txt");
 		//tts = new TTSEngine("kb/farsnet.txt", "kb/injuredPigeon.txt");
 		//tts = new TTSEngine("kb/farsnet.txt", "kb/injuredPigeon_SS.txt");
-		tts = new TTSEngine("kb/farsnet--11.txt", "kb/injuredPigeon2.txt");
+		tts = new TTSEngine("kb/farsnet--12.txt", "kb/injuredPigeon2.txt");
 	}
 	
 	private void print(String s){
@@ -34,36 +37,39 @@ public class UI {
 		//It must read sentence from user input.
 		//temporarily it reads all input story from file instead of getting from user!
 		ArrayList<String> inputs = importInputTexts(inputStoryFilePath);
+
+		ArrayList<String> current_scene_lines = new ArrayList<String>();
+		SceneModel richedSceneModel = null;
+		int story_num = 0;
 		
-		SceneModel primarySceneModel = new SceneModel(tts._TTSKb, tts._re);
+		StoryModel storyModel = new StoryModel("story"+story_num);
 		
-		String command =  "";
-		//ArrayList<Node> nodes = null;
+		
 		for(String line:inputs){
 			
 			if(line.equals("«داستان جدید»")){				
-				command = "new story";
+				storyModel = new StoryModel("stroy" + ++story_num);
 				continue;
 			}
 			else if(line.equals("«صحنه جدید»")){
-				command = "new scene";
+				
+				//Then give the sentence to TTSEngine to enrich. 
+			 	richedSceneModel = tts.TextToScene(current_scene_lines, storyModel);
+				
+				current_scene_lines = new ArrayList<String>();
 				continue;
-			}
-			else
-				command = "new sentence";
-			
-			//Then give the sentence to TTSEngine to enrich. 
-			tts.TextToScene(line, command, primarySceneModel);
-			
+			}			
+			current_scene_lines.add(line);
 		}
-		return primarySceneModel;
-			//nodes = tts.TextToScene(line, command);
-			
-			//Then shows this enriched SceneModel to the user which contains enriched information about input sentence.
+		return richedSceneModel;
+//		return s;
+//			nodes = tts.TextToScene(line, command);
+//			
+//			//Then shows this enriched SceneModel to the user which contains enriched information about input sentence.
 //			if (enrichedScene!= null)
 //				print(enrichedScene.toString());			
 //		}
-		//System.out.println("" + nodes);
+//		System.out.println("" + nodes);
 	}
 	
 	public ArrayList<String> importInputTexts(String filename)
@@ -118,6 +124,7 @@ public class UI {
 		return inputs;
 	}
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		System.out.println("بسم الله الرحمن الرحیم و توکلت علی الله");
 	
@@ -125,7 +132,8 @@ public class UI {
 		SceneModel psm = ui.TTS();
 		
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~");
-		ui.tts.checkSemanticReasoner(psm.getRoles().get(0)._node, psm.getRoles().get(0).getRole_actions().get(0)._node);
+		//ui.tts.checkSemanticReasoner1(psm.getRoles().get(0)._node, psm.getRoles().get(0).getRole_actions().get(0)._node);
+		//ui.tts.checkSemanticReasoner2(psm.getDynamic_objects().get(0)._node);
 	
 		System.out.println("الحمدلله");
 	}
