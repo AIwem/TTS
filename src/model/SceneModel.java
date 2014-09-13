@@ -396,14 +396,21 @@ public class SceneModel {
 		
 		
 		//adding this instance concept to the knowledge base.
-		Node fromKB = _kb.addConcept(instanceName, false, SourceType.TTS);
+		Node instanceNode = _kb.addConcept(instanceName, false, SourceType.TTS);
+		Node SSNode = _kb.addConcept("جانور§n-12239");
 		
+		//----------------- defining the relation between instance Node and original Node!--------
 		
-		_kb.addRelation(fromKB, originalNode, KnowledgeBase.HPR_ISA); // with this relation dosen't works correctly!
-		//_kb.addRelation(fromKB, originalNode, KnowledgeBase.HPR_SIM); // with this relation works correctly.
+		// option a: with this relation dosen't works correctly!		
+		_kb.addRelation(instanceNode, originalNode, KnowledgeBase.HPR_ISA);
 		
+		// option b: with this relation works correctly.
+		//_kb.addRelation(instanceNode, SSNode, KnowledgeBase.HPR_ISA);
 		
-		return fromKB;		
+		// option c: with this relation works correctly.
+		//_kb.addRelation(fromKB, originalNode, KnowledgeBase.HPR_SIM); 
+			
+		return instanceNode;		
 	}
 	
 	public void printDictionary(){
