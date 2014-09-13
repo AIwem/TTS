@@ -397,15 +397,26 @@ public class SceneModel {
 		
 		//adding this instance concept to the knowledge base.
 		Node instanceNode = _kb.addConcept(instanceName, false, SourceType.TTS);
-		Node SSNode = _kb.addConcept("جانور§n-12239");
+		
+		//---------- finding the synset Node of original Node ---------------------------------
+		ArrayList<PlausibleAnswer> answers = originalNode.findTargetNodes(KnowledgeBase.HPR_SYN);
+		
+		Node SynSetNode = null;
+		for (PlausibleAnswer answer: answers)
+			if(answer.answer != null){
+				SynSetNode = answer.answer;
+				break;
+			}
+
+		
 		
 		//----------------- defining the relation between instance Node and original Node!--------
 		
-		// option a: with this relation dosen't works correctly!		
+		// option a: with this relation dosen't works correctly !!!!!!!!!!!!!!!		
 		_kb.addRelation(instanceNode, originalNode, KnowledgeBase.HPR_ISA);
 		
 		// option b: with this relation works correctly.
-		//_kb.addRelation(instanceNode, SSNode, KnowledgeBase.HPR_ISA);
+		//_kb.addRelation(instanceNode, SynSetNode, KnowledgeBase.HPR_ISA);
 		
 		// option c: with this relation works correctly.
 		//_kb.addRelation(fromKB, originalNode, KnowledgeBase.HPR_SIM); 
