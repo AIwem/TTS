@@ -74,7 +74,7 @@ public class TTSEngine {
 		
 		_pp.preprocessScene(sen, primarySceneModel);
 						
-		System.out.println("primary sceneModel: " + sen + "\n\n");		
+		//System.out.println("primary sceneModel: " + sen + "\n\n");		
 					
 		//SceneModel richSM = _sr.enrichSceneModel(primarySM);		 
 		
@@ -116,46 +116,6 @@ public class TTSEngine {
 		}
 	}
 		
-	public void checkSemanticReasoner2(){
-		SemanticReasoner _re = new SemanticReasoner(_TTSKb, ExecutionMode.RELEASE);
-		PlausibleQuestion pq = new PlausibleQuestion();
-		pq.argument = _TTSKb.addConcept("*پسرک (1)");
-		pq.referent = _TTSKb.addConcept("نفر§n-13075");		
-		pq.descriptor = _TTSKb.HPR_ISA;//_TTSKb.addConcept("چشم افتادن");
-
-//			pq.argument = kb.addConcept("پسر بچه");
-//			pq.referent = kb.addConcept("بچه");
-//			pq.descriptor = KnowledgeBase.HPR_ISA;
-		
-		System.out.print(pq.toString() + " ... ");
-		
-		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
-		
-		System.out.println("done");
-		
-		System.out.println("Answers:");
-		
-		int count = 0;
-		for (PlausibleAnswer answer: answers)
-		{
-			System.out.println(++count + ". " + answer.toString());
-			
-			ArrayList<String> justifications = answer.GetTechnicalJustifications();
-			
-			int countJustification = 0;
-			for (String justification: justifications)
-			{
-				System.out.println("-------" + ++countJustification + "--------");
-				System.out.println(justification);
-			}
-		}
-		
-		System.out.println("Summary:");
-		System.out.println("\tInferences: " + _re.totalCalls);
-		System.out.println("\tTime: " + _re.reasoningTime / 100 + " ms");
-		System.out.println("\tThroughput: " + (_re.totalCalls / _re.reasoningTime) * 1000 + " inference/s");
-	}	
-	
 
 	
 	public int loadKb()

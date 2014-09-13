@@ -1,6 +1,7 @@
 package model;
 
 import ir.ac.itrc.qqa.semantic.enums.POS;
+import ir.ac.itrc.qqa.semantic.enums.SourceType;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
 import ir.ac.itrc.qqa.semantic.kb.Node;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleAnswer;
@@ -393,13 +394,13 @@ public class SceneModel {
 	 	
 		instanceName = instanceName + "-"+ index;
 		
-		Node fromKB = _kb.addConcept(instanceName);
-		Node SSNode = _kb.addConcept("کبوتر§n-24403");
+		
+		//adding this instance concept to the knowledge base.
+		Node fromKB = _kb.addConcept(instanceName, false, SourceType.TTS);
 		
 		
-		_kb.addRelation(fromKB, SSNode, KnowledgeBase.HPR_ISA);
-		//_kb.addRelation(fromKB, originalNode, KnowledgeBase.HPR_ISA);
-		//_kb.addRelation(fromKB, originalNode, KnowledgeBase.HPR_SIM);
+		_kb.addRelation(fromKB, originalNode, KnowledgeBase.HPR_ISA); // with this relation dosen't works correctly!
+		//_kb.addRelation(fromKB, originalNode, KnowledgeBase.HPR_SIM); // with this relation works correctly.
 		
 		
 		return fromKB;		
@@ -491,20 +492,11 @@ public class SceneModel {
 	 * @param pos the part of speech this node has, only POS of NOUN,VERB, and ADVERB comes here!
 	 * @return
 	 */
-	private ScenePart getScenePart(Node node, POS pos){
+	public ScenePart getScenePart(Node node, POS pos){
 		if(node == null)
 			return ScenePart.UNKNOWN;
 		
 		if(pos == POS.NOUN){
-			
-			//TODO: I must remove these lines!-------
-		if(node.getName().equals("پسرک"))
-			return ScenePart.ROLE;
-		if(node.getName().equals("پسر#n2"))
-			return ScenePart.ROLE;
-			//---------------------------------------
-			
-
 			if(isHuman(node))
 				return ScenePart.ROLE;
 			
@@ -543,11 +535,11 @@ public class SceneModel {
 		for(PlausibleAnswer ans:answers){
 				print("answer: " + ans);					
 				if(ans.answer == KnowledgeBase.HPR_YES){
-					print(node.getName() + " isHuman");
+					print(node.getName() + " isHuman \n");
 					return true;
 				}			
 		}	
-		print(node + " is NOT Human");
+		print(node + " is NOT Human \n");
 		return false;
 	}
 	
@@ -572,11 +564,11 @@ public class SceneModel {
 		for(PlausibleAnswer ans:answers ){
 			print("answer: " + ans);
 			if(ans.answer == KnowledgeBase.HPR_YES){
-				print(node.getName() + " isAnimal");
+				print(node.getName() + " isAnimal \n");
 				return true;				
 			}
 		}		
-		print(node + " is NOT Animal");
+		print(node + " is NOT Animal \n");
 		return false;
 	}
 	
@@ -597,7 +589,7 @@ public class SceneModel {
 			pos = pure_node.getPos();
 			
 			if(pos == POS.ADJECTIVE || pos == POS.SETELLITE_ADJECTIVE){// || pos == POS.UNKNOWN || pos == POS.ANY){
-				print(pure_node + " skipped  from getScenePart!!!!!!!!!!!!!!!!!!!!!!1");
+				print(pure_node + " skipped  from getScenePart!!!!!!");
 				return;
 			}
 			

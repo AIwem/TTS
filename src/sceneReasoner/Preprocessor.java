@@ -258,25 +258,25 @@ public class Preprocessor {
 			MyError.error("primarySceneModel should not be null! " + primarySceneModel);
 			return;		
 		}
-		preprocessSubject(sentenceModel, primarySceneModel);
-		
-		print("after subject");
-		primarySceneModel.printDictionary();
-		
-		preprocessVerb(sentenceModel, primarySceneModel);
-		
-		print("after verb");
-		primarySceneModel.printDictionary();
-		
+//		preprocessSubject(sentenceModel, primarySceneModel);
+//		
+//		print("after subject");
+//		primarySceneModel.printDictionary();
+//		
+//		preprocessVerb(sentenceModel, primarySceneModel);
+//		
+//		print("after verb");
+//		primarySceneModel.printDictionary();
+//		
 		preprocessObject(sentenceModel, primarySceneModel);
 		
-		print("after object");
-		primarySceneModel.printDictionary();
+//		print("after object");
+//		primarySceneModel.printDictionary();
 		
-		preprocessAdverb(sentenceModel, primarySceneModel);
-		
-		print("after adverb");
-		primarySceneModel.printDictionary();
+//		preprocessAdverb(sentenceModel, primarySceneModel);
+//		
+//		print("after adverb");
+//		primarySceneModel.printDictionary();
 		
 				 
 	}	
@@ -379,7 +379,6 @@ public class Preprocessor {
 		Node wsd = sceneModel.findorCreateInstance(wsd_name, false);
 		part.set_wsd(wsd);		
 	}
-
 	
 	
 	private void preprocessSubject(SentenceModel sentenceModel, SceneModel primarySceneModel){
@@ -432,31 +431,25 @@ public class Preprocessor {
 			//_wsd of obj is set to proper Node of KB.
 			allocate_wsd(obj, primarySceneModel);
 			
-			print("^^^^^^^^^^^^ test ^^^^^^^^^^^^");
-			Node kabotar1 = obj.sub_parts.get(1)._wsd;
-			for(PlausibleAnswer ans: kabotar1.findTargetNodes(KnowledgeBase.HPR_ISA))
-				print(kabotar1 +" isa " + ans.answer);
-			primarySceneModel.isAnimal(kabotar1);
-		
 			
-		
-			ScenePart sp = primarySceneModel.whichScenePart(obj._wsd);
-			
-			if(sp == ScenePart.ROLE){				
-				Role role = new Role(obj._name, obj._wsd);				
-				primarySceneModel.addRole(role);				
-			}
-			else if(sp == ScenePart.DYNAMIC_OBJ){				
-				DynamicObject dynObj = new DynamicObject(obj._name, obj._wsd);
-				primarySceneModel.addDynamic_object(dynObj);				
-			}
-			else if(sp == ScenePart.STATIC_OBJ){				
-				StaticObject staObj = new StaticObject(obj._name, obj._wsd);
-				primarySceneModel.addStatic_object(staObj);				
-			}
-			else{
-				MyError.error(obj + "has no ScenePart!");
-			}
+			primarySceneModel.getScenePart(obj._wsd, obj._pos);
+//			ScenePart sp = primarySceneModel.whichScenePart(obj._wsd);
+//			
+//			if(sp == ScenePart.ROLE){				
+//				Role role = new Role(obj._name, obj._wsd);				
+//				primarySceneModel.addRole(role);				
+//			}
+//			else if(sp == ScenePart.DYNAMIC_OBJ){				
+//				DynamicObject dynObj = new DynamicObject(obj._name, obj._wsd);
+//				primarySceneModel.addDynamic_object(dynObj);				
+//			}
+//			else if(sp == ScenePart.STATIC_OBJ){				
+//				StaticObject staObj = new StaticObject(obj._name, obj._wsd);
+//				primarySceneModel.addStatic_object(staObj);				
+//			}
+//			else{
+//				MyError.error(obj + "has no ScenePart!");
+//			}
 		}		
 	}
 	
