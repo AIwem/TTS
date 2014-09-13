@@ -239,9 +239,10 @@ public class Preprocessor {
 	 * 
 	 * @param sentenceModel the SenetenceModel to be converted.
 	 * @param primarySceneModel the primary SceneModel which information of sentenceModel is to be added.
+	 * @param command 
 	 * @return SceneModel equivalent to input SentenceModel 
 	 */	 
-	public void preprocessScene(SentenceModel sentenceModel, SceneModel primarySceneModel){
+	public void preprocessScene(SentenceModel sentenceModel, SceneModel primarySceneModel, String command){
 		
 		if(sentenceModel == null){
 			MyError.error("senetecenModel should not be null! " + sentenceModel);

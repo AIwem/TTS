@@ -1,5 +1,6 @@
 package model;
 
+import ir.ac.itrc.qqa.semantic.enums.ConditionalType;
 import ir.ac.itrc.qqa.semantic.enums.POS;
 import ir.ac.itrc.qqa.semantic.enums.SourceType;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
@@ -408,16 +409,24 @@ public class SceneModel {
 		instanceName = instanceName + " ("+ index + ")";
 		
 		//adding this instance concept to the knowledge base.
-		Node fromKB = _kb.addConcept(instanceName, false, SourceType.TTS);
-		//Node SSNode = _kb.addConcept("کبوتر§n-24403");
+		Node instanceNode = _kb.addConcept(instanceName, false, SourceType.TTS);
+		
+		//---------- finding the synset Node of original Node
+		ArrayList<PlausibleAnswer> answers = originalNode.findTargetNodes(KnowledgeBase.HPR_SYN);
+		
+		Node SynSetNode = null;
+		for (PlausibleAnswer answer: answers)
+			if(answer.answer != null){
+				SynSetNode = answer.answer;
+				break;
+			}		
+		
+		//_kb.addRelation(instanceNode, originalNode, KnowledgeBase.HPR_ISA, SourceType.TTS);
+		_kb.addRelation(instanceNode, SynSetNode, KnowledgeBase.HPR_ISA, SourceType.TTS);		
+		//_kb.addRelation(instanceNode, originalNode, KnowledgeBase.HPR_SIM, SourceType.TTS);
 		
 		
-		//_kb.addRelation(fromKB, SSNode, KnowledgeBase.HPR_ISA);
-		//_kb.addRelation(fromKB, originalNode, KnowledgeBase.HPR_ISA);
-		_kb.addRelation(fromKB, originalNode, KnowledgeBase.HPR_SIM, SourceType.TTS);
-		
-		
-		return fromKB;		
+		return instanceNode;		
 	}
 	
 	
@@ -567,11 +576,11 @@ public class SceneModel {
 		for(PlausibleAnswer ans:answers){
 				print("answer: " + ans);					
 				if(ans.answer == KnowledgeBase.HPR_YES){
-					print(node.getName() + " isHuman");
+					print(node.getName() + " isHuman \n");
 					return true;
 				}			
 		}	
-		print(node + " is NOT Human");
+		print(node + " is NOT Human \n");
 		return false;
 	}
 	
@@ -596,11 +605,11 @@ public class SceneModel {
 		for(PlausibleAnswer ans:answers ){
 			print("answer: " + ans);
 			if(ans.answer == KnowledgeBase.HPR_YES){
-				print(node.getName() + " isAnimal");
+				print(node.getName() + " isAnimal \n");
 				return true;				
 			}
 		}		
-		print(node + " is NOT Animal");
+		print(node + " is NOT Animal \n");
 		return false;
 	}	
 	
@@ -625,11 +634,11 @@ public class SceneModel {
 		for(PlausibleAnswer ans:answers ){
 			print("answer: " + ans);
 			if(ans.answer == KnowledgeBase.HPR_YES){
-				print(node.getName() + " isLocation");
+				print(node.getName() + " isLocation \n");
 				return true;				
 			}
 		}		
-		print(node + " is NOT Loation");
+		print(node + " is NOT Loation \n");
 		return false;
 	}
 	
@@ -762,7 +771,7 @@ public class SceneModel {
 			addToScene_Parts(pure_name, sp);			
 		}
 
-		print(node + " pos is " + sp);			
+		print(node + " pos is " + sp + "\n");			
 		return sp;
 	}
 

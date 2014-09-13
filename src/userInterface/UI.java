@@ -37,7 +37,7 @@ public class UI {
 		
 		SceneModel primarySceneModel = new SceneModel(tts._TTSKb, tts._re);
 		
-		String command = "";
+		String command =  "";
 		//ArrayList<Node> nodes = null;
 		for(String line:inputs){
 			
@@ -49,9 +49,12 @@ public class UI {
 				command = "new scene";
 				continue;
 			}
+			else
+				command = "new sentence";
 			
 			//Then give the sentence to TTSEngine to enrich. 
 			tts.TextToScene(line, command, primarySceneModel);
+			
 		}
 		return primarySceneModel;
 			//nodes = tts.TextToScene(line, command);

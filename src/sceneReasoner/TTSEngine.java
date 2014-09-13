@@ -59,12 +59,12 @@ public class TTSEngine {
 		if(!isKbInitialized)
 			loadKb();
 		
-//		if(command == "new story"){
-//			return;
-//		}
-//		if(command == "new scene"){			
-//		}	return;
-//		
+		if(command == "new story"){
+			return;
+		}
+		if(command == "new scene"){			
+			return;
+		}
 		System.out.println("natural   sentence: " + inputNLSentence);
 		
 		SentenceModel sen = _pp.preprocessSentence(inputNLSentence);
@@ -72,7 +72,7 @@ public class TTSEngine {
 		//System.out.println("preproc sentence: \n" + sen);
 		
 		
-		_pp.preprocessScene(sen, primarySceneModel);
+		_pp.preprocessScene(sen, primarySceneModel, command);
 						
 		System.out.println("sentenceModel after preprocess: \n" + sen + "\n\n");		
 					
