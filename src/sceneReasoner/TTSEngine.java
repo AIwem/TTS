@@ -79,7 +79,8 @@ public class TTSEngine {
 	 * then SceneReasoner enriches this primarySceneModel to enrichedSceneModel, means filling its missing information through reasoning.  
 	 * 
 	 * @param scene_inputNL input natural language sentences describing a single scene.
-	 * @param storyModel the stroyModel which this scene belongs to. 
+	 * @param storyModel the stroyModel which this scene belongs to.
+	 * @param isLastScene is scene_inputNL describing the last scene of the story?  
 	 * @return 
 	 */
 	public void TextToScene(ArrayList<String> scene_inputNL, StoryModel storyModel, boolean isLastScene){
@@ -222,7 +223,7 @@ public class TTSEngine {
 	
 	
 	/**
-	 * this method adds a row to story_nodes with pure_name as key and instances arrayList as values.
+	 * this method adds a row to seen_nodes with pure_name as key and instances arrayList as values.
 	 * 
 	 * @param pure_name the name of original node fetched from FarsNet.
 	 * @param instances the list of instances of this original node in this sceneModel. 
@@ -239,7 +240,7 @@ public class TTSEngine {
 	}
 	
 	/**
-	 * this method adds a row to the story_sceneParts with pure_name as key and the scenePart as value.
+	 * this method adds a row to the seen_sceneParts with pure_name as key and the scenePart as value.
 	 * this is done in order to preventing re-querying the kb to detect ScenePart of every instance of a original node in this sceneModel. 
 	 * 
 	 * @param pure_name the name of original node fetched from FarsNet.
@@ -269,14 +270,14 @@ public class TTSEngine {
 
 	
 	/**
-	 * findorCreateInstace searches this sceneModel scene_nodes to find a Node named "name".
-	 * if it didn't find it, then load it from kb and adds it to the scene_nodes_dic.
+	 * findorCreateInstace searches seen_nodes to find a Node named "name".
+	 * if it didn't find it, then load it from kb and adds it to the seen_nodes.
 	 * 
 	 * TODO: we have temporarily assumed that every redundant input concept refers to the old seen one, not the new,
 	 * for example all "پسرک" in the story refers to "پسرک1"
 	 * for the new concept of "پسرک" the newNode parameter must be set to true.
 	 * 
-	 * @param pure_name name of Node to be searched in sceneModel's scene_nodes_dic or kb.
+	 * @param pure_name name of Node to be searched in seen_nodes or kb.
 	 * @param newNode is it a new Node or it is previously seen? 
 	 * @return Node an instance node which the name of its original node is "pure_name".
 	 */	
@@ -284,14 +285,14 @@ public class TTSEngine {
 		if(pure_name == null || pure_name.equals(""))
 			return null;		
 		
-		//an instance with name "name" exists in scene_nodes_dic.
+		//an instance with name "name" exists in seen_nodes.
 		if(seen_nodes.containsKey(pure_name)){
 			
 			ArrayList<Node> seenNodes = seen_nodes.get(pure_name);
 			 
 			 if(seenNodes == null){
 				 seenNodes = new ArrayList<Node>();			 
-				 MyError.error(pure_name + " key exists in scene_nodes_dic but no Node exists! probably the map is corrupted!");
+				 MyError.error(pure_name + " key exists in seen_nodes but no Node exists! probably the map is corrupted!");
 			 }
 			 
 			//It is not a new Node, so return the seenNode
@@ -306,7 +307,7 @@ public class TTSEngine {
 					 return seenNodes.get(seenNodes.size()-1);
 			 }
 			 
-			//It is a new Node, so a new instance must be created and added to scene_nodes_dic.
+			//It is a new Node, so a new instance must be created and added to seen_nodes.
 			 else{
 				 if(seenNodes.size() > 0){					 
 					 
@@ -316,7 +317,7 @@ public class TTSEngine {
 					 return newInstance;
 				 }
 				 else{
-					 MyError.error(pure_name + " key exists in scene_nodes_dic but no Node exists! probably the map is corrupted!");
+					 MyError.error(pure_name + " key exists in seen_nodes but no Node exists! probably the map is corrupted!");
 					 Node pure_node = _TTSKb.addConcept(pure_name);//find original node from kb.
 					 
 					 seenNodes.add(pure_node);
@@ -326,7 +327,7 @@ public class TTSEngine {
 				 }
 			 }
 		}
-		//scene_nodes_dic dose not contain this name, so it is not seen yet.
+		//seen_nodes dose not contain this name, so it is not seen yet.
 		else{			
 			Node pure_node = _TTSKb.addConcept(pure_name);//find original node from kb.
 			
@@ -340,10 +341,10 @@ public class TTSEngine {
 	}
 	
 	/**
-	 * addRelationInstance searches the scene_nodes_dic for pure_name, 
+	 * addRelationInstance searches the seen_nodes for pure_name, 
 	 * if it dosen't find it add pure_name as key and an ArrayList of Node with pure relation as first element and its instance as second element.
 	 * if it finds pure_name, adds its instance to the end of the list of pure_name mapped ArrayList<Nodes>.
-	 * it is important to note that this method dose NOE CREATE an instance, just add the given instance to the scene_nodes_dic. 
+	 * it is important to note that this method dose NOE CREATE an instance, just add the given instance to the seen_nodes. 
 	 *  
 	 * @param pure_name the name of PlausibleStatement to be added.
 	 * @param relationInstance the instance of PlausibleStatement to be added.
@@ -363,7 +364,7 @@ public class TTSEngine {
 			ArrayList<Node> seenRelation = seen_nodes.get(pure_name);
 			
 			if(seenRelation == null){
-				MyError.error(pure_name + " key exists in scene_nodes_dic but no relation exists! probably the map is corrupted!");
+				MyError.error(pure_name + " key exists in seen_nodes but no relation exists! probably the map is corrupted!");
 				seenRelation = new ArrayList<Node>();				
 				seenRelation.add(relationInstance.relationType);
 			}
@@ -372,12 +373,11 @@ public class TTSEngine {
 	}
 	
 	/**
-	 * findRelation searches the scene_nodes_dic to find the previous seen plausibleStatement with name "relation_name", if any.
+	 * findRelation searches the seen_nodes to find the previous seen plausibleStatement with name "relation_name", if any.
 	 * if found returns its pure version, means first element of its list, 
-	 * if scene_nodes_dic dosen't have such a relation_name as key, it return null.
+	 * if seen_nodes dosen't have such a relation_name as key, it return null.
 	 * 
 	 * @param relation_name the name of PlausibleStatement to be search
-	 * @param kb 
 	 * @return the PlausibleStatement object previously seen, it is cloned PlausibleStatement.
 	 */
 	public PlausibleStatement findRelationInstance(String relation_name){
@@ -405,10 +405,10 @@ public class TTSEngine {
 	/**
 	 * this method adds an instance from originalNode by adding a unique index to the end of its name, 
 	 * then adds this instance to kb,
-	 * then adds an ISA relation between this instance and the originalNode.
+	 * then adds an ISA relation between this instance and the SynSet of originalNode.
 	 *   
+	 * @param originalName the name of original node which the instance is created from.
 	 * @param originalNode the original Node the instance to be created from.
-	 * @param kb
 	 * @return the instance created from originalNode. 
 	 */
 	private Node createInstance(String originalName, Node originalNode){
@@ -524,7 +524,6 @@ public class TTSEngine {
 	 * 
 	 * @param pure_node
 	 * @param instanceNodes
-	 * @param scenePart
 	 */
 	private void addToTTSEngine(Node pure_node, ArrayList<Node> instanceNodes){
 		String pure_name = pure_node.getName();		
@@ -544,10 +543,10 @@ public class TTSEngine {
 			ArrayList<Node> allInstances = seen_nodes.get(pure_name);
 			if(allInstances != null && allInstances.size()>0)
 				return allInstances.get(0);
-			MyError.error(pure_name + " key exists in scene_nodes_dic but no Node exists! probably the map is corrupted!");			
+			MyError.error(pure_name + " key exists in seen_nodes but no Node exists! probably the map is corrupted!");			
 		}
 		else
-			MyError.error("no such a \"" + pure_name + "\" exists in the scene_nodes_dic!");
+			MyError.error("no such a \"" + pure_name + "\" exists in the seen_nodes!");
 		return null;
 	}
 	
@@ -759,7 +758,7 @@ public class TTSEngine {
 	
 
 	/**
-	 * this methods searches the internal structure of this SceneModel (scene_parts) to find the ScenePart mapped to this node.
+	 * this methods searches the internal structure of this TTSEngine (seen_sceneParts) to find the ScenePart mapped to this node.
 	 *  
 	 * @param node the node which is ScenePart is to be found. it may be pure or instance node!
 	 * @return 

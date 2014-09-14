@@ -39,17 +39,25 @@ public class SceneModel {
 		
 	private ArrayList<SceneEmotion> scene_emotions = new ArrayList<SceneEmotion>();
 	
-		
-	public SceneModel() {
+	
+	public SceneModel(StoryModel storyModel) {
+		this.storyModel = storyModel;
 		this.sentences = new ArrayList<SentenceModel>();		
 		this.roles = new ArrayList<Role>();
 		this.static_objects = new ArrayList<StaticObject>();
 		this.dynamic_objescts = new ArrayList<DynamicObject>();
 		this.scene_goals = new ArrayList<SceneGoal>();
 		this.scene_emotions = new ArrayList<SceneEmotion>();
-	
 	}
 		
+	public SceneModel(){
+		this.sentences = new ArrayList<SentenceModel>();		
+		this.roles = new ArrayList<Role>();
+		this.static_objects = new ArrayList<StaticObject>();
+		this.dynamic_objescts = new ArrayList<DynamicObject>();
+		this.scene_goals = new ArrayList<SceneGoal>();
+		this.scene_emotions = new ArrayList<SceneEmotion>();
+	}
 		
 	public StoryModel getStory() {
 		return storyModel;
@@ -295,8 +303,57 @@ public class SceneModel {
 
 
 	public boolean hasSentence(SentenceModel sentence) {
-		// TODO Auto-generated method stub
+		if(sentence == null)
+			return false;
+		
+		for(SentenceModel sen:this.sentences)
+			if(sen == sentence)
+				return true;
 		return false;
+	}
+
+	public boolean hasScene_emotion(Node scene_emotion_node) {
+		if(scene_emotion_node == null)
+			return false;
+		
+		for(SceneEmotion sceEmo: this.scene_emotions)
+			if(sceEmo._node == scene_emotion_node)
+				return true;
+		return false;
+	}
+	
+	public SceneEmotion getScene_emotion(Node scene_emotion_node) {
+		if(scene_emotion_node == null)
+			return null;
+		
+		for(SceneEmotion sceEmo: this.scene_emotions)
+			if(sceEmo._node == scene_emotion_node)
+				return sceEmo;
+		
+		MyError.error("this SceneModel has no such a " + scene_emotion_node + " SceneEmotion.");
+		return null;
+	}
+
+	public boolean hasScene_goal(Node scene_goal_node) {
+		if(scene_goal_node == null)
+			return false;
+		
+		for(SceneGoal sceGoal: this.scene_goals)
+			if(sceGoal._node == scene_goal_node)
+				return true;	
+			return false;
+	}
+
+	public SceneGoal getScene_goal(Node scene_goal_node) {
+		if(scene_goal_node == null)
+			return null;
+		
+		for(SceneGoal sceGoal: this.scene_goals)
+			if(sceGoal._node == scene_goal_node)
+				return sceGoal;
+		
+		MyError.error("this SceneModel has no such a " + scene_goal_node + " SceneGoal.");
+		return null;
 	}
 
 }

@@ -13,7 +13,13 @@ import java.util.ArrayList;
  *
  */
 public class Role extends SceneElement{	
+		
+	private ArrayList<RoleAction> role_actions = new ArrayList<RoleAction>();
 	
+	private ArrayList<RoleGoal> role_goals = new ArrayList<RoleGoal>();
+
+	private ArrayList<RoleEmotion> role_emotions = new ArrayList<RoleEmotion>();
+
 	public Role(String _name, Node _node) {
 		super(_name, _node);
 		this.role_actions = new ArrayList<RoleAction>();
@@ -21,12 +27,7 @@ public class Role extends SceneElement{
 		this.role_emotions = new ArrayList<RoleEmotion>();
 	}
 	
-	private ArrayList<RoleAction> role_actions = new ArrayList<RoleAction>();
-	
-	private ArrayList<RoleGoal> role_goals = new ArrayList<RoleGoal>();
-
-	private ArrayList<RoleEmotion> role_emotions = new ArrayList<RoleEmotion>();
-
+		
 	public ArrayList<RoleAction> getRole_actions() {
 		return role_actions;
 	}
@@ -57,6 +58,25 @@ public class Role extends SceneElement{
 				" role_actions= " + role_actions + 
 				" role_goals= " + role_goals + 
 				" role_emotions= " + role_emotions + "]";
+	}
+	
+	/**
+	 * this method merges its caller with role.
+	 * 
+	 * @param role the role to be merged with its caller.
+	 */
+	public void mergeWith(Role role){
+		if(role == null)
+			return;
+	
+		for(RoleAction ra:role.getRole_actions())
+			this.addRole_action(ra);
+				
+		for(RoleGoal rg:role.getRole_goals())
+			this.addRole_goal(rg);
+
+		for(RoleEmotion re:role.getRole_emotions())
+			this.addRole_emotion(re);		
 	}
 
 }

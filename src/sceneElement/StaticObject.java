@@ -9,4 +9,8 @@ public class StaticObject extends SceneObject {
 		super(_name, _node);
 	}
 
+	public void mergeWith(StaticObject staObj) {
+		
+	}
+
 }

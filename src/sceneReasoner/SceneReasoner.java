@@ -8,12 +8,11 @@ import sceneElement.Role;
 import sceneElement.SceneEmotion;
 import sceneElement.SceneGoal;
 import sceneElement.StaticObject;
+import sceneElement.Time;
 import model.SceneModel;
 import model.SentenceModel;
 import model.StoryModel;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
-import ir.ac.itrc.qqa.semantic.reasoning.PlausibleAnswer;
-import ir.ac.itrc.qqa.semantic.reasoning.PlausibleQuestion;
 import ir.ac.itrc.qqa.semantic.reasoning.SemanticReasoner;
 import ir.ac.itrc.qqa.semantic.util.MyError;
 
@@ -27,14 +26,14 @@ import ir.ac.itrc.qqa.semantic.util.MyError;
  */
 public class SceneReasoner {
 	
-	private KnowledgeBase _kb;	
-	private SemanticReasoner _re;
+	//private KnowledgeBase _kb;	
+	//private SemanticReasoner _re;
 	//private TTSEngine _ttsEngine = null;
 		
 	
 	public SceneReasoner(KnowledgeBase kb, SemanticReasoner re, TTSEngine ttsEngine){
-		this._kb = kb;
-		this._re = re;
+		//this._kb = kb;
+		//this._re = re;
 		//this._ttsEngine = ttsEngine;
 	}
 	
@@ -43,58 +42,6 @@ public class SceneReasoner {
 		System.out.println(toPrint);
 	}
 	
-	public void printPlausibleAnswers(ArrayList<PlausibleAnswer> pas){
-		if (pas.size() > 0)
-		{
-			PlausibleQuestion pq = pas.get(0).question;
-			
-			if (pq != null)
-			{
-				print(pq.toString());
-				print("");
-				
-				print("---------->>>>>>>>>>>> lastPlausibleQuestion = " + pq.toString());
-			}			
-			
-		}
-		
-		int i = 0;
-		for (PlausibleAnswer pa: pas)
-		{
-			i++;
-			
-			print("");
-			print("-------------------------------");
-			print("");
-			
-			print(i + ": " + pa.toString());
-			print(pa.certaintyToString());
-			
-	//		print("---------->>>>>>>>>>>> lastPlausibleQuestion = " + pa.question.toString());
-		}
-		
-		print("");
-		print("~~~~~~~~~~~~~~~~~~~~~~~~~~");
-		print("");
-		
-		print("تعداد کل استنباط های انجام شده: " + _re.totalCalls);
-		print("زمان کل استدلال: " + _re.reasoningTime/1000 + " ثانیه");
-	}
-
-
-	
-	public ArrayList<PlausibleAnswer> testSemanticReasoner(){
-		
-		PlausibleQuestion pq = new PlausibleQuestion();
-		
-		pq.argument = _kb.findConcept("انسان");		
-		pq.descriptor = _kb.findConcept("ISA");
-		pq.referent = _kb.findConcept("");
-		
-		ArrayList<PlausibleAnswer> pas = _re.answerQuestion(pq);
-		return pas;
-		
-	}
 	
 	/**
 	 * this methods merges the sentences, roles, dynamic_objects, static_objects, scene_goals, and scene_emotions of
@@ -105,7 +52,8 @@ public class SceneReasoner {
 	public SceneModel mergeScenesOfSentences(ArrayList<SceneModel> sentencesPrimaryScenes) {
 		if(sentencesPrimaryScenes == null || sentencesPrimaryScenes.size() == 0)
 			return null;
-		SceneModel merged_primary_scene = new SceneModel();
+		
+		SceneModel merged_primary_scene = new SceneModel(sentencesPrimaryScenes.get(0).getStory());
 		
 		mergeSentences(sentencesPrimaryScenes, merged_primary_scene);
 				
@@ -113,20 +61,15 @@ public class SceneReasoner {
 		
 		mergeDynamicObjects(sentencesPrimaryScenes, merged_primary_scene);
 		
+		mergeStaticObjects(sentencesPrimaryScenes, merged_primary_scene);
+		
+		mergeSceneGoals(sentencesPrimaryScenes, merged_primary_scene);
+		
+		mergeSceneEmotions(sentencesPrimaryScenes, merged_primary_scene);
+		
 		mergeLocations(sentencesPrimaryScenes, merged_primary_scene);
 		
-			
-			
-			//------------
-//			this.sentences = new ArrayList<SentenceModel>();		
-//			this.roles = new ArrayList<Role>();
-//			this.static_objs = new ArrayList<StaticObject>();
-//			this.dynamic_objs = new ArrayList<DynamicObject>();
-//			this.scene_goals = new ArrayList<SceneGoal>();
-//			this.scene_emotions = new ArrayList<SceneEmotion>();
-		
-			//------------
-			
+		mergeTimes(sentencesPrimaryScenes, merged_primary_scene);
 		
 		return merged_primary_scene;
 	}
@@ -166,6 +109,11 @@ public class SceneReasoner {
 				
 				if(!merged_primary_scene.hasRole(role.getNode()))
 					merged_primary_scene.addRole(role);
+			
+				else{//it has this role before
+					Role beforeRole = merged_primary_scene.getRole(role.getNode());
+					beforeRole.mergeWith(role);
+				}
 		}		
 	}
 	
@@ -184,6 +132,34 @@ public class SceneReasoner {
 				
 				if(!merged_primary_scene.hasDynamic_object(dynObj.getNode()))
 					merged_primary_scene.addDynamic_object(dynObj);
+			
+				else{//it has this DynamicObject before
+					DynamicObject beforeDynObj = merged_primary_scene.getDynamic_object(dynObj.getNode());
+					beforeDynObj.mergeWith(dynObj);
+				}
+		}
+	}
+	
+	/**
+	 * this methods merges the StaticObjects of sentencesPrimaryScenes with each-other.
+	 *  
+	 * @param sentencesPrimaryScenes SceneModels of sentences which are to be merged. granted not be null!
+	 * @param merged_primary_scene SceneModel with merged StaticObjects. granted not be null!
+	 */
+	private void mergeStaticObjects(ArrayList<SceneModel> sentencesPrimaryScenes, SceneModel merged_primary_scene) {
+		
+		for(SceneModel current_scene:sentencesPrimaryScenes){
+			ArrayList<StaticObject> current_staticObjects = current_scene.getStatic_objects();
+			
+			for(StaticObject staObj:current_staticObjects)
+				
+				if(!merged_primary_scene.hasStatic_object(staObj.getNode()))
+					merged_primary_scene.addStatic_object(staObj);
+			
+				else{//it has this StaticObject before
+					StaticObject beforeStaObj = merged_primary_scene.getStatic_object(staObj.getNode());
+					beforeStaObj.mergeWith(staObj);
+				}
 		}
 	}
 	
@@ -205,12 +181,74 @@ public class SceneReasoner {
 		}
 	}
 	
-//	public void setLocation(Location location) {
-//		if(this.location != null)
-//			
-//		this.location = location;
-//	}
+	/**
+	 * this methods merges the Location of sentencesPrimaryScenes with each-other.
+	 * TODO: design a better policy!
+	 *  
+	 * @param sentencesPrimaryScenes SceneModels of sentences which are to be merged. granted not be null!
+	 * @param merged_primary_scene SceneModel with merged Location. granted not be null!
+	 */
+	private void mergeTimes(ArrayList<SceneModel> sentencesPrimaryScenes, SceneModel merged_primary_scene){
 	
+		for(SceneModel current_scene:sentencesPrimaryScenes){
+			Time current_time = current_scene.getTime();
+				
+			if(merged_primary_scene.getTime() != null)
+				MyError.error("this SceneModel previouly has a time " + merged_primary_scene.getTime());
+			merged_primary_scene.setTime(current_time);
+		}
+	}
+	
+	/**
+	 * this methods merges the SceneEmotions of sentencesPrimaryScenes with each-other.
+	 *  
+	 * @param sentencesPrimaryScenes SceneModels of sentences which are to be merged. granted not be null!
+	 * @param merged_primary_scene SceneModel with merged SceneEmotions. granted not be null!
+	 */
+	private void mergeSceneEmotions(ArrayList<SceneModel> sentencesPrimaryScenes, SceneModel merged_primary_scene) {
+		
+		for(SceneModel current_scene:sentencesPrimaryScenes){
+			ArrayList<SceneEmotion> current_scene_emotions = current_scene.getScene_emotions();
+			
+			for(SceneEmotion sceEmo:current_scene_emotions)
+				
+				if(!merged_primary_scene.hasScene_emotion(sceEmo.getNode()))
+					merged_primary_scene.addScene_emotion(sceEmo);
+			
+				else{//it has this SceneEmotion before
+					SceneEmotion beforeSceEmo = merged_primary_scene.getScene_emotion(sceEmo.getNode());
+					beforeSceEmo.mergeWith(sceEmo);
+				}
+		}
+		
+	}
+	
+	
+	/**
+	 * this methods merges the SceneGoals of sentencesPrimaryScenes with each-other.
+	 *  
+	 * @param sentencesPrimaryScenes SceneModels of sentences which are to be merged. granted not be null!
+	 * @param merged_primary_scene SceneModel with merged SceneGoals. granted not be null!
+	 */
+	private void mergeSceneGoals(ArrayList<SceneModel> sentencesPrimaryScenes, SceneModel merged_primary_scene) {
+		
+		for(SceneModel current_scene:sentencesPrimaryScenes){
+			ArrayList<SceneGoal> current_scene_goals = current_scene.getScene_goals();
+			
+			for(SceneGoal sceGoal:current_scene_goals)
+				
+				if(!merged_primary_scene.hasScene_goal(sceGoal.getNode()))
+					merged_primary_scene.addScene_goal(sceGoal);
+			
+				else{//it has this SceneGoal before
+					SceneGoal beforeSceGoal = merged_primary_scene.getScene_goal(sceGoal.getNode());
+					beforeSceGoal.mergeWith(sceGoal);
+				}
+		}
+		
+	}
+
+		
 	public void mergeScenes(StoryModel storyModel) {		
 		
 	}

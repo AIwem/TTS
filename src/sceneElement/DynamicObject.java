@@ -41,6 +41,7 @@ public class DynamicObject extends SceneObject{
 	public void addAllObject_actions(ArrayList<ObjectAction> actions) {
 		if(this.object_actions == null)
 			this.object_actions = new ArrayList<ObjectAction>();
+		
 		this.object_actions.addAll(actions);
 	}
 	
@@ -50,4 +51,17 @@ public class DynamicObject extends SceneObject{
 		return "[" + _node + "=  " + _name + 
 				" object_actions=  " + object_actions + "]";
 	}
+
+	/**
+	 * this method merges its caller with dynObj
+	 * 
+	 * @param dynObj the DynamicObject to be merged with its caller.
+	 */
+	public void mergeWith(DynamicObject dynObj) {
+		if(dynObj == null)
+			return;
+		
+		this.addAllObject_actions(dynObj.getObject_actions());
+	}
+	
 }
