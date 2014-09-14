@@ -31,8 +31,8 @@ public class SceneReasoner {
 		
 	}
 	
-	public SceneModel enrichSceneModel(SceneModel primarySceneModel){
-		return null;
+	public void enrichSceneModel(SceneModel primarySceneModel){
+		
 	}
 	
 	

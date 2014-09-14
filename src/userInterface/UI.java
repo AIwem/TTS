@@ -32,18 +32,17 @@ public class UI {
 	 * main cycle of reading input sentences from user input file, and giving sentence to TTSEngine,
 	 * and showing its output to the user.
 	 */
-	public SceneModel TTS(){
+	public StoryModel TTS(){
 		
 		//It must read sentence from user input.
 		//temporarily it reads all input story from file instead of getting from user!
 		ArrayList<String> inputs = importInputTexts(inputStoryFilePath);
 
 		ArrayList<String> current_scene_lines = new ArrayList<String>();
-		SceneModel richedSceneModel = null;
-		int story_num = 0;
 		
+		int story_num = 0;		
 		StoryModel storyModel = new StoryModel("story"+story_num);
-		
+		SceneModel richedSceneModel = null;
 		
 		for(String line:inputs){
 			
@@ -53,24 +52,24 @@ public class UI {
 			}
 			else if(line.equals("«صحنه جدید»")){
 				
-				//Then give the sentence to TTSEngine to enrich. 
+				//Then give the sentences of a scene to TTSEngine to enrich. 
 			 	richedSceneModel = tts.TextToScene(current_scene_lines, storyModel);
+			 	print("\nOuput SceneModel\n");	
+			 	print("" + richedSceneModel);
 				
 				current_scene_lines = new ArrayList<String>();
 				continue;
 			}			
-			current_scene_lines.add(line);
+			current_scene_lines.add(line);			
 		}
-		return richedSceneModel;
-//		return s;
-//			nodes = tts.TextToScene(line, command);
-//			
-//			//Then shows this enriched SceneModel to the user which contains enriched information about input sentence.
-//			if (enrichedScene!= null)
-//				print(enrichedScene.toString());			
-//		}
-//		System.out.println("" + nodes);
+		//sentences of the last scene will be sent to TTSEngine to enrich. 
+	 	richedSceneModel = tts.TextToScene(current_scene_lines, storyModel);	 	
+	 	print("\nOuput SceneModel\n");	
+	 	print("" + richedSceneModel);
+	 	
+	 	return storyModel;
 	}
+
 	
 	public ArrayList<String> importInputTexts(String filename)
 	{
@@ -129,7 +128,7 @@ public class UI {
 		System.out.println("بسم الله الرحمن الرحیم و توکلت علی الله");
 	
 		UI ui = new UI();
-		SceneModel psm = ui.TTS();
+		StoryModel sm = ui.TTS();
 		
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~");
 		//ui.tts.checkSemanticReasoner1(psm.getRoles().get(0)._node, psm.getRoles().get(0).getRole_actions().get(0)._node);

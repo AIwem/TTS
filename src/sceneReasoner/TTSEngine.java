@@ -33,7 +33,7 @@ public class TTSEngine {
 	private String myKbFilePath;
 	
 	private Preprocessor _pp;
-	//private SceneReasoner _sr;
+	private SceneReasoner _sr;
 	
 	public TTSEngine(String mainKbFilePath, String myKbFilePath){
 		this.mainKbFilePath = mainKbFilePath;
@@ -47,7 +47,7 @@ public class TTSEngine {
 		loadKb();
 		
 		_pp = new Preprocessor(_TTSKb, _re);
-		//_sr = new SceneReasoner(_TTSKb);
+		_sr = new SceneReasoner(_TTSKb);
 	}
 	
 	/**
@@ -66,8 +66,7 @@ public class TTSEngine {
 			MyError.error("bad inputs!");
 			return null;
 		}
-			
-		
+					
 		if(!isKbInitialized)
 			loadKb();
 		
@@ -86,7 +85,7 @@ public class TTSEngine {
 							
 			System.out.println("sentenceModel after preprocess: \n" + sen + "\n\n");		
 						
-			//SceneModel richSM = _sr.enrichSceneModel(primarySM);
+			_sr.enrichSceneModel(primarySceneModel);
 		}
 		return primarySceneModel;
 	}
@@ -184,13 +183,6 @@ public void checkSemanticReasoner2(Node argument)	{
 		isKbInitialized = true;
 				
 		return loaded;
-	}
+	}	
 	
-	
-	/*
-	public static void main(String[] args) {
-		TTSEngine tts = new TTSEngine();
-		tts.checkSemanticReasoner();
-	}
-	*/
 }
