@@ -33,6 +33,8 @@ public class Preprocessor {
 	
 	private KnowledgeBase _kb;
 	//private SemanticReasoner _re;
+	private TTSEngine _ttsEngine = null;
+	
 	
 	/**
 	 * We have no NLP module to process input text and convert it to related part,
@@ -42,9 +44,12 @@ public class Preprocessor {
 	//private String SentenceInfosFileName = "inputStory/sentenceInfos_SS.txt";
 	private String SentenceInfosFileName = "inputStory/sentenceInfos3.txt";
 		
-	public Preprocessor(KnowledgeBase kb, SemanticReasoner re) {
+	
+	
+	public Preprocessor(KnowledgeBase kb, SemanticReasoner re, TTSEngine ttsEngine) {
 		this._kb = kb;
 		//this._re = re;
+		this._ttsEngine = ttsEngine;
 	}		
 	
 	/**
@@ -263,11 +268,11 @@ public class Preprocessor {
 		
 		preprocessAdverb(sentenceModel, primarySceneModel);
 		print("\n before verb");
-		primarySceneModel.getStory().printDictionary();
+		_ttsEngine.printDictionary();
 		
 		preprocessVerb(sentenceModel, primarySceneModel);
 		print("\n after verb");
-		primarySceneModel.getStory().printDictionary();
+		_ttsEngine.printDictionary();
 		
 		print("primarySceneModel\n" + primarySceneModel);
 	}	
@@ -279,10 +284,10 @@ public class Preprocessor {
 	 * if part's wsd_name has more than one part which includes one MAIN and probably a PRE or POST, so it must be mapped to a plausible statement in a _kb.
 	 * 
 	 * @param part the part its wsd parameter to be set.
-	 * @param sceneModel the sceneModel which part belongs to.
+	 * @param _ttsEngine the sceneModel which part belongs to.
 	 */
-	private void allocate_wsd(SentencePart part, SceneModel sceneModel){
-		if(part == null || sceneModel == null)
+	private void allocate_wsd(SentencePart part){
+		if(part == null || _ttsEngine == null)
 			return;
 			
 		String wsd_name = part._wsd_name;
@@ -313,25 +318,25 @@ public class Preprocessor {
 				switch(node_pos){
 				case("MAIN"):
 					main_sub_part = part.getMainSub_part();					
-					argument = sceneModel.findorCreateInstance(main_sub_part._wsd_name, false);
+					argument = _ttsEngine.findorCreateInstance(main_sub_part._wsd_name, false);
 					main_sub_part.set_wsd(argument);
 					break;					
 				case("PRE"):
 					pre_sub_part = part.getPreSub_part();
-					Node pre = sceneModel.findorCreateInstance(pre_sub_part._wsd_name, false);
+					Node pre = _ttsEngine.findorCreateInstance(pre_sub_part._wsd_name, false);
 					pre_sub_part.set_wsd(pre);				
 					//TODO: to complete the "PRE" DEP  
 					MyError.error("I don't know what to do with this PRE DEP sub_part " + pre_sub_part);
 					break;
 				case("POST"):										
 					post_sub_part = part.getPostSub_part();
-					referent = sceneModel.findorCreateInstance(post_sub_part._wsd_name, false);
+					referent = _ttsEngine.findorCreateInstance(post_sub_part._wsd_name, false);
 					post_sub_part.set_wsd(referent);
 					break;
 				//node_pos is a descriptor_name.
 				default:
 					relation_name = node_pos;
-					wsd = sceneModel.findRelationInstance(relation_name);
+					wsd = _ttsEngine.findRelationInstance(relation_name);
 					if(wsd == null){
 						//it must got directly fetched from kb, and then addRelation will clone it.
 						descriptor = _kb.addConcept(relation_name);
@@ -341,7 +346,7 @@ public class Preprocessor {
 			
 			if(descriptor != null){//it means that findRelation has not found it and it is newly fetched from kb.
 				wsd = _kb.addRelation(argument, referent, descriptor, SourceType.TTS);				
-				sceneModel.addRelationInstance(descriptor.getName(), wsd);
+				_ttsEngine.addRelationInstance(descriptor.getName(), wsd);
 			}
 			else{//it means that findRelation has found this relation.
 				
@@ -349,7 +354,7 @@ public class Preprocessor {
 				if(wsd.argument != argument || wsd.referent != referent){
 					descriptor = _kb.addConcept(relation_name);
 					wsd = _kb.addRelation(argument, referent, descriptor, SourceType.TTS);					
-					sceneModel.addRelationInstance(relation_name, wsd);					
+					_ttsEngine.addRelationInstance(relation_name, wsd);					
 				}
 			}
 			part.set_wsd(main_sub_part._wsd);
@@ -357,13 +362,13 @@ public class Preprocessor {
 		}
 		else{
 			//it means this part wsd_name is just one concept name, so we find or add it in sceneModel.			
-			Node wsd = sceneModel.findorCreateInstance(wsd_name, false);
+			Node wsd = _ttsEngine.findorCreateInstance(wsd_name, false);
 			part.set_wsd(wsd);
 		}
 		if(part.hasSub_parts())
 			for(SentencePart p:part.sub_parts)
 				if(p._wsd == null){																				
-					Node wsd = sceneModel.findorCreateInstance(p._wsd_name, false);
+					Node wsd = _ttsEngine.findorCreateInstance(p._wsd_name, false);
 					p.set_wsd(wsd);
 				}
 	}
@@ -380,7 +385,7 @@ public class Preprocessor {
 		if(part == null)
 			return;
 		
-		ScenePart sp = primarySceneModel.whichScenePart(part._wsd);				
+		ScenePart sp = _ttsEngine.whichScenePart(part._wsd);				
 		
 		if(sp == ScenePart.ROLE){
 			if(!primarySceneModel.hasRole(part._wsd)){				
@@ -415,7 +420,7 @@ public class Preprocessor {
 		}
 		
 		//_wsd of sbj is set to proper Node of KB.
-		allocate_wsd(sbj, primarySceneModel);	
+		allocate_wsd(sbj);	
 		
 		if(sbj._wsd != null)
 			addToPrimarySceneModel(sbj, primarySceneModel);			
@@ -434,7 +439,7 @@ public class Preprocessor {
 			else if(obj != null && obj.isObject()){
 			
 			//_wsd of obj is set to proper Node of KB.
-			allocate_wsd(obj, primarySceneModel);
+			allocate_wsd(obj);
 			
 			if(obj._wsd != null)			
 				addToPrimarySceneModel(obj, primarySceneModel);
@@ -454,7 +459,7 @@ public class Preprocessor {
 		else if(adv != null && adv.isAdverb()){
 			
 			//_wsd of adv is set to proper Node of KB.
-			allocate_wsd(adv, primarySceneModel);
+			allocate_wsd(adv);
 			
 			if(adv._wsd != null)			
 				addToPrimarySceneModel(adv, primarySceneModel);
@@ -484,7 +489,7 @@ public class Preprocessor {
 		}		
 			
 		//_wsd of verb is set to proper Node of KB.
-		allocate_wsd(verb, primarySceneModel);
+		allocate_wsd(verb);
 		
 		if(verb._wsd != null){
 			
@@ -495,7 +500,7 @@ public class Preprocessor {
 				return;
 			}
 				
-			ScenePart sbjSp = primarySceneModel.whichScenePart(sbj._wsd);
+			ScenePart sbjSp = _ttsEngine.whichScenePart(sbj._wsd);
 			if(sbjSp == null || sbjSp == ScenePart.UNKNOWN){
 				MyError.error(sbj + " subject of sentence has no ScenePart " + sentenceModel);
 				return;
