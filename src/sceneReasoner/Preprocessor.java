@@ -31,7 +31,7 @@ import model.SentenceModel;
 public class Preprocessor {
 	
 	private KnowledgeBase _kb;
-//	private SemanticReasoner _re;
+	//private SemanticReasoner _re;
 	
 	/**
 	 * We have no NLP module to process input text and convert it to related part,
@@ -43,7 +43,7 @@ public class Preprocessor {
 		
 	public Preprocessor(KnowledgeBase kb, SemanticReasoner re) {
 		this._kb = kb;
-	//	this._re = re;
+		//this._re = re;
 	}		
 	
 	/**
@@ -235,24 +235,21 @@ public class Preprocessor {
 	
 	
 	/**
-	 * preprocessScene preprocesses input SentenceModel and adds it to the primarySceneModel.
+	 * preprocessScene preprocesses input sentenceModel and converts it to the primarySceneModel.
 	 * TODO: we have temporarily assumed that every sentence has single subject, single object (if any), and single adverb (if any).   
 	 * 
-	 * @param sentenceModel the SenetenceModel to be converted.
-	 * @param primarySceneModel the primary SceneModel which information of sentenceModel is to be added.
-	 * @return SceneModel equivalent to input SentenceModel 
+	 * @param sentenceModel the SenetenceModel to be converted. 
+	 * @param primarySceneModel 
+	 * @return SceneModel equivalent to input sentenceModel. 
 	 */	 
-	public void preprocessScene(SentenceModel sentenceModel, SceneModel primarySceneModel){
+	public void preprocessScene(SentenceModel sentenceModel, SceneModel primarySceneModel){		
+		
+		primarySceneModel.addSentence(sentenceModel);
 		
 		if(sentenceModel == null){
 			MyError.error("senetecenModel should not be null! " + sentenceModel);
-			return;		
-		}		
-		if(primarySceneModel == null){
-			MyError.error("primarySceneModel should not be null! " + primarySceneModel);
-			return;		
+			return;
 		}
-		primarySceneModel.addSentence(sentenceModel);
 		
 		preprocessSubject(sentenceModel, primarySceneModel);		
 				
@@ -266,8 +263,7 @@ public class Preprocessor {
 		print("\n after verb");
 		primarySceneModel.printDictionary();
 		
-		print("primarySceneModel\n" + primarySceneModel);	
-		
+		print("primarySceneModel\n" + primarySceneModel);
 	}	
 
 	/**

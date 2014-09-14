@@ -21,7 +21,11 @@ public class StoryModel {
 	public ArrayList<SceneModel> getScenes() {
 		return scenes;
 	}
-	
+	/**
+	 * adding input scene to this storyModel.
+	 *  it sets the storyModel parameter of input sceneModel too.
+	 * @param scene the input scene to be added to this storyModel.
+	 */
 	public void addScene(SceneModel scene) {
 		if(scene == null){
 			MyError.error("the Scene of a stroy can not be null " + scene);
@@ -31,6 +35,7 @@ public class StoryModel {
 			this.scenes = new ArrayList<SceneModel>();
 		
 		this.scenes.add(scene);
+		scene.setStory(this);
 	}	
 	
 }

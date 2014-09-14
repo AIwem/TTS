@@ -6,10 +6,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-
-
-
-import model.SceneModel;
 import model.StoryModel;
 import sceneReasoner.TTSEngine;
 
@@ -41,8 +37,7 @@ public class UI {
 		ArrayList<String> current_scene_lines = new ArrayList<String>();
 		
 		int story_num = 0;		
-		StoryModel storyModel = new StoryModel("story"+story_num);
-		SceneModel richedSceneModel = null;
+		StoryModel storyModel = new StoryModel("story"+story_num);		
 		
 		for(String line:inputs){
 			
@@ -53,9 +48,7 @@ public class UI {
 			else if(line.equals("«صحنه جدید»")){
 				
 				//Then give the sentences of a scene to TTSEngine to enrich. 
-			 	richedSceneModel = tts.TextToScene(current_scene_lines, storyModel);
-			 	print("\nOuput SceneModel\n");	
-			 	print("" + richedSceneModel);
+			 	tts.TextToScene(current_scene_lines, storyModel, false);		 	
 				
 				current_scene_lines = new ArrayList<String>();
 				continue;
@@ -63,9 +56,7 @@ public class UI {
 			current_scene_lines.add(line);			
 		}
 		//sentences of the last scene will be sent to TTSEngine to enrich. 
-	 	richedSceneModel = tts.TextToScene(current_scene_lines, storyModel);	 	
-	 	print("\nOuput SceneModel\n");	
-	 	print("" + richedSceneModel);
+	 	tts.TextToScene(current_scene_lines, storyModel, true);	 	
 	 	
 	 	return storyModel;
 	}

@@ -62,10 +62,9 @@ public class SceneModel {
 	private ArrayList<SceneEmotion> scene_emotions = new ArrayList<SceneEmotion>();
 	
 		
-	public SceneModel(KnowledgeBase _kb, SemanticReasoner _re, StoryModel storyModel) {		
+	public SceneModel(KnowledgeBase _kb, SemanticReasoner _re) {		
 		this._kb = _kb;
-		this._re = _re;
-		this.storyModel = storyModel;
+		this._re = _re;		
 				
 		this.sentences = new ArrayList<SentenceModel>();
 		this.scene_nodes_dic = new Hashtable<String, ArrayList<Node>>();
@@ -78,10 +77,8 @@ public class SceneModel {
 		this.scene_emotions = new ArrayList<SceneEmotion>();
 	
 	}
-	
-	
-	
-	
+		
+		
 	public StoryModel getStory() {
 		return storyModel;
 	}
@@ -106,8 +103,10 @@ public class SceneModel {
 		if(this.sentences == null)
 			this.sentences = new ArrayList<SentenceModel>();
 		
-		if(sentence != null)
+		if(sentence != null){
 			this.sentences.add(sentence);
+			sentence.setScene(this);
+		}
 	}
 
 	public ArrayList<Role> getRoles() {

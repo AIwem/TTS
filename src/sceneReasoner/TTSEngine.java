@@ -61,19 +61,18 @@ public class TTSEngine {
 	 * @param storyModel the stroyModel which this scene belongs to. 
 	 * @return 
 	 */
-	public SceneModel TextToScene(ArrayList<String> scene_inputNL, StoryModel storyModel){
+	public void TextToScene(ArrayList<String> scene_inputNL, StoryModel storyModel, boolean isLastScene){
 		if(scene_inputNL == null || scene_inputNL.size() == 0 || storyModel == null){
 			MyError.error("bad inputs!");
-			return null;
+			return;
 		}
 					
 		if(!isKbInitialized)
 			loadKb();
 		
-		SceneModel primarySceneModel = new SceneModel(_TTSKb, _re, storyModel);
+		//-------------- converting natural language sentences of a scene to their equivalent currentPrimaryScene ------
 		
-		storyModel.addScene(primarySceneModel);
-		
+		SceneModel currentPrimaryScene = new SceneModel(_TTSKb, _re);
 				
 		for(String NLsentence:scene_inputNL){
 			
@@ -81,13 +80,23 @@ public class TTSEngine {
 			
 			SentenceModel sen = _pp.preprocessSentence(NLsentence);
 			 
-			_pp.preprocessScene(sen, primarySceneModel);
+			_pp.preprocessScene(sen, currentPrimaryScene);
 							
-			System.out.println("sentenceModel after preprocess: \n" + sen + "\n\n");		
-						
-			_sr.enrichSceneModel(primarySceneModel);
+			System.out.println("sentenceModel after preprocess: \n" + sen + "\n\n");			
 		}
-		return primarySceneModel;
+		
+		//-------------- adding primarySceneModel of the current scene to the stroyModel ------------------------------------
+		storyModel.addScene(currentPrimaryScene);
+		
+		
+		if(isLastScene){//the last scene of story
+			
+			//-------------- merging primarySceneModels of different scenes previously added to storyModel ------------------
+			_sr.mergeScenes(storyModel);
+			
+			//-------------- enriching primarySceneModels of different scenes previously added to storyModel ----------------
+			_sr.enrichSceneModel(storyModel);
+		}
 	}
 		
 	public void checkSemanticReasoner1(Node argument, Node descriptor)	{

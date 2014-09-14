@@ -3,6 +3,7 @@ package sceneReasoner;
 import java.util.ArrayList;
 
 import model.SceneModel;
+import model.StoryModel;
 import ir.ac.itrc.qqa.semantic.enums.ExecutionMode;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleAnswer;
@@ -31,53 +32,48 @@ public class SceneReasoner {
 		
 	}
 	
-	public void enrichSceneModel(SceneModel primarySceneModel){
-		
+	
+	public void print(String toPrint){
+		System.out.println(toPrint);
 	}
 	
-	
-	
-public void print(String toPrint){
-	System.out.println(toPrint);
-}
-
-public void printPlausibleAnswers(ArrayList<PlausibleAnswer> pas){
-	if (pas.size() > 0)
-	{
-		PlausibleQuestion pq = pas.get(0).question;
-		
-		if (pq != null)
+	public void printPlausibleAnswers(ArrayList<PlausibleAnswer> pas){
+		if (pas.size() > 0)
 		{
-			print(pq.toString());
+			PlausibleQuestion pq = pas.get(0).question;
+			
+			if (pq != null)
+			{
+				print(pq.toString());
+				print("");
+				
+				print("---------->>>>>>>>>>>> lastPlausibleQuestion = " + pq.toString());
+			}			
+			
+		}
+		
+		int i = 0;
+		for (PlausibleAnswer pa: pas)
+		{
+			i++;
+			
+			print("");
+			print("-------------------------------");
 			print("");
 			
-			print("---------->>>>>>>>>>>> lastPlausibleQuestion = " + pq.toString());
-		}			
-		
-	}
-	
-	int i = 0;
-	for (PlausibleAnswer pa: pas)
-	{
-		i++;
+			print(i + ": " + pa.toString());
+			print(pa.certaintyToString());
+			
+	//		print("---------->>>>>>>>>>>> lastPlausibleQuestion = " + pa.question.toString());
+		}
 		
 		print("");
-		print("-------------------------------");
+		print("~~~~~~~~~~~~~~~~~~~~~~~~~~");
 		print("");
 		
-		print(i + ": " + pa.toString());
-		print(pa.certaintyToString());
-		
-//		print("---------->>>>>>>>>>>> lastPlausibleQuestion = " + pa.question.toString());
+		print("تعداد کل استنباط های انجام شده: " + _re.totalCalls);
+		print("زمان کل استدلال: " + _re.reasoningTime/1000 + " ثانیه");
 	}
-	
-	print("");
-	print("~~~~~~~~~~~~~~~~~~~~~~~~~~");
-	print("");
-	
-	print("تعداد کل استنباط های انجام شده: " + _re.totalCalls);
-	print("زمان کل استدلال: " + _re.reasoningTime/1000 + " ثانیه");
-}
 
 
 	
@@ -91,6 +87,19 @@ public void printPlausibleAnswers(ArrayList<PlausibleAnswer> pas){
 		
 		ArrayList<PlausibleAnswer> pas = _re.answerQuestion(pq);
 		return pas;
+		
+	}
+	
+	public SceneModel mergeScenesOfSentences(ArrayList<SceneModel> primaryScenes) {
+		return null;		
+	}
+
+	public void mergeScenes(StoryModel storyModel) {		
+		
+	}
+
+	public void enrichSceneModel(StoryModel storyModel) {
+	
 		
 	}
 }
