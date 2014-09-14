@@ -2,13 +2,20 @@ package sceneReasoner;
 
 import java.util.ArrayList;
 
+import sceneElement.DynamicObject;
+import sceneElement.Location;
+import sceneElement.Role;
+import sceneElement.SceneEmotion;
+import sceneElement.SceneGoal;
+import sceneElement.StaticObject;
 import model.SceneModel;
+import model.SentenceModel;
 import model.StoryModel;
-import ir.ac.itrc.qqa.semantic.enums.ExecutionMode;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleAnswer;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleQuestion;
 import ir.ac.itrc.qqa.semantic.reasoning.SemanticReasoner;
+import ir.ac.itrc.qqa.semantic.util.MyError;
 
 /**
  * SceneReasoner is a reasoning engine which reasons information of scenes based on 
@@ -22,14 +29,13 @@ public class SceneReasoner {
 	
 	private KnowledgeBase _kb;	
 	private SemanticReasoner _re;
+	//private TTSEngine _ttsEngine = null;
 		
 	
-	public SceneReasoner(KnowledgeBase kb){
+	public SceneReasoner(KnowledgeBase kb, SemanticReasoner re, TTSEngine ttsEngine){
 		this._kb = kb;
-		_re = new SemanticReasoner(_kb, ExecutionMode.RELEASE);
-		_re.setMaxReasoningDepth(10);
-		_re.setMaximumAnswers(10);
-		
+		this._re = re;
+		//this._ttsEngine = ttsEngine;
 	}
 	
 	
@@ -90,10 +96,121 @@ public class SceneReasoner {
 		
 	}
 	
-	public SceneModel mergeScenesOfSentences(ArrayList<SceneModel> primaryScenes) {
-		return null;		
+	/**
+	 * this methods merges the sentences, roles, dynamic_objects, static_objects, scene_goals, and scene_emotions of
+	 * SceneModel of each sentences with each-other.  
+	 * @param sentencesPrimaryScenes SceneModels of sentences which are to be merged.
+	 * @return
+	 */
+	public SceneModel mergeScenesOfSentences(ArrayList<SceneModel> sentencesPrimaryScenes) {
+		if(sentencesPrimaryScenes == null || sentencesPrimaryScenes.size() == 0)
+			return null;
+		SceneModel merged_primary_scene = new SceneModel();
+		
+		mergeSentences(sentencesPrimaryScenes, merged_primary_scene);
+				
+		mergeRoles(sentencesPrimaryScenes, merged_primary_scene);
+		
+		mergeDynamicObjects(sentencesPrimaryScenes, merged_primary_scene);
+		
+		mergeLocations(sentencesPrimaryScenes, merged_primary_scene);
+		
+			
+			
+			//------------
+//			this.sentences = new ArrayList<SentenceModel>();		
+//			this.roles = new ArrayList<Role>();
+//			this.static_objs = new ArrayList<StaticObject>();
+//			this.dynamic_objs = new ArrayList<DynamicObject>();
+//			this.scene_goals = new ArrayList<SceneGoal>();
+//			this.scene_emotions = new ArrayList<SceneEmotion>();
+		
+			//------------
+			
+		
+		return merged_primary_scene;
 	}
-
+	
+	/**
+	 * this methods merges the Sentences of sentencesPrimaryScenes with each-other.
+	 *  
+	 * @param sentencesPrimaryScenes SceneModels of sentences which are to be merged. granted not be null!
+	 * @param merged_primary_scene SceneModel with merged roles. granted not be null!
+	 */
+	private void mergeSentences(ArrayList<SceneModel> sentencesPrimaryScenes, SceneModel merged_primary_scene){
+	
+		for(SceneModel current_sentence:sentencesPrimaryScenes){
+			
+			ArrayList<SentenceModel> current_sentences = current_sentence.getSentences();
+			
+			for(SentenceModel sentence:current_sentences)
+				
+				if(!merged_primary_scene.hasSentence(sentence))
+					merged_primary_scene.addSentence(sentence);
+		}		
+	}
+	
+	/**
+	 * this methods merges the roles of sentencesPrimaryScenes with each-other.
+	 *  
+	 * @param sentencesPrimaryScenes SceneModels of sentences which are to be merged. granted not be null!
+	 * @param merged_primary_scene SceneModel with merged roles. granted not be null!
+	 */
+	private void mergeRoles(ArrayList<SceneModel> sentencesPrimaryScenes, SceneModel merged_primary_scene){
+	
+		for(SceneModel current_scene:sentencesPrimaryScenes){
+			
+			ArrayList<Role> current_roles = current_scene.getRoles();
+			
+			for(Role role:current_roles)
+				
+				if(!merged_primary_scene.hasRole(role.getNode()))
+					merged_primary_scene.addRole(role);
+		}		
+	}
+	
+	/**
+	 * this methods merges the DynamicObjects of sentencesPrimaryScenes with each-other.
+	 *  
+	 * @param sentencesPrimaryScenes SceneModels of sentences which are to be merged. granted not be null!
+	 * @param merged_primary_scene SceneModel with merged DynamicObjects. granted not be null!
+	 */
+	private void mergeDynamicObjects(ArrayList<SceneModel> sentencesPrimaryScenes, SceneModel merged_primary_scene){
+	
+		for(SceneModel current_scene:sentencesPrimaryScenes){
+			ArrayList<DynamicObject> current_dynamicObjects = current_scene.getDynamic_objects();
+			
+			for(DynamicObject dynObj:current_dynamicObjects)
+				
+				if(!merged_primary_scene.hasDynamic_object(dynObj.getNode()))
+					merged_primary_scene.addDynamic_object(dynObj);
+		}
+	}
+	
+	/**
+	 * this methods merges the Location of sentencesPrimaryScenes with each-other.
+	 * TODO: design a better policy!
+	 *  
+	 * @param sentencesPrimaryScenes SceneModels of sentences which are to be merged. granted not be null!
+	 * @param merged_primary_scene SceneModel with merged Location. granted not be null!
+	 */
+	private void mergeLocations(ArrayList<SceneModel> sentencesPrimaryScenes, SceneModel merged_primary_scene){
+	
+		for(SceneModel current_scene:sentencesPrimaryScenes){
+			Location current_location = current_scene.getLocation();
+				
+			if(merged_primary_scene.getLocation() != null)
+				MyError.error("this SceneModel previouly has a location " + merged_primary_scene.getLocation());
+			merged_primary_scene.setLocation(current_location);
+		}
+	}
+	
+//	public void setLocation(Location location) {
+//		if(this.location != null)
+//			
+//		this.location = location;
+//	}
+	
 	public void mergeScenes(StoryModel storyModel) {		
 		
 	}

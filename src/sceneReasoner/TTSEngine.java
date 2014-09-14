@@ -68,7 +68,7 @@ public class TTSEngine {
 		loadKb();
 		
 		_pp = new Preprocessor(_TTSKb, _re, this);
-		_sr = new SceneReasoner(_TTSKb);
+		_sr = new SceneReasoner(_TTSKb, _re, this);
 	}
 	
 	/**
@@ -83,6 +83,7 @@ public class TTSEngine {
 	 * @return 
 	 */
 	public void TextToScene(ArrayList<String> scene_inputNL, StoryModel storyModel, boolean isLastScene){
+		
 		if(scene_inputNL == null || scene_inputNL.size() == 0 || storyModel == null){
 			MyError.error("bad inputs!");
 			return;
@@ -91,28 +92,30 @@ public class TTSEngine {
 		if(!isKbInitialized)
 			loadKb();
 		
+		//-------------- converting natural language sentences of a scene to their equivalent sentencs_scenes SceneModel ------
+		ArrayList<SceneModel> sentencs_scenes = new ArrayList<SceneModel>();
+		
+		for(String NLsentence:scene_inputNL){
 			
-		SceneModel currentPrimaryScene = new SceneModel();
+			print("natural sentence: " + NLsentence);
+			
+			SentenceModel sentence = _pp.preprocessSentence(NLsentence);
+			
+			SceneModel cur_sen_scene = _pp.preprocessScene(sentence);
+			if(cur_sen_scene != null)
+				sentencs_scenes.add(cur_sen_scene);
+							
+			System.out.println("sentenceModel after preprocess: \n" + sentence + "\n\n");			
+		}
+		
+		//-------------- merging primary SceneModels of each sentences of this scene ----------------------------------------
+		SceneModel currentPrimaryScene = _sr.mergeScenesOfSentences(sentencs_scenes);
 		
 		//-------------- adding primarySceneModel of the current scene to the stroyModel ------------------------------------
 		storyModel.addScene(currentPrimaryScene);
 		currentPrimaryScene.setStory(storyModel);
 		
-		//-------------- converting natural language sentences of a scene to their equivalent currentPrimaryScene ------
-		for(String NLsentence:scene_inputNL){
-			
-			print("natural sentence: " + NLsentence);
-			
-			SentenceModel sen = _pp.preprocessSentence(NLsentence);
-			 
-			// currentPrimaryScene story is set!
-			_pp.preprocessScene(sen, currentPrimaryScene);
-							
-			System.out.println("sentenceModel after preprocess: \n" + sen + "\n\n");			
-		}
-		
-		
-		
+		print("merged primary SceneModel\n" + currentPrimaryScene);
 		
 		if(isLastScene){//the last scene of story
 			

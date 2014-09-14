@@ -27,9 +27,9 @@ public class SceneModel {
 			
 	private ArrayList<Role> roles = new ArrayList<Role>();	
 	
-	private ArrayList<StaticObject> static_objs = new ArrayList<StaticObject>();
+	private ArrayList<StaticObject> static_objects = new ArrayList<StaticObject>();
 	
-	private ArrayList<DynamicObject> dynamic_objs = new ArrayList<DynamicObject>();
+	private ArrayList<DynamicObject> dynamic_objescts = new ArrayList<DynamicObject>();
 	
 	private Location location;
 	
@@ -43,8 +43,8 @@ public class SceneModel {
 	public SceneModel() {
 		this.sentences = new ArrayList<SentenceModel>();		
 		this.roles = new ArrayList<Role>();
-		this.static_objs = new ArrayList<StaticObject>();
-		this.dynamic_objs = new ArrayList<DynamicObject>();
+		this.static_objects = new ArrayList<StaticObject>();
+		this.dynamic_objescts = new ArrayList<DynamicObject>();
 		this.scene_goals = new ArrayList<SceneGoal>();
 		this.scene_emotions = new ArrayList<SceneEmotion>();
 	
@@ -100,51 +100,49 @@ public class SceneModel {
 	}
 
 	public ArrayList<StaticObject> getStatic_objects() {
-		return static_objs;
+		return static_objects;
 	}
 	
 	public void addAllStatic_bjects(ArrayList<StaticObject> static_objects) {
-		if(this.static_objs == null)
-			this.static_objs = new ArrayList<StaticObject>();
+		if(this.static_objects == null)
+			this.static_objects = new ArrayList<StaticObject>();
 		
 		if(static_objects != null && static_objects.size()>0)
-			this.static_objs.addAll(static_objects);
+			this.static_objects.addAll(static_objects);
 	}
 	
 	public void addStatic_object(StaticObject static_object) {
-		if(this.static_objs == null)
-			this.static_objs = new ArrayList<StaticObject>();
+		if(this.static_objects == null)
+			this.static_objects = new ArrayList<StaticObject>();
 		
 		if(static_object != null)
-			this.static_objs.add(static_object);
+			this.static_objects.add(static_object);
 	}
 
 	public ArrayList<DynamicObject> getDynamic_objects() {
-		return dynamic_objs;
+		return dynamic_objescts;
 	}
 
 	public void addAllDynamic_objects(ArrayList<DynamicObject> dynamic_objects) {
-		if(this.dynamic_objs == null)
-			this.dynamic_objs = new ArrayList<DynamicObject>();
+		if(this.dynamic_objescts == null)
+			this.dynamic_objescts = new ArrayList<DynamicObject>();
 		
 		if(dynamic_objects != null && dynamic_objects.size()>0)
-			this.dynamic_objs.addAll(dynamic_objects);
+			this.dynamic_objescts.addAll(dynamic_objects);
 	}
 	
 	public void addDynamic_object(DynamicObject dynamic_object) {
-		if(this.dynamic_objs == null)
-			this.dynamic_objs = new ArrayList<DynamicObject>();
+		if(this.dynamic_objescts == null)
+			this.dynamic_objescts = new ArrayList<DynamicObject>();
 		
 		if(dynamic_object != null)
-			this.dynamic_objs.add(dynamic_object);
+			this.dynamic_objescts.add(dynamic_object);
 	}
 	public Location getLocation() {
 		return location;
 	}
 
-	public void setLocation(Location location) {
-		if(this.location != null)
-			MyError.error("this SceneModel previouly has a location " + this.location);
+	public void setLocation(Location location) {		
 		this.location = location;
 	}
 
@@ -210,11 +208,11 @@ public class SceneModel {
 			st += "\n" + r;
 		
 		st+= "\ndynamic_objs= ";
-		for(DynamicObject dOb:this.dynamic_objs)
+		for(DynamicObject dOb:this.dynamic_objescts)
 			st += "\n" + dOb;
 		
 		st += "\nstatic_objs= ";
-		for(StaticObject stOb:this.static_objs)
+		for(StaticObject stOb:this.static_objects)
 			st += "\n" + stOb;
 		
 		st += "\nlocation= " + location + 
@@ -255,7 +253,7 @@ public class SceneModel {
 		if(dynamin_object_node == null)
 			return null;
 		
-		for(DynamicObject dynObj: this.dynamic_objs)
+		for(DynamicObject dynObj: this.dynamic_objescts)
 			if(dynObj._node == dynamin_object_node)
 				return dynObj;
 		
@@ -267,7 +265,7 @@ public class SceneModel {
 		if(dynamin_object_node == null)
 			return false;
 		
-		for(DynamicObject dynObj: this.dynamic_objs)
+		for(DynamicObject dynObj: this.dynamic_objescts)
 			if(dynObj._node == dynamin_object_node)
 				return true;
 		return false;
@@ -277,7 +275,7 @@ public class SceneModel {
 		if(static_object_node == null)
 			return null;
 		
-		for(StaticObject staObj: this.static_objs)
+		for(StaticObject staObj: this.static_objects)
 			if(staObj._node == static_object_node)
 				return staObj;
 		
@@ -289,16 +287,19 @@ public class SceneModel {
 		if(static_object_node == null)
 			return false;
 		
-		for(StaticObject staObj: this.static_objs)
+		for(StaticObject staObj: this.static_objects)
 			if(staObj._node == static_object_node)
 				return true;
 		return false;
 	}
 
 
-
-
+	public boolean hasSentence(SentenceModel sentence) {
+		// TODO Auto-generated method stub
+		return false;
 	}
+
+}
 			
 		
 	

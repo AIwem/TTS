@@ -248,17 +248,18 @@ public class Preprocessor {
 	 * @param primarySceneModel the primarySceneModel which this sentenceModel is to be added after converting.
 	 * @return SceneModel equivalent to input sentenceModel. 
 	 */	 
-	public void preprocessScene(SentenceModel sentenceModel, SceneModel primarySceneModel){		
+	public SceneModel preprocessScene(SentenceModel sentenceModel){
+		SceneModel primarySceneModel = new SceneModel();
 		if(sentenceModel == null){
 			MyError.error("senetecenModel should not be null! " + sentenceModel);
-			return;
+			return null;
 		}
-		
-		if(primarySceneModel == null){
-			MyError.error("primarySceneModel should not be null! " + primarySceneModel);
-			return;
-		}
-		
+//		
+//		if(primarySceneModel == null){
+//			MyError.error("primarySceneModel should not be null! " + primarySceneModel);
+//			return;
+//		}
+//		
 		primarySceneModel.addSentence(sentenceModel);
 		sentenceModel.setScene(primarySceneModel);
 		
@@ -275,6 +276,7 @@ public class Preprocessor {
 		_ttsEngine.printDictionary();
 		
 		print("primarySceneModel\n" + primarySceneModel);
+		return primarySceneModel;
 	}	
 
 	/**
@@ -412,6 +414,7 @@ public class Preprocessor {
 	}
 	
 	private void preprocessSubject(SentenceModel sentenceModel, SceneModel primarySceneModel){
+		//TODO: convert to getSubjects not single!
 		SentencePart sbj = sentenceModel.getSingleSubject();
 		
 		if(sbj == null || !sbj.isSubject()){
