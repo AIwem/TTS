@@ -70,23 +70,27 @@ public class TTSEngine {
 		if(!isKbInitialized)
 			loadKb();
 		
-		//-------------- converting natural language sentences of a scene to their equivalent currentPrimaryScene ------
-		
+			
 		SceneModel currentPrimaryScene = new SceneModel(_TTSKb, _re);
-				
+		
+		//-------------- adding primarySceneModel of the current scene to the stroyModel ------------------------------------
+		storyModel.addScene(currentPrimaryScene);
+		currentPrimaryScene.setStory(storyModel);
+		
+		//-------------- converting natural language sentences of a scene to their equivalent currentPrimaryScene ------
 		for(String NLsentence:scene_inputNL){
 			
 			print("natural sentence: " + NLsentence);
 			
 			SentenceModel sen = _pp.preprocessSentence(NLsentence);
 			 
+			// currentPrimaryScene story is set!
 			_pp.preprocessScene(sen, currentPrimaryScene);
 							
 			System.out.println("sentenceModel after preprocess: \n" + sen + "\n\n");			
 		}
 		
-		//-------------- adding primarySceneModel of the current scene to the stroyModel ------------------------------------
-		storyModel.addScene(currentPrimaryScene);
+		
 		
 		
 		if(isLastScene){//the last scene of story

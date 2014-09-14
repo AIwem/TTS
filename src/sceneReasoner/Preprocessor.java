@@ -20,6 +20,7 @@ import model.ScenePart;
 import model.SentenceModel;
 
 
+
 /**
  * Preprocessor preprocesses the input natural language sentences.  
  * It can convert sentence in natural language to their SentenceModel.
@@ -235,33 +236,38 @@ public class Preprocessor {
 	
 	
 	/**
-	 * preprocessScene preprocesses input sentenceModel and converts it to the primarySceneModel.
+	 * preprocessScene preprocesses input sentenceModel and adds it to the primarySceneModel.
 	 * TODO: we have temporarily assumed that every sentence has single subject, single object (if any), and single adverb (if any).   
 	 * 
 	 * @param sentenceModel the SenetenceModel to be converted. 
-	 * @param primarySceneModel 
+	 * @param primarySceneModel the primarySceneModel which this sentenceModel is to be added after converting.
 	 * @return SceneModel equivalent to input sentenceModel. 
 	 */	 
 	public void preprocessScene(SentenceModel sentenceModel, SceneModel primarySceneModel){		
-		
-		primarySceneModel.addSentence(sentenceModel);
-		
 		if(sentenceModel == null){
 			MyError.error("senetecenModel should not be null! " + sentenceModel);
 			return;
 		}
 		
+		if(primarySceneModel == null){
+			MyError.error("primarySceneModel should not be null! " + primarySceneModel);
+			return;
+		}
+		
+		primarySceneModel.addSentence(sentenceModel);
+		sentenceModel.setScene(primarySceneModel);
+		
 		preprocessSubject(sentenceModel, primarySceneModel);		
 				
-		preprocessObject(sentenceModel, primarySceneModel);		
+		preprocessObject(sentenceModel, primarySceneModel);
 		
-		preprocessAdverb(sentenceModel, primarySceneModel);		
+		preprocessAdverb(sentenceModel, primarySceneModel);
 		print("\n before verb");
-		primarySceneModel.printDictionary();
+		primarySceneModel.getStory().printDictionary();
 		
-		preprocessVerb(sentenceModel, primarySceneModel);		
+		preprocessVerb(sentenceModel, primarySceneModel);
 		print("\n after verb");
-		primarySceneModel.printDictionary();
+		primarySceneModel.getStory().printDictionary();
 		
 		print("primarySceneModel\n" + primarySceneModel);
 	}	

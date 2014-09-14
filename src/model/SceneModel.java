@@ -11,7 +11,7 @@ import ir.ac.itrc.qqa.semantic.reasoning.SemanticReasoner;
 import ir.ac.itrc.qqa.semantic.util.MyError;
 
 import java.util.ArrayList;
-import java.util.Hashtable;
+
 
 import sceneElement.DynamicObject;
 import sceneElement.Location;
@@ -32,19 +32,10 @@ public class SceneModel {
 	
 	private SemanticReasoner _re = null;
 	
-	private StoryModel storyModel;
+	private StoryModel story;
 	
 	private ArrayList<SentenceModel> sentences = new ArrayList<SentenceModel>();
 	
-	/**
-	 * this map holds the Node object seen yet in this SceneModel object. 
-	 * It maps the Node pure name as key to the ArrayList<Node> of seen Nodes with this name in this SceneModel object.
-	 * for each key, the first Node in ArrayList contains the pure Node object fetched from kb.
-	 * the others are different instances of that pure Node.
-	 */	
-	private Hashtable<String, ArrayList<Node>> scene_nodes_dic = new Hashtable<String,ArrayList<Node>>();
-	
-	private Hashtable<String, ScenePart> scene_parts = new Hashtable<String, ScenePart>();
 	
 		
 	private ArrayList<Role> roles = new ArrayList<Role>();	
@@ -67,8 +58,6 @@ public class SceneModel {
 		this._re = _re;		
 				
 		this.sentences = new ArrayList<SentenceModel>();
-		this.scene_nodes_dic = new Hashtable<String, ArrayList<Node>>();
-		this.scene_parts = new Hashtable<String, ScenePart>();
 		
 		this.roles = new ArrayList<Role>();
 		this.static_objs = new ArrayList<StaticObject>();
@@ -80,11 +69,11 @@ public class SceneModel {
 		
 		
 	public StoryModel getStory() {
-		return storyModel;
+		return story;
 	}
 
 	public void setStory(StoryModel story) {
-		this.storyModel = story;
+		this.story = story;
 	}
 
 	public ArrayList<SentenceModel> getSentences() {
@@ -103,10 +92,8 @@ public class SceneModel {
 		if(this.sentences == null)
 			this.sentences = new ArrayList<SentenceModel>();
 		
-		if(sentence != null){
+		if(sentence != null)
 			this.sentences.add(sentence);
-			sentence.setScene(this);
-		}
 	}
 
 	public ArrayList<Role> getRoles() {
@@ -249,9 +236,9 @@ public class SceneModel {
 			return null;		
 		
 		//an instance with name "name" exists in scene_nodes_dic.
-		if(scene_nodes_dic.containsKey(pure_name)){
+		if(story.isSeenNode(pure_name)){
 			
-			ArrayList<Node> seenNodes = scene_nodes_dic.get(pure_name);
+			ArrayList<Node> seenNodes = story.getSeenNode(pure_name);
 			 
 			 if(seenNodes == null){
 				 seenNodes = new ArrayList<Node>();			 
@@ -317,14 +304,14 @@ public class SceneModel {
 			return;
 		
 		//it is the first time this relation is seen.
-		if(!scene_nodes_dic.containsKey(pure_name)){
+		if(!story.isSeenNode(pure_name)){
 			ArrayList<Node> seenRelation = new ArrayList<Node>();
 			seenRelation.add(relationInstance.relationType);
 			seenRelation.add(relationInstance);
 			addToSceneModel(relationInstance.relationType, seenRelation);		
 		}
 		else{// we have seen this relation before
-			ArrayList<Node> seenRelation = scene_nodes_dic.get(pure_name);
+			ArrayList<Node> seenRelation = story.getSeenNode(pure_name);
 			
 			if(seenRelation == null){
 				MyError.error(pure_name + " key exists in scene_nodes_dic but no relation exists! probably the map is corrupted!");
@@ -348,8 +335,8 @@ public class SceneModel {
 		if(relation_name == null || relation_name.equals("-"))
 			return null;		
 		try{
-			if(scene_nodes_dic.containsKey(relation_name)){
-				ArrayList<Node> seenRelations = scene_nodes_dic.get(relation_name);
+			if(story.isSeenNode(relation_name)){
+				ArrayList<Node> seenRelations = story.getSeenNode(relation_name);
 				if(seenRelations == null || seenRelations.size() == 0)
 					return null;
 				if(seenRelations.size() == 2)//the first Relation is the pure Node fetched from kb, and the second is the only instance of the Relation.
@@ -364,21 +351,6 @@ public class SceneModel {
 			return null;
 		}			
 	}
-	
-	public void printDictionary(){
-		print("\n scene_node_dic");
-		for(String key:scene_nodes_dic.keySet()){
-			print(key +": " + scene_nodes_dic.get(key));
-		}
-			
-		print("\n scene_parts");
-		for(String key:scene_parts.keySet()){
-			print(key +": " + scene_parts.get(key));
-		}
-		print("\n");
-	}
-	
-
 	
 	
 	/**
@@ -397,7 +369,7 @@ public class SceneModel {
 		if(originalName == null || originalName.equals(""))
 			originalName = originalNode.getName();
 		
-	 	ArrayList<Node> instances = scene_nodes_dic.get(originalName);
+	 	ArrayList<Node> instances = story.getSeenNode(originalName);
 	 	
 	 	int index = 0;
 	 	if(instances == null || instances.size() == 0)
@@ -497,41 +469,6 @@ public class SceneModel {
 	
 	
 	/**
-	 * this method adds a row to scene_nodes_dic with pure_name as key and instances arrayList as values.
-	 * 
-	 * @param pure_name the name of original node fetched from FarsNet.
-	 * @param instances the list of instances of this original node in this sceneModel.
-	 * @param scenePart the ScenePart of this original node in this sceneModel.
-	 */
-	private void addToScene_nodes_dic(String pure_name, ArrayList<Node> instances){
-		if(pure_name == null || instances == null) 
-			return;
-		
-		if(scene_nodes_dic.containsKey(pure_name))
-			MyError.error("scene_nodes_dic previosly contains this pure name " + scene_nodes_dic.get(pure_name));
-		
-		scene_nodes_dic.put(pure_name, instances);
-			
-	}
-
-	/**
-	 * this method adds a row to the scene_parts with pure_name as key and the scenePart as value.
-	 * this is done in order to preventing re-querying the kb to detect ScenePart of every instance of a original node in this sceneModel. 
-	 * 
-	 * @param pure_name the name of original node fetched from FarsNet.
-	 * @param scenePart if scenePart equals to "ScenePart.UNKNOWN" nothing will be added to scene_parts.
-	 */
-	private void addToScene_Parts(String pure_name, ScenePart scenePart) {
-		if(pure_name == null || pure_name.equals("") || scenePart == null || scenePart == ScenePart.UNKNOWN)
-			return;
-		
-		if(scene_parts.containsKey(pure_name))
-			MyError.error("scene_parts previosly contained such a \"" + pure_name + "\" with the value: " + scene_parts.get(pure_name));
-		scene_parts.put(pure_name, scenePart); 
-	}
-
-	
-	/**
 	 * this method adds pure_node and newlySeen to  scene_nodes_dic through addToScene_nodes_dic() method and then
 	 * adds pure_node and its ScenePart through addToScene_Parts() method.
 	 * this is done in order to preventing re-querying the kb to detect ScenePart of every instance of a original node in this sceneModel.
@@ -542,10 +479,10 @@ public class SceneModel {
 	 */
 	private void addToSceneModel(Node pure_node, ArrayList<Node> newlySeen){
 		String pure_name = pure_node.getName();		
-		addToScene_nodes_dic(pure_name, newlySeen);
+		story.addTo_story_nodes(pure_name, newlySeen);
 		
 		ScenePart sp = getScenePart(pure_node, pure_node.getPos());		
-		addToScene_Parts(pure_name, sp);
+		story.addTo_story_sceneParts(pure_name, sp);
 	}
 
 	public Node getPureNode(Node instance) {
@@ -554,8 +491,8 @@ public class SceneModel {
 		
 		String pure_name = makePureName(instance);
 		
-		if(scene_nodes_dic.containsKey(pure_name)){
-			ArrayList<Node> allInstances = scene_nodes_dic.get(pure_name);
+		if(story.isSeenNode(pure_name)){
+			ArrayList<Node> allInstances = story.getSeenNode(pure_name);
 			if(allInstances != null && allInstances.size()>0)
 				return allInstances.get(0);
 			MyError.error(pure_name + " key exists in scene_nodes_dic but no Node exists! probably the map is corrupted!");			
@@ -787,8 +724,8 @@ public class SceneModel {
 		ScenePart sp = null;
 		
 		//if it is seen before!
-		if(scene_parts.containsKey(pure_name))			
-			sp = scene_parts.get(pure_name);		
+		if(story.isSeenScenePart(pure_name))			
+			sp = story.getSeenScenePart(pure_name);		
 		//if it isn't seen before!
 		else{
 			Node pure_node = getPureNode(node);	
@@ -796,7 +733,7 @@ public class SceneModel {
 		
 			sp = getScenePart(pure_node, pos);
 			
-			addToScene_Parts(pure_name, sp);			
+			story.addTo_story_sceneParts(pure_name, sp);			
 		}
 
 		print(node + " pos is " + sp + "\n");			
