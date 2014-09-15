@@ -216,11 +216,23 @@ public class TTSEngine {
 				
 		return loaded;
 	}	
+		
+	public void printDictionary(){
+		print("\n story_nodes");
+		for(String key:seen_nodes.keySet()){
+			print(key +": " + seen_nodes.get(key));
+		}
+			
+		print("\n story_sceneParts");
+		for(String key:seen_sceneParts.keySet()){
+			print(key +": " + seen_sceneParts.get(key));
+		}
+		print("\n");
+	}
 	
 	private void print(String toPrint) {
 		System.out.println(toPrint);		
 	}
-	
 	
 	/**
 	 * this method adds a row to seen_nodes with pure_name as key and instances arrayList as values.
@@ -254,20 +266,6 @@ public class TTSEngine {
 			MyError.error("story_sceneParts previosly contained such a \"" + pure_name + "\" with the value: " + seen_sceneParts.get(pure_name));
 		seen_sceneParts.put(pure_name, scenePart); 
 	}
-	
-	public void printDictionary(){
-		print("\n story_nodes");
-		for(String key:seen_nodes.keySet()){
-			print(key +": " + seen_nodes.get(key));
-		}
-			
-		print("\n story_sceneParts");
-		for(String key:seen_sceneParts.keySet()){
-			print(key +": " + seen_sceneParts.get(key));
-		}
-		print("\n");
-	}
-
 	
 	/**
 	 * findorCreateInstace searches seen_nodes to find a Node named "name".
@@ -400,8 +398,7 @@ public class TTSEngine {
 			return null;
 		}			
 	}
-	
-	
+		
 	/**
 	 * this method adds an instance from originalNode by adding a unique index to the end of its name, 
 	 * then adds this instance to kb,
@@ -459,8 +456,7 @@ public class TTSEngine {
 		
 		return instanceNode;		
 	}
-	
-	
+		
 	/**
 	 * checks if this node name is a pure node fetched from kb or 
 	 * it is an instance created by "createInstance" method or a relation cloned by addRelation.
@@ -515,8 +511,7 @@ public class TTSEngine {
 		}
 		return node.getName();
 	}
-	
-	
+		
 	/**
 	 * this method adds pure_node and instanceNodes to seen_nodes through addTo_seen_nodes method and then
 	 * adds pure_node and its ScenePart through addTo_seen_sceneParts() method.
@@ -654,10 +649,9 @@ public class TTSEngine {
 	}
 	
 	private boolean isTime(Node pure_node) {
-		// TODO Auto-generated method stub
+		// TODO to implement!
 		return false;
 	}
-
 
 	private ArrayList<PlausibleAnswer> writeAnswersTo(Node descriptor, Node argument, Node referent){
 		PlausibleQuestion pq = new PlausibleQuestion();
@@ -689,8 +683,7 @@ public class TTSEngine {
 		return answers;
 		
 	}
-	
-	
+		
 	/**
 	 * TODO: It must be improved: recognizing that which scenePart has the node: a Role (human) or DynamicObject or StaticObject?!
 	 * this method checks:
@@ -755,8 +748,6 @@ public class TTSEngine {
 		return ScenePart.UNKNOWN;
 	}
 	
-	
-
 	/**
 	 * this methods searches the internal structure of this TTSEngine (seen_sceneParts) to find the ScenePart mapped to this node.
 	 *  

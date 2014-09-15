@@ -4,6 +4,8 @@ name:پسرک	POS:NOUN	SRL:SBJ	WSD:MAIN_وضعیت سنی#a_POST	sub_part:پسر
 name:پسر	POS:NOUN	SRL:SBJ_P	WSD:پسر#n2	sub_part:-	dep:MAIN
 name:ک	POS:UNKNOWN	SRL:SBJ_P	WSD:خردسال#a1	sub_part:-	dep:POST
 
+name:کوچه	POS:NOUN	SRL:SBJ	WSD:کوچه#n2	sub_part:-	dep:-
+
 name:در راه خانه	POS:NOUN	SRL:ADV	WSD:راه#n9	sub_part:راه،خانه	dep:-
 name:راه	POS:NOUN	SRL:ADV_P	WSD:راه#n9	sub_part:-	dep:MAIN
 name:خانه	POS:NOUN	SRL:ADV_P	WSD:خانه#n10	sub_part:-	dep:POST

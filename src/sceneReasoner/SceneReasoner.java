@@ -44,16 +44,17 @@ public class SceneReasoner {
 	
 	
 	/**
-	 * this methods merges the sentences, roles, dynamic_objects, static_objects, scene_goals, and scene_emotions of
+	 * this methods merges the sentences, roles, dynamic_objects, static_objects, scene_goals, and scene_emotions, locations and times of
 	 * SceneModel of each sentences with each-other.  
+	 * 
 	 * @param sentencesPrimaryScenes SceneModels of sentences which are to be merged.
-	 * @return
+	 * @return the merged sceneModel which all parameter are set except storyModel parameter.
 	 */
 	public SceneModel mergeScenesOfSentences(ArrayList<SceneModel> sentencesPrimaryScenes) {
 		if(sentencesPrimaryScenes == null || sentencesPrimaryScenes.size() == 0)
 			return null;
 		
-		SceneModel merged_primary_scene = new SceneModel(sentencesPrimaryScenes.get(0).getStory());
+		SceneModel merged_primary_scene = new SceneModel();
 		
 		mergeSentences(sentencesPrimaryScenes, merged_primary_scene);
 				
@@ -88,8 +89,10 @@ public class SceneReasoner {
 			
 			for(SentenceModel sentence:current_sentences)
 				
-				if(!merged_primary_scene.hasSentence(sentence))
+				if(!merged_primary_scene.hasSentence(sentence)){
 					merged_primary_scene.addSentence(sentence);
+					sentence.setScene(merged_primary_scene);
+				}
 		}		
 	}
 	

@@ -241,25 +241,19 @@ public class Preprocessor {
 	
 	
 	/**
-	 * preprocessScene preprocesses input sentenceModel and adds it to the primarySceneModel.
-	 * TODO: we have temporarily assumed that every sentence has single subject, single object (if any), and single adverb (if any).   
+	 * preprocessScene preprocesses input sentenceModel and adds it to the primarySceneModel.    
 	 * 
 	 * @param sentenceModel the SenetenceModel to be converted. 
-	 * @param primarySceneModel the primarySceneModel which this sentenceModel is to be added after converting.
 	 * @return SceneModel equivalent to input sentenceModel. 
 	 */	 
-	public SceneModel preprocessScene(SentenceModel sentenceModel){
-		SceneModel primarySceneModel = new SceneModel();
+	public SceneModel preprocessScene(SentenceModel sentenceModel){		
+		
 		if(sentenceModel == null){
 			MyError.error("senetecenModel should not be null! " + sentenceModel);
 			return null;
 		}
-//		
-//		if(primarySceneModel == null){
-//			MyError.error("primarySceneModel should not be null! " + primarySceneModel);
-//			return;
-//		}
-//		
+		SceneModel primarySceneModel = new SceneModel();
+
 		primarySceneModel.addSentence(sentenceModel);
 		sentenceModel.setScene(primarySceneModel);
 		
@@ -414,72 +408,82 @@ public class Preprocessor {
 	}
 	
 	private void preprocessSubject(SentenceModel sentenceModel, SceneModel primarySceneModel){
-		//TODO: convert to getSubjects not single!
-		SentencePart sbj = sentenceModel.getSingleSubject();
 		
-		if(sbj == null || !sbj.isSubject()){
-			MyError.error("bad subjct part " + sbj);
-			return;
-		}
+		ArrayList<SentencePart> subjects = sentenceModel.getSubjects();
+
+		for(SentencePart sbj:subjects){
 		
-		//_wsd of sbj is set to proper Node of KB.
-		allocate_wsd(sbj);	
-		
-		if(sbj._wsd != null)
-			addToPrimarySceneModel(sbj, primarySceneModel);			
-		else
-			MyError.error(sbj._wsd_name + " couldn't get allocated!");
+			if(sbj == null || !sbj.isSubject()){
+				MyError.error("bad subjct part " + sbj);
+				return;
+			}
 			
+			//_wsd of sbj is set to proper Node of KB.
+			allocate_wsd(sbj);	
+			
+			if(sbj._wsd != null)
+				addToPrimarySceneModel(sbj, primarySceneModel);			
+			else
+				MyError.error(sbj._wsd_name + " couldn't get allocated!");
+		}
 	}
 	
 	private void preprocessObject(SentenceModel sentenceModel, SceneModel primarySceneModel){
-		SentencePart obj = sentenceModel.getSingleObject();
 		
-		if(obj != null && !obj.isObject()){
-			MyError.error("bad obejct part " + obj);
-			return;
-		}	
+		ArrayList<SentencePart> objects = sentenceModel.getObjects();
+		
+		for(SentencePart obj:objects){
+			
+			if(obj != null && !obj.isObject()){
+				MyError.error("bad obejct part " + obj);
+				return;
+			}	
 			else if(obj != null && obj.isObject()){
 			
-			//_wsd of obj is set to proper Node of KB.
-			allocate_wsd(obj);
-			
-			if(obj._wsd != null)			
-				addToPrimarySceneModel(obj, primarySceneModel);
-			else
-				MyError.error(obj._wsd_name + " couldn't get allocated!");
+				//_wsd of obj is set to proper Node of KB.
+				allocate_wsd(obj);
+				
+				if(obj._wsd != null)			
+					addToPrimarySceneModel(obj, primarySceneModel);
+				else
+					MyError.error(obj._wsd_name + " couldn't get allocated!");
+				}
 		}
 	}		
 	
 	
 	private void preprocessAdverb(SentenceModel sentenceModel, SceneModel primarySceneModel) {
-		SentencePart adv = sentenceModel.getSingleAdverb();
 		
-		if(adv != null && !adv.isAdverb()){
-			MyError.error("bad adverb part " + adv);
-			return;
-		}
-		else if(adv != null && adv.isAdverb()){
-			
-			//_wsd of adv is set to proper Node of KB.
-			allocate_wsd(adv);
-			
-			if(adv._wsd != null)			
-				addToPrimarySceneModel(adv, primarySceneModel);
-			else
-				MyError.error(adv._wsd_name + " couldn't get allocated!");
+		ArrayList<SentencePart> adverbs = sentenceModel.getAdverbs();
+		
+		for(SentencePart adv:adverbs){
+			if(adv != null && !adv.isAdverb()){
+				MyError.error("bad adverb part " + adv);
+				return;
+			}
+			else if(adv != null && adv.isAdverb()){
+				
+				//_wsd of adv is set to proper Node of KB.
+				allocate_wsd(adv);
+				
+				if(adv._wsd != null)			
+					addToPrimarySceneModel(adv, primarySceneModel);
+				else
+					MyError.error(adv._wsd_name + " couldn't get allocated!");
+			}
 		}
 		
 	}
 	/**
 	 * TODO:
-	 * 1- allocate_wsd verb --> create relation of verb!
-	 * 2- defining verb capacities in kb.
-	 * 3- loading these capacities from kb.
-	 * 4- preparing values for these capacities.
-	 * 5- adding proper RoleActoin or ObjectAction to sceneModel.  --> done
-	 * 
-	 * 
+	 * 1- allocate_wsd verb 									   --> done
+	 * 2- create relation of verb!		   						   --> done
+	 * 3- defining verb capacities in kb.
+	 * 4- loading these capacities from kb.
+	 * 5- preparing values for these capacities.
+	 * 6- adding proper RoleActoin or ObjectAction to sceneModel.  --> for transitive verbs done 
+	 * 															   TODO: but non-transitive!!!!
+	 *  
 	 * @param sentenceModel
 	 * @param primarySceneModel
 	 */
@@ -496,51 +500,54 @@ public class Preprocessor {
 		
 		if(verb._wsd != null){
 			
-			//here subject, object, and adverb of this sentence has been allocated!								
-			SentencePart sbj = sentenceModel.getSingleSubject();
-			if(sbj == null){
+			//here _wsd of subject(s), object(s), and adverb(s) of this sentence has been allocated!								
+			ArrayList<SentencePart> subjects = sentenceModel.getSubjects();
+			
+			if(subjects == null || subjects.size() == 0){
 				MyError.error("sentence with verb " + verb + " has no subject part! " + sentenceModel);
 				return;
 			}
-				
-			ScenePart sbjSp = _ttsEngine.whichScenePart(sbj._wsd);
-			if(sbjSp == null || sbjSp == ScenePart.UNKNOWN){
-				MyError.error(sbj + " subject of sentence has no ScenePart " + sentenceModel);
-				return;
-			}
 			
-			if(sbjSp == ScenePart.ROLE){
-				Role role = primarySceneModel.getRole(sbj._wsd);
-				if(role == null){
-					MyError.error(primarySceneModel + " SceneModel has not such a " + sbj._wsd + " Role.");
-					return;
-				}					
-				
-				RoleAction role_action = new RoleAction(verb._name, verb._wsd);				
-				role.addRole_action(role_action);
-			}
-			else if(sbjSp == ScenePart.DYNAMIC_OBJECT){
-				DynamicObject dyn_obj = primarySceneModel.getDynamic_object(sbj._wsd);
-				if(dyn_obj == null){
-					MyError.error(primarySceneModel + " SceneModel has not such a " + sbj._wsd + " DynamicObject.");
+			for(SentencePart sbj:subjects){				
+					
+				ScenePart sbjSp = _ttsEngine.whichScenePart(sbj._wsd);
+				if(sbjSp == null || sbjSp == ScenePart.UNKNOWN){
+					MyError.error(sbj + " subject of sentence has no ScenePart " + sentenceModel);
 					return;
 				}
-				ObjectAction obj_act = new ObjectAction(verb._name, verb._wsd);				
-				dyn_obj.addObejct_action(obj_act);
+				
+				if(sbjSp == ScenePart.ROLE){
+					Role role = primarySceneModel.getRole(sbj._wsd);
+					if(role == null){
+						MyError.error(primarySceneModel + " SceneModel has not such a " + sbj._wsd + " Role.");
+						return;
+					}					
+					
+					RoleAction role_action = new RoleAction(verb._name, verb._wsd);				
+					role.addRole_action(role_action);
+				}
+				else if(sbjSp == ScenePart.DYNAMIC_OBJECT){
+					DynamicObject dyn_obj = primarySceneModel.getDynamic_object(sbj._wsd);
+					if(dyn_obj == null){
+						MyError.error(primarySceneModel + " SceneModel has not such a " + sbj._wsd + " DynamicObject.");
+						return;
+					}
+					ObjectAction obj_act = new ObjectAction(verb._name, verb._wsd);				
+					dyn_obj.addObejct_action(obj_act);
+				}
+				
+				ArrayList<SentencePart> objects = sentenceModel.getObjects();
+				if(objects != null && objects.size() > 0){
+					for(SentencePart obj:objects)
+						if(obj != null){//it mean that it is a transitive verb.
+							//adding the relation of this sentence to kb.
+							_kb.addRelation(sbj._wsd, obj._wsd, verb._wsd, SourceType.TTS);
+						}
+				}
+				
 			}
-			
-			SentencePart obj = sentenceModel.getSingleObject();
-			if(obj != null){//it mean that it is a transitive verb.
-				//adding the relation of this sentence to kb.
-				_kb.addRelation(sbj._wsd, obj._wsd, verb._wsd, SourceType.TTS);
-			}
-			
-			
-			
-		
 			//maybe call to it will be cancelled.			
 			//addToPrimarySceneModel(verb, primarySceneModel);			
-					
 		}
 		else
 			MyError.error(verb._wsd_name + " couldn't get allocated!");
