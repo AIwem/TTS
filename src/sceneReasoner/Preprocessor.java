@@ -511,6 +511,7 @@ public class Preprocessor {
 			for(SentencePart sbj:subjects){				
 					
 				ScenePart sbjSp = _ttsEngine.whichScenePart(sbj._wsd);
+				
 				if(sbjSp == null || sbjSp == ScenePart.UNKNOWN){
 					MyError.error(sbj + " subject of sentence has no ScenePart " + sentenceModel);
 					return;
@@ -537,15 +538,22 @@ public class Preprocessor {
 				}
 				
 				ArrayList<SentencePart> objects = sentenceModel.getObjects();
+				
 				if(objects != null && objects.size() > 0){
 					for(SentencePart obj:objects)
 						if(obj != null){//it mean that it is a transitive verb.
 							//adding the relation of this sentence to kb.
-							_kb.addRelation(sbj._wsd, obj._wsd, verb._wsd, SourceType.TTS);
+							PlausibleStatement ps = _kb.addRelation(sbj._wsd, obj._wsd, verb._wsd, SourceType.TTS);
+							print("relation added ------------- : " + ps.argument + " -- " + ps + " -- " + ps.referent);
+							
+							PlausibleStatement ps2 = _kb.addRelation(ps, _kb.addConcept("اکنون§n-12609"), KnowledgeBase.HPR_CXTIME, SourceType.TTS);
+							print("relation added ------------- : " + ps2.argument + " -- " + ps2 + " -- " + ps2.referent);
 						}
 				}
 				
 			}
+			
+			
 			//maybe call to it will be cancelled.			
 			//addToPrimarySceneModel(verb, primarySceneModel);			
 		}
