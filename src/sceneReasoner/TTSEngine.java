@@ -8,6 +8,7 @@ import ir.ac.itrc.qqa.semantic.kb.Node;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleAnswer;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleQuestion;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleStatement;
+import ir.ac.itrc.qqa.semantic.reasoning.PlausibleTerm;
 import ir.ac.itrc.qqa.semantic.reasoning.SemanticReasoner;
 import ir.ac.itrc.qqa.semantic.util.MyError;
 
@@ -128,14 +129,22 @@ public class TTSEngine {
 		}
 	}
 		
-	public void checkSemanticReasoner1(Node argument, Node descriptor)	{
+	public void checkSemanticReasoner1(Node argument, Node descriptor, Node referent)	{
 		
 
 		PlausibleQuestion pq = new PlausibleQuestion();
 		pq.argument = argument;
-		pq.referent = null;		
-		//pq.descriptor = descriptor;
-		pq.descriptor = KnowledgeBase.HPR_ANY;
+		pq.referent = referent;
+		pq.descriptor = descriptor;		
+		//pq.descriptor = KnowledgeBase.HPR_ANY;
+		PlausibleTerm relType = (PlausibleTerm)descriptor;
+		ArrayList<PlausibleStatement> ans = argument.findOutRelations(relType.relationType);
+		PlausibleStatement desInstance = ans.get(0);
+		ans = null;
+		ans = desInstance.findOutRelations(KnowledgeBase.HPR_CXTIME);
+		pq.cxTime = ans.get(0).referent;
+		
+	  
 
 		
 		System.out.print(pq.toString() + " ... ");
@@ -505,8 +514,8 @@ public class TTSEngine {
 				pure_name = pure_name.substring(0, index1).trim();
 				
 			int index2 = pure_name.indexOf("*");
-			if(index2 != -1)
-				pure_name =  pure_name.substring(index2);
+			if(index2 != -1 && (index2 + 1) < pure_name.length())
+				pure_name =  pure_name.substring(index2 + 1);
 			return pure_name;
 		}
 		return node.getName();
@@ -777,6 +786,6 @@ public class TTSEngine {
 
 		print(node + " pos is " + sp + "\n");			
 		return sp;
-	}
+	}	
 
 }

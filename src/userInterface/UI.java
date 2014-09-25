@@ -1,5 +1,9 @@
 package userInterface;
 
+import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
+import ir.ac.itrc.qqa.semantic.kb.Node;
+import ir.ac.itrc.qqa.semantic.reasoning.PlausibleStatement;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -12,15 +16,14 @@ import sceneReasoner.TTSEngine;
 public class UI {
 	
 	private String inputStoryFilePath = "inputStory/inputStrory2.txt";
-	private String mainKbFilePath = "kb/farsnet--12.txt";
+	private String mainKbFilePath = "kb/farsnet--13.txt";
 	private String myKbFilePath = "kb/injuredPigeon2.txt";
+	//private String myKbFilePath = "kb/injuredPigeon_simple.txt";
+	//private String myKbFilePath = "kb/injuredPigeon_SS.txt";
 	private TTSEngine tts;
 	
-	public UI(){
-		//tts = new TTSEngine("kb/farsnet.txt", "kb/injuredPigeon_simple.txt");
-		//tts = new TTSEngine("kb/farsnet.txt", "kb/injuredPigeon.txt");
-		//tts = new TTSEngine("kb/farsnet.txt", "kb/injuredPigeon_SS.txt");
-		tts = new TTSEngine(mainKbFilePath, myKbFilePath);
+	public UI(){		
+		//tts = new TTSEngine(mainKbFilePath, myKbFilePath);
 	}
 	
 	private void print(String s){
@@ -125,7 +128,15 @@ public class UI {
 		StoryModel sm = ui.TTS();
 		
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~");
-		//ui.tts.checkSemanticReasoner1(psm.getRoles().get(0)._node, psm.getRoles().get(0).getRole_actions().get(0)._node);
+		
+		Node arg = ui.tts._TTSKb.addConcept("*چشم افتادن#v (1) (1)");
+		ArrayList<PlausibleStatement> ans = arg.findOutRelations(KnowledgeBase.HPR_ANY);
+		Node des = ans.get(0);
+		Node ref = ans.get(0).referent;
+			
+		ui.tts.checkSemanticReasoner1(arg, des, ref);
+		
+		//ui.tts.checkSemanticReasoner1();
 		//ui.tts.checkSemanticReasoner2(psm.getDynamic_objects().get(0)._node);
 	
 		System.out.println("الحمدلله");

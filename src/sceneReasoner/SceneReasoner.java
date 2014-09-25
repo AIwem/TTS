@@ -179,7 +179,7 @@ public class SceneReasoner {
 			Location current_location = current_scene.getLocation();
 				
 			if(merged_primary_scene.getLocation() != null)
-				//TODO: MyError.error("this SceneModel previouly has a location " + merged_primary_scene.getLocation());
+				MyError.error("this SceneModel previouly has a location " + merged_primary_scene.getLocation());
 			merged_primary_scene.setLocation(current_location);
 		}
 	}
