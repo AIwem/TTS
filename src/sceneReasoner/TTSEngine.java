@@ -8,7 +8,6 @@ import ir.ac.itrc.qqa.semantic.kb.Node;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleAnswer;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleQuestion;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleStatement;
-import ir.ac.itrc.qqa.semantic.reasoning.PlausibleTerm;
 import ir.ac.itrc.qqa.semantic.reasoning.SemanticReasoner;
 import ir.ac.itrc.qqa.semantic.util.MyError;
 
@@ -136,12 +135,8 @@ public class TTSEngine {
 		pq.argument = argument;
 		pq.referent = referent;
 		pq.descriptor = descriptor;		
-		//pq.descriptor = KnowledgeBase.HPR_ANY;
-		PlausibleTerm relType = (PlausibleTerm)descriptor;
-		ArrayList<PlausibleStatement> ans = argument.findOutRelations(relType.relationType);
-		PlausibleStatement desInstance = ans.get(0);
-		ans = null;
-		ans = desInstance.findOutRelations(KnowledgeBase.HPR_CXTIME);
+		
+		ArrayList<PlausibleStatement> ans = descriptor.findOutRelations(KnowledgeBase.HPR_CXTIME);
 		pq.cxTime = ans.get(0).referent;
 		
 	  

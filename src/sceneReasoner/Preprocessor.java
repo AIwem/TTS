@@ -32,7 +32,7 @@ import model.SentenceModel;
 public class Preprocessor {
 	
 	private KnowledgeBase _kb;
-	//private SemanticReasoner _re;
+//	private SemanticReasoner _re;
 	private TTSEngine _ttsEngine = null;
 	
 	
@@ -48,7 +48,7 @@ public class Preprocessor {
 	
 	public Preprocessor(KnowledgeBase kb, SemanticReasoner re, TTSEngine ttsEngine) {
 		this._kb = kb;
-		//this._re = re;
+//		this._re = re;
 		this._ttsEngine = ttsEngine;
 	}		
 	
@@ -478,9 +478,9 @@ public class Preprocessor {
 	 * TODO:
 	 * 1- allocate_wsd verb 									   --> done
 	 * 2- create relation of verb!		   						   --> done
-	 * 3- defining verb capacities in kb.
-	 * 4- loading these capacities from kb.
-	 * 5- preparing values for these capacities.
+	 * 3- defining verb capacities in INJUREDPIGEON kb.
+	 * 4- loading these capacities from kb for SynSetof verbs.
+	 * 5- preparing values for these capacities --> in SceneReasoner class, next phase.
 	 * 6- adding proper RoleActoin or ObjectAction to sceneModel.  --> for transitive verbs done 
 	 * 															   TODO: but non-transitive!!!!
 	 *  
@@ -544,10 +544,11 @@ public class Preprocessor {
 						if(obj != null){//it mean that it is a transitive verb.
 							//adding the relation of this sentence to kb.
 							PlausibleStatement ps = _kb.addRelation(sbj._wsd, obj._wsd, verb._wsd, SourceType.TTS);
-							print("relation added ------------- : " + ps.argument + " -- " + ps + " -- " + ps.referent);
+							print("relation added ------------- : " + ps.argument.getName() + " -- " + ps.getName() + " -- " + ps.referent.getName());
 							
+							//TODO: this relation is for test cx-time, it must be removed
 							PlausibleStatement ps2 = _kb.addRelation(ps, _kb.addConcept("اکنون§n-12609"), KnowledgeBase.HPR_CXTIME, SourceType.TTS);
-							print("relation added ------------- : " + ps2.argument + " -- " + ps2 + " -- " + ps2.referent);
+							print("relation added ------------- : " + ps2.argument.getName() + " -- " + ps2.getName() + " -- " + ps2.referent.getName());								
 						}
 				}
 				
