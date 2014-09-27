@@ -530,6 +530,7 @@ public class Preprocessor {
 	}
 	/**
 	 * TODO:
+<<<<<<< HEAD
 	 * 1- allocate_wsd verb 									   				--> done
 	 * 2- adding proper RoleActoin or ObjectAction to sceneModel.  				--> done
 	 * 3- create relation of verb!		   						   				--> done
@@ -538,6 +539,15 @@ public class Preprocessor {
 	 * 5- loading these capacities from kb for SynSetof verbs.					-->
 	 * 6- preparing values for these capacities --> in SceneReasoner,next phase.
 	 *   															  
+=======
+	 * 1- allocate_wsd verb 									   --> done
+	 * 2- create relation of verb!		   						   --> done
+	 * 3- defining verb capacities in INJUREDPIGEON kb.
+	 * 4- loading these capacities from kb for SynSetof verbs.
+	 * 5- preparing values for these capacities --> in SceneReasoner class, next phase.
+	 * 6- adding proper RoleActoin or ObjectAction to sceneModel.  --> for transitive verbs done 
+	 * 															   TODO: but non-transitive!!!!
+>>>>>>> branch 'dev' of https://github.com/hasheminamin/TTS.git
 	 *  
 	 * @param sentenceModel
 	 * @param primarySceneModel
@@ -561,6 +571,9 @@ public class Preprocessor {
 			//here _wsd of subject(s), object(s), and adverb(s) of this sentence has been allocated!
 			defineVerbRelation(verb, sentenceModel, primarySceneModel);			
 			
+			//maybe call to it will be cancelled.			
+			//addToPrimarySceneModel(verb, primarySceneModel);			
+
 		}
 		else
 			MyError.error(verb._wsd_name + " couldn't get allocated!");		
