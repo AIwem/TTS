@@ -32,7 +32,7 @@ import model.SentenceModel;
 public class Preprocessor {
 	
 	private KnowledgeBase _kb;
-	//private SemanticReasoner _re;
+//	private SemanticReasoner _re;
 	private TTSEngine _ttsEngine = null;
 	
 	
@@ -48,7 +48,7 @@ public class Preprocessor {
 	
 	public Preprocessor(KnowledgeBase kb, SemanticReasoner re, TTSEngine ttsEngine) {
 		this._kb = kb;
-		//this._re = re;
+//		this._re = re;
 		this._ttsEngine = ttsEngine;
 	}		
 	
@@ -407,6 +407,60 @@ public class Preprocessor {
 		}
 	}
 	
+	/**
+	 * this method based on the ScenePart of the subject(s) of the sentenceModel adds RoleAction(s) or ObjectAction(s) to primarySceneModel. 
+	 * It is important to note that when this method is called _wsd parameter of  
+	 * all subject(s) of this sentenceModel has been allocated! 
+	 * 
+	 * @param verb 
+	 * @param sentenceModel
+	 * @param primarySceneModel
+	 */
+	private void addVerbToPrimarySceneModel(SentencePart verb, SentenceModel sentenceModel, SceneModel primarySceneModel){
+		
+	
+		//here _wsd of subject(s), object(s), and adverb(s) of this sentence has been allocated!								
+		ArrayList<SentencePart> subjects = sentenceModel.getSubjects();
+		
+		if(subjects == null || subjects.size() == 0){
+			MyError.error("sentence with verb " + verb + " has no subject part! " + sentenceModel);
+			return;
+		}
+		
+		for(SentencePart sbj:subjects){				
+				
+			ScenePart sbjSp = _ttsEngine.whichScenePart(sbj._wsd);
+			
+			if(sbjSp == null || sbjSp == ScenePart.UNKNOWN){
+				MyError.error(sbj + " subject of sentence has no ScenePart \n" + sentenceModel);
+				return;
+			}
+			
+			if(sbjSp == ScenePart.ROLE){
+				
+				Role role = primarySceneModel.getRole(sbj._wsd);
+				if(role == null){
+					MyError.error(primarySceneModel + " SceneModel has not such a " + sbj._wsd + " Role.");
+					return;
+				}					
+				
+				RoleAction role_action = new RoleAction(verb._name, verb._wsd);				
+				role.addRole_action(role_action);
+			}
+			else if(sbjSp == ScenePart.DYNAMIC_OBJECT){
+				
+				DynamicObject dyn_obj = primarySceneModel.getDynamic_object(sbj._wsd);
+				if(dyn_obj == null){
+					MyError.error(primarySceneModel + " SceneModel has not such a " + sbj._wsd + " DynamicObject.");
+					return;
+				}
+				
+				ObjectAction obj_act = new ObjectAction(verb._name, verb._wsd);				
+				dyn_obj.addObejct_action(obj_act);
+			}			
+		}
+	}
+	
 	private void preprocessSubject(SentenceModel sentenceModel, SceneModel primarySceneModel){
 		
 		ArrayList<SentencePart> subjects = sentenceModel.getSubjects();
@@ -476,13 +530,14 @@ public class Preprocessor {
 	}
 	/**
 	 * TODO:
-	 * 1- allocate_wsd verb 									   --> done
-	 * 2- create relation of verb!		   						   --> done
-	 * 3- defining verb capacities in kb.
-	 * 4- loading these capacities from kb.
-	 * 5- preparing values for these capacities.
-	 * 6- adding proper RoleActoin or ObjectAction to sceneModel.  --> for transitive verbs done 
-	 * 															   TODO: but non-transitive!!!!
+	 * 1- allocate_wsd verb 									   				--> done
+	 * 2- adding proper RoleActoin or ObjectAction to sceneModel.  				--> done
+	 * 3- create relation of verb!		   						   				--> done
+	 * 
+	 * 4- defining verb capacities in INJUREDPIGEON kb.							--> done as test
+	 * 5- loading these capacities from kb for SynSetof verbs.					-->
+	 * 6- preparing values for these capacities --> in SceneReasoner,next phase.
+	 *   															  
 	 *  
 	 * @param sentenceModel
 	 * @param primarySceneModel
@@ -500,65 +555,68 @@ public class Preprocessor {
 		
 		if(verb._wsd != null){
 			
-			//here _wsd of subject(s), object(s), and adverb(s) of this sentence has been allocated!								
-			ArrayList<SentencePart> subjects = sentenceModel.getSubjects();
+			//here _wsd of subject(s) of this sentenceModel has been allocated!								
+			addVerbToPrimarySceneModel(verb, sentenceModel, primarySceneModel);
 			
-			if(subjects == null || subjects.size() == 0){
-				MyError.error("sentence with verb " + verb + " has no subject part! " + sentenceModel);
-				return;
-			}
+			//here _wsd of subject(s), object(s), and adverb(s) of this sentence has been allocated!
+			defineVerbRelation(verb, sentenceModel, primarySceneModel);			
 			
-			for(SentencePart sbj:subjects){				
-					
-				ScenePart sbjSp = _ttsEngine.whichScenePart(sbj._wsd);
-				
-				if(sbjSp == null || sbjSp == ScenePart.UNKNOWN){
-					MyError.error(sbj + " subject of sentence has no ScenePart " + sentenceModel);
-					return;
-				}
-				
-				if(sbjSp == ScenePart.ROLE){
-					Role role = primarySceneModel.getRole(sbj._wsd);
-					if(role == null){
-						MyError.error(primarySceneModel + " SceneModel has not such a " + sbj._wsd + " Role.");
-						return;
-					}					
-					
-					RoleAction role_action = new RoleAction(verb._name, verb._wsd);				
-					role.addRole_action(role_action);
-				}
-				else if(sbjSp == ScenePart.DYNAMIC_OBJECT){
-					DynamicObject dyn_obj = primarySceneModel.getDynamic_object(sbj._wsd);
-					if(dyn_obj == null){
-						MyError.error(primarySceneModel + " SceneModel has not such a " + sbj._wsd + " DynamicObject.");
-						return;
-					}
-					ObjectAction obj_act = new ObjectAction(verb._name, verb._wsd);				
-					dyn_obj.addObejct_action(obj_act);
-				}
-				
-				ArrayList<SentencePart> objects = sentenceModel.getObjects();
-				
-				if(objects != null && objects.size() > 0){
-					for(SentencePart obj:objects)
-						if(obj != null){//it mean that it is a transitive verb.
-							//adding the relation of this sentence to kb.
-							PlausibleStatement ps = _kb.addRelation(sbj._wsd, obj._wsd, verb._wsd, SourceType.TTS);
-							print("relation added ------------- : " + ps.argument + " -- " + ps + " -- " + ps.referent);
-							
-							PlausibleStatement ps2 = _kb.addRelation(ps, _kb.addConcept("اکنون§n-12609"), KnowledgeBase.HPR_CXTIME, SourceType.TTS);
-							print("relation added ------------- : " + ps2.argument + " -- " + ps2 + " -- " + ps2.referent);
-						}
-				}
-				
-			}
-			
-			
-			//maybe call to it will be cancelled.			
-			//addToPrimarySceneModel(verb, primarySceneModel);			
 		}
 		else
-			MyError.error(verb._wsd_name + " couldn't get allocated!");
-		
+			MyError.error(verb._wsd_name + " couldn't get allocated!");		
 	}	
+	
+	/**
+	 * this method defines the proper relation resulted from the verb of this sentence.
+	 * It is important to note that when this method is called _wsd parameter of  
+	 * all subject(s) and object(s) of this sentence has been allocated! 
+	 * 
+	 * @param verb the verb its relation are to be defined.
+	 * @param sentenceModel
+	 * @param primarySceneModel
+	 */
+	private void defineVerbRelation(SentencePart verb, SentenceModel sentenceModel, SceneModel primarySceneModel){
+		
+		
+		//here _wsd of subject(s), object(s), and adverb(s) of this sentence has been allocated!								
+		ArrayList<SentencePart> subjects = sentenceModel.getSubjects();
+		
+		if(subjects == null || subjects.size() == 0){
+			MyError.error("sentence with verb " + verb + " has no subject part! " + sentenceModel);
+			return;
+		}
+		
+		for(SentencePart sbj:subjects){				
+			
+			ArrayList<SentencePart> objects = sentenceModel.getObjects();
+			
+			boolean transitive_verb = false;
+			
+			if(objects != null && objects.size() > 0)
+				
+				for(SentencePart obj:objects)
+					
+					if(obj != null){						
+						//it is a transitive verb.
+						transitive_verb = true;
+						
+						//adding the relation of this sentence to kb.
+						PlausibleStatement ps = _kb.addRelation(sbj._wsd, obj._wsd, verb._wsd, SourceType.TTS);
+						print("relation added ------------- : " + ps.argument.getName() + " -- " + ps.getName() + " -- " + ps.referent.getName());
+						
+//						//just for testing cxTime
+//						PlausibleStatement ps2 = _kb.addRelation(ps, _kb.addConcept("اکنون§n-12609"), KnowledgeBase.HPR_CXTIME, SourceType.TTS);
+//						print("relation added ------------- : " + ps2.argument.getName() + " -- " + ps2.getName() + " -- " + ps2.referent.getName());								
+					}				
+			
+			if(!transitive_verb){
+				//TODO check if using "KnowledgeBase.HPR_ANY" as referent is correct?!
+				//adding the relation of this sentence to kb. 
+				PlausibleStatement ps = _kb.addRelation(sbj._wsd, KnowledgeBase.HPR_ANY, verb._wsd, SourceType.TTS);
+				print("relation added ------------- : " + ps.argument.getName() + " -- " + ps.getName() + " -- " + ps.referent.getName());
+				
+			}
+		}
+	}
+	
 }

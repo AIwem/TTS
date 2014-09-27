@@ -55,5 +55,3 @@ name:وارد شد	POS:VERB	SRL:VERB	WSD:وارد شدن#v2	sub_part:-	dep:-
 name:خانه	POS:NOUN	SRL:ADV	WSD:خانه#n10	sub_part:-	dep:-
 
 #------------------------------------------------------
-
-

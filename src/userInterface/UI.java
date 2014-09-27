@@ -1,9 +1,5 @@
 package userInterface;
 
-import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
-import ir.ac.itrc.qqa.semantic.kb.Node;
-import ir.ac.itrc.qqa.semantic.reasoning.PlausibleStatement;
-
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -129,19 +125,15 @@ public class UI {
 		
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~");
 		
-		Node arg = ui.tts._TTSKb.addConcept("*چشم افتادن#v (1) (1)");
-		ArrayList<PlausibleStatement> ans = arg.findOutRelations(KnowledgeBase.HPR_ANY);
-		Node des = ans.get(0);
-		Node ref = ans.get(0).referent;
-			
-		ui.tts.checkSemanticReasoner1(arg, des, ref);
-		
-		//ui.tts.checkSemanticReasoner1();
-		//ui.tts.checkSemanticReasoner2(psm.getDynamic_objects().get(0)._node);
-	
+//		Node arg = ui.tts._TTSKb.addConcept("پسر#n2 (1)");
+//		Node desc = ui.tts._TTSKb.addConcept("*چشم افتادن#v (1) (1)");		
+//		Node ref = ui.tts._TTSKb.addConcept("کبوتر#n1 (1)");
+//				
+//		ui.tts.checkSemanticReasoner1(arg, desc, ref);
+//		
+//		ui.tts.checkSemanticReasoner1();
+//		ui.tts.checkSemanticReasoner2(psm.getDynamic_objects().get(0)._node);
+//	
 		System.out.println("الحمدلله");
 	}
-	
-
-
 }
