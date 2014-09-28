@@ -9,8 +9,7 @@
 # 	s? TTS
 # All comment lines in this file start with a nubmber sign '#'
 # ------------------------------------------------------------------------------------------
-1	s˸چشم افتادن#v	*f˸مشابه (1)	f˸به چشم خوردن§v-8071
-22	*f˸مشابه (1)	CX:TIME	f˸اکنون§n-22147
+1	s˸چشم افتادن#v	f˸مشابه	f˸به چشم خوردن§v-8071
 3	s˸انسان#n	f˸مشابه	f˸نفر§n-13075
 5	f˸خویش§n-13365	f˸ISA	f˸نفر§n-13075
 6	f˸به چشم خوردن§v-8071	f˸ISA	s˸مواجهه#v
@@ -28,14 +27,16 @@
 16	f˸سالمند§a-17323	f˸ISA	s˸گروه سنی#a
 00	f˸دویدن§v-8577	f˸CX:DIRECTION	f˸جانب§n-10268
 00	f˸دویدن§v-8577	f˸CX:SPEED	f˸شتاب§n-11230
-00	f˸دویدن§v-8577	f˸CX:MOOD	f˸وضعیت§n-12745
-00	f˸دویدن§v-8577	f˸CX:EMOTION	f˸حس§n-14738
+#00	f˸دویدن§v-8577	f˸CX:MOOD	f˸وضعیت§n-12745
+#00	f˸دویدن§v-8577	f˸CX:EMOTION	f˸حس§n-14738
 100	f˸CX:TIME	f˸ISA	f˸همبافت
 101	f˸CX:PLACE	f˸ISA	f˸همبافت
-102 s˸CX:MOOD	f˸ISA	f˸همبافت
+102	s˸CX:MOOD	f˸ISA	f˸همبافت
 103	s˸CX:EMOTION	f˸ISA	f˸همبافت
-104 s˸CX:DIRECTION	f˸ISA	f˸همبافت
-105 s˸CX:SPEED	f˸ISA	f˸همبافت
+104	s˸CX:DIRECTION	f˸ISA	f˸همبافت
+105	s˸CX:SPEED	f˸ISA	f˸همبافت
+200	s˸verb#v	s˸CX:LOCATION	s˸مکان#r
+201	s˸verb#v	s˸CX:TIME	s˸مکان#r
+202	s˸verb#v	s˸CX:EMOTION	f˸حس§n-14738
+203	s˸verb#v	s˸CX:MOOD	f˸وضعیت§n-12745
 # f˸cx:mood, f˸cx:emotion, cx:time, cx:location in 4 ta cx ra hameye verbs darand.
-
-

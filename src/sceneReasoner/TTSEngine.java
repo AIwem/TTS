@@ -9,6 +9,7 @@ import ir.ac.itrc.qqa.semantic.reasoning.PlausibleAnswer;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleQuestion;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleStatement;
 import ir.ac.itrc.qqa.semantic.reasoning.SemanticReasoner;
+import ir.ac.itrc.qqa.semantic.util.Common;
 import ir.ac.itrc.qqa.semantic.util.MyError;
 
 import java.util.ArrayList;
@@ -434,20 +435,15 @@ public class TTSEngine {
 		//adding this instance concept to the knowledge base.
 		Node instanceNode = _TTSKb.addConcept(instanceName, false, SourceType.TTS);
 		
-		//---------- finding the synset Node of original Node ---------------------------
-		ArrayList<PlausibleAnswer> answers = originalNode.findTargetNodes(KnowledgeBase.HPR_SYN);
+		//finding the synset Node of original Node ---------------------------
+		Node SynSetNode = originalNode.getSynSet();
 		
-		Node SynSetNode = null;
-		for (PlausibleAnswer answer: answers)
-			if(answer.answer != null){
-				SynSetNode = answer.answer;
-				break;
-			}		
 		//option a: instaceNode ISA originalNode --> dose not work !!!!!!
 		//_kb.addRelation(instanceNode, originalNode, KnowledgeBase.HPR_ISA, SourceType.TTS);
 		
+		
 		//option b: instaceNode ISA synSetNode --> works :)
-		if(SynSetNode != null){
+		if(SynSetNode  != null){
 			print("option b: " + instanceNode + " ISA " + SynSetNode);
 			_TTSKb.addRelation(instanceNode, SynSetNode, KnowledgeBase.HPR_ISA, SourceType.TTS);
 		}
@@ -456,11 +452,10 @@ public class TTSEngine {
 			print("option c: " + instanceNode + " SIM " + originalNode + " ------ NOTE ---- NOTE ---- NOTE ---- NOTE ---- NOTE ----");		
 			_TTSKb.addRelation(instanceNode, originalNode, KnowledgeBase.HPR_SIM, SourceType.TTS);
 		}
-		
-		
+				
 		return instanceNode;		
 	}
-		
+
 	/**
 	 * checks if this node name is a pure node fetched from kb or 
 	 * it is an instance created by "createInstance" method or a relation cloned by addRelation.
@@ -532,16 +527,19 @@ public class TTSEngine {
 		addTo_seen_sceneParts(pure_name, sp);
 	}
 
-	private Node getPureNode(Node instance) {
+	public Node getPureNode(Node instance) {
 		if(instance == null)
 			return null;
 		
 		String pure_name = makePureName(instance);
 		
 		if(seen_nodes.containsKey(pure_name)){
+			
 			ArrayList<Node> allInstances = seen_nodes.get(pure_name);
-			if(allInstances != null && allInstances.size()>0)
+			
+			if(!Common.isEmpty(allInstances))
 				return allInstances.get(0);
+			
 			MyError.error(pure_name + " key exists in seen_nodes but no Node exists! probably the map is corrupted!");			
 		}
 		else

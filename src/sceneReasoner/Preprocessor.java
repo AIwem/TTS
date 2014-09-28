@@ -35,6 +35,9 @@ public class Preprocessor {
 //	private SemanticReasoner _re;
 	private TTSEngine _ttsEngine = null;
 	
+	private String verb_root_name = "verb#v";
+	private ArrayList<PlausibleStatement> default_contexts = null;
+	
 	
 	/**
 	 * We have no NLP module to process input text and convert it to related part,
@@ -410,11 +413,11 @@ public class Preprocessor {
 	/**
 	 * this method based on the ScenePart of the subject(s) of the sentenceModel adds RoleAction(s) or ObjectAction(s) to primarySceneModel. 
 	 * It is important to note that when this method is called _wsd parameter of  
-	 * all subject(s) of this sentenceModel has been allocated! 
+	 * all subject(s) of this sentenceModel has been allocated ! 
 	 * 
-	 * @param verb 
-	 * @param sentenceModel
-	 * @param primarySceneModel
+	 * @param verb guaranteed not to be null
+	 * @param sentenceModel guaranteed not to be null.
+	 * @param primarySceneModel guaranteed not to be null.
 	 */
 	private void addVerbToPrimarySceneModel(SentencePart verb, SentenceModel sentenceModel, SceneModel primarySceneModel){
 		
@@ -530,27 +533,16 @@ public class Preprocessor {
 	}
 	/**
 	 * TODO:
-<<<<<<< HEAD
 	 * 1- allocate_wsd verb 									   				--> done
 	 * 2- adding proper RoleActoin or ObjectAction to sceneModel.  				--> done
 	 * 3- create relation of verb!		   						   				--> done
 	 * 
 	 * 4- defining verb capacities in INJUREDPIGEON kb.							--> done as test
-	 * 5- loading these capacities from kb for SynSetof verbs.					-->
+	 * 5- loading these capacities from kb for SynSetof verbs.					--> done
 	 * 6- preparing values for these capacities --> in SceneReasoner,next phase.
 	 *   															  
-=======
-	 * 1- allocate_wsd verb 									   --> done
-	 * 2- create relation of verb!		   						   --> done
-	 * 3- defining verb capacities in INJUREDPIGEON kb.
-	 * 4- loading these capacities from kb for SynSetof verbs.
-	 * 5- preparing values for these capacities --> in SceneReasoner class, next phase.
-	 * 6- adding proper RoleActoin or ObjectAction to sceneModel.  --> for transitive verbs done 
-	 * 															   TODO: but non-transitive!!!!
->>>>>>> branch 'dev' of https://github.com/hasheminamin/TTS.git
-	 *  
-	 * @param sentenceModel
-	 * @param primarySceneModel
+	 * @param sentenceModel guaranteed not to be null.
+	 * @param primarySceneModel guaranteed not to be null.
 	 */
 	private void preprocessVerb(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		SentencePart verb = sentenceModel.getVerb();
@@ -563,30 +555,47 @@ public class Preprocessor {
 		//_wsd of verb is set to proper Node of KB.
 		allocate_wsd(verb);
 		
-		if(verb._wsd != null){
+		if(verb._wsd == null){
+			MyError.error(verb._wsd_name + " couldn't get allocated!");
+			return;
+		}
+		else{
 			
 			//here _wsd of subject(s) of this sentenceModel has been allocated!								
 			addVerbToPrimarySceneModel(verb, sentenceModel, primarySceneModel);
 			
-			//here _wsd of subject(s), object(s), and adverb(s) of this sentence has been allocated!
-			defineVerbRelation(verb, sentenceModel, primarySceneModel);			
+			//here _wsd of subject(s) and object(s) of this sentence has been allocated!
+			defineVerbRelation(verb, sentenceModel, primarySceneModel);
 			
-			//maybe call to it will be cancelled.			
-			//addToPrimarySceneModel(verb, primarySceneModel);			
-
+			Node pure_verb = _ttsEngine.getPureNode(verb._wsd);
+			
+			if(pure_verb == null){
+				MyError.error("the pure version of " + verb + " could not be found");
+				return;
+			}
+			
+			//load verb capacities from kb.
+			ArrayList<PlausibleStatement> verb_cxs = loadVerbCapacities(pure_verb);
+			
+			print("loaded contexts" + verb_cxs);
+			
+			setLocationContext(verb, primarySceneModel.getLocation(), verb_cxs);
+			
+			setTimeContext(verb, primarySceneModel.getTime(), verb_cxs);
+			
 		}
-		else
-			MyError.error(verb._wsd_name + " couldn't get allocated!");		
+		
+					
 	}	
-	
+
 	/**
 	 * this method defines the proper relation resulted from the verb of this sentence.
 	 * It is important to note that when this method is called _wsd parameter of  
 	 * all subject(s) and object(s) of this sentence has been allocated! 
 	 * 
-	 * @param verb the verb its relation are to be defined.
-	 * @param sentenceModel
-	 * @param primarySceneModel
+	 * @param verb the verb its relation are to be defined. guaranteed not to be null.
+	 * @param sentenceModel guaranteed not to be null.
+	 * @param primarySceneModel guaranteed not to be null.
 	 */
 	private void defineVerbRelation(SentencePart verb, SentenceModel sentenceModel, SceneModel primarySceneModel){
 		
@@ -616,10 +625,7 @@ public class Preprocessor {
 						//adding the relation of this sentence to kb.
 						PlausibleStatement ps = _kb.addRelation(sbj._wsd, obj._wsd, verb._wsd, SourceType.TTS);
 						print("relation added ------------- : " + ps.argument.getName() + " -- " + ps.getName() + " -- " + ps.referent.getName());
-						
-//						//just for testing cxTime
-//						PlausibleStatement ps2 = _kb.addRelation(ps, _kb.addConcept("اکنون§n-12609"), KnowledgeBase.HPR_CXTIME, SourceType.TTS);
-//						print("relation added ------------- : " + ps2.argument.getName() + " -- " + ps2.getName() + " -- " + ps2.referent.getName());								
+														
 					}				
 			
 			if(!transitive_verb){
@@ -631,5 +637,51 @@ public class Preprocessor {
 			}
 		}
 	}
+
+	/**
+	 * load verb capacities from kb.
+	 * 
+	 * @param pure_verb guaranteed not to be null.
+	 */
+	private ArrayList<PlausibleStatement> loadVerbCapacities(Node pure_verb) {	
+		
+		ArrayList<PlausibleStatement> cxs = new ArrayList<PlausibleStatement>();
+		
+		Node synSet = pure_verb.getSynSet();
+		
+		print("\nSysSet of " + pure_verb + " is " + synSet);
+		
+		if(synSet == null)
+			MyError.error("the verb " + pure_verb + " has no synset!");
+		else
+			cxs = synSet.loadCXs();
+		
+		if(default_contexts == null){
+			
+			Node verb_root = _kb.addConcept(verb_root_name);
+			default_contexts = verb_root.loadCXs();
+		}
+		cxs.addAll(default_contexts);	
+		
+		return cxs;
+	}
 	
+	private void setLocationContext(SentencePart verb, Location location, ArrayList<PlausibleStatement> CXs){
+		if(location == null)
+			return;
+		
+		for(PlausibleStatement cx:CXs){
+			print("" + cx);
+//			if (cx == CX:LOCATION)
+//				_kb.addRelation(verb._wsd, cx.relation, location._node)		
+//			
+//			
+		}
+	}
+	
+	
+	private void setTimeContext(SentencePart verb, Time time, ArrayList<PlausibleStatement> CXs) {
+		// TODO Auto-generated method stub
+		
+	}
 }
