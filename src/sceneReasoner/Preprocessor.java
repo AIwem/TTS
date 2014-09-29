@@ -14,6 +14,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 import sceneElement.*;
+import model.CONTEXT;
 import model.SentencePart;
 import model.SceneModel;
 import model.ScenePart;
@@ -670,12 +671,23 @@ public class Preprocessor {
 		if(location == null)
 			return;
 		
-		for(PlausibleStatement cx:CXs){
-			print("" + cx);
-//			if (cx == CX:LOCATION)
-//				_kb.addRelation(verb._wsd, cx.relation, location._node)		
-//			
-//			
+		for(PlausibleStatement cx : CXs){		
+			
+			if(cx.relationType == null){
+				MyError.error("this " + cx + " has no relationType!");
+				return;
+			}
+			print("cx.relationType= " + cx.relationType);
+			
+			String cxName = cx.relationType.getContextName();			
+			
+			if(CONTEXT.LOCATION == CONTEXT.parse(cxName)){
+				print("verb._wsd= " + verb._wsd);
+				print("location= " + location._node);
+				PlausibleStatement locCx = _kb.addRelation(verb._wsd, location._node, cx.relationType);
+				print("locCx: " + locCx);
+			
+			}
 		}
 	}
 	
