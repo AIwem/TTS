@@ -137,11 +137,11 @@ public class TTSEngine {
 		pq.referent = referent;
 		pq.descriptor = descriptor;		
 		//pq.descriptor = KnowledgeBase.HPR_ANY;
-		PlausibleTerm relType = (PlausibleTerm)descriptor;
-		ArrayList<PlausibleStatement> ans = argument.findOutRelations(relType.relationType);
+		//PlausibleTerm relType = (PlausibleTerm)descriptor;
+		ArrayList<PlausibleStatement> ans = descriptor.findOutRelations(KnowledgeBase.HPR_ANY);//relType.relationType);
 		PlausibleStatement desInstance = ans.get(0);
-		ans = null;
-		ans = desInstance.findOutRelations(KnowledgeBase.HPR_CXTIME);
+//		ans = null;
+//		ans = desInstance.findOutRelations(KnowledgeBase.HPR_CXTIME);
 		pq.cxTime = ans.get(0).referent;
 		
 	  

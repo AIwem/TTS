@@ -129,10 +129,10 @@ public class UI {
 		
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~");
 		
-		Node arg = ui.tts._TTSKb.addConcept("*چشم افتادن#v (1) (1)");
+		Node arg = ui.tts._TTSKb.addConcept("پسر#n2 (1)");//"*چشم افتادن#v (1) (1)");
 		ArrayList<PlausibleStatement> ans = arg.findOutRelations(KnowledgeBase.HPR_ANY);
-		Node des = ans.get(0);
-		Node ref = ans.get(0).referent;
+		Node des = ans.get(1);
+		Node ref = ans.get(1).referent;
 			
 		ui.tts.checkSemanticReasoner1(arg, des, ref);
 		
