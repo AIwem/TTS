@@ -420,7 +420,7 @@ public class Preprocessor {
 	 * @param sentenceModel guaranteed not to be null.
 	 * @param primarySceneModel guaranteed not to be null.
 	 */
-	private void addVerbToPrimarySceneModel(SentencePart verb, SentenceModel sentenceModel, SceneModel primarySceneModel){
+	private void addVerbToPrimarySceneModel(PlausibleStatement verb, SentenceModel sentenceModel, SceneModel primarySceneModel){
 		
 	
 		//here _wsd of subject(s), object(s), and adverb(s) of this sentence has been allocated!								
@@ -448,7 +448,7 @@ public class Preprocessor {
 					return;
 				}					
 				
-				RoleAction role_action = new RoleAction(verb._name, verb._wsd);				
+				RoleAction role_action = new RoleAction(verb.getName(), verb);				
 				role.addRole_action(role_action);
 			}
 			else if(sbjSp == ScenePart.DYNAMIC_OBJECT){
@@ -459,7 +459,7 @@ public class Preprocessor {
 					return;
 				}
 				
-				ObjectAction obj_act = new ObjectAction(verb._name, verb._wsd);				
+				ObjectAction obj_act = new ObjectAction(verb.getName(), verb);				
 				dyn_obj.addObejct_action(obj_act);
 			}			
 		}
@@ -561,28 +561,31 @@ public class Preprocessor {
 			return;
 		}
 		else{
-			
-			//here _wsd of subject(s) of this sentenceModel has been allocated!								
-			addVerbToPrimarySceneModel(verb, sentenceModel, primarySceneModel);
-			
+
 			//here _wsd of subject(s) and object(s) of this sentence has been allocated!
-			defineVerbRelation(verb, sentenceModel, primarySceneModel);
+			ArrayList<PlausibleStatement> verbRelations = defineVerbRelation(verb, sentenceModel, primarySceneModel);
 			
-			Node pure_verb = _ttsEngine.getPureNode(verb._wsd);
-			
-			if(pure_verb == null){
-				MyError.error("the pure version of " + verb + " could not be found");
-				return;
+			for(PlausibleStatement verbRel: verbRelations){//TODO check multi-subject and multi-object logic be correct!
+				
+				//here _wsd of subject(s) of this sentenceModel has been allocated!								
+				addVerbToPrimarySceneModel(verbRel, sentenceModel, primarySceneModel);
+							
+				Node pure_verb = _ttsEngine.getPureNode(verbRel);
+				
+				if(pure_verb == null){
+					MyError.error("the pure version of " + verbRel + " could not be found");
+					return;
+				}
+				
+				//load verb capacities from kb.
+				ArrayList<PlausibleStatement> verb_cxs = loadVerbCapacities(pure_verb);
+				
+				print("loaded contexts " + verb_cxs);
+				
+				setLocationContext(verbRel, primarySceneModel.getLocation(), verb_cxs);
+				
+				setTimeContext(verbRel, primarySceneModel.getTime(), verb_cxs);
 			}
-			
-			//load verb capacities from kb.
-			ArrayList<PlausibleStatement> verb_cxs = loadVerbCapacities(pure_verb);
-			
-			print("loaded contexts" + verb_cxs);
-			
-			setLocationContext(verb, primarySceneModel.getLocation(), verb_cxs);
-			
-			setTimeContext(verb, primarySceneModel.getTime(), verb_cxs);
 			
 		}
 		
@@ -598,15 +601,16 @@ public class Preprocessor {
 	 * @param sentenceModel guaranteed not to be null.
 	 * @param primarySceneModel guaranteed not to be null.
 	 */
-	private void defineVerbRelation(SentencePart verb, SentenceModel sentenceModel, SceneModel primarySceneModel){
+	private ArrayList<PlausibleStatement> defineVerbRelation(SentencePart verb, SentenceModel sentenceModel, SceneModel primarySceneModel){
 		
+		ArrayList<PlausibleStatement> verbRelations = new ArrayList<PlausibleStatement>();
 		
 		//here _wsd of subject(s), object(s), and adverb(s) of this sentence has been allocated!								
 		ArrayList<SentencePart> subjects = sentenceModel.getSubjects();
 		
 		if(subjects == null || subjects.size() == 0){
 			MyError.error("sentence with verb " + verb + " has no subject part! " + sentenceModel);
-			return;
+			return verbRelations;
 		}
 		
 		for(SentencePart sbj:subjects){				
@@ -624,19 +628,21 @@ public class Preprocessor {
 						transitive_verb = true;
 						
 						//adding the relation of this sentence to kb.
-						PlausibleStatement ps = _kb.addRelation(sbj._wsd, obj._wsd, verb._wsd, SourceType.TTS);
-						print("relation added ------------- : " + ps.argument.getName() + " -- " + ps.getName() + " -- " + ps.referent.getName());
+						PlausibleStatement rel = _kb.addRelation(sbj._wsd, obj._wsd, verb._wsd, SourceType.TTS);
+						verbRelations.add(rel);
+						print("relation added ------------- : " + rel.argument.getName() + " -- " + rel.getName() + " -- " + rel.referent.getName());
 														
 					}				
 			
 			if(!transitive_verb){
 				//TODO check if using "KnowledgeBase.HPR_ANY" as referent is correct?!
 				//adding the relation of this sentence to kb. 
-				PlausibleStatement ps = _kb.addRelation(sbj._wsd, KnowledgeBase.HPR_ANY, verb._wsd, SourceType.TTS);
-				print("relation added ------------- : " + ps.argument.getName() + " -- " + ps.getName() + " -- " + ps.referent.getName());
-				
+				PlausibleStatement rel = _kb.addRelation(sbj._wsd, KnowledgeBase.HPR_ANY, verb._wsd, SourceType.TTS);
+				verbRelations.add(rel);
+				print("relation added ------------- : " + rel.argument.getName() + " -- " + rel.getName() + " -- " + rel.referent.getName());				
 			}
 		}
+		return verbRelations;
 	}
 
 	/**
@@ -667,8 +673,8 @@ public class Preprocessor {
 		return cxs;
 	}
 	
-	private void setLocationContext(SentencePart verb, Location location, ArrayList<PlausibleStatement> CXs){
-		if(location == null)
+	private void setLocationContext(PlausibleStatement verb, Location location, ArrayList<PlausibleStatement> CXs){
+		if(verb == null || location == null)
 			return;
 		
 		for(PlausibleStatement cx : CXs){		
@@ -676,23 +682,19 @@ public class Preprocessor {
 			if(cx.relationType == null){
 				MyError.error("this " + cx + " has no relationType!");
 				return;
-			}
-			print("cx.relationType= " + cx.relationType);
+			}			
 			
 			String cxName = cx.relationType.getContextName();			
 			
-			if(CONTEXT.LOCATION == CONTEXT.parse(cxName)){
-				print("verb._wsd= " + verb._wsd);
-				print("location= " + location._node);
-				PlausibleStatement locCx = _kb.addRelation(verb._wsd, location._node, cx.relationType);
-				print("locCx: " + locCx);
-			
+			if(CONTEXT.parse(cxName) == CONTEXT.LOCATION){				
+				PlausibleStatement locCx = _kb.addRelation(verb, location._node, cx.relationType);
+				print("" + locCx + " (" + verb + ")= " + location._node);			
 			}
 		}
 	}
 	
 	
-	private void setTimeContext(SentencePart verb, Time time, ArrayList<PlausibleStatement> CXs) {
+	private void setTimeContext(PlausibleStatement verb, Time time, ArrayList<PlausibleStatement> CXs) {
 		// TODO Auto-generated method stub
 		
 	}

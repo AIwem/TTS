@@ -126,7 +126,10 @@ public class UI {
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~");
 
 //		Node arg = ui.tts._TTSKb.addConcept("پسر#n2 (1)");
-//		Node desc = ui.tts._TTSKb.addConcept("*چشم افتادن#v (1) (1)");		
+//		Node desNode =  ui.tts._TTSKb.addConcept("*چشم افتادن#v (1) (1)");
+//		PlausibleTerm desc = (PlausibleTerm)desNode; 
+//		desc.relationType = ui.tts._TTSKb.addConcept("چشم افتادن#v (1)");
+//		
 //		Node ref = ui.tts._TTSKb.addConcept("کبوتر#n1 (1)");
 //				
 //		ui.tts.checkSemanticReasoner1(arg, desc, ref);
