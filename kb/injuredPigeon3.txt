@@ -27,10 +27,8 @@
 16	f˸سالمند§a-17323	f˸ISA	s˸گروه سنی#a
 00	f˸دویدن§v-8577	f˸CX:DIRECTION	f˸جانب§n-10268
 00	f˸دویدن§v-8577	f˸CX:SPEED	f˸شتاب§n-11230
-#00	f˸دویدن§v-8577	f˸CX:MOOD	f˸وضعیت§n-12745
-#00	f˸دویدن§v-8577	f˸CX:EMOTION	f˸حس§n-14738
 100	f˸CX:TIME	f˸ISA	f˸همبافت
-101	f˸CX:PLACE	f˸ISA	f˸همبافت
+101	f˸CX:LOCATION	f˸ISA	f˸همبافت
 102	s˸CX:MOOD	f˸ISA	f˸همبافت
 103	s˸CX:EMOTION	f˸ISA	f˸همبافت
 104	s˸CX:DIRECTION	f˸ISA	f˸همبافت
@@ -39,4 +37,4 @@
 201	s˸verb#v	s˸CX:TIME	s˸مکان#r
 202	s˸verb#v	s˸CX:EMOTION	f˸حس§n-14738
 203	s˸verb#v	s˸CX:MOOD	f˸وضعیت§n-12745
-# f˸cx:mood, f˸cx:emotion, cx:time, cx:location in 4 ta cx ra hameye verbs darand.
+# f˸cx:mood, f˸cx:emotion, cx:time, cx:location in 4 ta cx ra hameye verbs darand be hamin elat aanha ro dar .

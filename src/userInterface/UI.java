@@ -12,7 +12,7 @@ import sceneReasoner.TTSEngine;
 public class UI {
 	
 	private String inputStoryFilePath = "inputStory/inputStrory2.txt";
-	private String mainKbFilePath = "kb/farsnet--13.txt";
+	private String mainKbFilePath = "kb/farsnet--14.txt";
 	private String myKbFilePath = "kb/injuredPigeon3.txt";
 	//private String myKbFilePath = "kb/injuredPigeon_simple.txt";
 	//private String myKbFilePath = "kb/injuredPigeon_SS.txt";

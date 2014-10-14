@@ -403,6 +403,20 @@ public class TTSEngine {
 			return null;
 		}			
 	}
+	
+	public ArrayList<Node> getRelationAllInstances(String relation_name){
+		if(relation_name == null || relation_name.equals("-"))
+			return null;		
+		try{
+			if(seen_nodes.containsKey(relation_name))
+				return seen_nodes.get(relation_name);
+			return null;
+		}
+		catch(Exception e){
+			MyError.error(e.getMessage());
+			return null;
+		}			
+	}
 		
 	/**
 	 * this method adds an instance from originalNode by adding a unique index to the end of its name, 
