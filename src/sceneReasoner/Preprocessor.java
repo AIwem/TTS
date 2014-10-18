@@ -353,14 +353,15 @@ public class Preprocessor {
 				//it means that this relation must be different with the seen one! I have checked this logic it seems to be correct! 
 				if(wsd.argument != argument || wsd.referent != referent){
 					
-					ArrayList<Node> allInst = _ttsEngine.getRelationAllInstances(relation_name);
-					for(Node inst:allInst){
+					ArrayList<PlausibleStatement> allInst = _ttsEngine.getRelationAllInstances(relation_name);
+					if(allInst != null)
+						for(PlausibleStatement relInst:allInst)						
+							if(relInst.argument == argument && relInst.referent == referent){
+								descriptor = relInst;
+								break;
+							}
 						
-						PlausibleStatement relInst = (PlausibleStatement)inst;
-						if(relInst.argument == argument && relInst.referent == referent)
-							descriptor = relInst;
-					}
-					if(descriptor != null){
+					if(descriptor == null){
 						descriptor = _kb.addConcept(relation_name);
 						wsd = _kb.addRelation(argument, referent, descriptor, SourceType.TTS);					
 						_ttsEngine.addRelationInstance(relation_name, wsd);

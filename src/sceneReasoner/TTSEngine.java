@@ -404,13 +404,23 @@ public class TTSEngine {
 		}			
 	}
 	
-	public ArrayList<Node> getRelationAllInstances(String relation_name){
-		if(relation_name == null || relation_name.equals("-"))
+	public ArrayList<PlausibleStatement> getRelationAllInstances(String relation_name){	
+		if(relation_name == null || relation_name.equals(""))
 			return null;		
-		try{
-			if(seen_nodes.containsKey(relation_name))
-				return seen_nodes.get(relation_name);
-			return null;
+		try{			
+			ArrayList<PlausibleStatement> seen_relations = new ArrayList<PlausibleStatement>();
+			
+			if(seen_nodes.containsKey(relation_name)){
+				int size = 0;
+				ArrayList<Node> nodes = seen_nodes.get(relation_name);
+				
+				if(nodes != null)
+					size = nodes.size();
+				
+				for(int i = 1; i < size; i++)					
+					seen_relations.add((PlausibleStatement)nodes.get(i));				
+			}
+			return seen_relations;
 		}
 		catch(Exception e){
 			MyError.error(e.getMessage());
