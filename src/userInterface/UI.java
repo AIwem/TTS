@@ -124,8 +124,8 @@ public class UI {
 		StoryModel sm = ui.TTS();
 		
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~");
-
-//		Node arg = ui.tts._TTSKb.addConcept("پسر#n2 (1)");
+		
+//		Node arg = ui.tts._TTSKb.addConcept("چشم افتادن#v");
 //		Node desNode =  ui.tts._TTSKb.addConcept("*چشم افتادن#v (1) (1)");
 //		PlausibleTerm desc = (PlausibleTerm)desNode; 
 //		desc.relationType = ui.tts._TTSKb.addConcept("چشم افتادن#v (1)");
@@ -140,3 +140,4 @@ public class UI {
 		System.out.println("الحمدلله");
 	}
 }
+

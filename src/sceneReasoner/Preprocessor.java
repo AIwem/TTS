@@ -46,7 +46,7 @@ public class Preprocessor {
 	 */
 	//private String SentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
 	//private String SentenceInfosFileName = "inputStory/sentenceInfos_SS.txt";
-	private String SentenceInfosFileName = "inputStory/sentenceInfos4.txt";
+	private String SentenceInfosFileName = "inputStory/sentenceInfos_multiple instance of noun and verb.txt";
 		
 	
 	
@@ -284,10 +284,10 @@ public class Preprocessor {
 	 * if part's wsd_name has more than one part which includes one MAIN and probably a PRE or POST, so it must be mapped to a plausible statement in a _kb.
 	 * 
 	 * @param part the part its wsd parameter to be set.
-	 * @param _ttsEngine the sceneModel which part belongs to.
+	 * @param isNewNode is this part a new instance or is is the same as seen before.
 	 */
-	private void allocate_wsd(SentencePart part){
-		if(part == null || _ttsEngine == null)
+	private void allocate_wsd(SentencePart part, boolean isNewNode){
+		if(part == null)
 			return;
 			
 		String wsd_name = part._wsd_name;
@@ -318,19 +318,19 @@ public class Preprocessor {
 				switch(node_pos){
 				case("MAIN"):
 					main_sub_part = part.getMainSub_part();					
-					argument = _ttsEngine.findorCreateInstance(main_sub_part._wsd_name, false);
+					argument = _ttsEngine.findorCreateInstance(main_sub_part._wsd_name, isNewNode);
 					main_sub_part.set_wsd(argument);
 					break;					
 				case("PRE"):
 					pre_sub_part = part.getPreSub_part();
-					Node pre = _ttsEngine.findorCreateInstance(pre_sub_part._wsd_name, false);
+					Node pre = _ttsEngine.findorCreateInstance(pre_sub_part._wsd_name, isNewNode);
 					pre_sub_part.set_wsd(pre);				
 					//TODO: to complete the "PRE" DEP  
 					MyError.error("I don't know what to do with this PRE DEP sub_part " + pre_sub_part);
 					break;
 				case("POST"):										
 					post_sub_part = part.getPostSub_part();
-					referent = _ttsEngine.findorCreateInstance(post_sub_part._wsd_name, false);
+					referent = _ttsEngine.findorCreateInstance(post_sub_part._wsd_name, isNewNode);
 					post_sub_part.set_wsd(referent);
 					break;
 				//node_pos is a descriptor_name.
@@ -373,17 +373,18 @@ public class Preprocessor {
 		}
 		else{
 			//it means this part wsd_name is just one concept name, so we find or add it in sceneModel.			
-			Node wsd = _ttsEngine.findorCreateInstance(wsd_name, false);
+			Node wsd = _ttsEngine.findorCreateInstance(wsd_name, isNewNode);
 			part.set_wsd(wsd);
 		}
 		if(part.hasSub_parts())
 			for(SentencePart p:part.sub_parts)
 				if(p._wsd == null){																				
-					Node wsd = _ttsEngine.findorCreateInstance(p._wsd_name, false);
+					Node wsd = _ttsEngine.findorCreateInstance(p._wsd_name, isNewNode);
 					p.set_wsd(wsd);
 				}
 	}
 
+	
 	/**
 	 * this method based on the ScenePart of the part adds a Role, DynamicObject, StaticObject, or ... to primarySceneModel.
 	 * TODO: we have assumed for simplicity which every scene has a unique Role, DyanamicObject, and StaticObject with a one name.
@@ -480,7 +481,7 @@ public class Preprocessor {
 			}
 			
 			//_wsd of sbj is set to proper Node of KB.
-			allocate_wsd(sbj);	
+			allocate_wsd(sbj, false);	
 			
 			if(sbj._wsd != null)
 				addToPrimarySceneModel(sbj, primarySceneModel);			
@@ -502,7 +503,7 @@ public class Preprocessor {
 			else if(obj != null && obj.isObject()){
 			
 				//_wsd of obj is set to proper Node of KB.
-				allocate_wsd(obj);
+				allocate_wsd(obj, false);
 				
 				if(obj._wsd != null)			
 					addToPrimarySceneModel(obj, primarySceneModel);
@@ -525,7 +526,7 @@ public class Preprocessor {
 			else if(adv != null && adv.isAdverb()){
 				
 				//_wsd of adv is set to proper Node of KB.
-				allocate_wsd(adv);
+				allocate_wsd(adv, false);
 				
 				if(adv._wsd != null)			
 					addToPrimarySceneModel(adv, primarySceneModel);
@@ -557,7 +558,7 @@ public class Preprocessor {
 		}		
 			
 		//_wsd of verb is set to proper Node of KB.
-		allocate_wsd(verb);
+		allocate_wsd(verb, true);
 		
 		if(verb._wsd == null){
 			MyError.error(verb._wsd_name + " couldn't get allocated!");
@@ -627,7 +628,7 @@ public class Preprocessor {
 						//adding the relation of this sentence to kb.
 						PlausibleStatement rel = _kb.addRelation(sbj._wsd, obj._wsd, verb._wsd, SourceType.TTS);
 						verbRelations.add(rel);
-						print("relation added ------------- : " + rel.argument.getName() + " -- " + rel.getName() + " -- " + rel.referent.getName());
+						print("relation added ------------- : " + rel.argument.getName() + " -- " + rel.getName() + " -- " + rel.referent.getName() + "\n");
 														
 					}				
 			
@@ -636,7 +637,7 @@ public class Preprocessor {
 				//adding the relation of this sentence to kb. 
 				PlausibleStatement rel = _kb.addRelation(sbj._wsd, KnowledgeBase.HPR_ANY, verb._wsd, SourceType.TTS);
 				verbRelations.add(rel);
-				print("relation added ------------- : " + rel.argument.getName() + " -- " + rel.getName() + " -- " + rel.referent.getName());				
+				print("relation added ------------- : " + rel.argument.getName() + " -- " + rel.getName() + " -- " + rel.referent.getName() + "\n");				
 			}
 		}
 		return verbRelations;
@@ -653,10 +654,10 @@ public class Preprocessor {
 		
 		Node synSet = pure_verb.getSynSet();
 		
-		print("\nSysSet of " + pure_verb + " is " + synSet);
+		print("\nSynSet of " + pure_verb + " is " + synSet);
 		
 		if(synSet == null)
-			MyError.error("the verb " + pure_verb + " has no synset!");
+			MyError.error("the verb " + pure_verb + " has no Synset!");
 		else
 			cxs = synSet.loadCXs();
 		

@@ -312,22 +312,16 @@ public class TTSEngine {
 			 
 			//It is a new Node, so a new instance must be created and added to seen_nodes.
 			 else{
-				 if(seenNodes.size() > 0){					 
-					 
-					//creates an instance from its pure version fetched from kb.
-					 Node newInstance = createInstance(pure_name, seenNodes.get(0)); 
-					 seenNodes.add(newInstance);
-					 return newInstance;
-				 }
-				 else{
+				 if(seenNodes.size() == 0){
 					 MyError.error(pure_name + " key exists in seen_nodes but no Node exists! probably the map is corrupted!");
-					 Node pure_node = _TTSKb.addConcept(pure_name);//find original node from kb.
-					 
+					 Node pure_node = _TTSKb.addConcept(pure_name);//find original node from kb.					 
 					 seenNodes.add(pure_node);
-					 Node instance = createInstance(pure_name, pure_node);//creates an instance from its pure version fetched from kb.
-					 seenNodes.add(instance);
-					 return instance;
 				 }
+					 
+				//creates an instance from its pure version.
+				 Node newInstance = createInstance(pure_name, seenNodes.get(0)); 
+				 seenNodes.add(newInstance);
+				 return newInstance;			 	 				 
 			 }
 		}
 		//seen_nodes dose not contain this name, so it is not seen yet.
