@@ -46,7 +46,7 @@ public class Preprocessor {
 	 */
 	//private String SentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
 	//private String SentenceInfosFileName = "inputStory/sentenceInfos_SS.txt";
-	private String SentenceInfosFileName = "inputStory/sentenceInfos_multiple instance of noun and verb.txt";
+	private String SentenceInfosFileName = "inputStory/sentenceInfos3.txt";
 		
 	
 	
@@ -421,6 +421,10 @@ public class Preprocessor {
 			Location location = new Location(part._name, part._wsd);
 			primarySceneModel.setLocation(location);			
 		}
+		else if(sp == ScenePart.TIME){//TODO: check what else shall I do for this case!
+			Time time = new Time(part._name, part._wsd);
+			primarySceneModel.setTime(time);			
+		}
 	}
 	
 	/**
@@ -672,7 +676,7 @@ public class Preprocessor {
 	}
 	
 	private void setLocationContext(PlausibleStatement verbRelation, Location location, ArrayList<PlausibleStatement> CXs){
-		if(verbRelation == null || location == null)
+		if(verbRelation == null || location == null || CXs == null)
 			return;
 		
 		for(PlausibleStatement cx : CXs){		
@@ -693,7 +697,23 @@ public class Preprocessor {
 	
 	
 	private void setTimeContext(PlausibleStatement verbRelation, Time time, ArrayList<PlausibleStatement> CXs) {
-		// TODO Auto-generated method stub
+		if(verbRelation == null || time == null || CXs == null)
+			return;
+		
+		for(PlausibleStatement cx : CXs){		
+			
+			if(cx.relationType == null){
+				MyError.error("this " + cx + " has no relationType!");
+				return;
+			}			
+			
+			String cxName = cx.relationType.getContextName();			
+			
+			if(CONTEXT.parse(cxName) == CONTEXT.TIME){				
+				PlausibleStatement timeCx = _kb.addRelation(verbRelation, time._node, cx.relationType);
+				print("" + timeCx + " (" + verbRelation + ")= " + time._node + "\n");			
+			}
+		}
 		
 	}
 }

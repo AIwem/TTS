@@ -625,7 +625,7 @@ public class TTSEngine {
 	
 	/**
 	 * checks if node is a child of "راه§n-12894" or "جا§n-12733" returns true.
-	 * @param node
+	 * @param node the pure node fetched from kb.
 	 * @return
 	 */
 	private boolean isLocation(Node node){		
@@ -668,8 +668,32 @@ public class TTSEngine {
 		return false;
 	}
 	
-	private boolean isTime(Node pure_node) {
-		// TODO to implement!
+	/**
+	 * checks if node is a child of "جانور§n-12239" returns true.
+	 * @param node the pure node fetched from kb. 
+	 * @return
+	 */
+	private boolean isTime(Node node) {
+		if(node == null)
+			return false;
+		
+		print(node + "~~~~~~~~~~~~~~~~in isTime ~~~~~~~~~~~~~~~~~");
+		
+		PlausibleQuestion pq = new PlausibleQuestion();
+		pq.descriptor = KnowledgeBase.HPR_ISA;
+		pq.argument = node;			
+		pq.referent = _TTSKb.addConcept("");
+		
+		ArrayList<PlausibleAnswer> answers = writeAnswersTo(pq.descriptor, node, pq.referent);
+		//ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
+		for(PlausibleAnswer ans:answers ){
+			print("answer: " + ans);
+			if(ans.answer == KnowledgeBase.HPR_YES){
+				print(node.getName() + " isTime \n");
+				return true;				
+			}
+		}		
+		print(node + " is NOT Time \n");
 		return false;
 	}
 
@@ -795,7 +819,7 @@ public class TTSEngine {
 			addTo_seen_sceneParts(pure_name, sp);			
 		}
 
-		print(node + " pos is " + sp + "\n");			
+		print(node + " ScenePart is " + sp + "\n");			
 		return sp;
 	}	
 
