@@ -44,9 +44,10 @@ public class Preprocessor {
 	 * We have no NLP module to process input text and convert it to related part,
 	 * so temporarily we aught to read these processed information from a file named  SentenceInfosFileName. 
 	 */
-	//private String SentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
-	//private String SentenceInfosFileName = "inputStory/sentenceInfos_SS.txt";
-	private String SentenceInfosFileName = "inputStory/sentenceInfos3.txt";
+//	private String SentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
+//	private String SentenceInfosFileName = "inputStory/sentenceInfos_SS.txt";
+//	private String SentenceInfosFileName = "inputStory/sentenceInfos3.txt";
+	private String SentenceInfosFileName = "inputStory/SentenceInfos4_time.txt";
 		
 	
 	

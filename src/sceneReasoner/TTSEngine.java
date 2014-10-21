@@ -669,7 +669,7 @@ public class TTSEngine {
 	}
 	
 	/**
-	 * checks if node is a child of "جانور§n-12239" returns true.
+	 * checks if node is a child of "دوره زمانی§n-12603" or "فاصله زمانی§n-12691" returns true.
 	 * @param node the pure node fetched from kb. 
 	 * @return
 	 */
@@ -682,17 +682,33 @@ public class TTSEngine {
 		PlausibleQuestion pq = new PlausibleQuestion();
 		pq.descriptor = KnowledgeBase.HPR_ISA;
 		pq.argument = node;			
-		pq.referent = _TTSKb.addConcept("");
+		pq.referent = _TTSKb.addConcept("دوره زمانی§n-12603");
 		
 		ArrayList<PlausibleAnswer> answers = writeAnswersTo(pq.descriptor, node, pq.referent);
 		//ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
 		for(PlausibleAnswer ans:answers ){
 			print("answer: " + ans);
 			if(ans.answer == KnowledgeBase.HPR_YES){
-				print(node.getName() + " isTime \n");
+				print(node.getName() + " isTime دوره زمانی \n");
 				return true;				
 			}
-		}		
+		}	
+		
+		pq = new PlausibleQuestion();
+		pq.descriptor = KnowledgeBase.HPR_ISA;
+		pq.argument = node;			
+		pq.referent = _TTSKb.addConcept("فاصله زمانی§n-12691");
+		
+		answers = writeAnswersTo(pq.descriptor, node, pq.referent);
+		//ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
+		for(PlausibleAnswer ans:answers ){
+			print("answer: " + ans);
+			if(ans.answer == KnowledgeBase.HPR_YES){
+				print(node.getName() + " isTime فاصله زمانی \n");
+				return true;				
+			}
+		}	
+		
 		print(node + " is NOT Time \n");
 		return false;
 	}
@@ -729,20 +745,23 @@ public class TTSEngine {
 	}
 		
 	/**
-	 * TODO: It must be improved: recognizing that which scenePart has the node: a Role (human) or DynamicObject or StaticObject?!
+	 * TODO: It must be improved: recognizing that which scenePart has the node: 
+	 * a Role (human) or DynamicObject or StaticObject?!
 	 * this method checks:
 	 * <ul> if node POS is NOUN:
-	 * 		<li> if node is a child of "نفر§n-13075" returns ROLE </li>
-	 * 		<li> if node is a child of "جانور§n-12239" returns DYNAMIC_OBJ </li>
-	 * 		<li> if node is a child of "راه§n-12894" or "جا§n-12733" returns LOCATION </li>
-	 * 		<li> otherwise returns STATIC_OBJ </li>  			
+	 * 		<li> if node is a child of "نفر§n-13075" returns ROLE. </li>
+	 * 		<li> if node is a child of "جانور§n-12239" returns DYNAMIC_OBJ. </li>
+	 * 		<li> if node is a child of "راه§n-12894" or "جا§n-12733" returns LOCATION. </li>
+	 * 		<li> if node is a child of "" returns TIME. </li>
+	 * 		<li> otherwise returns STATIC_OBJ. </li>  			
+	 * <ul> if node POS is VERB:
+	 *  	<li> it returns  ACTION. </li> 		
+	 * </ul>  
 	 * </ul> 
 	 * <ul> if node POS is ADVERB: 		
-	 *  </ul>
-	 *  <ul> if node POS is VERB: 		
-	 *  </ul>  
-	 *  <ul> we don't make a ScenePart for an adjective. 		
-	 *  </ul> 
+	 * </ul>  
+	 * <ul> we don't make a ScenePart for an adjective. 		
+	 * </ul> 
 	 * 
 	 * @param pure_node the pure node fetched from kb.
 	 * @param pos the part of speech this node has.
@@ -752,8 +771,7 @@ public class TTSEngine {
 		if(pure_node == null)
 			return ScenePart.UNKNOWN;
 		
-		if(pos == POS.NOUN){
-			
+		if(pos == POS.NOUN){			
 			//TODO: I must remove these lines!-------			
 			if(pure_node.getName().equals("پسر#n2"))
 				return ScenePart.ROLE;
@@ -764,8 +782,7 @@ public class TTSEngine {
 			if(pure_node.getName().equals("سمت#n4"))
 				return ScenePart.LOCATION;
 			if(pure_node.getName().equals("خانه#n10"))
-				return ScenePart.SCENE_OBJECT;
-			
+				return ScenePart.SCENE_OBJECT;			
 			//---------------------------------------			
 
 			if(isHuman(pure_node))
@@ -782,13 +799,19 @@ public class TTSEngine {
 			
 			return ScenePart.SCENE_OBJECT;
 		}
+		
 		if(pos == POS.VERB){
 			return ScenePart.ACTION;
 		}
 		
-		if(pos == POS.ADVERB)
-			return null;
-		
+		if(pos == POS.ADVERB){
+			if(isLocation(pure_node))
+				return ScenePart.LOCATION;			
+			
+			if(isTime(pure_node))
+				return ScenePart.TIME;			
+		}
+					
 		return ScenePart.UNKNOWN;
 	}
 	
