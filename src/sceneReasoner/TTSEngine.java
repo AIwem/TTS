@@ -664,7 +664,7 @@ public class TTSEngine {
 			}
 		}		
 		
-		print(node + " is NOT Loation \n");
+		print(node + " is NOT Location \n");
 		return false;
 	}
 	

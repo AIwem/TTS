@@ -79,13 +79,13 @@ public class SceneReasoner {
 	 * this methods merges the Sentences of sentencesPrimaryScenes with each-other.
 	 *  
 	 * @param sentencesPrimaryScenes SceneModels of sentences which are to be merged. granted not be null!
-	 * @param merged_primary_scene SceneModel with merged roles. granted not be null!
+	 * @param merged_primary_scene SceneModel with merged sentences. granted not be null!
 	 */
 	private void mergeSentences(ArrayList<SceneModel> sentencesPrimaryScenes, SceneModel merged_primary_scene){
 	
-		for(SceneModel current_sentence:sentencesPrimaryScenes){
+		for(SceneModel current_scene:sentencesPrimaryScenes){
 			
-			ArrayList<SentenceModel> current_sentences = current_sentence.getSentences();
+			ArrayList<SentenceModel> current_sentences = current_scene.getSentences();
 			
 			for(SentenceModel sentence:current_sentences)
 				
@@ -177,10 +177,13 @@ public class SceneReasoner {
 	
 		for(SceneModel current_scene:sentencesPrimaryScenes){
 			Location current_location = current_scene.getLocation();
+			
+			if(current_location != null){
 				
-			if(merged_primary_scene.getLocation() != null)
-				MyError.error("this SceneModel previouly has a location " + merged_primary_scene.getLocation());
-			merged_primary_scene.setLocation(current_location);
+				if(merged_primary_scene.getLocation() != null)
+					MyError.error("this SceneModel previouly has a location " + merged_primary_scene.getLocation());
+				merged_primary_scene.setLocation(current_location);
+			}
 		}
 	}
 	
@@ -196,9 +199,12 @@ public class SceneReasoner {
 		for(SceneModel current_scene:sentencesPrimaryScenes){
 			Time current_time = current_scene.getTime();
 				
-			if(merged_primary_scene.getTime() != null)
-				MyError.error("this SceneModel previouly has a time " + merged_primary_scene.getTime());
-			merged_primary_scene.setTime(current_time);
+			if(current_time != null){
+				
+				if(merged_primary_scene.getTime() != null)
+					MyError.error("this SceneModel previouly has a time " + merged_primary_scene.getTime());
+				merged_primary_scene.setTime(current_time);
+			}
 		}
 	}
 	

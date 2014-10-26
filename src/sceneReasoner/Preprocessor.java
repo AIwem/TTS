@@ -47,7 +47,7 @@ public class Preprocessor {
 //	private String SentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
 //	private String SentenceInfosFileName = "inputStory/sentenceInfos_SS.txt";
 //	private String SentenceInfosFileName = "inputStory/sentenceInfos3.txt";
-	private String SentenceInfosFileName = "inputStory/SentenceInfos4_time.txt";
+	private String SentenceInfosFileName = "inputStory/SentenceInfos5.txt";
 		
 	
 	
@@ -562,7 +562,7 @@ public class Preprocessor {
 			return;
 		}		
 			
-		//_wsd of verb is set to proper Node of KB.
+		//_wsd of verb is set to proper Node of KB. note that second parameter reasonably is set to true, because every node is new one!
 		allocate_wsd(verb, true);
 		
 		if(verb._wsd == null){
