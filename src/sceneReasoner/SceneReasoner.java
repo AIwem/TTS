@@ -78,7 +78,7 @@ public class SceneReasoner {
 	/**
 	 * this methods merges the Sentences of sentencesPrimaryScenes with each-other.
 	 *  
-	 * @param sentencesPrimaryScenes SceneModels of sentences which are to be merged. granted not be null!
+	 * @param sentencesPrimaryScenes SceneModels of sentences which their Sentences are to be merged. granted not be null!
 	 * @param merged_primary_scene SceneModel with merged sentences. granted not be null!
 	 */
 	private void mergeSentences(ArrayList<SceneModel> sentencesPrimaryScenes, SceneModel merged_primary_scene){
@@ -99,7 +99,7 @@ public class SceneReasoner {
 	/**
 	 * this methods merges the roles of sentencesPrimaryScenes with each-other.
 	 *  
-	 * @param sentencesPrimaryScenes SceneModels of sentences which are to be merged. granted not be null!
+	 * @param sentencesPrimaryScenes SceneModels of sentences which their Roles are to be merged. granted not be null!
 	 * @param merged_primary_scene SceneModel with merged roles. granted not be null!
 	 */
 	private void mergeRoles(ArrayList<SceneModel> sentencesPrimaryScenes, SceneModel merged_primary_scene){
@@ -123,7 +123,7 @@ public class SceneReasoner {
 	/**
 	 * this methods merges the DynamicObjects of sentencesPrimaryScenes with each-other.
 	 *  
-	 * @param sentencesPrimaryScenes SceneModels of sentences which are to be merged. granted not be null!
+	 * @param sentencesPrimaryScenes SceneModels of sentences which their DynamicObjects are to be merged. granted not be null!
 	 * @param merged_primary_scene SceneModel with merged DynamicObjects. granted not be null!
 	 */
 	private void mergeDynamicObjects(ArrayList<SceneModel> sentencesPrimaryScenes, SceneModel merged_primary_scene){
@@ -146,7 +146,7 @@ public class SceneReasoner {
 	/**
 	 * this methods merges the StaticObjects of sentencesPrimaryScenes with each-other.
 	 *  
-	 * @param sentencesPrimaryScenes SceneModels of sentences which are to be merged. granted not be null!
+	 * @param sentencesPrimaryScenes SceneModels of sentences which their StaticObejcts are to be merged. granted not be null!
 	 * @param merged_primary_scene SceneModel with merged StaticObjects. granted not be null!
 	 */
 	private void mergeStaticObjects(ArrayList<SceneModel> sentencesPrimaryScenes, SceneModel merged_primary_scene) {
@@ -170,7 +170,7 @@ public class SceneReasoner {
 	 * this methods merges the Location of sentencesPrimaryScenes with each-other.
 	 * TODO: design a better policy!
 	 *  
-	 * @param sentencesPrimaryScenes SceneModels of sentences which are to be merged. granted not be null!
+	 * @param sentencesPrimaryScenes SceneModels of sentences which their Location are to be merged. granted not be null!
 	 * @param merged_primary_scene SceneModel with merged Location. granted not be null!
 	 */
 	private void mergeLocations(ArrayList<SceneModel> sentencesPrimaryScenes, SceneModel merged_primary_scene){
@@ -180,19 +180,22 @@ public class SceneReasoner {
 			
 			if(current_location != null){
 				
-				if(merged_primary_scene.getLocation() != null)
+				//it means that there are more than one Location for this scene!
+				if(merged_primary_scene.getLocation() != null){
 					MyError.error("this SceneModel previouly has a location " + merged_primary_scene.getLocation());
+					//TODO: the logic of merging location
+				}
 				merged_primary_scene.setLocation(current_location);
 			}
 		}
 	}
 	
 	/**
-	 * this methods merges the Location of sentencesPrimaryScenes with each-other.
+	 * this methods merges the Time of sentencesPrimaryScenes with each-other.
 	 * TODO: design a better policy!
 	 *  
-	 * @param sentencesPrimaryScenes SceneModels of sentences which are to be merged. granted not be null!
-	 * @param merged_primary_scene SceneModel with merged Location. granted not be null!
+	 * @param sentencesPrimaryScenes SceneModels of sentences which their Time are to be merged. granted not be null!
+	 * @param merged_primary_scene SceneModel with merged Time. granted not be null!
 	 */
 	private void mergeTimes(ArrayList<SceneModel> sentencesPrimaryScenes, SceneModel merged_primary_scene){
 	
@@ -211,7 +214,7 @@ public class SceneReasoner {
 	/**
 	 * this methods merges the SceneEmotions of sentencesPrimaryScenes with each-other.
 	 *  
-	 * @param sentencesPrimaryScenes SceneModels of sentences which are to be merged. granted not be null!
+	 * @param sentencesPrimaryScenes SceneModels of sentences which their SceneEmotions are to be merged. granted not be null!
 	 * @param merged_primary_scene SceneModel with merged SceneEmotions. granted not be null!
 	 */
 	private void mergeSceneEmotions(ArrayList<SceneModel> sentencesPrimaryScenes, SceneModel merged_primary_scene) {
@@ -236,7 +239,7 @@ public class SceneReasoner {
 	/**
 	 * this methods merges the SceneGoals of sentencesPrimaryScenes with each-other.
 	 *  
-	 * @param sentencesPrimaryScenes SceneModels of sentences which are to be merged. granted not be null!
+	 * @param sentencesPrimaryScenes SceneModels of sentences which their SceneGoals are to be merged. granted not be null!
 	 * @param merged_primary_scene SceneModel with merged SceneGoals. granted not be null!
 	 */
 	private void mergeSceneGoals(ArrayList<SceneModel> sentencesPrimaryScenes, SceneModel merged_primary_scene) {

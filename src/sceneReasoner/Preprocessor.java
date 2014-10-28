@@ -46,7 +46,6 @@ public class Preprocessor {
 	 */
 //	private String SentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
 //	private String SentenceInfosFileName = "inputStory/sentenceInfos_SS.txt";
-//	private String SentenceInfosFileName = "inputStory/sentenceInfos3.txt";
 	private String SentenceInfosFileName = "inputStory/SentenceInfos5.txt";
 		
 	
@@ -691,7 +690,7 @@ public class Preprocessor {
 			
 			if(CONTEXT.parse(cxName) == CONTEXT.LOCATION){				
 				PlausibleStatement locCx = _kb.addRelation(verbRelation, location._node, cx.relationType);
-				print("" + locCx + " (" + verbRelation + ")= " + location._node + "\n");			
+				print("" + locCx + " (" + verbRelation.getName() + ")= " + location._node + "\n");			
 			}
 		}
 	}
@@ -712,7 +711,7 @@ public class Preprocessor {
 			
 			if(CONTEXT.parse(cxName) == CONTEXT.TIME){				
 				PlausibleStatement timeCx = _kb.addRelation(verbRelation, time._node, cx.relationType);
-				print("" + timeCx + " (" + verbRelation + ")= " + time._node + "\n");			
+				print("" + timeCx + " (" + verbRelation.getName() + ")= " + time._node + "\n");			
 			}
 		}
 		

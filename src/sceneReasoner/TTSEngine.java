@@ -87,7 +87,7 @@ public class TTSEngine {
 	public void TextToScene(ArrayList<String> scene_inputNL, StoryModel storyModel, boolean isLastScene){
 		
 		if(scene_inputNL == null || scene_inputNL.size() == 0 || storyModel == null){
-			MyError.error("bad inputs!");
+			MyError.error("bad input lines!");
 			return;
 		}
 					
@@ -104,6 +104,7 @@ public class TTSEngine {
 			SentenceModel sentence = _pp.preprocessSentence(NLsentence);
 			
 			SceneModel cur_sen_scene = _pp.preprocessScene(sentence);
+			
 			if(cur_sen_scene != null)
 				sentencs_scenes.add(cur_sen_scene);
 							

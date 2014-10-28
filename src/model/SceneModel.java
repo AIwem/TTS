@@ -40,7 +40,7 @@ public class SceneModel {
 	private ArrayList<SceneEmotion> scene_emotions = new ArrayList<SceneEmotion>();
 	
 	
-	public SceneModel(StoryModel storyModel) {
+	public SceneModel(StoryModel storyModel) {		
 		this.storyModel = storyModel;
 		this.sentences = new ArrayList<SentenceModel>();		
 		this.roles = new ArrayList<Role>();
@@ -49,7 +49,7 @@ public class SceneModel {
 		this.scene_goals = new ArrayList<SceneGoal>();
 		this.scene_emotions = new ArrayList<SceneEmotion>();
 	}
-		
+	
 	public SceneModel(){
 		this.sentences = new ArrayList<SentenceModel>();		
 		this.roles = new ArrayList<Role>();
