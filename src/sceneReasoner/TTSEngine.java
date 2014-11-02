@@ -41,6 +41,10 @@ public class TTSEngine {
 	private Preprocessor _pp;
 	private SceneReasoner _sr;
 	
+	Node mozaf;	
+	Node adjective;
+	Node verb;
+	
 	/**
 	 * this map holds the Node object seen yet in this TTSEngine. 
 	 * It maps the Node pure name as key to the ArrayList<Node> of seen Nodes with this name in this SceneModel object.
@@ -70,6 +74,10 @@ public class TTSEngine {
 		
 		_pp = new Preprocessor(_TTSKb, _re, this);
 		_sr = new SceneReasoner(_TTSKb, _re, this);
+		
+		mozaf = _TTSKb.addConcept("mozaf#a");
+		adjective = _TTSKb.addConcept("adjective#a");
+		verb = _TTSKb.addConcept("verb#v");
 	}
 	
 	/**

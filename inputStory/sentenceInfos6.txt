@@ -6,7 +6,7 @@ name:ک	POS:UNKNOWN	SRL:SBJ_P	WSD:خردسال#a1	sub_part:-	dep:POST
 
 name:امروز	POS:ADVERB	SRL:ADV	WSD:امروز#n1	sub_part:-	dep:-
 
-name:در راه خانه	POS:NOUN	SRL:ADV	WSD:راه#n9	sub_part:راه،خانه	dep:-
+name:در راه خانه	POS:NOUN	SRL:ADV	WSD:MAIN_mozaf#a_POST	sub_part:راه،خانه	dep:-
 name:راه	POS:NOUN	SRL:ADV_P	WSD:راه#n9	sub_part:-	dep:MAIN
 name:خانه	POS:NOUN	SRL:ADV_P	WSD:خانه#n10	sub_part:-	dep:POST
 
@@ -41,7 +41,7 @@ name:شروع به دویدن کرد	POS:VERB	SRL:VERB	WSD:دویدن#v1	sub_par
 name:شروع کرد	POS:VERB	SRL:VERB_P	WSD:شروع کردن#v1	sub_part:-	dep:PRE
 name:دویدن	POS:VERB	SRL:VERB_P	WSD:دویدن#v1	sub_part:-	dep:MAIN
 
-name:به سمت خانه	POS:NOUN	SRL:ADV	WSD:MAIN_مسیر§n-14355_POST	sub_part:سمت،خانه	dep:-
+name:به سمت خانه	POS:NOUN	SRL:ADV	WSD:MAIN_mozaf#a_POST	sub_part:سمت،خانه	dep:-
 name:سمت	POS:NOUN	SRL:ADV_P	WSD:سمت#n4	sub_part:-	dep:MAIN
 name:خانه	POS:NOUN	SRL:ADV_P	WSD:خانه#n10	sub_part:-	dep:POST
 

@@ -24,17 +24,17 @@ import ir.ac.itrc.qqa.semantic.util.MyError;
  * @author hashemi
  *
  */
-public class SceneReasoner {
+public class SceneReasoner {	
 	
 	//private KnowledgeBase _kb;	
 	//private SemanticReasoner _re;
-	//private TTSEngine _ttsEngine = null;
+	private TTSEngine _ttsEngine = null;
 		
 	
 	public SceneReasoner(KnowledgeBase kb, SemanticReasoner re, TTSEngine ttsEngine){
 		//this._kb = kb;
 		//this._re = re;
-		//this._ttsEngine = ttsEngine;
+		this._ttsEngine = ttsEngine;
 	}
 	
 	
@@ -184,6 +184,11 @@ public class SceneReasoner {
 				if(merged_primary_scene.getLocation() != null){
 					MyError.error("this SceneModel previouly has a location " + merged_primary_scene.getLocation());
 					//TODO: the logic of merging location
+					print("first scene location: " + merged_primary_scene.getLocation());
+					
+					print("mozaf: " + merged_primary_scene.getLocation()._node.getMozaf(_ttsEngine.mozaf));
+										
+					print("current location: " + current_location);
 				}
 				merged_primary_scene.setLocation(current_location);
 			}
@@ -269,4 +274,5 @@ public class SceneReasoner {
 	
 		
 	}
+	
 }

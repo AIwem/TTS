@@ -35,8 +35,7 @@ public class Preprocessor {
 	private KnowledgeBase _kb;
 //	private SemanticReasoner _re;
 	private TTSEngine _ttsEngine = null;
-	
-	private String verb_root_name = "verb#v";
+		
 	private ArrayList<PlausibleStatement> default_contexts = null;
 	
 	
@@ -46,7 +45,7 @@ public class Preprocessor {
 	 */
 //	private String SentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
 //	private String SentenceInfosFileName = "inputStory/sentenceInfos_SS.txt";
-	private String SentenceInfosFileName = "inputStory/SentenceInfos5.txt";
+	private String SentenceInfosFileName = "inputStory/SentenceInfos6.txt";
 		
 	
 	
@@ -345,7 +344,8 @@ public class Preprocessor {
 			}
 			
 			if(descriptor != null){//it means that findRelation has not found it and it is newly fetched from kb.
-				wsd = _kb.addRelation(argument, referent, descriptor, SourceType.TTS);				
+				wsd = _kb.addRelation(argument, referent, descriptor, SourceType.TTS);
+				print("wsd relation added ------------- : " + wsd.argument.getName() + " -- " + wsd.getName() + " -- " + wsd.referent.getName() + "\n");
 				_ttsEngine.addRelationInstance(descriptor.getName(), wsd);
 			}
 			else{//it means that findRelation has found this relation.
@@ -363,7 +363,8 @@ public class Preprocessor {
 						
 					if(descriptor == null){
 						descriptor = _kb.addConcept(relation_name);
-						wsd = _kb.addRelation(argument, referent, descriptor, SourceType.TTS);					
+						wsd = _kb.addRelation(argument, referent, descriptor, SourceType.TTS);
+						print("wsd relation added ------------- : " + wsd.argument.getName() + " -- " + wsd.getName() + " -- " + wsd.referent.getName() + "\n");
 						_ttsEngine.addRelationInstance(relation_name, wsd);
 					}
 				}
@@ -632,7 +633,7 @@ public class Preprocessor {
 						//adding the relation of this sentence to kb.
 						PlausibleStatement rel = _kb.addRelation(sbj._wsd, obj._wsd, verb._wsd, SourceType.TTS);
 						verbRelations.add(rel);
-						print("relation added ------------- : " + rel.argument.getName() + " -- " + rel.getName() + " -- " + rel.referent.getName() + "\n");
+						print("verb relation added ------------- : " + rel.argument.getName() + " -- " + rel.getName() + " -- " + rel.referent.getName() + "\n");
 														
 					}				
 			
@@ -641,7 +642,7 @@ public class Preprocessor {
 				//adding the relation of this sentence to kb. 
 				PlausibleStatement rel = _kb.addRelation(sbj._wsd, KnowledgeBase.HPR_ANY, verb._wsd, SourceType.TTS);
 				verbRelations.add(rel);
-				print("relation added ------------- : " + rel.argument.getName() + " -- " + rel.getName() + " -- " + rel.referent.getName() + "\n");				
+				print("verb relation added ------------- : " + rel.argument.getName() + " -- " + rel.getName() + " -- " + rel.referent.getName() + "\n");				
 			}
 		}
 		return verbRelations;
@@ -665,11 +666,11 @@ public class Preprocessor {
 		else
 			cxs = synSet.loadCXs();
 		
-		if(default_contexts == null){
-			
-			Node verb_root = _kb.addConcept(verb_root_name);
+		if(default_contexts == null){			
+			Node verb_root = _ttsEngine.verb;
 			default_contexts = verb_root.loadCXs();
 		}
+		
 		cxs.addAll(default_contexts);	
 		
 		return cxs;
