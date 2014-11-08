@@ -475,7 +475,7 @@ public class Preprocessor {
 	}
 	
 	private void preprocessSubject(SentenceModel sentenceModel, SceneModel primarySceneModel){
-		
+		print("\npreprocess subject");
 		ArrayList<SentencePart> subjects = sentenceModel.getSubjects();
 
 		for(SentencePart sbj:subjects){
@@ -496,7 +496,7 @@ public class Preprocessor {
 	}
 	
 	private void preprocessObject(SentenceModel sentenceModel, SceneModel primarySceneModel){
-		
+		print("\npreprocess object");
 		ArrayList<SentencePart> objects = sentenceModel.getObjects();
 		
 		for(SentencePart obj:objects){
@@ -520,7 +520,7 @@ public class Preprocessor {
 	
 	
 	private void preprocessAdverb(SentenceModel sentenceModel, SceneModel primarySceneModel) {
-		
+		print("\npreprocess adverb");
 		ArrayList<SentencePart> adverbs = sentenceModel.getAdverbs();
 		
 		for(SentencePart adv:adverbs){
@@ -538,8 +538,7 @@ public class Preprocessor {
 				else
 					MyError.error(adv._wsd_name + " couldn't get allocated!");
 			}
-		}
-		
+		}		
 	}
 	/**
 	 * TODO:
@@ -555,6 +554,7 @@ public class Preprocessor {
 	 * @param primarySceneModel guaranteed not to be null.
 	 */
 	private void preprocessVerb(SentenceModel sentenceModel, SceneModel primarySceneModel) {
+		print("\npreprocess verb");
 		SentencePart verb = sentenceModel.getVerb();
 		
 		if(verb == null || !verb.isVerb()){
@@ -667,7 +667,7 @@ public class Preprocessor {
 			cxs = synSet.loadCXs();
 		
 		if(default_contexts == null){			
-			Node verb_root = _ttsEngine.verb;
+			Node verb_root = _ttsEngine.verb_root;
 			default_contexts = verb_root.loadCXs();
 		}
 		

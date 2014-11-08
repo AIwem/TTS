@@ -13,6 +13,7 @@ import model.SceneModel;
 import model.SentenceModel;
 import model.StoryModel;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
+import ir.ac.itrc.qqa.semantic.reasoning.PlausibleStatement;
 import ir.ac.itrc.qqa.semantic.reasoning.SemanticReasoner;
 import ir.ac.itrc.qqa.semantic.util.MyError;
 
@@ -174,23 +175,31 @@ public class SceneReasoner {
 	 * @param merged_primary_scene SceneModel with merged Location. granted not be null!
 	 */
 	private void mergeLocations(ArrayList<SceneModel> sentencesPrimaryScenes, SceneModel merged_primary_scene){
-	
+		
+		ArrayList<Location> scene_locations = new ArrayList<Location>();
+		
 		for(SceneModel current_scene:sentencesPrimaryScenes){
+			
 			Location current_location = current_scene.getLocation();
 			
-			if(current_location != null){
+			if(current_location != null){				
 				
-				//it means that there are more than one Location for this scene!
-				if(merged_primary_scene.getLocation() != null){
-					MyError.error("this SceneModel previouly has a location " + merged_primary_scene.getLocation());
-					//TODO: the logic of merging location
-					print("first scene location: " + merged_primary_scene.getLocation());
-					
-					print("mozaf: " + merged_primary_scene.getLocation()._node.getMozaf(_ttsEngine.mozaf));
-										
-					print("current location: " + current_location);
-				}
-				merged_primary_scene.setLocation(current_location);
+				scene_locations.add(current_location);
+				
+				//temporarily set the first Location for merged_scene!
+				if(merged_primary_scene.getLocation() == null)
+					merged_primary_scene.setLocation(current_location);
+			}
+		}
+
+		//it means that there are more than one Location for this scene!
+		if(scene_locations.size() > 1){
+			MyError.error("this SceneModel has more than one Location");
+			print("scene_locations: " + scene_locations + "\n");				
+			
+			for(Location loc:scene_locations){
+				ArrayList<PlausibleStatement> loc_mozafs = loc._node.getMozaf(_ttsEngine.mozaf_root);
+				print(loc + " mozafs are= " + loc_mozafs);
 			}
 		}
 	}
@@ -203,17 +212,36 @@ public class SceneReasoner {
 	 * @param merged_primary_scene SceneModel with merged Time. granted not be null!
 	 */
 	private void mergeTimes(ArrayList<SceneModel> sentencesPrimaryScenes, SceneModel merged_primary_scene){
+		
+		ArrayList<Time> scene_times = new ArrayList<Time>();
 	
 		for(SceneModel current_scene:sentencesPrimaryScenes){
+			
 			Time current_time = current_scene.getTime();
 				
 			if(current_time != null){
 				
-				if(merged_primary_scene.getTime() != null)
-					MyError.error("this SceneModel previouly has a time " + merged_primary_scene.getTime());
-				merged_primary_scene.setTime(current_time);
+				scene_times.add(current_time);
+
+				//temporarily set the first Time for merged_scene!
+				if(merged_primary_scene.getTime() == null)
+					merged_primary_scene.setTime(current_time);
+				
 			}
 		}
+		
+		//it means that there are more than one Location for this scene!			
+		if(scene_times.size() > 1){
+			MyError.error("this SceneModel has more than one Time");
+			print("scene_times: " + scene_times + "\n");
+			
+			for(Time ti:scene_times){
+				ArrayList<PlausibleStatement> time_mozafs = ti._node.getMozaf(_ttsEngine.mozaf_root);
+				print(ti + " mozafs are= " + time_mozafs);
+			}
+			
+		}
+		
 	}
 	
 	/**

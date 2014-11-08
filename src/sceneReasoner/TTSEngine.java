@@ -41,9 +41,9 @@ public class TTSEngine {
 	private Preprocessor _pp;
 	private SceneReasoner _sr;
 	
-	Node mozaf;	
-	Node adjective;
-	Node verb;
+	Node mozaf_root;	
+	Node adjective_root;
+	Node verb_root;
 	
 	/**
 	 * this map holds the Node object seen yet in this TTSEngine. 
@@ -75,9 +75,9 @@ public class TTSEngine {
 		_pp = new Preprocessor(_TTSKb, _re, this);
 		_sr = new SceneReasoner(_TTSKb, _re, this);
 		
-		mozaf = _TTSKb.addConcept("mozaf#a");
-		adjective = _TTSKb.addConcept("adjective#a");
-		verb = _TTSKb.addConcept("verb#v");
+		mozaf_root = _TTSKb.addConcept("mozaf#a");
+		adjective_root = _TTSKb.addConcept("adjective#a");
+		verb_root = _TTSKb.addConcept("verb#v");
 	}
 	
 	/**
@@ -790,8 +790,8 @@ public class TTSEngine {
 				return ScenePart.LOCATION;
 			if(pure_node.getName().equals("سمت#n4"))
 				return ScenePart.LOCATION;
-			if(pure_node.getName().equals("خانه#n10"))
-				return ScenePart.SCENE_OBJECT;			
+//			if(pure_node.getName().equals("خانه#n10"))
+//				return ScenePart.SCENE_OBJECT;			
 			//---------------------------------------			
 
 			if(isHuman(pure_node))
