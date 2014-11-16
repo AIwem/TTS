@@ -8,6 +8,10 @@ name:در راه خانه	POS:NOUN	SRL:ADV	WSD:راه#n9	sub_part:راه،خان
 name:راه	POS:NOUN	SRL:ADV_P	WSD:راه#n9	sub_part:-	dep:MAIN
 name:خانه	POS:NOUN	SRL:ADV_P	WSD:خانه#n10	sub_part:-	dep:POST
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'dev' of https://github.com/hasheminamin/TTS.git
 name:به یک کبوتر زخمی	POS:NOUN	SRL:OBJ	WSD:MAIN_وضعیت سلامتی#a_POST	sub_part:یک،کبوتر،زخمی	dep:-
 name:یک	POS:NOUN	SRL:OBJ_P	WSD:یک#n1	sub_part:-	dep:PRE
 name:کبوتر	POS:NOUN	SRL:OBJ_P	WSD:کبوتر#n1	sub_part:-	dep:MAIN
