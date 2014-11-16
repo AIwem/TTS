@@ -1,0 +1,42 @@
+# Injured bird knowledge base export file
+# Knowledge base is composed of triples separated with a TAB, then certainty parameters follow.
+# Relation for relations start with a star (*). They come immediately after the original relation.
+# Concept names (constituents of triples) are unique. The may start with a letter + unicode character \02F8 '?'; please notice though very similar to a normal colon sign but it is not!)
+# The letter determines the source of the concept (if any).
+# For TTS system these sources are supported
+# 	f? Farsnet
+# 	w? Wordnet
+# 	s? TTS
+# All comment lines in this file start with a nubmber sign '#'
+# ------------------------------------------------------------------------------------------
+1	s˸چشم افتادن#v	f˸مشابه	f˸به چشم خوردن§v-8071
+3	s˸انسان#n	f˸مشابه	f˸نفر§n-13075
+5	f˸خویش§n-13365	f˸ISA	f˸نفر§n-13075
+6	f˸به چشم خوردن§v-8071	f˸ISA	s˸مواجهه#v
+7	s˸شنیدن#v	f˸ISA	s˸مواجهه#v
+8	s˸باخبر شدن#v	f˸ISA	s˸مواجهه#v
+#این رابطه اضافی است و از نوع چارجوبی است و نه بیان وقایع، بعدا باید در تعریف رول استفاده شود در بخش شرط رول.
+9	f˸حیوان#n1	s˸وضعیت سلامتی#a	s˸سلامتی حیوان#a
+10	f˸سالم#a3	f˸ISA	s˸سلامتی حیوان#a
+11	f˸زخمی#a1	f˸ISA	s˸سلامتی حیوان#a
+12	f˸مرده#a1	f˸ISA	s˸سلامتی حیوان#a
+#این رابطه اضافی است و از نوع چارجوبی است و نه بیان وقایع، بعدا باید در تعریف رول استفاده شود در بخش شرط رول.
+13	s˸انسان#n	s˸وضعیت سنی#a	s˸گروه سنی#a
+14	f˸خردسال§a-928	f˸ISA	s˸گروه سنی#a	
+15	f˸جوان§a-82	f˸ISA	s˸گروه سنی#a
+16	f˸سالمند§a-17323	f˸ISA	s˸گروه سنی#a
+00	f˸دویدن§v-8577	f˸CX:DIRECTION	f˸جانب§n-10268
+00	f˸دویدن§v-8577	f˸CX:SPEED	f˸شتاب§n-11230
+100	f˸CX:TIME	f˸ISA	f˸همبافت
+101	f˸CX:LOCATION	f˸ISA	f˸همبافت
+102	s˸CX:MOOD	f˸ISA	f˸همبافت
+103	s˸CX:EMOTION	f˸ISA	f˸همبافت
+104	s˸CX:DIRECTION	f˸ISA	f˸همبافت
+105	s˸CX:SPEED	f˸ISA	f˸همبافت
+200	s˸verb#v	s˸CX:LOCATION	s˸مکان#r
+201	s˸verb#v	s˸CX:TIME	s˸مکان#r
+202	s˸verb#v	s˸CX:EMOTION	f˸حس§n-14738
+203	s˸verb#v	s˸CX:MOOD	f˸وضعیت§n-12745
+300 s˸adjective#a	f˸ISA	f˸کلمه§n-13058
+301 s˸mozaf#a	f˸ISA	f˸کلمه§n-13058
+# f˸cx:mood, f˸cx:emotion, cx:time, cx:location in 4 ta cx ra hameye verbs darand be hamin elat aanha ro dar .
