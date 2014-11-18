@@ -19,6 +19,7 @@ import model.SceneModel;
 import model.ScenePart;
 import model.SentenceModel;
 import model.StoryModel;
+import model.SyntaxTag;
 
 /**
  * TTSEngine is an engine that converts natural language texts to Scene. 
@@ -290,10 +291,11 @@ public class TTSEngine {
 	 * for the new concept of "پسرک" the newNode parameter must be set to true.
 	 * 
 	 * @param pure_name name of Node to be searched in seen_nodes or kb.
-	 * @param newNode is it a new Node or it is previously seen? 
+	 * @param newNode is it a new Node or it is previously seen?
+	 * @param synTag the SyntaxTag of this node in the sentence. 
 	 * @return Node an instance node which the name of its original node is "pure_name".
 	 */	
-	public Node findorCreateInstance(String pure_name, boolean newNode){
+	public Node findorCreateInstance(String pure_name, boolean newNode, SyntaxTag synTag){
 		if(pure_name == null || pure_name.equals(""))
 			return null;		
 		
@@ -341,7 +343,7 @@ public class TTSEngine {
 			newlySeen.add(pure_node);
 			Node instance = createInstance(pure_name, pure_node);//creates an instance from its pure version fetched from kb.
 			newlySeen.add(instance);
-			addToTTSEngine(pure_node, newlySeen);	
+			addToTTSEngine(pure_node, newlySeen, synTag);	
 			return instance;			
 		}
 	}
@@ -354,8 +356,9 @@ public class TTSEngine {
 	 *  
 	 * @param pure_name the name of PlausibleStatement to be added.
 	 * @param relationInstance the instance of PlausibleStatement to be added.
+	 * @param synTag the SyntaxTag of this node(relation) in the sentence.
 	 */
-	public void addRelationInstance(String pure_name, PlausibleStatement relationInstance){
+	public void addRelationInstance(String pure_name, PlausibleStatement relationInstance, SyntaxTag synTag){
 		if(pure_name == null || pure_name.equals("") || relationInstance == null)
 			return;
 		
@@ -364,7 +367,7 @@ public class TTSEngine {
 			ArrayList<Node> seenRelation = new ArrayList<Node>();
 			seenRelation.add(relationInstance.relationType);
 			seenRelation.add(relationInstance);
-			addToTTSEngine(relationInstance.relationType, seenRelation);		
+			addToTTSEngine(relationInstance.relationType, seenRelation, synTag);		
 		}
 		else{// we have seen this relation before
 			ArrayList<Node> seenRelation = seen_nodes.get(pure_name);
@@ -545,12 +548,13 @@ public class TTSEngine {
 	 * 
 	 * @param pure_node
 	 * @param instanceNodes
+	 * @param synTag the SyntaxTag of this node in the sentence. 
 	 */
-	private void addToTTSEngine(Node pure_node, ArrayList<Node> instanceNodes){
+	private void addToTTSEngine(Node pure_node, ArrayList<Node> instanceNodes, SyntaxTag synTag){
 		String pure_name = pure_node.getName();		
 		addTo_seen_nodes(pure_name, instanceNodes);
 		
-		ScenePart sp = getScenePart(pure_node, pure_node.getPos());		
+		ScenePart sp = getScenePart(pure_node, pure_node.getPos(), synTag);		
 		addTo_seen_sceneParts(pure_name, sp);
 	}
 
@@ -752,7 +756,160 @@ public class TTSEngine {
 		return answers;
 		
 	}
+//	
+//	public enum ScenePart {
+//		ROLE,
+//		
+//		SCENE_OBJECT,
+//		DYNAMIC_OBJECT,
+//		STATIC_OBJECT,
+//		
+//		LOCATION,
+//		
+//		TIME,
+//		
+//		ACTION,
+//		OBJECT_ACTION,
+//		ROLE_ACTION,
+//		
+//		EMOTION,
+//		ROLE_EMOTION,
+//		SCENE_EMOTION,
+//		
+//		GOAL,
+//		ROLE_GOAL,
+//		SCENE_GOAL,	
+//		
+//		UNKNOWN
+//	}
+	
+	/**
+	 * recognizing that which scenePart has the node: 
+	 * a ROLE, DYNAMIC_OBJECT, STATIC_OBJECT, ACTION, LOCATION, TIME, EMOTION, GOAL or UNKNOWN?!
+	 * this method checks:
+	 * <ul> if node SyntaxTag is SUBJECT or SUBJECT_PART or OBJECT or OBJECT_PART:
+	 * 		<li> if node is a child of "نفر§n-13075" returns ROLE. </li>
+	 * 		<li> if node is a child of "جانور§n-12239" returns DYNAMIC_OBJ. </li>
+	 * 		<li> if node is a child of "راه§n-12894" or "جا§n-12733" returns LOCATION. </li>
+	 * 		<li> if node is a child of "" returns TIME. </li>
+	 * 		<li> otherwise returns STATIC_OBJ. </li>  			
+	 * <ul> if node POS is VERB:
+	 *  	<li> it returns  ACTION. </li> 		
+	 * </ul>  
+	 * </ul> 
+	 * <ul> if node POS is ADVERB: 		
+	 * </ul>  
+	 * <ul> we don't make a ScenePart for an adjective. 		
+	 * </ul> 
+	 * 
+	 * @param pure_node the pure node fetched from kb.
+	 * @param pos the part of speech this node has.
+	 * @param synTag the SyntaxTag of this node in the sentence.
+	 * @return the ScenePart of pure_node, including ScenePart.UNKNOWN.
+	 */
+	private ScenePart getScenePart(Node pure_node, POS pos, SyntaxTag synTag){
+		if(pure_node == null)
+			return ScenePart.UNKNOWN;
 		
+		if(synTag == SyntaxTag.SUBJECT || synTag == SyntaxTag.SUBJECT_PART || 
+				synTag == SyntaxTag.OBJECT || synTag == SyntaxTag.OBJECT_PART)
+			
+			return getSbjObjScenePart(pure_node, pos, synTag);
+			
+		if(synTag == SyntaxTag.ADVERB || synTag == SyntaxTag.ADVERB_PART)
+			
+			return getAdvScenePart(pure_node, pos, synTag);
+				
+		if(synTag == SyntaxTag.VERB || synTag == SyntaxTag.VERB_PART)
+		
+			return getVerbScenePart(pure_node, pos, synTag);
+					
+		return ScenePart.UNKNOWN;
+	}
+	
+	/**
+	 * recognizing which scenePart has the node: 
+	 * a ROLE, DYNAMIC_OBJECT, STATIC_OBJECT, ACTION, LOCATION, TIME, EMOTION, GOAL or UNKNOWN?!
+	 * this method checks:
+	 * <ul> if node SyntaxTag is SUBJECT or SUBJECT_PART or OBJECT or OBJECT_PART
+	 * 		<li> if node is a child of "نفر§n-13075" returns ROLE. </li>
+	 * 		<li> if node is a child of "جانور§n-12239" returns DYNAMIC_OBJ. </li>
+	 * 		<li> if node is a child of "راه§n-12894" or "جا§n-12733" returns LOCATION. </li>
+	 * 		<li> if node is a child of "" returns TIME. </li>
+	 * 		<li> otherwise returns STATIC_OBJ. </li>  			
+	 * <ul> if node POS is VERB:
+	 *  	<li> it returns  ACTION. </li> 		
+	 * </ul>  
+	 * </ul> 
+	 * <ul> if node POS is ADVERB: 		
+	 * </ul>  
+	 * <ul> we don't make a ScenePart for an adjective. 		
+	 * </ul> 
+	 * 
+	 * @param pure_node the pure node fetched from kb.
+	 * @param pos the part of speech this node has.
+	 * @param synTag the SyntaxTag of this node in the sentence. 
+	 * @return the ScenePart of pure_node, including ScenePart.UNKNOWN.
+	 */
+	private ScenePart getSbjObjScenePart(Node pure_node, POS pos, SyntaxTag synTag){
+		if(pure_node == null)
+			return ScenePart.UNKNOWN;
+		if(synTag == SyntaxTag.SUBJECT || synTag == SyntaxTag.SUBJECT_PART || 
+				synTag == SyntaxTag.OBJECT || synTag == SyntaxTag.OBJECT_PART){
+		
+			if(pos == POS.NOUN){			
+				//TODO: I must remove these lines!-------			
+				if(pure_node.getName().equals("پسر#n2"))
+					return ScenePart.ROLE;
+	//			if(pure_node.getName().equals("یک#n1"))
+	//				return ScenePart.SCENE_OBJECT;
+	//			if(pure_node.getName().equals("راه#n9"))
+	//				return ScenePart.LOCATION;
+	//			if(pure_node.getName().equals("سمت#n4"))
+	//				return ScenePart.LOCATION;
+	//			if(pure_node.getName().equals("خانه#n10"))
+	//				return ScenePart.SCENE_OBJECT;			
+				//---------------------------------------			
+	
+				if(isHuman(pure_node))
+					return ScenePart.ROLE;
+				
+				if(isAnimal(pure_node))
+					return ScenePart.DYNAMIC_OBJECT;
+				
+				if(isLocation(pure_node))
+					return ScenePart.LOCATION;			
+				
+				if(isTime(pure_node))
+					return ScenePart.TIME;
+				
+				return ScenePart.SCENE_OBJECT;
+			}			
+		}
+		
+		if(pos == POS.VERB){
+			return ScenePart.ACTION;
+		}
+		
+		if(synTag == SyntaxTag.ADVERB || synTag == SyntaxTag.ADVERB_PART){
+			
+			if(isLocation(pure_node))
+				return ScenePart.LOCATION;			
+			
+			if(isTime(pure_node))
+				return ScenePart.TIME;
+		}
+		if(pos == POS.ADVERB){
+			if(isLocation(pure_node))
+				return ScenePart.LOCATION;			
+			
+			if(isTime(pure_node))
+				return ScenePart.TIME;			
+		}
+					
+		return ScenePart.UNKNOWN;
+	}
+	
 	/**
 	 * TODO: It must be improved: recognizing that which scenePart has the node: 
 	 * a Role (human) or DynamicObject or StaticObject?!
@@ -774,45 +931,10 @@ public class TTSEngine {
 	 * 
 	 * @param pure_node the pure node fetched from kb.
 	 * @param pos the part of speech this node has.
+	 * @param synTag the SyntaxTag of this node in the sentence.
 	 * @return the ScenePart of pure_node, including ScenePart.UNKNOWN.
 	 */
-	private ScenePart getScenePart(Node pure_node, POS pos){
-		if(pure_node == null)
-			return ScenePart.UNKNOWN;
-		
-		if(pos == POS.NOUN){			
-			//TODO: I must remove these lines!-------			
-			if(pure_node.getName().equals("پسر#n2"))
-				return ScenePart.ROLE;
-//			if(pure_node.getName().equals("یک#n1"))
-//				return ScenePart.SCENE_OBJECT;
-//			if(pure_node.getName().equals("راه#n9"))
-//				return ScenePart.LOCATION;
-//			if(pure_node.getName().equals("سمت#n4"))
-//				return ScenePart.LOCATION;
-//			if(pure_node.getName().equals("خانه#n10"))
-//				return ScenePart.SCENE_OBJECT;			
-			//---------------------------------------			
-
-			if(isHuman(pure_node))
-				return ScenePart.ROLE;
-			
-			if(isAnimal(pure_node))
-				return ScenePart.DYNAMIC_OBJECT;
-			
-			if(isLocation(pure_node))
-				return ScenePart.LOCATION;			
-			
-			if(isTime(pure_node))
-				return ScenePart.TIME;
-			
-			return ScenePart.SCENE_OBJECT;
-		}
-		
-		if(pos == POS.VERB){
-			return ScenePart.ACTION;
-		}
-		
+	private ScenePart getAdvScenePart(Node pure_node, POS pos, SyntaxTag synTag){
 		if(pos == POS.ADVERB){
 			if(isLocation(pure_node))
 				return ScenePart.LOCATION;			
@@ -820,17 +942,49 @@ public class TTSEngine {
 			if(isTime(pure_node))
 				return ScenePart.TIME;			
 		}
-					
-		return ScenePart.UNKNOWN;
+		
+		return null;
 	}
+	
+	/**
+	 * TODO: It must be improved: recognizing that which scenePart has the node: 
+	 * a Role (human) or DynamicObject or StaticObject?!
+	 * this method checks:
+	 * <ul> if node POS is NOUN:
+	 * 		<li> if node is a child of "نفر§n-13075" returns ROLE. </li>
+	 * 		<li> if node is a child of "جانور§n-12239" returns DYNAMIC_OBJ. </li>
+	 * 		<li> if node is a child of "راه§n-12894" or "جا§n-12733" returns LOCATION. </li>
+	 * 		<li> if node is a child of "" returns TIME. </li>
+	 * 		<li> otherwise returns STATIC_OBJ. </li>  			
+	 * <ul> if node POS is VERB:
+	 *  	<li> it returns  ACTION. </li> 		
+	 * </ul>  
+	 * </ul> 
+	 * <ul> if node POS is ADVERB: 		
+	 * </ul>  
+	 * <ul> we don't make a ScenePart for an adjective. 		
+	 * </ul> 
+	 * 
+	 * @param pure_node the pure node fetched from kb.
+	 * @param pos the part of speech this node has.
+	 * @param synTag the SyntaxTag of this node in the sentence.
+	 * @return the ScenePart of pure_node, including ScenePart.UNKNOWN.
+	 */
+	private ScenePart getVerbScenePart(Node pure_node, POS pos, SyntaxTag synTag){	
+		if(pos == POS.VERB)
+			return ScenePart.ACTION;
+		return null;
+	}
+	
 	
 	/**
 	 * this methods searches the internal structure of this TTSEngine (seen_sceneParts) to find the ScenePart mapped to this node.
 	 *  
 	 * @param node the node which is ScenePart is to be found. it may be pure or instance node!
+	 * @param synTag the SyntaxTag of this node in the sentence.
 	 * @return 
 	 */
-	public ScenePart whichScenePart(Node node){
+	public ScenePart whichScenePart(Node node, SyntaxTag synTag){
 		print(node + "~~~~~~~~~~~~~~~ in whichScenePart ~~~~~~~~~~~~");
 		if(node == null)
 			return ScenePart.UNKNOWN;
@@ -847,7 +1001,7 @@ public class TTSEngine {
 			Node pure_node = getPureNode(node);	
 			POS pos = node.getPos();
 		
-			sp = getScenePart(pure_node, pos);
+			sp = getScenePart(pure_node, pos, synTag);
 			
 			addTo_seen_sceneParts(pure_name, sp);			
 		}

@@ -19,6 +19,7 @@ import model.SentencePart;
 import model.SceneModel;
 import model.ScenePart;
 import model.SentenceModel;
+import model.SyntaxTag;
 
 
 
@@ -284,8 +285,9 @@ public class Preprocessor {
 	 * 
 	 * @param part the part its wsd parameter to be set.
 	 * @param isNewNode is this part a new instance or is is the same as seen before.
+	 * @param synTag the SyntaxTag of this node in the sentence.
 	 */
-	private void allocate_wsd(SentencePart part, boolean isNewNode){
+	private void allocate_wsd(SentencePart part, boolean isNewNode, SyntaxTag synTag){
 		if(part == null)
 			return;
 			
@@ -317,19 +319,19 @@ public class Preprocessor {
 				switch(node_pos){
 				case("MAIN"):
 					main_sub_part = part.getMainSub_part();					
-					argument = _ttsEngine.findorCreateInstance(main_sub_part._wsd_name, isNewNode);
+					argument = _ttsEngine.findorCreateInstance(main_sub_part._wsd_name, isNewNode, synTag.getPartVersion());
 					main_sub_part.set_wsd(argument);
 					break;					
 				case("PRE"):
 					pre_sub_part = part.getPreSub_part();
-					Node pre = _ttsEngine.findorCreateInstance(pre_sub_part._wsd_name, isNewNode);
+					Node pre = _ttsEngine.findorCreateInstance(pre_sub_part._wsd_name, isNewNode, synTag.getPartVersion());
 					pre_sub_part.set_wsd(pre);				
 					//TODO: to complete the "PRE" DEP  
 					MyError.error("I don't know what to do with this PRE DEP sub_part " + pre_sub_part);
 					break;
 				case("POST"):										
 					post_sub_part = part.getPostSub_part();
-					referent = _ttsEngine.findorCreateInstance(post_sub_part._wsd_name, isNewNode);
+					referent = _ttsEngine.findorCreateInstance(post_sub_part._wsd_name, isNewNode, synTag.getPartVersion());
 					post_sub_part.set_wsd(referent);
 					break;
 				//node_pos is a descriptor_name.
@@ -346,7 +348,7 @@ public class Preprocessor {
 			if(descriptor != null){//it means that findRelation has not found it and it is newly fetched from kb.
 				wsd = _kb.addRelation(argument, referent, descriptor, SourceType.TTS);
 				print("wsd relation added ------------- : " + wsd.argument.getName() + " -- " + wsd.getName() + " -- " + wsd.referent.getName() + "\n");
-				_ttsEngine.addRelationInstance(descriptor.getName(), wsd);
+				_ttsEngine.addRelationInstance(descriptor.getName(), wsd, synTag);
 			}
 			else{//it means that findRelation has found this relation.
 				
@@ -365,7 +367,7 @@ public class Preprocessor {
 						descriptor = _kb.addConcept(relation_name);
 						wsd = _kb.addRelation(argument, referent, descriptor, SourceType.TTS);
 						print("wsd relation added ------------- : " + wsd.argument.getName() + " -- " + wsd.getName() + " -- " + wsd.referent.getName() + "\n");
-						_ttsEngine.addRelationInstance(relation_name, wsd);
+						_ttsEngine.addRelationInstance(relation_name, wsd, synTag);
 					}
 				}
 			}
@@ -374,13 +376,13 @@ public class Preprocessor {
 		}
 		else{
 			//it means this part wsd_name is just one concept name, so we find or add it in sceneModel.			
-			Node wsd = _ttsEngine.findorCreateInstance(wsd_name, isNewNode);
+			Node wsd = _ttsEngine.findorCreateInstance(wsd_name, isNewNode, synTag);
 			part.set_wsd(wsd);
 		}
 		if(part.hasSub_parts())
 			for(SentencePart p:part.sub_parts)
 				if(p._wsd == null){																				
-					Node wsd = _ttsEngine.findorCreateInstance(p._wsd_name, isNewNode);
+					Node wsd = _ttsEngine.findorCreateInstance(p._wsd_name, isNewNode, synTag.getPartVersion());
 					p.set_wsd(wsd);
 				}
 	}
@@ -398,7 +400,7 @@ public class Preprocessor {
 		if(part == null)
 			return;
 		
-		ScenePart sp = _ttsEngine.whichScenePart(part._wsd);				
+		ScenePart sp = _ttsEngine.whichScenePart(part._wsd, part._syntaxTag);				
 		
 		if(sp == ScenePart.ROLE){
 			if(!primarySceneModel.hasRole(part._wsd)){				
@@ -442,7 +444,7 @@ public class Preprocessor {
 		
 		Node sbj = verbRelation.argument;				
 										
-		ScenePart sbjSp = _ttsEngine.whichScenePart(sbj);
+		ScenePart sbjSp = _ttsEngine.whichScenePart(sbj, SyntaxTag.VERB);
 		
 		if(sbjSp == null || sbjSp == ScenePart.UNKNOWN){
 			MyError.error("this subject \"" + sbj + "\" has no ScenePart");
@@ -486,7 +488,7 @@ public class Preprocessor {
 			}
 			
 			//_wsd of sbj is set to proper Node of KB.
-			allocate_wsd(sbj, false);	
+			allocate_wsd(sbj, false, SyntaxTag.SUBJECT);	
 			
 			if(sbj._wsd != null)
 				addToPrimarySceneModel(sbj, primarySceneModel);			
@@ -508,7 +510,7 @@ public class Preprocessor {
 			else if(obj != null && obj.isObject()){
 			
 				//_wsd of obj is set to proper Node of KB.
-				allocate_wsd(obj, false);
+				allocate_wsd(obj, false, SyntaxTag.OBJECT);
 				
 				if(obj._wsd != null)			
 					addToPrimarySceneModel(obj, primarySceneModel);
@@ -531,7 +533,7 @@ public class Preprocessor {
 			else if(adv != null && adv.isAdverb()){
 				
 				//_wsd of adv is set to proper Node of KB.
-				allocate_wsd(adv, false);
+				allocate_wsd(adv, false, SyntaxTag.ADVERB);
 				
 				if(adv._wsd != null)			
 					addToPrimarySceneModel(adv, primarySceneModel);
@@ -563,7 +565,7 @@ public class Preprocessor {
 		}		
 			
 		//_wsd of verb is set to proper Node of KB. note that second parameter reasonably is set to true, because every node is new one!
-		allocate_wsd(verb, true);
+		allocate_wsd(verb, true, SyntaxTag.VERB);
 		
 		if(verb._wsd == null){
 			MyError.error(verb._wsd_name + " couldn't get allocated!");
