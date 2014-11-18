@@ -747,7 +747,7 @@ public class TTSEngine {
 //			}
 		}
 		print("\tInferences: " + _re.totalCalls);
-		print("\tTime: " + _re.reasoningTime / 1000);
+		print("\tTime: " + _re.reasoningTime / 100 + " ms");
 		print("\tThroughput: " + (_re.totalCalls / _re.reasoningTime) * 1000 + " inference/s");
 		return answers;
 		
@@ -784,12 +784,12 @@ public class TTSEngine {
 			//TODO: I must remove these lines!-------			
 			if(pure_node.getName().equals("پسر#n2"))
 				return ScenePart.ROLE;
-			if(pure_node.getName().equals("یک#n1"))
-				return ScenePart.SCENE_OBJECT;
-			if(pure_node.getName().equals("راه#n9"))
-				return ScenePart.LOCATION;
-			if(pure_node.getName().equals("سمت#n4"))
-				return ScenePart.LOCATION;
+//			if(pure_node.getName().equals("یک#n1"))
+//				return ScenePart.SCENE_OBJECT;
+//			if(pure_node.getName().equals("راه#n9"))
+//				return ScenePart.LOCATION;
+//			if(pure_node.getName().equals("سمت#n4"))
+//				return ScenePart.LOCATION;
 //			if(pure_node.getName().equals("خانه#n10"))
 //				return ScenePart.SCENE_OBJECT;			
 			//---------------------------------------			
@@ -840,7 +840,8 @@ public class TTSEngine {
 		
 		//if it is seen before!
 		if(seen_sceneParts.containsKey(pure_name))			
-			sp = seen_sceneParts.get(pure_name);		
+			sp = seen_sceneParts.get(pure_name);	
+
 		//if it isn't seen before!
 		else{
 			Node pure_node = getPureNode(node);	

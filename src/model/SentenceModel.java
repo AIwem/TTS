@@ -110,7 +110,7 @@ public class SentenceModel{
 	/**
 	 * this method adds the input subjects at the end of subjects list of this SentenceModel.
 	 * it converts each string argument to a SentencePart object 
-	 * with _srl "SBJ" and _name argument content.
+	 * with _synTag "SBJ" and _name argument content.
 	 *   
 	 * @param subjects list of subjects of this sentence.
 	 */
@@ -120,7 +120,7 @@ public class SentenceModel{
 		
 		for(String sbj:subjects)
 			if(sbj!= null)
-				this.subjects.add(new SentencePart(sbj,SRL.SUBJECT));			
+				this.subjects.add(new SentencePart(sbj,SyntaxTag.SUBJECT));			
 				
 	}
 	
@@ -139,11 +139,11 @@ public class SentenceModel{
 	}
 	
 	/** The setter method which converts string argument to a SentencePart object
-	 * with _srl "VERB" and _name argument content.
+	 * with _syntaxTag "VERB" and _name argument content.
 	 * @param verb verb of this sentence.
 	 */
 	public void setVerb(String verb) {
-		this.verb = new SentencePart(verb,SRL.VERB);
+		this.verb = new SentencePart(verb,SyntaxTag.VERB);
 	}
 
 	public ArrayList<SentencePart> getObjects() {
@@ -189,7 +189,7 @@ public class SentenceModel{
 	/**
 	 * this method adds the input objects at the end of objects list of this SentenceModel.
 	 * it converts each string argument to a SentencePart object 
-	 * with _srl "OBJ" and _name argument content.
+	 * with _syntaxTag "OBJ" and _name argument content.
 	 *   
 	 * @param objects list of objects of this sentence.
 	 */
@@ -198,7 +198,7 @@ public class SentenceModel{
 			this.objects = new ArrayList<SentencePart>();
 		for(String obj:objects)
 			if(obj!= null)
-				this.objects.add(new SentencePart(obj,SRL.OBJECT));		
+				this.objects.add(new SentencePart(obj,SyntaxTag.OBJECT));		
 	}
 
 	public ArrayList<SentencePart> getAdverbs() {
@@ -246,21 +246,22 @@ public class SentenceModel{
 	/**
 	 * this method adds the input adverbs at the end of adverbs list of this SentenceModel.
 	 * it converts each string argument to a SentencePart object
-	 * with _srl "ADV" and _name argument content.
+	 * with _syntaxTag "ADV" and _name argument content.
 	 *   
 	 * @param adverbs list of adverbs of this sentence.
 	 */
 	public void addAdverbs(String... adverbs) {
 		if(this.adverbs == null)
 			this.adverbs = new ArrayList<SentencePart>();
+		
 		for(String adv:adverbs)
 			if(adv!= null)
-				this.adverbs.add(new SentencePart(adv,SRL.ADVERB));
+				this.adverbs.add(new SentencePart(adv,SyntaxTag.ADVERB));
 	}
 	
 	/**
 	 * This method gets sentence object and its different Parts, 
-	 * then places each SentencePart object in its propel SRL term.
+	 * then places each SentencePart object in its proper syntaxTag term.
 	 * we have temporarily assumed that each sentence has single subject, object, and adverb. 
 	 * //TODO: it must be generalized to multi-subjects, multi-objects, and multi-adverbs. 
 	 * 

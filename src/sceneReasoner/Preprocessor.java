@@ -148,9 +148,9 @@ public class Preprocessor {
 	 * This method gets partStr and return the its equivalent Part object.
 	 * partStr has all information about current Part. 
 	 * this information has a format like this:
-	 * name:پسرک	POS:NOUN	SRL:SBJ	WSD:پسرک	sub_part:پسر+ک
-	 * name:پسر	POS:NOUN	SRL:SBJ-P	WSD:پسر#n2	sub_part:-
-	 * name:ک	POS:UNKNOWN	SRL:SBJ-P	WSD:کوچک#a2	sub_part:-
+	 * name:پسرک	POS:NOUN	SYN:SBJ	WSD:پسرک	sub_part:پسر+ک
+	 * name:پسر	POS:NOUN	SYN:SBJ-P	WSD:پسر#n2	sub_part:-
+	 * name:ک	POS:UNKNOWN	SYN:SBJ-P	WSD:کوچک#a2	sub_part:-
 	 * 
 	 * @param partStr partStr has all information about current Part.
 	 * @return equivalent Part Object.
@@ -172,7 +172,7 @@ public class Preprocessor {
 		
 		newPart.set_pos(parts[1]);
 			
-		newPart.set_srl(parts[2]);
+		newPart.set_syntaxTag(parts[2]);
 		
 		newPart.set_wsd_name(parts[3]);
 		

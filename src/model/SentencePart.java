@@ -39,7 +39,7 @@ public class SentencePart {
 	/**
 	 * this part Semantic-Role-Label.
 	 */
-	public SRL _srl;
+	public SyntaxTag _syntaxTag;
 	
 	/**
 	 * this part Word_Sense_Disambiguation. 
@@ -72,64 +72,64 @@ public class SentencePart {
 	
 	/**
 	 * @param _name
-	 * @param _srl
+	 * @param _synTag
 	 */
-	public SentencePart(String _name, SRL _srl) {
+	public SentencePart(String _name, SyntaxTag _synTag) {
 		this._name = _name;
-		this._srl = _srl;
+		this._syntaxTag = _synTag;
 	}
 
 	/**
 	 * @param _name
 	 * @param sub_parts
 	 * @param _pos
-	 * @param _srl
+	 * @param _synTag
 	 * @param wSD
 	 */
-	public SentencePart(String _name, POS _pos, SRL _srl, Node wSD, ArrayList<SentencePart> sub_parts) {
+	public SentencePart(String _name, POS _pos, SyntaxTag _synTag, Node wSD, ArrayList<SentencePart> sub_parts) {
 		this._name = _name;		
 		this._pos = _pos;
-		this._srl = _srl;
+		this._syntaxTag = _synTag;
 		_wsd = wSD;
 		this.sub_parts = sub_parts;
 	}
 	
 	/**
-	 * checks weather this part object _srl is SBJ or not?
+	 * checks weather this part object _syntaxTag is SBJ or not?
 	 * @return
 	 */
 	public boolean isSubject(){
-		if(_srl == SRL.SUBJECT)
+		if(_syntaxTag == SyntaxTag.SUBJECT)
 			return true;
 		return false;		
 	}
 	
 	/**
-	 * checks weather this part object _srl is OBJ or not?
+	 * checks weather this part object _syntaxTag is OBJ or not?
 	 * @return
 	 */
 	public boolean isObject(){
-		if(_srl == SRL.OBJECT)
+		if(_syntaxTag == SyntaxTag.OBJECT)
 			return true;
 		return false;		
 	}
 	
 	/**
-	 * checks weather this part object _srl is VERB or not?
+	 * checks weather this part object _syntaxTag is VERB or not?
 	 * @return
 	 */
 	public boolean isVerb(){
-		if(_srl == SRL.VERB)
+		if(_syntaxTag == SyntaxTag.VERB)
 			return true;
 		return false;		
 	}
 	
 	/**
-	 * checks weather this part object _srl is ADVERB or not?
+	 * checks weather this part object _syntaxTag  is ADVERB or not?
 	 * @return
 	 */
 	public boolean isAdverb(){
-		if(_srl == SRL.ADVERB)
+		if(_syntaxTag == SyntaxTag.ADVERB)
 			return true;
 		return false;		
 	}
@@ -199,8 +199,8 @@ public class SentencePart {
 		rs += " POS=";
 		if(_pos != null) rs += "" + _pos;
 		else rs += "-";
-		rs += " SRL=";
-		if(_srl != null) rs += "" + _srl;
+		rs += " SYN=";
+		if(_syntaxTag != null) rs += "" + _syntaxTag;
 		else rs += "-";
 		rs += " WSD=";
 		if(_wsd != null) rs += _wsd;
@@ -238,17 +238,17 @@ public class SentencePart {
 		}
 	}
 
-	public void set_srl(String srl) {
-		switch(srl){
-			case "SBJ": _srl = SRL.SUBJECT; break;
-			case "SBJ_P": _srl = SRL.SUBJECT_PART; break;
-			case "VERB": _srl = SRL.VERB; break;
-			case "VERB_P": _srl = SRL.VERB_PART; break;
-			case "OBJ": _srl = SRL.OBJECT; break;
-			case "OBJ_P": _srl = SRL.OBJECT_PART; break;
-			case "ADV": _srl = SRL.ADVERB; break;
-			case "ADV_P": _srl = SRL.ADVERB_PART; break;
-			default: _srl = SRL.UNKNOWN;
+	public void set_syntaxTag(String synTag) {
+		switch(synTag){
+			case "SBJ": _syntaxTag = SyntaxTag.SUBJECT; break;
+			case "SBJ_P": _syntaxTag = SyntaxTag.SUBJECT_PART; break;
+			case "VERB": _syntaxTag = SyntaxTag.VERB; break;
+			case "VERB_P": _syntaxTag = SyntaxTag.VERB_PART; break;
+			case "OBJ": _syntaxTag = SyntaxTag.OBJECT; break;
+			case "OBJ_P": _syntaxTag = SyntaxTag.OBJECT_PART; break;
+			case "ADV": _syntaxTag = SyntaxTag.ADVERB; break;
+			case "ADV_P": _syntaxTag = SyntaxTag.ADVERB_PART; break;
+			default: _syntaxTag = SyntaxTag.UNKNOWN;
 		}	
 	}
 	

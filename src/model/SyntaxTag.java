@@ -1,6 +1,6 @@
 package model;
 
-public enum SRL {
+public enum SyntaxTag {
 	SUBJECT,
 	SUBJECT_PART,
 	VERB,
