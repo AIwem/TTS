@@ -32,37 +32,35 @@ public class SentencePart {
 	public String _name;
 	
 	/**
+	 * name of this part in the sentence
+	 */
+	public String _name_in_sentence;
+	
+	/**
 	 * this part Part-Of-Speech.
 	 */
-	public POS	_pos;
+	public POS	_pos = null;
+	
+	/**
+	 * this part SyntaxTag 
+	 */
+	public SyntaxTag _syntaxTag = null;
 	
 	/**
 	 * this part Semantic-Role-Label.
 	 */
-	public SyntaxTag _syntaxTag;
+	public SemanticTag _semanticTag = null;
 	
 	/**
 	 * this part Word_Sense_Disambiguation. 
 	 * It means mapping of this part to KB concepts.
 	 */
-	public Node _wsd;
+	public Node _wsd = null;
 	
 	/**
 	 * this part Word_Sense_Disambiguation name. 
 	 */
 	public String _wsd_name;
-	/**
-	 * this part dependency in noun-phrase or verb-phrase.
-	 */
-	public DEP _dep;
-	
-	/**
-	 * @param _name
-	 */
-	public SentencePart(String _name, SentenceModel senteceModel) {
-		this._name = _name;
-		this._senteceModel = senteceModel;
-	}
 	
 	/**
 	 * sub_part of this part. for example "کبوتر زخمی" has sub_parts of "کبوتر" and "زخمی".
@@ -70,6 +68,35 @@ public class SentencePart {
 	 */
 	public ArrayList<SentencePart> sub_parts;
 	
+	/**
+	 * this part dependency in noun-phrase or verb-phrase.
+	 */
+	public DEP _dep = null;
+	
+	/**
+	 * this part number
+	 */
+	public String _number;
+	
+	/**
+	 * @param _name
+	 */
+	public SentencePart(String _name, String _name_in_sentence, String number, SentenceModel senteceModel) {
+		this._name = _name;
+		this._name_in_sentence = _name_in_sentence;
+		this._number = number;
+		this._senteceModel = senteceModel;
+	}
+	
+	/**
+	 * @param _name
+	 * @param sentenceModel
+	 */
+	public SentencePart(String _name, SentenceModel sentenceModel) {
+		this._name = _name;
+		this._senteceModel = sentenceModel;
+	}
+		
 	/**
 	 * @param _name
 	 * @param _synTag
@@ -86,11 +113,13 @@ public class SentencePart {
 	 * @param _synTag
 	 * @param wSD
 	 */
-	public SentencePart(String _name, POS _pos, SyntaxTag _synTag, Node wSD, ArrayList<SentencePart> sub_parts) {
+	public SentencePart(String _name, String _name_in_sentence, POS _pos, SyntaxTag _synTag, SemanticTag semanticTag, Node wsd, ArrayList<SentencePart> sub_parts) {
 		this._name = _name;		
+		this._name_in_sentence = _name_in_sentence;
 		this._pos = _pos;
 		this._syntaxTag = _synTag;
-		_wsd = wSD;
+		this._semanticTag = semanticTag;
+		_wsd = wsd;
 		this.sub_parts = sub_parts;
 	}
 	
@@ -252,22 +281,28 @@ public class SentencePart {
 		}	
 	}
 	
+	public void set_semanticTag(String semTag) {
+		if(semTag != null && semTag != "" && semTag != "-")
+		_semanticTag = SemanticTag.fromString(semTag);
+		if(_semanticTag == null)
+			MyError.error("bad semantcTag name " + semTag);	
+	}
 	
 	public void set_wsd_name(String wsd_name) {
 		this._wsd_name = wsd_name;
 	}
 	
 	public void set_dep(String dep) {
-		switch(dep){
-			case "MAIN": _dep = DEP.MAIN; break;
-			case "PRE": _dep = DEP.PRE; break;
-			case "POST": _dep = DEP.POST; break;
-			default: _dep = DEP.UNKOWN;
-		}	
+		if(dep != null && dep != "" && dep != "-")
+		_dep = DEP.fromString(dep);
+		if(_dep == null)
+			MyError.error("bad dep name " + dep);			
 	}
 
 	public void set_wsd(Node wsd) {
 		this._wsd = wsd;
-	}	
+	}
+
+		
 	
 }

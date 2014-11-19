@@ -112,7 +112,7 @@ public class TTSEngine {
 			
 			SentenceModel sentence = _pp.preprocessSentence(NLsentence);
 			
-			SceneModel cur_sen_scene = _pp.preprocessScene(sentence);
+			SceneModel cur_sen_scene = null; //_pp.preprocessScene(sentence);
 			
 			if(cur_sen_scene != null)
 				sentencs_scenes.add(cur_sen_scene);

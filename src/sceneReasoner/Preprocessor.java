@@ -46,7 +46,7 @@ public class Preprocessor {
 	 */
 //	private String SentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
 //	private String SentenceInfosFileName = "inputStory/sentenceInfos_SS.txt";
-	private String SentenceInfosFileName = "inputStory/SentenceInfos6.txt";
+	private String SentenceInfosFileName = "inputStory/SentenceInfos8.txt";
 		
 	
 	
@@ -145,41 +145,47 @@ public class Preprocessor {
 		return senPartStrs;		
 	}
 	
+	
 	/**
 	 * This method gets partStr and return the its equivalent Part object.
 	 * partStr has all information about current Part. 
 	 * this information has a format like this:
-	 * name:پسرک	POS:NOUN	SYN:SBJ	WSD:پسرک	sub_part:پسر+ک
-	 * name:پسر	POS:NOUN	SYN:SBJ-P	WSD:پسر#n2	sub_part:-
-	 * name:ک	POS:UNKNOWN	SYN:SBJ-P	WSD:کوچک#a2	sub_part:-
+	 * 
+	 * name:پسرک		sentence_part:پسرک	POS:NOUN		SYN:SBJ		SEM:ARG0		WSD:MAIN_وضعیت سنی#a_POST	sub_part:پسر،ک		dep:-		num:1
+	 * name:پسر		sentence_part:پسر		POS:NOUN		SYN:SBJ_P	SEM:ARG0_P		WSD:پسر#n2				sub_part:-		dep:MAIN	num:1-0
+	 * name:ک		sentence_part:ک		POS:UNKNOWN		SYN:SBJ_P	SEM:ARG0_P		WSD:خردسال#a1				sub_part:-		dep:POST	num:1-1
 	 * 
 	 * @param partStr partStr has all information about current Part.
 	 * @return equivalent Part Object.
 	 */
 	private SentencePart createPart(String partStr, SentenceModel senteceModel){
-		//print(partStr);			
+		print(partStr);			
 		String[] parts = partStr.split("\t");
 		
-		if(parts.length != 6){			
+		if(parts.length != 9){			
 			//MyError.error("Bad information format " + partStr);
 			print("Bad sentence information format " + partStr);
 			return null;
 		}
 					
-		for(int i = 0;i<parts.length;i++)
+		for(int i = 0; i < parts.length; i++)
 			parts[i] = parts[i].substring(parts[i].indexOf(":")+1);				
 		
-		SentencePart newPart = new SentencePart(parts[0], senteceModel);			
+		SentencePart newPart = new SentencePart(parts[0], parts[1], parts[8], senteceModel);			
 		
-		newPart.set_pos(parts[1]);
+		if(parts[2] != null && parts[2] != "-")
+			newPart.set_pos(parts[2]);
 			
-		newPart.set_syntaxTag(parts[2]);
+		newPart.set_syntaxTag(parts[3]);
 		
-		newPart.set_wsd_name(parts[3]);
+		if(parts[4] != null && parts[4] != "-")
+			newPart.set_semanticTag(parts[4]);
+		
+		newPart.set_wsd_name(parts[5]);
 		
 		
-		if(parts[4] != null && !parts[4].trim().equals("-")){				
-			String[] subs = parts[4].split("،");
+		if(parts[6] != null && !parts[6].trim().equals("-")){				
+			String[] subs = parts[6].split("،");
 			
 			ArrayList<SentencePart> subParts = new ArrayList<SentencePart>();
 			for(String s:subs){					
@@ -187,10 +193,10 @@ public class Preprocessor {
 			}
 			newPart.sub_parts = subParts;
 		}
+		if(parts[7] != null && parts[7] != "-")
+			newPart.set_dep(parts[7]);	
 		
-		newPart.set_dep(parts[5]);	
-		
-		//print(newPart.getStr() + "\n");
+		print(newPart.getStr() + "\n");
 		return newPart;		
 	}
 
@@ -216,7 +222,7 @@ public class Preprocessor {
 		
 		ArrayList<SentencePart> senParts = new ArrayList<SentencePart> ();
 		
-		for(int i = 0; i<senPartStrs.size();i++){
+		for(int i = 0; i < senPartStrs.size(); i++){
 			
 			String currentPartStr = senPartStrs.get(i);
 			SentencePart currentPart = createPart(currentPartStr, sentence);		
@@ -692,7 +698,7 @@ public class Preprocessor {
 			
 			String cxName = cx.relationType.getContextName();			
 			
-			if(CONTEXT.parse(cxName) == CONTEXT.LOCATION){				
+			if(CONTEXT.fromString(cxName) == CONTEXT.LOCATION){				
 				PlausibleStatement locCx = _kb.addRelation(verbRelation, location._node, cx.relationType);
 				print("" + locCx + " (" + verbRelation.getName() + ")= " + location._node + "\n");			
 			}
@@ -713,7 +719,7 @@ public class Preprocessor {
 			
 			String cxName = cx.relationType.getContextName();			
 			
-			if(CONTEXT.parse(cxName) == CONTEXT.TIME){				
+			if(CONTEXT.fromString(cxName) == CONTEXT.TIME){				
 				PlausibleStatement timeCx = _kb.addRelation(verbRelation, time._node, cx.relationType);
 				print("" + timeCx + " (" + verbRelation.getName() + ")= " + time._node + "\n");			
 			}

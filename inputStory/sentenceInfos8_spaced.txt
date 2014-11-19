@@ -1,21 +1,21 @@
 sentence:پسرک امروز در راه خانه چشمش به یک کبوتر زخمی افتاد
 
-name:پسرک	sentence_part:پسرک	POS:NOUN	SYN:SBJ	SEM:ARG0	WSD:MAIN_وضعیت سنی#a_POST	sub_part:پسر،ک	dep:-	num:1
-name:پسر	sentence_part:پسر	POS:NOUN	SYN:SBJ_P	SEM:ARG0_P	WSD:پسر#n2	sub_part:-	dep:MAIN	num:1-0
-name:ک	sentence_part:ک	POS:-	SYN:SBJ_P	SEM:ARG0_P	WSD:خردسال#a1	sub_part:-	dep:POST	num:1-1
+name:پسرک			sentence_part:پسرک				POS:NOUN		SYN:SBJ		SEM:ARG0		WSD:MAIN_وضعیت سنی#a_POST	sub_part:پسر،ک			dep:-		num:1
+name:پسر			sentence_part:پسر				POS:NOUN		SYN:SBJ_P	SEM:ARG0_P		WSD:پسر#n2					sub_part:-				dep:MAIN	num:1-0
+name:ک				sentence_part:ک					POS:UNKNOWN		SYN:SBJ_P	SEM:ARG0_P		WSD:خردسال#a1				sub_part:-				dep:POST	num:1-1
 
-name:امروز	sentence_part:امروز	POS:ADVERB	SYN:ADV	SEM:ArgM-TMP	WSD:امروز#n1	sub_part:-	dep:-	num:2
+name:امروز			sentence_part:امروز				POS:ADVERB		SYN:ADV		SEM:ArgM-TMP	WSD:امروز#n1				sub_part:-				dep:-		num:2
 
-name:راه خانه	sentence_part:در راه خانه	POS:NOUN	SYN:ADV	SEM:ArgM-DIR	WSD:MAIN_mozaf#a_POST	sub_part:راه،خانه	dep:-	num:3
-name:راه	sentence_part:راه	POS:NOUN	SYN:ADV_P	SEM:ArgM-DIR_P	WSD:راه#n9	sub_part:-	dep:MAIN	num:3-0
-name:خانه	sentence_part:خانه	POS:NOUN	SYN:ADV_P	SEM:ArgM-DIR_P	WSD:خانه#n10	sub_part:-	dep:POST	num:3-1
+name:راه خانه		sentence_part:در راه خانه		POS:NOUN		SYN:ADV		SEM:ArgM-DIR	WSD:MAIN_mozaf#a_POST		sub_part:راه،خانه		dep:-		num:3
+name:راه			sentence_part:راه				POS:NOUN		SYN:ADV_P	SEM:ArgM-DIR_P	WSD:راه#n9					sub_part:-				dep:MAIN	num:3-0
+name:خانه			sentence_part:خانه				POS:NOUN		SYN:ADV_P	SEM:ArgM-DIR_P	WSD:خانه#n10				sub_part:-				dep:POST	num:3-1
 
-name:یک کبوتر زخمی	sentence_part:به یک کبوتر زخمی	POS:NOUN	SYN:OBJ	SEM:ARG1	WSD:MAIN_وضعیت سلامتی#a_POST	sub_part:یک،کبوتر،زخمی	dep:-	num:4
-name:یک	sentence_part:یک	POS:NUM			SYN:OBJ_P	SEM:ARG1_P	WSD:یک#n1	sub_part:-	dep:PRE	num:4--1
-name:کبوتر	sentence_part:کبوتر	POS:NOUN	SYN:OBJ_P	SEM:ARG1_P	WSD:کبوتر#n1	sub_part:-	dep:MAIN	num:4-0
-name:زخمی	sentence_part:زخمی	POS:ADJECTIVE	SYN:OBJ_P	SEM:ARG1_P	WSD:زخمی#a1	sub_part:-	dep:POST	num:4-1
+name:یک کبوتر زخمی	sentence_part:به یک کبوتر زخمی	POS:NOUN		SYN:OBJ		SEM:ARG1		WSD:MAIN_وضعیت سلامتی#a_POST	sub_part:یک،کبوتر،زخمی	dep:-		num:4
+name:یک				sentence_part:یک				POS:NUM			SYN:OBJ_P	SEM:ARG1_P		WSD:یک#n1					sub_part:-				dep:PRE		num:4--1
+name:کبوتر			sentence_part:کبوتر				POS:NOUN		SYN:OBJ_P	SEM:ARG1_P		WSD:کبوتر#n1				sub_part:-				dep:MAIN	num:4-0
+name:زخمی			sentence_part:زخمی				POS:ADJECTIVE	SYN:OBJ_P	SEM:ARG1_P		WSD:زخمی#a1					sub_part:-				dep:POST	num:4-1
 
-name:چشم‌افتاد	sentence_part:چشمش‌افتاد	POS:VERB	SYN:VERB	SEM:-	WSD:چشم افتادن#v	sub_part:-	dep:-	num:0
+name:چشم‌افتاد		sentence_part:چشمش‌افتاد			POS:VERB		SYN:VERB	SEM:-			WSD:چشم افتادن#v			sub_part:-				dep:-		num:0
 
 ARG0:1
 ARG1:4

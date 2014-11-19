@@ -9,8 +9,8 @@ public enum CONTEXT {
 	SPEED,
 	DIRECTION;
 	
-	public static CONTEXT parse(String cxName){
-		if (cxName != null) 
+	public static CONTEXT fromString(String cxName){
+		if (cxName != null)
 			for (CONTEXT cx : CONTEXT.values()) 
 				if (cxName.equalsIgnoreCase(cx.name())) 
 					return cx;
