@@ -217,6 +217,7 @@ public class Preprocessor {
 		ArrayList<SentencePart> senParts = new ArrayList<SentencePart> ();
 		
 		for(int i = 0; i<senPartStrs.size();i++){
+			
 			String currentPartStr = senPartStrs.get(i);
 			SentencePart currentPart = createPart(currentPartStr, sentence);		
 			
