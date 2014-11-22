@@ -282,7 +282,7 @@ public class SentencePart {
 	}
 	
 	public void set_semanticTag(String semTag) {
-		if(semTag != null && semTag != "" && semTag != "-")
+		if(semTag != null && !semTag.equals("") && !semTag.equals("-"))
 		_semanticTag = SemanticTag.fromString(semTag);
 		if(_semanticTag == null)
 			MyError.error("bad semantcTag name " + semTag);	
@@ -293,7 +293,7 @@ public class SentencePart {
 	}
 	
 	public void set_dep(String dep) {
-		if(dep != null && dep != "" && dep != "-")
+		if(dep != null && !dep.equals("") && !dep.equals("-"))
 		_dep = DEP.fromString(dep);
 		if(_dep == null)
 			MyError.error("bad dep name " + dep);			

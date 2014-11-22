@@ -266,7 +266,7 @@ public class SentenceModel{
 	 * //TODO: it must be generalized to multi-subjects, multi-objects, and multi-adverbs. 
 	 * 
 	 * @param sentence sentence object which is to be completed.
-	 * @param senParts different SentencePart object of this sentence.
+	 * @param senParts different SentencePart object of this sentence. guaranteed not to be null.
 	 */
 	public void arrageSentenceParts(String NLSentence, ArrayList<SentencePart> senParts) {
 		
@@ -284,11 +284,7 @@ public class SentenceModel{
 			if(part.isObject()){
 				this.addSingleObject(part);
 				continue;
-			}
-			if(part.isSubject()){
-				this.addSingleSubject(part);
-				continue;
-			}
+			}			
 			if(part.isAdverb()){
 				this.addSingleAdverb(part);				
 			}			

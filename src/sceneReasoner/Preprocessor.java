@@ -44,9 +44,11 @@ public class Preprocessor {
 	 * We have no NLP module to process input text and convert it to related part,
 	 * so temporarily we aught to read these processed information from a file named  SentenceInfosFileName. 
 	 */
-//	private String SentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
-//	private String SentenceInfosFileName = "inputStory/sentenceInfos_SS.txt";
-	private String SentenceInfosFileName = "inputStory/SentenceInfos8.txt";
+//	private String sentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
+//	private String sentenceInfosFileName = "inputStory/sentenceInfos_SS.txt";
+	private String sentenceInfosFileName = "inputStory/SentenceInfos9.txt";
+	
+	private String verbCapacitiesFileName = "inputStory/verb_capacity";
 		
 	
 	
@@ -105,11 +107,11 @@ public class Preprocessor {
 		BufferedReader stream = null;		
 		try
 		{
-			stream = new BufferedReader(new InputStreamReader(new FileInputStream(SentenceInfosFileName), "utf-8"));			
+			stream = new BufferedReader(new InputStreamReader(new FileInputStream(sentenceInfosFileName), "utf-8"));			
 		}
 		catch(Exception e)
 		{
-			System.out.println("Error opening `" + SentenceInfosFileName + "` for reading input natural language texts!");
+			System.out.println("Error opening `" + sentenceInfosFileName + "` for reading input natural language texts!");
 			e.printStackTrace();		
 		}
 			
@@ -159,12 +161,12 @@ public class Preprocessor {
 	 * @return equivalent Part Object.
 	 */
 	private SentencePart createPart(String partStr, SentenceModel senteceModel){
-		print(partStr);			
-		String[] parts = partStr.split("\t");
+//		print(partStr);			
+		String[] parts = partStr.split("(\t)+");
 		
 		if(parts.length != 9){			
 			//MyError.error("Bad information format " + partStr);
-			print("Bad sentence information format " + partStr);
+			print("Bad sentence information format " + partStr + " parts-num " + parts.length);
 			return null;
 		}
 					
@@ -173,18 +175,18 @@ public class Preprocessor {
 		
 		SentencePart newPart = new SentencePart(parts[0], parts[1], parts[8], senteceModel);			
 		
-		if(parts[2] != null && parts[2] != "-")
+		if(parts[2] != null && !parts[2].equals("-"))
 			newPart.set_pos(parts[2]);
 			
 		newPart.set_syntaxTag(parts[3]);
 		
-		if(parts[4] != null && parts[4] != "-")
+		if(parts[4] != null && !parts[4].equals("-"))
 			newPart.set_semanticTag(parts[4]);
 		
 		newPart.set_wsd_name(parts[5]);
 		
 		
-		if(parts[6] != null && !parts[6].trim().equals("-")){				
+		if(parts[6] != null && !parts[6].equals("-")){				
 			String[] subs = parts[6].split("،");
 			
 			ArrayList<SentencePart> subParts = new ArrayList<SentencePart>();
@@ -193,9 +195,9 @@ public class Preprocessor {
 			}
 			newPart.sub_parts = subParts;
 		}
-		if(parts[7] != null && parts[7] != "-")
+		if(parts[7] != null && !parts[7].equals("-"))			
 			newPart.set_dep(parts[7]);	
-		
+				
 		print(newPart.getStr() + "\n");
 		return newPart;		
 	}
@@ -203,7 +205,58 @@ public class Preprocessor {
 	private void print(String s){
 		System.out.println(s);
 	}
-		
+	
+	/**
+	 * 
+	 * @param verb
+	 * @return
+	 */
+	private ArrayList<String> LoadVerbCapacities(SentencePart verb){		
+		ArrayList<String> verbCapacities = new ArrayList<String>();
+		BufferedReader stream = null;		
+		try
+		{
+			stream = new BufferedReader(new InputStreamReader(new FileInputStream(verbCapacitiesFileName), "utf-8"));			
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error opening `" + verbCapacitiesFileName + "` for reading input natural language texts!");
+			e.printStackTrace();		
+		}
+			
+		try {
+			String line = "";
+			while (line != null)
+			{				
+				line = stream.readLine();
+				
+				if(line == null)
+					break;
+				
+				if(line.equals(""))
+					continue;	
+												
+				if (line.startsWith("#")) // comment line
+					continue;
+								
+				//it means the next sentence in file has reached!
+				if (line.equals("sentence:" + NLsentence)){
+
+					//this array has information of all parts of this sentence. 
+					senPartStrs = readSentenceParts(stream);					
+					break;
+				}
+			}
+			stream.close();
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+		return senPartStrs;		
+	}
+	
+	
 	/**
 	 * preprocessSentence first finds preprocessed information of this sentence from its related file.
 	 * then convert this information to SentenceModel object 
@@ -218,7 +271,7 @@ public class Preprocessor {
 		ArrayList<String> senPartStrs = findSentenceInfos(NLsentence);
 		
 		if(senPartStrs == null)
-			return sentence; // it is null
+			return null;
 		
 		ArrayList<SentencePart> senParts = new ArrayList<SentencePart> ();
 		
@@ -245,7 +298,11 @@ public class Preprocessor {
 		}
 
 		//now senParts has all part objects of this sentence.						
-		sentence.arrageSentenceParts(NLsentence, senParts);			
+		sentence.arrageSentenceParts(NLsentence, senParts);
+		
+		//reading verb capacities.
+		
+		
 		return sentence;
 		
 	}
