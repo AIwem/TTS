@@ -240,10 +240,8 @@ public class Preprocessor {
 					continue;
 								
 				//it means the next sentence in file has reached!
-				if (line.equals("sentence:" + NLsentence)){
-
-					//this array has information of all parts of this sentence. 
-					senPartStrs = readSentenceParts(stream);					
+				if (line.equals("sentence:")){
+									
 					break;
 				}
 			}
@@ -253,7 +251,7 @@ public class Preprocessor {
 		{
 			e.printStackTrace();
 		}
-		return senPartStrs;		
+		return verbCapacities;	
 	}
 	
 	

@@ -1,0 +1,42 @@
+﻿ARG0	f˸ISA	SRL
+ARG1	f˸ISA	SRL
+ARG2	f˸ISA	SRL
+ARG3	f˸ISA	SRL
+ARG4	f˸ISA	SRL
+ARG5	f˸ISA	SRL
+
+SPEED	f˸ISA	VC
+DIRECTION	f˸ISA	VC
+FROM	f˸ISA	VC
+TO	f˸ISA	VC
+LOCATION	f˸ISA	VC
+TIME	f˸ISA	VC
+EMOTION	f˸ISA	VC
+MOOD	f˸ISA	VC
+
+SPEED	value	f˸شتاب§n-11230
+DIRECTION	value	f˸جانب§n-10268
+FROM	value	مکان#r???
+TO	value	مکان#r???
+LOCATION	value	مکان#r???
+TIME	value	زمان#r???
+EMOTION	value	f˸حس§n-14738
+MOOD	value	f˸وضعیت§n-12745
+
+verb#v	f˸ISA	f˸کلمه§n-13058
+verb#v	VC	LOCATION
+verb#v	VC	TIME
+verb#v	VC	EMOTION
+verb#v	VC	MOOD
+
+f˸دویدن§v-8577	SRL	ARG0
+f˸دویدن§v-8577	SRL	ARG3
+f˸دویدن§v-8577	SRL	ARG4
+
+f˸دویدن§v-8577	VC	DIRECTION
+f˸دویدن§v-8577	VC	SPEED
+f˸دویدن§v-8577	VC	FROM
+f˸دویدن§v-8577	VC	TO
+
+adjective#a	f˸ISA	f˸کلمه§n-13058
+mozaf#a	f˸ISA	f˸کلمه§n-13058
