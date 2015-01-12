@@ -30,8 +30,10 @@ verb#v	VC	EMOTION
 verb#v	VC	MOOD
 
 f˸دویدن§v-8577	SRL	ARG0
-f˸دویدن§v-8577	SRL	ARG3
-f˸دویدن§v-8577	SRL	ARG4
+f˸دویدن§v-8577	SRL	FROM
+FROM	f˸ISA	ARG3
+f˸دویدن§v-8577	SRL	TO
+TO	f˸ISA	ARG4
 
 f˸دویدن§v-8577	VC	DIRECTION
 f˸دویدن§v-8577	VC	SPEED
