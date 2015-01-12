@@ -935,7 +935,7 @@ public class TTSEngine {
 	 * @return the ScenePart of pure_node, including ScenePart.UNKNOWN.
 	 */
 	private ScenePart getAdvScenePart(Node pure_node, POS pos, SyntaxTag synTag){
-		if(pos == POS.ADVERB){
+		if(pos == POS.ADVERB || pos == POS.NOUN){
 			if(isLocation(pure_node))
 				return ScenePart.LOCATION;			
 			
