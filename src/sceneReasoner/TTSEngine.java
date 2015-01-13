@@ -854,6 +854,7 @@ public class TTSEngine {
 	private ScenePart getSbjObjScenePart(Node pure_node, POS pos, SyntaxTag synTag){
 		if(pure_node == null)
 			return ScenePart.UNKNOWN;
+		
 		if(synTag == SyntaxTag.SUBJECT || synTag == SyntaxTag.SUBJECT_PART || 
 				synTag == SyntaxTag.OBJECT || synTag == SyntaxTag.OBJECT_PART){
 		
