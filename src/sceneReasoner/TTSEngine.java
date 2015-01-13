@@ -787,20 +787,15 @@ public class TTSEngine {
 	 * recognizing that which scenePart has the node: 
 	 * a ROLE, DYNAMIC_OBJECT, STATIC_OBJECT, ACTION, LOCATION, TIME, EMOTION, GOAL or UNKNOWN?!
 	 * this method checks:
-	 * <ul> if node SyntaxTag is SUBJECT or SUBJECT_PART or OBJECT or OBJECT_PART:
-	 * 		<li> if node is a child of "نفر§n-13075" returns ROLE. </li>
-	 * 		<li> if node is a child of "جانور§n-12239" returns DYNAMIC_OBJ. </li>
-	 * 		<li> if node is a child of "راه§n-12894" or "جا§n-12733" returns LOCATION. </li>
-	 * 		<li> if node is a child of "" returns TIME. </li>
-	 * 		<li> otherwise returns STATIC_OBJ. </li>  			
-	 * <ul> if node POS is VERB:
-	 *  	<li> it returns  ACTION. </li> 		
-	 * </ul>  
-	 * </ul> 
-	 * <ul> if node POS is ADVERB: 		
-	 * </ul>  
-	 * <ul> we don't make a ScenePart for an adjective. 		
-	 * </ul> 
+	 * <ul> if node SyntaxTag is SUBJECT or SUBJECT_PART or OBJECT or OBJECT_PART, 
+	 * 		then calls getSbjObjScenePart() method. 
+	 * </ul>
+	 * <ul> if node SyntaxTag is ADVERB or ADVERB_PART, 
+	 * 		then calls getAdvScenePart() method.
+	 * </ul> 		  			
+	 * <ul> if node POS is VERB or VERB_PART:
+	 *  	then calls getVerbScenePart() method.
+	 * </ul>
 	 * 
 	 * @param pure_node the pure node fetched from kb.
 	 * @param pos the part of speech this node has.
@@ -832,19 +827,24 @@ public class TTSEngine {
 	 * a ROLE, DYNAMIC_OBJECT, STATIC_OBJECT, ACTION, LOCATION, TIME, EMOTION, GOAL or UNKNOWN?!
 	 * this method checks:
 	 * <ul> if node SyntaxTag is SUBJECT or SUBJECT_PART or OBJECT or OBJECT_PART
-	 * 		<li> if node is a child of "نفر§n-13075" returns ROLE. </li>
-	 * 		<li> if node is a child of "جانور§n-12239" returns DYNAMIC_OBJ. </li>
-	 * 		<li> if node is a child of "راه§n-12894" or "جا§n-12733" returns LOCATION. </li>
-	 * 		<li> if node is a child of "" returns TIME. </li>
-	 * 		<li> otherwise returns STATIC_OBJ. </li>  			
+	 * <ul> if node pos is NOUN, then checks weather
+	 * 		<li> isHuman, than return ScenePart.ROLE </li>
+	 * 		<li> isAnimal, than return ScenePart.DYNAMIC_OBJECT </li>
+	 * 		<li> isLocation, than return ScenePart.LOCATION </li>
+	 * 		<li> isTime, than return ScenePart.TIME </li> 
+	 * 		<li> otherwise returns ScenePart.STATIC_OBJECT </li>
+	 * </ul>
+	 * <ul> we don't make a ScenePart for an adjective. 		
+	 * </ul> 
+	 *   			
 	 * <ul> if node POS is VERB:
+	 * 
 	 *  	<li> it returns  ACTION. </li> 		
 	 * </ul>  
 	 * </ul> 
 	 * <ul> if node POS is ADVERB: 		
 	 * </ul>  
-	 * <ul> we don't make a ScenePart for an adjective. 		
-	 * </ul> 
+	 * 
 	 * 
 	 * @param pure_node the pure node fetched from kb.
 	 * @param pos the part of speech this node has.
@@ -885,27 +885,9 @@ public class TTSEngine {
 					return ScenePart.TIME;
 				
 				return ScenePart.SCENE_OBJECT;
-			}			
-		}
-		
-		if(pos == POS.VERB){
-			return ScenePart.ACTION;
-		}
-		
-		if(synTag == SyntaxTag.ADVERB || synTag == SyntaxTag.ADVERB_PART){
-			
-			if(isLocation(pure_node))
-				return ScenePart.LOCATION;			
-			
-			if(isTime(pure_node))
-				return ScenePart.TIME;
-		}
-		if(pos == POS.ADVERB){
-			if(isLocation(pure_node))
-				return ScenePart.LOCATION;			
-			
-			if(isTime(pure_node))
-				return ScenePart.TIME;			
+			}
+			else if(pos == POS.ADJECTIVE)
+//			else if(pos == pos.ADVERB)
 		}
 					
 		return ScenePart.UNKNOWN;
