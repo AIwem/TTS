@@ -886,7 +886,8 @@ public class TTSEngine {
 				
 				return ScenePart.SCENE_OBJECT;
 			}
-			else if(pos == POS.ADJECTIVE)
+//			we do nothing for SUBJECT and OBJECT to be adjective!
+//			else if(pos == POS.ADJECTIVE)
 //			else if(pos == pos.ADVERB)
 		}
 					

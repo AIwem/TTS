@@ -46,7 +46,7 @@ public class Preprocessor {
 	 */
 //	private String sentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
 //	private String sentenceInfosFileName = "inputStory/sentenceInfos_SS.txt";
-	private String sentenceInfosFileName = "inputStory/SentenceInfos9.txt";
+	private String sentenceInfosFileName = "inputStory/SentenceInfos10.txt";
 	
 	private String verbCapacitiesFileName = "inputStory/verb_capacity";
 		
