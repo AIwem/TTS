@@ -231,6 +231,9 @@ public class SentencePart {
 		rs += " SYN=";
 		if(_syntaxTag != null) rs += "" + _syntaxTag;
 		else rs += "-";
+		rs += " SEM=";
+		if(_semanticTag != null) rs += "" + _semanticTag;
+		else rs += "-";
 		rs += " WSD=";
 		if(_wsd != null) rs += _wsd;
 		else rs += "-";

@@ -165,8 +165,8 @@ public class Preprocessor {
 		String[] parts = partStr.split("(\t)+");
 		
 		if(parts.length != 9){			
-			//MyError.error("Bad information format " + partStr);
-			print("Bad sentence information format " + partStr + " parts-num " + parts.length);
+			MyError.error("Bad sentence information format " + partStr + " parts-num " + parts.length);
+//			print("Bad sentence information format " + partStr + " parts-num " + parts.length);
 			return null;
 		}
 					
@@ -338,7 +338,122 @@ public class Preprocessor {
 		print("primarySceneModel\n" + primarySceneModel);
 		return primarySceneModel;
 	}	
+	
+	/**
+	 * preprocessScene preprocesses input sentenceModel and converts it to the primarySceneModel.    
+	 * 
+	 * @param sentenceModel the SenetenceModel to be converted. 
+	 * @return SceneModel equivalent to input sentenceModel. 
+	 */	 
+	public SceneModel preprocessScene2(SentenceModel sentenceModel){		
+		
+		if(sentenceModel == null){
+			MyError.error("senetecenModel should not be null! " + sentenceModel);
+			return null;
+		}
+		
+		//TODO: changing set_pos, set_syntaxTag
+		//TODO: completing list of syntax tags
+		//TODO: checking proper getting value
+		//TODO: completing preprocessSence!
+		
+		
+		SceneModel primarySceneModel = new SceneModel();
 
+		primarySceneModel.addSentence(sentenceModel);
+		sentenceModel.setScene(primarySceneModel);
+		
+		prepareNullTags(sentenceModel, primarySceneModel);
+	
+		preprocessArg0(sentenceModel, primarySceneModel);
+		
+		preprocessVerbArg(sentenceModel, primarySceneModel);
+		
+		preprocessArg1(sentenceModel, primarySceneModel);
+		
+		preprocessArg2(sentenceModel, primarySceneModel);
+		
+		preprocessArg3(sentenceModel, primarySceneModel);
+		
+		preprocessArg4(sentenceModel, primarySceneModel);
+		
+		preprocessArg5(sentenceModel, primarySceneModel);
+		
+		preprocessSecondaryArgs(sentenceModel, primarySceneModel);
+		
+		preprocessVisualTagVerb(sentenceModel, primarySceneModel);
+		
+		preprocessAllVisualTag(sentenceModel, primarySceneModel);
+		
+		print("primarySceneModel\n" + primarySceneModel);
+		return primarySceneModel;
+	}
+	
+	private void prepareNullTags(SentenceModel sentenceModel, SceneModel primarySceneModel) {
+		// TODO Auto-generated method stub
+		
+	}	
+	
+	private void preprocessArg0(SentenceModel sentenceModel, SceneModel primarySceneModel) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	private void preprocessVerbArg(SentenceModel sentenceModel,
+			SceneModel primarySceneModel) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	private void preprocessArg1(SentenceModel sentenceModel,
+			SceneModel primarySceneModel) {
+		// TODO Auto-generated method stub
+		
+	}
+		
+	private void preprocessArg2(SentenceModel sentenceModel,
+			SceneModel primarySceneModel) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void preprocessArg3(SentenceModel sentenceModel,
+			SceneModel primarySceneModel) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void preprocessArg4(SentenceModel sentenceModel,
+			SceneModel primarySceneModel) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void preprocessArg5(SentenceModel sentenceModel,
+			SceneModel primarySceneModel) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void preprocessSecondaryArgs(SentenceModel sentenceModel,
+			SceneModel primarySceneModel) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void preprocessVisualTagVerb(SentenceModel sentenceModel,
+			SceneModel primarySceneModel) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void preprocessAllVisualTag(SentenceModel sentenceModel,
+			SceneModel primarySceneModel) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
 	/**
 	 * This method maps part's wsd parameter to a concept in _kb based on part's wsd_name parameter.
 	 * if part's wsd_name is "-" no mapping occurs.

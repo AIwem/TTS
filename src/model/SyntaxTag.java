@@ -9,6 +9,9 @@ public enum SyntaxTag {
 	
 	ADVERB,
 	ADVERB_PART,
+	
+	COMPLEMENT,
+	COMPLEMENT_PART,
 		
 	VERB,
 	VERB_PART,
@@ -16,19 +19,18 @@ public enum SyntaxTag {
 	UNKNOWN;
 	
 	public SyntaxTag getPartVersion(){
-		if(this == SUBJECT)
-			return SUBJECT_PART;
-		
-		if(this == OBJECT)
-			return OBJECT_PART;
-		
-		if(this == ADVERB)
-			return ADVERB_PART;
-		
-		if(this == VERB)
-			return VERB_PART;
-		
-		return UNKNOWN;
+		switch(this){
+			case SUBJECT: return SUBJECT_PART;
+			
+			case OBJECT: return OBJECT_PART;
+			
+			case ADVERB: return ADVERB_PART;
+					
+			case COMPLEMENT: return COMPLEMENT_PART;
+			
+			case VERB: return VERB_PART;
+			
+			default: return UNKNOWN;
+		}
 	}
-	
 }

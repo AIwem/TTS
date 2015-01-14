@@ -18,7 +18,7 @@ name:زخمی			sentence_part:زخمی				POS:ADJECTIVE	SYN:OBJ_P	SEM:ARG1_P		WS
 name:چشم‌افتاد		sentence_part:چشمش‌افتاد			POS:VERB		SYN:VERB	SEM:-			WSD:چشم افتادن#v			sub_part:-				dep:-		num:0
 
 #------------------------------------------------------
-sentence:فردا کبوتر را برداشته
+sentence:بلافاصله کبوتر را بردشت
 
 name:کبوتر			sentence_part:کبوتر را			POS:NOUN		SYN:OBJ		SEM:ARG1		WSD:کبوتر#n1				sub_part:-				dep:-		num:1
 
@@ -40,14 +40,17 @@ name:خانه			sentence_part:خانه				POS:NOUN		SYN:ADV_P	SEM:ArgM_DIR_P	WSD
 #------------------------------------------------------
 sentence:‌وارد خانه شد
 
-name:خانه			sentence_part:خانه				POS:NOUN		SYN:ADV		SEM:ARG2		WSD:خانه#n10				sub_part:-				dep:-		num:1
+name:خانه			sentence_part:خانه				POS:NOUN		SYN:ADV		SEM:ARG4		WSD:خانه#n10				sub_part:-				dep:-		num:1
 
 name:وارد شد		sentence_part:وارد شد			POS:VERB		SYN:VERB	SEM:-			WSD:وارد شدن#v2				sub_part:-				dep:-		num:0
 
 #------------------------------------------------------
 #sentence:و کبوتر را به مادر خود داد
+name:کبوتر			sentence_part:کبوتر را			POS:NOUN		SYN:OBJ		SEM:ARG1		WSD:کبوتر#n1				sub_part:-				dep:-		num:0
 
-name:داد			sentence_part:داد				POS:VERB		SYN:VERB	SEM:-			WSD:دادن#v5					sub_part:-				dep:-		num:0
+name:مادر خود		sentence_part:به مادر خود		POS:NOUN		SYN:SBJ		SEM:ARG0		WSD:MAIN_وضعیت سنی#a_POST	sub_part:پسر،ک			dep:-		num:1
+
+name:داد			sentence_part:داد				POS:VERB		SYN:VERB	SEM:-			WSD:دادن#v5					sub_part:-				dep:-		num:2
 
 #------------------------------------------------------
 #sentence:سپس به طرف اتاقش دوید
