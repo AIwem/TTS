@@ -284,7 +284,8 @@ public class SentencePart {
 	}
 	
 	public void set_wsd_name(String wsd_name) {
-		this._wsd_name = wsd_name;
+		if(wsd_name != null && !wsd_name.equals("") && !wsd_name.equals("-"))
+			this._wsd_name = wsd_name;
 	}
 	
 	public void set_dep(String dep) {
