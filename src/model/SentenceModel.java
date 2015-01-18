@@ -1,5 +1,6 @@
 package model;
 
+import ir.ac.itrc.qqa.semantic.enums.DependencyRelationType;
 import ir.ac.itrc.qqa.semantic.util.MyError;
 
 import java.util.ArrayList;
@@ -119,8 +120,8 @@ public class SentenceModel{
 			this.subjects = new ArrayList<SentencePart>();
 		
 		for(String sbj:subjects)
-			if(sbj!= null)
-				this.subjects.add(new SentencePart(sbj,SyntaxTag.SUBJECT));			
+			if(sbj != null)
+				this.subjects.add(new SentencePart(sbj, DependencyRelationType.SBJ));			
 				
 	}
 	
@@ -143,7 +144,7 @@ public class SentenceModel{
 	 * @param verb verb of this sentence.
 	 */
 	public void setVerb(String verb) {
-		this.verb = new SentencePart(verb,SyntaxTag.VERB);
+		this.verb = new SentencePart(verb, DependencyRelationType.ROOT);
 	}
 
 	public ArrayList<SentencePart> getObjects() {
@@ -198,7 +199,7 @@ public class SentenceModel{
 			this.objects = new ArrayList<SentencePart>();
 		for(String obj:objects)
 			if(obj!= null)
-				this.objects.add(new SentencePart(obj,SyntaxTag.OBJECT));		
+				this.objects.add(new SentencePart(obj, DependencyRelationType.OBJ));		
 	}
 
 	public ArrayList<SentencePart> getAdverbs() {
@@ -256,7 +257,7 @@ public class SentenceModel{
 		
 		for(String adv:adverbs)
 			if(adv!= null)
-				this.adverbs.add(new SentencePart(adv,SyntaxTag.ADVERB));
+				this.adverbs.add(new SentencePart(adv, DependencyRelationType.ADVRB));
 	}
 	
 	/**

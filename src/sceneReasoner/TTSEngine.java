@@ -1,5 +1,6 @@
 package sceneReasoner;
 
+import ir.ac.itrc.qqa.semantic.enums.DependencyRelationType;
 import ir.ac.itrc.qqa.semantic.enums.ExecutionMode;
 import ir.ac.itrc.qqa.semantic.enums.POS;
 import ir.ac.itrc.qqa.semantic.enums.SourceType;
@@ -19,7 +20,6 @@ import model.SceneModel;
 import model.ScenePart;
 import model.SentenceModel;
 import model.StoryModel;
-import model.SyntaxTag;
 
 /**
  * TTSEngine is an engine that converts natural language texts to Scene. 
@@ -112,7 +112,7 @@ public class TTSEngine {
 			
 			SentenceModel sentence = _pp.preprocessSentence(NLsentence);
 			
-			SceneModel cur_sen_scene = _pp.preprocessScene2(sentence);
+			SceneModel cur_sen_scene = _pp.preprocessScene(sentence);
 			
 			if(cur_sen_scene != null)
 				sentencs_scenes.add(cur_sen_scene);
@@ -295,7 +295,7 @@ public class TTSEngine {
 	 * @param synTag the SyntaxTag of this node in the sentence. 
 	 * @return Node an instance node which the name of its original node is "pure_name".
 	 */	
-	public Node findorCreateInstance(String pure_name, boolean newNode, SyntaxTag synTag){
+	public Node findorCreateInstance(String pure_name, boolean newNode, DependencyRelationType synTag){
 		if(pure_name == null || pure_name.equals(""))
 			return null;		
 		
@@ -358,7 +358,7 @@ public class TTSEngine {
 	 * @param relationInstance the instance of PlausibleStatement to be added.
 	 * @param synTag the SyntaxTag of this node(relation) in the sentence.
 	 */
-	public void addRelationInstance(String pure_name, PlausibleStatement relationInstance, SyntaxTag synTag){
+	public void addRelationInstance(String pure_name, PlausibleStatement relationInstance, DependencyRelationType synTag){
 		if(pure_name == null || pure_name.equals("") || relationInstance == null)
 			return;
 		
@@ -550,7 +550,7 @@ public class TTSEngine {
 	 * @param instanceNodes
 	 * @param synTag the SyntaxTag of this node in the sentence. 
 	 */
-	private void addToTTSEngine(Node pure_node, ArrayList<Node> instanceNodes, SyntaxTag synTag){
+	private void addToTTSEngine(Node pure_node, ArrayList<Node> instanceNodes, DependencyRelationType synTag){
 		String pure_name = pure_node.getName();		
 		addTo_seen_nodes(pure_name, instanceNodes);
 		
@@ -802,20 +802,19 @@ public class TTSEngine {
 	 * @param synTag the SyntaxTag of this node in the sentence.
 	 * @return the ScenePart of pure_node, including ScenePart.UNKNOWN.
 	 */
-	private ScenePart getScenePart(Node pure_node, POS pos, SyntaxTag synTag){
+	private ScenePart getScenePart(Node pure_node, POS pos, DependencyRelationType synTag){
 		if(pure_node == null)
 			return ScenePart.UNKNOWN;
 		
-		if(synTag == SyntaxTag.SUBJECT || synTag == SyntaxTag.SUBJECT_PART || 
-				synTag == SyntaxTag.OBJECT || synTag == SyntaxTag.OBJECT_PART)
+		if(synTag == DependencyRelationType.SBJ || synTag == DependencyRelationType.OBJ)
 			
 			return getSbjObjScenePart(pure_node, pos, synTag);
 			
-		if(synTag == SyntaxTag.ADVERB || synTag == SyntaxTag.ADVERB_PART)
+		if(synTag == DependencyRelationType.ADVRB)
 			
 			return getAdvScenePart(pure_node, pos, synTag);
 				
-		if(synTag == SyntaxTag.VERB || synTag == SyntaxTag.VERB_PART)
+		if(synTag == DependencyRelationType.ROOT)
 		
 			return getVerbScenePart(pure_node, pos, synTag);
 					
@@ -851,12 +850,11 @@ public class TTSEngine {
 	 * @param synTag the SyntaxTag of this node in the sentence. 
 	 * @return the ScenePart of pure_node, including ScenePart.UNKNOWN.
 	 */
-	private ScenePart getSbjObjScenePart(Node pure_node, POS pos, SyntaxTag synTag){
+	private ScenePart getSbjObjScenePart(Node pure_node, POS pos, DependencyRelationType synTag){
 		if(pure_node == null)
 			return ScenePart.UNKNOWN;
 		
-		if(synTag == SyntaxTag.SUBJECT || synTag == SyntaxTag.SUBJECT_PART || 
-				synTag == SyntaxTag.OBJECT || synTag == SyntaxTag.OBJECT_PART){
+		if(synTag == DependencyRelationType.SBJ ||	synTag == DependencyRelationType.OBJ){
 		
 			if(pos == POS.NOUN){			
 				//TODO: I must remove these lines!-------			
@@ -918,7 +916,7 @@ public class TTSEngine {
 	 * @param synTag the SyntaxTag of this node in the sentence.
 	 * @return the ScenePart of pure_node, including ScenePart.UNKNOWN.
 	 */
-	private ScenePart getAdvScenePart(Node pure_node, POS pos, SyntaxTag synTag){
+	private ScenePart getAdvScenePart(Node pure_node, POS pos, DependencyRelationType synTag){
 		if(pos == POS.ADVERB || pos == POS.NOUN){
 			if(isLocation(pure_node))
 				return ScenePart.LOCATION;			
@@ -954,7 +952,7 @@ public class TTSEngine {
 	 * @param synTag the SyntaxTag of this node in the sentence.
 	 * @return the ScenePart of pure_node, including ScenePart.UNKNOWN.
 	 */
-	private ScenePart getVerbScenePart(Node pure_node, POS pos, SyntaxTag synTag){	
+	private ScenePart getVerbScenePart(Node pure_node, POS pos, DependencyRelationType synTag){	
 		if(pos == POS.VERB)
 			return ScenePart.ACTION;
 		return null;
@@ -968,7 +966,7 @@ public class TTSEngine {
 	 * @param synTag the SyntaxTag of this node in the sentence.
 	 * @return 
 	 */
-	public ScenePart whichScenePart(Node node, SyntaxTag synTag){
+	public ScenePart whichScenePart(Node node, DependencyRelationType synTag){
 		print(node + "~~~~~~~~~~~~~~~ in whichScenePart ~~~~~~~~~~~~");
 		if(node == null)
 			return ScenePart.UNKNOWN;

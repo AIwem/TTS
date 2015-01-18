@@ -1,5 +1,6 @@
 package sceneReasoner;
 
+import ir.ac.itrc.qqa.semantic.enums.DependencyRelationType;
 import ir.ac.itrc.qqa.semantic.enums.SourceType;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
 import ir.ac.itrc.qqa.semantic.kb.Node;
@@ -19,9 +20,6 @@ import model.SentencePart;
 import model.SceneModel;
 import model.ScenePart;
 import model.SentenceModel;
-import model.SyntaxTag;
-
-
 
 /**
  * Preprocessor preprocesses the input natural language sentences.  
@@ -46,7 +44,7 @@ public class Preprocessor {
 	 */
 //	private String sentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
 //	private String sentenceInfosFileName = "inputStory/sentenceInfos_SS.txt";
-	private String sentenceInfosFileName = "inputStory/SentenceInfos10.txt";
+	private String sentenceInfosFileName = "inputStory/SentenceInfos11.txt";
 	
 	private String verbCapacitiesFileName = "inputStory/verb_capacity";
 		
@@ -464,7 +462,7 @@ public class Preprocessor {
 	 * @param isNewNode is this part a new instance or is is the same as seen before.
 	 * @param synTag the SyntaxTag of this node in the sentence.
 	 */
-	private void allocate_wsd(SentencePart part, boolean isNewNode, SyntaxTag synTag){
+	private void allocate_wsd(SentencePart part, boolean isNewNode, DependencyRelationType synTag){
 		if(part == null)
 			return;
 			
@@ -496,19 +494,19 @@ public class Preprocessor {
 				switch(node_pos){
 				case("MAIN"):
 					main_sub_part = part.getMainSub_part();					
-					argument = _ttsEngine.findorCreateInstance(main_sub_part._wsd_name, isNewNode, synTag.getPartVersion());
+					argument = _ttsEngine.findorCreateInstance(main_sub_part._wsd_name, isNewNode, main_sub_part._syntaxTag);
 					main_sub_part.set_wsd(argument);
 					break;					
 				case("PRE"):
 					pre_sub_part = part.getPreSub_part();
-					Node pre = _ttsEngine.findorCreateInstance(pre_sub_part._wsd_name, isNewNode, synTag.getPartVersion());
+					Node pre = _ttsEngine.findorCreateInstance(pre_sub_part._wsd_name, isNewNode, pre_sub_part._syntaxTag);
 					pre_sub_part.set_wsd(pre);				
 					//TODO: to complete the "PRE" DEP  
 					MyError.error("I don't know what to do with this PRE DEP sub_part " + pre_sub_part);
 					break;
 				case("POST"):										
 					post_sub_part = part.getPostSub_part();
-					referent = _ttsEngine.findorCreateInstance(post_sub_part._wsd_name, isNewNode, synTag.getPartVersion());
+					referent = _ttsEngine.findorCreateInstance(post_sub_part._wsd_name, isNewNode, post_sub_part._syntaxTag);
 					post_sub_part.set_wsd(referent);
 					break;
 				//node_pos is a descriptor_name.
@@ -559,7 +557,7 @@ public class Preprocessor {
 		if(part.hasSub_parts())
 			for(SentencePart p:part.sub_parts)
 				if(p._wsd == null){																				
-					Node wsd = _ttsEngine.findorCreateInstance(p._wsd_name, isNewNode, synTag.getPartVersion());
+					Node wsd = _ttsEngine.findorCreateInstance(p._wsd_name, isNewNode, p._syntaxTag);
 					p.set_wsd(wsd);
 				}
 	}
@@ -621,7 +619,7 @@ public class Preprocessor {
 		
 		Node sbj = verbRelation.argument;				
 										
-		ScenePart sbjSp = _ttsEngine.whichScenePart(sbj, SyntaxTag.VERB);
+		ScenePart sbjSp = _ttsEngine.whichScenePart(sbj, DependencyRelationType.SBJ);
 		
 		if(sbjSp == null || sbjSp == ScenePart.UNKNOWN){
 			MyError.error("this subject \"" + sbj + "\" has no ScenePart");
@@ -665,7 +663,7 @@ public class Preprocessor {
 			}
 			
 			//_wsd of sbj is set to proper Node of KB.
-			allocate_wsd(sbj, false, SyntaxTag.SUBJECT);	
+			allocate_wsd(sbj, false, DependencyRelationType.SBJ);	
 			
 			if(sbj._wsd != null)
 				addToPrimarySceneModel(sbj, primarySceneModel);			
@@ -687,7 +685,7 @@ public class Preprocessor {
 			else if(obj != null && obj.isObject()){
 			
 				//_wsd of obj is set to proper Node of KB.
-				allocate_wsd(obj, false, SyntaxTag.OBJECT);
+				allocate_wsd(obj, false, DependencyRelationType.OBJ);
 				
 				if(obj._wsd != null)			
 					addToPrimarySceneModel(obj, primarySceneModel);
@@ -710,7 +708,7 @@ public class Preprocessor {
 			else if(adv != null && adv.isAdverb()){
 				
 				//_wsd of adv is set to proper Node of KB.
-				allocate_wsd(adv, false, SyntaxTag.ADVERB);
+				allocate_wsd(adv, false, DependencyRelationType.ADVRB);
 				
 				if(adv._wsd != null)			
 					addToPrimarySceneModel(adv, primarySceneModel);
@@ -742,7 +740,7 @@ public class Preprocessor {
 		}		
 			
 		//_wsd of verb is set to proper Node of KB. note that second parameter reasonably is set to true, because every node is new one!
-		allocate_wsd(verb, true, SyntaxTag.VERB);
+		allocate_wsd(verb, true, DependencyRelationType.ROOT);
 		
 		if(verb._wsd == null){
 			MyError.error(verb._wsd_name + " couldn't get allocated!");

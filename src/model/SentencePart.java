@@ -2,6 +2,7 @@ package model;
 
 import java.util.ArrayList;
 
+import ir.ac.itrc.qqa.semantic.enums.DependencyRelationType;
 import ir.ac.itrc.qqa.semantic.enums.POS;
 import ir.ac.itrc.qqa.semantic.kb.Node;
 import ir.ac.itrc.qqa.semantic.util.MyError;
@@ -44,7 +45,7 @@ public class SentencePart {
 	/**
 	 * this part SyntaxTag 
 	 */
-	public SyntaxTag _syntaxTag = null;
+	public DependencyRelationType _syntaxTag = null;
 	
 	/**
 	 * this part Semantic-Role-Label.
@@ -101,7 +102,7 @@ public class SentencePart {
 	 * @param _name
 	 * @param _synTag
 	 */
-	public SentencePart(String _name, SyntaxTag _synTag) {
+	public SentencePart(String _name, DependencyRelationType _synTag) {
 		this._name = _name;
 		this._syntaxTag = _synTag;
 	}
@@ -113,7 +114,7 @@ public class SentencePart {
 	 * @param _synTag
 	 * @param wSD
 	 */
-	public SentencePart(String _name, String _name_in_sentence, POS _pos, SyntaxTag _synTag, SemanticTag semanticTag, Node wsd, ArrayList<SentencePart> sub_parts) {
+	public SentencePart(String _name, String _name_in_sentence, POS _pos, DependencyRelationType _synTag, SemanticTag semanticTag, Node wsd, ArrayList<SentencePart> sub_parts) {
 		this._name = _name;		
 		this._name_in_sentence = _name_in_sentence;
 		this._pos = _pos;
@@ -128,7 +129,7 @@ public class SentencePart {
 	 * @return
 	 */
 	public boolean isSubject(){
-		if(_syntaxTag == SyntaxTag.SUBJECT)
+		if(_syntaxTag == DependencyRelationType.SBJ)
 			return true;
 		return false;		
 	}
@@ -138,7 +139,7 @@ public class SentencePart {
 	 * @return
 	 */
 	public boolean isObject(){
-		if(_syntaxTag == SyntaxTag.OBJECT)
+		if(_syntaxTag == DependencyRelationType.OBJ)
 			return true;
 		return false;		
 	}
@@ -148,7 +149,7 @@ public class SentencePart {
 	 * @return
 	 */
 	public boolean isVerb(){
-		if(_syntaxTag == SyntaxTag.VERB)
+		if(_syntaxTag == DependencyRelationType.ROOT)
 			return true;
 		return false;		
 	}
@@ -158,7 +159,8 @@ public class SentencePart {
 	 * @return
 	 */
 	public boolean isAdverb(){
-		if(_syntaxTag == SyntaxTag.ADVERB)
+		if(_syntaxTag == DependencyRelationType.ADVRB || _syntaxTag == DependencyRelationType.NADV ||
+				_syntaxTag == DependencyRelationType.ADVC || _syntaxTag == DependencyRelationType.AVCONJ) // || maybe DependenctRelationType.VPP
 			return true;
 		return false;		
 	}
@@ -257,36 +259,26 @@ public class SentencePart {
 		return _name;
 	}
 
-	public void set_pos(String pos) {		
-		switch(pos){
-			case "NOUN": _pos = POS.NOUN; break;
-			case "VERB": _pos = POS.VERB; break;
-			case "ADJECTIVE": _pos = POS.ADJECTIVE; break;
-			case "SETELLITE_ADJECTIVE": _pos = POS.SETELLITE_ADJECTIVE; break;
-			case "ADVERB": _pos = POS.ADVERB; break;
-			case "ANY": _pos = POS.ANY; break;
-			case "UNKNOWN": _pos = POS.UNKNOWN; break;
-			default: _pos = POS.UNKNOWN;
-		}
+	public void set_pos(String pos) {
+		if(pos != null && !pos.equals("") && !pos.equals("-"))
+			this._pos = POS.fromString(pos);
+		
+		if(_pos == null)
+			MyError.error("bad pos name " + pos);	
 	}
 
 	public void set_syntaxTag(String synTag) {
-		switch(synTag){
-			case "SBJ": _syntaxTag = SyntaxTag.SUBJECT; break;
-			case "SBJ_P": _syntaxTag = SyntaxTag.SUBJECT_PART; break;
-			case "VERB": _syntaxTag = SyntaxTag.VERB; break;
-			case "VERB_P": _syntaxTag = SyntaxTag.VERB_PART; break;
-			case "OBJ": _syntaxTag = SyntaxTag.OBJECT; break;
-			case "OBJ_P": _syntaxTag = SyntaxTag.OBJECT_PART; break;
-			case "ADV": _syntaxTag = SyntaxTag.ADVERB; break;
-			case "ADV_P": _syntaxTag = SyntaxTag.ADVERB_PART; break;
-			default: _syntaxTag = SyntaxTag.UNKNOWN;
-		}	
+		if(synTag != null && !synTag.equals("") && !synTag.equals("-"))
+			this._syntaxTag = DependencyRelationType.fromString(synTag);
+		
+		if(_syntaxTag == null)
+			MyError.error("bad syntaxTag name " + synTag);	
 	}
 	
 	public void set_semanticTag(String semTag) {
 		if(semTag != null && !semTag.equals("") && !semTag.equals("-"))
-		_semanticTag = SemanticTag.fromString(semTag);
+			_semanticTag = SemanticTag.fromString(semTag);
+		
 		if(_semanticTag == null)
 			MyError.error("bad semantcTag name " + semTag);	
 	}
@@ -297,9 +289,10 @@ public class SentencePart {
 	
 	public void set_dep(String dep) {
 		if(dep != null && !dep.equals("") && !dep.equals("-"))
-		_dep = DEP.fromString(dep);
-		if(_dep == null)
-			MyError.error("bad dep name " + dep);			
+			_dep = DEP.fromString(dep);
+		
+//		if(_dep == null)
+//			MyError.error("bad dep name " + dep);			
 	}
 
 	public void set_wsd(Node wsd) {

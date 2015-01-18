@@ -1,6 +1,6 @@
 package model;
 
-public enum SyntaxTag {
+public enum SyntaxTag_old {
 	SUBJECT,
 	SUBJECT_PART,
 	
@@ -18,7 +18,7 @@ public enum SyntaxTag {
 	
 	UNKNOWN;
 	
-	public SyntaxTag getPartVersion(){
+	public SyntaxTag_old getPartVersion(){
 		switch(this){
 			case SUBJECT: return SUBJECT_PART;
 			
