@@ -1,0 +1,102 @@
+# Verb capacities and Semantic Arguments knowledge base export file
+# Knowledge base is composed of triples separated with a TAB, then certainty parameters follow.
+# Relation for relations start with a star (*). They come immediately after the original relation.
+# Concept names (constituents of triples) are unique. The may start with a letter + unicode character \02F8 '?'; please notice though very similar to a normal colon sign but it is not!)
+# The letter determines the source of the concept (if any).
+# For TTS system these sources are supported
+# 	f? Farsnet
+# 	w? Wordnet
+# 	s? TTS
+# All comment lines in this file start with a nubmber sign '#'
+# ------------------------------------------------------------------------------------------
+0	ARG0	f˸ISA	MainSemArg
+1	ARG0_AGENT	f˸ISA	ARG0
+2	ARG0_AGENT_P	f˸ISA	ARG0
+3	ARG0_CAUSER	f˸ISA	ARG0
+4	ARG0_CAUSER_P	f˸ISA	ARG0
+5	ARG0_EXPERIENCER	f˸ISA	ARG0
+6	ARG0_EXPERIENCER_P	f˸ISA	ARG0	
+7	ARG0_INITIATOR	f˸ISA	ARG0
+8	ARG0_INITIATOR_P	f˸ISA	ARG0
+#		
+0	ARG1	f˸ISA	MainSemArg
+9	ARG1_PATIENT	f˸ISA	ARG1
+10	ARG1_PATIENT_P	f˸ISA	ARG1
+11	ARG1_THEME	f˸ISA	ARG1
+12	ARG1_THEME_P	f˸ISA	ARG1
+#
+0	ARG2	f˸ISA	MainSemArg
+13	ARG2_EXTEND	f˸ISA	ARG2
+14	ARG2_EXTEND_P	f˸ISA	ARG2
+15	ARG2_OBJ2	f˸ISA	ARG2
+16	ARG2_OBJ2_P	f˸ISA	ARG2
+17	ARG2_BENEFICIARY	f˸ISA	ARG2
+18	ARG2_BENEFICIARY_P	f˸ISA	ARG2
+19	ARG2_INSTRUMENT	f˸ISA	ARG2
+20	ARG2_INSTRUMENT_P	f˸ISA	ARG2
+21	ARG2_ATTRIBUTE	f˸ISA	ARG2
+22	ARG2_ATTRIBUTE_P	f˸ISA	ARG2
+23	ARG2_GOAL_ENDSTATE	f˸ISA	ARG2
+24	ARG2_GOAL_ENDSTATE_P	f˸ISA	ARG2
+#
+0	ARG3	f˸ISA	MainSemArg
+25	ARG3_SOURCE_STARTPOINT	f˸ISA	ARG3
+26	ARG3_SOURCE_STARTPOINT_P	f˸ISA	ARG3
+27	ARG3_BENEFICIARY	f˸ISA	ARG3
+28	ARG3_BENEFICIARY_P	f˸ISA	ARG3
+29	ARG3_INSTRUMENT	f˸ISA	ARG3
+30	ARG3_INSTRUMENT_P	f˸ISA	ARG3
+31	ARG4_ATTRIBUTE	f˸ISA	ARG3
+32	ARG4_ATTRIBUTE_P	f˸ISA	ARG3
+#	
+33	ARG4	f˸ISA	MainSemArg
+34	ARG4_P	f˸ISA	MainSemArg
+#	
+35	ARG5	f˸ISA	MainSemArg
+36	ARG5_P	f˸ISA	MainSemArg
+#
+37	COM	f˸ISA	SubSemArg
+38	COM_P	f˸ISA	SubSemArg
+39	LOC	f˸ISA	SubSemArg
+40	LOC_P	f˸ISA	SubSemArg
+41	DIR	f˸ISA	SubSemArg
+42	DIR_P	f˸ISA	SubSemArg
+43	GOL	f˸ISA	SubSemArg
+44	GOL_P	f˸ISA	SubSemArg
+45	MNR	f˸ISA	SubSemArg
+46	MNR_P	f˸ISA	SubSemArg
+47	TMP	f˸ISA	SubSemArg
+48	TMP_P	f˸ISA	SubSemArg
+49	EXT	f˸ISA	SubSemArg
+50	EXT_P	f˸ISA	SubSemArg
+51	REC	f˸ISA	SubSemArg
+52	REC_P	f˸ISA	SubSemArg
+53	PRP	f˸ISA	SubSemArg
+54	PRP_P	f˸ISA	SubSemArg
+55	CAU	f˸ISA	SubSemArg
+56	CAU_P	f˸ISA	SubSemArg
+57	DIS	f˸ISA	SubSemArg
+58	DIS_P	f˸ISA	SubSemArg
+59	MOD	f˸ISA	SubSemArg
+60	MOD_P	f˸ISA	SubSemArg
+61	NEG	f˸ISA	SubSemArg
+62	NEG_P	f˸ISA	SubSemArg
+63	ADV	f˸ISA	SubSemArg
+64	ADV_P	f˸ISA	SubSemArg
+65	CND	f˸ISA	SubSemArg
+66	CND_P	f˸ISA	SubSemArg
+67	INS	f˸ISA	SubSemArg
+68	INS_P	f˸ISA	SubSemArg
+#
+69	MainSemArg	f˸ISA	SemArg
+70	SubSemArg	f˸ISA	SemArg
+#
+71	f˸به چشم دیدن§v-8072	MainSemArg	ARG0
+72	f˸به چشم دیدن§v-8072	MainSemArg	ARG1
+73	f˸صاحب شدن§v-8016	MainSemArg	ARG0
+74	f˸صاحب شدن§v-8016	MainSemArg	ARG1
+75	f˸دویدن§v-8577	MainSemArg	ARG0
+76	f˸دویدن§v-8577	MainSemArg	ARG3_SOURCE_STARTPOINT
+77	f˸دویدن§v-8577	MainSemArg	ARG4
+78	f˸وارد شدن§v-8510	MainSemArg	ARG0
+79	f˸وارد شدن§v-8510	MainSemArg	ARG4

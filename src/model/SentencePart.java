@@ -156,6 +156,10 @@ public class SentencePart {
 	
 	/**
 	 * checks weather this part object _syntaxTag  is ADVERB or not?
+	 * ADVRB: to constraint verbs, nouns, adjectives or ...
+	 * NADV: prepositional complements of nouns
+	 * ADVC: adverbial complements of verbs
+	 * AVCONJ: adverbs with equal positions
 	 * @return
 	 */
 	public boolean isAdverb(){

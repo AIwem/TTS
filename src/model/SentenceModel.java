@@ -23,7 +23,7 @@ public class SentenceModel{
 	/**
 	 * original sentence in "natural language". 
 	 */
-	private String originalSentence;
+	private String NLSentence;
 	
 	/**
 	 * subject(s) of this sentence.
@@ -46,14 +46,14 @@ public class SentenceModel{
 	private ArrayList<SentencePart> adverbs = new ArrayList<SentencePart>();
 	
 	public SentenceModel(String originalSentence){
-		this.originalSentence = originalSentence;			
+		this.NLSentence = originalSentence;			
 		this.subjects = new ArrayList<SentencePart>();
 		this.objects = new ArrayList<SentencePart>();
 		this.adverbs = new ArrayList<SentencePart>();
 	}
 	
 	public SentenceModel(String originalSentence, SceneModel sceneModel){
-		this.originalSentence = originalSentence;
+		this.NLSentence = originalSentence;
 		this.scene = sceneModel;				
 		this.subjects = new ArrayList<SentencePart>();
 		this.objects = new ArrayList<SentencePart>();
@@ -349,7 +349,7 @@ public class SentenceModel{
 	}
 
 	public String getOriginalSentence() {
-		return originalSentence;
+		return NLSentence;
 	}
 
 	

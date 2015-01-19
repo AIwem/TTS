@@ -14,9 +14,10 @@ public class UI {
 	private String inputStoryFilePath = "inputStory/inputStrory6.txt";
 	private String mainKbFilePath = "kb/farsnet--19.txt";
 //	private String mainKbFilePath = "kb/farsnet.txt";
-	private String myKbFilePath = "kb/injuredPigeon5.txt";
+	private String myKbFilePath = "kb/injuredPigeon6.txt";
 	//private String myKbFilePath = "kb/injuredPigeon_simple.txt";
 	//private String myKbFilePath = "kb/injuredPigeon_SS.txt";
+	private String verbCapacitiesPath = "kb/verbCapacities.txt";
 	private TTSEngine tts;
 	
 	public UI(){		
@@ -45,7 +46,7 @@ public class UI {
 			
 			if(line.equals("«داستان جدید»")){				
 				storyModel = new StoryModel("stroy" + ++story_num);
-				tts = new TTSEngine(mainKbFilePath, myKbFilePath);
+				tts = new TTSEngine(mainKbFilePath, myKbFilePath, verbCapacitiesPath);
 				continue;
 			}
 			else if(line.equals("«صحنه جدید»")){

@@ -1,56 +1,58 @@
 sentence:پسرک امروز در راه خانه چشمش به یک کبوتر زخمی افتاد
 
-name:پسرک			sentence_part:پسرک				POS:NOUN		SYN:SBJ			SEM:ARG0		WSD:MAIN_وضعیت سنی#a_POST	sub_part:پسر،ک			dep:-		num:1
-name:پسر			sentence_part:پسر				POS:NOUN		SYN:SBJ			SEM:ARG0_P		WSD:پسر#n2					sub_part:-				dep:MAIN	num:1-0
-name:ک				sentence_part:ک					POS:UNKNOWN		SYN:ANY			SEM:ARG0_P		WSD:خردسال#a1				sub_part:-				dep:POST	num:1-1
+name:پسرک			sentence_part:پسرک				POS:NOUN		SYN:SBJ			SEM:ARG0_EXPERIENCER		WSD:MAIN_وضعیت سنی#a_POST	sub_part:پسر،ک				dep:-		num:1
+name:پسر			sentence_part:پسر				POS:NOUN		SYN:SBJ			SEM:ARG0_EXPERIENCER_P		WSD:پسر#n2					sub_part:-					dep:MAIN	num:1-0
+name:ک				sentence_part:ک					POS:UNKNOWN		SYN:ANY			SEM:ARG0_EXPERIENCER_P		WSD:خردسال#a1				sub_part:-					dep:POST	num:1-1
 
-name:امروز			sentence_part:امروز				POS:ADVERB		SYN:ADVRB		SEM:ArgM_TMP	WSD:امروز#n1				sub_part:-				dep:-		num:2
+name:امروز			sentence_part:امروز				POS:ADVERB		SYN:ADVRB		SEM:ArgM_TMP	WSD:امروز#n1				sub_part:-					dep:-		num:2
 
-name:راه خانه		sentence_part:در راه خانه		POS:NOUN		SYN:ADVRB		SEM:ArgM_DIR	WSD:MAIN_mozaf#a_POST		sub_part:راه،خانه		dep:-		num:3
-name:راه			sentence_part:راه				POS:NOUN		SYN:POSDEP		SEM:ArgM_DIR_P	WSD:راه#n9					sub_part:-				dep:MAIN	num:3-0
-name:خانه			sentence_part:خانه				POS:NOUN		SYN:MOZ			SEM:ArgM_DIR_P	WSD:خانه#n10				sub_part:-				dep:POST	num:3-1
+name:راه خانه		sentence_part:در راه خانه		POS:NOUN		SYN:ADVRB		SEM:ArgM_DIR	WSD:MAIN_mozaf#a_POST		sub_part:در،راه،خانه		dep:-		num:3
+name:در				sentence_part:در				POS:UNKNOWN		SYN:ADVRB		SEM:ArgM_DIR_P	WSD:-						sub_part:-					dep:-		num:3--1
+name:راه			sentence_part:راه				POS:NOUN		SYN:POSDEP		SEM:ArgM_DIR_P	WSD:راه#n9					sub_part:-					dep:MAIN	num:3-0
+name:خانه			sentence_part:خانه				POS:NOUN		SYN:MOZ			SEM:ArgM_DIR_P	WSD:خانه#n10				sub_part:-					dep:POST	num:3-1
 
-name:یک کبوتر زخمی	sentence_part:به یک کبوتر زخمی	POS:NOUN		SYN:VPP			SEM:ARG1		WSD:MAIN_وضعیت سلامتی#a_POST	sub_part:یک،کبوتر،زخمی	dep:-		num:4
-name:یک				sentence_part:یک				POS:UNKNOWN		SYN:NPREMOD		SEM:ARG1_P		WSD:یک#n1					sub_part:-				dep:PRE		num:4--1
-name:کبوتر			sentence_part:کبوتر				POS:NOUN		SYN:POSDEP		SEM:ARG1_P		WSD:کبوتر#n1				sub_part:-				dep:MAIN	num:4-0
-name:زخمی			sentence_part:زخمی				POS:ADJECTIVE	SYN:NPOSTMOD	SEM:ARG1_P		WSD:زخمی#a1					sub_part:-				dep:POST	num:4-1
+name:یک کبوتر زخمی	sentence_part:به یک کبوتر زخمی	POS:NOUN		SYN:OBJ			SEM:ARG1_THEME		WSD:MAIN_وضعیت سلامتی#a_POST	sub_part:به،یک،کبوتر،زخمی	dep:-		num:4
+name:به				sentence_part:به				POS:UNKNOWN		SYN:VPP			SEM:ARG1_THEME_P	WSD:-						sub_part:-					dep:-		num:4--2
+name:یک				sentence_part:یک				POS:UNKNOWN		SYN:NPREMOD		SEM:ARG1_THEME_P	WSD:یک#n1					sub_part:-					dep:PRE		num:4--1
+name:کبوتر			sentence_part:کبوتر				POS:NOUN		SYN:POSDEP		SEM:ARG1_THEME_P	WSD:کبوتر#n1				sub_part:-					dep:MAIN	num:4-0
+name:زخمی			sentence_part:زخمی				POS:ADJECTIVE	SYN:NPOSTMOD	SEM:ARG1_THEME_P	WSD:زخمی#a1					sub_part:-					dep:POST	num:4-1
 
-name:چشم‌افتاد		sentence_part:چشمش‌افتاد			POS:VERB		SYN:ROOT		SEM:-			WSD:چشم افتادن#v			sub_part:-				dep:-		num:0
+name:چشم‌افتاد		sentence_part:چشمش‌افتاد			POS:VERB		SYN:ROOT		SEM:-			WSD:چشم افتادن#v			sub_part:-					dep:-		num:0
 
 #------------------------------------------------------
 sentence:بلافاصله کبوتر را بردشت
 
-name:کبوتر			sentence_part:کبوتر را			POS:NOUN		SYN:OBJ			SEM:ARG1		WSD:کبوتر#n1				sub_part:-				dep:-		num:1
+name:کبوتر			sentence_part:کبوتر را			POS:NOUN		SYN:OBJ			SEM:ARG1		WSD:کبوتر#n1				sub_part:-					dep:-		num:1
 
-name:فردا			sentence_part:فردا				POS:NOUN		SYN:ADVRB		SEM:ArgM_TMP	WSD:فردا#n1					sub_part:-				dep:-		num:2
+name:فردا			sentence_part:فردا				POS:NOUN		SYN:ADVRB		SEM:ArgM_TMP	WSD:فردا#n1					sub_part:-					dep:-		num:2
 
-name:برداشت			sentence_part:برداشته			POS:VERB		SYN:ROOT		SEM:-			WSD:برداشتن#v1				sub_part:-				dep:-		num:0
+name:برداشت			sentence_part:برداشته			POS:VERB		SYN:ROOT		SEM:-			WSD:برداشتن#v1				sub_part:-					dep:-		num:0
 
 #------------------------------------------------------
 sentence:شروع به دویدن به سمت خانه کرد
+	
+name:شروع کرد		sentence_part:شروع به دویدن کرد	POS:VERB		SYN:ROOT		SEM:-			WSD:شروع کردن#v1			sub_part:-					dep:-		num:0
 
-name:شروع کرد		sentence_part:شروع به دویدن کرد	POS:VERB		SYN:ROOT		SEM:-			WSD:شروع کردن#v1			sub_part:-				dep:-		num:0
+name:دویدن			sentence_part:دویدن				POS:VERB		SYN:OBJ			SEM:ARG1		WSD:دویدن#v1				sub_part:-					dep:-		num:1
 
-name:دویدن			sentence_part:دویدن				POS:VERB		SYN:OBJ			SEM:ARG1		WSD:دویدن#v1				sub_part:-				dep:-		num:1
-
-name:سمت خانه		sentence_part:به سمت خانه		POS:NOUN		SYN:ADVRB			SEM:ArgM_DIR	WSD:MAIN_mozaf#a_POST		sub_part:سمت،خانه		dep:-		num:2
-name:سمت			sentence_part:سمت				POS:NOUN		SYN:ADV_P		SEM:ArgM_DIR_P	WSD:سمت#n4					sub_part:-				dep:MAIN	num:2-0
-name:خانه			sentence_part:خانه				POS:NOUN		SYN:ADV_P		SEM:ArgM_DIR_P	WSD:خانه#n10				sub_part:-				dep:POST	num:2-1
+name:سمت خانه		sentence_part:به سمت خانه		POS:NOUN		SYN:ADVRB		SEM:ArgM_DIR	WSD:MAIN_mozaf#a_POST		sub_part:سمت،خانه			dep:-		num:2
+name:سمت			sentence_part:سمت				POS:NOUN		SYN:ADV_P		SEM:ArgM_DIR_P	WSD:سمت#n4					sub_part:-					dep:MAIN	num:2-0
+name:خانه			sentence_part:خانه				POS:NOUN		SYN:ADV_P		SEM:ArgM_DIR_P	WSD:خانه#n10				sub_part:-					dep:POST	num:2-1
 
 #------------------------------------------------------
 sentence:‌وارد خانه شد
 
 name:خانه			sentence_part:خانه				POS:NOUN		SYN:ADVRB			SEM:ARG4		WSD:خانه#n10				sub_part:-				dep:-		num:1
 
-name:وارد شد		sentence_part:وارد شد			POS:VERB		SYN:ROOT		SEM:-			WSD:وارد شدن#v2				sub_part:-				dep:-		num:0
+name:وارد شد		sentence_part:وارد شد			POS:VERB		SYN:ROOT		SEM:-			WSD:وارد شدن#v2				sub_part:-					dep:-		num:0
 
 #------------------------------------------------------
 #sentence:و کبوتر را به مادر خود داد
-name:کبوتر			sentence_part:کبوتر را			POS:NOUN		SYN:OBJ			SEM:ARG1		WSD:کبوتر#n1				sub_part:-				dep:-		num:0
+name:کبوتر			sentence_part:کبوتر را			POS:NOUN		SYN:OBJ			SEM:ARG1		WSD:کبوتر#n1				sub_part:-					dep:-		num:0
 
-name:مادر خود		sentence_part:به مادر خود		POS:NOUN		SYN:			SEM:ARG0		WSD:MAIN_وضعیت سنی#a_POST	sub_part:پسر،ک			dep:-		num:1
+name:مادر خود		sentence_part:به مادر خود		POS:NOUN		SYN:			SEM:ARG0		WSD:MAIN_وضعیت سنی#a_POST	sub_part:پسر،ک				dep:-		num:1
 
-name:داد			sentence_part:داد				POS:VERB		SYN:ROOT		SEM:-			WSD:دادن#v5					sub_part:-				dep:-		num:2
+name:داد			sentence_part:داد				POS:VERB		SYN:ROOT		SEM:-			WSD:دادن#v5					sub_part:-					dep:-		num:2
 
 #------------------------------------------------------
 #sentence:سپس به طرف اتاقش دوید

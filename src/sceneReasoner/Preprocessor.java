@@ -349,19 +349,18 @@ public class Preprocessor {
 			MyError.error("senetecenModel should not be null! " + sentenceModel);
 			return null;
 		}
-		
-		//TODO: changing set_pos, set_syntaxTag
-		//TODO: completing list of syntax tags
-		//TODO: checking proper getting value
-		//TODO: completing preprocessSence!
-		
-		
+			
 		SceneModel primarySceneModel = new SceneModel();
 
 		primarySceneModel.addSentence(sentenceModel);
 		sentenceModel.setScene(primarySceneModel);
 		
-		prepareNullTags(sentenceModel, primarySceneModel);
+		SentencePart verb = sentenceModel.getVerb();
+		
+		allocate_wsd(verb, true, DependencyRelationType.ROOT);
+		_ttsEngine.loadVerbSemanticArgument(verb);
+		
+		prepareNullSemanticTags(sentenceModel, primarySceneModel);
 	
 		preprocessArg0(sentenceModel, primarySceneModel);
 		
@@ -387,7 +386,7 @@ public class Preprocessor {
 		return primarySceneModel;
 	}
 	
-	private void prepareNullTags(SentenceModel sentenceModel, SceneModel primarySceneModel) {
+	private void prepareNullSemanticTags(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		// TODO Auto-generated method stub
 		
 	}	
@@ -652,9 +651,11 @@ public class Preprocessor {
 	}
 	
 	private void preprocessSubject(SentenceModel sentenceModel, SceneModel primarySceneModel){
-		print("\npreprocess subject");
+		
 		ArrayList<SentencePart> subjects = sentenceModel.getSubjects();
-
+			
+		print("\npreprocess subject: " + subjects);
+		
 		for(SentencePart sbj:subjects){
 		
 			if(sbj == null || !sbj.isSubject()){
@@ -673,8 +674,10 @@ public class Preprocessor {
 	}
 	
 	private void preprocessObject(SentenceModel sentenceModel, SceneModel primarySceneModel){
-		print("\npreprocess object");
+		
 		ArrayList<SentencePart> objects = sentenceModel.getObjects();
+		
+		print("\npreprocess object: " + objects);
 		
 		for(SentencePart obj:objects){
 			
@@ -697,8 +700,10 @@ public class Preprocessor {
 	
 	
 	private void preprocessAdverb(SentenceModel sentenceModel, SceneModel primarySceneModel) {
-		print("\npreprocess adverb");
+		
 		ArrayList<SentencePart> adverbs = sentenceModel.getAdverbs();
+		
+		print("\npreprocess adverb: " + adverbs);
 		
 		for(SentencePart adv:adverbs){
 			if(adv != null && !adv.isAdverb()){
@@ -731,8 +736,10 @@ public class Preprocessor {
 	 * @param primarySceneModel guaranteed not to be null.
 	 */
 	private void preprocessVerb(SentenceModel sentenceModel, SceneModel primarySceneModel) {
-		print("\npreprocess verb");
+		
 		SentencePart verb = sentenceModel.getVerb();
+		
+		print("\npreprocess verb: " + verb);
 		
 		if(verb == null || !verb.isVerb()){
 			MyError.error("bad verb part " + verb);

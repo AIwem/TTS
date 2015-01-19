@@ -19,6 +19,7 @@ import java.util.Hashtable;
 import model.SceneModel;
 import model.ScenePart;
 import model.SentenceModel;
+import model.SentencePart;
 import model.StoryModel;
 
 /**
@@ -38,6 +39,7 @@ public class TTSEngine {
 	
 	private String mainKbFilePath;
 	private String myKbFilePath;
+	private String verbCapacitiesPath;
 	
 	private Preprocessor _pp;
 	private SceneReasoner _sr;
@@ -62,9 +64,10 @@ public class TTSEngine {
 	private Hashtable<String, ScenePart> seen_sceneParts = new Hashtable<String, ScenePart>();
 	
 	
-	public TTSEngine(String mainKbFilePath, String myKbFilePath){
+	public TTSEngine(String mainKbFilePath, String myKbFilePath, String verbCapacitiesPath){
 		this.mainKbFilePath = mainKbFilePath;
 		this.myKbFilePath = myKbFilePath;
+		this.verbCapacitiesPath = verbCapacitiesPath;
 		
 		this._TTSKb = new KnowledgeBase();
 		this._re = new SemanticReasoner(_TTSKb, ExecutionMode.RELEASE);
@@ -112,7 +115,7 @@ public class TTSEngine {
 			
 			SentenceModel sentence = _pp.preprocessSentence(NLsentence);
 			
-			SceneModel cur_sen_scene = _pp.preprocessScene(sentence);
+			SceneModel cur_sen_scene = _pp.preprocessScene2(sentence);
 			
 			if(cur_sen_scene != null)
 				sentencs_scenes.add(cur_sen_scene);
@@ -222,6 +225,7 @@ public class TTSEngine {
 		
 		loaded = _TTSKb.importKb(mainKbFilePath);		
 		loaded = _TTSKb.importKb(myKbFilePath);	
+		loaded = _TTSKb.importKb(verbCapacitiesPath);
 		
 		Long end = System.currentTimeMillis();
 				
@@ -990,6 +994,17 @@ public class TTSEngine {
 
 		print(node + " ScenePart is " + sp + "\n");			
 		return sp;
-	}	
+	}
+	
+	public ArrayList<PlausibleAnswer> loadVerbSemanticArgument(SentencePart verb){
+		if(verb == null || verb._wsd == null){
+			MyError.error("verb or its wsd should not be null!" + verb);
+			return null;
+		}
+		
+		print("HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH" + verb._wsd);		
+		return writeAnswersTo(verb._wsd, KnowledgeBase.HPR_ISA, null);
+		
+	}
 
 }
