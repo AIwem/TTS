@@ -183,6 +183,8 @@ public class Preprocessor {
 		
 		newPart.set_wsd_name(parts[5]);
 		
+		allocate_wsd(newPart, false, null);
+				
 		
 		if(parts[6] != null && !parts[6].equals("-")){				
 			String[] subs = parts[6].split("،");
