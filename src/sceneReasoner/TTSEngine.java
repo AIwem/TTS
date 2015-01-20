@@ -19,7 +19,6 @@ import java.util.Hashtable;
 import model.SceneModel;
 import model.ScenePart;
 import model.SentenceModel;
-import model.SentencePart;
 import model.StoryModel;
 
 /**
@@ -730,7 +729,7 @@ public class TTSEngine {
 		return false;
 	}
 
-	private ArrayList<PlausibleAnswer> writeAnswersTo(Node descriptor, Node argument, Node referent){
+	public ArrayList<PlausibleAnswer> writeAnswersTo(Node descriptor, Node argument, Node referent){
 		PlausibleQuestion pq = new PlausibleQuestion();
 		pq.argument = argument;		
 		pq.referent = referent;
@@ -738,7 +737,7 @@ public class TTSEngine {
 		
 		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
 		
-		System.out.println("Answers:");
+		System.out.println("Answers:" + answers.size());
 		
 		int count = 0;
 		for (PlausibleAnswer answer: answers)
@@ -755,8 +754,8 @@ public class TTSEngine {
 //			}
 		}
 		print("\tInferences: " + _re.totalCalls);
-		print("\tTime: " + _re.reasoningTime / 100 + " ms");
-		print("\tThroughput: " + (_re.totalCalls / _re.reasoningTime) * 1000 + " inference/s");
+		print("\tTime: " + _re.reasoningTime*100000 + " yani " + _re.reasoningTime / 100 + " ms");
+//		print("\tThroughput: " + (_re.totalCalls / (_re.reasoningTime*1000)) * 1000 + " inference/s");
 		return answers;
 		
 	}
@@ -994,17 +993,6 @@ public class TTSEngine {
 
 		print(node + " ScenePart is " + sp + "\n");			
 		return sp;
-	}
-	
-	public ArrayList<PlausibleAnswer> loadVerbSemanticArgument(SentencePart verb){
-		if(verb == null || verb._wsd == null){
-			MyError.error("verb or its wsd should not be null!" + verb);
-			return null;
-		}
-		
-		print("HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH" + verb._wsd);		
-		return writeAnswersTo(verb._wsd, KnowledgeBase.HPR_ISA, null);
-		
 	}
 
 }

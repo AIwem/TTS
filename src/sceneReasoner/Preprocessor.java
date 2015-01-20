@@ -1,10 +1,11 @@
 package sceneReasoner;
 
-import ir.ac.itrc.qqa.semantic.enums.DependencyRelationType;
+import ir.ac.itrc.qqa.semantic.enums.KbOperationMode;
 import ir.ac.itrc.qqa.semantic.enums.SourceType;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
 import ir.ac.itrc.qqa.semantic.kb.Node;
 import ir.ac.itrc.qqa.semantic.util.MyError;
+import ir.ac.itrc.qqa.semantic.reasoning.PlausibleAnswer;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleStatement;
 import ir.ac.itrc.qqa.semantic.reasoning.SemanticReasoner;
 
@@ -14,11 +15,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-import sceneElement.*;
-import model.CONTEXT;
+
+//import sceneElement.*;
+//import model.CONTEXT;
 import model.SentencePart;
 import model.SceneModel;
-import model.ScenePart;
 import model.SentenceModel;
 
 /**
@@ -35,7 +36,8 @@ public class Preprocessor {
 //	private SemanticReasoner _re;
 	private TTSEngine _ttsEngine = null;
 		
-	private ArrayList<PlausibleStatement> default_contexts = null;
+//	private ArrayList<PlausibleStatement> default_contexts = null;
+	private String MainSemanticArgumet_name = "MainSemArg";
 	
 	
 	/**
@@ -45,11 +47,7 @@ public class Preprocessor {
 //	private String sentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
 //	private String sentenceInfosFileName = "inputStory/sentenceInfos_SS.txt";
 	private String sentenceInfosFileName = "inputStory/SentenceInfos11.txt";
-	
-	private String verbCapacitiesFileName = "inputStory/verb_capacity";
-		
-	
-	
+
 	public Preprocessor(KnowledgeBase kb, SemanticReasoner re, TTSEngine ttsEngine) {
 		this._kb = kb;
 //		this._re = re;
@@ -202,56 +200,7 @@ public class Preprocessor {
 	private void print(String s){
 		System.out.println(s);
 	}
-	
-	/**
-	 * 
-	 * @param verb
-	 * @return
-	 */
-	private ArrayList<String> LoadVerbCapacities(SentencePart verb){		
-		ArrayList<String> verbCapacities = new ArrayList<String>();
-		BufferedReader stream = null;		
-		try
-		{
-			stream = new BufferedReader(new InputStreamReader(new FileInputStream(verbCapacitiesFileName), "utf-8"));			
-		}
-		catch(Exception e)
-		{
-			System.out.println("Error opening `" + verbCapacitiesFileName + "` for reading input natural language texts!");
-			e.printStackTrace();		
-		}
-			
-		try {
-			String line = "";
-			while (line != null)
-			{				
-				line = stream.readLine();
-				
-				if(line == null)
-					break;
-				
-				if(line.equals(""))
-					continue;	
-												
-				if (line.startsWith("#")) // comment line
-					continue;
-								
-				//it means the next sentence in file has reached!
-				if (line.equals("sentence:")){
-									
-					break;
-				}
-			}
-			stream.close();
-		}
-		catch (IOException e)
-		{
-			e.printStackTrace();
-		}
-		return verbCapacities;	
-	}
-	
-	
+		
 	/**
 	 * preprocessSentence first finds preprocessed information of this sentence from its related file.
 	 * then convert this information to SentenceModel object 
@@ -290,55 +239,67 @@ public class Preprocessor {
 				currentPart.sub_parts = subParts;							
 			}						
 			senParts.add(currentPart);
+
+			//setting _wsd of currentPart to the proper Node of KB.			
+			if(currentPart.isVerb())
+				//isnewNode parameter is true, because every verb is new a one!
+				allocate_wsd(currentPart, true);
+			else
+
+				allocate_wsd(currentPart, false);
 			
-			allocate_wsd(currentPart, false);
+			if(currentPart._wsd == null)
+				MyError.error(currentPart._wsd_name + " couldn't get allocated!");				
+			
 		}
 
-		//now senParts has all part objects of this sentence.						
+		//now senParts has all part objects of this sentence, so we specify which is subject, object, adverb, ...						
 		sentence.arrageSentenceParts(NLsentence, senParts);
 		
+		//adding verb relation to KB.
+		/*ArrayList<PlausibleStatement> verbRelations = */defineVerbRelation(sentence);
 		
-		//TODO: reading verb capacities.
-		
+		//loading verb SemanticArguments.
+		loadVerbSemanticArguments(sentence);
 		
 		return sentence;
 		
 	}
 	
-	
-	/**
-	 * preprocessScene preprocesses input sentenceModel and adds it to the primarySceneModel.    
-	 * 
-	 * @param sentenceModel the SenetenceModel to be converted. 
-	 * @return SceneModel equivalent to input sentenceModel. 
-	 */	 
-	public SceneModel preprocessScene(SentenceModel sentenceModel){		
-		
-		if(sentenceModel == null){
-			MyError.error("senetecenModel should not be null! " + sentenceModel);
-			return null;
-		}
-		SceneModel primarySceneModel = new SceneModel();
+//	
+//	/**
+//	 * preprocessScene preprocesses input sentenceModel and adds it to the primarySceneModel.    
+//	 * 
+//	 * @param sentenceModel the SenetenceModel to be converted. 
+//	 * @return SceneModel equivalent to input sentenceModel. 
+//	 */	 
+//	public SceneModel preprocessScene(SentenceModel sentenceModel){		
+//		
+//		if(sentenceModel == null){
+//			MyError.error("senetecenModel should not be null! " + sentenceModel);
+//			return null;
+//		}
+//		SceneModel primarySceneModel = new SceneModel();
+//
+//		primarySceneModel.addSentence(sentenceModel);
+//		sentenceModel.setScene(primarySceneModel);
+//		
+//		preprocessSubject(sentenceModel, primarySceneModel);		
+//				
+//		preprocessObject(sentenceModel, primarySceneModel);
+//		
+//		preprocessAdverb(sentenceModel, primarySceneModel);
+//		print("\n before verb");
+//		_ttsEngine.printDictionary();
+//		
+//		preprocessVerb(sentenceModel, primarySceneModel);
+//		print("\n after verb");
+//		_ttsEngine.printDictionary();
+//		
+//		print("primarySceneModel\n" + primarySceneModel);
+//		return primarySceneModel;
+//	}	
 
-		primarySceneModel.addSentence(sentenceModel);
-		sentenceModel.setScene(primarySceneModel);
-		
-		preprocessSubject(sentenceModel, primarySceneModel);		
-				
-		preprocessObject(sentenceModel, primarySceneModel);
-		
-		preprocessAdverb(sentenceModel, primarySceneModel);
-		print("\n before verb");
-		_ttsEngine.printDictionary();
-		
-		preprocessVerb(sentenceModel, primarySceneModel);
-		print("\n after verb");
-		_ttsEngine.printDictionary();
-		
-		print("primarySceneModel\n" + primarySceneModel);
-		return primarySceneModel;
-	}	
-	
 	/**
 	 * preprocessScene preprocesses input sentenceModel and converts it to the primarySceneModel.    
 	 * 
@@ -357,7 +318,7 @@ public class Preprocessor {
 		primarySceneModel.addSentence(sentenceModel);
 		sentenceModel.setScene(primarySceneModel);
 		
-		SentencePart verb = sentenceModel.getVerb();
+		//SentencePart verb = sentenceModel.getVerb();
 				
 		//_ttsEngine.loadVerbSemanticArgument(verb);
 		
@@ -563,222 +524,212 @@ public class Preprocessor {
 	}
 
 	
-	/**
-	 * this method based on the ScenePart of the part adds a Role, DynamicObject, StaticObject, or ... to primarySceneModel.
-	 * TODO: we have assumed for simplicity which every scene has a unique Role, DyanamicObject, and StaticObject with a one name.
-	 * for example all «پسرک» refer to just one Role. 
-	 * 
-	 * @param part the _wsd of this SentencePart object is set.
-	 * @param primarySceneModel
-	 */
-	private void addToPrimarySceneModel(SentencePart part, SceneModel primarySceneModel){
-		if(part == null)
-			return;
-		
-		ScenePart sp = _ttsEngine.whichScenePart(part._wsd, part._syntaxTag);				
-		
-		if(sp == ScenePart.ROLE){
-			if(!primarySceneModel.hasRole(part._wsd)){				
-				Role role = new Role(part._name, part._wsd);				
-				primarySceneModel.addRole(role);			
-			}		
-		}
-		else if(sp == ScenePart.DYNAMIC_OBJECT){		
-			if(!primarySceneModel.hasDynamic_object(part._wsd)){				
-				DynamicObject dynObj = new DynamicObject(part._name, part._wsd);
-				primarySceneModel.addDynamic_object(dynObj);				
-			}
-		}
-		else if(sp == ScenePart.STATIC_OBJECT){
-			if(!primarySceneModel.hasStatic_object(part._wsd)){				
-				StaticObject staObj = new StaticObject(part._name, part._wsd);
-				primarySceneModel.addStatic_object(staObj);
-			}
-		}
-		else if(sp == ScenePart.LOCATION){//TODO: check what else shall I do for this case!
-			Location location = new Location(part._name, part._wsd);
-			primarySceneModel.setLocation(location);			
-		}
-		else if(sp == ScenePart.TIME){//TODO: check what else shall I do for this case!
-			Time time = new Time(part._name, part._wsd);
-			primarySceneModel.setTime(time);			
-		}
-	}
+//	/**
+//	 * this method based on the ScenePart of the part adds a Role, DynamicObject, StaticObject, or ... to primarySceneModel.
+//	 * TODO: we have assumed for simplicity which every scene has a unique Role, DyanamicObject, and StaticObject with a one name.
+//	 * for example all «پسرک» refer to just one Role. 
+//	 * 
+//	 * @param part the _wsd of this SentencePart object is set.
+//	 * @param primarySceneModel
+//	 */
+//	private void addToPrimarySceneModel(SentencePart part, SceneModel primarySceneModel){
+//		if(part == null)
+//			return;
+//		
+//		ScenePart sp = _ttsEngine.whichScenePart(part._wsd, part._syntaxTag);				
+//		
+//		if(sp == ScenePart.ROLE){
+//			if(!primarySceneModel.hasRole(part._wsd)){				
+//				Role role = new Role(part._name, part._wsd);				
+//				primarySceneModel.addRole(role);			
+//			}		
+//		}
+//		else if(sp == ScenePart.DYNAMIC_OBJECT){		
+//			if(!primarySceneModel.hasDynamic_object(part._wsd)){				
+//				DynamicObject dynObj = new DynamicObject(part._name, part._wsd);
+//				primarySceneModel.addDynamic_object(dynObj);				
+//			}
+//		}
+//		else if(sp == ScenePart.STATIC_OBJECT){
+//			if(!primarySceneModel.hasStatic_object(part._wsd)){				
+//				StaticObject staObj = new StaticObject(part._name, part._wsd);
+//				primarySceneModel.addStatic_object(staObj);
+//			}
+//		}
+//		else if(sp == ScenePart.LOCATION){//TODO: check what else shall I do for this case!
+//			Location location = new Location(part._name, part._wsd);
+//			primarySceneModel.setLocation(location);			
+//		}
+//		else if(sp == ScenePart.TIME){//TODO: check what else shall I do for this case!
+//			Time time = new Time(part._name, part._wsd);
+//			primarySceneModel.setTime(time);			
+//		}
+//	}
 	
-	/**
-	 * this method based on the ScenePart of the subject(s) of the sentenceModel adds RoleAction(s) or ObjectAction(s) to primarySceneModel. 
-	 * It is important to note that when this method is called _wsd parameter of  
-	 * all subject(s) of this sentenceModel has been allocated ! 
-	 * 
-	 * @param verbRelation the relation indicating the action of this verb. 
-	 * @param primarySceneModel guaranteed not to be null.
-	 */
-	private void addVerbToPrimarySceneModel(PlausibleStatement verbRelation, SceneModel primarySceneModel){
-		if(verbRelation == null)
-			MyError.error("verb parameter of this method should not be null!");
-		
-		Node sbj = verbRelation.argument;				
-										
-		ScenePart sbjSp = _ttsEngine.whichScenePart(sbj, DependencyRelationType.SBJ);
-		
-		if(sbjSp == null || sbjSp == ScenePart.UNKNOWN){
-			MyError.error("this subject \"" + sbj + "\" has no ScenePart");
-			return;
-		}
-		
-		if(sbjSp == ScenePart.ROLE){			
-			
-			Role role = primarySceneModel.getRole(sbj);
-			if(role == null){
-				MyError.error(primarySceneModel + " SceneModel has not such a " + sbj + " Role.");
-				return;
-			}					
-			
-			RoleAction role_action = new RoleAction(verbRelation.getName(), verbRelation);				
-			role.addRole_action(role_action);
-		}
-		else if(sbjSp == ScenePart.DYNAMIC_OBJECT){
-			
-			DynamicObject dyn_obj = primarySceneModel.getDynamic_object(sbj);
-			if(dyn_obj == null){
-				MyError.error(primarySceneModel + " SceneModel has not such a " + sbj + " DynamicObject.");
-				return;
-			}
-			
-			ObjectAction obj_act = new ObjectAction(verbRelation.getName(), verbRelation);				
-			dyn_obj.addObejct_action(obj_act);
-		}			
-		
-	}
+//	/**
+//	 * this method based on the ScenePart of the subject(s) of the sentenceModel adds RoleAction(s) or ObjectAction(s) to primarySceneModel. 
+//	 * It is important to note that when this method is called _wsd parameter of  
+//	 * all subject(s) of this sentenceModel has been allocated ! 
+//	 * 
+//	 * @param verbRelation the relation indicating the action of this verb. 
+//	 * @param primarySceneModel guaranteed not to be null.
+//	 */
+//	private void addVerbToPrimarySceneModel(PlausibleStatement verbRelation, SceneModel primarySceneModel){
+//		if(verbRelation == null)
+//			MyError.error("verb parameter of this method should not be null!");
+//		
+//		Node sbj = verbRelation.argument;				
+//										
+//		ScenePart sbjSp = _ttsEngine.whichScenePart(sbj, DependencyRelationType.SBJ);
+//		
+//		if(sbjSp == null || sbjSp == ScenePart.UNKNOWN){
+//			MyError.error("this subject \"" + sbj + "\" has no ScenePart");
+//			return;
+//		}
+//		
+//		if(sbjSp == ScenePart.ROLE){			
+//			
+//			Role role = primarySceneModel.getRole(sbj);
+//			if(role == null){
+//				MyError.error(primarySceneModel + " SceneModel has not such a " + sbj + " Role.");
+//				return;
+//			}					
+//			
+//			RoleAction role_action = new RoleAction(verbRelation.getName(), verbRelation);				
+//			role.addRole_action(role_action);
+//		}
+//		else if(sbjSp == ScenePart.DYNAMIC_OBJECT){
+//			
+//			DynamicObject dyn_obj = primarySceneModel.getDynamic_object(sbj);
+//			if(dyn_obj == null){
+//				MyError.error(primarySceneModel + " SceneModel has not such a " + sbj + " DynamicObject.");
+//				return;
+//			}
+//			
+//			ObjectAction obj_act = new ObjectAction(verbRelation.getName(), verbRelation);				
+//			dyn_obj.addObejct_action(obj_act);
+//		}			
+//		
+//	}
 	
-	private void preprocessSubject(SentenceModel sentenceModel, SceneModel primarySceneModel){
-		
-		ArrayList<SentencePart> subjects = sentenceModel.getSubjects();
-			
-		print("\npreprocess subject: " + subjects);
-		
-		for(SentencePart sbj:subjects){
-		
-			if(sbj == null || !sbj.isSubject()){
-				MyError.error("bad subjct part " + sbj);
-				return;
-			}
-			
-			//_wsd of sbj is set to proper Node of KB.
-			allocate_wsd(sbj, false);	
-			
-			if(sbj._wsd != null)
-				addToPrimarySceneModel(sbj, primarySceneModel);			
-			else
-				MyError.error(sbj._wsd_name + " couldn't get allocated!");
-		}
-	}
-	
-	private void preprocessObject(SentenceModel sentenceModel, SceneModel primarySceneModel){
-		
-		ArrayList<SentencePart> objects = sentenceModel.getObjects();
-		
-		print("\npreprocess object: " + objects);
-		
-		for(SentencePart obj:objects){
-			
-			if(obj != null && !obj.isObject()){
-				MyError.error("bad obejct part " + obj);
-				return;
-			}	
-			else if(obj != null && obj.isObject()){
-			
-				//_wsd of obj is set to proper Node of KB.
-				allocate_wsd(obj, false);
-				
-				if(obj._wsd != null)			
-					addToPrimarySceneModel(obj, primarySceneModel);
-				else
-					MyError.error(obj._wsd_name + " couldn't get allocated!");
-			}
-		}
-	}		
-	
-	
-	private void preprocessAdverb(SentenceModel sentenceModel, SceneModel primarySceneModel) {
-		
-		ArrayList<SentencePart> adverbs = sentenceModel.getAdverbs();
-		
-		print("\npreprocess adverb: " + adverbs);
-		
-		for(SentencePart adv:adverbs){
-			if(adv != null && !adv.isAdverb()){
-				MyError.error("bad adverb part " + adv);
-				return;
-			}
-			else if(adv != null && adv.isAdverb()){
-				
-				//_wsd of adv is set to proper Node of KB.
-				allocate_wsd(adv, false);
-				
-				if(adv._wsd != null)			
-					addToPrimarySceneModel(adv, primarySceneModel);
-				else
-					MyError.error(adv._wsd_name + " couldn't get allocated!");
-			}
-		}		
-	}
-	/**
-	 * TODO:
-	 * 1- allocate_wsd verb 									   				--> done
-	 * 2- adding proper RoleActoin or ObjectAction to sceneModel.  				--> done
-	 * 3- create relation of verb!		   						   				--> done
-	 * 
-	 * 4- defining verb capacities in INJUREDPIGEON kb.							--> done as test
-	 * 5- loading these capacities from kb for SynSetof verbs.					--> done
-	 * 6- preparing values for these capacities --> in SceneReasoner,next phase.
-	 *   															  
-	 * @param sentenceModel guaranteed not to be null.
-	 * @param primarySceneModel guaranteed not to be null.
-	 */
-	private void preprocessVerb(SentenceModel sentenceModel, SceneModel primarySceneModel) {
-		
-		SentencePart verb = sentenceModel.getVerb();
-		
-		print("\npreprocess verb: " + verb);
-		
-		if(verb == null || !verb.isVerb()){
-			MyError.error("bad verb part " + verb);
-			return;
-		}		
-			
-		//_wsd of verb is set to proper Node of KB. note that second parameter reasonably is set to true, because every node is new one!
-		allocate_wsd(verb, true);
-		
-		if(verb._wsd == null){
-			MyError.error(verb._wsd_name + " couldn't get allocated!");
-			return;
-		}
-		
-		Node pure_verb = _ttsEngine.getPureNode(verb._wsd);
-		
-		if(pure_verb == null){
-			MyError.error("the pure version of " + verb._wsd + " could not be found");
-			return;
-		}
-		
-		//load verb capacities from kb.
-		ArrayList<PlausibleStatement> verb_cxs = loadVerbCapacities(pure_verb);
-		
-		print("loaded contexts " + verb_cxs + "\n");
-
-		//here _wsd of subject(s) and object(s) of this sentence has been allocated!
-		ArrayList<PlausibleStatement> verbRelations = defineVerbRelation(verb, sentenceModel, primarySceneModel);
-		
-		for(PlausibleStatement verbRel: verbRelations){
-			
-			addVerbToPrimarySceneModel(verbRel, primarySceneModel);	
-		
-			setLocationContext(verbRel, primarySceneModel.getLocation(), verb_cxs);
-			
-			setTimeContext(verbRel, primarySceneModel.getTime(), verb_cxs);				
-		}
-	}	
+//	private void preprocessSubject(SentenceModel sentenceModel, SceneModel primarySceneModel){
+//		
+//		ArrayList<SentencePart> subjects = sentenceModel.getSubjects();
+//			
+//		print("\npreprocess subject: " + subjects);
+//		
+//		for(SentencePart sbj:subjects){
+//		
+//			if(sbj == null || !sbj.isSubject()){
+//				MyError.error("bad subjct part " + sbj);
+//				return;
+//			}
+//			
+//			//_wsd of sbj is set to proper Node of KB.
+//			allocate_wsd(sbj, false);	
+//			
+//			if(sbj._wsd != null)
+//				addToPrimarySceneModel(sbj, primarySceneModel);			
+//			else
+//				MyError.error(sbj._wsd_name + " couldn't get allocated!");
+//		}
+//	}
+//	
+//	private void preprocessObject(SentenceModel sentenceModel, SceneModel primarySceneModel){
+//		
+//		ArrayList<SentencePart> objects = sentenceModel.getObjects();
+//		
+//		print("\npreprocess object: " + objects);
+//		
+//		for(SentencePart obj:objects){
+//			
+//			if(obj != null && !obj.isObject()){
+//				MyError.error("bad obejct part " + obj);
+//				return;
+//			}	
+//			else if(obj != null && obj.isObject()){
+//			
+//				//_wsd of obj is set to proper Node of KB.
+//				allocate_wsd(obj, false);
+//				
+//				if(obj._wsd != null)			
+//					addToPrimarySceneModel(obj, primarySceneModel);
+//				else
+//					MyError.error(obj._wsd_name + " couldn't get allocated!");
+//			}
+//		}
+//	}		
+//	
+//	
+//	private void preprocessAdverb(SentenceModel sentenceModel, SceneModel primarySceneModel) {
+//		
+//		ArrayList<SentencePart> adverbs = sentenceModel.getAdverbs();
+//		
+//		print("\npreprocess adverb: " + adverbs);
+//		
+//		for(SentencePart adv:adverbs){
+//			if(adv != null && !adv.isAdverb()){
+//				MyError.error("bad adverb part " + adv);
+//				return;
+//			}
+//			else if(adv != null && adv.isAdverb()){
+//				
+//				//_wsd of adv is set to proper Node of KB.
+//				allocate_wsd(adv, false);
+//				
+//				if(adv._wsd != null)			
+//					addToPrimarySceneModel(adv, primarySceneModel);
+//				else
+//					MyError.error(adv._wsd_name + " couldn't get allocated!");
+//			}
+//		}		
+//	}
+//	/**
+//	 * TODO:
+//	 * 1- allocate_wsd verb 									   				--> done
+//	 * 2- adding proper RoleActoin or ObjectAction to sceneModel.  				--> done
+//	 * 3- create relation of verb!		   						   				--> done
+//	 * 
+//	 * 4- defining verb capacities in INJUREDPIGEON kb.							--> done as test
+//	 * 5- loading these capacities from kb for SynSetof verbs.					--> done
+//	 * 6- preparing values for these capacities --> in SceneReasoner,next phase.
+//	 *   															  
+//	 * @param sentenceModel guaranteed not to be null.
+//	 * @param primarySceneModel guaranteed not to be null.
+//	 */
+//	private void preprocessVerb(SentenceModel sentenceModel, SceneModel primarySceneModel) {
+//		
+//		SentencePart verb = sentenceModel.getVerb();
+//						
+//		if(verb == null || !verb.isVerb()){
+//			MyError.error("bad verb part " + verb);
+//			return;
+//		}		
+//				
+//		Node pure_verb = _ttsEngine.getPureNode(verb._wsd);
+//		
+//		if(pure_verb == null){
+//			MyError.error("the pure version of " + verb._wsd + " could not be found");
+//			return;
+//		}
+//		
+//		//load verb capacities from kb.
+//		ArrayList<PlausibleStatement> verb_cxs = loadVerbCapacities(pure_verb);
+//		
+//		print("loaded contexts " + verb_cxs + "\n");
+//
+//		here _wsd of subject(s) and object(s) of this sentence has been allocated!
+//		ArrayList<PlausibleStatement> verbRelations = defineVerbRelation(sentenceModel, primarySceneModel);
+//		
+//		for(PlausibleStatement verbRel: verbRelations){
+//			
+////			addVerbToPrimarySceneModel(verbRel, primarySceneModel);	
+//		
+//			setLocationContext(verbRel, primarySceneModel.getLocation(), verb_cxs);
+//			
+//			setTimeContext(verbRel, primarySceneModel.getTime(), verb_cxs);				
+//		}
+//	}	
 
 	/**
 	 * this method defines the proper relation resulted from the verb of this sentence.
@@ -789,14 +740,16 @@ public class Preprocessor {
 	 * @param sentenceModel guaranteed not to be null.
 	 * @param primarySceneModel guaranteed not to be null.
 	 */
-	private ArrayList<PlausibleStatement> defineVerbRelation(SentencePart verb, SentenceModel sentenceModel, SceneModel primarySceneModel){
+	private ArrayList<PlausibleStatement> defineVerbRelation(SentenceModel sentenceModel){
 		
 		ArrayList<PlausibleStatement> verbRelations = new ArrayList<PlausibleStatement>();
+		
+		SentencePart verb = sentenceModel.getVerb();
 		
 		//here _wsd of subject(s), object(s), and adverb(s) of this sentence has been allocated!								
 		ArrayList<SentencePart> subjects = sentenceModel.getSubjects();
 		
-		if(subjects == null || subjects.size() == 0){
+		if(verb == null || subjects == null || subjects.size() == 0){
 			MyError.error("sentence with verb " + verb + " has no subject part! " + sentenceModel);
 			return verbRelations;
 		}
@@ -818,8 +771,7 @@ public class Preprocessor {
 						//adding the relation of this sentence to kb.
 						PlausibleStatement rel = _kb.addRelation(sbj._wsd, obj._wsd, verb._wsd, SourceType.TTS);
 						verbRelations.add(rel);
-						print("verb relation added ------------- : " + rel.argument.getName() + " -- " + rel.getName() + " -- " + rel.referent.getName() + "\n");
-														
+						print("verb relation added ------------- : " + rel.argument.getName() + " -- " + rel.getName() + " -- " + rel.referent.getName() + "\n");														
 					}				
 			
 			if(!transitive_verb){
@@ -833,73 +785,100 @@ public class Preprocessor {
 		return verbRelations;
 	}
 
-	/**
-	 * load verb capacities from kb.
-	 * 
-	 * @param pure_verb guaranteed not to be null.
-	 */
-	private ArrayList<PlausibleStatement> loadVerbCapacities(Node pure_verb) {	
+	private  ArrayList<PlausibleAnswer>  loadVerbSemanticArguments(SentenceModel sentence) {
+		SentencePart verbPart = sentence.getVerb();
 		
-		ArrayList<PlausibleStatement> cxs = new ArrayList<PlausibleStatement>();
+		Node pure_verb = _ttsEngine.getPureNode(verbPart._wsd);
 		
-		Node synSet = pure_verb.getSynSet();
+		print("HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH verb: " + verbPart._wsd + " pure_verb: " + pure_verb);
 		
-		print("\nSynSet of " + pure_verb + " is " + synSet);
-		
-		if(synSet == null)
-			MyError.error("the verb " + pure_verb + " has no Synset!");
-		else
-			cxs = synSet.loadCXs();
-		
-		if(default_contexts == null){			
-			Node verb_root = _ttsEngine.verb_root;
-			default_contexts = verb_root.loadCXs();
+		if(verbPart == null || verbPart._wsd == null || pure_verb == null){
+			MyError.error("verb or its wsd or its pure version should not be null!" + verbPart);
+			return null;
 		}
 		
-		cxs.addAll(default_contexts);	
+		Node verb_synSet = pure_verb.getSynSet();
 		
-		return cxs;
-	}
-	
-	private void setLocationContext(PlausibleStatement verbRelation, Location location, ArrayList<PlausibleStatement> CXs){
-		if(verbRelation == null || location == null || CXs == null)
-			return;
+		print("\nSynSet of " + pure_verb + " is " + verb_synSet);
 		
-		for(PlausibleStatement cx : CXs){		
-			
-			if(cx.relationType == null){
-				MyError.error("this " + cx + " has no relationType!");
-				return;
-			}			
-			
-			String cxName = cx.relationType.getContextName();			
-			
-			if(CONTEXT.fromString(cxName) == CONTEXT.LOCATION){				
-				PlausibleStatement locCx = _kb.addRelation(verbRelation, location._node, cx.relationType);
-				print("" + locCx + " (" + verbRelation.getName() + ")= " + location._node + "\n");			
-			}
-		}
-	}
-	
-	
-	private void setTimeContext(PlausibleStatement verbRelation, Time time, ArrayList<PlausibleStatement> CXs) {
-		if(verbRelation == null || time == null || CXs == null)
-			return;
-		
-		for(PlausibleStatement cx : CXs){		
-			
-			if(cx.relationType == null){
-				MyError.error("this " + cx + " has no relationType!");
-				return;
-			}			
-			
-			String cxName = cx.relationType.getContextName();			
-			
-			if(CONTEXT.fromString(cxName) == CONTEXT.TIME){				
-				PlausibleStatement timeCx = _kb.addRelation(verbRelation, time._node, cx.relationType);
-				print("" + timeCx + " (" + verbRelation.getName() + ")= " + time._node + "\n");			
-			}
+		if(verb_synSet == null){
+			MyError.error("this verb '" + pure_verb + "' has no SynSet!");
+			return null;
 		}
 		
+		Node mainSemanticArg = _kb.addConcept(MainSemanticArgumet_name);
+		
+		return  _ttsEngine.writeAnswersTo(mainSemanticArg, verb_synSet, null);		
 	}
+
+	
+//	/**
+//	 * load verb capacities from kb.
+//	 * 
+//	 * @param pure_verb guaranteed not to be null.
+//	 */
+//	private ArrayList<PlausibleStatement> loadVerbCapacities(Node pure_verb) {	
+//		
+//		ArrayList<PlausibleStatement> cxs = new ArrayList<PlausibleStatement>();
+//		
+//		Node synSet = pure_verb.getSynSet();
+//		
+//		print("\nSynSet of " + pure_verb + " is " + synSet);
+//		
+//		if(synSet == null)
+//			MyError.error("the verb " + pure_verb + " has no Synset!");
+//		else
+//			cxs = synSet.loadCXs();
+//		
+//		if(default_contexts == null){			
+//			Node verb_root = _ttsEngine.verb_root;
+//			default_contexts = verb_root.loadCXs();
+//		}
+//		
+//		cxs.addAll(default_contexts);	
+//		
+//		return cxs;
+//	}
+//	
+//	private void setLocationContext(PlausibleStatement verbRelation, Location location, ArrayList<PlausibleStatement> CXs){
+//		if(verbRelation == null || location == null || CXs == null)
+//			return;
+//		
+//		for(PlausibleStatement cx : CXs){		
+//			
+//			if(cx.relationType == null){
+//				MyError.error("this " + cx + " has no relationType!");
+//				return;
+//			}			
+//			
+//			String cxName = cx.relationType.getContextName();			
+//			
+//			if(CONTEXT.fromString(cxName) == CONTEXT.LOCATION){				
+//				PlausibleStatement locCx = _kb.addRelation(verbRelation, location._node, cx.relationType);
+//				print("" + locCx + " (" + verbRelation.getName() + ")= " + location._node + "\n");			
+//			}
+//		}
+//	}
+//	
+//	
+//	private void setTimeContext(PlausibleStatement verbRelation, Time time, ArrayList<PlausibleStatement> CXs) {
+//		if(verbRelation == null || time == null || CXs == null)
+//			return;
+//		
+//		for(PlausibleStatement cx : CXs){		
+//			
+//			if(cx.relationType == null){
+//				MyError.error("this " + cx + " has no relationType!");
+//				return;
+//			}			
+//			
+//			String cxName = cx.relationType.getContextName();			
+//			
+//			if(CONTEXT.fromString(cxName) == CONTEXT.TIME){				
+//				PlausibleStatement timeCx = _kb.addRelation(verbRelation, time._node, cx.relationType);
+//				print("" + timeCx + " (" + verbRelation.getName() + ")= " + time._node + "\n");			
+//			}
+//		}
+//		
+//	}
 }

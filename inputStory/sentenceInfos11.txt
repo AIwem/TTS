@@ -30,7 +30,7 @@ name:برداشت			sentence_part:برداشته			POS:VERB		SYN:ROOT		SEM:-			W
 
 #------------------------------------------------------
 sentence:شروع به دویدن به سمت خانه کرد
-	
+
 name:شروع کرد		sentence_part:شروع به دویدن کرد	POS:VERB		SYN:ROOT		SEM:-			WSD:شروع کردن#v1			sub_part:-					dep:-		num:0
 
 name:دویدن			sentence_part:دویدن				POS:VERB		SYN:OBJ			SEM:ARG1		WSD:دویدن#v1				sub_part:-					dep:-		num:1
@@ -40,7 +40,7 @@ name:سمت			sentence_part:سمت				POS:NOUN		SYN:ADV_P		SEM:ArgM_DIR_P	WSD:س
 name:خانه			sentence_part:خانه				POS:NOUN		SYN:ADV_P		SEM:ArgM_DIR_P	WSD:خانه#n10				sub_part:-					dep:POST	num:2-1
 
 #------------------------------------------------------
-sentence:‌وارد خانه شد
+#sentence:‌وارد خانه شد
 
 name:خانه			sentence_part:خانه				POS:NOUN		SYN:ADVRB			SEM:ARG4		WSD:خانه#n10				sub_part:-				dep:-		num:1
 
@@ -48,11 +48,11 @@ name:وارد شد		sentence_part:وارد شد			POS:VERB		SYN:ROOT		SEM:-			WS
 
 #------------------------------------------------------
 #sentence:و کبوتر را به مادر خود داد
-name:کبوتر			sentence_part:کبوتر را			POS:NOUN		SYN:OBJ			SEM:ARG1		WSD:کبوتر#n1				sub_part:-					dep:-		num:0
+#name:کبوتر			sentence_part:کبوتر را			POS:NOUN		SYN:OBJ			SEM:ARG1		WSD:کبوتر#n1				sub_part:-					dep:-		num:0
 
-name:مادر خود		sentence_part:به مادر خود		POS:NOUN		SYN:			SEM:ARG0		WSD:MAIN_وضعیت سنی#a_POST	sub_part:پسر،ک				dep:-		num:1
+#name:مادر خود		sentence_part:به مادر خود		POS:NOUN		SYN:			SEM:ARG0		WSD:MAIN_وضعیت سنی#a_POST	sub_part:پسر،ک				dep:-		num:1
 
-name:داد			sentence_part:داد				POS:VERB		SYN:ROOT		SEM:-			WSD:دادن#v5					sub_part:-					dep:-		num:2
+#name:داد			sentence_part:داد				POS:VERB		SYN:ROOT		SEM:-			WSD:دادن#v5					sub_part:-					dep:-		num:2
 
 #------------------------------------------------------
 #sentence:سپس به طرف اتاقش دوید

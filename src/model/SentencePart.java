@@ -80,6 +80,9 @@ public class SentencePart {
 	 */
 	public String _number;
 	
+	/**
+	 * capacities of this SentencePart, it can be verb, noun, adjective or ...
+	 */
 	public ArrayList<Node> capacities = null;
 	
 	
