@@ -296,7 +296,7 @@ public class Preprocessor {
 		//now senParts has all part objects of this sentence.						
 		sentence.arrageSentenceParts(NLsentence, senParts);
 		
-		//reading verb capacities.
+		//TODO: reading verb capacities.
 		
 		
 		return sentence;

@@ -264,7 +264,7 @@ public class SentenceModel{
 	 * This method gets sentence object and its different Parts, 
 	 * then places each SentencePart object in its proper syntaxTag term.
 	 * we have temporarily assumed that each sentence has single subject, object, and adverb. 
-	 * //TODO: it must be generalized to multi-subjects, multi-objects, and multi-adverbs. 
+	 * //TODO: check if its logic is general enough for every type of sentences! 
 	 * 
 	 * @param sentence sentence object which is to be completed.
 	 * @param senParts different SentencePart object of this sentence. guaranteed not to be null.
@@ -273,7 +273,8 @@ public class SentenceModel{
 		
 		for(SentencePart part:senParts){
 			if(part == null)
-				continue;			
+				continue;	
+			
 			if(part.isSubject()){
 				this.addSingleSubject(part);
 				continue;

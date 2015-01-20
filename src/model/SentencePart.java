@@ -27,6 +27,7 @@ public class SentencePart {
 	 * senteceModel which this part belongs to.
 	 */
 	public SentenceModel _senteceModel;
+	
 	/**
 	 * name of this part
 	 */
@@ -79,9 +80,9 @@ public class SentencePart {
 	 */
 	public String _number;
 	
-	/**
-	 * @param _name
-	 */
+	public ArrayList<Node> capacities = null;
+	
+	
 	public SentencePart(String _name, String _name_in_sentence, String number, SentenceModel senteceModel) {
 		this._name = _name;
 		this._name_in_sentence = _name_in_sentence;
