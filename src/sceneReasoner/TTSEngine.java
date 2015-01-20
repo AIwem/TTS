@@ -299,7 +299,7 @@ public class TTSEngine {
 	 * @param synTag the SyntaxTag of this node in the sentence. 
 	 * @return Node an instance node which the name of its original node is "pure_name".
 	 */	
-	public Node findorCreateInstance(String pure_name, boolean newNode, DependencyRelationType synTag){
+	public Node findorCreateInstance(String pure_name, boolean newNode){
 		if(pure_name == null || pure_name.equals(""))
 			return null;		
 		
@@ -347,7 +347,7 @@ public class TTSEngine {
 			newlySeen.add(pure_node);
 			Node instance = createInstance(pure_name, pure_node);//creates an instance from its pure version fetched from kb.
 			newlySeen.add(instance);
-			addToTTSEngine(pure_node, newlySeen, synTag);	
+			addToTTSEngine(pure_node, newlySeen);	
 			return instance;			
 		}
 	}
@@ -362,7 +362,7 @@ public class TTSEngine {
 	 * @param relationInstance the instance of PlausibleStatement to be added.
 	 * @param synTag the SyntaxTag of this node(relation) in the sentence.
 	 */
-	public void addRelationInstance(String pure_name, PlausibleStatement relationInstance, DependencyRelationType synTag){
+	public void addRelationInstance(String pure_name, PlausibleStatement relationInstance){
 		if(pure_name == null || pure_name.equals("") || relationInstance == null)
 			return;
 		
@@ -371,7 +371,7 @@ public class TTSEngine {
 			ArrayList<Node> seenRelation = new ArrayList<Node>();
 			seenRelation.add(relationInstance.relationType);
 			seenRelation.add(relationInstance);
-			addToTTSEngine(relationInstance.relationType, seenRelation, synTag);		
+			addToTTSEngine(relationInstance.relationType, seenRelation);		
 		}
 		else{// we have seen this relation before
 			ArrayList<Node> seenRelation = seen_nodes.get(pure_name);
@@ -554,12 +554,12 @@ public class TTSEngine {
 	 * @param instanceNodes
 	 * @param synTag the SyntaxTag of this node in the sentence. 
 	 */
-	private void addToTTSEngine(Node pure_node, ArrayList<Node> instanceNodes, DependencyRelationType synTag){
+	private void addToTTSEngine(Node pure_node, ArrayList<Node> instanceNodes){
 		String pure_name = pure_node.getName();		
 		addTo_seen_nodes(pure_name, instanceNodes);
 		
-		ScenePart sp = getScenePart(pure_node, pure_node.getPos(), synTag);		
-		addTo_seen_sceneParts(pure_name, sp);
+//		ScenePart sp = getScenePart(pure_node, pure_node.getPos(), synTag);		
+//		addTo_seen_sceneParts(pure_name, sp);
 	}
 
 	public Node getPureNode(Node instance) {

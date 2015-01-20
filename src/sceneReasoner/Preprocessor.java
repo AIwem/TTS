@@ -183,9 +183,6 @@ public class Preprocessor {
 		
 		newPart.set_wsd_name(parts[5]);
 		
-		allocate_wsd(newPart, false, null);
-				
-		
 		if(parts[6] != null && !parts[6].equals("-")){				
 			String[] subs = parts[6].split("،");
 			
@@ -293,10 +290,13 @@ public class Preprocessor {
 				currentPart.sub_parts = subParts;							
 			}						
 			senParts.add(currentPart);
+			
+			allocate_wsd(currentPart, false);
 		}
 
 		//now senParts has all part objects of this sentence.						
 		sentence.arrageSentenceParts(NLsentence, senParts);
+		
 		
 		//TODO: reading verb capacities.
 		
@@ -358,9 +358,8 @@ public class Preprocessor {
 		sentenceModel.setScene(primarySceneModel);
 		
 		SentencePart verb = sentenceModel.getVerb();
-		
-		allocate_wsd(verb, true, DependencyRelationType.ROOT);
-		_ttsEngine.loadVerbSemanticArgument(verb);
+				
+		//_ttsEngine.loadVerbSemanticArgument(verb);
 		
 		prepareNullSemanticTags(sentenceModel, primarySceneModel);
 	
@@ -463,7 +462,7 @@ public class Preprocessor {
 	 * @param isNewNode is this part a new instance or is is the same as seen before.
 	 * @param synTag the SyntaxTag of this node in the sentence.
 	 */
-	private void allocate_wsd(SentencePart part, boolean isNewNode, DependencyRelationType synTag){
+	private void allocate_wsd(SentencePart part, boolean isNewNode){
 		if(part == null)
 			return;
 			
@@ -495,19 +494,19 @@ public class Preprocessor {
 				switch(node_pos){
 				case("MAIN"):
 					main_sub_part = part.getMainSub_part();					
-					argument = _ttsEngine.findorCreateInstance(main_sub_part._wsd_name, isNewNode, main_sub_part._syntaxTag);
+					argument = _ttsEngine.findorCreateInstance(main_sub_part._wsd_name, isNewNode);
 					main_sub_part.set_wsd(argument);
 					break;					
 				case("PRE"):
 					pre_sub_part = part.getPreSub_part();
-					Node pre = _ttsEngine.findorCreateInstance(pre_sub_part._wsd_name, isNewNode, pre_sub_part._syntaxTag);
+					Node pre = _ttsEngine.findorCreateInstance(pre_sub_part._wsd_name, isNewNode);
 					pre_sub_part.set_wsd(pre);				
 					//TODO: to complete the "PRE" DEP  
 					MyError.error("I don't know what to do with this PRE DEP sub_part " + pre_sub_part);
 					break;
 				case("POST"):										
 					post_sub_part = part.getPostSub_part();
-					referent = _ttsEngine.findorCreateInstance(post_sub_part._wsd_name, isNewNode, post_sub_part._syntaxTag);
+					referent = _ttsEngine.findorCreateInstance(post_sub_part._wsd_name, isNewNode);
 					post_sub_part.set_wsd(referent);
 					break;
 				//node_pos is a descriptor_name.
@@ -524,7 +523,7 @@ public class Preprocessor {
 			if(descriptor != null){//it means that findRelation has not found it and it is newly fetched from kb.
 				wsd = _kb.addRelation(argument, referent, descriptor, SourceType.TTS);
 				print("wsd relation added ------------- : " + wsd.argument.getName() + " -- " + wsd.getName() + " -- " + wsd.referent.getName() + "\n");
-				_ttsEngine.addRelationInstance(descriptor.getName(), wsd, synTag);
+				_ttsEngine.addRelationInstance(descriptor.getName(), wsd);
 			}
 			else{//it means that findRelation has found this relation.
 				
@@ -543,7 +542,7 @@ public class Preprocessor {
 						descriptor = _kb.addConcept(relation_name);
 						wsd = _kb.addRelation(argument, referent, descriptor, SourceType.TTS);
 						print("wsd relation added ------------- : " + wsd.argument.getName() + " -- " + wsd.getName() + " -- " + wsd.referent.getName() + "\n");
-						_ttsEngine.addRelationInstance(relation_name, wsd, synTag);
+						_ttsEngine.addRelationInstance(relation_name, wsd);
 					}
 				}
 			}
@@ -552,13 +551,13 @@ public class Preprocessor {
 		}
 		else{
 			//it means this part wsd_name is just one concept name, so we find or add it in sceneModel.			
-			Node wsd = _ttsEngine.findorCreateInstance(wsd_name, isNewNode, synTag);
+			Node wsd = _ttsEngine.findorCreateInstance(wsd_name, isNewNode);
 			part.set_wsd(wsd);
 		}
 		if(part.hasSub_parts())
 			for(SentencePart p:part.sub_parts)
 				if(p._wsd == null){																				
-					Node wsd = _ttsEngine.findorCreateInstance(p._wsd_name, isNewNode, p._syntaxTag);
+					Node wsd = _ttsEngine.findorCreateInstance(p._wsd_name, isNewNode);
 					p.set_wsd(wsd);
 				}
 	}
@@ -666,7 +665,7 @@ public class Preprocessor {
 			}
 			
 			//_wsd of sbj is set to proper Node of KB.
-			allocate_wsd(sbj, false, DependencyRelationType.SBJ);	
+			allocate_wsd(sbj, false);	
 			
 			if(sbj._wsd != null)
 				addToPrimarySceneModel(sbj, primarySceneModel);			
@@ -690,7 +689,7 @@ public class Preprocessor {
 			else if(obj != null && obj.isObject()){
 			
 				//_wsd of obj is set to proper Node of KB.
-				allocate_wsd(obj, false, DependencyRelationType.OBJ);
+				allocate_wsd(obj, false);
 				
 				if(obj._wsd != null)			
 					addToPrimarySceneModel(obj, primarySceneModel);
@@ -715,7 +714,7 @@ public class Preprocessor {
 			else if(adv != null && adv.isAdverb()){
 				
 				//_wsd of adv is set to proper Node of KB.
-				allocate_wsd(adv, false, DependencyRelationType.ADVRB);
+				allocate_wsd(adv, false);
 				
 				if(adv._wsd != null)			
 					addToPrimarySceneModel(adv, primarySceneModel);
@@ -749,7 +748,7 @@ public class Preprocessor {
 		}		
 			
 		//_wsd of verb is set to proper Node of KB. note that second parameter reasonably is set to true, because every node is new one!
-		allocate_wsd(verb, true, DependencyRelationType.ROOT);
+		allocate_wsd(verb, true);
 		
 		if(verb._wsd == null){
 			MyError.error(verb._wsd_name + " couldn't get allocated!");
