@@ -1,6 +1,8 @@
 package model;
 
 import ir.ac.itrc.qqa.semantic.enums.DependencyRelationType;
+import ir.ac.itrc.qqa.semantic.kb.Node;
+import ir.ac.itrc.qqa.semantic.util.Common;
 import ir.ac.itrc.qqa.semantic.util.MyError;
 
 import java.util.ArrayList;
@@ -352,7 +354,111 @@ public class SentenceModel{
 	public String getOriginalSentence() {
 		return NLSentence;
 	}
-
+	
+	/**
+	 * 
+	 * @return returns the SemanticTags of all parts of this sentence. guaranteed not to be null.
+	 */
+	public ArrayList<SemanticTag> getExistingSematicArgs(){
+		
+		ArrayList<SemanticTag> allSemanticTags = new ArrayList<SemanticTag>();
+		
+		for(SentencePart sbj:subjects)
+			if(sbj != null && sbj._semanticTag != null)
+				allSemanticTags.add(sbj._semanticTag);
+		
+		for(SentencePart obj:objects)
+			if(obj != null && obj._semanticTag != null)
+				allSemanticTags.add(obj._semanticTag);
+		
+		for(SentencePart adv:adverbs)
+			if(adv != null && adv._semanticTag != null)
+				allSemanticTags.add(adv._semanticTag);
+		
+		return allSemanticTags;
+	}
+	
+	/**
+	 * 
+	 * @return returns the MainSemanticTags of all parts of this sentence. guaranteed not to be null.
+	 */
+	public ArrayList<MainSemanticTag> getExistingMainSematicArgs(){
+		
+		ArrayList<MainSemanticTag> existingMainSemanticTags = new ArrayList<MainSemanticTag>();
+		
+		for(SentencePart sbj:subjects)
+			if(sbj != null && sbj._semanticTag != null)
+				if(sbj._semanticTag.isMainSemanticTag()){
+					MainSemanticTag converted = sbj._semanticTag.convertToMainSemanticTag();
+					if(converted != null)				
+						existingMainSemanticTags.add(converted);
+				}
+		
+		for(SentencePart obj:objects)
+			if(obj != null && obj._semanticTag != null)
+				if(obj._semanticTag.isMainSemanticTag()){
+					MainSemanticTag converted = obj._semanticTag.convertToMainSemanticTag();
+					if(converted != null)				
+						existingMainSemanticTags.add(converted);
+				}
+		
+		for(SentencePart adv:adverbs)
+			if(adv != null && adv._semanticTag != null)
+				if(adv._semanticTag.isMainSemanticTag()){
+					MainSemanticTag converted = adv._semanticTag.convertToMainSemanticTag();
+					if(converted != null)				
+						existingMainSemanticTags.add(converted);				
+				}
+					
+		
+		return existingMainSemanticTags;
+	}
+	
+	/**
+	 * 
+	 * @return returns the SubSemanticTags of all parts of this sentence. guaranteed not to be null.
+	 */
+	public ArrayList<SubSemanticTag> getExistingSubSematicArgs(){
+		
+		ArrayList<SubSemanticTag> allSubSemanticTags = new ArrayList<SubSemanticTag>();
+		
+		for(SentencePart sbj:subjects)
+			if(sbj != null && sbj._semanticTag != null)
+				if(sbj._semanticTag.isSubSemanticTag()){
+					SubSemanticTag converted = sbj._semanticTag.convertToSubSemanticTag();
+					if(converted != null)				
+						allSubSemanticTags.add(converted);				
+				}
+		
+		for(SentencePart obj:objects)
+			if(obj != null && obj._semanticTag != null)
+				if(obj._semanticTag.isSubSemanticTag()){
+					SubSemanticTag converted = obj._semanticTag.convertToSubSemanticTag();
+					if(converted != null)				
+						allSubSemanticTags.add(converted);
+				}
+		
+		for(SentencePart adv:adverbs)
+			if(adv != null && adv._semanticTag != null)
+				if(adv._semanticTag.isSubSemanticTag()){
+					SubSemanticTag converted = adv._semanticTag.convertToSubSemanticTag();
+					if(converted != null)				
+						allSubSemanticTags.add(converted);
+				}
+		
+		return allSubSemanticTags;
+	}
+	
+	public ArrayList<MainSemanticTag> getNecessarySematicArgs(){
+		
+		ArrayList<MainSemanticTag> necessarySemArg = new ArrayList<MainSemanticTag>();		
+		
+		if(!Common.isEmpty(verb.capacities))
+			for(Node cap:verb.capacities)
+				necessarySemArg.add(MainSemanticTag.fromString(cap.getName()));
+			
+		return necessarySemArg; 
+	}
 	
 //	public static void main(String[] args){
 //		SentenceModel sen1 = new SentenceModel("");

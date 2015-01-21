@@ -22,7 +22,7 @@ name:چشم‌افتاد		sentence_part:چشمش‌افتاد			POS:VERB		SYN:RO
 #------------------------------------------------------
 sentence:بلافاصله کبوتر را بردشت
 
-name:کبوتر			sentence_part:کبوتر را			POS:NOUN		SYN:OBJ			SEM:ARG1		WSD:کبوتر#n1				sub_part:-					dep:-		num:1
+name:کبوتر			sentence_part:کبوتر را			POS:NOUN		SYN:OBJ			SEM:ARG1_THEME	WSD:کبوتر#n1				sub_part:-					dep:-		num:1
 
 name:فردا			sentence_part:فردا				POS:NOUN		SYN:ADVRB		SEM:ArgM_TMP	WSD:فردا#n1					sub_part:-					dep:-		num:2
 
@@ -33,26 +33,32 @@ sentence:شروع به دویدن به سمت خانه کرد
 
 name:شروع کرد		sentence_part:شروع به دویدن کرد	POS:VERB		SYN:ROOT		SEM:-			WSD:شروع کردن#v1			sub_part:-					dep:-		num:0
 
-name:دویدن			sentence_part:دویدن				POS:VERB		SYN:OBJ			SEM:ARG1		WSD:دویدن#v1				sub_part:-					dep:-		num:1
+name:دویدن			sentence_part:دویدن				POS:VERB		SYN:OBJ			SEM:ARG1_THEME	WSD:دویدن#v1				sub_part:-					dep:-		num:1
 
-name:سمت خانه		sentence_part:به سمت خانه		POS:NOUN		SYN:ADVRB		SEM:ArgM_DIR	WSD:MAIN_mozaf#a_POST		sub_part:سمت،خانه			dep:-		num:2
-name:سمت			sentence_part:سمت				POS:NOUN		SYN:ADV_P		SEM:ArgM_DIR_P	WSD:سمت#n4					sub_part:-					dep:MAIN	num:2-0
-name:خانه			sentence_part:خانه				POS:NOUN		SYN:ADV_P		SEM:ArgM_DIR_P	WSD:خانه#n10				sub_part:-					dep:POST	num:2-1
-
-#------------------------------------------------------
-#sentence:‌وارد خانه شد
-
-name:خانه			sentence_part:خانه				POS:NOUN		SYN:ADVRB			SEM:ARG4		WSD:خانه#n10				sub_part:-				dep:-		num:1
-
-name:وارد شد		sentence_part:وارد شد			POS:VERB		SYN:ROOT		SEM:-			WSD:وارد شدن#v2				sub_part:-					dep:-		num:0
+name:سمت خانه		sentence_part:به سمت خانه		POS:NOUN		SYN:ADVRB		SEM:ArgM_DIR	WSD:MAIN_mozaf#a_POST		sub_part:به،سمت،خانه		dep:-		num:2
+name:به				sentence_part:به				POS:UNKNOWN		SYN:VPP			SEM:ArgM_DIR_P	WSD:سمت#n4					sub_part:-					dep:-		num:2--1
+name:سمت			sentence_part:سمت				POS:NOUN		SYN:POSDEP		SEM:ArgM_DIR_P	WSD:سمت#n4					sub_part:-					dep:MAIN	num:2-0
+name:خانه			sentence_part:خانه				POS:NOUN		SYN:MOZ			SEM:ArgM_DIR_P	WSD:خانه#n10				sub_part:-					dep:POST	num:2-1
 
 #------------------------------------------------------
-#sentence:و کبوتر را به مادر خود داد
-#name:کبوتر			sentence_part:کبوتر را			POS:NOUN		SYN:OBJ			SEM:ARG1		WSD:کبوتر#n1				sub_part:-					dep:-		num:0
+sentence:وارد خانه شد
 
-#name:مادر خود		sentence_part:به مادر خود		POS:NOUN		SYN:			SEM:ARG0		WSD:MAIN_وضعیت سنی#a_POST	sub_part:پسر،ک				dep:-		num:1
+name:خانه			sentence_part:خانه				POS:NOUN		SYN:ADVRB		SEM:ARG4_ENDPOINT	WSD:خانه#n10				sub_part:-					dep:-		num:1
 
-#name:داد			sentence_part:داد				POS:VERB		SYN:ROOT		SEM:-			WSD:دادن#v5					sub_part:-					dep:-		num:2
+name:وارد شد		sentence_part:وارد شد			POS:VERB		SYN:ROOT		SEM:-				WSD:وارد شدن#v2				sub_part:-					dep:-		num:0
+
+#------------------------------------------------------
+sentence:کبوتر را به مادر خود داد
+
+name:کبوتر			sentence_part:کبوتر را			POS:NOUN		SYN:OBJ			SEM:ARG1_THEME	WSD:کبوتر#n1				sub_part:-					dep:-		num:0
+
+name:مادر خود		sentence_part:به مادر خود		POS:NOUN		SYN:ADVRB		SEM:ARG2_OBJ2	WSD:MAIN_وضعیت سنی#a_POST	sub_part:پسر،ک				dep:-		num:1
+name:به				sentence_part:به				POS:UNKNOWN		SYN:VPP			SEM:ARG2_OBJ2_P	WSD:-						sub_part:-					dep:-		num:1--1
+name:مادر			sentence_part:مادر				POS:NOUN		SYN:POSDEP		SEM:ARG2_OBJ2_P	WSD:-						sub_part:-					dep:-		num:1-0
+name:خود			sentence_part:خود				POS:UNKNOWN		SYN:MOZ			SEM:ARG2_OBJ2_P	WSD:-						sub_part:-					dep:-		num:1-1
+
+
+name:داد			sentence_part:داد				POS:VERB		SYN:ROOT		SEM:-			WSD:دادن#v5					sub_part:-					dep:-		num:2
 
 #------------------------------------------------------
 #sentence:سپس به طرف اتاقش دوید

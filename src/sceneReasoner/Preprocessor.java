@@ -1,6 +1,5 @@
 package sceneReasoner;
 
-import ir.ac.itrc.qqa.semantic.enums.KbOperationMode;
 import ir.ac.itrc.qqa.semantic.enums.SourceType;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
 import ir.ac.itrc.qqa.semantic.kb.Node;
@@ -16,11 +15,17 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 
+
+
+
+import model.MainSemanticTag;
+import model.SemanticTag;
 //import sceneElement.*;
 //import model.CONTEXT;
 import model.SentencePart;
 import model.SceneModel;
 import model.SentenceModel;
+import model.StoryModel;
 
 /**
  * Preprocessor preprocesses the input natural language sentences.  
@@ -125,7 +130,7 @@ public class Preprocessor {
 												
 				if (line.startsWith("#")) // comment line
 					continue;
-								
+				
 				//it means the next sentence in file has reached!
 				if (line.equals("sentence:" + NLsentence)){
 
@@ -253,14 +258,21 @@ public class Preprocessor {
 			
 		}
 
-		//now senParts has all part objects of this sentence, so we specify which is subject, object, adverb, ...						
+		//now senParts has all parts' objects of this sentence, so we specify which is subject, object, adverb, ...						
 		sentence.arrageSentenceParts(NLsentence, senParts);
 		
 		//adding verb relation to KB.
 		/*ArrayList<PlausibleStatement> verbRelations = */defineVerbRelation(sentence);
 		
 		//loading verb SemanticArguments.
-		loadVerbSemanticArguments(sentence);
+		ArrayList<Node> semArgs = loadVerbSemanticArguments(sentence);
+		
+		SentencePart verb = sentence.getVerb();
+		
+		if(verb != null)
+			verb.setCapacities(semArgs);
+		else
+			MyError.error("this sentnce has no verb! " + sentence);
 		
 		return sentence;
 		
@@ -304,25 +316,22 @@ public class Preprocessor {
 	 * preprocessScene preprocesses input sentenceModel and converts it to the primarySceneModel.    
 	 * 
 	 * @param sentenceModel the SenetenceModel to be converted. 
-	 * @return SceneModel equivalent to input sentenceModel. 
+	 * @param primarySceneModel the SceneModel which this sentenceModel is to be added to.
+	 * @param storyModel the StoryModel which the returned sceneModel is to be added to.
+	 * @return SceneModel containing input sentenceModel 
 	 */	 
-	public SceneModel preprocessScene2(SentenceModel sentenceModel){		
+	public SceneModel preprocessScene(SentenceModel sentenceModel, SceneModel primarySceneModel, StoryModel storyModel){		
 		
-		if(sentenceModel == null){
-			MyError.error("senetecenModel should not be null! " + sentenceModel);
+		if(sentenceModel == null || primarySceneModel == null || storyModel == null){
+			MyError.error("None of senetecenModel, sceneModel, and storyModel should be null! " + sentenceModel);
 			return null;
-		}
-			
-		SceneModel primarySceneModel = new SceneModel();
-
-		primarySceneModel.addSentence(sentenceModel);
-		sentenceModel.setScene(primarySceneModel);
+		}		
 		
 		//SentencePart verb = sentenceModel.getVerb();
 				
 		//_ttsEngine.loadVerbSemanticArgument(verb);
 		
-		prepareNullSemanticTags(sentenceModel, primarySceneModel);
+		prepareNullSemanticTags(sentenceModel, primarySceneModel, storyModel);
 	
 		preprocessArg0(sentenceModel, primarySceneModel);
 		
@@ -348,13 +357,27 @@ public class Preprocessor {
 		return primarySceneModel;
 	}
 	
-	private void prepareNullSemanticTags(SentenceModel sentenceModel, SceneModel primarySceneModel) {
-		// TODO Auto-generated method stub
+	/**
+	 * this method prepares the null semanticTags of the verb of sentenceModel as possible with the help of 
+	 * other sentences of primarySceneModel and other scenes of stroyModel.
+	 * 
+	 * @param sentenceModel the sentenceModel which the semanticArgs of its verb is to be prepared. guaranteed not to be null.
+	 * @param primarySceneModel the sceneModel which sentenceModel belongs to. guaranteed not to be null.
+	 * @param storyModel the storyModel which primarySceneModel belongs to. guaranteed not to be null.
+	 */
+	private void prepareNullSemanticTags(SentenceModel sentenceModel, SceneModel primarySceneModel, StoryModel storyModel) {
+		
+		ArrayList<MainSemanticTag> existingSemTags = sentenceModel.getExistingMainSematicArgs();
+		ArrayList<MainSemanticTag> necessarySemTags = sentenceModel.getNecessarySematicArgs();
+		
+		print("HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH");
+		print("existing " + existingSemTags);
+		print("necessar " + necessarySemTags);
 		
 	}	
 	
 	private void preprocessArg0(SentenceModel sentenceModel, SceneModel primarySceneModel) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 	
@@ -785,7 +808,7 @@ public class Preprocessor {
 		return verbRelations;
 	}
 
-	private  ArrayList<PlausibleAnswer>  loadVerbSemanticArguments(SentenceModel sentence) {
+	private  ArrayList<Node>  loadVerbSemanticArguments(SentenceModel sentence) {
 		SentencePart verbPart = sentence.getVerb();
 		
 		Node pure_verb = _ttsEngine.getPureNode(verbPart._wsd);
@@ -808,7 +831,15 @@ public class Preprocessor {
 		
 		Node mainSemanticArg = _kb.addConcept(MainSemanticArgumet_name);
 		
-		return  _ttsEngine.writeAnswersTo(mainSemanticArg, verb_synSet, null);		
+		ArrayList<PlausibleAnswer> semArgsAnswers = _ttsEngine.writeAnswersTo(mainSemanticArg, verb_synSet, null);	
+		
+		ArrayList<Node> semArgs = new ArrayList<Node>();			
+		
+		for(PlausibleAnswer arg:semArgsAnswers)
+			if(arg != null && arg.answer != null)
+				semArgs.add(arg.answer);
+		
+		return semArgs;		
 	}
 
 	
@@ -882,3 +913,4 @@ public class Preprocessor {
 //		
 //	}
 }
+

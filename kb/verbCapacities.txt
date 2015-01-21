@@ -49,8 +49,8 @@
 31	ARG4_ATTRIBUTE	f˸ISA	ARG3
 32	ARG4_ATTRIBUTE_P	f˸ISA	ARG3
 #	
-33	ARG4	f˸ISA	MainSemArg
-34	ARG4_P	f˸ISA	MainSemArg
+33	ARG4_ENDPOINT	f˸ISA	MainSemArg
+34	ARG4_ENDPOINT_P	f˸ISA	MainSemArg
 #	
 35	ARG5	f˸ISA	MainSemArg
 36	ARG5_P	f˸ISA	MainSemArg
@@ -91,12 +91,17 @@
 69	MainSemArg	f˸ISA	SemArg
 70	SubSemArg	f˸ISA	SemArg
 #
-71	f˸به چشم دیدن§v-8072	MainSemArg	ARG0
-72	f˸به چشم دیدن§v-8072	MainSemArg	ARG1
-73	f˸صاحب شدن§v-8016	MainSemArg	ARG0
-74	f˸صاحب شدن§v-8016	MainSemArg	ARG1
-75	f˸دویدن§v-8577	MainSemArg	ARG0
+71	f˸به چشم دیدن§v-8072	MainSemArg	ARG0_EXPERIENCER
+72	f˸به چشم دیدن§v-8072	MainSemArg	ARG1_THEME
+73	f˸صاحب شدن§v-8016	MainSemArg	ARG0_AGENT
+74	f˸صاحب شدن§v-8016	MainSemArg	ARG1_THEME
+75	f˸دویدن§v-8577	MainSemArg	ARG0_INITIATOR
 76	f˸دویدن§v-8577	MainSemArg	ARG3_SOURCE_STARTPOINT
-77	f˸دویدن§v-8577	MainSemArg	ARG4
-78	f˸وارد شدن§v-8510	MainSemArg	ARG0
-79	f˸وارد شدن§v-8510	MainSemArg	ARG4
+77	f˸دویدن§v-8577	MainSemArg	ARG4_ENDPOINT
+78	f˸وارد شدن§v-8510	MainSemArg	ARG0_INITIATOR
+79	f˸وارد شدن§v-8510	MainSemArg	ARG4_ENDPOINT
+80	f˸آغاز کردن§v-22017	MainSemArg	ARG0_AGENT
+80	f˸آغاز کردن§v-22017	MainSemArg	ARG1_THEME
+81	f˸دادن§v-7663	MainSemArg	ARG0_AGNET
+82	f˸دادن§v-7663	MainSemArg	ARG1_THEME
+83	f˸دادن§v-7663	MainSemArg	ARG2_OBJ2

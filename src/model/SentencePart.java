@@ -85,7 +85,7 @@ public class SentencePart {
 	 */
 	public ArrayList<Node> capacities = null;
 	
-	
+
 	public SentencePart(String _name, String _name_in_sentence, String number, SentenceModel senteceModel) {
 		this._name = _name;
 		this._name_in_sentence = _name_in_sentence;
@@ -230,6 +230,10 @@ public class SentencePart {
 		return null;
 	}
 	
+	public ArrayList<Node> getCapacities() {
+		return capacities;
+	}
+	
 	//public String toString() {
  	public String getStr() {		
 		String rs = "name=";
@@ -296,18 +300,20 @@ public class SentencePart {
 			this._wsd_name = wsd_name;
 	}
 	
-	public void set_dep(String dep) {
-		if(dep != null && !dep.equals("") && !dep.equals("-"))
-			_dep = DEP.fromString(dep);
-		
-//		if(_dep == null)
-//			MyError.error("bad dep name " + dep);			
-	}
-
 	public void set_wsd(Node wsd) {
 		this._wsd = wsd;
 	}
-
+	
+	public void set_dep(String dep) {
+		if(dep != null && !dep.equals("") && !dep.equals("-"))
+			_dep = DEP.fromString(dep);		
+//		if(_dep == null)
+//			MyError.error("bad dep name " + dep);			
+	}
+		
+	public void setCapacities(ArrayList<Node> capacities) {
+		this.capacities = capacities;
+	}
 		
 	
 }

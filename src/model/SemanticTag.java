@@ -42,8 +42,8 @@ public enum SemanticTag {
 	ARG4_ATTRIBUTE_P,		
 	
 	
-	ARG4,					// Endpoint of event
-	ARG4_P,
+	ARG4_ENDPOINT,					// Endpoint of event
+	ARG4_ENDPOINT_P,
 	
 	
 	ARG5,	// verb-specific
@@ -106,7 +106,7 @@ public enum SemanticTag {
 			case ARG4_ATTRIBUTE: return ARG4_ATTRIBUTE_P;		
 			
 			
-			case ARG4: return ARG4_P;
+			case ARG4_ENDPOINT: return ARG4_ENDPOINT_P;
 						
 			case ARG5: return ARG5_P;
 			
@@ -144,4 +144,39 @@ public enum SemanticTag {
        return null;
 	}
 
+	public boolean isMainSemanticTag(){		
+		for(MainSemanticTag mainSemArg:MainSemanticTag.values())
+			if(mainSemArg.name().contains(this.name()))						
+				return true;
+		return false;
+	}
+	
+	public boolean isSubSemanticTag(){		
+		for(SubSemanticTag subSemArg:SubSemanticTag.values())
+			if(subSemArg.name().contains(this.name()))						
+				return true;
+		return false;
+	}
+	
+	public MainSemanticTag convertToMainSemanticTag(){
+		try{
+			if(this.isMainSemanticTag())
+				return MainSemanticTag.valueOf(this.name());
+			throw new Exception(this + " is not a MainSemanticTag!");
+		}
+		catch (Exception e) {
+			return null;
+		}
+	}
+	
+	public SubSemanticTag convertToSubSemanticTag(){
+		try{
+			if(this.isSubSemanticTag())
+				return SubSemanticTag.valueOf(this.name());
+			throw new Exception(this + " is not a SubSemanticTag!");
+		}
+		catch (Exception e) {
+			return null;
+		}
+	}
 }

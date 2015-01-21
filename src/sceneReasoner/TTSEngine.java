@@ -108,13 +108,19 @@ public class TTSEngine {
 		//-------------- converting natural language sentences of a scene to their equivalent sentencs_scenes SceneModel ------
 		ArrayList<SceneModel> sentencs_scenes = new ArrayList<SceneModel>();
 		
+		SceneModel primarySceneModel = new SceneModel(storyModel);
+		storyModel.addScene(primarySceneModel);
+				
 		for(String NLsentence:scene_inputNL){
 			
 			print("natural sentence: " + NLsentence);
 			
-			SentenceModel sentence = _pp.preprocessSentence(NLsentence);
+			SentenceModel sentence = _pp.preprocessSentence(NLsentence);	
 			
-			SceneModel cur_sen_scene = _pp.preprocessScene2(sentence);
+			primarySceneModel.addSentence(sentence);
+			sentence.setScene(primarySceneModel);
+			
+			SceneModel cur_sen_scene = _pp.preprocessScene(sentence, primarySceneModel, storyModel);
 			
 			if(cur_sen_scene != null)
 				sentencs_scenes.add(cur_sen_scene);
@@ -123,13 +129,13 @@ public class TTSEngine {
 		}
 		
 		//-------------- merging primary SceneModels of each sentences of this scene ----------------------------------------
-		SceneModel currentPrimaryScene = _sr.mergeScenesOfSentences(sentencs_scenes);
+//		SceneModel currentPrimaryScene = _sr.mergeScenesOfSentences(sentencs_scenes);
 		
 		//-------------- adding primarySceneModel of the current scene to the stroyModel ------------------------------------
-		storyModel.addScene(currentPrimaryScene);
-		currentPrimaryScene.setStory(storyModel);
+//		storyModel.addScene(currentPrimaryScene);
+//		currentPrimaryScene.setStory(storyModel);
 		
-		print("merged primary SceneModel\n" + currentPrimaryScene);
+//		print("merged primary SceneModel\n" + currentPrimaryScene);
 		
 		if(isLastScene){//the last scene of story
 			
@@ -754,7 +760,7 @@ public class TTSEngine {
 //			}
 		}
 		print("\tInferences: " + _re.totalCalls);
-		print("\tTime: " + _re.reasoningTime*100000 + " yani " + _re.reasoningTime / 100 + " ms");
+		print("\tTime: " + _re.reasoningTime / 100 + " ms");
 //		print("\tThroughput: " + (_re.totalCalls / (_re.reasoningTime*1000)) * 1000 + " inference/s");
 		return answers;
 		
