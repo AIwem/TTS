@@ -3,6 +3,7 @@ package sceneReasoner;
 import ir.ac.itrc.qqa.semantic.enums.SourceType;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
 import ir.ac.itrc.qqa.semantic.kb.Node;
+import ir.ac.itrc.qqa.semantic.util.Common;
 import ir.ac.itrc.qqa.semantic.util.MyError;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleAnswer;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleStatement;
@@ -14,14 +15,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-
-
-
-
 import model.MainSemanticTag;
-import model.SemanticTag;
-//import sceneElement.*;
-//import model.CONTEXT;
 import model.SentencePart;
 import model.SceneModel;
 import model.SentenceModel;
@@ -262,7 +256,8 @@ public class Preprocessor {
 		sentence.arrageSentenceParts(NLsentence, senParts);
 		
 		//adding verb relation to KB.
-		/*ArrayList<PlausibleStatement> verbRelations = */defineVerbRelation(sentence);
+		//delayed to preprocessScene after preparing nullSemanticTags
+		/*ArrayList<PlausibleStatement> verbRelations = */ //defineVerbRelation(sentence);
 		
 		//loading verb SemanticArguments.
 		ArrayList<Node> semArgs = loadVerbSemanticArguments(sentence);
@@ -327,11 +322,9 @@ public class Preprocessor {
 			return null;
 		}		
 		
-		//SentencePart verb = sentenceModel.getVerb();
-				
-		//_ttsEngine.loadVerbSemanticArgument(verb);
-		
 		prepareNullSemanticTags(sentenceModel, primarySceneModel, storyModel);
+		
+		checkAllSemanticTagsWithUser(sentenceModel, primarySceneModel);
 	
 		preprocessArg0(sentenceModel, primarySceneModel);
 		
@@ -358,7 +351,7 @@ public class Preprocessor {
 	}
 	
 	/**
-	 * this method prepares the null semanticTags of the verb of sentenceModel as possible with the help of 
+	 * this method prepares the null semanticTags (only ARG0, ARG1) of the verb of sentenceModel as possible with the help of 
 	 * other sentences of primarySceneModel and other scenes of stroyModel.
 	 * 
 	 * @param sentenceModel the sentenceModel which the semanticArgs of its verb is to be prepared. guaranteed not to be null.
@@ -369,68 +362,137 @@ public class Preprocessor {
 		
 		ArrayList<MainSemanticTag> existingSemTags = sentenceModel.getExistingMainSematicArgs();
 		ArrayList<MainSemanticTag> necessarySemTags = sentenceModel.getNecessarySematicArgs();
-		
+						
 		print("HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH");
 		print("existing " + existingSemTags);
 		print("necessar " + necessarySemTags);
 		
+		ArrayList<MainSemanticTag> missingMainArgs = new ArrayList<MainSemanticTag>();
+		
+		for(MainSemanticTag necess:necessarySemTags)
+			if(!existingSemTags.contains(necess))
+				missingMainArgs.add(necess);
+		print("missings " + missingMainArgs);
+		
+		prepareNullSemanticTagsForAScene(sentenceModel, missingMainArgs, primarySceneModel);
+		int i = 0;
+		while(!Common.isEmpty(missingMainArgs)){
+			print("new mis " + missingMainArgs + "scene " + i++);
+			ArrayList<SceneModel> allScene = storyModel.getScenes();
+			
+			if(!Common.isEmpty(allScene))
+				for(SceneModel oldScene:allScene)
+					if(!oldScene.equals(primarySceneModel))
+						prepareNullSemanticTagsForAScene(sentenceModel, missingMainArgs, oldScene);
+		}
+		
 	}	
 	
+	private void prepareNullSemanticTagsForAScene(SentenceModel sentenceModel, ArrayList<MainSemanticTag> missingMainArgs, SceneModel sceneModel){
+		if(!Common.isEmpty(missingMainArgs)){
+			
+			ArrayList<MainSemanticTag> preparedMainArgs = new ArrayList<MainSemanticTag>();
+			
+			ArrayList<SentenceModel> allSentences = sceneModel.getSentences();
+			
+			if(!Common.isEmpty(allSentences)){		
+				
+				for(MainSemanticTag miss:missingMainArgs){
+					
+					print("for missed " + miss);
+					
+					for(SentenceModel sent:allSentences){
+						if(sent.equals(sentenceModel))
+							continue;
+						
+						print("In sentence: " + sent.getOriginalSentence());
+						
+						if(miss != null && miss.isArg0() && sent.hasArg0()){							
+							SentencePart arg0SentencePart = sent.getArg0SentencePart();
+							
+							arg0SentencePart.set_semanticTag(miss.name());
+							preparedMainArgs.add(arg0SentencePart._semanticTag.convertToMainSemanticTag());							
+							sentenceModel.setPrerparedSentencePart(arg0SentencePart);						
+							
+							print("prepared " + arg0SentencePart._semanticTag);
+							break;
+						}
+						else if(miss != null && miss.isArg1() && sent.hasArg1()){
+							SentencePart arg1SentencePart = sent.getArg1SentencePart();
+							
+							arg1SentencePart.set_semanticTag(miss.name());
+							preparedMainArgs.add(arg1SentencePart._semanticTag.convertToMainSemanticTag());
+							sentenceModel.setPrerparedSentencePart(arg1SentencePart);
+							
+							print("prepared " + arg1SentencePart._semanticTag);
+							break;
+						}
+					}					
+				}
+				for(MainSemanticTag prepared:preparedMainArgs)
+					missingMainArgs.remove(prepared);
+			}			
+		}			
+	}
+	
+	private void checkAllSemanticTagsWithUser(SentenceModel sentenceModel, SceneModel primarySceneModel){
+		//TODO check with user!		
+	}
+	
 	private void preprocessArg0(SentenceModel sentenceModel, SceneModel primarySceneModel) {
+//		SentencePart verb = sentenceModel.getVerb();
 		
+		if(sentenceModel.hasArg0()){
+			SentencePart arg0Part = sentenceModel.getArg0SentencePart();
+			if(arg0Part != null){
+				_ttsEngine.whichScenePart(arg0Part);
+			}
+		}
+	}
+	
+	private void preprocessVerbArg(SentenceModel sentenceModel, SceneModel primarySceneModel) {
+		
+		defineVerbRelation(sentenceModel);
+		// TODO Auto-generated method stub
 		
 	}
 	
-	private void preprocessVerbArg(SentenceModel sentenceModel,
-			SceneModel primarySceneModel) {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	private void preprocessArg1(SentenceModel sentenceModel,
-			SceneModel primarySceneModel) {
+	private void preprocessArg1(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		// TODO Auto-generated method stub
 		
 	}
 		
-	private void preprocessArg2(SentenceModel sentenceModel,
-			SceneModel primarySceneModel) {
+	private void preprocessArg2(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	private void preprocessArg3(SentenceModel sentenceModel,
-			SceneModel primarySceneModel) {
+	private void preprocessArg3(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	private void preprocessArg4(SentenceModel sentenceModel,
-			SceneModel primarySceneModel) {
+	private void preprocessArg4(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	private void preprocessArg5(SentenceModel sentenceModel,
-			SceneModel primarySceneModel) {
+	private void preprocessArg5(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	private void preprocessSecondaryArgs(SentenceModel sentenceModel,
-			SceneModel primarySceneModel) {
+	private void preprocessSecondaryArgs(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	private void preprocessVisualTagVerb(SentenceModel sentenceModel,
-			SceneModel primarySceneModel) {
+	private void preprocessVisualTagVerb(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	private void preprocessAllVisualTag(SentenceModel sentenceModel,
-			SceneModel primarySceneModel) {
+	private void preprocessAllVisualTag(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -813,17 +875,13 @@ public class Preprocessor {
 		
 		Node pure_verb = _ttsEngine.getPureNode(verbPart._wsd);
 		
-		print("HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH verb: " + verbPart._wsd + " pure_verb: " + pure_verb);
-		
 		if(verbPart == null || verbPart._wsd == null || pure_verb == null){
 			MyError.error("verb or its wsd or its pure version should not be null!" + verbPart);
 			return null;
 		}
 		
 		Node verb_synSet = pure_verb.getSynSet();
-		
-		print("\nSynSet of " + pure_verb + " is " + verb_synSet);
-		
+						
 		if(verb_synSet == null){
 			MyError.error("this verb '" + pure_verb + "' has no SynSet!");
 			return null;

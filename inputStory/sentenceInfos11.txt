@@ -17,7 +17,7 @@ name:یک				sentence_part:یک				POS:UNKNOWN		SYN:NPREMOD		SEM:ARG1_THEME_P	WS
 name:کبوتر			sentence_part:کبوتر				POS:NOUN		SYN:POSDEP		SEM:ARG1_THEME_P	WSD:کبوتر#n1				sub_part:-					dep:MAIN	num:4-0
 name:زخمی			sentence_part:زخمی				POS:ADJECTIVE	SYN:NPOSTMOD	SEM:ARG1_THEME_P	WSD:زخمی#a1					sub_part:-					dep:POST	num:4-1
 
-name:چشم‌افتاد		sentence_part:چشمش‌افتاد			POS:VERB		SYN:ROOT		SEM:-			WSD:چشم افتادن#v			sub_part:-					dep:-		num:0
+name:چشم‌افتاد		sentence_part:چشمش‌افتاد			POS:VERB		SYN:ROOT		SEM:-				WSD:چشم افتادن#v			sub_part:-					dep:-		num:0
 
 #------------------------------------------------------
 sentence:بلافاصله کبوتر را بردشت

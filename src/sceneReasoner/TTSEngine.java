@@ -16,9 +16,12 @@ import ir.ac.itrc.qqa.semantic.util.MyError;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
+import model.MainSemanticTag;
 import model.SceneModel;
 import model.ScenePart;
+import model.SemanticTag;
 import model.SentenceModel;
+import model.SentencePart;
 import model.StoryModel;
 
 /**
@@ -792,6 +795,39 @@ public class TTSEngine {
 //		UNKNOWN
 //	}
 	
+	private ScenePart getScenePart(Node pureNode, MainSemanticTag mainSemanticTag) {
+		if(mainSemanticTag.isArg0()){
+			return getArg0ScenePart(pureNode);
+		}
+				
+		return null;
+	}
+	
+	private ScenePart getArg0ScenePart(Node pureNode) {
+		
+		//TODO: I must remove these lines!-------			
+		if(pureNode.getName().equals("پسر#n2"))
+			return ScenePart.ROLE;
+//			if(pure_node.getName().equals("یک#n1"))
+//				return ScenePart.SCENE_OBJECT;
+//			if(pure_node.getName().equals("راه#n9"))
+//				return ScenePart.LOCATION;
+//			if(pure_node.getName().equals("سمت#n4"))
+//				return ScenePart.LOCATION;
+//			if(pure_node.getName().equals("خانه#n10"))
+//				return ScenePart.SCENE_OBJECT;			
+		//---------------------------------------			
+
+		
+		if(pureNode.getPos() == POS.NOUN && isHuman(pureNode))
+			return ScenePart.ROLE;
+		return null;
+	}
+	
+	private ScenePart getArg1ScenePart(Node pureNode) {
+		
+		return null;
+	}
 	/**
 	 * recognizing that which scenePart has the node: 
 	 * a ROLE, DYNAMIC_OBJECT, STATIC_OBJECT, ACTION, LOCATION, TIME, EMOTION, GOAL or UNKNOWN?!
@@ -811,7 +847,7 @@ public class TTSEngine {
 	 * @param synTag the SyntaxTag of this node in the sentence.
 	 * @return the ScenePart of pure_node, including ScenePart.UNKNOWN.
 	 */
-	private ScenePart getScenePart(Node pure_node, POS pos, DependencyRelationType synTag){
+	private ScenePart getScenePart_OLD(Node pure_node, POS pos, DependencyRelationType synTag){
 		if(pure_node == null)
 			return ScenePart.UNKNOWN;
 		
@@ -975,7 +1011,7 @@ public class TTSEngine {
 	 * @param synTag the SyntaxTag of this node in the sentence.
 	 * @return 
 	 */
-	public ScenePart whichScenePart(Node node, DependencyRelationType synTag){
+	public ScenePart whichScenePart_OLD(Node node, DependencyRelationType synTag){
 		print(node + "~~~~~~~~~~~~~~~ in whichScenePart ~~~~~~~~~~~~");
 		if(node == null)
 			return ScenePart.UNKNOWN;
@@ -992,7 +1028,7 @@ public class TTSEngine {
 			Node pure_node = getPureNode(node);	
 			POS pos = node.getPos();
 		
-			sp = getScenePart(pure_node, pos, synTag);
+			sp = getScenePart_OLD(pure_node, pos, synTag);
 			
 			addTo_seen_sceneParts(pure_name, sp);			
 		}
@@ -1000,5 +1036,58 @@ public class TTSEngine {
 		print(node + " ScenePart is " + sp + "\n");			
 		return sp;
 	}
+	
+	/**
+	 * this methods searches the internal structure of this TTSEngine (seen_sceneParts) to find the ScenePart mapped to this node.
+	 *  
+	 * @param node the node which is ScenePart is to be found. it may be pure or instance node!
+	 * @param synTag the SyntaxTag of this node in the sentence.
+	 * @return 
+	 */
+	public ScenePart whichScenePart(SentencePart sentencePart){
+		print(sentencePart + "~~~~~~~~~~~~~~~ in whichScenePart ~~~~~~~~~~~~");
+		
+		if(sentencePart == null)
+			return ScenePart.UNKNOWN;
+		
+		Node partNode = sentencePart._wsd;
+		
+		if(partNode == null)
+			return ScenePart.UNKNOWN;
+		
+		String pureName = makePureName(partNode);
+		
+		if(pureName == null || pureName.equals(""))
+			return ScenePart.UNKNOWN;	
+		
+		ScenePart sp = null;
+		
+		//if it is seen before!
+		if(seen_sceneParts.containsKey(pureName))			
+			sp = seen_sceneParts.get(pureName);	
+
+		//if it isn't seen before!
+		else{
+			Node pure_node = getPureNode(partNode);
+		
+			SemanticTag semTag =  sentencePart._semanticTag;
+			MainSemanticTag mainSemTag = null;
+			
+			if(semTag.isMainSemanticTag())
+				mainSemTag = semTag.convertToMainSemanticTag();
+			
+			if(mainSemTag == null)
+				return ScenePart.UNKNOWN;
+			
+			sp = getScenePart(pure_node, mainSemTag);
+			
+			addTo_seen_sceneParts(pureName, sp);			
+		}
+
+		print(partNode + " ScenePart is " + sp + "\n");			
+		return sp;
+	}
+
+	
 
 }

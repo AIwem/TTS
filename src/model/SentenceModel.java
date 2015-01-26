@@ -449,6 +449,129 @@ public class SentenceModel{
 		return allSubSemanticTags;
 	}
 	
+	public boolean hasArg0(){
+		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
+		for(MainSemanticTag exist:existingMainArgs)
+			if(exist.name().startsWith("ARG0"))
+				return true;
+		return false;
+	}
+	public MainSemanticTag getArg0(){
+		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
+		for(MainSemanticTag exist:existingMainArgs)
+			if(exist.name().startsWith("ARG0"))
+				return exist;
+		return null;
+	}	
+	public SentencePart getArg0SentencePart(){
+		MainSemanticTag arg0 = getArg0();
+		if(arg0 != null){
+			for(SentencePart sbj:subjects)
+				if(sbj != null && sbj._semanticTag != null && sbj._semanticTag.name().equals(arg0.name()))
+					return sbj;
+			
+			for(SentencePart obj:objects)
+				if(obj != null && obj._semanticTag != null && obj._semanticTag.name().equals(arg0.name()))
+					return obj;
+			
+			for(SentencePart adv:adverbs)
+				if(adv != null && adv._semanticTag != null && adv._semanticTag.name().equals(arg0.name()))
+					return adv;
+		}	
+		return null;
+	}
+	
+	public boolean hasArg1(){
+		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
+		for(MainSemanticTag exist:existingMainArgs)
+			if(exist.name().startsWith("ARG1"))
+				return true;
+		return false;
+	}	
+	public MainSemanticTag getArg1(){
+		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
+		for(MainSemanticTag exist:existingMainArgs)
+			if(exist.name().startsWith("ARG1"))
+				return exist;
+		return null;
+	}
+	public SentencePart getArg1SentencePart(){
+		MainSemanticTag arg1 = getArg1();
+		if(arg1 != null){
+			for(SentencePart sbj:subjects)
+				if(sbj != null && sbj._semanticTag != null && sbj._semanticTag.name().equals(arg1.name()))
+					return sbj;
+			
+			for(SentencePart obj:objects)
+				if(obj != null && obj._semanticTag != null && obj._semanticTag.name().equals(arg1.name()))
+					return obj;
+			
+			for(SentencePart adv:adverbs)
+				if(adv != null && adv._semanticTag != null && adv._semanticTag.name().equals(arg1.name()))
+					return adv;
+		}	
+		return null;
+	}
+	
+	public boolean hasArg2(){
+		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
+		for(MainSemanticTag exist:existingMainArgs)
+			if(exist.name().startsWith("ARG2"))
+				return true;
+		return false;
+	}
+	public MainSemanticTag getArg2(){
+		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
+		for(MainSemanticTag exist:existingMainArgs)
+			if(exist.name().startsWith("ARG2"))
+				return exist;
+		return null;
+	}
+	public boolean hasArg3(){
+		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
+		for(MainSemanticTag exist:existingMainArgs)
+			if(exist.name().startsWith("ARG3"))
+				return true;
+		return false;
+	}
+	public MainSemanticTag getArg3(){
+		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
+		for(MainSemanticTag exist:existingMainArgs)
+			if(exist.name().startsWith("ARG3"))
+				return exist;
+		return null;
+	}
+	public boolean hasArg4(){
+		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
+		for(MainSemanticTag exist:existingMainArgs)
+			if(exist.name().startsWith("ARG4"))
+				return true;
+		return false;
+	}
+	public MainSemanticTag getArg4(){
+		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
+		for(MainSemanticTag exist:existingMainArgs)
+			if(exist.name().startsWith("ARG4"))
+				return exist;
+		return null;
+	}
+	public boolean hasArg5(){
+		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
+		for(MainSemanticTag exist:existingMainArgs)
+			if(exist.name().startsWith("ARG5"))
+				return true;
+		return false;
+	}	
+	public MainSemanticTag getArg5(){
+		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
+		for(MainSemanticTag exist:existingMainArgs)
+			if(exist.name().startsWith("ARG5"))
+				return exist;
+		return null;
+	}
+	
+	
+	//TODO: check what shall I do, when some part of sentence is infinitive?!
 	public ArrayList<MainSemanticTag> getNecessarySematicArgs(){
 		
 		ArrayList<MainSemanticTag> necessarySemArg = new ArrayList<MainSemanticTag>();		
@@ -458,6 +581,24 @@ public class SentenceModel{
 				necessarySemArg.add(MainSemanticTag.fromString(cap.getName()));
 			
 		return necessarySemArg; 
+	}
+
+	public void setPrerparedSentencePart(SentencePart newSentencePart){		
+		if(newSentencePart == null)
+			return;	
+		
+		if(newSentencePart.isSubject())
+			this.addSingleSubject(newSentencePart);
+			
+		if(newSentencePart.isVerb())
+			this.setVerb(newSentencePart);
+			
+		if(newSentencePart.isObject())
+			this.addSingleObject(newSentencePart);
+					
+		if(newSentencePart.isAdverb())
+			this.addSingleAdverb(newSentencePart);
+		
 	}
 	
 //	public static void main(String[] args){
