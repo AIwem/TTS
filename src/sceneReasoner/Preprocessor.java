@@ -1,5 +1,6 @@
 package sceneReasoner;
 
+import ir.ac.itrc.qqa.semantic.enums.POS;
 import ir.ac.itrc.qqa.semantic.enums.SourceType;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
 import ir.ac.itrc.qqa.semantic.kb.Node;
@@ -15,7 +16,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+import sceneElement.*;
 import model.MainSemanticTag;
+import model.ScenePart;
 import model.SentencePart;
 import model.SceneModel;
 import model.SentenceModel;
@@ -363,21 +366,21 @@ public class Preprocessor {
 		ArrayList<MainSemanticTag> existingSemTags = sentenceModel.getExistingMainSematicArgs();
 		ArrayList<MainSemanticTag> necessarySemTags = sentenceModel.getNecessarySematicArgs();
 						
-		print("HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH");
-		print("existing " + existingSemTags);
-		print("necessar " + necessarySemTags);
+//		print("HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH");
+//		print("existing " + existingSemTags);
+//		print("necessar " + necessarySemTags);
 		
 		ArrayList<MainSemanticTag> missingMainArgs = new ArrayList<MainSemanticTag>();
 		
 		for(MainSemanticTag necess:necessarySemTags)
 			if(!existingSemTags.contains(necess))
 				missingMainArgs.add(necess);
-		print("missings " + missingMainArgs);
+//		print("missings " + missingMainArgs);
 		
 		prepareNullSemanticTagsForAScene(sentenceModel, missingMainArgs, primarySceneModel);
-		int i = 0;
+		
 		while(!Common.isEmpty(missingMainArgs)){
-			print("new mis " + missingMainArgs + "scene " + i++);
+//			print("new mis " + missingMainArgs + "scene ");
 			ArrayList<SceneModel> allScene = storyModel.getScenes();
 			
 			if(!Common.isEmpty(allScene))
@@ -399,13 +402,13 @@ public class Preprocessor {
 				
 				for(MainSemanticTag miss:missingMainArgs){
 					
-					print("for missed " + miss);
+//					print("for missed " + miss);
 					
 					for(SentenceModel sent:allSentences){
 						if(sent.equals(sentenceModel))
 							continue;
 						
-						print("In sentence: " + sent.getOriginalSentence());
+//						print("In sentence: " + sent.getOriginalSentence());
 						
 						if(miss != null && miss.isArg0() && sent.hasArg0()){							
 							SentencePart arg0SentencePart = sent.getArg0SentencePart();
@@ -414,7 +417,7 @@ public class Preprocessor {
 							preparedMainArgs.add(arg0SentencePart._semanticTag.convertToMainSemanticTag());							
 							sentenceModel.setPrerparedSentencePart(arg0SentencePart);						
 							
-							print("prepared " + arg0SentencePart._semanticTag);
+//							print("prepared " + arg0SentencePart._semanticTag);
 							break;
 						}
 						else if(miss != null && miss.isArg1() && sent.hasArg1()){
@@ -424,7 +427,7 @@ public class Preprocessor {
 							preparedMainArgs.add(arg1SentencePart._semanticTag.convertToMainSemanticTag());
 							sentenceModel.setPrerparedSentencePart(arg1SentencePart);
 							
-							print("prepared " + arg1SentencePart._semanticTag);
+//							print("prepared " + arg1SentencePart._semanticTag);
 							break;
 						}
 					}					
@@ -440,12 +443,32 @@ public class Preprocessor {
 	}
 	
 	private void preprocessArg0(SentenceModel sentenceModel, SceneModel primarySceneModel) {
-//		SentencePart verb = sentenceModel.getVerb();
 		
 		if(sentenceModel.hasArg0()){
+			
 			SentencePart arg0Part = sentenceModel.getArg0SentencePart();
+			
 			if(arg0Part != null){
-				_ttsEngine.whichScenePart(arg0Part);
+				
+				//reasoning ScenePart from KB and adding to primarySceneModel. 
+				ScenePart sp = _ttsEngine.whichScenePart(arg0Part);
+				addToPrimarySceneModel(arg0Part, sp, primarySceneModel);
+				
+				//It means that this sentencePart has an adjective or mozaf_elaih
+				if(arg0Part.hasSub_parts()){
+				
+					print("======================================================");
+					ArrayList<PlausibleAnswer> answers = _ttsEngine.writeAnswersTo(KnowledgeBase.HPR_ANY, arg0Part._wsd, null);
+					ArrayList<Node> adj_moz = new ArrayList<Node>();					
+					
+					if(!Common.isEmpty(answers))
+						for(PlausibleAnswer ans:answers)
+							if(ans.answer != null && (ans.answer.getPos() == POS.ADJECTIVE || ans.answer.getPos() == POS.NOUN))
+								adj_moz.add(ans.answer);
+							
+					print("adj_moz " + adj_moz);
+						
+				}
 			}
 		}
 	}
@@ -568,7 +591,7 @@ public class Preprocessor {
 			
 			if(descriptor != null){//it means that findRelation has not found it and it is newly fetched from kb.
 				wsd = _kb.addRelation(argument, referent, descriptor, SourceType.TTS);
-				print("wsd relation added ------------- : " + wsd.argument.getName() + " -- " + wsd.getName() + " -- " + wsd.referent.getName() + "\n");
+				print("wsd relation added ------------- : " + wsd.argument.getName() + " --> " + wsd.getName() + " --> " + wsd.referent.getName() + "\n");
 				_ttsEngine.addRelationInstance(descriptor.getName(), wsd);
 			}
 			else{//it means that findRelation has found this relation.
@@ -609,47 +632,49 @@ public class Preprocessor {
 	}
 
 	
-//	/**
-//	 * this method based on the ScenePart of the part adds a Role, DynamicObject, StaticObject, or ... to primarySceneModel.
-//	 * TODO: we have assumed for simplicity which every scene has a unique Role, DyanamicObject, and StaticObject with a one name.
-//	 * for example all «پسرک» refer to just one Role. 
-//	 * 
-//	 * @param part the _wsd of this SentencePart object is set.
-//	 * @param primarySceneModel
-//	 */
-//	private void addToPrimarySceneModel(SentencePart part, SceneModel primarySceneModel){
-//		if(part == null)
-//			return;
-//		
-//		ScenePart sp = _ttsEngine.whichScenePart(part._wsd, part._syntaxTag);				
-//		
-//		if(sp == ScenePart.ROLE){
-//			if(!primarySceneModel.hasRole(part._wsd)){				
-//				Role role = new Role(part._name, part._wsd);				
-//				primarySceneModel.addRole(role);			
-//			}		
-//		}
-//		else if(sp == ScenePart.DYNAMIC_OBJECT){		
-//			if(!primarySceneModel.hasDynamic_object(part._wsd)){				
-//				DynamicObject dynObj = new DynamicObject(part._name, part._wsd);
-//				primarySceneModel.addDynamic_object(dynObj);				
-//			}
-//		}
-//		else if(sp == ScenePart.STATIC_OBJECT){
-//			if(!primarySceneModel.hasStatic_object(part._wsd)){				
-//				StaticObject staObj = new StaticObject(part._name, part._wsd);
-//				primarySceneModel.addStatic_object(staObj);
-//			}
-//		}
-//		else if(sp == ScenePart.LOCATION){//TODO: check what else shall I do for this case!
-//			Location location = new Location(part._name, part._wsd);
-//			primarySceneModel.setLocation(location);			
-//		}
-//		else if(sp == ScenePart.TIME){//TODO: check what else shall I do for this case!
-//			Time time = new Time(part._name, part._wsd);
-//			primarySceneModel.setTime(time);			
-//		}
-//	}
+	/**
+	 * this method based on the ScenePart of the part adds a Role, DynamicObject, StaticObject, or ... to primarySceneModel.
+	 * TODO: we have assumed for simplicity which every scene has a unique Role, DyanamicObject, and StaticObject with a one name.
+	 * for example all «پسرک» refer to just one Role. 
+	 * 
+	 * @param part the SentencePart which is to be added to primarySceneModel.
+	 * @param scenePart the ScenePart which this part has.
+	 * @param primarySceneModel the primarySceneModel which the part is to be added to.
+	 */
+	private void addToPrimarySceneModel(SentencePart part, ScenePart scenePart, SceneModel primarySceneModel){
+		
+		if(part == null || scenePart == null || scenePart == ScenePart.UNKNOWN || primarySceneModel == null){
+			MyError.error("null input parameter!");
+			return;
+		}								
+		
+		if(scenePart == ScenePart.ROLE){
+			if(!primarySceneModel.hasRole(part._wsd)){				
+				Role role = new Role(part._name, part._wsd);				
+				primarySceneModel.addRole(role);			
+			}		
+		}
+		else if(scenePart == ScenePart.DYNAMIC_OBJECT){		
+			if(!primarySceneModel.hasDynamic_object(part._wsd)){				
+				DynamicObject dynObj = new DynamicObject(part._name, part._wsd);
+				primarySceneModel.addDynamic_object(dynObj);				
+			}
+		}
+		else if(scenePart == ScenePart.STATIC_OBJECT){
+			if(!primarySceneModel.hasStatic_object(part._wsd)){				
+				StaticObject staObj = new StaticObject(part._name, part._wsd);
+				primarySceneModel.addStatic_object(staObj);
+			}
+		}
+		else if(scenePart == ScenePart.LOCATION){//TODO: check what else shall I do for this case!
+			Location location = new Location(part._name, part._wsd);
+			primarySceneModel.setLocation(location);			
+		}
+		else if(scenePart == ScenePart.TIME){//TODO: check what else shall I do for this case!
+			Time time = new Time(part._name, part._wsd);
+			primarySceneModel.setTime(time);			
+		}
+	}
 	
 //	/**
 //	 * this method based on the ScenePart of the subject(s) of the sentenceModel adds RoleAction(s) or ObjectAction(s) to primarySceneModel. 
@@ -856,7 +881,7 @@ public class Preprocessor {
 						//adding the relation of this sentence to kb.
 						PlausibleStatement rel = _kb.addRelation(sbj._wsd, obj._wsd, verb._wsd, SourceType.TTS);
 						verbRelations.add(rel);
-						print("verb relation added ------------- : " + rel.argument.getName() + " -- " + rel.getName() + " -- " + rel.referent.getName() + "\n");														
+						print("verb relation added ------------- : " + rel.argument.getName() + " --> " + rel.getName() + " --> " + rel.referent.getName() + "\n");														
 					}				
 			
 			if(!transitive_verb){
@@ -864,7 +889,7 @@ public class Preprocessor {
 				//adding the relation of this sentence to kb. 
 				PlausibleStatement rel = _kb.addRelation(sbj._wsd, KnowledgeBase.HPR_ANY, verb._wsd, SourceType.TTS);
 				verbRelations.add(rel);
-				print("verb relation added ------------- : " + rel.argument.getName() + " -- " + rel.getName() + " -- " + rel.referent.getName() + "\n");				
+				print("verb relation added ------------- : " + rel.argument.getName() + " --> " + rel.getName() + " --> " + rel.referent.getName() + "\n");				
 			}
 		}
 		return verbRelations;
