@@ -171,12 +171,12 @@ public class Preprocessor {
 		for(int i = 0; i < parts.length; i++)
 			parts[i] = parts[i].substring(parts[i].indexOf(":")+1);				
 		
-		SentencePart newPart = new SentencePart(parts[0], parts[1], parts[8], senteceModel);			
+		SentencePart newPart = new SentencePart(parts[0], parts[8], senteceModel);			
 		
-		if(parts[2] != null && !parts[2].equals("-"))
-			newPart.set_pos(parts[2]);
+		if(parts[1] != null && !parts[1].equals("-"))
+			newPart.set_pos(parts[1]);
 			
-		newPart.set_syntaxTag(parts[3]);
+		newPart.set_syntaxTag(parts[2]);
 		
 		if(parts[4] != null && !parts[4].equals("-"))
 			newPart.set_semanticTag(parts[4]);

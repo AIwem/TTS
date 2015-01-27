@@ -1064,38 +1064,38 @@ public class TTSEngine {
 	}
 	
 	
-	/**
-	 * this methods searches the internal structure of this TTSEngine (seen_sceneParts) to find the ScenePart mapped to this node.
-	 *  
-	 * @param node the node which is ScenePart is to be found. it may be pure or instance node!
-	 * @param synTag the SyntaxTag of this node in the sentence.
-	 * @return 
-	 */
-	public ScenePart whichScenePart_OLD(Node node, DependencyRelationType synTag){
-		print(node + "~~~~~~~~~~~~~~~ in whichScenePart ~~~~~~~~~~~~");
-		if(node == null)
-			return ScenePart.UNKNOWN;
-		
-		String pure_name = makePureName(node);
-		ScenePart sp = null;
-		
-		//if it is seen before!
-		if(seen_sceneParts.containsKey(pure_name))			
-			sp = seen_sceneParts.get(pure_name);	
-
-		//if it isn't seen before!
-		else{
-			Node pure_node = getPureNode(node);	
-			POS pos = node.getPos();
-		
-			sp = getScenePart_OLD(pure_node, pos, synTag);
-			
-			addTo_seen_sceneParts(pure_name, sp);			
-		}
-
-		print(node + " ScenePart is " + sp + "\n");			
-		return sp;
-	}
+//	/**
+//	 * this methods searches the internal structure of this TTSEngine (seen_sceneParts) to find the ScenePart mapped to this node.
+//	 *  
+//	 * @param node the node which is ScenePart is to be found. it may be pure or instance node!
+//	 * @param synTag the SyntaxTag of this node in the sentence.
+//	 * @return 
+//	 */
+//	public ScenePart whichScenePart_OLD(Node node, DependencyRelationType synTag){
+//		print(node + "~~~~~~~~~~~~~~~ in whichScenePart ~~~~~~~~~~~~");
+//		if(node == null)
+//			return ScenePart.UNKNOWN;
+//		
+//		String pure_name = makePureName(node);
+//		ScenePart sp = null;
+//		
+//		//if it is seen before!
+//		if(seen_sceneParts.containsKey(pure_name))			
+//			sp = seen_sceneParts.get(pure_name);	
+//
+//		//if it isn't seen before!
+//		else{
+//			Node pure_node = getPureNode(node);	
+//			POS pos = node.getPos();
+//		
+//			sp = getScenePart_OLD(pure_node, pos, synTag);
+//			
+//			addTo_seen_sceneParts(pure_name, sp);			
+//		}
+//
+//		print(node + " ScenePart is " + sp + "\n");			
+//		return sp;
+//	}
 	
 	/**
 	 * this methods searches the internal structure of this TTSEngine (seen_sceneParts) to find the ScenePart mapped to this node.

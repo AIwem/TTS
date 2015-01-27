@@ -34,11 +34,6 @@ public class SentencePart {
 	public String _name;
 	
 	/**
-	 * name of this part in the sentence
-	 */
-	public String _name_in_sentence;
-	
-	/**
 	 * this part Part-Of-Speech.
 	 */
 	public POS	_pos = null;
@@ -86,9 +81,8 @@ public class SentencePart {
 	public ArrayList<Node> capacities = null;
 	
 
-	public SentencePart(String _name, String _name_in_sentence, String number, SentenceModel senteceModel) {
-		this._name = _name;
-		this._name_in_sentence = _name_in_sentence;
+	public SentencePart(String _name, String number, SentenceModel senteceModel) {
+		this._name = _name;		
 		this._number = number;
 		this._senteceModel = senteceModel;
 	}
@@ -118,9 +112,8 @@ public class SentencePart {
 	 * @param _synTag
 	 * @param wSD
 	 */
-	public SentencePart(String _name, String _name_in_sentence, POS _pos, DependencyRelationType _synTag, SemanticTag semanticTag, Node wsd, ArrayList<SentencePart> sub_parts) {
+	public SentencePart(String _name, POS _pos, DependencyRelationType _synTag, SemanticTag semanticTag, Node wsd, ArrayList<SentencePart> sub_parts) {
 		this._name = _name;		
-		this._name_in_sentence = _name_in_sentence;
 		this._pos = _pos;
 		this._syntaxTag = _synTag;
 		this._semanticTag = semanticTag;
