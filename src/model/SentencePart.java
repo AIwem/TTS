@@ -44,6 +44,11 @@ public class SentencePart {
 	public DependencyRelationType _syntaxTag = null;
 	
 	/**
+	 * the number of the source SentencePart of this part's _syntaxTag
+	 */
+	private int _sourceOfSynNum = -1;	
+	
+	/**
 	 * this part Semantic-Role-Label.
 	 */
 	public SemanticTag _semanticTag = null;
@@ -63,18 +68,30 @@ public class SentencePart {
 	 * sub_part of this part. for example "کبوتر زخمی" has sub_parts of "کبوتر" and "زخمی".
 	 * we have assumed that sub_parts has depth of 1. It means each sub_part has no sub_part in itself.
 	 */
-	public ArrayList<SentencePart> sub_parts;
+	private ArrayList<SentencePart> sub_parts;
 	
 	/**
-	 * this part dependency in noun-phrase or verb-phrase.
+	 * The adjectives of this SentencePart. 
 	 */
-	public DEP _dep = null;
+	public ArrayList<SentencePart> adjectives;
+	
+	/**
+	 * The mozaf_elaih of this SentencePart. 
+	 */
+	public ArrayList<SentencePart> mozaf_elaih;
+	
+//	/**
+//	 * this part dependency in noun-phrase or verb-phrase.
+//	 */
+//	public DEP _dep = null;
 	
 	/**
 	 * this part number
 	 */
-	public String _number;
+	private int _number = -1;
 	
+	
+
 	/**
 	 * capacities of this SentencePart, it can be verb, noun, adjective or ...
 	 */
@@ -83,7 +100,7 @@ public class SentencePart {
 
 	public SentencePart(String _name, String number, SentenceModel senteceModel) {
 		this._name = _name;		
-		this._number = number;
+		this.set_number(number);
 		this._senteceModel = senteceModel;
 	}
 	
@@ -91,8 +108,8 @@ public class SentencePart {
 	 * @param _name
 	 * @param sentenceModel
 	 */
-	public SentencePart(String _name, SentenceModel sentenceModel) {
-		this._name = _name;
+	public SentencePart(String number, SentenceModel sentenceModel) {
+		this.set_number(number);;
 		this._senteceModel = sentenceModel;
 	}
 		
@@ -172,56 +189,75 @@ public class SentencePart {
 		return false;
 	}
 	
-	public boolean isPreSub_part(){
-		if(_dep == DEP.PRE)
-			return true;
-		return false;
-	}
+//	public boolean isPreSub_part(){
+//		if(_dep == DEP.PRE)
+//			return true;
+//		return false;
+//	}
+//	
+//	public boolean isPostSub_part(){
+//		if(_dep == DEP.POST)
+//			return true;
+//		return false;
+//	}
+//	
+//	public boolean isMainSub_part(){
+//		if(_dep == DEP.MAIN)
+//			return true;
+//		return false;
+//	}
 	
-	public boolean isPostSub_part(){
-		if(_dep == DEP.POST)
-			return true;
-		return false;
-	}
-	
-	public boolean isMainSub_part(){
-		if(_dep == DEP.MAIN)
-			return true;
-		return false;
-	}
-	
-	public SentencePart getMainSub_part(){
-		if(!hasSub_parts())
-			return this;
-		
-		for(SentencePart p:sub_parts)
-			if(p._dep == DEP.MAIN)
-				return p;
-		MyError.error("sub_parts has no MAIN part!" + this.getStr());
-		return null;
-	}
-	
-	public SentencePart getPreSub_part() {
-		if(!hasSub_parts())
+	/**
+	 * return the one of its sub_parts which its number is input number
+	 * @param number the number of returned sub_part
+	 * @return
+	 */
+	public SentencePart getSub_part(int number){
+		if(!hasSub_parts()){
+			if(this._number == number)
+				return this;
+			MyError.error(this + " SentencePart hasn't any sub_part");
 			return null;
+		}
 		
 		for(SentencePart p:sub_parts)
-			if(p._dep == DEP.PRE)
+			if(p._number == number)
 				return p;
-		MyError.error("sub_parts has no PRE part!" + this.getStr());
-		return null;
-	}	
-	
-	public SentencePart getPostSub_part() {
-		if(!hasSub_parts())
-			return null;
-		
-		for(SentencePart p:sub_parts)
-			if(p._dep == DEP.POST)
-				return p;
-		MyError.error("sub_parts has no POST part!" + this.getStr());
+		MyError.error(this + " SentencePart hasn't such a sub_part with number " + number);
 		return null;
 	}
+	
+	public ArrayList<SentencePart> getSub_parts() {
+		return sub_parts;
+	}
+	
+	public int get_sourceOfSynNum() {
+		return _sourceOfSynNum;
+	}
+	
+	
+	
+//	public SentencePart getPreSub_part() {
+//		if(!hasSub_parts())
+//			return null;
+//		
+//		for(SentencePart p:sub_parts)
+//			if(p._dep == DEP.PRE)
+//				return p;
+//		MyError.error("sub_parts has no PRE part!" + this.getStr());
+//		return null;
+//	}	
+//	
+//	public SentencePart getPostSub_part() {
+//		if(!hasSub_parts())
+//			return null;
+//		
+//		for(SentencePart p:sub_parts)
+//			if(p._dep == DEP.POST)
+//				return p;
+//		MyError.error("sub_parts has no POST part!" + this.getStr());
+//		return null;
+//	}
 	
 	public ArrayList<Node> getCapacities() {
 		return capacities;
@@ -249,9 +285,9 @@ public class SentencePart {
 		else rs += "-";
 		rs += " sub_parts=";
 		if(hasSub_parts()) rs += "\n" + sub_parts;
-		else rs += "-";
-		rs += " dep=";
-		if(_dep != null) rs += _dep;
+//		else rs += "-";
+//		rs += " dep=";
+//		if(_dep != null) rs += _dep;
 		else rs += "-";
 		rs += "\n\n";
 		return rs;
@@ -262,6 +298,13 @@ public class SentencePart {
 	//public String getStr() {
 	public String toString() {
 		return _name;
+	}
+	
+	public void set_number(String number) {
+		if(number == null || number.equals("") || number.equals("-"))
+			this._number = -1;
+		else
+			this._number = Integer.parseInt(number);
 	}
 
 	public void set_pos(String pos) {
@@ -278,6 +321,13 @@ public class SentencePart {
 		
 		if(_syntaxTag == null)
 			MyError.error("bad syntaxTag name " + synTag);	
+	}	
+	
+	public void set_sourceOfSynNum(String sourceOfSynNum) {
+		if(sourceOfSynNum == null || sourceOfSynNum.equals("") || sourceOfSynNum.equals("-"))
+			this._sourceOfSynNum = -1;
+		else
+			this._sourceOfSynNum = Integer.parseInt(sourceOfSynNum);
 	}
 	
 	public void set_semanticTag(String semTag) {
@@ -297,15 +347,40 @@ public class SentencePart {
 		this._wsd = wsd;
 	}
 	
-	public void set_dep(String dep) {
-		if(dep != null && !dep.equals("") && !dep.equals("-"))
-			_dep = DEP.fromString(dep);		
-//		if(_dep == null)
-//			MyError.error("bad dep name " + dep);			
-	}
+//	public void set_dep(String dep) {
+//		if(dep != null && !dep.equals("") && !dep.equals("-"))
+//			_dep = DEP.fromString(dep);		
+////		if(_dep == null)
+////			MyError.error("bad dep name " + dep);			
+//	}
 		
 	public void setCapacities(ArrayList<Node> capacities) {
 		this.capacities = capacities;
+	}
+
+	public void setSub_parts(ArrayList<SentencePart> sub_parts) {
+		
+		this.sub_parts = sub_parts;
+		
+		boolean hasMoz = false;
+		boolean hasAdj = false;
+		
+		adjectives = new ArrayList<SentencePart>();
+		mozaf_elaih = new ArrayList<SentencePart>();
+		
+		if(sub_parts != null)
+			for(SentencePart subPart:sub_parts)
+				if(subPart._syntaxTag == DependencyRelationType.MOZ)
+					mozaf_elaih.add(subPart);
+				else if(subPart._syntaxTag == DependencyRelationType.NPREMOD || subPart._syntaxTag == DependencyRelationType.NPOSTMOD)
+					adjectives.add(subPart);
+		
+		
+		if(!hasAdj)
+			adjectives = null;
+		
+		if(!hasMoz)
+			mozaf_elaih = null;
 	}
 		
 	

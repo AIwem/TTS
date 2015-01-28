@@ -37,8 +37,8 @@ name:شروع کرد		POS:VERB		SYN:ROOT	SRC:	SEM:-				WSD:شروع کردن#v1	
 name:شروع			POS:NOUN		SYN:NVE		SRC:7	SEM:-				WSD:-					sub_part:-				num:1
 name:کرد			POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:-					sub_part:-				num:7
 
-name:به دویدن		POS:UNKNOWN		SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:دویدن#v1			sub_part:2,3			num:
-name:به				POS:UNKNOWN		SYN:NPP		SRC:7	SEM:ARG1_THEME_P	WSD:-					sub_part:-				num:2
+name:به دویدن		POS:UNKNOWN		SYN:NPP or OBJ	SRC:	SEM:ARG1_THEME		WSD:دویدن#v1			sub_part:2,3			num:
+name:به				POS:UNKNOWN		SYN:NPP		SRC:1	SEM:ARG1_THEME_P	WSD:-					sub_part:-				num:2
 name:دویدن			POS:NOUN		SYN:POSDEP	SRC:2	SEM:ARG1_THEME_P	WSD:دویدن#v1			sub_part:-				num:3
 
 name:به سمت خانه	POS:NOUN		SYN:ADVRB	SRC:	SEM:ArgM_DIR		WSD:5_mozaf#a_6			sub_part:4,5,6			num:
@@ -47,38 +47,3 @@ name:سمت			POS:NOUN		SYN:POSDEP	SRC:4	SEM:ArgM_DIR_P		WSD:سمت#n4				sub_pa
 name:خانه			POS:NOUN		SYN:MOZ		SRC:5	SEM:ArgM_DIR_P		WSD:خانه#n10			sub_part:-				num:6
 
 #------------------------------------------------------
-sentence:وارد خانه شد
-
-name:خانه			sentence_part:خانه				POS:NOUN		SYN:ADVRB		SEM:ARG4_ENDPOINT	WSD:خانه#n10				sub_part:-					dep:-		num:1
-
-name:وارد شد		sentence_part:وارد شد			POS:VERB		SYN:ROOT		SEM:-				WSD:وارد شدن#v2				sub_part:-					dep:-		num:0
-
-#------------------------------------------------------
-sentence:کبوتر را به مادر خود داد
-
-name:کبوتر			sentence_part:کبوتر را			POS:NOUN		SYN:OBJ			SEM:ARG1_THEME	WSD:کبوتر#n1				sub_part:-					dep:-		num:0
-
-name:مادر خود		sentence_part:به مادر خود		POS:NOUN		SYN:ADVRB		SEM:ARG2_OBJ2	WSD:MAIN_وضعیت سنی#a_POST	sub_part:پسر،ک				dep:-		num:1
-name:به				sentence_part:به				POS:UNKNOWN		SYN:VPP			SEM:ARG2_OBJ2_P	WSD:-						sub_part:-					dep:-		num:1--1
-name:مادر			sentence_part:مادر				POS:NOUN		SYN:POSDEP		SEM:ARG2_OBJ2_P	WSD:-						sub_part:-					dep:-		num:1-0
-name:خود			sentence_part:خود				POS:UNKNOWN		SYN:MOZ			SEM:ARG2_OBJ2_P	WSD:-						sub_part:-					dep:-		num:1-1
-
-
-name:داد			sentence_part:داد				POS:VERB		SYN:ROOT		SEM:-			WSD:دادن#v5					sub_part:-					dep:-		num:2
-
-#------------------------------------------------------
-#sentence:سپس به طرف اتاقش دوید
-
-
-#------------------------------------------------------
-#sentence:تیروکمان خود را برداشت 
-
-
-#------------------------------------------------------
-#sentence:شکست
-
-
-#------------------------------------------------------
-#sentence:دور انداخت
-
-#name:				sentence_part:					POS:NOUN		SYN:		WSD:						sub_part:-				dep:		num:

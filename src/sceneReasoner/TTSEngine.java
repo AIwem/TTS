@@ -907,6 +907,7 @@ public class TTSEngine {
 	 * @param synTag the SyntaxTag of this node in the sentence.
 	 * @return the ScenePart of pure_node, including ScenePart.UNKNOWN.
 	 */
+	@SuppressWarnings("unused")
 	private ScenePart getScenePart_OLD(Node pure_node, POS pos, DependencyRelationType synTag){
 		if(pure_node == null)
 			return ScenePart.UNKNOWN;

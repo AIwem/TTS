@@ -162,7 +162,7 @@ public class Preprocessor {
 //		print(partStr);			
 		String[] parts = partStr.split("(\t)+");
 		
-		if(parts.length != 9){			
+		if(parts.length != 8){			
 			MyError.error("Bad sentence information format " + partStr + " parts-num " + parts.length);
 //			print("Bad sentence information format " + partStr + " parts-num " + parts.length);
 			return null;
@@ -171,12 +171,14 @@ public class Preprocessor {
 		for(int i = 0; i < parts.length; i++)
 			parts[i] = parts[i].substring(parts[i].indexOf(":")+1);				
 		
-		SentencePart newPart = new SentencePart(parts[0], parts[8], senteceModel);			
+		SentencePart newPart = new SentencePart(parts[0], parts[7], senteceModel);			
 		
 		if(parts[1] != null && !parts[1].equals("-"))
 			newPart.set_pos(parts[1]);
 			
 		newPart.set_syntaxTag(parts[2]);
+		
+		newPart.set_sourceOfSynNum(parts[3]);
 		
 		if(parts[4] != null && !parts[4].equals("-"))
 			newPart.set_semanticTag(parts[4]);
@@ -184,16 +186,14 @@ public class Preprocessor {
 		newPart.set_wsd_name(parts[5]);
 		
 		if(parts[6] != null && !parts[6].equals("-")){				
-			String[] subs = parts[6].split("،");
+			String[] subs = parts[6].split(",");
 			
 			ArrayList<SentencePart> subParts = new ArrayList<SentencePart>();
-			for(String s:subs){					
+			for(String s:subs)			
 				subParts.add(new SentencePart(s, senteceModel));
-			}
-			newPart.sub_parts = subParts;
-		}
-		if(parts[7] != null && !parts[7].equals("-"))			
-			newPart.set_dep(parts[7]);	
+			
+			newPart.setSub_parts(subParts);
+		}		
 				
 		print(newPart.getStr() + "\n");
 		return newPart;		
@@ -229,16 +229,16 @@ public class Preprocessor {
 			//it means next line are informations of sub_parts of this current_part.
 			// we have assumed that sub_parts has depth of 1. It means each sub_part has no sub_part in itself.
 			if(currentPart != null && currentPart.hasSub_parts()){
-				ArrayList<SentencePart> subParts = new ArrayList<SentencePart> (currentPart.sub_parts.size());
+				ArrayList<SentencePart> subParts = new ArrayList<SentencePart> (currentPart.getSub_parts().size());
 				
-				for(int j = 0; j < currentPart.sub_parts.size() && (i+1)<senPartStrs.size(); j++){
+				for(int j = 0; j < currentPart.getSub_parts().size() && (i+1)<senPartStrs.size(); j++){
 					i++;
 					String subPartStr = senPartStrs.get(i);
 					SentencePart sPart = createPart(subPartStr, sentence);					
 					if(sPart != null)
 						subParts.add(sPart);							
 				}
-				currentPart.sub_parts = subParts;							
+				currentPart.setSub_parts(subParts);							
 			}						
 			senParts.add(currentPart);
 
@@ -540,9 +540,25 @@ public class Preprocessor {
 		if(wsd_name == null || wsd_name.equals("-"))
 			return;
 		
+		//TODO: I have an assumption that sub_parts has simple (just concept name) _wsd_name.
+		if(part.hasSub_parts())
+			for(SentencePart p:part.getSub_parts())
+				if(p._wsd == null && p._wsd_name != null && !p._wsd_name.equals("-")){																				
+					Node wsd = _ttsEngine.findorCreateInstance(p._wsd_name, isNewNode);
+					if(wsd != null)
+						p.set_wsd(wsd);
+				}
+		
+		
 		//it means that it is not just node but plausible statement for example MAIN_وضعیت سلامتی_POST
 		if(wsd_name.indexOf("_") != -1){
-			String[] sp = wsd_name.split("_"); //MAIN_وضعیت سلامتی_POST --> [MAIN, وضعیت سلامتی, POST]
+			
+			String[] sub_parts = wsd_name.split("_"); //1_وضعیت سنی#a_خردسال#a1 --> [part_num:1 --> وضعیت سلامتی --> خردسال#a1]
+			
+			if(sub_parts.length != 3){
+				MyError.error("wrong wsd_name" + wsd_name);
+				return;
+			}
 		
 			Node argument = null;
 			Node referent = null;
@@ -552,42 +568,91 @@ public class Preprocessor {
 			
 			String relation_name = null;
 			
-			SentencePart main_sub_part = null;
-			SentencePart pre_sub_part = null;
-			SentencePart post_sub_part = null;
-			
-			//node position in plausible statement, PRE, MAIN, POST, or a descriptor name
-			for(String node_pos:sp){				
-						
-				//node_pos is node's position in plausible statement, PRE, MAIN, POST, or a descriptor name
-				switch(node_pos){
-				case("MAIN"):
-					main_sub_part = part.getMainSub_part();					
-					argument = _ttsEngine.findorCreateInstance(main_sub_part._wsd_name, isNewNode);
-					main_sub_part.set_wsd(argument);
-					break;					
-				case("PRE"):
-					pre_sub_part = part.getPreSub_part();
-					Node pre = _ttsEngine.findorCreateInstance(pre_sub_part._wsd_name, isNewNode);
-					pre_sub_part.set_wsd(pre);				
-					//TODO: to complete the "PRE" DEP  
-					MyError.error("I don't know what to do with this PRE DEP sub_part " + pre_sub_part);
-					break;
-				case("POST"):										
-					post_sub_part = part.getPostSub_part();
-					referent = _ttsEngine.findorCreateInstance(post_sub_part._wsd_name, isNewNode);
-					post_sub_part.set_wsd(referent);
-					break;
-				//node_pos is a descriptor_name.
-				default:
-					relation_name = node_pos;
-					wsd = _ttsEngine.findRelationInstance(relation_name);
-					if(wsd == null){
-						//it must got directly fetched from kb, and then addRelation will clone it.
-						descriptor = _kb.addConcept(relation_name);
-					}
-				}
+			for(int i = 0; i < 3; i++){
+				
+				Node cur_part_wsd = null;
+				
+				try {
+					int part_num = -1;
+					
+					//if it dosen't throw exception, it means that cur_part is a number
+			        part_num = Integer.parseInt(sub_parts[i]);
+			        
+			        //it is a valid part_num. 
+			        if(part_num != -1){
+			        	SentencePart cur_part = part.getSub_part(part_num);
+			        	cur_part_wsd = cur_part._wsd;
+			        }
+			        
+			        if(i == 0 || i == 2)
+			    		if(cur_part_wsd != null)
+							if(argument == null)
+								argument = cur_part_wsd;
+							else if(referent == null)
+								referent = cur_part_wsd;					
+			    	
+			        
+			    } catch (NumberFormatException e) {
+			    	//if it has thrown an exception it means that sub_part[i] is the name of a concept.
+			    	//it is argument or referent
+			    	if(i == 0 || i == 2){
+			    		cur_part_wsd = _ttsEngine.findorCreateInstance(sub_parts[i], isNewNode);
+			    		
+			    		if(cur_part_wsd != null){
+							if(argument == null)
+								argument = cur_part_wsd;
+							else if(referent == null)
+								referent = cur_part_wsd;
+						}
+			    	}
+			    	//it is descriptor
+			    	else{
+			    		relation_name = sub_parts[1];
+						wsd = _ttsEngine.findRelationInstance(relation_name);
+						if(wsd == null){
+							//it must got directly fetched from kb, and then addRelation will clone it.
+							descriptor = _kb.addConcept(relation_name);
+						}			    		
+			    	}
+			    }	
 			}
+			
+//			SentencePart main_sub_part = null;
+//			SentencePart pre_sub_part = null;
+//			SentencePart post_sub_part = null;
+//			
+//			//node position in plausible statement, PRE, MAIN, POST, or a descriptor name
+//			for(String node_pos:sub_parts){				
+//						
+//				//node_pos is node's position in plausible statement, PRE, MAIN, POST, or a descriptor name
+//				switch(node_pos){
+//				case("MAIN"):
+//					main_sub_part = part.getMainSub_part();					
+//					argument = _ttsEngine.findorCreateInstance(main_sub_part._wsd_name, isNewNode);
+//					main_sub_part.set_wsd(argument);
+//					break;					
+//				case("PRE"):
+//					pre_sub_part = part.getPreSub_part();
+//					Node pre = _ttsEngine.findorCreateInstance(pre_sub_part._wsd_name, isNewNode);
+//					pre_sub_part.set_wsd(pre);				
+//					//TODO: to complete the "PRE" DEP  
+//					MyError.error("I don't know what to do with this PRE DEP sub_part " + pre_sub_part);
+//					break;
+//				case("POST"):										
+//					post_sub_part = part.getPostSub_part();
+//					referent = _ttsEngine.findorCreateInstance(post_sub_part._wsd_name, isNewNode);
+//					post_sub_part.set_wsd(referent);
+//					break;
+//				//node_pos is a descriptor_name.
+//				default:
+//					relation_name = node_pos;
+//					wsd = _ttsEngine.findRelationInstance(relation_name);
+//					if(wsd == null){
+//						//it must got directly fetched from kb, and then addRelation will clone it.
+//						descriptor = _kb.addConcept(relation_name);
+//					}
+//				}
+//			}
 			
 			if(descriptor != null){//it means that findRelation has not found it and it is newly fetched from kb.
 				wsd = _kb.addRelation(argument, referent, descriptor, SourceType.TTS);
@@ -615,20 +680,14 @@ public class Preprocessor {
 					}
 				}
 			}
-			part.set_wsd(main_sub_part._wsd);
+			part.set_wsd(argument);
 			//return;
 		}
 		else{
 			//it means this part wsd_name is just one concept name, so we find or add it in sceneModel.			
 			Node wsd = _ttsEngine.findorCreateInstance(wsd_name, isNewNode);
 			part.set_wsd(wsd);
-		}
-		if(part.hasSub_parts())
-			for(SentencePart p:part.sub_parts)
-				if(p._wsd == null){																				
-					Node wsd = _ttsEngine.findorCreateInstance(p._wsd_name, isNewNode);
-					p.set_wsd(wsd);
-				}
+		}		
 	}
 
 	
