@@ -118,25 +118,29 @@ public class SentencePart {
 	 * @param _name
 	 * @param _synTag
 	 */
-	public SentencePart(String _name, DependencyRelationType _synTag) {
+	public SentencePart(String _name, DependencyRelationType _synTag, SentenceModel sentenceModel) {
 		this._name = _name;
 		this._syntaxTag = _synTag;
+		this._senteceModel = sentenceModel;
 	}
 
 	/**
 	 * @param _name
-	 * @param sub_parts
 	 * @param _pos
 	 * @param _synTag
-	 * @param wSD
+	 * @param _semanticTag
+	 * @param wsd 
+	 * @param sub_parts
+	 * @param sentenceModel 
 	 */
-	public SentencePart(String _name, POS _pos, DependencyRelationType _synTag, SemanticTag semanticTag, Node wsd, ArrayList<SentencePart> sub_parts) {
+	public SentencePart(String _name, POS _pos, DependencyRelationType _synTag, SemanticTag semanticTag, Node wsd, ArrayList<SentencePart> sub_parts, SentenceModel sentenceModel) {
 		this._name = _name;		
 		this._pos = _pos;
 		this._syntaxTag = _synTag;
 		this._semanticTag = semanticTag;
-		_wsd = wsd;
+		this._wsd = wsd;
 		this.sub_parts = sub_parts;
+		this._senteceModel = sentenceModel;
 	}
 	
 	/**
@@ -372,8 +376,15 @@ public class SentencePart {
 		boolean hasMoz = false;
 		boolean hasAdj = false;
 		
-		adjectives = new ArrayList<SentencePart>();
-		mozaf_elaih = new ArrayList<SentencePart>();
+		if(adjectives == null)
+			adjectives = new ArrayList<SentencePart>();
+		else
+			hasAdj = true;
+		
+		if(mozaf_elaih == null)
+			mozaf_elaih = new ArrayList<SentencePart>();
+		else
+			hasMoz = true;
 		
 		if(sub_parts != null)
 			for(SentencePart subPart:sub_parts)

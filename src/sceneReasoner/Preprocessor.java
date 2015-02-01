@@ -1,5 +1,6 @@
 package sceneReasoner;
 
+import ir.ac.itrc.qqa.semantic.enums.DependencyRelationType;
 import ir.ac.itrc.qqa.semantic.enums.POS;
 import ir.ac.itrc.qqa.semantic.enums.SourceType;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
@@ -40,6 +41,7 @@ public class Preprocessor {
 		
 //	private ArrayList<PlausibleStatement> default_contexts = null;
 	private String MainSemanticArgumet_name = "MainSemArg";
+	private String zamir_enekasi = "خود§n-13459";
 	
 	
 	/**
@@ -245,10 +247,10 @@ public class Preprocessor {
 			//setting _wsd of currentPart to the proper Node of KB.			
 			if(currentPart.isVerb())
 				//isnewNode parameter is true, because every verb is new a one!
-				allocate_wsd(currentPart, true);
+				allocate_wsd(sentence ,currentPart, true);
 			else
 
-				allocate_wsd(currentPart, false);
+				allocate_wsd(sentence, currentPart, false);
 			
 			if(currentPart._wsd == null)
 				MyError.error(currentPart._wsd_name + " couldn't get allocated!");				
@@ -363,6 +365,8 @@ public class Preprocessor {
 	 */
 	private void prepareNullSemanticTags(SentenceModel sentenceModel, SceneModel primarySceneModel, StoryModel storyModel) {
 		
+		print("\n=============== in   prepareNullSemanticTags   =============");
+		
 		ArrayList<MainSemanticTag> existingSemTags = sentenceModel.getExistingMainSematicArgs();
 		ArrayList<MainSemanticTag> necessarySemTags = sentenceModel.getNecessarySematicArgs();
 						
@@ -389,9 +393,11 @@ public class Preprocessor {
 						prepareNullSemanticTagsForAScene(sentenceModel, missingMainArgs, oldScene);
 		}
 		
+		print("=============== end of prepareNullSemanticTags =============\n");
 	}	
 	
-	private void prepareNullSemanticTagsForAScene(SentenceModel sentenceModel, ArrayList<MainSemanticTag> missingMainArgs, SceneModel sceneModel){
+	private void prepareNullSemanticTagsForAScene(SentenceModel sentenceModel, ArrayList<MainSemanticTag> missingMainArgs, SceneModel sceneModel){		
+		
 		if(!Common.isEmpty(missingMainArgs)){
 			
 			ArrayList<MainSemanticTag> preparedMainArgs = new ArrayList<MainSemanticTag>();
@@ -444,32 +450,79 @@ public class Preprocessor {
 	
 	private void preprocessArg0(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		
+		print("\n0000000000000000 in   preprocessArg0   0000000000000000");
+		
 		if(sentenceModel.hasArg0()){
 			
 			SentencePart arg0Part = sentenceModel.getArg0SentencePart();
 			
-			if(arg0Part != null){
+			if(arg0Part == null){
+				MyError.error("the sentenceModel hasArg0 but it didn't find!" + sentenceModel);
+				return;
+			}
+						
+			//reasoning ScenePart from KB and adding to primarySceneModel. 
+			ScenePart scenePart = _ttsEngine.whichScenePart(arg0Part);
+			SceneElement sceneElem = addToPrimarySceneModel(arg0Part, scenePart, primarySceneModel);
+			 
+			if(sceneElem == null){
+				MyError.error(arg0Part + " could not be added to primarySceneModel!");
+				return;
+			}
 				
-				//reasoning ScenePart from KB and adding to primarySceneModel. 
-				ScenePart scenePart = _ttsEngine.whichScenePart(arg0Part);
-				SceneElement sceneElem = addToPrimarySceneModel(arg0Part, scenePart, primarySceneModel);
+			//------------------- pre-processing dependents of arg0 --------------------
+			
+						
+			//It means that this sentencePart has some adjectives
+			if(arg0Part.hasAdjectives()){
 				
-				//It means that this sentencePart has some adjectives
-				if(arg0Part.hasAdjectives()){
+				print(arg0Part + " has some adjectives:" + arg0Part.adjectives);
+				ArrayList<SentencePart> adjectives = arg0Part.adjectives;
+				for(SentencePart adj:adjectives){
+					if(scenePart == ScenePart.ROLE){
+						 Role role = (Role)sceneElem;
+						 RoleMood rm = new RoleMood(adj._name, adj._wsd);
+						 role.addRole_mood(rm);
+					}
+					else if(scenePart == ScenePart.DYNAMIC_OBJECT){
+						DynamicObject dynobj = (DynamicObject)sceneElem;
+						ObjectState objState = new ObjectState(adj._name, adj._wsd);
+//						if(dynobj.hasThisState(objState))
+						dynobj.setCurrent_state(objState);
+//						else
+//							MyError.error(message);
+					}
+				}
+			}
+			
+			//It means that this sentencePart has some mozad_elaih
+			if(arg0Part.hasMozaf_elaih()){				
 				
-					print("=====================" + arg0Part + " has adjective ============================");
-					ArrayList<SentencePart> adjectives = arg0Part.adjectives;
-					for(SentencePart adj:adjectives)
-						if(scenePart == ScenePart.ROLE && sceneElem != null){
+				print(arg0Part + " has mozaf_elaih: " + arg0Part.mozaf_elaih);
+				ArrayList<SentencePart> mozafs = arg0Part.mozaf_elaih;
+				for(SentencePart moz:mozafs){
+					
+					Node zamir_khod = _kb.addConcept(zamir_enekasi); 
+					
+					if(moz._wsd != zamir_khod){
+						if(scenePart == ScenePart.ROLE){
 							 Role role = (Role)sceneElem;
-							 RoleMood rm = new RoleMood(sceneElem._name, sceneElem._node);
+							 RoleMood rm = new RoleMood(moz._name, moz._wsd);
 							 role.addRole_mood(rm);
 						}	
+						else if(scenePart == ScenePart.DYNAMIC_OBJECT){
+							DynamicObject dynobj = (DynamicObject)sceneElem;
+							ObjectState objState = new ObjectState(moz._name, moz._wsd);
+//							if(dynobj.hasThisState(objState))
+							dynobj.setCurrent_state(objState);
+//							else
+//								MyError.error(message);
+						}							
+					}
 				}
-				
-				//TODO similar for mazaf_elaih + != amir enekasi
 			}
 		}
+		print("0000000000000000 end of preprocessArg0 0000000000000000\n");
 	}
 	
 	private void preprocessVerbArg(SentenceModel sentenceModel, SceneModel primarySceneModel) {
@@ -530,7 +583,7 @@ public class Preprocessor {
 	 * @param isNewNode is this part a new instance or is is the same as seen before.
 	 * @param synTag the SyntaxTag of this node in the sentence.
 	 */
-	private void allocate_wsd(SentencePart part, boolean isNewNode){
+	private void allocate_wsd(SentenceModel sentence, SentencePart part, boolean isNewNode){
 		if(part == null)
 			return;
 			
@@ -546,8 +599,7 @@ public class Preprocessor {
 					Node wsd = _ttsEngine.findorCreateInstance(p._wsd_name, isNewNode);
 					if(wsd != null)
 						p.set_wsd(wsd);
-				}
-		
+				} 
 		
 		//it means that it is not just node but plausible statement for example MAIN_وضعیت سلامتی_POST
 		if(wsd_name.indexOf("_") != -1){
@@ -558,7 +610,7 @@ public class Preprocessor {
 				MyError.error("wrong wsd_name" + wsd_name);
 				return;
 			}
-		
+			
 			Node argument = null;
 			Node referent = null;
 			Node descriptor = null;
@@ -577,10 +629,12 @@ public class Preprocessor {
 					//if it dosen't throw exception, it means that cur_part is a number
 			        part_num = Integer.parseInt(sub_parts[i]);
 			        
+			        SentencePart cur_part = null;
+			        
 			        //it is a valid part_num. 
 			        if(part_num != -1){
-			        	SentencePart cur_part = part.getSub_part(part_num);
-			        	cur_part_wsd = cur_part._wsd;
+			        	cur_part = part.getSub_part(part_num);
+			        	cur_part_wsd = cur_part._wsd;			        	
 			        }
 			        
 			        if(i == 0 || i == 2)
@@ -598,7 +652,8 @@ public class Preprocessor {
 			    		cur_part_wsd = _ttsEngine.findorCreateInstance(sub_parts[i], isNewNode);
 			    		
 			    		if(cur_part_wsd != null){
-							if(argument == null)
+							
+			    			if(argument == null)
 								argument = cur_part_wsd;
 							else if(referent == null)
 								referent = cur_part_wsd;
@@ -616,46 +671,13 @@ public class Preprocessor {
 			    }	
 			}
 			
-//			SentencePart main_sub_part = null;
-//			SentencePart pre_sub_part = null;
-//			SentencePart post_sub_part = null;
-//			
-//			//node position in plausible statement, PRE, MAIN, POST, or a descriptor name
-//			for(String node_pos:sub_parts){				
-//						
-//				//node_pos is node's position in plausible statement, PRE, MAIN, POST, or a descriptor name
-//				switch(node_pos){
-//				case("MAIN"):
-//					main_sub_part = part.getMainSub_part();					
-//					argument = _ttsEngine.findorCreateInstance(main_sub_part._wsd_name, isNewNode);
-//					main_sub_part.set_wsd(argument);
-//					break;					
-//				case("PRE"):
-//					pre_sub_part = part.getPreSub_part();
-//					Node pre = _ttsEngine.findorCreateInstance(pre_sub_part._wsd_name, isNewNode);
-//					pre_sub_part.set_wsd(pre);				
-//					//TODO: to complete the "PRE" DEP  
-//					MyError.error("I don't know what to do with this PRE DEP sub_part " + pre_sub_part);
-//					break;
-//				case("POST"):										
-//					post_sub_part = part.getPostSub_part();
-//					referent = _ttsEngine.findorCreateInstance(post_sub_part._wsd_name, isNewNode);
-//					post_sub_part.set_wsd(referent);
-//					break;
-//				//node_pos is a descriptor_name.
-//				default:
-//					relation_name = node_pos;
-//					wsd = _ttsEngine.findRelationInstance(relation_name);
-//					if(wsd == null){
-//						//it must got directly fetched from kb, and then addRelation will clone it.
-//						descriptor = _kb.addConcept(relation_name);
-//					}
-//				}
-//			}
 			
-			if(descriptor != null){//it means that findRelation has not found it and it is newly fetched from kb.
+			if(descriptor != null){//it means that findRelation has not found it and it is newly fetched from kb.			
+				
 				wsd = _kb.addRelation(argument, referent, descriptor, SourceType.TTS);
+				
 				print("wsd relation added ------------- : " + wsd.argument.getName() + " --> " + wsd.getName() + " --> " + wsd.referent.getName() + "\n");
+				
 				_ttsEngine.addRelationInstance(descriptor.getName(), wsd);
 			}
 			else{//it means that findRelation has found this relation.
@@ -672,14 +694,19 @@ public class Preprocessor {
 							}
 						
 					if(descriptor == null){
-						descriptor = _kb.addConcept(relation_name);
+						descriptor = _kb.addConcept(relation_name);						
+						
 						wsd = _kb.addRelation(argument, referent, descriptor, SourceType.TTS);
+						
 						print("wsd relation added ------------- : " + wsd.argument.getName() + " -- " + wsd.getName() + " -- " + wsd.referent.getName() + "\n");
+						
 						_ttsEngine.addRelationInstance(relation_name, wsd);
 					}
 				}
 			}
 			part.set_wsd(argument);
+			
+			add_adjective_mozaf(sentence, part, descriptor, referent);
 			//return;
 		}
 		else{
@@ -690,6 +717,37 @@ public class Preprocessor {
 	}
 
 	
+	private void add_adjective_mozaf(SentenceModel sentence, SentencePart mainPart, Node descriptor, Node referent) {
+		if(sentence == null || mainPart == null || descriptor == null || referent == null){
+			MyError.error("null input parameter for add_adjective_mozaf!");
+			if(mainPart == null)
+				MyError.error("no mainPart could be found!");
+			return;
+		}
+		if(descriptor.getPos() == POS.ADJECTIVE){ //it means that descriptor is describing an adjective.
+		
+			SentencePart adjPart = new SentencePart(referent.getName(), POS.ADJECTIVE, DependencyRelationType.NPOSTMOD, null, referent, null, sentence);
+					
+			if(mainPart.adjectives == null)
+				mainPart.adjectives = new ArrayList<SentencePart>();		
+			
+			mainPart.adjectives.add(adjPart);
+			
+			print("\n----------------" + adjPart + " adjective added to " + mainPart);
+		}
+		else if(descriptor.getPos() == POS.NOUN){ //it means that descriptor is describing a mozaf_alaih.
+			
+			SentencePart mozPart = new SentencePart(referent.getName(), POS.NOUN, DependencyRelationType.MOZ, null, referent, null, sentence);
+			
+			if(mainPart.mozaf_elaih == null)
+				mainPart.mozaf_elaih = new ArrayList<SentencePart>();		
+			
+			mainPart.mozaf_elaih.add(mozPart);
+			
+			print("\n----------------" + mozPart + " mozaf_elaih added to " + mainPart);
+		}
+	}
+
 	/**
 	 * this method based on the ScenePart of the part adds a Role, DynamicObject, StaticObject, or ... to primarySceneModel.
 	 * TODO: we have assumed for simplicity which every scene has a unique Role, DyanamicObject, and StaticObject with a one name.
@@ -698,6 +756,7 @@ public class Preprocessor {
 	 * @param part the SentencePart which is to be added to primarySceneModel.
 	 * @param scenePart the ScenePart which this part has.
 	 * @param primarySceneModel the primarySceneModel which the part is to be added to.
+	 * @return the new ScenePart created based on the input part or the ScenePart which primarySceneModel has had before.
 	 */
 	private SceneElement addToPrimarySceneModel(SentencePart part, ScenePart scenePart, SceneModel primarySceneModel){
 		
@@ -711,7 +770,9 @@ public class Preprocessor {
 				Role role = new Role(part._name, part._wsd);				
 				primarySceneModel.addRole(role);
 				return role;
-			}		
+			}
+			else
+				return primarySceneModel.getRole(part._wsd);
 		}
 		else if(scenePart == ScenePart.DYNAMIC_OBJECT){		
 			if(!primarySceneModel.hasDynamic_object(part._wsd)){				
@@ -719,6 +780,8 @@ public class Preprocessor {
 				primarySceneModel.addDynamic_object(dynObj);				
 				return dynObj;
 			}
+			else
+				return primarySceneModel.getDynamic_object(part._wsd);
 		}
 		else if(scenePart == ScenePart.STATIC_OBJECT){
 			if(!primarySceneModel.hasStatic_object(part._wsd)){				
@@ -726,13 +789,21 @@ public class Preprocessor {
 				primarySceneModel.addStatic_object(staObj);
 				return staObj;
 			}
+			else
+				return primarySceneModel.getStatic_object(part._wsd);
 		}
 		else if(scenePart == ScenePart.LOCATION){//TODO: check what else shall I do for this case!
+			if(primarySceneModel.getLocation() != null)
+				MyError.error("the primarySceneModel has had a location before!" + primarySceneModel.getLocation());
+
 			Location location = new Location(part._name, part._wsd);
 			primarySceneModel.setLocation(location);
 			return location;
 		}
 		else if(scenePart == ScenePart.TIME){//TODO: check what else shall I do for this case!
+			if(primarySceneModel.getTime() != null)
+				MyError.error("the primarySceneModel has had a time before!" + primarySceneModel.getTime());
+
 			Time time = new Time(part._name, part._wsd);
 			primarySceneModel.setTime(time);
 			return time;

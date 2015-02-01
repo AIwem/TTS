@@ -123,7 +123,7 @@ public class SentenceModel{
 		
 		for(String sbj:subjects)
 			if(sbj != null)
-				this.subjects.add(new SentencePart(sbj, DependencyRelationType.SBJ));			
+				this.subjects.add(new SentencePart(sbj, DependencyRelationType.SBJ, this));			
 				
 	}
 	
@@ -146,7 +146,7 @@ public class SentenceModel{
 	 * @param verb verb of this sentence.
 	 */
 	public void setVerb(String verb) {
-		this.verb = new SentencePart(verb, DependencyRelationType.ROOT);
+		this.verb = new SentencePart(verb, DependencyRelationType.ROOT, this);
 	}
 
 	public ArrayList<SentencePart> getObjects() {
@@ -201,7 +201,7 @@ public class SentenceModel{
 			this.objects = new ArrayList<SentencePart>();
 		for(String obj:objects)
 			if(obj!= null)
-				this.objects.add(new SentencePart(obj, DependencyRelationType.OBJ));		
+				this.objects.add(new SentencePart(obj, DependencyRelationType.OBJ, this));		
 	}
 
 	public ArrayList<SentencePart> getAdverbs() {
@@ -259,7 +259,7 @@ public class SentenceModel{
 		
 		for(String adv:adverbs)
 			if(adv!= null)
-				this.adverbs.add(new SentencePart(adv, DependencyRelationType.ADVRB));
+				this.adverbs.add(new SentencePart(adv, DependencyRelationType.ADVRB, this));
 	}
 	
 	/**
@@ -599,6 +599,26 @@ public class SentenceModel{
 		if(newSentencePart.isAdverb())
 			this.addSingleAdverb(newSentencePart);
 		
+	}
+
+	public SentencePart getSentencePart(Node partNode) {		
+		
+		for(SentencePart sbj:subjects)
+			if(sbj != null && sbj._wsd == partNode)
+				return sbj;				
+		
+		for(SentencePart obj:objects)
+			if(obj != null && obj._wsd == partNode)
+				return obj;
+		
+		for(SentencePart adv:adverbs)
+			if(adv != null && adv._wsd == partNode)
+				return adv;
+		
+		if(verb != null && verb._wsd == partNode)
+			return verb;
+				
+		return null;
 	}
 	
 //	public static void main(String[] args){

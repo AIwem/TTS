@@ -4,7 +4,7 @@ name:پسرک			POS:NOUN		SYN:SBJ		SRC:11	SEM:ARG0_EXPERIENCER	WSD:پسر#n2_و�
 
 name:امروز			POS:ADVERB		SYN:ADVRB	SRC:11	SEM:ArgM_TMP			WSD:امروز#n1				sub_part:-			num:2
 
-name:در راه خانه	POS:NOUN		SYN:ADVRB	SRC:	SEM:ArgM_DIR			WSD:4_mozaf#a_5				sub_part:3,4,5		num:
+name:در راه خانه	POS:NOUN		SYN:ADVRB	SRC:	SEM:ArgM_DIR			WSD:4_mozaf#n_5				sub_part:3,4,5		num:
 name:در				POS:UNKNOWN		SYN:ADVRB	SRC:11	SEM:ArgM_DIR_P			WSD:-						sub_part:-			num:3
 name:راه			POS:NOUN		SYN:POSDEP	SRC:3	SEM:ArgM_DIR_P			WSD:راه#n9					sub_part:-			num:4
 name:خانه			POS:NOUN		SYN:MOZ		SRC:4	SEM:ArgM_DIR_P			WSD:خانه#n10				sub_part:-			num:5
@@ -41,7 +41,7 @@ name:به دویدن		POS:UNKNOWN		SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:دویدن#
 name:به				POS:UNKNOWN		SYN:NPP		SRC:7	SEM:ARG1_THEME_P	WSD:-					sub_part:-				num:2
 name:دویدن			POS:NOUN		SYN:POSDEP	SRC:2	SEM:ARG1_THEME_P	WSD:دویدن#v1			sub_part:-				num:3
 
-name:به سمت خانه	POS:NOUN		SYN:ADVRB	SRC:	SEM:ArgM_DIR		WSD:5_mozaf#a_6			sub_part:4,5,6			num:
+name:به سمت خانه	POS:NOUN		SYN:ADVRB	SRC:	SEM:ArgM_DIR		WSD:5_mozaf#n_6			sub_part:4,5,6			num:
 name:به				POS:UNKNOWN		SYN:NPP		SRC:3	SEM:ArgM_DIR_P		WSD:-					sub_part:-				num:4
 name:سمت			POS:NOUN		SYN:POSDEP	SRC:4	SEM:ArgM_DIR_P		WSD:سمت#n4				sub_part:-				num:5
 name:خانه			POS:NOUN		SYN:MOZ		SRC:5	SEM:ArgM_DIR_P		WSD:خانه#n10			sub_part:-				num:6

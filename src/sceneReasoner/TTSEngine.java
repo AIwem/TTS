@@ -81,7 +81,7 @@ public class TTSEngine {
 		_pp = new Preprocessor(_TTSKb, _re, this);
 		_sr = new SceneReasoner(_TTSKb, _re, this);
 		
-		mozaf_root = _TTSKb.addConcept("mozaf#a");
+		mozaf_root = _TTSKb.addConcept("mozaf#n");
 		adjective_root = _TTSKb.addConcept("adjective#a");
 		verb_root = _TTSKb.addConcept("verb#v");
 	}
