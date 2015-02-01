@@ -451,24 +451,23 @@ public class Preprocessor {
 			if(arg0Part != null){
 				
 				//reasoning ScenePart from KB and adding to primarySceneModel. 
-				ScenePart sp = _ttsEngine.whichScenePart(arg0Part);
-				addToPrimarySceneModel(arg0Part, sp, primarySceneModel);
+				ScenePart scenePart = _ttsEngine.whichScenePart(arg0Part);
+				SceneElement sceneElem = addToPrimarySceneModel(arg0Part, scenePart, primarySceneModel);
 				
-				//It means that this sentencePart has an adjective or mozaf_elaih
-				if(arg0Part.hasSub_parts()){
+				//It means that this sentencePart has some adjectives
+				if(arg0Part.hasAdjectives()){
 				
-					print("======================================================");
-					ArrayList<PlausibleAnswer> answers = _ttsEngine.writeAnswersTo(KnowledgeBase.HPR_ANY, arg0Part._wsd, null);
-					ArrayList<Node> adj_moz = new ArrayList<Node>();					
-					
-					if(!Common.isEmpty(answers))
-						for(PlausibleAnswer ans:answers)
-							if(ans.answer != null && (ans.answer.getPos() == POS.ADJECTIVE || ans.answer.getPos() == POS.NOUN))
-								adj_moz.add(ans.answer);
-							
-					print("adj_moz " + adj_moz);
-						
+					print("=====================" + arg0Part + " has adjective ============================");
+					ArrayList<SentencePart> adjectives = arg0Part.adjectives;
+					for(SentencePart adj:adjectives)
+						if(scenePart == ScenePart.ROLE && sceneElem != null){
+							 Role role = (Role)sceneElem;
+							 RoleMood rm = new RoleMood(sceneElem._name, sceneElem._node);
+							 role.addRole_mood(rm);
+						}	
 				}
+				
+				//TODO similar for mazaf_elaih + != amir enekasi
 			}
 		}
 	}
@@ -700,39 +699,45 @@ public class Preprocessor {
 	 * @param scenePart the ScenePart which this part has.
 	 * @param primarySceneModel the primarySceneModel which the part is to be added to.
 	 */
-	private void addToPrimarySceneModel(SentencePart part, ScenePart scenePart, SceneModel primarySceneModel){
+	private SceneElement addToPrimarySceneModel(SentencePart part, ScenePart scenePart, SceneModel primarySceneModel){
 		
 		if(part == null || scenePart == null || scenePart == ScenePart.UNKNOWN || primarySceneModel == null){
 			MyError.error("null input parameter!");
-			return;
+			return null;
 		}								
 		
 		if(scenePart == ScenePart.ROLE){
 			if(!primarySceneModel.hasRole(part._wsd)){				
 				Role role = new Role(part._name, part._wsd);				
-				primarySceneModel.addRole(role);			
+				primarySceneModel.addRole(role);
+				return role;
 			}		
 		}
 		else if(scenePart == ScenePart.DYNAMIC_OBJECT){		
 			if(!primarySceneModel.hasDynamic_object(part._wsd)){				
 				DynamicObject dynObj = new DynamicObject(part._name, part._wsd);
 				primarySceneModel.addDynamic_object(dynObj);				
+				return dynObj;
 			}
 		}
 		else if(scenePart == ScenePart.STATIC_OBJECT){
 			if(!primarySceneModel.hasStatic_object(part._wsd)){				
 				StaticObject staObj = new StaticObject(part._name, part._wsd);
 				primarySceneModel.addStatic_object(staObj);
+				return staObj;
 			}
 		}
 		else if(scenePart == ScenePart.LOCATION){//TODO: check what else shall I do for this case!
 			Location location = new Location(part._name, part._wsd);
-			primarySceneModel.setLocation(location);			
+			primarySceneModel.setLocation(location);
+			return location;
 		}
 		else if(scenePart == ScenePart.TIME){//TODO: check what else shall I do for this case!
 			Time time = new Time(part._name, part._wsd);
-			primarySceneModel.setTime(time);			
+			primarySceneModel.setTime(time);
+			return time;
 		}
+		return null;
 	}
 	
 //	/**

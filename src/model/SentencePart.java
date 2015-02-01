@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import ir.ac.itrc.qqa.semantic.enums.DependencyRelationType;
 import ir.ac.itrc.qqa.semantic.enums.POS;
 import ir.ac.itrc.qqa.semantic.kb.Node;
+import ir.ac.itrc.qqa.semantic.util.Common;
 import ir.ac.itrc.qqa.semantic.util.MyError;
 
 /**
@@ -184,9 +185,15 @@ public class SentencePart {
 	}
 	
 	public boolean hasSub_parts(){
-		if(sub_parts != null && sub_parts.size() > 0)
-			return true;
-		return false;
+		return !Common.isEmpty(sub_parts);		
+	}
+	
+	public boolean hasAdjectives(){
+		return !Common.isEmpty(adjectives);
+	}
+	
+	public boolean hasMozaf_elaih(){
+		return !Common.isEmpty(mozaf_elaih);
 	}
 	
 //	public boolean isPreSub_part(){
@@ -370,11 +377,14 @@ public class SentencePart {
 		
 		if(sub_parts != null)
 			for(SentencePart subPart:sub_parts)
-				if(subPart._syntaxTag == DependencyRelationType.MOZ)
+				if(subPart._syntaxTag == DependencyRelationType.MOZ){
+					hasMoz = true;				
 					mozaf_elaih.add(subPart);
-				else if(subPart._syntaxTag == DependencyRelationType.NPREMOD || subPart._syntaxTag == DependencyRelationType.NPOSTMOD)
-					adjectives.add(subPart);
-		
+				}
+				else if(subPart._syntaxTag == DependencyRelationType.NPREMOD || subPart._syntaxTag == DependencyRelationType.NPOSTMOD){
+					hasAdj = true;
+					adjectives.add(subPart);		
+				}
 		
 		if(!hasAdj)
 			adjectives = null;
