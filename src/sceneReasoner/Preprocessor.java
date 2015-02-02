@@ -315,9 +315,9 @@ public class Preprocessor {
 	/**
 	 * preprocessScene preprocesses input sentenceModel and converts it to the primarySceneModel.    
 	 * 
-	 * @param sentenceModel the SenetenceModel to be converted. 
-	 * @param primarySceneModel the SceneModel which this sentenceModel is to be added to.
-	 * @param storyModel the StoryModel which the returned sceneModel is to be added to.
+	 * @param sentenceModel the SenetenceModel to be converted. guaranteed not to be null.
+	 * @param primarySceneModel the SceneModel which this sentenceModel is to be added to. guaranteed not to be null.
+	 * @param storyModel the StoryModel which the returned sceneModel is to be added to. guaranteed not to be null.
 	 * @return SceneModel containing input sentenceModel 
 	 */	 
 	public SceneModel preprocessScene(SentenceModel sentenceModel, SceneModel primarySceneModel, StoryModel storyModel){		
@@ -448,6 +448,11 @@ public class Preprocessor {
 		//TODO check with user!		
 	}
 	
+	/**
+	 * 
+	 * @param sentenceModel guaranteed not to be null.
+	 * @param primarySceneModel guaranteed not to be null.
+	 */
 	private void preprocessArg0(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		
 		print("\n0000000000000000 in   preprocessArg0   0000000000000000");
@@ -463,13 +468,43 @@ public class Preprocessor {
 						
 			//reasoning ScenePart from KB and adding to primarySceneModel. 
 			ScenePart scenePart = _ttsEngine.whichScenePart(arg0Part);
-			SceneElement sceneElem = addToPrimarySceneModel(arg0Part, scenePart, primarySceneModel);
-			 
-			if(sceneElem == null){
-				MyError.error(arg0Part + " could not be added to primarySceneModel!");
+			
+			if(scenePart == null){
+				MyError.error("the " + arg0Part + " ScenePart was not found!");
 				return;
 			}
+			
+			SceneElement inputSceneElement = createSceneElement(arg0Part, scenePart);
+			
+			if(inputSceneElement == null){
+				MyError.error("the " + arg0Part + " could not convert to s SceneElement!");
+				return;
+			}
+			
+			boolean isRedundantPart = primarySceneModel.hasSceneElement(inputSceneElement);
+			
+			SceneElement sceneElem = null;
+			
+			//It means that the primarySceneModel has had this ScenePart before, so we will merge the information of this part with that one
+			if(isRedundantPart){
 				
+				sceneElem = primarySceneModel.getSceneElement(inputSceneElement);
+				
+				if(sceneElem == null){
+					MyError.error("primarySceneModel has " + arg0Part + " but it could not be found!");
+					return;
+				}
+				sceneElem.mergeWith(inputSceneElement);				
+				
+			}
+			//It means that arg0Part is a newly seen ScenePart which is to be added to primarySceneModel.
+			else{
+				//creates a new ScenePart based on arg0Part and adds it to the primarySceneModel or return null if it was redundant!
+				primarySceneModel.addToPrimarySceneModel(inputSceneElement);
+				
+				 sceneElem = inputSceneElement;
+			}
+					
 			//------------------- pre-processing dependents of arg0 --------------------
 			
 						
@@ -482,15 +517,14 @@ public class Preprocessor {
 					if(scenePart == ScenePart.ROLE){
 						 Role role = (Role)sceneElem;
 						 RoleMood rm = new RoleMood(adj._name, adj._wsd);
-						 role.addRole_mood(rm);
+						 if(role.addRole_mood(rm))
+							 print("RoleMood " + rm + " added to " + role._name);
 					}
 					else if(scenePart == ScenePart.DYNAMIC_OBJECT){
 						DynamicObject dynobj = (DynamicObject)sceneElem;
 						ObjectState objState = new ObjectState(adj._name, adj._wsd);
-//						if(dynobj.hasThisState(objState))
-						dynobj.setCurrent_state(objState);
-//						else
-//							MyError.error(message);
+						if(dynobj.setCurrent_state(objState))
+							print("ObjectState " + objState + " added to " + dynobj._name);
 					}
 				}
 			}
@@ -502,29 +536,29 @@ public class Preprocessor {
 				ArrayList<SentencePart> mozafs = arg0Part.mozaf_elaih;
 				for(SentencePart moz:mozafs){
 					
-					Node zamir_khod = _kb.addConcept(zamir_enekasi); 
+					Node zamir_khod = _kb.addConcept(zamir_enekasi, false); 
 					
 					if(moz._wsd != zamir_khod){
 						if(scenePart == ScenePart.ROLE){
 							 Role role = (Role)sceneElem;
 							 RoleMood rm = new RoleMood(moz._name, moz._wsd);
-							 role.addRole_mood(rm);
+							 if(role.addRole_mood(rm))
+								 print("RoleMood " + rm + " added to " + role._name);
 						}	
 						else if(scenePart == ScenePart.DYNAMIC_OBJECT){
 							DynamicObject dynobj = (DynamicObject)sceneElem;
 							ObjectState objState = new ObjectState(moz._name, moz._wsd);
-//							if(dynobj.hasThisState(objState))
-							dynobj.setCurrent_state(objState);
-//							else
-//								MyError.error(message);
+							if(dynobj.setCurrent_state(objState))
+								print("ObjectState " + objState + " added to " + dynobj._name);
 						}							
 					}
 				}
 			}
 		}
+		
 		print("0000000000000000 end of preprocessArg0 0000000000000000\n");
 	}
-	
+
 	private void preprocessVerbArg(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		
 		defineVerbRelation(sentenceModel);
@@ -665,7 +699,7 @@ public class Preprocessor {
 						wsd = _ttsEngine.findRelationInstance(relation_name);
 						if(wsd == null){
 							//it must got directly fetched from kb, and then addRelation will clone it.
-							descriptor = _kb.addConcept(relation_name);
+							descriptor = _kb.addConcept(relation_name, false);
 						}			    		
 			    	}
 			    }	
@@ -694,7 +728,7 @@ public class Preprocessor {
 							}
 						
 					if(descriptor == null){
-						descriptor = _kb.addConcept(relation_name);						
+						descriptor = _kb.addConcept(relation_name, false);						
 						
 						wsd = _kb.addRelation(argument, referent, descriptor, SourceType.TTS);
 						
@@ -715,15 +749,37 @@ public class Preprocessor {
 			part.set_wsd(wsd);
 		}		
 	}
+	
+	private SceneElement createSceneElement(SentencePart part, ScenePart scenePart){
+		
+		if(part == null || scenePart == null || scenePart == ScenePart.UNKNOWN){
+			MyError.error("null input parameter for createSceneElement !");
+			return null;
+		}								
+		
+		if(scenePart == ScenePart.ROLE)			
+				return new Role(part._name, part._wsd);
+		else if(scenePart == ScenePart.DYNAMIC_OBJECT)
+			return new DynamicObject(part._name, part._wsd);				
+		else if(scenePart == ScenePart.STATIC_OBJECT)
+			return new StaticObject(part._name, part._wsd);				
+		else if(scenePart == ScenePart.LOCATION)
+			return new Location(part._name, part._wsd);			
+		else if(scenePart == ScenePart.TIME)
+			return new Time(part._name, part._wsd);			
+		return null;
+	}
 
 	
 	private void add_adjective_mozaf(SentenceModel sentence, SentencePart mainPart, Node descriptor, Node referent) {
+		
 		if(sentence == null || mainPart == null || descriptor == null || referent == null){
 			MyError.error("null input parameter for add_adjective_mozaf!");
 			if(mainPart == null)
 				MyError.error("no mainPart could be found!");
 			return;
 		}
+		
 		if(descriptor.getPos() == POS.ADJECTIVE){ //it means that descriptor is describing an adjective.
 		
 			SentencePart adjPart = new SentencePart(referent.getName(), POS.ADJECTIVE, DependencyRelationType.NPOSTMOD, null, referent, null, sentence);
@@ -733,7 +789,7 @@ public class Preprocessor {
 			
 			mainPart.adjectives.add(adjPart);
 			
-			print("\n----------------" + adjPart + " adjective added to " + mainPart);
+			print("----------------" + adjPart + " adjective added to " + mainPart + "\n");
 		}
 		else if(descriptor.getPos() == POS.NOUN){ //it means that descriptor is describing a mozaf_alaih.
 			
@@ -744,72 +800,11 @@ public class Preprocessor {
 			
 			mainPart.mozaf_elaih.add(mozPart);
 			
-			print("\n----------------" + mozPart + " mozaf_elaih added to " + mainPart);
+			print("----------------" + mozPart + " mozaf_elaih added to " + mainPart + "\n");
 		}
 	}
 
-	/**
-	 * this method based on the ScenePart of the part adds a Role, DynamicObject, StaticObject, or ... to primarySceneModel.
-	 * TODO: we have assumed for simplicity which every scene has a unique Role, DyanamicObject, and StaticObject with a one name.
-	 * for example all «پسرک» refer to just one Role. 
-	 * 
-	 * @param part the SentencePart which is to be added to primarySceneModel.
-	 * @param scenePart the ScenePart which this part has.
-	 * @param primarySceneModel the primarySceneModel which the part is to be added to.
-	 * @return the new ScenePart created based on the input part or the ScenePart which primarySceneModel has had before.
-	 */
-	private SceneElement addToPrimarySceneModel(SentencePart part, ScenePart scenePart, SceneModel primarySceneModel){
-		
-		if(part == null || scenePart == null || scenePart == ScenePart.UNKNOWN || primarySceneModel == null){
-			MyError.error("null input parameter!");
-			return null;
-		}								
-		
-		if(scenePart == ScenePart.ROLE){
-			if(!primarySceneModel.hasRole(part._wsd)){				
-				Role role = new Role(part._name, part._wsd);				
-				primarySceneModel.addRole(role);
-				return role;
-			}
-			else
-				return primarySceneModel.getRole(part._wsd);
-		}
-		else if(scenePart == ScenePart.DYNAMIC_OBJECT){		
-			if(!primarySceneModel.hasDynamic_object(part._wsd)){				
-				DynamicObject dynObj = new DynamicObject(part._name, part._wsd);
-				primarySceneModel.addDynamic_object(dynObj);				
-				return dynObj;
-			}
-			else
-				return primarySceneModel.getDynamic_object(part._wsd);
-		}
-		else if(scenePart == ScenePart.STATIC_OBJECT){
-			if(!primarySceneModel.hasStatic_object(part._wsd)){				
-				StaticObject staObj = new StaticObject(part._name, part._wsd);
-				primarySceneModel.addStatic_object(staObj);
-				return staObj;
-			}
-			else
-				return primarySceneModel.getStatic_object(part._wsd);
-		}
-		else if(scenePart == ScenePart.LOCATION){//TODO: check what else shall I do for this case!
-			if(primarySceneModel.getLocation() != null)
-				MyError.error("the primarySceneModel has had a location before!" + primarySceneModel.getLocation());
-
-			Location location = new Location(part._name, part._wsd);
-			primarySceneModel.setLocation(location);
-			return location;
-		}
-		else if(scenePart == ScenePart.TIME){//TODO: check what else shall I do for this case!
-			if(primarySceneModel.getTime() != null)
-				MyError.error("the primarySceneModel has had a time before!" + primarySceneModel.getTime());
-
-			Time time = new Time(part._name, part._wsd);
-			primarySceneModel.setTime(time);
-			return time;
-		}
-		return null;
-	}
+	
 	
 //	/**
 //	 * this method based on the ScenePart of the subject(s) of the sentenceModel adds RoleAction(s) or ObjectAction(s) to primarySceneModel. 
@@ -1047,7 +1042,7 @@ public class Preprocessor {
 			return null;
 		}
 		
-		Node mainSemanticArg = _kb.addConcept(MainSemanticArgumet_name);
+		Node mainSemanticArg = _kb.addConcept(MainSemanticArgumet_name, false);
 		
 		ArrayList<PlausibleAnswer> semArgsAnswers = _ttsEngine.writeAnswersTo(mainSemanticArg, verb_synSet, null);	
 		

@@ -120,6 +120,11 @@ public class TTSEngine {
 			
 			SentenceModel sentence = _pp.preprocessSentence(NLsentence);	
 			
+			if(sentence == null){
+				MyError.error(" the " + NLsentence + " couldn't get preprocessed!");
+				return;
+			}
+			
 			primarySceneModel.addSentence(sentence);
 			sentence.setScene(primarySceneModel);
 			
@@ -196,7 +201,7 @@ public class TTSEngine {
 
 		PlausibleQuestion pq = new PlausibleQuestion();
 		pq.argument = argument;
-		pq.referent = _TTSKb.addConcept("جانور§n-12239");		
+		pq.referent = _TTSKb.addConcept("جانور§n-12239", false);		
 		pq.descriptor = KnowledgeBase.HPR_ISA;
 		
 		System.out.print(pq.toString() + " ... ");
@@ -337,7 +342,7 @@ public class TTSEngine {
 			 else{
 				 if(seenNodes.size() == 0){
 					 MyError.error(pure_name + " key exists in seen_nodes but no Node exists! probably the map is corrupted!");
-					 Node pure_node = _TTSKb.addConcept(pure_name);//find original node from kb.					 
+					 Node pure_node = _TTSKb.addConcept(pure_name, false);//find original node from kb.					 
 					 seenNodes.add(pure_node);
 				 }
 					 
@@ -349,7 +354,7 @@ public class TTSEngine {
 		}
 		//seen_nodes dose not contain this name, so it is not seen yet.
 		else{			
-			Node pure_node = _TTSKb.addConcept(pure_name);//find original node from kb.
+			Node pure_node = _TTSKb.addConcept(pure_name, false);//find original node from kb.
 			
 			ArrayList<Node> newlySeen = new ArrayList<Node>();				
 			newlySeen.add(pure_node);
@@ -604,7 +609,7 @@ public class TTSEngine {
 		PlausibleQuestion pq = new PlausibleQuestion();
 		pq.descriptor = KnowledgeBase.HPR_ISA;
 		pq.argument = node;			
-		pq.referent = _TTSKb.addConcept("نفر§n-13075");
+		pq.referent = _TTSKb.addConcept("نفر§n-13075", false);
 		
 		ArrayList<PlausibleAnswer> answers = writeAnswersTo(pq.descriptor, node, pq.referent);
 	
@@ -633,7 +638,7 @@ public class TTSEngine {
 		PlausibleQuestion pq = new PlausibleQuestion();
 		pq.descriptor = KnowledgeBase.HPR_ISA;
 		pq.argument = node;			
-		pq.referent = _TTSKb.addConcept("جانور§n-12239");
+		pq.referent = _TTSKb.addConcept("جانور§n-12239", false);
 		
 		ArrayList<PlausibleAnswer> answers = writeAnswersTo(pq.descriptor, node, pq.referent);
 		//ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
@@ -662,7 +667,7 @@ public class TTSEngine {
 		PlausibleQuestion pq = new PlausibleQuestion();
 		pq.descriptor = KnowledgeBase.HPR_ISA;
 		pq.argument = node;			
-		pq.referent = _TTSKb.addConcept("راه§n-12894");
+		pq.referent = _TTSKb.addConcept("راه§n-12894", false);
 		
 		ArrayList<PlausibleAnswer> answers = writeAnswersTo(pq.descriptor, node, pq.referent);
 		//ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
@@ -677,7 +682,7 @@ public class TTSEngine {
 		pq = new PlausibleQuestion();
 		pq.descriptor = KnowledgeBase.HPR_ISA;
 		pq.argument = node;			
-		pq.referent = _TTSKb.addConcept("جا§n-12733");
+		pq.referent = _TTSKb.addConcept("جا§n-12733", false);
 		
 		answers = writeAnswersTo(pq.descriptor, node, pq.referent);
 		//ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
@@ -707,7 +712,7 @@ public class TTSEngine {
 		PlausibleQuestion pq = new PlausibleQuestion();
 		pq.descriptor = KnowledgeBase.HPR_ISA;
 		pq.argument = node;			
-		pq.referent = _TTSKb.addConcept("دوره زمانی§n-12603");
+		pq.referent = _TTSKb.addConcept("دوره زمانی§n-12603", false);
 		
 		ArrayList<PlausibleAnswer> answers = writeAnswersTo(pq.descriptor, node, pq.referent);
 		//ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
@@ -722,7 +727,7 @@ public class TTSEngine {
 		pq = new PlausibleQuestion();
 		pq.descriptor = KnowledgeBase.HPR_ISA;
 		pq.argument = node;			
-		pq.referent = _TTSKb.addConcept("فاصله زمانی§n-12691");
+		pq.referent = _TTSKb.addConcept("فاصله زمانی§n-12691", false);
 		
 		answers = writeAnswersTo(pq.descriptor, node, pq.referent);
 		//ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
@@ -747,7 +752,7 @@ public class TTSEngine {
 		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
 		
 		
-		print("Questio: " + pq.argument + " -->" + pq.descriptor + " --> " + pq.referent);
+		print("\nQuestio: " + pq.argument + " -->" + pq.descriptor + " --> " + pq.referent);
 		print("Answers: " + answers.size());
 		
 		int count = 0;

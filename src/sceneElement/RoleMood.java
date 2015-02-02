@@ -9,5 +9,4 @@ public class RoleMood extends SceneElement {
 		this._name = _name;
 		this._node = _node;		
 	}
-
 }
