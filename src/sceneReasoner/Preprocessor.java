@@ -509,10 +509,10 @@ public class Preprocessor {
 			
 						
 			//It means that this sentencePart has some adjectives
-			if(arg0Part.hasAdjectives()){
+			if(arg0Part.hasAnyAdjectives()){
 				
-				print(arg0Part + " has some adjectives:" + arg0Part.adjectives);
-				ArrayList<SentencePart> adjectives = arg0Part.adjectives;
+				print(arg0Part + " has some adjectives:" + arg0Part.getAdjectives());
+				ArrayList<SentencePart> adjectives = arg0Part.getAdjectives();
 				for(SentencePart adj:adjectives){
 					if(scenePart == ScenePart.ROLE){
 						 Role role = (Role)sceneElem;
@@ -530,10 +530,10 @@ public class Preprocessor {
 			}
 			
 			//It means that this sentencePart has some mozad_elaih
-			if(arg0Part.hasMozaf_elaih()){				
+			if(arg0Part.hasAnyMozaf_elaihs()){				
 				
-				print(arg0Part + " has mozaf_elaih: " + arg0Part.mozaf_elaih);
-				ArrayList<SentencePart> mozafs = arg0Part.mozaf_elaih;
+				print(arg0Part + " has mozaf_elaih: " + arg0Part.getMozaf_elaih());
+				ArrayList<SentencePart> mozafs = arg0Part.getMozaf_elaih();
 				for(SentencePart moz:mozafs){
 					
 					Node zamir_khod = _kb.addConcept(zamir_enekasi, false); 
@@ -784,23 +784,15 @@ public class Preprocessor {
 		
 			SentencePart adjPart = new SentencePart(referent.getName(), POS.ADJECTIVE, DependencyRelationType.NPOSTMOD, null, referent, null, sentence);
 					
-			if(mainPart.adjectives == null)
-				mainPart.adjectives = new ArrayList<SentencePart>();		
-			
-			mainPart.adjectives.add(adjPart);
-			
-			print("----------------" + adjPart + " adjective added to " + mainPart + "\n");
+			if(mainPart.addAdjective(adjPart))
+				print("----------------" + adjPart + " adjective added to " + mainPart + "\n");
 		}
 		else if(descriptor.getPos() == POS.NOUN){ //it means that descriptor is describing a mozaf_alaih.
 			
 			SentencePart mozPart = new SentencePart(referent.getName(), POS.NOUN, DependencyRelationType.MOZ, null, referent, null, sentence);
 			
-			if(mainPart.mozaf_elaih == null)
-				mainPart.mozaf_elaih = new ArrayList<SentencePart>();		
-			
-			mainPart.mozaf_elaih.add(mozPart);
-			
-			print("----------------" + mozPart + " mozaf_elaih added to " + mainPart + "\n");
+			if(mainPart.addMozaf_elaih(mozPart))
+				print("----------------" + mozPart + " mozaf_elaih added to " + mainPart + "\n");
 		}
 	}
 

@@ -74,18 +74,20 @@ public class SentencePart {
 	/**
 	 * The adjectives of this SentencePart. 
 	 */
-	public ArrayList<SentencePart> adjectives;
+	private ArrayList<SentencePart> adjectives;
 	
 	/**
 	 * The mozaf_elaih of this SentencePart. 
 	 */
-	public ArrayList<SentencePart> mozaf_elaih;
+	private ArrayList<SentencePart> mozaf_elaih;
 	
 //	/**
 //	 * this part dependency in noun-phrase or verb-phrase.
 //	 */
 //	public DEP _dep = null;
 	
+	
+
 	/**
 	 * this part number
 	 */
@@ -192,12 +194,28 @@ public class SentencePart {
 		return !Common.isEmpty(sub_parts);		
 	}
 	
-	public boolean hasAdjectives(){
+	public boolean hasAnyAdjectives(){
 		return !Common.isEmpty(adjectives);
 	}
 	
-	public boolean hasMozaf_elaih(){
+	public boolean hasAdjective(Node adj_node){
+		if(!Common.isEmpty(adjectives))
+			for(SentencePart adj:adjectives)
+				if(adj._wsd == adj_node)
+					return true;
+		return false;		
+	}
+	
+	public boolean hasAnyMozaf_elaihs(){
 		return !Common.isEmpty(mozaf_elaih);
+	}
+	
+	public boolean hasMozaf_elaih(Node moz_node){
+		if(!Common.isEmpty(mozaf_elaih))
+			for(SentencePart moz:mozaf_elaih)
+				if(moz._wsd == moz_node)
+					return true;
+		return false;		
 	}
 	
 //	public boolean isPreSub_part(){
@@ -246,7 +264,29 @@ public class SentencePart {
 		return _sourceOfSynNum;
 	}
 	
+	public ArrayList<SentencePart> getAdjectives() {
+		return adjectives;
+	}
 	
+	public SentencePart getAdjective(Node adj_node){
+		if(!Common.isEmpty(adjectives))
+			for(SentencePart adj:adjectives)
+				if(adj._wsd == adj_node)
+					return adj;
+		return null;		
+	}
+	
+	public ArrayList<SentencePart> getMozaf_elaih() {
+		return mozaf_elaih;
+	}
+	
+	public SentencePart getMozaf_elaih(Node moz_node){
+		if(!Common.isEmpty(mozaf_elaih))
+			for(SentencePart moz:mozaf_elaih)
+				if(moz._wsd == moz_node)
+					return moz;
+		return null;		
+	}
 	
 //	public SentencePart getPreSub_part() {
 //		if(!hasSub_parts())
@@ -405,4 +445,108 @@ public class SentencePart {
 	}
 		
 	
+	public void setAdjectives(ArrayList<SentencePart> adjectives) {
+		this.adjectives = adjectives;
+	}
+	
+	public void setMozaf_elaih(ArrayList<SentencePart> mozaf_elaih) {
+		this.mozaf_elaih = mozaf_elaih;
+	}
+	
+	public boolean addAdjective(SentencePart adj){
+		if(adj == null)
+			return false;
+		
+		if(adjectives == null)
+			adjectives = new ArrayList<SentencePart>();
+		
+		if(!hasAdjective(adj._wsd)){
+			adjectives.add(adj);
+			return true;
+		}
+		else{
+			System.out.println(this._name + " has this " + adj._wsd + " adj before!");
+			return false;
+		}
+	}
+	
+	public boolean addMozaf_elaih(SentencePart moz){
+		if(moz == null)
+			return false;
+		
+		if(mozaf_elaih == null)
+			mozaf_elaih = new ArrayList<SentencePart>();
+		
+		if(!hasMozaf_elaih(moz._wsd)){
+			mozaf_elaih.add(moz);
+			return true;
+		}
+		else{
+			System.out.println(this._name + " has this " + moz._wsd + " mozaf before!");
+			
+			return false;
+		}
+	}
+	
+	/**
+	 * this method merges called SentencePart with the input SentencePart, newPart.
+	 * in merging the called SentencePart is main, it means that only when a parameter in 
+	 * called SentencePart is null it is replaced with the newPart SentencePart.
+	 * @param newPart the SentencePart is to be merged with this SentencePart.
+	 */
+	public void mergeWith(SentencePart newPart){
+		if(newPart == null)
+			return;
+		
+		if(_senteceModel == null)
+			if(newPart._senteceModel != null)
+				_senteceModel = newPart._senteceModel;
+		
+		if(_name == null || _name.equals(""))
+			if(newPart._name != null && !newPart._name.equals(""))
+				_name = newPart._name;
+		
+		if(_pos == null || _pos == POS.ANY)
+			if(newPart._pos == null && newPart._pos != POS.ANY)
+				_pos = newPart._pos;
+		
+		if(_syntaxTag == null || _syntaxTag == DependencyRelationType.ANY)
+			if(newPart._syntaxTag != null && newPart._syntaxTag != DependencyRelationType.ANY)
+				_syntaxTag = newPart._syntaxTag;
+		
+		
+		if(_sourceOfSynNum < 0)
+			if(newPart._sourceOfSynNum >= 0)
+				_sourceOfSynNum = newPart._sourceOfSynNum;
+			
+		if(_semanticTag == null)
+			if(newPart._semanticTag != null)
+				_semanticTag = newPart._semanticTag;
+
+		if(_wsd == null)
+			if(newPart._wsd != null)
+				_wsd = newPart._wsd;
+		
+		if(_wsd_name == null || _wsd_name.equals(""))
+			if(newPart._wsd_name != null && !newPart.equals(""))
+				_wsd_name = newPart._wsd_name;
+		
+		//TODO complete!
+/*
+	
+	private ArrayList<SentencePart> sub_parts;
+	
+	private ArrayList<SentencePart> adjectives;
+	
+
+	private ArrayList<SentencePart> mozaf_elaih;
+
+	private int _number = -1;
+	
+	public ArrayList<Node> capacities = null;
+
+ 		
+ */
+		
+	}
 }
