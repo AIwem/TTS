@@ -24,6 +24,7 @@ import model.SentencePart;
 import model.SceneModel;
 import model.SentenceModel;
 import model.StoryModel;
+import model.VerbType;
 
 /**
  * Preprocessor preprocesses the input natural language sentences.  
@@ -512,7 +513,9 @@ public class Preprocessor {
 			if(arg0Part.hasAnyAdjectives()){
 				
 				print(arg0Part + " has some adjectives:" + arg0Part.getAdjectives());
+				
 				ArrayList<SentencePart> adjectives = arg0Part.getAdjectives();
+				
 				for(SentencePart adj:adjectives){
 					if(scenePart == ScenePart.ROLE){
 						 Role role = (Role)sceneElem;
@@ -522,7 +525,9 @@ public class Preprocessor {
 					}
 					else if(scenePart == ScenePart.DYNAMIC_OBJECT){
 						DynamicObject dynobj = (DynamicObject)sceneElem;
+						
 						ObjectState objState = new ObjectState(adj._name, adj._wsd);
+				
 						if(dynobj.setCurrent_state(objState))
 							print("ObjectState " + objState + " added to " + dynobj._name);
 					}
@@ -533,7 +538,9 @@ public class Preprocessor {
 			if(arg0Part.hasAnyMozaf_elaihs()){				
 				
 				print(arg0Part + " has mozaf_elaih: " + arg0Part.getMozaf_elaih());
+				
 				ArrayList<SentencePart> mozafs = arg0Part.getMozaf_elaih();
+				
 				for(SentencePart moz:mozafs){
 					
 					Node zamir_khod = _kb.addConcept(zamir_enekasi, false); 
@@ -561,11 +568,113 @@ public class Preprocessor {
 
 	private void preprocessVerbArg(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		
-		defineVerbRelation(sentenceModel);
-		// TODO Auto-generated method stub
+		print("\n================ in   verb preprocess   ================");
 		
+		//TODO: check the correct place of this statement!
+		defineVerbRelation(sentenceModel);
+		
+		SentencePart verb = sentenceModel.getVerb();
+		
+		if(verb == null){
+			MyError.error("The SentenceModel has no verb as a mistake!");
+			return;
+		}
+			
+		VerbType verbType = verb.getVerbType();
+				
+		switch(verbType.name()){		
+			case("BASIT"):
+				basitVerbProcessing(sentenceModel, primarySceneModel);
+				break;
+				
+			case("BASIT_RABTI"):
+				rabtiVerbProcessing(sentenceModel, primarySceneModel);
+				break;
+			
+			default:
+				print("Unknown verb type!");
+			
+		}
+		
+		print("\n================ end of verb preprocess   ================");
 	}
 	
+	private void rabtiVerbProcessing(SentenceModel sentenceModel, SceneModel primarySceneModel) {
+		
+		
+	}
+
+	private void basitVerbProcessing(SentenceModel sentenceModel, SceneModel primarySceneModel) {
+		
+		SentencePart verb = sentenceModel.getVerb();
+		
+		if(verb == null){
+			MyError.error("The SentenceModel has no verb as a mistake!");
+			return;
+		}
+		
+		SentencePart arg0Part = sentenceModel.getArg0SentencePart();
+		
+		if(arg0Part == null){
+			MyError.error("The " + verb + " is BASIT, but has no Arg0Part as a mistake!");
+			return;
+		}
+		
+		ScenePart scenePart = _ttsEngine.whichScenePart(arg0Part);
+		
+		if(scenePart == null){
+			MyError.error("the " + arg0Part + " ScenePart was not found!");
+			return;
+		}
+		
+		if(scenePart == ScenePart.ROLE){
+			
+			SceneElement sceneElem = createSceneElement(verb, ScenePart.ROLE_ACTION);
+			
+			if(sceneElem == null){
+				MyError.error("the " + verb + " could not converted to a SceneElement!");
+				return;
+			}
+			
+			RoleAction roleAct = (RoleAction)sceneElem;
+			
+			Role role = primarySceneModel.getRole(arg0Part._wsd);
+			
+			if(role == null){
+				MyError.error("the Role with " + arg0Part._wsd + " could not be found!");
+				return;
+			}
+			
+			role.addRole_action(roleAct);
+			
+			print(roleAct + " action added to the " + role);
+		}
+		else if(scenePart == ScenePart.DYNAMIC_OBJECT){
+			
+			SceneElement sceneElem = createSceneElement(verb, ScenePart.OBJECT_ACTION);
+			
+			if(sceneElem == null){
+				MyError.error("the " + verb + " could not converted to a SceneElement!");
+				return;
+			}
+			
+			ObjectAction objAct = (ObjectAction)sceneElem;
+			
+			DynamicObject dynObj = primarySceneModel.getDynamic_object(arg0Part._wsd);
+			
+			if(dynObj == null){
+				MyError.error("the DynamicObject with " + arg0Part._wsd + " could not be found!");
+				return;
+			}
+			
+			dynObj.addObejct_action(objAct);
+			
+			print(objAct + " action added to the " + dynObj);
+		}
+	
+		
+	}
+
 	private void preprocessArg1(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		// TODO Auto-generated method stub
 		
@@ -759,8 +868,12 @@ public class Preprocessor {
 		
 		if(scenePart == ScenePart.ROLE)			
 				return new Role(part._name, part._wsd);
+		else if(scenePart == ScenePart.ROLE_ACTION)
+			return new RoleAction(part._name, part._wsd);
 		else if(scenePart == ScenePart.DYNAMIC_OBJECT)
-			return new DynamicObject(part._name, part._wsd);				
+			return new DynamicObject(part._name, part._wsd);
+		else if(scenePart == ScenePart.OBJECT_ACTION)
+			return new ObjectAction(part._name, part._wsd);
 		else if(scenePart == ScenePart.STATIC_OBJECT)
 			return new StaticObject(part._name, part._wsd);				
 		else if(scenePart == ScenePart.LOCATION)
@@ -783,16 +896,28 @@ public class Preprocessor {
 		if(descriptor.getPos() == POS.ADJECTIVE){ //it means that descriptor is describing an adjective.
 		
 			SentencePart adjPart = new SentencePart(referent.getName(), POS.ADJECTIVE, DependencyRelationType.NPOSTMOD, null, referent, null, sentence);
-					
-			if(mainPart.addAdjective(adjPart))
+			
+			//1:added, 0:merged, -1:Nop
+			int added = mainPart.addAdjective(adjPart);
+			if(added == 1)
 				print("----------------" + adjPart + " adjective added to " + mainPart + "\n");
+			else if(added == 0)
+				print("----------------" +  mainPart + " own adjective merged with " + adjPart + "\n");
+			else
+				print("----------------"+  mainPart + " has " + adjPart + " before\n");
 		}
 		else if(descriptor.getPos() == POS.NOUN){ //it means that descriptor is describing a mozaf_alaih.
 			
 			SentencePart mozPart = new SentencePart(referent.getName(), POS.NOUN, DependencyRelationType.MOZ, null, referent, null, sentence);
 			
-			if(mainPart.addMozaf_elaih(mozPart))
+			//1:added, 0:merged, -1:Nop
+			int added = mainPart.addMozaf_elaih(mozPart); 
+			if(added == 1)
 				print("----------------" + mozPart + " mozaf_elaih added to " + mainPart + "\n");
+			else if(added == 0)
+				print("----------------" +  mainPart + " own mozaf_elaih merged with " + mozPart + "\n");
+			else
+				print("----------------"+  mainPart + " has " + mozPart + " before\n");
 		}
 	}
 

@@ -62,12 +62,193 @@ public class SentenceModel{
 		this.adverbs = new ArrayList<SentencePart>();
 	}
 	
-	public SceneModel getScene() {
-		return scene;
-	}
-
 	public void setScene(SceneModel scene) {
 		this.scene = scene;
+	}
+	
+	public void setSubjects(ArrayList<SentencePart> subjects) {
+		this.subjects = subjects;
+	}
+	
+	public void setVerb(SentencePart verb) {
+		this.verb = verb;
+	}
+	
+	/** The setter method which converts string argument to a SentencePart object
+	 * with _syntaxTag "VERB" and _name argument content.
+	 * @param verb verb of this sentence.
+	 */
+	public void setVerb(String verb) {
+		this.verb = new SentencePart(verb, DependencyRelationType.ROOT, this);
+	}
+	
+	public void setObjects(ArrayList<SentencePart> objects) {
+		this.objects = objects;
+	}
+	
+	public void setAdverbs(ArrayList<SentencePart> adverbs) {
+		this.adverbs = adverbs;
+	}
+	
+	public void setPrerparedSentencePart(SentencePart newSentencePart){		
+		if(newSentencePart == null)
+			return;	
+		
+		if(newSentencePart.isSubject())
+			this.addSingleSubject(newSentencePart);
+			
+		if(newSentencePart.isVerb())
+			this.setVerb(newSentencePart);
+			
+		if(newSentencePart.isObject())
+			this.addSingleObject(newSentencePart);
+					
+		if(newSentencePart.isAdverb())
+			this.addSingleAdverb(newSentencePart);
+		
+	}
+	
+	
+	public boolean hasArg0(){
+		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
+		for(MainSemanticTag exist:existingMainArgs)
+			if(exist.name().startsWith("ARG0"))
+				return true;
+		return false;
+	}
+	
+	
+	
+	public boolean hasArg1(){
+		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
+		for(MainSemanticTag exist:existingMainArgs)
+			if(exist.name().startsWith("ARG1"))
+				return true;
+		return false;
+	}	
+	
+	
+	
+	public boolean hasArg2(){
+		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
+		for(MainSemanticTag exist:existingMainArgs)
+			if(exist.name().startsWith("ARG2"))
+				return true;
+		return false;
+	}
+	
+	public boolean hasArg3(){
+		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
+		for(MainSemanticTag exist:existingMainArgs)
+			if(exist.name().startsWith("ARG3"))
+				return true;
+		return false;
+	}
+
+	public boolean hasArg4(){
+		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
+		for(MainSemanticTag exist:existingMainArgs)
+			if(exist.name().startsWith("ARG4"))
+				return true;
+		return false;
+	}
+	
+	public boolean hasArg5(){
+		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
+		for(MainSemanticTag exist:existingMainArgs)
+			if(exist.name().startsWith("ARG5"))
+				return true;
+		return false;
+	}	
+	
+	
+	
+	public MainSemanticTag getArg0(){
+		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
+		for(MainSemanticTag exist:existingMainArgs)
+			if(exist.name().startsWith("ARG0"))
+				return exist;
+		return null;
+	}	
+	
+	public SentencePart getArg0SentencePart(){
+		MainSemanticTag arg0 = getArg0();
+		if(arg0 != null){
+			for(SentencePart sbj:subjects)
+				if(sbj != null && sbj._semanticTag != null && sbj._semanticTag.name().equals(arg0.name()))
+					return sbj;
+			
+			for(SentencePart obj:objects)
+				if(obj != null && obj._semanticTag != null && obj._semanticTag.name().equals(arg0.name()))
+					return obj;
+			
+			for(SentencePart adv:adverbs)
+				if(adv != null && adv._semanticTag != null && adv._semanticTag.name().equals(arg0.name()))
+					return adv;
+		}	
+		return null;
+	}
+	
+	public MainSemanticTag getArg1(){
+		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
+		for(MainSemanticTag exist:existingMainArgs)
+			if(exist.name().startsWith("ARG1"))
+				return exist;
+		return null;
+	}
+	
+	public SentencePart getArg1SentencePart(){
+		MainSemanticTag arg1 = getArg1();
+		if(arg1 != null){
+			for(SentencePart sbj:subjects)
+				if(sbj != null && sbj._semanticTag != null && sbj._semanticTag.name().equals(arg1.name()))
+					return sbj;
+			
+			for(SentencePart obj:objects)
+				if(obj != null && obj._semanticTag != null && obj._semanticTag.name().equals(arg1.name()))
+					return obj;
+			
+			for(SentencePart adv:adverbs)
+				if(adv != null && adv._semanticTag != null && adv._semanticTag.name().equals(arg1.name()))
+					return adv;
+		}	
+		return null;
+	}
+	
+	public MainSemanticTag getArg2(){
+		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
+		for(MainSemanticTag exist:existingMainArgs)
+			if(exist.name().startsWith("ARG2"))
+				return exist;
+		return null;
+	}
+	
+	public MainSemanticTag getArg3(){
+		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
+		for(MainSemanticTag exist:existingMainArgs)
+			if(exist.name().startsWith("ARG3"))
+				return exist;
+		return null;
+	}
+	
+	public MainSemanticTag getArg4(){
+		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
+		for(MainSemanticTag exist:existingMainArgs)
+			if(exist.name().startsWith("ARG4"))
+				return exist;
+		return null;
+	}
+	
+	public MainSemanticTag getArg5(){
+		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
+		for(MainSemanticTag exist:existingMainArgs)
+			if(exist.name().startsWith("ARG5"))
+				return exist;
+		return null;
+	}
+	
+	public SceneModel getScene() {
+		return scene;
 	}
 		
 	public ArrayList<SentencePart> getSubjects() {
@@ -90,43 +271,6 @@ public class SentenceModel{
 		return sbjStr;
 	}
 	
-	public void setSubjects(ArrayList<SentencePart> subjects) {
-		this.subjects = subjects;
-	}
-	
-	/**
-	 * this methods adds subject at the end of subjects list of this SentenceModel.
-	 * 
-	 * @param subject
-	 */
-	public void addSingleSubject(SentencePart subject) {
-		if(subject == null){
-			MyError.error("added subject could not be null");
-			return;
-		}
-		if(this.subjects == null)
-			this.subjects = new ArrayList<SentencePart>();
-		this.subjects.add(subject);		
-	}
-		
-	
-	/**
-	 * this method adds the input subjects at the end of subjects list of this SentenceModel.
-	 * it converts each string argument to a SentencePart object 
-	 * with _synTag "SBJ" and _name argument content.
-	 *   
-	 * @param subjects list of subjects of this sentence.
-	 */
-	public void addSubjects(String... subjects) {
-		if(this.subjects == null)
-			this.subjects = new ArrayList<SentencePart>();
-		
-		for(String sbj:subjects)
-			if(sbj != null)
-				this.subjects.add(new SentencePart(sbj, DependencyRelationType.SBJ, this));			
-				
-	}
-	
 	public SentencePart getVerb() {
 		return verb;
 	}
@@ -135,18 +279,6 @@ public class SentenceModel{
 		if(verb != null)
 			return verb._name;
 		return "";
-	}
-
-	public void setVerb(SentencePart verb) {
-		this.verb = verb;
-	}
-	
-	/** The setter method which converts string argument to a SentencePart object
-	 * with _syntaxTag "VERB" and _name argument content.
-	 * @param verb verb of this sentence.
-	 */
-	public void setVerb(String verb) {
-		this.verb = new SentencePart(verb, DependencyRelationType.ROOT, this);
 	}
 
 	public ArrayList<SentencePart> getObjects() {
@@ -169,40 +301,6 @@ public class SentenceModel{
 		return objStr;
 	}
 
-	public void setObjects(ArrayList<SentencePart> objects) {
-		this.objects = objects;
-	}
-	
-	/**
-	 * this methods adds object at the end of objects list of this SentenceModel.
-	 * 
-	 * @param object
-	 */
-	public void addSingleObject(SentencePart object) {
-		if(object == null){
-			MyError.error("added object could not be null");
-			return;
-		}
-		if(this.objects == null)
-			this.objects = new ArrayList<SentencePart>();
-		this.objects.add(object);		
-	}
-		
-	
-	/**
-	 * this method adds the input objects at the end of objects list of this SentenceModel.
-	 * it converts each string argument to a SentencePart object 
-	 * with _syntaxTag "OBJ" and _name argument content.
-	 *   
-	 * @param objects list of objects of this sentence.
-	 */
-	public void addObjects(String... objects) {
-		if(this.objects == null)
-			this.objects = new ArrayList<SentencePart>();
-		for(String obj:objects)
-			if(obj!= null)
-				this.objects.add(new SentencePart(obj, DependencyRelationType.OBJ, this));		
-	}
 
 	public ArrayList<SentencePart> getAdverbs() {
 		return adverbs;
@@ -226,131 +324,6 @@ public class SentenceModel{
 		return advStr;
 	}
 	
-	public void setAdverbs(ArrayList<SentencePart> adverbs) {
-		this.adverbs = adverbs;
-	}
-	
-	/**
-	 * this methods adds adverb at the end of adverbs list of this SentenceModel.
-	 * 
-	 * @param adverb
-	 */	
-	public void addSingleAdverb(SentencePart adverb) {
-		if(adverb == null){
-			MyError.error("added adverb could not be null");
-			return;
-		}
-		if(this.adverbs == null)
-			this.adverbs = new ArrayList<SentencePart>();
-		this.adverbs.add(adverb);		
-	}
-		
-
-	/**
-	 * this method adds the input adverbs at the end of adverbs list of this SentenceModel.
-	 * it converts each string argument to a SentencePart object
-	 * with _syntaxTag "ADV" and _name argument content.
-	 *   
-	 * @param adverbs list of adverbs of this sentence.
-	 */
-	public void addAdverbs(String... adverbs) {
-		if(this.adverbs == null)
-			this.adverbs = new ArrayList<SentencePart>();
-		
-		for(String adv:adverbs)
-			if(adv!= null)
-				this.adverbs.add(new SentencePart(adv, DependencyRelationType.ADVRB, this));
-	}
-	
-	/**
-	 * This method gets sentence object and its different Parts, 
-	 * then places each SentencePart object in its proper syntaxTag term.
-	 * we have temporarily assumed that each sentence has single subject, object, and adverb. 
-	 * //TODO: check if its logic is general enough for every type of sentences! 
-	 * 
-	 * @param sentence sentence object which is to be completed.
-	 * @param senParts different SentencePart object of this sentence. guaranteed not to be null.
-	 */
-	public void arrageSentenceParts(String NLSentence, ArrayList<SentencePart> senParts) {
-		
-		for(SentencePart part:senParts){
-			if(part == null)
-				continue;	
-			
-			if(part.isSubject()){
-				this.addSingleSubject(part);
-				continue;
-			}
-			if(part.isVerb()){
-				this.setVerb(part);
-				continue;
-			}
-			if(part.isObject()){
-				this.addSingleObject(part);
-				continue;
-			}			
-			if(part.isAdverb()){
-				this.addSingleAdverb(part);				
-			}			
-		}		
-	}
-
-	@Override
-	public String toString() {
-		String rs = "subjects:";
-		ArrayList<SentencePart> subjects = getSubjects();
-		for(SentencePart sbj:subjects)
-			rs += sbj.toString() + ", ";
-		
-		rs += "\nverb:";
-		SentencePart verb = getVerb();
-		if(verb != null)
-			rs += verb.toString();
-		
-		rs += "\nobjects:";
-		ArrayList<SentencePart> objects = getObjects();
-		for(SentencePart obj:objects)
-			rs += obj.toString() + ", ";
-		
-		rs += "\nadverbs";
-		ArrayList<SentencePart> adverbs = getAdverbs();
-		for(SentencePart adv:adverbs)			
-			rs += adv.toString() + ", ";
-
-//		String rs = "";
-//		rs = getSubjectsString() + "\t" + getVerbString() + "\t" + getObjectsString() + "\t" + getAdverbsString();
-		
-		String wsd = "\nWSD:\n";
-		wsd += "subjects:";		
-		for(SentencePart sbj:subjects)
-			if(sbj._wsd != null)
-				wsd += sbj._wsd.toString() + ", ";
-			else
-				wsd += "null, ";
-		
-		wsd += "\nverb:";		
-		if(verb != null && verb._wsd != null)
-			wsd += verb._wsd.toString();	
-		else
-			wsd += "null";
-	
-		wsd += "\nobjects:";		
-		for(SentencePart obj:objects)
-			if(obj._wsd != null)
-				wsd += obj._wsd.toString() + ", ";
-			else
-				wsd += "null, ";
-		
-		wsd += "\nadverbs";		
-		for(SentencePart adv:adverbs)			
-			if(adv._wsd != null)
-				wsd += adv._wsd.toString() + ", ";
-			else
-				wsd += "null, ";
-		
-		return rs + "\n" + wsd;
-	}
-
 	public String getOriginalSentence() {
 		return NLSentence;
 	}
@@ -449,126 +422,117 @@ public class SentenceModel{
 		return allSubSemanticTags;
 	}
 	
-	public boolean hasArg0(){
-		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
-		for(MainSemanticTag exist:existingMainArgs)
-			if(exist.name().startsWith("ARG0"))
-				return true;
-		return false;
+	
+	
+	
+	
+	
+	/**
+	 * this methods adds subject at the end of subjects list of this SentenceModel.
+	 * 
+	 * @param subject
+	 */
+	public void addSingleSubject(SentencePart subject) {
+		if(subject == null){
+			MyError.error("added subject could not be null");
+			return;
+		}
+		if(this.subjects == null)
+			this.subjects = new ArrayList<SentencePart>();
+		this.subjects.add(subject);		
 	}
-	public MainSemanticTag getArg0(){
-		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
-		for(MainSemanticTag exist:existingMainArgs)
-			if(exist.name().startsWith("ARG0"))
-				return exist;
-		return null;
-	}	
-	public SentencePart getArg0SentencePart(){
-		MainSemanticTag arg0 = getArg0();
-		if(arg0 != null){
-			for(SentencePart sbj:subjects)
-				if(sbj != null && sbj._semanticTag != null && sbj._semanticTag.name().equals(arg0.name()))
-					return sbj;
-			
-			for(SentencePart obj:objects)
-				if(obj != null && obj._semanticTag != null && obj._semanticTag.name().equals(arg0.name()))
-					return obj;
-			
-			for(SentencePart adv:adverbs)
-				if(adv != null && adv._semanticTag != null && adv._semanticTag.name().equals(arg0.name()))
-					return adv;
-		}	
-		return null;
+		
+	
+	/**
+	 * this method adds the input subjects at the end of subjects list of this SentenceModel.
+	 * it converts each string argument to a SentencePart object 
+	 * with _synTag "SBJ" and _name argument content.
+	 *   
+	 * @param subjects list of subjects of this sentence.
+	 */
+	public void addSubjects(String... subjects) {
+		if(this.subjects == null)
+			this.subjects = new ArrayList<SentencePart>();
+		
+		for(String sbj:subjects)
+			if(sbj != null)
+				this.subjects.add(new SentencePart(sbj, DependencyRelationType.SBJ, this));			
+				
 	}
 	
-	public boolean hasArg1(){
-		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
-		for(MainSemanticTag exist:existingMainArgs)
-			if(exist.name().startsWith("ARG1"))
-				return true;
-		return false;
-	}	
-	public MainSemanticTag getArg1(){
-		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
-		for(MainSemanticTag exist:existingMainArgs)
-			if(exist.name().startsWith("ARG1"))
-				return exist;
-		return null;
+	/**
+	 * this methods adds object at the end of objects list of this SentenceModel.
+	 * 
+	 * @param object
+	 */
+	public void addSingleObject(SentencePart object) {
+		if(object == null){
+			MyError.error("added object could not be null");
+			return;
+		}
+		if(this.objects == null)
+			this.objects = new ArrayList<SentencePart>();
+		this.objects.add(object);		
 	}
-	public SentencePart getArg1SentencePart(){
-		MainSemanticTag arg1 = getArg1();
-		if(arg1 != null){
-			for(SentencePart sbj:subjects)
-				if(sbj != null && sbj._semanticTag != null && sbj._semanticTag.name().equals(arg1.name()))
-					return sbj;
-			
-			for(SentencePart obj:objects)
-				if(obj != null && obj._semanticTag != null && obj._semanticTag.name().equals(arg1.name()))
-					return obj;
-			
-			for(SentencePart adv:adverbs)
-				if(adv != null && adv._semanticTag != null && adv._semanticTag.name().equals(arg1.name()))
-					return adv;
-		}	
-		return null;
+		
+	
+	/**
+	 * this method adds the input objects at the end of objects list of this SentenceModel.
+	 * it converts each string argument to a SentencePart object 
+	 * with _syntaxTag "OBJ" and _name argument content.
+	 *   
+	 * @param objects list of objects of this sentence.
+	 */
+	public void addObjects(String... objects) {
+		if(this.objects == null)
+			this.objects = new ArrayList<SentencePart>();
+		for(String obj:objects)
+			if(obj!= null)
+				this.objects.add(new SentencePart(obj, DependencyRelationType.OBJ, this));		
+	}
+
+	
+	
+	
+	
+	
+	
+	/**
+	 * this methods adds adverb at the end of adverbs list of this SentenceModel.
+	 * 
+	 * @param adverb
+	 */	
+	public void addSingleAdverb(SentencePart adverb) {
+		if(adverb == null){
+			MyError.error("added adverb could not be null");
+			return;
+		}
+		if(this.adverbs == null)
+			this.adverbs = new ArrayList<SentencePart>();
+		this.adverbs.add(adverb);		
+	}
+		
+
+	/**
+	 * this method adds the input adverbs at the end of adverbs list of this SentenceModel.
+	 * it converts each string argument to a SentencePart object
+	 * with _syntaxTag "ADV" and _name argument content.
+	 *   
+	 * @param adverbs list of adverbs of this sentence.
+	 */
+	public void addAdverbs(String... adverbs) {
+		if(this.adverbs == null)
+			this.adverbs = new ArrayList<SentencePart>();
+		
+		for(String adv:adverbs)
+			if(adv!= null)
+				this.adverbs.add(new SentencePart(adv, DependencyRelationType.ADVRB, this));
 	}
 	
-	public boolean hasArg2(){
-		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
-		for(MainSemanticTag exist:existingMainArgs)
-			if(exist.name().startsWith("ARG2"))
-				return true;
-		return false;
-	}
-	public MainSemanticTag getArg2(){
-		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
-		for(MainSemanticTag exist:existingMainArgs)
-			if(exist.name().startsWith("ARG2"))
-				return exist;
-		return null;
-	}
-	public boolean hasArg3(){
-		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
-		for(MainSemanticTag exist:existingMainArgs)
-			if(exist.name().startsWith("ARG3"))
-				return true;
-		return false;
-	}
-	public MainSemanticTag getArg3(){
-		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
-		for(MainSemanticTag exist:existingMainArgs)
-			if(exist.name().startsWith("ARG3"))
-				return exist;
-		return null;
-	}
-	public boolean hasArg4(){
-		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
-		for(MainSemanticTag exist:existingMainArgs)
-			if(exist.name().startsWith("ARG4"))
-				return true;
-		return false;
-	}
-	public MainSemanticTag getArg4(){
-		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
-		for(MainSemanticTag exist:existingMainArgs)
-			if(exist.name().startsWith("ARG4"))
-				return exist;
-		return null;
-	}
-	public boolean hasArg5(){
-		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
-		for(MainSemanticTag exist:existingMainArgs)
-			if(exist.name().startsWith("ARG5"))
-				return true;
-		return false;
-	}	
-	public MainSemanticTag getArg5(){
-		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
-		for(MainSemanticTag exist:existingMainArgs)
-			if(exist.name().startsWith("ARG5"))
-				return exist;
-		return null;
-	}
+	
+
+	
+	
 	
 	
 	//TODO: check what shall I do, when some part of sentence is infinitive?!
@@ -583,23 +547,7 @@ public class SentenceModel{
 		return necessarySemArg; 
 	}
 
-	public void setPrerparedSentencePart(SentencePart newSentencePart){		
-		if(newSentencePart == null)
-			return;	
-		
-		if(newSentencePart.isSubject())
-			this.addSingleSubject(newSentencePart);
-			
-		if(newSentencePart.isVerb())
-			this.setVerb(newSentencePart);
-			
-		if(newSentencePart.isObject())
-			this.addSingleObject(newSentencePart);
-					
-		if(newSentencePart.isAdverb())
-			this.addSingleAdverb(newSentencePart);
-		
-	}
+	
 
 	public SentencePart getSentencePart(Node partNode) {		
 		
@@ -620,6 +568,98 @@ public class SentenceModel{
 				
 		return null;
 	}
+	
+	/**
+	 * This method gets sentence object and its different Parts, 
+	 * then places each SentencePart object in its proper syntaxTag term.
+	 * we have temporarily assumed that each sentence has single subject, object, and adverb. 
+	 * //TODO: check if its logic is general enough for every type of sentences! 
+	 * 
+	 * @param sentence sentence object which is to be completed.
+	 * @param senParts different SentencePart object of this sentence. guaranteed not to be null.
+	 */
+	public void arrageSentenceParts(String NLSentence, ArrayList<SentencePart> senParts) {
+		
+		for(SentencePart part:senParts){
+			if(part == null)
+				continue;	
+			
+			if(part.isSubject()){
+				this.addSingleSubject(part);
+				continue;
+			}
+			if(part.isVerb()){
+				this.setVerb(part);
+				continue;
+			}
+			if(part.isObject()){
+				this.addSingleObject(part);
+				continue;
+			}			
+			if(part.isAdverb()){
+				this.addSingleAdverb(part);				
+			}			
+		}		
+	}
+	
+	
+	
+	@Override
+	public String toString() {
+		String rs = "subjects:";
+		ArrayList<SentencePart> subjects = getSubjects();
+		for(SentencePart sbj:subjects)
+			rs += sbj.toString() + ", ";
+		
+		rs += "\nverb:";
+		SentencePart verb = getVerb();
+		if(verb != null)
+			rs += verb.toString();
+		
+		rs += "\nobjects:";
+		ArrayList<SentencePart> objects = getObjects();
+		for(SentencePart obj:objects)
+			rs += obj.toString() + ", ";
+		
+		rs += "\nadverbs";
+		ArrayList<SentencePart> adverbs = getAdverbs();
+		for(SentencePart adv:adverbs)			
+			rs += adv.toString() + ", ";
+
+//		String rs = "";
+//		rs = getSubjectsString() + "\t" + getVerbString() + "\t" + getObjectsString() + "\t" + getAdverbsString();
+		
+		String wsd = "\nWSD:\n";
+		wsd += "subjects:";		
+		for(SentencePart sbj:subjects)
+			if(sbj._wsd != null)
+				wsd += sbj._wsd.toString() + ", ";
+			else
+				wsd += "null, ";
+		
+		wsd += "\nverb:";		
+		if(verb != null && verb._wsd != null)
+			wsd += verb._wsd.toString();	
+		else
+			wsd += "null";
+	
+		wsd += "\nobjects:";		
+		for(SentencePart obj:objects)
+			if(obj._wsd != null)
+				wsd += obj._wsd.toString() + ", ";
+			else
+				wsd += "null, ";
+		
+		wsd += "\nadverbs";		
+		for(SentencePart adv:adverbs)			
+			if(adv._wsd != null)
+				wsd += adv._wsd.toString() + ", ";
+			else
+				wsd += "null, ";
+		
+		return rs + "\n" + wsd;
+	}
+
 	
 //	public static void main(String[] args){
 //		SentenceModel sen1 = new SentenceModel("");
