@@ -102,6 +102,6 @@
 79	f˸وارد شدن§v-8510	MainSemArg	ARG4_ENDPOINT
 80	f˸آغاز کردن§v-22017	MainSemArg	ARG0_AGENT
 80	f˸آغاز کردن§v-22017	MainSemArg	ARG1_THEME
-81	f˸دادن§v-7663	MainSemArg	ARG0_AGNET
+81	f˸دادن§v-7663	MainSemArg	ARG0_AGENT
 82	f˸دادن§v-7663	MainSemArg	ARG1_THEME
 83	f˸دادن§v-7663	MainSemArg	ARG2_OBJ2

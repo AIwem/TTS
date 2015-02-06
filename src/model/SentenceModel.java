@@ -223,6 +223,25 @@ public class SentenceModel{
 		return null;
 	}
 	
+	public SentencePart getArg2SentencePart() {
+		MainSemanticTag arg2 = getArg2();
+		if(arg2 != null){
+			for(SentencePart sbj:subjects)
+				if(sbj != null && sbj._semanticTag != null && sbj._semanticTag.name().equals(arg2.name()))
+					return sbj;
+			
+			for(SentencePart obj:objects)
+				if(obj != null && obj._semanticTag != null && obj._semanticTag.name().equals(arg2.name()))
+					return obj;
+			
+			for(SentencePart adv:adverbs)
+				if(adv != null && adv._semanticTag != null && adv._semanticTag.name().equals(arg2.name()))
+					return adv;
+		}	
+		return null;
+	}
+
+	
 	public MainSemanticTag getArg3(){
 		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
 		for(MainSemanticTag exist:existingMainArgs)
@@ -660,6 +679,7 @@ public class SentenceModel{
 		return rs + "\n" + wsd;
 	}
 
+	
 	
 //	public static void main(String[] args){
 //		SentenceModel sen1 = new SentenceModel("");

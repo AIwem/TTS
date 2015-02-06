@@ -42,6 +42,69 @@ public class SceneElement {
 		return _node;
 	}
 	
+	public void addRoleActionToRole(String name, Node node){
+		
+		try{
+			Role role = (Role)this;
+			RoleAction roleAct = new RoleAction(name, node); 
+			if(role.addRole_action(roleAct))
+				System.out.println("RoleAction " + roleAct + " action added to the " + role);
+		}
+		catch(Exception e){
+			System.out.println(e);
+		}
+	}
+	
+	public void addObjectActionToDynmicAction(String name, Node node){		
+		try{
+			DynamicObject dynObj = (DynamicObject)this;
+			ObjectAction objAct = new ObjectAction(name, node); 
+			if(dynObj.addObejct_action(objAct))
+				System.out.println("RoleAction " + objAct + " action added to the " + dynObj);
+		}
+		catch(Exception e){
+			System.out.println(e);
+		}
+	}
+	
+	public void addRoleMoodToRole(String name, Node node){		
+		try{
+			Role role = (Role)this;
+			RoleMood rm = new RoleMood(name, node);
+			if(role.addRole_mood(rm))
+				 System.out.println("RoleMood " + rm + " added to " + role._name);		 
+			 
+		}
+		catch(Exception e){			
+			System.out.println(e);		
+		}
+	}
+	
+	public void addStateToDynamicObject(String name, Node node) {
+		try{
+			DynamicObject dynobj = (DynamicObject)this;			
+			ObjectState objState = new ObjectState(name, node);	
+			if(dynobj.setCurrent_state(objState))
+				System.out.println("ObjectState " + objState + " added to " + dynobj._name);
+		}
+		catch(Exception e){			
+			System.out.println(e);		
+		}	
+	}
+
+	public void addStateToStaticObject(String name, Node node) {
+		try{
+			StaticObject staobj = (StaticObject)this;			
+			ObjectState objState = new ObjectState(name, node);	
+			if(staobj.setCurrent_state(objState))
+				System.out.println("ObjectState " + objState + " added to " + staobj._name);
+		}
+		catch(Exception e){			
+			System.out.println(e);		
+		}
+		
+	}
+	
 	@Override
 	public String toString() {
 		return  _node + "=  " + _name;

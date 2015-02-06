@@ -169,6 +169,45 @@ public class SceneModel {
 				return sceGoal;
 		
 		MyError.error("this SceneModel has no such a " + scene_goal_node + " SceneGoal.");
+		return null;	
+	}
+	
+	/**
+	 * @param s
+	 * @return the SceneElement (Role, DynamicObject, StaticObject, ...) which this SceneModel has based on sentencePart._wsd
+	 */
+	public SceneElement getSceneElement(Node node) {		
+		if(node == null){
+			MyError.error("null input parameter for getSceneElement!");
+			return null;
+		}								
+		
+		for(Role role:roles)
+			if(role._node == node)
+				return role;
+		
+		for(DynamicObject dynObj:dynamic_objescts)
+			if(dynObj._node == node)
+				return dynObj;
+		
+		for(StaticObject staObj:static_objects)
+			if(staObj._node == node)
+				return staObj;
+		
+		if(location != null && location._node == node)
+			return location;
+		
+		if(time != null && time._node == node)
+			return time;
+		
+		for(SceneEmotion emot:scene_emotions)
+			if(emot._node == node)
+				return emot;
+		
+		for(SceneGoal goal:scene_goals)
+			if(goal._node == node)
+				return goal;
+		
 		return null;
 	}
 	
@@ -185,28 +224,34 @@ public class SceneModel {
 		
 		ScenePart scenePart = sceneElement.scenePart;
 		
-		
-		
-		if(scenePart == ScenePart.ROLE)			
+		if(scenePart == ScenePart.ROLE){			
 			if(hasRole(sceneElement._node))
-				return getRole(sceneElement._node);			
-		
-		else if(scenePart == ScenePart.DYNAMIC_OBJECT)		
+				return getRole(sceneElement._node);
+		}
+		else if(scenePart == ScenePart.DYNAMIC_OBJECT){		
 			if(hasDynamic_object(sceneElement._node))
 				return getDynamic_object(sceneElement._node);
-				
-		else if(scenePart == ScenePart.STATIC_OBJECT)
+		}				
+		else if(scenePart == ScenePart.STATIC_OBJECT){
 			if(hasStatic_object(sceneElement._node))
-				return getStatic_object(sceneElement._node);				
-		
-		else if(scenePart == ScenePart.LOCATION)
+				return getStatic_object(sceneElement._node);
+		}		
+		else if(scenePart == ScenePart.LOCATION){
 			if(getLocation() != null)
-				return getLocation();				
-		
-		else if(scenePart == ScenePart.TIME)
+				return getLocation();			
+		}		
+		else if(scenePart == ScenePart.TIME){
 			if(getTime() != null)
 				return getTime();
-
+		}
+		else if(scenePart == ScenePart.SCENE_EMOTION){
+			if(hasScene_emotion(sceneElement._node))
+				return getScene_emotion(sceneElement._node);
+		}
+		else if(scenePart == ScenePart.SCENE_GOAL)
+			if(hasScene_goal(sceneElement._node))
+				return getScene_goal(sceneElement._node);
+		
 		return null;
 	}
 	//------------------ add   part -------------------

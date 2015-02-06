@@ -397,6 +397,12 @@ public class Preprocessor {
 		print("=============== end of prepareNullSemanticTags =============\n");
 	}	
 	
+	/**
+	 * 
+	 * @param sentenceModel guaranteed not to be null.
+	 * @param missingMainArgs guaranteed not to be null.
+	 * @param sceneModel guaranteed not to be null.
+	 */
 	private void prepareNullSemanticTagsForAScene(SentenceModel sentenceModel, ArrayList<MainSemanticTag> missingMainArgs, SceneModel sceneModel){		
 		
 		if(!Common.isEmpty(missingMainArgs)){
@@ -424,7 +430,7 @@ public class Preprocessor {
 							preparedMainArgs.add(arg0SentencePart._semanticTag.convertToMainSemanticTag());							
 							sentenceModel.setPrerparedSentencePart(arg0SentencePart);						
 							
-//							print("prepared " + arg0SentencePart._semanticTag);
+							print("prepared " + arg0SentencePart._semanticTag);
 							break;
 						}
 						else if(miss != null && miss.isArg1() && sent.hasArg1()){
@@ -434,7 +440,7 @@ public class Preprocessor {
 							preparedMainArgs.add(arg1SentencePart._semanticTag.convertToMainSemanticTag());
 							sentenceModel.setPrerparedSentencePart(arg1SentencePart);
 							
-//							print("prepared " + arg1SentencePart._semanticTag);
+							print("prepared " + arg1SentencePart._semanticTag);
 							break;
 						}
 					}					
@@ -516,22 +522,12 @@ public class Preprocessor {
 				
 				ArrayList<SentencePart> adjectives = arg0Part.getAdjectives();
 				
-				for(SentencePart adj:adjectives){
-					if(scenePart == ScenePart.ROLE){
-						 Role role = (Role)sceneElem;
-						 RoleMood rm = new RoleMood(adj._name, adj._wsd);
-						 if(role.addRole_mood(rm))
-							 print("RoleMood " + rm + " added to " + role._name);
-					}
-					else if(scenePart == ScenePart.DYNAMIC_OBJECT){
-						DynamicObject dynobj = (DynamicObject)sceneElem;
-						
-						ObjectState objState = new ObjectState(adj._name, adj._wsd);
-				
-						if(dynobj.setCurrent_state(objState))
-							print("ObjectState " + objState + " added to " + dynobj._name);
-					}
-				}
+				for(SentencePart adj:adjectives)
+					if(scenePart == ScenePart.ROLE)
+						sceneElem.addRoleMoodToRole(adj._name, adj._wsd);
+					
+					else if(scenePart == ScenePart.DYNAMIC_OBJECT)
+						sceneElem.addStateToDynamicObject(adj._name, adj._wsd);
 			}
 			
 			//It means that this sentencePart has some mozad_elaih
@@ -545,27 +541,23 @@ public class Preprocessor {
 					
 					Node zamir_khod = _kb.addConcept(zamir_enekasi, false); 
 					
-					if(moz._wsd != zamir_khod){
-						if(scenePart == ScenePart.ROLE){
-							 Role role = (Role)sceneElem;
-							 RoleMood rm = new RoleMood(moz._name, moz._wsd);
-							 if(role.addRole_mood(rm))
-								 print("RoleMood " + rm + " added to " + role._name);
-						}	
-						else if(scenePart == ScenePart.DYNAMIC_OBJECT){
-							DynamicObject dynobj = (DynamicObject)sceneElem;
-							ObjectState objState = new ObjectState(moz._name, moz._wsd);
-							if(dynobj.setCurrent_state(objState))
-								print("ObjectState " + objState + " added to " + dynobj._name);
-						}							
-					}
-				}
+					if(moz._wsd != zamir_khod)
+						if(scenePart == ScenePart.ROLE)
+							 sceneElem.addRoleMoodToRole(moz._name, moz._wsd);
+							
+						else if(scenePart == ScenePart.DYNAMIC_OBJECT)
+							sceneElem.addStateToDynamicObject(moz._name, moz._wsd);					
+				}			
 			}
 		}
 		
 		print("0000000000000000 end of preprocessArg0 0000000000000000\n");
 	}
-
+	
+	/**
+	 * @param sentenceModel guaranteed not to be null.
+	 * @param primarySceneModel guaranteed not to be null.
+	 */
 	private void preprocessVerbArg(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		
 		print("\n================ in   verb preprocess   ================");
@@ -581,16 +573,24 @@ public class Preprocessor {
 		}
 			
 		VerbType verbType = verb.getVerbType();
-				
-		switch(verbType.name()){		
+		
+		print(verb + " vebType is: " + verbType);
+		
+		switch(verbType.name()){
+			case("MORAKAB"):
+				actionVerbProcessing(sentenceModel, primarySceneModel);
+				break;
 			case("BASIT"):
-				basitVerbProcessing(sentenceModel, primarySceneModel);
-				break;
-				
+				actionVerbProcessing(sentenceModel, primarySceneModel);			
+				break;			
 			case("BASIT_RABTI"):
-				rabtiVerbProcessing(sentenceModel, primarySceneModel);
-				break;
-			
+				//TODO: check this part!
+				rabtiVerbProcessing(verb, sentenceModel, primarySceneModel);
+				break;				
+			case("BASIT_NAMAFOLI"):
+				//TODO: check this part!
+				namafoliVerbProcessing(verb, sentenceModel, primarySceneModel);
+				break;			
 			default:
 				print("Unknown verb type!");
 			
@@ -599,12 +599,82 @@ public class Preprocessor {
 		print("\n================ end of verb preprocess   ================");
 	}
 	
-	private void rabtiVerbProcessing(SentenceModel sentenceModel, SceneModel primarySceneModel) {
+	/**
+	 * 
+	 * @param verb guaranteed not to be null.
+	 * @param sentenceModel guaranteed not to be null.
+	 * @param primarySceneModel guaranteed not to be null.
+	 */
+	private void namafoliVerbProcessing(SentencePart verb, SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		
+		SentencePart arg1Part = sentenceModel.getArg1SentencePart();
+		
+		if(arg1Part == null){
+			print(verb + " is namafoli but ARG1 not found as a mistake!");
+			return;
+		}		
+		
+		SceneElement sceneElem = primarySceneModel.getSceneElement(arg1Part._wsd);
+		
+		if(sceneElem == null){
+			print(arg1Part + " can not be found in primarySceneModel!");
+			return;
+		}		
+		
+		if(sceneElem.scenePart == ScenePart.ROLE)
+			sceneElem.addRoleMoodToRole(verb._name, verb._wsd);
+		
+		else if(sceneElem.scenePart == ScenePart.DYNAMIC_OBJECT)
+			sceneElem.addStateToDynamicObject(verb._name, verb._wsd);
+		
+		else if(sceneElem.scenePart == ScenePart.STATIC_OBJECT)
+			sceneElem.addStateToStaticObject(verb._name, verb._wsd);
+		else{
+			print("scenePart of " + sceneElem + " was none of Role, DynamicObject, and StaticObject!");
+			return;
+		}
 		
 	}
 
-	private void basitVerbProcessing(SentenceModel sentenceModel, SceneModel primarySceneModel) {
+	/**
+	 * 
+	 * @param verb guaranteed not to be null.
+	 * @param sentenceModel guaranteed not to be null.
+	 * @param primarySceneModel guaranteed not to be null.
+	 */
+	private void rabtiVerbProcessing(SentencePart verb, SentenceModel sentenceModel, SceneModel primarySceneModel) {
+		
+		SentencePart arg1Part = sentenceModel.getArg1SentencePart();
+		
+		SentencePart arg2Part = sentenceModel.getArg2SentencePart();
+		
+		if(arg1Part == null || arg2Part == null){
+			print(verb + " is rabti but ARG1 or ARG2 not found as a mistake!");
+			return;
+		}		
+		
+		SceneElement sceneElem = primarySceneModel.getSceneElement(arg1Part._wsd);
+		
+		if(sceneElem == null){
+			print(arg1Part + " can not be found in primarySceneModel!");
+			return;
+		}		
+		
+		if(sceneElem.scenePart == ScenePart.ROLE)
+			sceneElem.addRoleMoodToRole(arg2Part._name, arg2Part._wsd);
+		
+		else if(sceneElem.scenePart == ScenePart.DYNAMIC_OBJECT)
+			sceneElem.addStateToDynamicObject(arg2Part._name, arg2Part._wsd);
+		
+		else if(sceneElem.scenePart == ScenePart.STATIC_OBJECT)
+			sceneElem.addStateToStaticObject(arg2Part._name, arg2Part._wsd);
+		else{
+			print("scenePart of " + sceneElem + " was none of Role, DynamicObject, and StaticObject!");
+			return;
+		}
+	}
+
+	private void actionVerbProcessing(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		
 		SentencePart verb = sentenceModel.getVerb();
 		
@@ -620,58 +690,18 @@ public class Preprocessor {
 			return;
 		}
 		
-		ScenePart scenePart = _ttsEngine.whichScenePart(arg0Part);
+		SceneElement arg0Elem = primarySceneModel.getSceneElement(arg0Part._wsd);
 		
-		if(scenePart == null){
-			MyError.error("the " + arg0Part + " ScenePart was not found!");
+		if(arg0Elem == null){
+			print(arg0Part + " can not be found in primarySceneModel!");
 			return;
 		}
 		
-		if(scenePart == ScenePart.ROLE){
-			
-			SceneElement sceneElem = createSceneElement(verb, ScenePart.ROLE_ACTION);
-			
-			if(sceneElem == null){
-				MyError.error("the " + verb + " could not converted to a SceneElement!");
-				return;
-			}
-			
-			RoleAction roleAct = (RoleAction)sceneElem;
-			
-			Role role = primarySceneModel.getRole(arg0Part._wsd);
-			
-			if(role == null){
-				MyError.error("the Role with " + arg0Part._wsd + " could not be found!");
-				return;
-			}
-			
-			role.addRole_action(roleAct);
-			
-			print(roleAct + " action added to the " + role);
-		}
-		else if(scenePart == ScenePart.DYNAMIC_OBJECT){
-			
-			SceneElement sceneElem = createSceneElement(verb, ScenePart.OBJECT_ACTION);
-			
-			if(sceneElem == null){
-				MyError.error("the " + verb + " could not converted to a SceneElement!");
-				return;
-			}
-			
-			ObjectAction objAct = (ObjectAction)sceneElem;
-			
-			DynamicObject dynObj = primarySceneModel.getDynamic_object(arg0Part._wsd);
-			
-			if(dynObj == null){
-				MyError.error("the DynamicObject with " + arg0Part._wsd + " could not be found!");
-				return;
-			}
-			
-			dynObj.addObejct_action(objAct);
-			
-			print(objAct + " action added to the " + dynObj);
-		}
-	
+		if(arg0Elem.scenePart == ScenePart.ROLE)
+			arg0Elem.addRoleActionToRole(verb._name, verb._wsd);
+		
+		else if(arg0Elem.scenePart == ScenePart.DYNAMIC_OBJECT)
+			arg0Elem.addObjectActionToDynmicAction(verb._name, verb._wsd);	
 		
 	}
 

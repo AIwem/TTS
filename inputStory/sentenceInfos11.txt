@@ -49,22 +49,26 @@ name:خانه			POS:NOUN		SYN:MOZ		SRC:5	SEM:ArgM_DIR_P		WSD:خانه#n10			sub_
 #------------------------------------------------------
 sentence:وارد خانه شد
 
-name:خانه			sentence_part:خانه				POS:NOUN		SYN:ADVRB		SEM:ARG4_ENDPOINT	WSD:خانه#n10				sub_part:-					dep:-		num:1
+name:خانه			POS:NOUN		SYN:ADVRB	SRC:3	SEM:ARG4_ENDPOINT	WSD:خانه#n10			sub_part:-				num:2
 
-name:وارد شد		sentence_part:وارد شد			POS:VERB		SYN:ROOT		SEM:-				WSD:وارد شدن#v2				sub_part:-					dep:-		num:0
+name:وارد شد		POS:VERB		SYN:ROOT	SRC:	SEM:-				WSD:وارد شدن#v2			sub_part:1,3			num:
+name:وارد			POS:NOUN		SYN:NVE		SRC:3	SEM:-				WSD:-					sub_part:-				num:1
+name:شد				POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:-					sub_part:-				num:3
 
 #------------------------------------------------------
 sentence:کبوتر را به مادر خود داد
 
-name:کبوتر			sentence_part:کبوتر را			POS:NOUN		SYN:OBJ			SEM:ARG1_THEME	WSD:کبوتر#n1				sub_part:-					dep:-		num:0
+name:کبوتر			POS:NOUN		SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:کبوتر#n1			sub_part:1,2			num:
+name:کبوتر			POS:NOUN		SYN:PREDEP	SRC:2	SEM:ARG1_THEME_P	WSD:کبوتر#n1			sub_part:-				num:1
+name:را				POS:UNKNOWN		SYN:OBJ		SRC:6	SEM:ARG1_THEME_P	WSD:کبوتر#n1			sub_part:-				num:2
 
-name:مادر خود		sentence_part:به مادر خود		POS:NOUN		SYN:ADVRB		SEM:ARG2_OBJ2	WSD:MAIN_وضعیت سنی#a_POST	sub_part:پسر،ک				dep:-		num:1
-name:به				sentence_part:به				POS:UNKNOWN		SYN:VPP			SEM:ARG2_OBJ2_P	WSD:-						sub_part:-					dep:-		num:1--1
-name:مادر			sentence_part:مادر				POS:NOUN		SYN:POSDEP		SEM:ARG2_OBJ2_P	WSD:-						sub_part:-					dep:-		num:1-0
-name:خود			sentence_part:خود				POS:UNKNOWN		SYN:MOZ			SEM:ARG2_OBJ2_P	WSD:-						sub_part:-					dep:-		num:1-1
+name:به مادر خود	POS:NOUN		SYN:ADVRB		SRC:	SEM:ARG2_OBJ2		WSD:4_mozaf#n_5			sub_part:3,4,5			num:
+name:به				POS:UNKNOWN		SYN:VPP		SRC:6	SEM:ARG2_OBJ2_P		WSD:-					sub_part:-				num:3
+name:مادر			POS:NOUN		SYN:POSDEP	SRC:3	SEM:ARG2_OBJ2_P		WSD:مادر#n1				sub_part:-				num:4
+name:خود			POS:UNKNOWN		SYN:MOZ		SRC:4	SEM:ARG2_OBJ2_P		WSD:خود#n3				sub_part:-				num:5
 
 
-name:داد			sentence_part:داد				POS:VERB		SYN:ROOT		SEM:-			WSD:دادن#v5					sub_part:-					dep:-		num:2
+name:داد			POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:دادن#v5				sub_part:-				num:6
 
 #------------------------------------------------------
 #sentence:سپس به طرف اتاقش دوید

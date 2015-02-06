@@ -326,15 +326,18 @@ public class SentencePart {
 	}
 	
 	public VerbType getVerbType(){
-		if(_name.contains("افتاد"))
-			return VerbType.BASIT;
-		if(_name.contains("برداشت"))
-			return VerbType.BASIT;
-		if(_name.contains("کرد"))
-			return VerbType.BASIT;
-		if(_name.contains("دوید"))
-			return VerbType.BASIT;
-		
+		if(isVerb()){			
+			if(_name.contains("افتاد"))
+				return VerbType.BASIT;
+			if(_name.contains("برداشت"))
+				return VerbType.BASIT;
+			if(_name.contains("کرد"))
+				return VerbType.BASIT;
+			if(_name.contains("دوید"))
+				return VerbType.BASIT;
+			if(_name.contains("شد"))
+				return VerbType.MORAKAB;
+		}
 		return VerbType.UNKNOWN;
 	}
 	
@@ -450,7 +453,8 @@ public class SentencePart {
 		else
 			hasMoz = true;
 		
-		if(sub_parts != null)
+		if(sub_parts != null){
+			System.out.println("first here!");
 			for(SentencePart subPart:sub_parts)
 				if(subPart._syntaxTag == DependencyRelationType.MOZ){
 					hasMoz = true;
@@ -460,6 +464,7 @@ public class SentencePart {
 					hasAdj = true;
 					addAdjective(subPart);							
 				}
+		}
 		
 		if(!hasAdj)
 			adjectives = null;

@@ -30,22 +30,28 @@ public class DynamicObject extends SceneObject{
 		return null;
 	}
 	
-	public void addObejct_action(ObjectAction action) {
+	public boolean hasObject_action(ObjectAction action){
+		if(this.object_actions != null)
+			for(ObjectAction act:object_actions)
+				if(act.equals(action))
+					return true;
+		return false;
+	}
+	
+	public boolean addObejct_action(ObjectAction action) {
 		if(this.object_actions == null)
 			this.object_actions = new ArrayList<ObjectAction>();
 		
 		if(action != null)
-			this.object_actions.add(action);
+			if(!hasObject_action(action)){
+				this.object_actions.add(action);
+				return true;
+			}
+			else
+				System.out.println(this._name + " DynamicObjec has had " + action + " before!");
+		return false;		
 	}
 	
-	public void addAllObject_actions(ArrayList<ObjectAction> actions) {
-		if(this.object_actions == null)
-			this.object_actions = new ArrayList<ObjectAction>();
-		
-		this.object_actions.addAll(actions);
-	}
-	
-
 	@Override
 	public String toString() {
 		return "[" + _node + "=  " + _name + 
@@ -61,7 +67,9 @@ public class DynamicObject extends SceneObject{
 		if(dynObj == null)
 			return;
 		
-		this.addAllObject_actions(dynObj.getObject_actions());
+		for(ObjectAction act:dynObj.getObject_actions())
+			this.addObejct_action(act);
+		
 	}
 	
 }

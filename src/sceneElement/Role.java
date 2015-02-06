@@ -81,46 +81,62 @@ public class Role extends SceneElement{
 	}
 	
 	public boolean addRole_action(RoleAction role_action) {
-		if(role_action != null)
+		if(role_action != null){
+			if(this.role_actions == null)
+				this.role_actions = new ArrayList<RoleAction>();
+		
 			if(!hasRole_action(role_action)){
 				this.role_actions.add(role_action);
 				return true;
 			}
 			else
 				System.out.println(this._name + " role has had " + role_action + " before!");
+		}
 		return false;
 	}
 
 	public boolean addRole_emotion(RoleEmotion role_emotion) {
-		if(role_emotion != null)
+		if(role_emotion != null){
+			if(this.role_emotions == null)
+				this.role_emotions = new ArrayList<RoleEmotion>();
+		
 			if(!hasRole_emotion(role_emotion)){
 				this.role_emotions.add(role_emotion);
 				return true;
 			}
 			else
 				System.out.println(this._name + " role has had " + role_emotion + " before!");
+		}
 		return false;
 	}
 	
 	public boolean addRole_goal(RoleGoal role_goal) {
-		if(role_goal != null)			
+		if(role_goal != null){
+			if(this.role_goals == null)
+				this.role_goals = new ArrayList<RoleGoal>();
+			
 			if(!hasRole_goals(role_goal)){
 				this.role_goals.add(role_goal);
 				return true;
 			}
 			else
 				System.out.println(this._name + " role has had " + role_goal + " before!");
+		}
 		return false;
 	}
 
 	public boolean addRole_mood(RoleMood role_mode){
-		if(role_mode != null)
+		if(role_mode != null){
+			if(this.role_moods == null)
+				this.role_moods = new ArrayList<RoleMood>();
+			
 			if(!hasRole_mood(role_mode)){
 				this.role_moods.add(role_mode);
 				return true;
 			}
 			else
 				System.out.println(this._name + " role has had " + role_mode + " before!");
+		}
 		return false;			
 	}
 	
