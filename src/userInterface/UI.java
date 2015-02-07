@@ -125,7 +125,7 @@ public class UI {
 		UI ui = new UI();
 		StoryModel sm = ui.TTS();
 		
-		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~");
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ الحمدلله");
 		
 //		Node arg = ui.tts._TTSKb.addConcept("چشم افتادن#v");
 //		Node desNode =  ui.tts._TTSKb.addConcept("*چشم افتادن#v (1) (1)");
@@ -137,9 +137,7 @@ public class UI {
 //		ui.tts.checkSemanticReasoner1(arg, desc, ref);
 //		
 //		//ui.tts.checkSemanticReasoner1();
-//		//ui.tts.checkSemanticReasoner2(psm.getDynamic_objects().get(0)._node);
-
-		System.out.println("الحمدلله");
+//		//ui.tts.checkSemanticReasoner2(psm.getDynamic_objects().get(0)._node);	
 	}
 }
 

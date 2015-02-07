@@ -5,12 +5,15 @@ import ir.ac.itrc.qqa.semantic.util.MyError;
 
 import java.util.ArrayList;
 
+import model.ScenePart;
+
 public class DynamicObject extends SceneObject{	
 	
 	private ArrayList<ObjectAction> object_actions = new ArrayList<ObjectAction>();
 	
 	public DynamicObject(String _name, Node _node) {
 		super(_name, _node);
+		this.scenePart = ScenePart.DYNAMIC_OBJECT;
 		this.object_actions = new ArrayList<ObjectAction>();
 	}
 
@@ -55,7 +58,8 @@ public class DynamicObject extends SceneObject{
 	@Override
 	public String toString() {
 		return "[" + _node + "=  " + _name + 
-				" object_actions=  " + object_actions + "]";
+				" object_actions=  " + object_actions +
+				" object_states=  " + object_states + "]";
 	}
 
 	/**

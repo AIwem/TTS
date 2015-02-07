@@ -625,31 +625,31 @@ public class SentenceModel{
 	
 	@Override
 	public String toString() {
-		String rs = "subjects:";
-		ArrayList<SentencePart> subjects = getSubjects();
-		for(SentencePart sbj:subjects)
-			rs += sbj.toString() + ", ";
-		
-		rs += "\nverb:";
-		SentencePart verb = getVerb();
-		if(verb != null)
-			rs += verb.toString();
-		
-		rs += "\nobjects:";
-		ArrayList<SentencePart> objects = getObjects();
-		for(SentencePart obj:objects)
-			rs += obj.toString() + ", ";
-		
-		rs += "\nadverbs";
-		ArrayList<SentencePart> adverbs = getAdverbs();
-		for(SentencePart adv:adverbs)			
-			rs += adv.toString() + ", ";
+//		String rs = "subjects:";
+//		ArrayList<SentencePart> subjects = getSubjects();
+//		for(SentencePart sbj:subjects)
+//			rs += sbj.toString() + ", ";
+//		
+//		rs += "\nverb:";
+//		SentencePart verb = getVerb();
+//		if(verb != null)
+//			rs += verb.toString();
+//		
+//		rs += "\nobjects:";
+//		ArrayList<SentencePart> objects = getObjects();
+//		for(SentencePart obj:objects)
+//			rs += obj.toString() + ", ";
+//		
+//		rs += "\nadverbs";
+//		ArrayList<SentencePart> adverbs = getAdverbs();
+//		for(SentencePart adv:adverbs)			
+//			rs += adv.toString() + ", ";
 
 //		String rs = "";
 //		rs = getSubjectsString() + "\t" + getVerbString() + "\t" + getObjectsString() + "\t" + getAdverbsString();
 		
-		String wsd = "\nWSD:\n";
-		wsd += "subjects:";		
+		
+		String wsd = "subjects:";		
 		for(SentencePart sbj:subjects)
 			if(sbj._wsd != null)
 				wsd += sbj._wsd.toString() + ", ";
@@ -676,7 +676,7 @@ public class SentenceModel{
 			else
 				wsd += "null, ";
 		
-		return rs + "\n" + wsd;
+		return wsd; //rs + "\n" + wsd;
 	}
 
 	

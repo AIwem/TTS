@@ -62,7 +62,7 @@ name:کبوتر			POS:NOUN		SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:کبوتر#n1			su
 name:کبوتر			POS:NOUN		SYN:PREDEP	SRC:2	SEM:ARG1_THEME_P	WSD:کبوتر#n1			sub_part:-				num:1
 name:را				POS:UNKNOWN		SYN:OBJ		SRC:6	SEM:ARG1_THEME_P	WSD:کبوتر#n1			sub_part:-				num:2
 
-name:به مادر خود	POS:NOUN		SYN:ADVRB		SRC:	SEM:ARG2_OBJ2		WSD:4_mozaf#n_5			sub_part:3,4,5			num:
+name:به مادر خود	POS:NOUN		SYN:ADVRB	SRC:	SEM:ARG2_OBJ2		WSD:4_mozaf#n_5			sub_part:3,4,5			num:
 name:به				POS:UNKNOWN		SYN:VPP		SRC:6	SEM:ARG2_OBJ2_P		WSD:-					sub_part:-				num:3
 name:مادر			POS:NOUN		SYN:POSDEP	SRC:3	SEM:ARG2_OBJ2_P		WSD:مادر#n1				sub_part:-				num:4
 name:خود			POS:UNKNOWN		SYN:MOZ		SRC:4	SEM:ARG2_OBJ2_P		WSD:خود#n3				sub_part:-				num:5

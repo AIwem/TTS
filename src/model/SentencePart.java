@@ -190,6 +190,13 @@ public class SentencePart {
 		return false;		
 	}
 	
+	public boolean isInfinitive() {
+		//TODO: correct this part!
+		if(_name.contains("دویدن"))
+			return true;
+		return false;
+	}
+	
 	public boolean hasSub_parts(){
 		return !Common.isEmpty(sub_parts);		
 	}
@@ -335,8 +342,11 @@ public class SentencePart {
 				return VerbType.BASIT;
 			if(_name.contains("دوید"))
 				return VerbType.BASIT;
-			if(_name.contains("شد"))
+			if(_name.contains("وارد شد"))
 				return VerbType.MORAKAB;
+			if(_name.contains("داد"))
+				return VerbType.BASIT_RABTI;					
+					
 		}
 		return VerbType.UNKNOWN;
 	}
@@ -367,7 +377,7 @@ public class SentencePart {
 //		rs += " dep=";
 //		if(_dep != null) rs += _dep;
 		else rs += "-";
-		rs += "\n\n";
+		rs += "\n";
 		return rs;
 	}	
 
@@ -453,18 +463,19 @@ public class SentencePart {
 		else
 			hasMoz = true;
 		
-		if(sub_parts != null){
-			System.out.println("first here!");
+		if(sub_parts != null)			
 			for(SentencePart subPart:sub_parts)
 				if(subPart._syntaxTag == DependencyRelationType.MOZ){
+					System.out.println("first here in setSub_parts!");
 					hasMoz = true;
 					addMozaf_elaih(subPart);					
 				}
 				else if(subPart._syntaxTag == DependencyRelationType.NPREMOD || subPart._syntaxTag == DependencyRelationType.NPOSTMOD){
+					System.out.println("first here in setSub_parts!");
 					hasAdj = true;
 					addAdjective(subPart);							
 				}
-		}
+		
 		
 		if(!hasAdj)
 			adjectives = null;
@@ -495,11 +506,12 @@ public class SentencePart {
 			adjectives = new ArrayList<SentencePart>();
 		
 		if(!hasAdjective(adj._wsd)){
+			System.out.println(adj._wsd + " adj added to " + this._name + "\n");
 			adjectives.add(adj);
 			return 1;
 		}
 		else{
-			System.out.println(this._name + " has this " + adj._wsd + " adj before! so they will merge");
+			System.out.println(this._name + " has this " + adj._wsd + " adj before! so they will merge \n");
 			
 			SentencePart oldAdj = getAdjective(adj._wsd);
 			
@@ -523,11 +535,12 @@ public class SentencePart {
 			mozaf_elaih = new ArrayList<SentencePart>();
 		
 		if(!hasMozaf_elaih(moz._wsd)){
+			System.out.println(moz._wsd + " mozaf added to " + this._name + "\n");
 			mozaf_elaih.add(moz);
 			return 1;
 		}
 		else{
-			System.out.println(this._name + " has this " + moz._wsd + " mozaf before! so they will merge");
+			System.out.println(this._name + " has this " + moz._wsd + " mozaf before! so they will merge \n");
 			
 			SentencePart oldMoz = getMozaf_elaih(moz._wsd);
 			
@@ -620,6 +633,8 @@ public class SentencePart {
 				capacities = newPart.capacities;
 		}
 	}
+
+	
 	
 	
 }

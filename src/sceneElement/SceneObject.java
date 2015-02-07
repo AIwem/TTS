@@ -9,9 +9,9 @@ import ir.ac.itrc.qqa.semantic.util.MyError;
 
 public class SceneObject extends SceneElement{
 	
-	private ArrayList<ObjectState> object_states = new ArrayList<ObjectState>();
+	protected ArrayList<ObjectState> object_states = new ArrayList<ObjectState>();
 	
-	private ObjectState current_state = null;
+	protected ObjectState current_state = null;
 	
 	public SceneObject() {
 		super();

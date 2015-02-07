@@ -154,20 +154,19 @@ public class Preprocessor {
 	 * partStr has all information about current Part. 
 	 * this information has a format like this:
 	 * 
-	 * name:پسرک		sentence_part:پسرک	POS:NOUN		SYN:SBJ		SEM:ARG0		WSD:MAIN_وضعیت سنی#a_POST	sub_part:پسر،ک		dep:-		num:1
-	 * name:پسر		sentence_part:پسر		POS:NOUN		SYN:SBJ_P	SEM:ARG0_P		WSD:پسر#n2				sub_part:-		dep:MAIN	num:1-0
-	 * name:ک		sentence_part:ک		POS:UNKNOWN		SYN:SBJ_P	SEM:ARG0_P		WSD:خردسال#a1				sub_part:-		dep:POST	num:1-1
+	 * name:کبوتر را	POS:NOUN	SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:کبوتر#n1	sub_part:2,3	num:
+	 * name:کبوتر	POS:NOUN	SYN:PREDEP	SRC:3	SEM:ARG1_THEME_P	WSD:کبوتر#n1	sub_part:-		num:2
+	 * name:را	POS:UNKNOWN	SYN:OBJ		SRC:4	SEM:ARG1_THEME_P	WSD:-		sub_part:-		num:3
 	 * 
 	 * @param partStr partStr has all information about current Part.
 	 * @return equivalent Part Object.
 	 */
 	private SentencePart createPart(String partStr, SentenceModel senteceModel){
-//		print(partStr);			
+	
 		String[] parts = partStr.split("(\t)+");
 		
 		if(parts.length != 8){			
 			MyError.error("Bad sentence information format " + partStr + " parts-num " + parts.length);
-//			print("Bad sentence information format " + partStr + " parts-num " + parts.length);
 			return null;
 		}
 					
@@ -198,7 +197,7 @@ public class Preprocessor {
 			newPart.setSub_parts(subParts);
 		}		
 				
-		print(newPart.getStr() + "\n");
+		//print(newPart.getStr());
 		return newPart;		
 	}
 
@@ -214,6 +213,7 @@ public class Preprocessor {
 	 * @return
 	 */
 	public SentenceModel preprocessSentence(String NLsentence) {
+		
 		SentenceModel sentence = new SentenceModel(NLsentence);
 		
 		//this array has information of all parts of this sentence.
@@ -227,6 +227,7 @@ public class Preprocessor {
 		for(int i = 0; i < senPartStrs.size(); i++){
 			
 			String currentPartStr = senPartStrs.get(i);
+			
 			SentencePart currentPart = createPart(currentPartStr, sentence);		
 			
 			//it means next line are informations of sub_parts of this current_part.
@@ -366,7 +367,7 @@ public class Preprocessor {
 	 */
 	private void prepareNullSemanticTags(SentenceModel sentenceModel, SceneModel primarySceneModel, StoryModel storyModel) {
 		
-		print("\n=============== in   prepareNullSemanticTags   =============");
+		print("\n=============== in   prepareNullSemanticTags ===============");
 		
 		ArrayList<MainSemanticTag> existingSemTags = sentenceModel.getExistingMainSematicArgs();
 		ArrayList<MainSemanticTag> necessarySemTags = sentenceModel.getNecessarySematicArgs();
@@ -394,7 +395,7 @@ public class Preprocessor {
 						prepareNullSemanticTagsForAScene(sentenceModel, missingMainArgs, oldScene);
 		}
 		
-		print("=============== end of prepareNullSemanticTags =============\n");
+		print("=============== end of prepareNullSemanticTags =============");
 	}	
 	
 	/**
@@ -462,9 +463,9 @@ public class Preprocessor {
 	 */
 	private void preprocessArg0(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		
-		print("\n0000000000000000 in   preprocessArg0   0000000000000000");
-		
 		if(sentenceModel.hasArg0()){
+			
+			print("\n000000000000000 in    preprocessArg0 00000000000000000000000");
 			
 			SentencePart arg0Part = sentenceModel.getArg0SentencePart();
 			
@@ -484,7 +485,7 @@ public class Preprocessor {
 			SceneElement inputSceneElement = createSceneElement(arg0Part, scenePart);
 			
 			if(inputSceneElement == null){
-				MyError.error("the " + arg0Part + " could not convert to s SceneElement!");
+				MyError.error("the " + arg0Part + " could not convert to a SceneElement!");
 				return;
 			}
 			
@@ -494,22 +495,21 @@ public class Preprocessor {
 			
 			//It means that the primarySceneModel has had this ScenePart before, so we will merge the information of this part with that one
 			if(isRedundantPart){
-				
+				print(inputSceneElement._name + " is redundant!");
 				sceneElem = primarySceneModel.getSceneElement(inputSceneElement);
 				
 				if(sceneElem == null){
 					MyError.error("primarySceneModel has " + arg0Part + " but it could not be found!");
 					return;
 				}
-				sceneElem.mergeWith(inputSceneElement);				
-				
+				sceneElem.mergeWith(inputSceneElement);	
 			}
 			//It means that arg0Part is a newly seen ScenePart which is to be added to primarySceneModel.
 			else{
 				//creates a new ScenePart based on arg0Part and adds it to the primarySceneModel or return null if it was redundant!
 				primarySceneModel.addToPrimarySceneModel(inputSceneElement);
 				
-				 sceneElem = inputSceneElement;
+				sceneElem = inputSceneElement;
 			}
 					
 			//------------------- pre-processing dependents of arg0 --------------------
@@ -549,9 +549,9 @@ public class Preprocessor {
 							sceneElem.addStateToDynamicObject(moz._name, moz._wsd);					
 				}			
 			}
+			
+			print("000000000000000 end of preprocessArg0 0000000000000000000000");
 		}
-		
-		print("0000000000000000 end of preprocessArg0 0000000000000000\n");
 	}
 	
 	/**
@@ -560,7 +560,7 @@ public class Preprocessor {
 	 */
 	private void preprocessVerbArg(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		
-		print("\n================ in   verb preprocess   ================");
+		print("\n============== in   verb preprocess ========================");
 		
 		//TODO: check the correct place of this statement!
 		defineVerbRelation(sentenceModel);
@@ -594,9 +594,8 @@ public class Preprocessor {
 			default:
 				print("Unknown verb type!");
 			
-		}
-		
-		print("\n================ end of verb preprocess   ================");
+		}		
+		print("\n============== end of verb preprocess ======================");
 	}
 	
 	/**
@@ -706,8 +705,65 @@ public class Preprocessor {
 	}
 
 	private void preprocessArg1(SentenceModel sentenceModel, SceneModel primarySceneModel) {
-		// TODO Auto-generated method stub
 		
+		if(sentenceModel.hasArg1()){
+			
+			print("\n111111111111111 in    preprocessArg1 11111111111111111111111");
+			
+			SentencePart arg1Part = sentenceModel.getArg1SentencePart();
+			
+			if(arg1Part == null){
+				MyError.error("the sentenceModel hasArg1 but it didn't find!" + sentenceModel);
+				return;
+			}
+			
+			//It means that it is verb (infinitive) so the processing must perform on it and its dependents!
+			if(arg1Part.isInfinitive()){
+				//TODO: complete this part later!
+				print("It is an infinitive so, the process should got performed for it again!");
+			}
+			else{
+			
+				//reasoning ScenePart from KB and adding to primarySceneModel. 
+				ScenePart scenePart = _ttsEngine.whichScenePart(arg1Part);
+				
+				if(scenePart == null){
+					MyError.error("the " + arg1Part + " ScenePart was not found!");
+					return;
+				}
+				
+				SceneElement inputSceneElement = createSceneElement(arg1Part, scenePart);
+				
+				if(inputSceneElement == null){
+					MyError.error("the " + arg1Part + " could not convert to a SceneElement!");
+					return;
+				}
+				
+				boolean isRedundantPart = primarySceneModel.hasSceneElement(inputSceneElement);
+				
+				SceneElement sceneElem = null;
+				
+				//It means that the primarySceneModel has had this ScenePart before, so we will merge the information of this part with that one
+				if(isRedundantPart){
+					print(inputSceneElement._name + " is redundant!");
+					sceneElem = primarySceneModel.getSceneElement(inputSceneElement);
+					
+					if(sceneElem == null){
+						MyError.error("primarySceneModel has " + arg1Part + " but it could not be found!");
+						return;
+					}
+					sceneElem.mergeWith(inputSceneElement);	
+				}
+				//It means that arg0Part is a newly seen ScenePart which is to be added to primarySceneModel.
+				else{
+					//creates a new ScenePart based on arg0Part and adds it to the primarySceneModel or return null if it was redundant!
+					primarySceneModel.addToPrimarySceneModel(inputSceneElement);
+					
+					sceneElem = inputSceneElement;
+				}
+			}
+			print("\n111111111111111 end of preprocessArg1 11111111111111111111111");
+		}		
 	}
 		
 	private void preprocessArg2(SentenceModel sentenceModel, SceneModel primarySceneModel) {
@@ -849,7 +905,7 @@ public class Preprocessor {
 				
 				wsd = _kb.addRelation(argument, referent, descriptor, SourceType.TTS);
 				
-				print("wsd relation added ------------- : " + wsd.argument.getName() + " --> " + wsd.getName() + " --> " + wsd.referent.getName() + "\n");
+				print("wsdRel added ---- : " + wsd.argument.getName() + " --> " + wsd.getName() + " --> " + wsd.referent.getName() + "\n");
 				
 				_ttsEngine.addRelationInstance(descriptor.getName(), wsd);
 			}
@@ -871,7 +927,7 @@ public class Preprocessor {
 						
 						wsd = _kb.addRelation(argument, referent, descriptor, SourceType.TTS);
 						
-						print("wsd relation added ------------- : " + wsd.argument.getName() + " -- " + wsd.getName() + " -- " + wsd.referent.getName() + "\n");
+						print("wsdRel added ---- : " + wsd.argument.getName() + " -- " + wsd.getName() + " -- " + wsd.referent.getName() + "\n");
 						
 						_ttsEngine.addRelationInstance(relation_name, wsd);
 					}
@@ -914,6 +970,7 @@ public class Preprocessor {
 	}
 
 	
+	@SuppressWarnings("unused")
 	private void add_adjective_mozaf(SentenceModel sentence, SentencePart mainPart, Node descriptor, Node referent) {
 		
 		if(sentence == null || mainPart == null || descriptor == null || referent == null){
@@ -929,12 +986,12 @@ public class Preprocessor {
 			
 			//1:added, 0:merged, -1:Nop
 			int added = mainPart.addAdjective(adjPart);
-			if(added == 1)
-				print("----------------" + adjPart + " adjective added to " + mainPart + "\n");
-			else if(added == 0)
-				print("----------------" +  mainPart + " own adjective merged with " + adjPart + "\n");
-			else
-				print("----------------"+  mainPart + " has " + adjPart + " before\n");
+//			if(added == 1)
+//				print("----------------" + adjPart + " adjective added to " + mainPart + "\n");
+//			else if(added == 0)
+//				print("----------------" +  mainPart + " own adjective merged with " + adjPart + "\n");
+//			else
+//				print("----------------"+  mainPart + " has " + adjPart + " before\n");
 		}
 		else if(descriptor.getPos() == POS.NOUN){ //it means that descriptor is describing a mozaf_alaih.
 			
@@ -942,12 +999,12 @@ public class Preprocessor {
 			
 			//1:added, 0:merged, -1:Nop
 			int added = mainPart.addMozaf_elaih(mozPart); 
-			if(added == 1)
-				print("----------------" + mozPart + " mozaf_elaih added to " + mainPart + "\n");
-			else if(added == 0)
-				print("----------------" +  mainPart + " own mozaf_elaih merged with " + mozPart + "\n");
-			else
-				print("----------------"+  mainPart + " has " + mozPart + " before\n");
+//			if(added == 1)
+//				print("----------------" + mozPart + " mozaf_elaih added to " + mainPart + "\n");
+//			else if(added == 0)
+//				print("----------------" +  mainPart + " own mozaf_elaih merged with " + mozPart + "\n");
+//			else
+//				print("----------------"+  mainPart + " has " + mozPart + " before\n");
 		}
 	}
 
@@ -1158,7 +1215,7 @@ public class Preprocessor {
 						//adding the relation of this sentence to kb.
 						PlausibleStatement rel = _kb.addRelation(sbj._wsd, obj._wsd, verb._wsd, SourceType.TTS);
 						verbRelations.add(rel);
-						print("verb relation added ------------- : " + rel.argument.getName() + " --> " + rel.getName() + " --> " + rel.referent.getName() + "\n");														
+						print("verbRel added ---- : " + rel.argument.getName() + " --> " + rel.getName() + " --> " + rel.referent.getName() + "\n");														
 					}				
 			
 			if(!transitive_verb){
@@ -1166,7 +1223,7 @@ public class Preprocessor {
 				//adding the relation of this sentence to kb. 
 				PlausibleStatement rel = _kb.addRelation(sbj._wsd, KnowledgeBase.HPR_ANY, verb._wsd, SourceType.TTS);
 				verbRelations.add(rel);
-				print("verb relation added ------------- : " + rel.argument.getName() + " --> " + rel.getName() + " --> " + rel.referent.getName() + "\n");				
+				print("verbRel added ---- : " + rel.argument.getName() + " --> " + rel.getName() + " --> " + rel.referent.getName() + "\n");				
 			}
 		}
 		return verbRelations;

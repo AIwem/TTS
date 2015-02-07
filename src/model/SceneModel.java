@@ -2,6 +2,7 @@ package model;
 
 
 import ir.ac.itrc.qqa.semantic.kb.Node;
+import ir.ac.itrc.qqa.semantic.util.Common;
 import ir.ac.itrc.qqa.semantic.util.MyError;
 
 import java.util.ArrayList;
@@ -256,60 +257,58 @@ public class SceneModel {
 	}
 	//------------------ add   part -------------------
 	
-	public void addAllSentences(ArrayList<SentenceModel> sentences) {
-		if(this.sentences == null)
-			this.sentences = new ArrayList<SentenceModel>();
-		
-		if(sentences != null && sentences.size()>0)
-			this.sentences.addAll(sentences);
-	}
-	
 	public void addSentence(SentenceModel sentence) {
 		if(this.sentences == null)
 			this.sentences = new ArrayList<SentenceModel>();
 		
 		if(sentence != null)
-			this.sentences.add(sentence);
-	}
-
-	public void addAllRoles(ArrayList<Role> roles) {
-		if(this.roles == null)
-			this.roles = new ArrayList<Role>();
-		
-		if(roles != null && roles.size()>0)
-			this.roles.addAll(roles);
+			if(!hasSentence(sentence))
+				this.sentences.add(sentence);
 	}
 	
+	public void addAllSentences(ArrayList<SentenceModel> sentences) {
+		if(!Common.isEmpty(sentences))
+			for(SentenceModel sen:sentences)
+				addSentence(sen);
+	}
+
 	public void addRole(Role role) {
 		if(this.roles == null)
 			this.roles = new ArrayList<Role>();
 		
 		if(role != null)
-			this.roles.add(role);
+			if(!hasRole(role)){
+				this.roles.add(role);
+				print(role._name + " added to SceneModel.");
+			}
+			else
+				print("SceneModel has this " + role + " Role before!");
 	}
 	
-	public void addAllStatic_bjects(ArrayList<StaticObject> static_objects) {
-		if(this.static_objects == null)
-			this.static_objects = new ArrayList<StaticObject>();
+	public void addAllRoles(ArrayList<Role> roles) {
+		if(!Common.isEmpty(roles))
+			for(Role rl:roles)
+				addRole(rl);			
+	}
 		
-		if(static_objects != null && static_objects.size()>0)
-			this.static_objects.addAll(static_objects);
-	}
-	
 	public void addStatic_object(StaticObject static_object) {
 		if(this.static_objects == null)
 			this.static_objects = new ArrayList<StaticObject>();
 		
-		if(static_object != null)
-			this.static_objects.add(static_object);
-	}
-
-	public void addAllDynamic_objects(ArrayList<DynamicObject> dynamic_objects) {
-		if(this.dynamic_objescts == null)
-			this.dynamic_objescts = new ArrayList<DynamicObject>();
 		
-		if(dynamic_objects != null && dynamic_objects.size()>0)
-			this.dynamic_objescts.addAll(dynamic_objects);
+		if(static_object != null)
+			if(!hasStatic_object(static_object)){
+				this.static_objects.add(static_object);
+				print(static_object._name + " added to SceneModel.");
+			}
+			else
+				print("SceneModel has this " + static_object + " Static_object before!");
+	}
+	
+	public void addAllStatic_bjects(ArrayList<StaticObject> static_objects) {
+		if(!Common.isEmpty(static_objects))
+			for(StaticObject stObj:static_objects)
+				addStatic_object(stObj);		
 	}
 	
 	public void addDynamic_object(DynamicObject dynamic_object) {
@@ -317,15 +316,18 @@ public class SceneModel {
 			this.dynamic_objescts = new ArrayList<DynamicObject>();
 		
 		if(dynamic_object != null)
-			this.dynamic_objescts.add(dynamic_object);
+			if(!hasDynamic_object(dynamic_object)){
+				this.dynamic_objescts.add(dynamic_object);
+				print(dynamic_object._name + " added to SceneModel.");
+			}
+			else
+				print("SceneModel has this " + dynamic_object + " Dynamic_object before!");
 	}
-		
-	public void addAllScene_goals(ArrayList<SceneGoal> scene_goals) {
-		if(this.scene_goals == null)
-			this.scene_goals = new ArrayList<SceneGoal>();
-		
-		if(scene_goals != null && scene_goals.size()>0)
-			this.scene_goals.addAll(scene_goals);
+
+	public void addAllDynamic_objects(ArrayList<DynamicObject> dynamic_objects) {		
+		if(!Common.isEmpty(dynamic_objects))
+			for(DynamicObject dynObj:dynamic_objects)
+				addDynamic_object(dynObj);
 	}
 	
 	public void addScene_goal(SceneGoal scene_goal) {
@@ -333,16 +335,18 @@ public class SceneModel {
 			this.scene_goals = new ArrayList<SceneGoal>();
 		
 		if(scene_goal != null)
-			this.scene_goals.add(scene_goal);
+			if(!hasScene_goal(scene_goal)){
+				this.scene_goals.add(scene_goal);
+				print(scene_goal._name + " added to SceneModel.");
+			}
+			else
+				print("SceneModel has this " + scene_goal + " Scene_goal before!");
 	}
-	
-
-	public void addAllScene_emotions(ArrayList<SceneEmotion> scene_emotions) {
-		if(this.scene_emotions == null)
-			this.scene_emotions = new ArrayList<SceneEmotion>();
 		
-		if(scene_emotions != null && scene_emotions.size()>0)
-			this.scene_emotions.addAll(scene_emotions);
+	public void addAllScene_goals(ArrayList<SceneGoal> scene_goals) {
+		if(!Common.isEmpty(scene_goals))
+			for(SceneGoal sceGoal:scene_goals)
+				addScene_goal(sceGoal);		
 	}
 	
 	public void addScene_emotion(SceneEmotion scene_emotion) {
@@ -350,10 +354,21 @@ public class SceneModel {
 			this.scene_emotions = new ArrayList<SceneEmotion>();
 		
 		if(scene_emotion != null)
-			this.scene_emotions.add(scene_emotion);
+			if(!hasScene_emotion(scene_emotion)){
+				this.scene_emotions.add(scene_emotion);
+				print(scene_emotion._name + " added to SceneModel.");
+			}
+			else
+				print("SceneModel has this " + scene_emotion + " Scene_emotion before!");
 	}
 	
-	/**
+	public void addAllScene_emotions(ArrayList<SceneEmotion> scene_emotions) {
+		if(!Common.isEmpty(scene_emotions))
+			for(SceneEmotion sceEmo:scene_emotions)
+				addScene_emotion(sceEmo);
+	}
+	
+		/**
 	 * this method based on the ScenePart of the part adds a Role, DynamicObject, StaticObject, or ... to primarySceneModel.
 	 * TODO: we have assumed for simplicity which every scene has a unique Role, DyanamicObject, and StaticObject with a one name.
 	 * for example all «پسرک» refer to just one Role. 
@@ -368,22 +383,15 @@ public class SceneModel {
 		
 		if(sceneElement.scenePart == ScenePart.ROLE){
 			Role role = (Role) sceneElement;
-			if(!hasRole(role)){
-				addRole(role);				
-			}
+			addRole(role);			
 		}
 		else if(sceneElement.scenePart == ScenePart.DYNAMIC_OBJECT){
-			DynamicObject dynObj = (DynamicObject) sceneElement;
-			if(!hasDynamic_object(dynObj)){
-				addDynamic_object(dynObj);
-			}
-			
+			DynamicObject dynObj = (DynamicObject) sceneElement;			
+			addDynamic_object(dynObj);
 		}
 		else if(sceneElement.scenePart == ScenePart.STATIC_OBJECT){
-			StaticObject staObj = (StaticObject) sceneElement;
-			if(!hasStatic_object(staObj)){
-				addStatic_object(staObj);				
-			}			
+			StaticObject staObj = (StaticObject) sceneElement;			
+			addStatic_object(staObj);
 		}
 		else if(sceneElement.scenePart == ScenePart.LOCATION){//TODO: check what else shall I do for this case!			
 			if(getLocation() != null){
@@ -403,7 +411,15 @@ public class SceneModel {
 
 			Time time = (Time) sceneElement;
 			setTime(time);			
-		}		
+		}
+		else if(sceneElement.scenePart == ScenePart.SCENE_EMOTION){
+			SceneEmotion sceEmo = (SceneEmotion) sceneElement;			
+			addScene_emotion(sceEmo);
+		}
+		else if(sceneElement.scenePart == ScenePart.SCENE_GOAL){
+			SceneGoal sceGoal = (SceneGoal) sceneElement;			
+			addScene_goal(sceGoal);						
+		}
 	}
 	
 	//------------------ has   part -------------------
@@ -568,8 +584,6 @@ public class SceneModel {
 		return false;
 	}	
 		
-	
-	@SuppressWarnings("unused")
 	private void print(String toPrint){
 		System.out.println(toPrint);
 		
@@ -577,17 +591,17 @@ public class SceneModel {
 
 	@Override
 	public String toString() {
-		String st = "SceneModel [" + "\nroles= "; 
+		String st = "roles= "; 
 		for (Role r : this.roles)
-			st += "\n" + r;
+			st += r; //"\n" + r;
 		
 		st+= "\ndynamic_objs= ";
 		for(DynamicObject dOb:this.dynamic_objescts)
-			st += "\n" + dOb;
+			st += dOb; //"\n" + dOb;
 		
 		st += "\nstatic_objs= ";
 		for(StaticObject stOb:this.static_objects)
-			st += "\n" + stOb;
+			st += stOb; //"\n" + stOb;
 		
 		st += "\nlocation= " + location + 
 		"\ntime= " + time +

@@ -116,7 +116,7 @@ public class TTSEngine {
 				
 		for(String NLsentence:scene_inputNL){
 			
-			print("natural sentence: " + NLsentence);
+			print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NSentence: " + NLsentence);
 			
 			SentenceModel sentence = _pp.preprocessSentence(NLsentence);	
 			
@@ -133,7 +133,7 @@ public class TTSEngine {
 			if(cur_sen_scene != null)
 				sentencs_scenes.add(cur_sen_scene);
 							
-			System.out.println("sentenceModel after preprocess: \n" + sentence + "\n\n");			
+			System.out.println("sentenceModel after preprocess: \n" + sentence + "\n");			
 		}
 		
 		//-------------- merging primary SceneModels of each sentences of this scene ----------------------------------------
@@ -853,12 +853,12 @@ public class TTSEngine {
 	/**
 	 * recognizing which scenePart has this ARG0 node: 
 	 * a ROLE, DYNAMIC_OBJECT?
-	 * because this is ARG0 node so it must perform an action
+	 * because this is ARG0 node so it must perform an action.
 	 * only ROLE or DYNAMIC_OBJECT can perform action.
 	 * this method checks: 
 	 * <ul> if node pos is NOUN, then checks weather
 	 * 		<li> isHuman, than return ScenePart.ROLE </li>
-	 * 		<li> otherwise, returns ScenePart.DYNAMIC_OBJECT </li>	 * 		
+	 * 		<li> otherwise, returns ScenePart.DYNAMIC_OBJECT </li> 		
 	 * </ul>
 	 *  
 	 * @param pureNode the pure node fetched from kb.
@@ -870,14 +870,15 @@ public class TTSEngine {
 		//TODO: I must remove these lines!-------			
 		if(pureNode.getName().equals("پسر#n2"))
 			return ScenePart.ROLE;
-//			if(pure_node.getName().equals("یک#n1"))
-//				return ScenePart.SCENE_OBJECT;
-//			if(pure_node.getName().equals("راه#n9"))
-//				return ScenePart.LOCATION;
-//			if(pure_node.getName().equals("سمت#n4"))
-//				return ScenePart.LOCATION;
-//			if(pure_node.getName().equals("خانه#n10"))
-//				return ScenePart.SCENE_OBJECT;			
+		
+//		if(pure_node.getName().equals("یک#n1"))
+//			return ScenePart.SCENE_OBJECT;
+//		if(pure_node.getName().equals("راه#n9"))
+//			return ScenePart.LOCATION;
+//		if(pure_node.getName().equals("سمت#n4"))
+//			return ScenePart.LOCATION;
+//		if(pure_node.getName().equals("خانه#n10"))
+//			return ScenePart.SCENE_OBJECT;			
 		//---------------------------------------			
 
 		
@@ -889,9 +890,56 @@ public class TTSEngine {
 		return ScenePart.UNKNOWN;
 	}
 	
+	/**
+	 * recognizing which scenePart has this ARG0 node: 
+	 * a ROLE, DYNAMIC_OBJECT, STATIC_OBJECT, LOCATION?
+	 * because this is ARG1 node so the action is performed on it.
+	 * only ROLE, DYNAMIC_OBJECT, STATIC_OBJECT, or LOCATION can got action performed on!
+	 * this method checks: 
+	 * <ul> if node pos is NOUN, then checks weather
+	 * 		<li> isHuman, than return ScenePart.ROLE </li>
+	 * 		<li> isAnimal, than return ScenePart.DYNAMIC_OBJECT </li>
+	 * 		<li> isLocation, than return ScenePart.LOCATION </li>
+	 * 		<li> otherwise, returns ScenePart.STATIC_OBJECT </li> 		
+	 * </ul>
+	 * <ul> if node pos is VERB (means infinitive) then starts this process for that node again!
+	 * </ul>
+	 *  
+	 * @param pureNode the pure node fetched from kb.
+	 * @param pos the part of speech this node has.
+	 * @return the ScenePart of pureNode, including ROLE, DYNAMIC_OBJECT, or UNKNOWN. no null will be returned.
+	 */
 	private ScenePart getArg1ScenePart(Node pureNode, POS pos) {
 		
-		return null;
+		//TODO: I must remove these lines!-------			
+		if(pureNode.getName().equals("پسر#n2"))
+			return ScenePart.ROLE;
+		
+//		if(pure_node.getName().equals("یک#n1"))
+//			return ScenePart.SCENE_OBJECT;
+//		if(pure_node.getName().equals("راه#n9"))
+//			return ScenePart.LOCATION;
+//		if(pure_node.getName().equals("سمت#n4"))
+//			return ScenePart.LOCATION;
+//		if(pure_node.getName().equals("خانه#n10"))
+//			return ScenePart.SCENE_OBJECT;			
+		//---------------------------------------			
+
+		
+		if(pos == POS.NOUN){
+			//TODO: if noun is infinitve!
+//			if()
+			
+			if(isHuman(pureNode))
+				return ScenePart.ROLE;
+			if(isAnimal(pureNode))
+				return ScenePart.DYNAMIC_OBJECT;
+			if(isLocation(pureNode))
+				return  ScenePart.LOCATION;
+			return ScenePart.STATIC_OBJECT;
+		}
+		
+		return ScenePart.UNKNOWN;
 	}
 	/**
 	 * recognizing that which scenePart has the node: 
@@ -1079,7 +1127,8 @@ public class TTSEngine {
 	 */
 	
 	public ScenePart whichScenePart(SentencePart sentencePart){
-		print(sentencePart + " .................. in whichScenePart ..................");
+
+		print(sentencePart + " ............ in whichScenePart ....................");
 		
 		if(sentencePart == null)
 			return ScenePart.UNKNOWN;
@@ -1110,7 +1159,7 @@ public class TTSEngine {
 		
 		}
 
-		print(partNode + " ScenePart is " + sp + "\n");			
+		print(partNode + " ScenePart is " + sp);			
 		return sp;
 	}
 
