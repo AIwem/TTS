@@ -566,8 +566,6 @@ public class SentenceModel{
 		return necessarySemArg; 
 	}
 
-	
-
 	public SentencePart getSentencePart(Node partNode) {		
 		
 		for(SentencePart sbj:subjects)

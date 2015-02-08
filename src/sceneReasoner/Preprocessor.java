@@ -456,28 +456,28 @@ public class Preprocessor {
 		//TODO check with user!		
 	}
 	
-	private void processDependentsOfSemanticArg(SentencePart semArgPart, SceneElement sceneElement, ScenePart... sceneParts){
+	private void processDependentsOfSemanticArg(SentencePart semArgPart, SceneElement sceneElement){
 		
+		//It means that this sentencePart has some adjectives
 		if(semArgPart.hasAnyAdjectives()){
 			
 			print(semArgPart + " " + semArgPart._semanticTag + " has some adjectives:" + semArgPart.getAdjectives());
 			
 			ArrayList<SentencePart> adjectives = semArgPart.getAdjectives();
 			
-			for(SentencePart adj:adjectives)
+			for(SentencePart adj:adjectives)				
 				
-				for(ScenePart sp: sceneParts)
-					if(sp == ScenePart.ROLE)
-						 sceneElement.addRoleMoodToRole(adj._name, adj._wsd);
-						
-					else if(sp == ScenePart.DYNAMIC_OBJECT || sp == ScenePart.STATIC_OBJECT)
-						sceneElement.addStateToSceneObject(adj._name, adj._wsd);
-			
-//					else if(scenePart == ScenePart.LOCATION)
-//						//TODO: what to do for adj of LOCATIONs
-	
-//					else if(scenePart == ScenePart.SCENE_GOAL)
-//						//TODO: what to do for adj of SCENE_GOAL
+				if(sceneElement.scenePart == ScenePart.ROLE)
+					 sceneElement.addRoleMoodToRole(adj._name, adj._wsd);
+					
+				else if(sceneElement.scenePart == ScenePart.DYNAMIC_OBJECT || sceneElement.scenePart == ScenePart.STATIC_OBJECT)
+					sceneElement.addStateToSceneObject(adj._name, adj._wsd);
+		
+//				else if(scenePart == ScenePart.LOCATION)
+//					//TODO: what to do for adj of LOCATIONs
+
+//				else if(scenePart == ScenePart.SCENE_GOAL)
+//					//TODO: what to do for adj of SCENE_GOAL
 		}
 		
 		//It means that this sentencePart has some mozad_elaih
@@ -489,22 +489,20 @@ public class Preprocessor {
 			
 			for(SentencePart moz:mozafs)
 				
-				if(!moz._wsd.getName().contains(zamir_enekasi))
-					
-					for(ScenePart sp: sceneParts)
-						if(sp == ScenePart.ROLE)
-							 sceneElement.addRoleMoodToRole(moz._name, moz._wsd);
-							
-						else if(sp == ScenePart.DYNAMIC_OBJECT)
-							sceneElement.addStateToSceneObject(moz._name, moz._wsd);
-			
-//						else if(scenePart == ScenePart.LOCATION)
-//							//TODO: what to do for moz of LOCATIONs
+				if(!moz._wsd.getName().contains(zamir_enekasi))					
+		
+					if(sceneElement.scenePart == ScenePart.ROLE)
+						 sceneElement.addRoleMoodToRole(moz._name, moz._wsd);
+						
+					else if(sceneElement.scenePart == ScenePart.DYNAMIC_OBJECT || sceneElement.scenePart == ScenePart.STATIC_OBJECT)
+						sceneElement.addStateToSceneObject(moz._name, moz._wsd);
+		
+//					else if(scenePart == ScenePart.LOCATION)
+//						//TODO: what to do for moz of LOCATIONs
 
-//						else if(scenePart == ScenePart.SCENE_GOAL)
-//							//TODO: what to do for moz of SCENE_GOAL
-		}
-			
+//					else if(scenePart == ScenePart.SCENE_GOAL)
+//						//TODO: what to do for moz of SCENE_GOAL
+		}			
 	}
 	
 	/**
@@ -560,44 +558,149 @@ public class Preprocessor {
 				//creates a new ScenePart based on arg0Part and adds it to the primarySceneModel or return null if it was redundant!
 				primarySceneModel.addToPrimarySceneModel(inputSceneElement);
 				
-				sceneElem = inputSceneElement;
-				
+				sceneElem = inputSceneElement;				
 			}
 			
 			//------------------- pre-processing dependents of arg0 --------------------
 			
-			processDependentsOfSemanticArg(arg0Part, sceneElem, ScenePart.ROLE, ScenePart.DYNAMIC_OBJECT);
-			
-//			//It means that this sentencePart has some adjectives
-//			
-//			if(arg0Part.hasAnyAdjectives()){
-//				
-//				print(arg0Part + " arg0 has some adjectives:" + arg0Part.getAdjectives());
-//				
-//				ArrayList<SentencePart> adjectives = arg0Part.getAdjectives();
-//				
-//				for(SentencePart adj:adjectives)
-//					
-//			}
-//			
-//			//It means that this sentencePart has some mozad_elaih
-//			if(arg0Part.hasAnyMozaf_elaihs()){				
-//				
-//				print(arg0Part + " arg0 has mozaf_elaih: " + arg0Part.getMozaf_elaih());
-//				
-//				ArrayList<SentencePart> mozafs = arg0Part.getMozaf_elaih();
-//				
-//				for(SentencePart moz:mozafs)
-//					
-//					if(!moz._wsd.getName().contains(zamir_enekasi))
-//						processDependentsOfSemanticArg(arg0Part, sceneElem, moz, ScenePart.ROLE, ScenePart.DYNAMIC_OBJECT);			
-//				
-//			}
+			processDependentsOfSemanticArg(arg0Part, sceneElem);			
 			
 			print("000000000000000 end of preprocessArg0 0000000000000000000000");
 		}
 	}
 	
+	private void preprocessArg1(SentenceModel sentenceModel, SceneModel primarySceneModel) {
+		
+		if(sentenceModel.hasArg1()){
+			
+			print("\n111111111111111 in    preprocessArg1 11111111111111111111111");
+			
+			SentencePart arg1Part = sentenceModel.getArg1SentencePart();
+			
+			if(arg1Part == null){
+				MyError.error("the sentenceModel hasArg1 but it didn't find!" + sentenceModel);
+				return;
+			}
+			
+			//It means that it is verb (infinitive) so the processing must perform on it and its dependents!
+			if(arg1Part.isInfinitive()){
+				//TODO: complete this part later!
+				print("It is an infinitive so, the process should got performed for it again!");
+			}
+			else{
+			
+				//reasoning ScenePart from KB and adding to primarySceneModel. 
+				ScenePart scenePart = _ttsEngine.whichScenePart(arg1Part);
+				
+				if(scenePart == null){
+					MyError.error("the " + arg1Part + " ScenePart was not found!");
+					return;
+				}
+				
+				SceneElement inputSceneElement = createSceneElement(arg1Part, scenePart);
+				
+				if(inputSceneElement == null){
+					MyError.error("the " + arg1Part + " could not convert to a SceneElement!");
+					return;
+				}
+				
+				boolean isRedundantPart = primarySceneModel.hasSceneElement(inputSceneElement);
+				
+				SceneElement sceneElem = null;
+				
+				//It means that the primarySceneModel has had this ScenePart before, so we will merge the information of this part with that one
+				if(isRedundantPart){
+					print(inputSceneElement._name + " is redundant!");
+					sceneElem = primarySceneModel.getSceneElement(inputSceneElement);
+					
+					if(sceneElem == null){
+						MyError.error("primarySceneModel has " + arg1Part + " but it could not be found!");
+						return;
+					}
+					sceneElem.mergeWith(inputSceneElement);	
+				}
+				//It means that arg0Part is a newly seen ScenePart which is to be added to primarySceneModel.
+				else{
+					//creates a new ScenePart based on arg0Part and adds it to the primarySceneModel or return null if it was redundant!
+					primarySceneModel.addToPrimarySceneModel(inputSceneElement);
+					
+					sceneElem = inputSceneElement;
+				}
+				
+				//------------------- pre-processing dependents of arg1 --------------------
+				processDependentsOfSemanticArg(arg1Part, sceneElem);
+			}
+			print("\n111111111111111 end of preprocessArg1 11111111111111111111111");
+		}		
+	}
+		
+	private void preprocessArg2(SentenceModel sentenceModel, SceneModel primarySceneModel) {
+		
+		if(sentenceModel.hasArg2()){
+		
+			print("\n222222222222222 in    preprocessArg2 22222222222222222222222");
+			
+			SentencePart arg2Part = sentenceModel.getArg2SentencePart();
+			
+			if(arg2Part == null){
+				MyError.error("the sentenceModel hasArg2 but it didn't find!" + sentenceModel);
+				return;
+			}
+			
+			//It means that it is verb (infinitive) so the processing must perform on it and its dependents!
+			if(arg2Part.isInfinitive()){
+				//TODO: complete this part later!
+				print("It is an infinitive so, the process should got performed for it again!");
+			}
+			else{
+			
+				//reasoning ScenePart from KB and adding to primarySceneModel. 
+				ScenePart scenePart = _ttsEngine.whichScenePart(arg2Part);
+				
+				if(scenePart == null){
+					MyError.error("the " + arg2Part + " ScenePart was not found!");
+					return;
+				}
+				
+				SceneElement inputSceneElement = createSceneElement(arg2Part, scenePart);
+				
+				if(inputSceneElement == null){
+					MyError.error("the " + arg2Part + " could not convert to a SceneElement!");
+					return;
+				}
+				
+				boolean isRedundantPart = primarySceneModel.hasSceneElement(inputSceneElement);
+				
+				SceneElement sceneElem = null;
+				
+				//It means that the primarySceneModel has had this ScenePart before, so we will merge the information of this part with that one
+				if(isRedundantPart){
+					print(inputSceneElement._name + " is redundant!");
+				
+					sceneElem = primarySceneModel.getSceneElement(inputSceneElement);
+					
+					if(sceneElem == null){
+						MyError.error("primarySceneModel has " + arg2Part + " but it could not be found!");
+						return;
+					}
+					sceneElem.mergeWith(inputSceneElement);	
+				}
+				//It means that arg0Part is a newly seen ScenePart which is to be added to primarySceneModel.
+				else{
+					//creates a new ScenePart based on arg0Part and adds it to the primarySceneModel or return null if it was redundant!
+					primarySceneModel.addToPrimarySceneModel(inputSceneElement);
+					
+					sceneElem = inputSceneElement;
+				}		
+				
+				//------------------- pre-processing dependents of arg1 --------------------
+				processDependentsOfSemanticArg(arg2Part, sceneElem);							
+				
+			}			
+			print("\n222222222222222 end of preprocessArg2 22222222222222222222222");
+		}		
+	}
+
 	/**
 	 * @param sentenceModel guaranteed not to be null.
 	 * @param primarySceneModel guaranteed not to be null.
@@ -745,221 +848,8 @@ public class Preprocessor {
 		
 	}
 
-	private void preprocessArg1(SentenceModel sentenceModel, SceneModel primarySceneModel) {
-		
-		if(sentenceModel.hasArg1()){
-			
-			print("\n111111111111111 in    preprocessArg1 11111111111111111111111");
-			
-			SentencePart arg1Part = sentenceModel.getArg1SentencePart();
-			
-			if(arg1Part == null){
-				MyError.error("the sentenceModel hasArg1 but it didn't find!" + sentenceModel);
-				return;
-			}
-			
-			//It means that it is verb (infinitive) so the processing must perform on it and its dependents!
-			if(arg1Part.isInfinitive()){
-				//TODO: complete this part later!
-				print("It is an infinitive so, the process should got performed for it again!");
-			}
-			else{
-			
-				//reasoning ScenePart from KB and adding to primarySceneModel. 
-				ScenePart scenePart = _ttsEngine.whichScenePart(arg1Part);
-				
-				if(scenePart == null){
-					MyError.error("the " + arg1Part + " ScenePart was not found!");
-					return;
-				}
-				
-				SceneElement inputSceneElement = createSceneElement(arg1Part, scenePart);
-				
-				if(inputSceneElement == null){
-					MyError.error("the " + arg1Part + " could not convert to a SceneElement!");
-					return;
-				}
-				
-				boolean isRedundantPart = primarySceneModel.hasSceneElement(inputSceneElement);
-				
-				SceneElement sceneElem = null;
-				
-				//It means that the primarySceneModel has had this ScenePart before, so we will merge the information of this part with that one
-				if(isRedundantPart){
-					print(inputSceneElement._name + " is redundant!");
-					sceneElem = primarySceneModel.getSceneElement(inputSceneElement);
-					
-					if(sceneElem == null){
-						MyError.error("primarySceneModel has " + arg1Part + " but it could not be found!");
-						return;
-					}
-					sceneElem.mergeWith(inputSceneElement);	
-				}
-				//It means that arg0Part is a newly seen ScenePart which is to be added to primarySceneModel.
-				else{
-					//creates a new ScenePart based on arg0Part and adds it to the primarySceneModel or return null if it was redundant!
-					primarySceneModel.addToPrimarySceneModel(inputSceneElement);
-					
-					sceneElem = inputSceneElement;
-				}
-				
-				//------------------- pre-processing dependents of arg1 --------------------
-								
-				//It means that this sentencePart has some adjectives
-				if(arg1Part.hasAnyAdjectives()){
-					
-					print(arg1Part + " arg1 has some adjectives:" + arg1Part.getAdjectives());
-					
-					ArrayList<SentencePart> adjectives = arg1Part.getAdjectives();
-					
-					for(SentencePart adj:adjectives)
-						if(scenePart == ScenePart.ROLE)
-							sceneElem.addRoleMoodToRole(adj._name, adj._wsd);
-						
-						else if(scenePart == ScenePart.DYNAMIC_OBJECT || scenePart == ScenePart.STATIC_OBJECT)
-							sceneElem.addStateToSceneObject(adj._name, adj._wsd);
-					
-//						else if(scenePart == ScenePart.LOCATION)
-//							//TODO: what to do for adj of locations
-				}
-				
-				//It means that this sentencePart has some mozad_elaih
-				if(arg1Part.hasAnyMozaf_elaihs()){				
-					
-					print(arg1Part + " has mozaf_elaih: " + arg1Part.getMozaf_elaih());
-					
-					ArrayList<SentencePart> mozafs = arg1Part.getMozaf_elaih();
-					
-					for(SentencePart moz:mozafs)
-						
-						if(!moz._wsd.getName().contains(zamir_enekasi))
-							
-							if(scenePart == ScenePart.ROLE)
-								 sceneElem.addRoleMoodToRole(moz._name, moz._wsd);
-								
-							else if(scenePart == ScenePart.DYNAMIC_OBJECT || scenePart == ScenePart.STATIC_OBJECT)
-								sceneElem.addStateToSceneObject(moz._name, moz._wsd);
-						
-//							else if(scenePart == ScenePart.LOCATION)
-//								//TODO: what to do for mozaf of locations
-					
-				}				
-			}
-			print("\n111111111111111 end of preprocessArg1 11111111111111111111111");
-		}		
-	}
-		
-	private void preprocessArg2(SentenceModel sentenceModel, SceneModel primarySceneModel) {
-		if(sentenceModel.hasArg2()){
-			print("\n222222222222222 in    preprocessArg2 22222222222222222222222");
-			
-			SentencePart arg2Part = sentenceModel.getArg2SentencePart();
-			
-			if(arg2Part == null){
-				MyError.error("the sentenceModel hasArg2 but it didn't find!" + sentenceModel);
-				return;
-			}
-			
-			//It means that it is verb (infinitive) so the processing must perform on it and its dependents!
-			if(arg2Part.isInfinitive()){
-				//TODO: complete this part later!
-				print("It is an infinitive so, the process should got performed for it again!");
-			}
-			else{
-			
-				//reasoning ScenePart from KB and adding to primarySceneModel. 
-				ScenePart scenePart = _ttsEngine.whichScenePart(arg2Part);
-				
-				if(scenePart == null){
-					MyError.error("the " + arg2Part + " ScenePart was not found!");
-					return;
-				}
-				
-				SceneElement inputSceneElement = createSceneElement(arg2Part, scenePart);
-				
-				if(inputSceneElement == null){
-					MyError.error("the " + arg2Part + " could not convert to a SceneElement!");
-					return;
-				}
-				
-				boolean isRedundantPart = primarySceneModel.hasSceneElement(inputSceneElement);
-				
-				SceneElement sceneElem = null;
-				
-				//It means that the primarySceneModel has had this ScenePart before, so we will merge the information of this part with that one
-				if(isRedundantPart){
-					print(inputSceneElement._name + " is redundant!");
-				
-					sceneElem = primarySceneModel.getSceneElement(inputSceneElement);
-					
-					if(sceneElem == null){
-						MyError.error("primarySceneModel has " + arg2Part + " but it could not be found!");
-						return;
-					}
-					sceneElem.mergeWith(inputSceneElement);	
-				}
-				//It means that arg0Part is a newly seen ScenePart which is to be added to primarySceneModel.
-				else{
-					//creates a new ScenePart based on arg0Part and adds it to the primarySceneModel or return null if it was redundant!
-					primarySceneModel.addToPrimarySceneModel(inputSceneElement);
-					
-					sceneElem = inputSceneElement;
-				}		
-				
-				//------------------- pre-processing dependents of arg1 --------------------
-				
-				//It means that this sentencePart has some adjectives
-				if(arg2Part.hasAnyAdjectives()){
-					
-					print(arg2Part + " arg2 has some adjectives:" + arg2Part.getAdjectives());
-					
-					ArrayList<SentencePart> adjectives = arg2Part.getAdjectives();
-					
-					for(SentencePart adj:adjectives)
-						if(scenePart == ScenePart.ROLE)
-							sceneElem.addRoleMoodToRole(adj._name, adj._wsd);
-						
-						else if(scenePart == ScenePart.DYNAMIC_OBJECT || scenePart == ScenePart.STATIC_OBJECT)
-							sceneElem.addStateToSceneObject(adj._name, adj._wsd);
-					
-//						else if(scenePart == ScenePart.LOCATION)
-//							//TODO: what to do for adj of LOCATIONs
-					
-//						else if(scenePart == ScenePart.SCENE_GOAL)
-//							//TODO: what to do for adj of SCENE_GOAL
-				}
-				
-				//It means that this sentencePart has some mozad_elaih
-				if(arg2Part.hasAnyMozaf_elaihs()){				
-					
-					print(arg2Part + " has mozaf_elaih: " + arg2Part.getMozaf_elaih());
-					
-					ArrayList<SentencePart> mozafs = arg2Part.getMozaf_elaih();
-					
-					for(SentencePart moz:mozafs){
-						
-						if(!moz._wsd.getName().contains(zamir_enekasi)){
-							
-							if(scenePart == ScenePart.ROLE)
-								 sceneElem.addRoleMoodToRole(moz._name, moz._wsd);
-								
-							else if(scenePart == ScenePart.DYNAMIC_OBJECT || scenePart == ScenePart.STATIC_OBJECT)
-								sceneElem.addStateToSceneObject(moz._name, moz._wsd);
-						
-//							else if(scenePart == ScenePart.LOCATION)
-//								//TODO: what to do for mozaf of LOCATION
-						
-//							else if(scenePart == ScenePart.SCENE_GOAL)
-//								//TODO: what to do for mozaf of SCENE_GOAL
-						}
-					}
-				}				
-				
-			}			
-			print("\n222222222222222 end of preprocessArg2 22222222222222222222222");
-		}		
-	}
 
+	
 	private void preprocessArg3(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		// TODO Auto-generated method stub
 		
