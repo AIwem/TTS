@@ -47,8 +47,7 @@ public class SceneElement {
 		try{
 			Role role = (Role)this;
 			RoleAction roleAct = new RoleAction(name, node); 
-			if(role.addRole_action(roleAct))
-				System.out.println("RoleAction " + roleAct + " action added to the " + role);
+			role.addRole_action(roleAct);			
 		}
 		catch(Exception e){
 			System.out.println(e);
@@ -59,8 +58,7 @@ public class SceneElement {
 		try{
 			DynamicObject dynObj = (DynamicObject)this;
 			ObjectAction objAct = new ObjectAction(name, node); 
-			if(dynObj.addObejct_action(objAct))
-				System.out.println("RoleAction " + objAct + " action added to the " + dynObj);
+			dynObj.addObejct_action(objAct);			
 		}
 		catch(Exception e){
 			System.out.println(e);
@@ -71,56 +69,53 @@ public class SceneElement {
 		try{
 			Role role = (Role)this;
 			RoleMood rm = new RoleMood(name, node);
-			if(role.addRole_mood(rm))
-				 System.out.println("RoleMood " + rm + " added to " + role._name);		 
-			 
+			role.addRole_mood(rm);
 		}
 		catch(Exception e){			
 			System.out.println(e);		
 		}
 	}
 	
-	public void addStateToDynamicObject(String name, Node node) {
+	public void addStateToSceneObject(String name, Node node) {
 		try{
-			DynamicObject dynobj = (DynamicObject)this;			
+			SceneObject sceObj = (SceneObject)this;			
 			ObjectState objState = new ObjectState(name, node);	
-			if(dynobj.setCurrent_state(objState))
-				System.out.println("ObjectState " + objState + " added to " + dynobj._name);
+			sceObj.setCurrent_state(objState);				
 		}
 		catch(Exception e){			
 			System.out.println(e);		
 		}	
 	}
 
-	public void addStateToStaticObject(String name, Node node) {
-		try{
-			StaticObject staobj = (StaticObject)this;			
-			ObjectState objState = new ObjectState(name, node);	
-			if(staobj.setCurrent_state(objState))
-				System.out.println("ObjectState " + objState + " added to " + staobj._name);
-		}
-		catch(Exception e){			
-			System.out.println(e);		
-		}
-		
-	}
-	
 	@Override
 	public String toString() {
 		return  _node + "=  " + _name;
 	}
 
 	public boolean equals(SceneElement sceneElement) {
-		if(this._node != null && sceneElement != null && this._node == sceneElement._node)
+		if(this._node != null && sceneElement != null && this._node.equalsRelaxed(sceneElement._node))
 			return true;
 		return false;
 	}
 	
+	/**
+	 * this method merges the SceneElement which is called on with its parameter, element.
+	 * in merging the SceneElement which is called on is prior to input parameter, element.
+	 * It means that only when a parameter in prior SceneElement is null it is replaced with the element parameter value.
+	 * @param element
+	 */
 	public void mergeWith(SceneElement element){
 		if(element == null){
 			MyError.error("can not merge null with SceneElement!");
 			return;
 		}
+		
+		if(this._name == null || this._name.equals(""))
+			if(element._name != null && !element._name.equals(""))
+				this._name = element._name;
+		
+		if(this._node == null && element._node != null)
+			this._node = element._node;
 										
 		if(this.scenePart == ScenePart.ROLE && element.scenePart == ScenePart.ROLE){
 			Role role = (Role) this;
@@ -140,7 +135,7 @@ public class SceneElement {
 		}
 		else if(this.scenePart == ScenePart.TIME && element.scenePart == ScenePart.TIME){
 			Time time = (Time)this;
-			time.mergWith((Time)element);
+			time.mergeWith((Time)element);
 		}
 	}
 }

@@ -93,7 +93,7 @@ public class SceneModel {
 			return null;
 		
 		for(Role role:this.roles)			
-			if(role._node == role_node)
+			if(role._node.equalsRelaxed(role_node))
 				return role;
 		
 		MyError.error("this SceneModel has no such a " + role_node + " Role.");
@@ -109,7 +109,7 @@ public class SceneModel {
 			return null;
 		
 		for(StaticObject staObj: this.static_objects)
-			if(staObj._node == static_object_node)
+			if(staObj._node.equalsRelaxed(static_object_node))
 				return staObj;
 		
 		MyError.error("this SceneModel has no such a " + static_object_node + " StaticObject.");
@@ -125,7 +125,7 @@ public class SceneModel {
 			return null;
 		
 		for(DynamicObject dynObj: this.dynamic_objescts)
-			if(dynObj._node == dynamin_object_node)
+			if(dynObj._node.equalsRelaxed(dynamin_object_node))
 				return dynObj;
 		
 		MyError.error("this SceneModel has no such a " + dynamin_object_node + " DynamicObject.");
@@ -149,7 +149,7 @@ public class SceneModel {
 			return null;
 		
 		for(SceneEmotion sceEmo: this.scene_emotions)
-			if(sceEmo._node == scene_emotion_node)
+			if(sceEmo._node.equalsRelaxed(scene_emotion_node))
 				return sceEmo;
 		
 		MyError.error("this SceneModel has no such a " + scene_emotion_node + " SceneEmotion.");
@@ -166,7 +166,7 @@ public class SceneModel {
 			return null;
 		
 		for(SceneGoal sceGoal: this.scene_goals)
-			if(sceGoal._node == scene_goal_node)
+			if(sceGoal._node.equalsRelaxed(scene_goal_node))
 				return sceGoal;
 		
 		MyError.error("this SceneModel has no such a " + scene_goal_node + " SceneGoal.");
@@ -184,29 +184,29 @@ public class SceneModel {
 		}								
 		
 		for(Role role:roles)
-			if(role._node == node)
+			if(role._node.equalsRelaxed(node))
 				return role;
 		
 		for(DynamicObject dynObj:dynamic_objescts)
-			if(dynObj._node == node)
+			if(dynObj._node.equalsRelaxed(node))
 				return dynObj;
 		
 		for(StaticObject staObj:static_objects)
-			if(staObj._node == node)
+			if(staObj._node.equalsRelaxed(node))
 				return staObj;
 		
-		if(location != null && location._node == node)
+		if(location != null && location._node.equalsRelaxed(node))
 			return location;
 		
-		if(time != null && time._node == node)
+		if(time != null && time._node.equalsRelaxed(node))
 			return time;
 		
 		for(SceneEmotion emot:scene_emotions)
-			if(emot._node == node)
+			if(emot._node.equalsRelaxed(node))
 				return emot;
 		
 		for(SceneGoal goal:scene_goals)
-			if(goal._node == node)
+			if(goal._node.equals(node))
 				return goal;
 		
 		return null;
@@ -279,7 +279,7 @@ public class SceneModel {
 		if(role != null)
 			if(!hasRole(role)){
 				this.roles.add(role);
-				print(role._name + " added to SceneModel.");
+				print(role._name + " added to SceneModel as Role.");
 			}
 			else
 				print("SceneModel has this " + role + " Role before!");
@@ -299,7 +299,7 @@ public class SceneModel {
 		if(static_object != null)
 			if(!hasStatic_object(static_object)){
 				this.static_objects.add(static_object);
-				print(static_object._name + " added to SceneModel.");
+				print(static_object._name + " added to SceneModel as Static_object.");
 			}
 			else
 				print("SceneModel has this " + static_object + " Static_object before!");
@@ -318,7 +318,7 @@ public class SceneModel {
 		if(dynamic_object != null)
 			if(!hasDynamic_object(dynamic_object)){
 				this.dynamic_objescts.add(dynamic_object);
-				print(dynamic_object._name + " added to SceneModel.");
+				print(dynamic_object._name + " added to SceneModel as Dynamic_object.");
 			}
 			else
 				print("SceneModel has this " + dynamic_object + " Dynamic_object before!");
@@ -337,7 +337,7 @@ public class SceneModel {
 		if(scene_goal != null)
 			if(!hasScene_goal(scene_goal)){
 				this.scene_goals.add(scene_goal);
-				print(scene_goal._name + " added to SceneModel.");
+				print(scene_goal._name + " added to SceneModel as Scene_goal.");
 			}
 			else
 				print("SceneModel has this " + scene_goal + " Scene_goal before!");
@@ -356,7 +356,7 @@ public class SceneModel {
 		if(scene_emotion != null)
 			if(!hasScene_emotion(scene_emotion)){
 				this.scene_emotions.add(scene_emotion);
-				print(scene_emotion._name + " added to SceneModel.");
+				print(scene_emotion._name + " added to SceneModel as Scene_emotion.");
 			}
 			else
 				print("SceneModel has this " + scene_emotion + " Scene_emotion before!");
@@ -429,7 +429,7 @@ public class SceneModel {
 			return false;
 		
 		for(Role role:this.roles)
-			if(role._node == role_node)
+			if(role._node.equalsRelaxed(role_node))
 				return true;
 		return false;
 	}
@@ -449,7 +449,7 @@ public class SceneModel {
 			return false;
 		
 		for(DynamicObject dynObj: this.dynamic_objescts)
-			if(dynObj._node == dynamin_object_node)
+			if(dynObj._node.equalsRelaxed(dynamin_object_node))
 				return true;
 		return false;
 	}
@@ -471,7 +471,7 @@ public class SceneModel {
 			return false;
 		
 		for(StaticObject staObj: this.static_objects)
-			if(staObj._node == static_object_node)
+			if(staObj._node.equalsRelaxed(static_object_node))
 				return true;
 		return false;
 	}
@@ -502,7 +502,7 @@ public class SceneModel {
 			return false;
 		
 		for(SceneEmotion sceEmo: this.scene_emotions)
-			if(sceEmo._node == scene_emotion_node)
+			if(sceEmo._node.equalsRelaxed(scene_emotion_node))
 				return true;
 		return false;
 	}
@@ -524,7 +524,7 @@ public class SceneModel {
 			return false;
 		
 		for(SceneGoal sceGoal: this.scene_goals)
-			if(sceGoal._node == scene_goal_node)
+			if(sceGoal._node.equalsRelaxed(scene_goal_node))
 				return true;	
 			return false;
 	}
@@ -568,7 +568,7 @@ public class SceneModel {
 		
 		else if(scenePart == ScenePart.LOCATION)
 			if(getLocation() != null)
-				if(getLocation()._node == sceneElement._node)
+				if(getLocation()._node.equalsRelaxed(sceneElement._node))
 					return true;
 				else
 					return false;
@@ -576,7 +576,7 @@ public class SceneModel {
 		
 		else if(scenePart == ScenePart.TIME)
 			if(getTime() != null)
-				if(getTime()._node == sceneElement._node)
+				if(getTime()._node.equalsRelaxed(sceneElement._node))
 					return true;
 				else
 					return false;						
@@ -591,9 +591,10 @@ public class SceneModel {
 
 	@Override
 	public String toString() {
-		String st = "roles= "; 
+		String st = "roles= ["; 
 		for (Role r : this.roles)
-			st += r; //"\n" + r;
+			st += "\n" + "\t" + r;
+		st += "]";
 		
 		st+= "\ndynamic_objs= ";
 		for(DynamicObject dOb:this.dynamic_objescts)

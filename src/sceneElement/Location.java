@@ -16,7 +16,7 @@ public class Location extends SceneElement{
 		return  "[" + _node + "=  " + _name + "]";
 	}
 	
-	public void mergWith(Location location){
+	public void mergeWith(Location location){
 		if(location == null)
 			return;
 		//TODO: check what else shall I do for this case!

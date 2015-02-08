@@ -87,6 +87,7 @@ public class Role extends SceneElement{
 		
 			if(!hasRole_action(role_action)){
 				this.role_actions.add(role_action);
+				System.out.println("RoleAction " + role_action + " added to " + this._name);
 				return true;
 			}
 			else
@@ -102,6 +103,7 @@ public class Role extends SceneElement{
 		
 			if(!hasRole_emotion(role_emotion)){
 				this.role_emotions.add(role_emotion);
+				System.out.println("RoleEmotion " + role_emotion + " added to " + this._name);
 				return true;
 			}
 			else
@@ -117,6 +119,7 @@ public class Role extends SceneElement{
 			
 			if(!hasRole_goals(role_goal)){
 				this.role_goals.add(role_goal);
+				System.out.println("RoleGoal " + role_goal + " added to " + this._name);
 				return true;
 			}
 			else
@@ -132,6 +135,7 @@ public class Role extends SceneElement{
 			
 			if(!hasRole_mood(role_mode)){
 				this.role_moods.add(role_mode);
+				System.out.println("RoleMood " + role_mode + " added to " + this._name);
 				return true;
 			}
 			else

@@ -571,18 +571,18 @@ public class SentenceModel{
 	public SentencePart getSentencePart(Node partNode) {		
 		
 		for(SentencePart sbj:subjects)
-			if(sbj != null && sbj._wsd == partNode)
+			if(sbj != null && sbj._wsd.equalsRelaxed(partNode))
 				return sbj;				
 		
 		for(SentencePart obj:objects)
-			if(obj != null && obj._wsd == partNode)
+			if(obj != null && obj._wsd.equalsRelaxed(partNode))
 				return obj;
 		
 		for(SentencePart adv:adverbs)
-			if(adv != null && adv._wsd == partNode)
+			if(adv != null && adv._wsd.equalsRelaxed(partNode))
 				return adv;
 		
-		if(verb != null && verb._wsd == partNode)
+		if(verb != null && verb._wsd.equalsRelaxed(partNode))
 			return verb;
 				
 		return null;

@@ -208,7 +208,7 @@ public class SentencePart {
 	public boolean hasAdjective(Node adj_node){
 		if(!Common.isEmpty(adjectives))
 			for(SentencePart adj:adjectives)
-				if(adj._wsd != null && adj._wsd == adj_node)
+				if(adj._wsd != null && adj._wsd.equalsRelaxed(adj_node))
 					return true;
 		return false;		
 	}
@@ -220,7 +220,7 @@ public class SentencePart {
 	public boolean hasMozaf_elaih(Node moz_node){
 		if(!Common.isEmpty(mozaf_elaih))
 			for(SentencePart moz:mozaf_elaih)
-				if(moz._wsd != null && moz._wsd == moz_node)
+				if(moz._wsd != null && moz._wsd.equalsRelaxed(moz_node))
 					return true;
 		return false;		
 	}
@@ -278,7 +278,7 @@ public class SentencePart {
 	public SentencePart getAdjective(Node adj_node){
 		if(!Common.isEmpty(adjectives))
 			for(SentencePart adj:adjectives)
-				if(adj._wsd == adj_node)
+				if(adj._wsd.equalsRelaxed(adj_node))
 					return adj;
 		return null;		
 	}
@@ -290,7 +290,7 @@ public class SentencePart {
 	public SentencePart getMozaf_elaih(Node moz_node){
 		if(!Common.isEmpty(mozaf_elaih))
 			for(SentencePart moz:mozaf_elaih)
-				if(moz._wsd == moz_node)
+				if(moz._wsd.equalsRelaxed(moz_node))
 					return moz;
 		return null;		
 	}
@@ -345,7 +345,7 @@ public class SentencePart {
 			if(_name.contains("وارد شد"))
 				return VerbType.MORAKAB;
 			if(_name.contains("داد"))
-				return VerbType.BASIT_RABTI;					
+				return VerbType.BASIT;					
 					
 		}
 		return VerbType.UNKNOWN;

@@ -15,7 +15,7 @@ public class Time  extends SceneElement{
 		return  "[" + _node + "=  " + _name + "]";
 	}	
 	
-	public void mergWith(Time time){
+	public void mergeWith(Time time){
 		if(time == null)
 			return;
 		//TODO: check what else shall I do for this case!

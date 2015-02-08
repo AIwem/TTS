@@ -604,7 +604,7 @@ public class TTSEngine {
 		if(node == null)
 			return false;
 		
-		print(node + "~~~~~~~~~~~~~~~~in isHuman ~~~~~~~~~~~~~~~~~");
+		print(node + ".............. in isHuman ...........................");
 		
 		PlausibleQuestion pq = new PlausibleQuestion();
 		pq.descriptor = KnowledgeBase.HPR_ISA;
@@ -633,7 +633,7 @@ public class TTSEngine {
 		if(node == null)
 			return false;
 		
-		print(node + "~~~~~~~~~~~~~~~~in isAnimal ~~~~~~~~~~~~~~~~~");
+		print(node + ".............. in isAnimal ..........................");
 		
 		PlausibleQuestion pq = new PlausibleQuestion();
 		pq.descriptor = KnowledgeBase.HPR_ISA;
@@ -662,7 +662,7 @@ public class TTSEngine {
 		if(node == null)
 			return false;
 		
-		print(node + "~~~~~~~~~~~~~~~~in isLocation ~~~~~~~~~~~~~~~~~");
+		print(node + ".............. in isLocation ........................");
 		
 		PlausibleQuestion pq = new PlausibleQuestion();
 		pq.descriptor = KnowledgeBase.HPR_ISA;
@@ -706,8 +706,8 @@ public class TTSEngine {
 	private boolean isTime(Node node) {
 		if(node == null)
 			return false;
-		
-		print(node + "~~~~~~~~~~~~~~~~in isTime ~~~~~~~~~~~~~~~~~");
+				
+		print(node + ".............. in isTime ............................");
 		
 		PlausibleQuestion pq = new PlausibleQuestion();
 		pq.descriptor = KnowledgeBase.HPR_ISA;
@@ -810,10 +810,13 @@ public class TTSEngine {
 	 * 		then calls getArg0ScenePart() method. 
 	 * </ul>
 	 * <ul> if semanticTag is ARG1,  
-	 * 		then calls getAdvScenePart() method.
+	 * 		then calls getArg1ScenePart() method.
 	 * </ul> 		  			
-	 * <ul>if semanticTag is ...,
-	 *  	then calls getVerbScenePart() method.
+	 * <ul>if semanticTag is ARG2,
+	 *  	then calls getArg2ScenePart() method.
+	 * </ul>
+	 * <ul>if semanticTag is ARG3,
+	 *  	then calls getArg3ScenePart() method.
 	 * </ul>
 	 *  
 	 * @param pureNode the pure node fetched from kb.
@@ -823,7 +826,7 @@ public class TTSEngine {
 	 */
 	private ScenePart getScenePart(Node pureNode, POS pos, SemanticTag semanticTag) {
 		
-		print(pureNode + "~~~~~~~~~~~~~~~ in getScenePart ~~~~~~~~~~~~ " + semanticTag);
+		print(pureNode + " ............. in getScenePart ........... " + semanticTag);
 		
 		if(pureNode == null || pos == null || semanticTag == null)
 			return ScenePart.UNKNOWN;
@@ -842,22 +845,26 @@ public class TTSEngine {
 			
 			if(mainSemTag.isArg1())
 				return getArg1ScenePart(pureNode, pos);
+			
+			if(mainSemTag.isArg2())				
+				return getArg2ScenePart(pureNode, mainSemTag, pos);			
 		}
 		//It is a subSemanticTag
 		else if(semanticTag.isSubSemanticTag()){
-			
+			MyError.error("SemanticTag here should only be MainSemanticTag not subSemanticTag!");
 		}				
 		return ScenePart.UNKNOWN;
-	}
-		
+	}		
+	
 	/**
 	 * recognizing which scenePart has this ARG0 node: 
 	 * a ROLE, DYNAMIC_OBJECT?
+	 * 
 	 * because this is ARG0 node so it must perform an action.
 	 * only ROLE or DYNAMIC_OBJECT can perform action.
 	 * this method checks: 
 	 * <ul> if node pos is NOUN, then checks weather
-	 * 		<li> isHuman, than return ScenePart.ROLE </li>
+	 * 		<li> if isHuman, then returns ScenePart.ROLE </li>
 	 * 		<li> otherwise, returns ScenePart.DYNAMIC_OBJECT </li> 		
 	 * </ul>
 	 *  
@@ -891,18 +898,17 @@ public class TTSEngine {
 	}
 	
 	/**
-	 * recognizing which scenePart has this ARG0 node: 
+	 * recognizing which scenePart has this ARG1 node: 
 	 * a ROLE, DYNAMIC_OBJECT, STATIC_OBJECT, LOCATION?
+	 * 
 	 * because this is ARG1 node so the action is performed on it.
 	 * only ROLE, DYNAMIC_OBJECT, STATIC_OBJECT, or LOCATION can got action performed on!
 	 * this method checks: 
 	 * <ul> if node pos is NOUN, then checks weather
-	 * 		<li> isHuman, than return ScenePart.ROLE </li>
-	 * 		<li> isAnimal, than return ScenePart.DYNAMIC_OBJECT </li>
-	 * 		<li> isLocation, than return ScenePart.LOCATION </li>
+	 * 		<li> if isHuman, then returns ScenePart.ROLE </li>
+	 * 		<li> if isAnimal, then returns ScenePart.DYNAMIC_OBJECT </li>
+	 * 		<li> if isLocation, then returns ScenePart.LOCATION </li>
 	 * 		<li> otherwise, returns ScenePart.STATIC_OBJECT </li> 		
-	 * </ul>
-	 * <ul> if node pos is VERB (means infinitive) then starts this process for that node again!
 	 * </ul>
 	 *  
 	 * @param pureNode the pure node fetched from kb.
@@ -927,9 +933,6 @@ public class TTSEngine {
 
 		
 		if(pos == POS.NOUN){
-			//TODO: if noun is infinitve!
-//			if()
-			
 			if(isHuman(pureNode))
 				return ScenePart.ROLE;
 			if(isAnimal(pureNode))
@@ -941,6 +944,56 @@ public class TTSEngine {
 		
 		return ScenePart.UNKNOWN;
 	}
+	
+	/**
+	 * recognizing which scenePart has this ARG2 node:
+	 * a ROLE, DYNAMIC_OBJECT, STATIC_OBJECT, LOCATION?
+	 * 
+	 * because this is ARG2 node so it can be any of extend, obj2, beneficiary, instrument, attribute, and goal-endstate.
+	 * this method checks: 
+	 * <ul> if ARG2 is ARG2_OBJ2 or ARG2_BENEFICIARY, 
+	 * 		<li> if isHuman, then returns ScenePart.ROLE </li>
+	 * 		<li> if isAnimal, then returns ScenePart.DYNAMIC_OBJECT </li>
+	 * 		<li> if isLocation, then returns ScenePart.LOCATION </li>
+	 * 		<li> otherwise, returns ScenePart.STATIC_OBJECT </li> 		
+	 * </ul>
+	 * <ul> if ARG2 is ARG2_instrument
+	 *		<li>then returns ScenePart.STATIC_OBJECT</li> 
+	 * </ul>
+	 *  
+	 * @param pureNode the pure node fetched from kb.
+	 * @param semanticTag 
+	 * @param pos the part of speech this node has.
+	 * @return the ScenePart of pureNode, including ROLE, DYNAMIC_OBJECT, or UNKNOWN. no null will be returned.
+	 */
+	private ScenePart getArg2ScenePart(Node pureNode, MainSemanticTag semanticTag, POS pos) {
+		
+		if(semanticTag == MainSemanticTag.ARG2_OBJ2 || semanticTag == MainSemanticTag.ARG2_BENEFICIARY){
+			
+			if(pureNode.getName().equals("پسر#n2"))				
+				return ScenePart.ROLE;
+			if(pureNode.getName().equals("مادر#n1"))
+				return ScenePart.ROLE;
+			
+			if(isHuman(pureNode))
+				return ScenePart.ROLE;
+			if(isAnimal(pureNode))
+				return ScenePart.DYNAMIC_OBJECT;
+			if(isLocation(pureNode))
+				return  ScenePart.LOCATION;
+			return ScenePart.STATIC_OBJECT;
+		}
+		else if(semanticTag == MainSemanticTag.ARG2_INSTRUMENT){
+			return ScenePart.STATIC_OBJECT;
+		}
+		else if(semanticTag == MainSemanticTag.ARG2_GOAL_ENDSTATE){
+			return ScenePart.SCENE_GOAL;
+		}
+		
+		return ScenePart.UNKNOWN;
+	}
+
+	
 	/**
 	 * recognizing that which scenePart has the node: 
 	 * a ROLE, DYNAMIC_OBJECT, STATIC_OBJECT, ACTION, LOCATION, TIME, EMOTION, GOAL or UNKNOWN?!
@@ -1128,7 +1181,7 @@ public class TTSEngine {
 	
 	public ScenePart whichScenePart(SentencePart sentencePart){
 
-		print(sentencePart + " ............ in whichScenePart ....................");
+		print(sentencePart + " ............. in whichScenePart ....................");
 		
 		if(sentencePart == null)
 			return ScenePart.UNKNOWN;

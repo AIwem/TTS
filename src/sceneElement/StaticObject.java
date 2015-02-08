@@ -17,8 +17,11 @@ public class StaticObject extends SceneObject {
 				" object_states=  " + object_states + "]";
 	}
 	
-	public void mergeWith(StaticObject staObj) {
+	public void mergeWith(StaticObject statObj) {
+		if(statObj == null)
+			return;
 		
+		super.mergeWith(statObj);			
 	}
 
 }

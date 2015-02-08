@@ -26,7 +26,7 @@ public class DynamicObject extends SceneObject{
 			return null; 
 		
 		for(ObjectAction act:this.object_actions)
-			if(act._node == action_node)
+			if(act._node.equalsRelaxed(action_node))
 				return act;
 		
 		MyError.error(this + " DynamicObject has no such a " + action_node + " action.");
@@ -48,6 +48,7 @@ public class DynamicObject extends SceneObject{
 		if(action != null)
 			if(!hasObject_action(action)){
 				this.object_actions.add(action);
+				System.out.println("ObjectAction " + action + " added to " + this._name);
 				return true;
 			}
 			else
@@ -62,18 +63,14 @@ public class DynamicObject extends SceneObject{
 				" object_states=  " + object_states + "]";
 	}
 
-	/**
-	 * this method merges its caller with dynObj
-	 * 
-	 * @param dynObj the DynamicObject to be merged with its caller.
-	 */
-	public void mergeWith(DynamicObject dynObj) {
+	public void mergeWith(DynamicObject dynObj) {		
 		if(dynObj == null)
 			return;
 		
-		for(ObjectAction act:dynObj.getObject_actions())
-			this.addObejct_action(act);
+		super.mergeWith(dynObj);
 		
+		for(ObjectAction act:dynObj.getObject_actions())
+			this.addObejct_action(act);			
 	}
 	
 }
