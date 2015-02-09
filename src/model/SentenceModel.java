@@ -250,11 +250,47 @@ public class SentenceModel{
 		return null;
 	}
 	
+	public SentencePart getArg3SentencePart() {		
+		MainSemanticTag arg3 = getArg3();
+		if(arg3 != null){
+			for(SentencePart sbj:subjects)
+				if(sbj != null && sbj._semanticTag != null && sbj._semanticTag.name().equals(arg3.name()))
+					return sbj;
+			
+			for(SentencePart obj:objects)
+				if(obj != null && obj._semanticTag != null && obj._semanticTag.name().equals(arg3.name()))
+					return obj;
+			
+			for(SentencePart adv:adverbs)
+				if(adv != null && adv._semanticTag != null && adv._semanticTag.name().equals(arg3.name()))
+					return adv;
+		}	
+		return null;
+	}
+	
 	public MainSemanticTag getArg4(){
 		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
 		for(MainSemanticTag exist:existingMainArgs)
 			if(exist.name().startsWith("ARG4"))
 				return exist;
+		return null;
+	}
+	
+	public SentencePart getArg4SentencePart() {		
+		MainSemanticTag arg4 = getArg4();
+		if(arg4 != null){
+			for(SentencePart sbj:subjects)
+				if(sbj != null && sbj._semanticTag != null && sbj._semanticTag.name().equals(arg4.name()))
+					return sbj;
+			
+			for(SentencePart obj:objects)
+				if(obj != null && obj._semanticTag != null && obj._semanticTag.name().equals(arg4.name()))
+					return obj;
+			
+			for(SentencePart adv:adverbs)
+				if(adv != null && adv._semanticTag != null && adv._semanticTag.name().equals(arg4.name()))
+					return adv;
+		}	
 		return null;
 	}
 	
@@ -586,6 +622,39 @@ public class SentenceModel{
 		return null;
 	}
 	
+	public boolean hasSubSemanticArg(SubSemanticTag subSemanticArg) {
+		if(subSemanticArg == null)
+			return false;
+		
+		ArrayList<SubSemanticTag> existingSubArgs = this.getExistingSubSematicArgs();
+		
+		for(SubSemanticTag exist:existingSubArgs)
+			if(exist == subSemanticArg)
+				return true;
+		
+		return false;
+	}
+		
+	public SentencePart getSubSemanticArg(SubSemanticTag subSemanticArg) {	
+		if(subSemanticArg == null)
+			return null;
+			
+		for(SentencePart sbj:subjects)
+			if(sbj != null && sbj._semanticTag != null && sbj._semanticTag.name().equals(subSemanticArg.name()))
+				return sbj;
+		
+		for(SentencePart obj:objects)
+			if(obj != null && obj._semanticTag != null && obj._semanticTag.name().equals(subSemanticArg.name()))
+				return obj;
+		
+		for(SentencePart adv:adverbs)
+			if(adv != null && adv._semanticTag != null && adv._semanticTag.name().equals(subSemanticArg.name()))
+				return adv;
+		
+		return null;
+	}
+
+	
 	/**
 	 * This method gets sentence object and its different Parts, 
 	 * then places each SentencePart object in its proper syntaxTag term.
@@ -675,9 +744,7 @@ public class SentenceModel{
 				wsd += "null, ";
 		
 		return wsd; //rs + "\n" + wsd;
-	}
-
-	
+	}	
 	
 //	public static void main(String[] args){
 //		SentenceModel sen1 = new SentenceModel("");

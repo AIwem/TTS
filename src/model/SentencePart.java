@@ -190,6 +190,18 @@ public class SentencePart {
 		return false;		
 	}
 	
+	public boolean isAdjective(){
+		if(_pos == POS.ADJECTIVE || _syntaxTag == DependencyRelationType.NPREMOD || _syntaxTag == DependencyRelationType.NPOSTMOD)
+			return true;
+		return false;
+	}
+	
+	public boolean isMozaf_elaih(){
+		if(_syntaxTag == DependencyRelationType.MOZ)
+			return true;
+		return false;
+	}
+	
 	public boolean isInfinitive() {
 		//TODO: correct this part!
 		if(_name.contains("دویدن"))
@@ -465,12 +477,12 @@ public class SentencePart {
 		
 		if(sub_parts != null)			
 			for(SentencePart subPart:sub_parts)
-				if(subPart._syntaxTag == DependencyRelationType.MOZ){
+				if(subPart.isMozaf_elaih()){
 					System.out.println("first here in setSub_parts!");
 					hasMoz = true;
 					addMozaf_elaih(subPart);					
 				}
-				else if(subPart._syntaxTag == DependencyRelationType.NPREMOD || subPart._syntaxTag == DependencyRelationType.NPOSTMOD){
+				else if(subPart.isAdjective()){
 					System.out.println("first here in setSub_parts!");
 					hasAdj = true;
 					addAdjective(subPart);							

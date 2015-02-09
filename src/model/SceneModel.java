@@ -35,6 +35,8 @@ public class SceneModel {
 	
 	private Location location;
 	
+	private Location nextLocation;
+	
 	private Time time;
 	
 	private ArrayList<SceneGoal> scene_goals = new ArrayList<SceneGoal>();
@@ -68,6 +70,10 @@ public class SceneModel {
 
 	public void setLocation(Location location) {		
 		this.location = location;
+	}
+	
+	public void setNextLocation(Location location) {		
+		this.nextLocation = location;
 	}
 
 	public void setTime(Time time) {
@@ -136,6 +142,10 @@ public class SceneModel {
 		return location;
 	}
 
+	public Location getNextLocation() {
+		return nextLocation;
+	}
+	
 	public Time getTime() {
 		return time;
 	}
@@ -394,23 +404,23 @@ public class SceneModel {
 			addStatic_object(staObj);
 		}
 		else if(sceneElement.scenePart == ScenePart.LOCATION){//TODO: check what else shall I do for this case!			
-			if(getLocation() != null){
-				MyError.error("the primarySceneModel has had a location before!" + getLocation());
-				return;
-			}
-
-			Location location = (Location) sceneElement;
-			setLocation(location);
+//			if(getLocation() != null){
+//				MyError.error("the primarySceneModel has had a location before!" + getLocation());
+//				return;
+//			}
+//
+//			Location location = (Location) sceneElement;
+//			setLocation(location);
 			
 		}
 		else if(sceneElement.scenePart == ScenePart.TIME){//TODO: check what else shall I do for this case!
-			if(getTime() != null){
-				MyError.error("the primarySceneModel has had a time before!" + getTime());
-				return;
-			}
-
-			Time time = (Time) sceneElement;
-			setTime(time);			
+//			if(getTime() != null){
+//				MyError.error("the primarySceneModel has had a time before!" + getTime());
+//				return;
+//			}
+//
+//			Time time = (Time) sceneElement;
+//			setTime(time);			
 		}
 		else if(sceneElement.scenePart == ScenePart.SCENE_EMOTION){
 			SceneEmotion sceEmo = (SceneEmotion) sceneElement;			
@@ -604,7 +614,8 @@ public class SceneModel {
 		for(StaticObject stOb:this.static_objects)
 			st += stOb; //"\n" + stOb;
 		
-		st += "\nlocation= " + location + 
+		st += "\nlocation= " + location +
+		"\nnextLocation= " + nextLocation +
 		"\ntime= " + time +
 		"\nscene_goals= " + scene_goals + 
 		"\nscene_emotions= " + scene_emotions + "]\n";

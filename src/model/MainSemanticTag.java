@@ -38,8 +38,8 @@ public enum MainSemanticTag {
 	ARG3_BENEFICIARY_P,
 	ARG3_INSTRUMENT,		//Instrument of event
 	ARG3_INSTRUMENT_P,
-	ARG4_ATTRIBUTE,			//Attribute of event
-	ARG4_ATTRIBUTE_P,		
+	ARG3_ATTRIBUTE,			//Attribute of event
+	ARG3_ATTRIBUTE_P,		
 	
 	
 	ARG4_ENDPOINT,					// Endpoint of event

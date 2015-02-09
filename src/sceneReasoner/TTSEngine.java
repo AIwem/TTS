@@ -847,7 +847,13 @@ public class TTSEngine {
 				return getArg1ScenePart(pureNode, pos);
 			
 			if(mainSemTag.isArg2())				
-				return getArg2ScenePart(pureNode, mainSemTag, pos);			
+				return getArg2ScenePart(pureNode, mainSemTag, pos);
+			
+			if(mainSemTag.isArg3())
+				return getArg3ScenePart(pureNode, mainSemTag, pos);
+			
+			if(mainSemTag.isArg4())
+				return getArg4ScenePart(pureNode);
 		}
 		//It is a subSemanticTag
 		else if(semanticTag.isSubSemanticTag()){
@@ -892,6 +898,7 @@ public class TTSEngine {
 		if(pos == POS.NOUN){
 			if(isHuman(pureNode))
 				return ScenePart.ROLE;
+			
 			return ScenePart.DYNAMIC_OBJECT; 
 		}			
 		return ScenePart.UNKNOWN;
@@ -935,10 +942,13 @@ public class TTSEngine {
 		if(pos == POS.NOUN){
 			if(isHuman(pureNode))
 				return ScenePart.ROLE;
+			
 			if(isAnimal(pureNode))
 				return ScenePart.DYNAMIC_OBJECT;
+			
 			if(isLocation(pureNode))
 				return  ScenePart.LOCATION;
+			
 			return ScenePart.STATIC_OBJECT;
 		}
 		
@@ -951,13 +961,13 @@ public class TTSEngine {
 	 * 
 	 * because this is ARG2 node so it can be any of extend, obj2, beneficiary, instrument, attribute, and goal-endstate.
 	 * this method checks: 
-	 * <ul> if ARG2 is ARG2_OBJ2 or ARG2_BENEFICIARY, 
+	 * <ul> if ARG2 is ARG2_OBJ2 or ARG2_BENEFICIARY and pos in NOUN,
 	 * 		<li> if isHuman, then returns ScenePart.ROLE </li>
 	 * 		<li> if isAnimal, then returns ScenePart.DYNAMIC_OBJECT </li>
 	 * 		<li> if isLocation, then returns ScenePart.LOCATION </li>
 	 * 		<li> otherwise, returns ScenePart.STATIC_OBJECT </li> 		
 	 * </ul>
-	 * <ul> if ARG2 is ARG2_instrument
+	 * <ul> if ARG2 is ARG2_INSTRUMENT
 	 *		<li>then returns ScenePart.STATIC_OBJECT</li> 
 	 * </ul>
 	 *  
@@ -975,13 +985,18 @@ public class TTSEngine {
 			if(pureNode.getName().equals("مادر#n1"))
 				return ScenePart.ROLE;
 			
-			if(isHuman(pureNode))
-				return ScenePart.ROLE;
-			if(isAnimal(pureNode))
-				return ScenePart.DYNAMIC_OBJECT;
-			if(isLocation(pureNode))
-				return  ScenePart.LOCATION;
-			return ScenePart.STATIC_OBJECT;
+			if(pos == POS.NOUN){
+				if(isHuman(pureNode))
+					return ScenePart.ROLE;
+				
+				if(isAnimal(pureNode))
+					return ScenePart.DYNAMIC_OBJECT;
+				
+				if(isLocation(pureNode))
+					return  ScenePart.LOCATION;
+				
+				return ScenePart.STATIC_OBJECT;
+			}
 		}
 		else if(semanticTag == MainSemanticTag.ARG2_INSTRUMENT){
 			return ScenePart.STATIC_OBJECT;
@@ -993,6 +1008,82 @@ public class TTSEngine {
 		return ScenePart.UNKNOWN;
 	}
 
+	/**
+	 * recognizing which scenePart has this ARG3 node:
+	 * a ROLE, DYNAMIC_OBJECT, STATIC_OBJECT, LOCATION?
+	 * 
+	 * because this is ARG3 node so it can be any of source-startpoint, beneficiary, instrument, attribute.
+	 * this method checks: 
+	 * <ul> if ARG3 is ARG3_BENEFICIARY and pos in NOUN,
+	 * 		<li> if isHuman, then returns ScenePart.ROLE </li>
+	 * 		<li> if isAnimal, then returns ScenePart.DYNAMIC_OBJECT </li>
+	 * 		<li> if isLocation, then returns ScenePart.LOCATION </li>
+	 * 		<li> otherwise, returns ScenePart.STATIC_OBJECT </li> 		
+	 * </ul>
+	 * <ul> if ARG3 is ARG3_INSTRUMENT
+	 *		<li>then returns ScenePart.STATIC_OBJECT</li> 
+	 * </ul>
+	 * <ul> if ARG3 is ARG3_STARTPOINT
+	 *		<li> if isLocation, then returns ScenePart.LOCATION</li> 
+	 * </ul>
+	 *  
+	 * @param pureNode the pure node fetched from kb.
+	 * @param semanticTag 
+	 * @param pos the part of speech this node has.
+	 * @return the ScenePart of pureNode, including ROLE, DYNAMIC_OBJECT, or UNKNOWN. no null will be returned.
+	 */
+	private ScenePart getArg3ScenePart(Node pureNode, MainSemanticTag semanticTag, POS pos) {
+		
+		if(semanticTag == MainSemanticTag.ARG3_BENEFICIARY){
+			
+			if(pureNode.getName().equals("پسر#n2"))				
+				return ScenePart.ROLE;
+			if(pureNode.getName().equals("مادر#n1"))
+				return ScenePart.ROLE;
+			
+			if(pos == POS.NOUN){
+				if(isHuman(pureNode))
+					return ScenePart.ROLE;
+				
+				if(isAnimal(pureNode))
+					return ScenePart.DYNAMIC_OBJECT;
+				
+				if(isLocation(pureNode))
+					return  ScenePart.LOCATION;
+				
+				return ScenePart.STATIC_OBJECT;
+			}
+		}
+		else if(semanticTag == MainSemanticTag.ARG3_INSTRUMENT){
+			return ScenePart.STATIC_OBJECT;
+		}
+		else if(semanticTag == MainSemanticTag.ARG3_SOURCE_STARTPOINT){
+			if(isLocation(pureNode))
+				return ScenePart.LOCATION;
+		}		
+		return ScenePart.UNKNOWN;
+	}
+	
+	/**
+	 * recognizing which scenePart has this ARG4 node:
+	 * a LOCATION?
+	 * 
+	 * because this is ARG4 node so it can be only endpoint.
+	 * this method checks: 
+	 * <ul> if ARG4 is ARG4_ENDPOINT
+	 *		<li> if isLocation returns ScenePart.LOCATION</li> 
+	 * </ul>
+	 *  
+	 * @param pureNode the pure node fetched from kb. 
+	 * @return the ScenePart of pureNode, only LOCATION, or UNKNOWN. no null will be returned.
+	 */
+	private ScenePart getArg4ScenePart(Node pureNode) {		
+		
+		if(isLocation(pureNode))
+			return  ScenePart.LOCATION;
+		
+		return ScenePart.UNKNOWN;
+	}
 	
 	/**
 	 * recognizing that which scenePart has the node: 

@@ -38,8 +38,8 @@ public enum SemanticTag {
 	ARG3_BENEFICIARY_P,
 	ARG3_INSTRUMENT,		//Instrument of event
 	ARG3_INSTRUMENT_P,
-	ARG4_ATTRIBUTE,			//Attribute of event
-	ARG4_ATTRIBUTE_P,		
+	ARG3_ATTRIBUTE,			//Attribute of event
+	ARG3_ATTRIBUTE_P,		
 	
 	
 	ARG4_ENDPOINT,					// Endpoint of event
@@ -103,7 +103,7 @@ public enum SemanticTag {
 			case ARG3_SOURCE_STARTPOINT: return ARG3_SOURCE_STARTPOINT_P;
 			case ARG3_BENEFICIARY: return ARG3_BENEFICIARY_P;
 			case ARG3_INSTRUMENT: return ARG3_INSTRUMENT_P;
-			case ARG4_ATTRIBUTE: return ARG4_ATTRIBUTE_P;		
+			case ARG3_ATTRIBUTE: return ARG3_ATTRIBUTE_P;		
 			
 			
 			case ARG4_ENDPOINT: return ARG4_ENDPOINT_P;
