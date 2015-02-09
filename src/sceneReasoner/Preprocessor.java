@@ -398,112 +398,12 @@ public class Preprocessor {
 		print("=============== end of prepareNullSemanticTags =============");
 	}	
 	
-	/**
-	 * 
-	 * @param sentenceModel guaranteed not to be null.
-	 * @param missingMainArgs guaranteed not to be null.
-	 * @param sceneModel guaranteed not to be null.
-	 */
-	private void prepareNullSemanticTagsForAScene(SentenceModel sentenceModel, ArrayList<MainSemanticTag> missingMainArgs, SceneModel sceneModel){		
-		
-		if(!Common.isEmpty(missingMainArgs)){
-			
-			ArrayList<MainSemanticTag> preparedMainArgs = new ArrayList<MainSemanticTag>();
-			
-			ArrayList<SentenceModel> allSentences = sceneModel.getSentences();
-			
-			if(!Common.isEmpty(allSentences)){		
-				
-				for(MainSemanticTag miss:missingMainArgs){
-					
-//					print("for missed " + miss);
-					
-					for(SentenceModel sent:allSentences){
-						if(sent.equals(sentenceModel))
-							continue;
-						
-//						print("In sentence: " + sent.getOriginalSentence());
-						
-						if(miss != null && miss.isArg0() && sent.hasArg0()){							
-							SentencePart arg0SentencePart = sent.getArg0SentencePart();
-							
-							arg0SentencePart.set_semanticTag(miss.name());
-							preparedMainArgs.add(arg0SentencePart._semanticTag.convertToMainSemanticTag());							
-							sentenceModel.setPrerparedSentencePart(arg0SentencePart);						
-							
-							print("prepared " + arg0SentencePart._semanticTag);
-							break;
-						}
-						else if(miss != null && miss.isArg1() && sent.hasArg1()){
-							SentencePart arg1SentencePart = sent.getArg1SentencePart();
-							
-							arg1SentencePart.set_semanticTag(miss.name());
-							preparedMainArgs.add(arg1SentencePart._semanticTag.convertToMainSemanticTag());
-							sentenceModel.setPrerparedSentencePart(arg1SentencePart);
-							
-							print("prepared " + arg1SentencePart._semanticTag);
-							break;
-						}
-					}					
-				}
-				for(MainSemanticTag prepared:preparedMainArgs)
-					missingMainArgs.remove(prepared);
-			}			
-		}			
-	}
 	
 	private void checkAllSemanticTagsWithUser(SentenceModel sentenceModel, SceneModel primarySceneModel){
 		//TODO check with user!		
 	}
 	
-	private void processDependentsOfSemanticArg(SentencePart semArgPart, SceneElement sceneElement){
-		
-		//It means that this sentencePart has some adjectives
-		if(semArgPart.hasAnyAdjectives()){
-			
-			print(semArgPart + " " + semArgPart._semanticTag + " has some adjectives:" + semArgPart.getAdjectives());
-			
-			ArrayList<SentencePart> adjectives = semArgPart.getAdjectives();
-			
-			for(SentencePart adj:adjectives)				
-				
-				if(sceneElement.scenePart == ScenePart.ROLE)
-					 sceneElement.addRoleMoodToRole(adj._name, adj._wsd);
-					
-				else if(sceneElement.scenePart == ScenePart.DYNAMIC_OBJECT || sceneElement.scenePart == ScenePart.STATIC_OBJECT)
-					sceneElement.addStateToSceneObject(adj._name, adj._wsd);
-		
-//				else if(scenePart == ScenePart.LOCATION)
-//					//TODO: what to do for adj of LOCATIONs
-
-//				else if(scenePart == ScenePart.SCENE_GOAL)
-//					//TODO: what to do for adj of SCENE_GOAL
-		}
-		
-		//It means that this sentencePart has some mozad_elaih
-		if(semArgPart.hasAnyMozaf_elaihs()){				
-			
-			print(semArgPart  + " " + semArgPart._semanticTag + " has mozaf_elaih: " + semArgPart.getMozaf_elaih());
-			
-			ArrayList<SentencePart> mozafs = semArgPart.getMozaf_elaih();
-			
-			for(SentencePart moz:mozafs)
-				
-				if(!moz._wsd.getName().contains(zamir_enekasi))					
-		
-					if(sceneElement.scenePart == ScenePart.ROLE)
-						 sceneElement.addRoleMoodToRole(moz._name, moz._wsd);
-						
-					else if(sceneElement.scenePart == ScenePart.DYNAMIC_OBJECT || sceneElement.scenePart == ScenePart.STATIC_OBJECT)
-						sceneElement.addStateToSceneObject(moz._name, moz._wsd);
-		
-//					else if(scenePart == ScenePart.LOCATION)
-//						//TODO: what to do for moz of LOCATIONs
-
-//					else if(scenePart == ScenePart.SCENE_GOAL)
-//						//TODO: what to do for moz of SCENE_GOAL
-		}			
-	}
+	
 	
 	/**
 	 * 
@@ -746,6 +646,142 @@ public class Preprocessor {
 		print("\n-------------- end of verb preprocess ----------------------");
 	}
 	
+	
+
+	
+	private void preprocessArg3(SentenceModel sentenceModel, SceneModel primarySceneModel) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void preprocessArg4(SentenceModel sentenceModel, SceneModel primarySceneModel) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void preprocessArg5(SentenceModel sentenceModel, SceneModel primarySceneModel) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void preprocessSecondaryArgs(SentenceModel sentenceModel, SceneModel primarySceneModel) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void preprocessVisualTagVerb(SentenceModel sentenceModel, SceneModel primarySceneModel) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void preprocessAllVisualTag(SentenceModel sentenceModel, SceneModel primarySceneModel) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/**
+	 * 
+	 * @param sentenceModel guaranteed not to be null.
+	 * @param missingMainArgs guaranteed not to be null.
+	 * @param sceneModel guaranteed not to be null.
+	 */
+	private void prepareNullSemanticTagsForAScene(SentenceModel sentenceModel, ArrayList<MainSemanticTag> missingMainArgs, SceneModel sceneModel){		
+		
+		if(!Common.isEmpty(missingMainArgs)){
+			
+			ArrayList<MainSemanticTag> preparedMainArgs = new ArrayList<MainSemanticTag>();
+			
+			ArrayList<SentenceModel> allSentences = sceneModel.getSentences();
+			
+			if(!Common.isEmpty(allSentences)){		
+				
+				for(MainSemanticTag miss:missingMainArgs){
+					
+//					print("for missed " + miss);
+					
+					for(SentenceModel sent:allSentences){
+						if(sent.equals(sentenceModel))
+							continue;
+						
+//						print("In sentence: " + sent.getOriginalSentence());
+						
+						if(miss != null && miss.isArg0() && sent.hasArg0()){							
+							SentencePart arg0SentencePart = sent.getArg0SentencePart();
+							
+							arg0SentencePart.set_semanticTag(miss.name());
+							preparedMainArgs.add(arg0SentencePart._semanticTag.convertToMainSemanticTag());							
+							sentenceModel.setPrerparedSentencePart(arg0SentencePart);						
+							
+							print("prepared " + arg0SentencePart._semanticTag);
+							break;
+						}
+						else if(miss != null && miss.isArg1() && sent.hasArg1()){
+							SentencePart arg1SentencePart = sent.getArg1SentencePart();
+							
+							arg1SentencePart.set_semanticTag(miss.name());
+							preparedMainArgs.add(arg1SentencePart._semanticTag.convertToMainSemanticTag());
+							sentenceModel.setPrerparedSentencePart(arg1SentencePart);
+							
+							print("prepared " + arg1SentencePart._semanticTag);
+							break;
+						}
+					}					
+				}
+				for(MainSemanticTag prepared:preparedMainArgs)
+					missingMainArgs.remove(prepared);
+			}			
+		}			
+	}
+	
+	private void processDependentsOfSemanticArg(SentencePart semArgPart, SceneElement sceneElement){
+		
+		//It means that this sentencePart has some adjectives
+		if(semArgPart.hasAnyAdjectives()){
+			
+			print(semArgPart + " " + semArgPart._semanticTag + " has some adjectives:" + semArgPart.getAdjectives());
+			
+			ArrayList<SentencePart> adjectives = semArgPart.getAdjectives();
+			
+			for(SentencePart adj:adjectives)				
+				
+				if(sceneElement.scenePart == ScenePart.ROLE)
+					 sceneElement.addRoleMoodToRole(adj._name, adj._wsd);
+					
+				else if(sceneElement.scenePart == ScenePart.DYNAMIC_OBJECT || sceneElement.scenePart == ScenePart.STATIC_OBJECT)
+					sceneElement.addStateToSceneObject(adj._name, adj._wsd);
+		
+//				else if(scenePart == ScenePart.LOCATION)
+//					//TODO: what to do for adj of LOCATIONs
+
+//				else if(scenePart == ScenePart.SCENE_GOAL)
+//					//TODO: what to do for adj of SCENE_GOAL
+		}
+		
+		//It means that this sentencePart has some mozad_elaih
+		if(semArgPart.hasAnyMozaf_elaihs()){				
+			
+			print(semArgPart  + " " + semArgPart._semanticTag + " has mozaf_elaih: " + semArgPart.getMozaf_elaih());
+			
+			ArrayList<SentencePart> mozafs = semArgPart.getMozaf_elaih();
+			
+			for(SentencePart moz:mozafs)
+				
+				if(!moz._wsd.getName().contains(zamir_enekasi))					
+		
+					if(sceneElement.scenePart == ScenePart.ROLE)
+						 sceneElement.addRoleMoodToRole(moz._name, moz._wsd);
+						
+					else if(sceneElement.scenePart == ScenePart.DYNAMIC_OBJECT || sceneElement.scenePart == ScenePart.STATIC_OBJECT)
+						sceneElement.addStateToSceneObject(moz._name, moz._wsd);
+		
+//					else if(scenePart == ScenePart.LOCATION)
+//						//TODO: what to do for moz of LOCATIONs
+
+//					else if(scenePart == ScenePart.SCENE_GOAL)
+//						//TODO: what to do for moz of SCENE_GOAL
+		}			
+	}
+	
 	/**
 	 * 
 	 * @param verb guaranteed not to be null.
@@ -845,38 +881,6 @@ public class Preprocessor {
 		
 		else if(arg0Elem.scenePart == ScenePart.DYNAMIC_OBJECT)
 			arg0Elem.addObjectActionToDynmicAction(verb._name, verb._wsd);	
-		
-	}
-
-
-	
-	private void preprocessArg3(SentenceModel sentenceModel, SceneModel primarySceneModel) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	private void preprocessArg4(SentenceModel sentenceModel, SceneModel primarySceneModel) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	private void preprocessArg5(SentenceModel sentenceModel, SceneModel primarySceneModel) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	private void preprocessSecondaryArgs(SentenceModel sentenceModel, SceneModel primarySceneModel) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	private void preprocessVisualTagVerb(SentenceModel sentenceModel, SceneModel primarySceneModel) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	private void preprocessAllVisualTag(SentenceModel sentenceModel, SceneModel primarySceneModel) {
-		// TODO Auto-generated method stub
 		
 	}
 

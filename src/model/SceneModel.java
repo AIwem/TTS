@@ -206,7 +206,7 @@ public class SceneModel {
 				return emot;
 		
 		for(SceneGoal goal:scene_goals)
-			if(goal._node.equals(node))
+			if(goal._node.equalsRelaxed(node))
 				return goal;
 		
 		return null;
