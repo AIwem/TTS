@@ -68,15 +68,21 @@ public class SceneModel {
 		this.storyModel = story;
 	}
 
-	public void setLocation(Location location) {		
+	public void setLocation(Location location) {
+		if(location != null && this.location != null)
+			MyError.error("this SceneModel has " + this.location + " Location before!");
 		this.location = location;
 	}
 	
-	public void setNextLocation(Location location) {		
+	public void setNextLocation(Location location) {
+		if(location != null && this.nextLocation != null)
+			MyError.error("this SceneModel has " + this.nextLocation + " Location before!");
 		this.nextLocation = location;
 	}
 
 	public void setTime(Time time) {
+		if(time != null && this.time != null)
+			MyError.error("this SceneModel has " + this.time + " Time before!");
 		this.time = time;
 	}
 	
