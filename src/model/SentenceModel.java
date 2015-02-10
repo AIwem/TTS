@@ -161,7 +161,57 @@ public class SentenceModel{
 		return false;
 	}	
 	
+
+	public boolean hasSemanticArg(SemanticTag semanticArg) {
+		if(semanticArg == null)
+			return false;
+		
+		if(semanticArg.isMainSemanticTag())
+			return hasMainSemanticArg(semanticArg.convertToMainSemanticTag());
+		
+		else if(semanticArg.isSubSemanticTag())
+			return hasSubSemanticArg(semanticArg.convertToSubSemanticTag());
+					
+		return false;
+	}	
 	
+	public boolean hasMainSemanticArg(MainSemanticTag mainSemanticArg) {
+		if(mainSemanticArg == null)
+			return false;
+		
+		if(mainSemanticArg.isArg0())
+			return hasArg0();
+		
+		if(mainSemanticArg.isArg1())
+			return hasArg1();
+		
+		if(mainSemanticArg.isArg2())
+			return hasArg2();
+		
+		if(mainSemanticArg.isArg3())
+			return hasArg3();
+		
+		if(mainSemanticArg.isArg4())
+			return hasArg4();
+		
+		if(mainSemanticArg.isArg5())
+			return hasArg5();			
+			
+		return false;
+	}	
+	
+	public boolean hasSubSemanticArg(SubSemanticTag subSemanticArg) {
+		if(subSemanticArg == null)
+			return false;
+		
+		ArrayList<SubSemanticTag> existingSubArgs = this.getExistingSubSematicArgs();
+		
+		for(SubSemanticTag exist:existingSubArgs)
+			if(exist == subSemanticArg)
+				return true;
+		
+		return false;
+	}
 	
 	public MainSemanticTag getArg0(){
 		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
@@ -301,6 +351,24 @@ public class SentenceModel{
 				return exist;
 		return null;
 	}
+	
+	public SentencePart getArg5SentencePart() {
+		MainSemanticTag arg5 = getArg5();
+		if(arg5 != null){
+			for(SentencePart sbj:subjects)
+				if(sbj != null && sbj._semanticTag != null && sbj._semanticTag.name().equals(arg5.name()))
+					return sbj;
+			
+			for(SentencePart obj:objects)
+				if(obj != null && obj._semanticTag != null && obj._semanticTag.name().equals(arg5.name()))
+					return obj;
+			
+			for(SentencePart adv:adverbs)
+				if(adv != null && adv._semanticTag != null && adv._semanticTag.name().equals(arg5.name()))
+					return adv;
+		}	
+		return null;}
+
 	
 	public SceneModel getScene() {
 		return scene;
@@ -622,20 +690,46 @@ public class SentenceModel{
 		return null;
 	}
 	
-	public boolean hasSubSemanticArg(SubSemanticTag subSemanticArg) {
-		if(subSemanticArg == null)
-			return false;
+	public SentencePart getSentencePart(SemanticTag semanticTag){
+		if(semanticTag == null)
+			return null;
 		
-		ArrayList<SubSemanticTag> existingSubArgs = this.getExistingSubSematicArgs();
+		if(semanticTag.isMainSemanticTag())
+			return getSentencePart(semanticTag.convertToMainSemanticTag());
 		
-		for(SubSemanticTag exist:existingSubArgs)
-			if(exist == subSemanticArg)
-				return true;
-		
-		return false;
+		else if(semanticTag.isSubSemanticTag())
+			return getSentencePart(semanticTag.convertToSubSemanticTag());
+					
+		return null;	
 	}
+	
+	public SentencePart getSentencePart(MainSemanticTag mainSemanticTag) {
+		if(mainSemanticTag == null)
+			return null;
 		
-	public SentencePart getSubSemanticArg(SubSemanticTag subSemanticArg) {	
+		if(mainSemanticTag.isArg0())
+			return getArg0SentencePart();
+
+		if(mainSemanticTag.isArg1())
+			return getArg1SentencePart();
+
+		if(mainSemanticTag.isArg2())
+			return getArg2SentencePart();
+
+		if(mainSemanticTag.isArg3())
+			return getArg3SentencePart();
+
+		if(mainSemanticTag.isArg4())
+			return getArg4SentencePart();
+		
+		if(mainSemanticTag.isArg5())
+			return getArg5SentencePart();
+		
+		return null;
+	}
+	
+	
+	public SentencePart getSentencePart(SubSemanticTag subSemanticArg) {	
 		if(subSemanticArg == null)
 			return null;
 			
@@ -744,7 +838,10 @@ public class SentenceModel{
 				wsd += "null, ";
 		
 		return wsd; //rs + "\n" + wsd;
-	}	
+	}
+
+	
+
 	
 //	public static void main(String[] args){
 //		SentenceModel sen1 = new SentenceModel("");

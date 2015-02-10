@@ -69,6 +69,15 @@ public enum MainSemanticTag {
 		}
 	}	
 	
+	public SemanticTag convertToSemanticTag(){
+		try{
+			return SemanticTag.valueOf(this.name());			
+		}
+		catch (Exception e) {
+			return null;
+		}
+	}
+	
 	public boolean isArg0(){
 		if(this.name().startsWith("ARG0"))
 			return true;

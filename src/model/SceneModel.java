@@ -395,7 +395,10 @@ public class SceneModel {
 	 * this method based on the ScenePart of the part adds a Role, DynamicObject, StaticObject, or ... to primarySceneModel.
 	 * TODO: we have assumed for simplicity which every scene has a unique Role, DyanamicObject, and StaticObject with a one name.
 	 * for example all «پسرک» refer to just one Role. 
-	 *  
+	 * 
+	 * note that we do nothing for Location and Time of primarySceneModel. 
+	 * they will be processed in next phases.
+	 * 
 	 * @param sceneElement the new  SceneElement which is to be added to this SceneModel. 
 	 */
 	public void addToPrimarySceneModel(SceneElement sceneElement){

@@ -57,5 +57,14 @@ public enum SubSemanticTag {
 			return false;	
 		}
 	}
+	
+	public SemanticTag convertToSemanticTag(){
+		try{
+			return SemanticTag.valueOf(this.name());			
+		}
+		catch (Exception e) {
+			return null;
+		}
+	}
 
 }

@@ -23,6 +23,7 @@ import model.SemanticTag;
 import model.SentenceModel;
 import model.SentencePart;
 import model.StoryModel;
+import model.SubSemanticTag;
 
 /**
  * TTSEngine is an engine that converts natural language texts to Scene. 
@@ -857,7 +858,16 @@ public class TTSEngine {
 		}
 		//It is a subSemanticTag
 		else if(semanticTag.isSubSemanticTag()){
-			MyError.error("SemanticTag here should only be MainSemanticTag not subSemanticTag!");
+//			MyError.error("SemanticTag here should only be MainSemanticTag not subSemanticTag!");
+			
+			SubSemanticTag subSemArg = semanticTag.convertToSubSemanticTag();
+			
+			if(subSemArg == null){
+				MyError.error("wrong SubSemanticTag" + semanticTag);
+				return ScenePart.UNKNOWN;
+			}
+			
+			return getSubArgScenePart(pureNode, subSemArg, pos);
 		}				
 		return ScenePart.UNKNOWN;
 	}		
@@ -998,7 +1008,7 @@ public class TTSEngine {
 				return ScenePart.STATIC_OBJECT;
 			}
 		}
-		else if(semanticTag == MainSemanticTag.ARG2_INSTRUMENT){
+		else if(semanticTag == MainSemanticTag.ARG2_INSTRUMENT){//TODO: check if it is correct?
 			return ScenePart.STATIC_OBJECT;
 		}
 		else if(semanticTag == MainSemanticTag.ARG2_GOAL_ENDSTATE){
@@ -1054,7 +1064,7 @@ public class TTSEngine {
 				return ScenePart.STATIC_OBJECT;
 			}
 		}
-		else if(semanticTag == MainSemanticTag.ARG3_INSTRUMENT){
+		else if(semanticTag == MainSemanticTag.ARG3_INSTRUMENT){//TODO: check if it is correct?
 			return ScenePart.STATIC_OBJECT;
 		}
 		else if(semanticTag == MainSemanticTag.ARG3_SOURCE_STARTPOINT){
@@ -1081,6 +1091,34 @@ public class TTSEngine {
 		
 		if(isLocation(pureNode))
 			return  ScenePart.LOCATION;
+		
+		return ScenePart.UNKNOWN;
+	}
+	
+	/**
+	 * recognizing which scenePart has this SubSemanticArg node:
+	 * a LOCATION, TIME?
+	 *	 
+	 * this method checks: 
+	 * <ul> if subSemArg is ARG_DIR
+	 *		<li> if isLocation returns ScenePart.LOCATION</li> 
+	 * </ul>
+	 * <ul> if subSemArg is ARG_TMP
+	 *		<li> if isTime returns ScenePart.TIME</li> 
+	 * </ul>
+	 *  
+	 * @param pureNode the pure node fetched from kb. 
+	 * @return the ScenePart of pureNode, LOCATION, TIME or UNKNOWN. no null will be returned.
+	 */
+	private ScenePart getSubArgScenePart(Node pureNode, SubSemanticTag subSemArg, POS pos) {
+		
+		if(subSemArg == SubSemanticTag.DIR)
+			if(isLocation(pureNode))
+				return ScenePart.LOCATION;
+		
+		if(subSemArg == SubSemanticTag.TMP)
+			if(isTime(pureNode))
+				return ScenePart.TIME;
 		
 		return ScenePart.UNKNOWN;
 	}

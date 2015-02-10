@@ -180,4 +180,41 @@ public enum SemanticTag {
 		}
 	}
 	
+	public boolean isArg0(){
+		if(this.name().startsWith("ARG0"))
+			return true;
+		return false;	
+	}
+	
+	public boolean isArg1(){
+		if(this.name().startsWith("ARG1"))
+			return true;
+		return false;	
+	}
+	
+	public boolean isArg2(){
+		if(this.name().startsWith("ARG2"))
+			return true;
+		return false;	
+	}
+	
+	public boolean isArg3(){
+		if(this.name().startsWith("ARG3"))
+			return true;
+		return false;	
+	}
+	
+	public boolean isArg4(){
+		if(this.name().startsWith("ARG4"))
+			return true;
+		return false;	
+	}
+	
+	public boolean isArg5(){
+		if(this.name().startsWith("ARG5"))
+			return true;
+		return false;	
+	}
+
+	
 }
