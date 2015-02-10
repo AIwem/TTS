@@ -663,28 +663,13 @@ public class TTSEngine {
 			return false;
 		
 		print(node + ".............. in isLocation ........................");
-		
+			
 		PlausibleQuestion pq = new PlausibleQuestion();
-		pq.descriptor = KnowledgeBase.HPR_ISA;
-		pq.argument = node;			
-		pq.referent = _TTSKb.addConcept("راه§n-12894", false);
-		
-		ArrayList<PlausibleAnswer> answers = writeAnswersTo(pq.descriptor, node, pq.referent);
-		//ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
-		for(PlausibleAnswer ans:answers ){
-			print("answer: " + ans);
-			if(ans.answer == KnowledgeBase.HPR_YES){
-				print(node.getName() + " isLocation راه \n");
-				return true;				
-			}
-		}	
-		
-		pq = new PlausibleQuestion();
 		pq.descriptor = KnowledgeBase.HPR_ISA;
 		pq.argument = node;			
 		pq.referent = _TTSKb.addConcept("جا§n-12733", false);
 		
-		answers = writeAnswersTo(pq.descriptor, node, pq.referent);
+		ArrayList<PlausibleAnswer> answers = writeAnswersTo(pq.descriptor, node, pq.referent);
 		//ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
 		for(PlausibleAnswer ans:answers ){
 			print("answer: " + ans);
@@ -693,6 +678,21 @@ public class TTSEngine {
 				return true;				
 			}
 		}		
+		
+		pq = new PlausibleQuestion();
+		pq.descriptor = KnowledgeBase.HPR_ISA;
+		pq.argument = node;			
+		pq.referent = _TTSKb.addConcept("راه§n-12894", false);
+		
+		answers = writeAnswersTo(pq.descriptor, node, pq.referent);
+		//ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
+		for(PlausibleAnswer ans:answers ){
+			print("answer: " + ans);
+			if(ans.answer == KnowledgeBase.HPR_YES){
+				print(node.getName() + " isLocation راه \n");
+				return true;				
+			}
+		}
 		
 		print(node + " is NOT Location \n");
 		return false;

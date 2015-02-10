@@ -471,7 +471,11 @@ public class Preprocessor {
 			print("000000000000000 end of preprocessArg0 0000000000000000000000");
 		}
 	}
-	
+	/**
+	 * 
+	 * @param sentenceModel guaranteed not to be null.
+	 * @param primarySceneModel guaranteed not to be null.
+	 */
 	private void preprocessArg1(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		
 		if(sentenceModel.hasArg1()){
@@ -533,10 +537,15 @@ public class Preprocessor {
 				//------------------- pre-processing dependents of arg1 --------------------
 				processDependentsOfSemanticArg(arg1Part, sceneElem);
 			}
-			print("\n111111111111111 end of preprocessArg1 11111111111111111111111");
+			print("\n111111111111111 end of preprocessArg1 1111111111111111111111");
 		}		
 	}
-		
+	
+	/**
+	 * 
+	 * @param sentenceModel guaranteed not to be null.
+	 * @param primarySceneModel guaranteed not to be null.
+	 */
 	private void preprocessArg2(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		
 		if(sentenceModel.hasArg2()){
@@ -600,7 +609,7 @@ public class Preprocessor {
 				processDependentsOfSemanticArg(arg2Part, sceneElem);							
 				
 			}			
-			print("\n222222222222222 end of preprocessArg2 22222222222222222222222");
+			print("\n222222222222222 end of preprocessArg2 2222222222222222222222");
 		}		
 	}
 
@@ -649,9 +658,12 @@ public class Preprocessor {
 		print("\n-------------- end of verb preprocess ----------------------");
 	}
 	
-	
-
-	
+	/**
+	 * 
+	 * @param sentenceModel guaranteed not to be null.
+	 * @param primarySceneModel guaranteed not to be null.
+	 * @return the SceneElement created based on Arg3
+	 */
 	private SceneElement preprocessArg3(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		
 		if(sentenceModel.hasArg3()){
@@ -728,7 +740,13 @@ public class Preprocessor {
 		return null;		
 		
 	}
-
+	
+	/**
+	 * 
+	 * @param sentenceModel guaranteed not to be null.
+	 * @param primarySceneModel guaranteed not to be null.
+	 * @return the SceneElement created based on Arg4
+	 */
 	private SceneElement preprocessArg4(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		
 		if(sentenceModel.hasArg4()){
@@ -786,6 +804,84 @@ public class Preprocessor {
 		return null;
 	}
 
+	/**
+	 * 
+	 * @param sentenceModel guaranteed not to be null.
+	 * @param arg3SceneElement
+	 * @param arg4SceneElement
+	 * @param primarySceneModel guaranteed not to be null.
+	 */
+	private void processLocationOfScene(SentenceModel sentenceModel, SceneElement arg3SceneElement, SceneElement arg4SceneElement, SceneModel primarySceneModel) {
+		
+		print("\n=============== in preprocessLocation ======================");
+		
+		SentencePart arg3Part = sentenceModel.getArg3SentencePart();
+		
+		SentencePart arg4Part = sentenceModel.getArg4SentencePart();
+		
+		if(arg3Part != null && arg3Part._semanticTag != null && arg3Part._semanticTag.isMainSemanticTag()){
+		
+			MainSemanticTag arg3SemArg = arg3Part._semanticTag.convertToMainSemanticTag();
+			
+			//Sentence has ARG3_SOURCE_STARTPOINT
+			if(arg3SemArg == MainSemanticTag.ARG3_SOURCE_STARTPOINT && arg3SceneElement.scenePart == ScenePart.LOCATION){
+			
+				primarySceneModel.setLocation((Location)arg3SceneElement);
+				
+				//Sentence has ARG4_ENDPOINT
+				if(arg4Part != null)			 
+						primarySceneModel.addAlternativeLocation((Location)arg4SceneElement);				
+				
+				//Sentence hasn't ARG4_ENDPOINT
+				else{
+					
+					SentencePart arg_dirPart = sentenceModel.getSubSemanticArg(SubSemanticTag.DIR);
+					
+					//Sentence has ARG_DIR
+					if(arg_dirPart != null){
+						
+						SceneElement arg_dirSceneElem = createSceneElement(arg_dirPart, ScenePart.LOCATION);
+						
+						if(arg_dirSceneElem == null){
+							MyError.error("the " + arg_dirPart + " could not convert to a SceneElement!");
+							return;
+						}							
+
+						primarySceneModel.addAlternativeLocation((Location)arg_dirSceneElem);
+					}										
+				}				
+			}
+			return;		 			
+		}
+		//Sentence hasn't ARG3_SOURCE_STARTPOINT but maybe have arg4Part or arg_dirPart
+		
+		//Sentence has ARG4_ENDPOINT
+		if(arg4Part != null)			
+				primarySceneModel.addAlternativeLocation((Location)arg4SceneElement);				
+		
+		//Sentence hasn't ARG4_ENDPOINT
+		else{
+			
+			SentencePart arg_dirPart = sentenceModel.getSubSemanticArg(SubSemanticTag.DIR);
+			
+			//Sentence has ARG_DIR
+			if(arg_dirPart != null){
+				
+				SceneElement arg_dirSceneElem = createSceneElement(arg_dirPart, ScenePart.LOCATION);
+				
+				if(arg_dirSceneElem == null){
+					MyError.error("the " + arg_dirPart + " could not convert to a SceneElement!");
+					return;
+				}
+				
+				primarySceneModel.addAlternativeLocation((Location)arg_dirSceneElem);
+			}								
+		}
+		
+		print("\n=============== end of preprocessLocation ==================");
+	}
+
+	
 	private void preprocessArg5(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		// TODO Auto-generated method stub
 		
@@ -1016,118 +1112,6 @@ public class Preprocessor {
 		
 	}
 
-	private void processLocationOfScene(SentenceModel sentenceModel, SceneElement arg3SceneElement, SceneElement arg4SceneElement, SceneModel primarySceneModel) {
-	
-		SentencePart arg3Part = sentenceModel.getArg3SentencePart();
-		
-		SentencePart arg4Part = sentenceModel.getArg4SentencePart();
-		
-		if(arg3Part != null && arg3Part._semanticTag != null && arg3Part._semanticTag.isMainSemanticTag()){
-		
-			MainSemanticTag arg3SemArg = arg3Part._semanticTag.convertToMainSemanticTag();
-			
-			//Sentence has ARG3_SOURCE_STARTPOINT
-			if(arg3SemArg == MainSemanticTag.ARG3_SOURCE_STARTPOINT && arg3SceneElement.scenePart == ScenePart.LOCATION){
-			
-				primarySceneModel.setLocation((Location)arg3SceneElement);
-				
-				//Sentence has ARG4_ENDPOINT
-				if(arg4Part != null){			
-					
-//					SentencePart arg_dirPart = sentenceModel.getSubSemanticArg(SubSemanticTag.DIR);
-//					
-//					//Sentence has ARG_DIR
-//					if(arg_dirPart != null){
-//						
-//						//Sentence ARG_DIR == ARG4_ENDPOINT
-//						if(arg4Part._wsd.equalsRelaxed(arg_dirPart._wsd))
-//							
-//							//location این جمله: Arg3_ source-startpoint و location جمله بعدی:  Arg4_endpoint  = ریشه Arg-DIR							
-//							primarySceneModel.setNextLocation((Location)arg4SceneElement);
-//							
-//						//Sentence ARG_DIR != ARG4_ENDPOINT
-//						else
-//							// location این جمله: Arg3_ source-startpoint و location جمله بعدی: Arg4_endpoint
-//							primarySceneModel.setNextLocation((Location)arg4SceneElement);
-//					}
-//					//Sentence hasn't ARG_DIR
-//					else
-//						// location این جمله: Arg3_ source-startpoint و location جمله بعدی:  Arg4_endpoint   
-						primarySceneModel.setNextLocation((Location)arg4SceneElement);				
-				}
-				//Sentence hasn't ARG4_ENDPOINT
-				else{
-					
-					SentencePart arg_dirPart = sentenceModel.getSubSemanticArg(SubSemanticTag.DIR);
-					
-					//Sentence has ARG_DIR
-					if(arg_dirPart != null){
-						
-						SceneElement arg_dirSceneElem = createSceneElement(arg_dirPart, ScenePart.LOCATION);
-						
-						if(arg_dirSceneElem == null){
-							MyError.error("the " + arg_dirPart + " could not convert to a SceneElement!");
-							return;
-						}
-							
-						// location این جمله: Arg3_ source-startpoint و location جمله بعدی: ریشه Arg-DIR
-						primarySceneModel.setNextLocation((Location)arg_dirSceneElem);
-					}
-//					//Sentence hasn't ARG_DIR
-//					else{
-//						//location این جمله: Arg3_ source-startpoint
-//					}					
-				}					
-			}
-			//Sentence hasn't ARG3_SOURCE_STARTPOINT			
-		}
-		//Sentence hasn't Arg3Part but maybe have arg4Part or arg_dirPart
-		
-		//Sentence has ARG4_ENDPOINT
-		if(arg4Part != null){			
-			
-//			SentencePart arg_dirPart = sentenceModel.getSubSemanticArg(SubSemanticTag.DIR);
-//			
-//			//Sentence has ARG_DIR
-//			if(arg_dirPart != null){
-//				
-//				//Sentence ARG_DIR == ARG4_ENDPOINT
-//				if(arg4Part._wsd.equalsRelaxed(arg_dirPart._wsd))
-//					
-//					// location جمله بعدی:  Arg4_endpoint  = ریشه Arg-DIR							
-//					primarySceneModel.setNextLocation((Location)arg4SceneElement);
-//					
-//				//Sentence ARG_DIR != ARG4_ENDPOINT
-//				else
-//					// location جمله بعدی: Arg4_endpoint  
-//					primarySceneModel.setNextLocation((Location)arg4SceneElement);
-//			}
-//			//Sentence hasn't ARG_DIR
-//			else
-//				//	location جمله بعدی:  Arg4_endpoint      
-				primarySceneModel.setNextLocation((Location)arg4SceneElement);				
-		}
-		//Sentence hasn't ARG4_ENDPOINT
-		else{
-			
-			SentencePart arg_dirPart = sentenceModel.getSubSemanticArg(SubSemanticTag.DIR);
-			
-			//Sentence has ARG_DIR
-			if(arg_dirPart != null){
-				
-				SceneElement arg_dirSceneElem = createSceneElement(arg_dirPart, ScenePart.LOCATION);
-				
-				if(arg_dirSceneElem == null){
-					MyError.error("the " + arg_dirPart + " could not convert to a SceneElement!");
-					return;
-				}
-					
-				// location جمله بعدی: ریشه Arg-DIR
-				primarySceneModel.setNextLocation((Location)arg_dirSceneElem);
-			}								
-		}		
-	}
-	
 	/**
 	 * This method maps part's wsd parameter to a concept in _kb based on part's wsd_name parameter.
 	 * if part's wsd_name is "-" no mapping occurs.

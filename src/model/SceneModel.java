@@ -35,7 +35,7 @@ public class SceneModel {
 	
 	private Location location;
 	
-	private Location nextLocation;
+	private ArrayList<Location> alternativeLocations = new ArrayList<Location>();
 	
 	private Time time;
 	
@@ -69,15 +69,22 @@ public class SceneModel {
 	}
 
 	public void setLocation(Location location) {
-		if(location != null && this.location != null)
-			MyError.error("this SceneModel has " + this.location + " Location before!");
-		this.location = location;
+		if(location != null){
+			print("Location " + location + " set for SceneModel.");
+			
+			this.location = location;
+			addAlternativeLocation(location);
+		}
 	}
 	
-	public void setNextLocation(Location location) {
-		if(location != null && this.nextLocation != null)
-			MyError.error("this SceneModel has " + this.nextLocation + " Location before!");
-		this.nextLocation = location;
+	public void addAlternativeLocation(Location location) {
+		if(location != null){
+			if(alternativeLocations == null)
+				alternativeLocations = new ArrayList<Location>();
+			
+			alternativeLocations.add(location);
+			print("alternativeLocation " + location + " added to SceneModel.");
+		}			
 	}
 
 	public void setTime(Time time) {
@@ -148,8 +155,8 @@ public class SceneModel {
 		return location;
 	}
 
-	public Location getNextLocation() {
-		return nextLocation;
+	public ArrayList<Location> getAlternativeLocations() {
+		return alternativeLocations;
 	}
 	
 	public Time getTime() {
@@ -621,7 +628,7 @@ public class SceneModel {
 			st += stOb; //"\n" + stOb;
 		
 		st += "\nlocation= " + location +
-		"\nnextLocation= " + nextLocation +
+		"\nalternativeLocations= " + alternativeLocations +
 		"\ntime= " + time +
 		"\nscene_goals= " + scene_goals + 
 		"\nscene_emotions= " + scene_emotions + "]\n";
