@@ -70,6 +70,9 @@ public class SceneModel {
 
 	public void setLocation(Location location) {
 		if(location != null){
+			if(this.location != null)
+				print("the SceneModel previous Location: " + this.location + " replaced with " + location);
+				
 			print("Location " + location + " set for SceneModel.");
 			
 			this.location = location;
@@ -88,9 +91,13 @@ public class SceneModel {
 	}
 
 	public void setTime(Time time) {
-		if(time != null && this.time != null)
-			MyError.error("this SceneModel has " + this.time + " Time before!");
-		this.time = time;
+		if(time != null){
+			if(this.time != null)
+				print("the SceneModel previous Time: " + this.time + " replaced with " + time);
+			
+			print("Time " + time + " set for SceneModel.");
+			this.time = time;
+		}		
 	}
 	
 	//------------------ getter part -------------------

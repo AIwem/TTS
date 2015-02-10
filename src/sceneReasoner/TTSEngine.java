@@ -1,6 +1,5 @@
 package sceneReasoner;
 
-import ir.ac.itrc.qqa.semantic.enums.DependencyRelationType;
 import ir.ac.itrc.qqa.semantic.enums.ExecutionMode;
 import ir.ac.itrc.qqa.semantic.enums.POS;
 import ir.ac.itrc.qqa.semantic.enums.SourceType;
@@ -1116,187 +1115,19 @@ public class TTSEngine {
 			if(isLocation(pureNode))
 				return ScenePart.LOCATION;
 		
-		if(subSemArg == SubSemanticTag.TMP)
+		if(subSemArg == SubSemanticTag.TMP){
+		
+			//TODO: I must remove these lines!-------			
+			if(pureNode.getName().equals("بلافاصله#r1"))
+				return ScenePart.UNKNOWN;
+
+			//---------------------------------------		
+			
 			if(isTime(pureNode))
 				return ScenePart.TIME;
-		
-		return ScenePart.UNKNOWN;
-	}
-	
-	/**
-	 * recognizing that which scenePart has the node: 
-	 * a ROLE, DYNAMIC_OBJECT, STATIC_OBJECT, ACTION, LOCATION, TIME, EMOTION, GOAL or UNKNOWN?!
-	 * this method checks:
-	 * <ul> if node SyntaxTag is SUBJECT or SUBJECT_PART or OBJECT or OBJECT_PART, 
-	 * 		then calls getSbjObjScenePart() method. 
-	 * </ul>
-	 * <ul> if node SyntaxTag is ADVERB or ADVERB_PART, 
-	 * 		then calls getAdvScenePart() method.
-	 * </ul> 		  			
-	 * <ul> if node POS is VERB or VERB_PART:
-	 *  	then calls getVerbScenePart() method.
-	 * </ul>
-	 * 
-	 * @param pure_node the pure node fetched from kb.
-	 * @param pos the part of speech this node has.
-	 * @param synTag the SyntaxTag of this node in the sentence.
-	 * @return the ScenePart of pure_node, including ScenePart.UNKNOWN.
-	 */
-	@SuppressWarnings("unused")
-	private ScenePart getScenePart_OLD(Node pure_node, POS pos, DependencyRelationType synTag){
-		if(pure_node == null)
-			return ScenePart.UNKNOWN;
-		
-		if(synTag == DependencyRelationType.SBJ || synTag == DependencyRelationType.OBJ)
-			
-			return getSbjObjScenePart(pure_node, pos, synTag);
-			
-		if(synTag == DependencyRelationType.ADVRB)
-			
-			return getAdvScenePart(pure_node, pos, synTag);
-				
-		if(synTag == DependencyRelationType.ROOT)
-		
-			return getVerbScenePart(pure_node, pos, synTag);
-					
-		return ScenePart.UNKNOWN;
-	}
-	
-	/**
-	 * recognizing which scenePart has the node: 
-	 * a ROLE, DYNAMIC_OBJECT, STATIC_OBJECT, ACTION, LOCATION, TIME, EMOTION, GOAL or UNKNOWN?!
-	 * this method checks:
-	 * <ul> if node SyntaxTag is SUBJECT or SUBJECT_PART or OBJECT or OBJECT_PART
-	 * <ul> if node pos is NOUN, then checks weather
-	 * 		<li> isHuman, than return ScenePart.ROLE </li>
-	 * 		<li> isAnimal, than return ScenePart.DYNAMIC_OBJECT </li>
-	 * 		<li> isLocation, than return ScenePart.LOCATION </li>
-	 * 		<li> isTime, than return ScenePart.TIME </li> 
-	 * 		<li> otherwise returns ScenePart.STATIC_OBJECT </li>
-	 * </ul>
-	 * <ul> we don't make a ScenePart for an adjective. 		
-	 * </ul> 
-	 *   			
-	 * <ul> if node POS is VERB:
-	 * 
-	 *  	<li> it returns  ACTION. </li> 		
-	 * </ul>  
-	 * </ul> 
-	 * <ul> if node POS is ADVERB: 		
-	 * </ul>  
-	 * 
-	 * 
-	 * @param pure_node the pure node fetched from kb.
-	 * @param pos the part of speech this node has.
-	 * @param synTag the SyntaxTag of this node in the sentence. 
-	 * @return the ScenePart of pure_node, including ScenePart.UNKNOWN.
-	 */
-	private ScenePart getSbjObjScenePart(Node pure_node, POS pos, DependencyRelationType synTag){
-		if(pure_node == null)
-			return ScenePart.UNKNOWN;
-		
-		if(synTag == DependencyRelationType.SBJ ||	synTag == DependencyRelationType.OBJ){
-		
-			if(pos == POS.NOUN){			
-				//TODO: I must remove these lines!-------			
-				if(pure_node.getName().equals("پسر#n2"))
-					return ScenePart.ROLE;
-	//			if(pure_node.getName().equals("یک#n1"))
-	//				return ScenePart.SCENE_OBJECT;
-	//			if(pure_node.getName().equals("راه#n9"))
-	//				return ScenePart.LOCATION;
-	//			if(pure_node.getName().equals("سمت#n4"))
-	//				return ScenePart.LOCATION;
-	//			if(pure_node.getName().equals("خانه#n10"))
-	//				return ScenePart.SCENE_OBJECT;			
-				//---------------------------------------			
-	
-				if(isHuman(pure_node))
-					return ScenePart.ROLE;
-				
-				if(isAnimal(pure_node))
-					return ScenePart.DYNAMIC_OBJECT;
-				
-				if(isLocation(pure_node))
-					return ScenePart.LOCATION;			
-				
-				if(isTime(pure_node))
-					return ScenePart.TIME;
-				
-				return ScenePart.SCENE_OBJECT;
-			}
-//			we do nothing for SUBJECT and OBJECT to be adjective!
-//			else if(pos == POS.ADJECTIVE)
-//			else if(pos == pos.ADVERB)
-		}
-					
-		return ScenePart.UNKNOWN;
-	}
-	
-	/**
-	 * TODO: It must be improved: recognizing that which scenePart has the node: 
-	 * a Role (human) or DynamicObject or StaticObject?!
-	 * this method checks:
-	 * <ul> if node POS is NOUN:
-	 * 		<li> if node is a child of "نفر§n-13075" returns ROLE. </li>
-	 * 		<li> if node is a child of "جانور§n-12239" returns DYNAMIC_OBJ. </li>
-	 * 		<li> if node is a child of "راه§n-12894" or "جا§n-12733" returns LOCATION. </li>
-	 * 		<li> if node is a child of "" returns TIME. </li>
-	 * 		<li> otherwise returns STATIC_OBJ. </li>  			
-	 * <ul> if node POS is VERB:
-	 *  	<li> it returns  ACTION. </li> 		
-	 * </ul>  
-	 * </ul> 
-	 * <ul> if node POS is ADVERB: 		
-	 * </ul>  
-	 * <ul> we don't make a ScenePart for an adjective. 		
-	 * </ul> 
-	 * 
-	 * @param pure_node the pure node fetched from kb.
-	 * @param pos the part of speech this node has.
-	 * @param synTag the SyntaxTag of this node in the sentence.
-	 * @return the ScenePart of pure_node, including ScenePart.UNKNOWN.
-	 */
-	private ScenePart getAdvScenePart(Node pure_node, POS pos, DependencyRelationType synTag){
-		if(pos == POS.ADVERB || pos == POS.NOUN){
-			if(isLocation(pure_node))
-				return ScenePart.LOCATION;			
-			
-			if(isTime(pure_node))
-				return ScenePart.TIME;			
 		}
 		
-		return null;
-	}
-	
-	/**
-	 * TODO: It must be improved: recognizing that which scenePart has the node: 
-	 * a Role (human) or DynamicObject or StaticObject?!
-	 * this method checks:
-	 * <ul> if node POS is NOUN:
-	 * 		<li> if node is a child of "نفر§n-13075" returns ROLE. </li>
-	 * 		<li> if node is a child of "جانور§n-12239" returns DYNAMIC_OBJ. </li>
-	 * 		<li> if node is a child of "راه§n-12894" or "جا§n-12733" returns LOCATION. </li>
-	 * 		<li> if node is a child of "" returns TIME. </li>
-	 * 		<li> otherwise returns STATIC_OBJ. </li>  			
-	 * <ul> if node POS is VERB:
-	 *  	<li> it returns  ACTION. </li> 		
-	 * </ul>  
-	 * </ul> 
-	 * <ul> if node POS is ADVERB: 		
-	 * </ul>  
-	 * <ul> we don't make a ScenePart for an adjective. 		
-	 * </ul> 
-	 * 
-	 * @param pure_node the pure node fetched from kb.
-	 * @param pos the part of speech this node has.
-	 * @param synTag the SyntaxTag of this node in the sentence.
-	 * @return the ScenePart of pure_node, including ScenePart.UNKNOWN.
-	 */
-	private ScenePart getVerbScenePart(Node pure_node, POS pos, DependencyRelationType synTag){	
-		if(pos == POS.VERB)
-			return ScenePart.ACTION;
-		return null;
+		return ScenePart.UNKNOWN;
 	}
 	
 	/**

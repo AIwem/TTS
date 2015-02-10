@@ -322,17 +322,15 @@ public class Preprocessor {
 		if(sentenceModel.getArg4() != null)
 			arg4SceneElem = preprocessSemanticArg(sentenceModel.getArg4().convertToSemanticTag(), sentenceModel, primarySceneModel);
 		
-		processLocationOfScene(sentenceModel, arg3SceneElem, arg4SceneElem, primarySceneModel);
-		
 		if(sentenceModel.getArg5() != null)
 			preprocessSemanticArg(sentenceModel.getArg5().convertToSemanticTag(), sentenceModel, primarySceneModel);
 	
-		preprocessSecondaryArgs(sentenceModel, primarySceneModel);
+		processSubSemanticArgs(sentenceModel, primarySceneModel);
 		
-		preprocessVisualTagVerb(sentenceModel, primarySceneModel);
+		processLocationOfScene(sentenceModel, arg3SceneElem, arg4SceneElem, primarySceneModel);
 		
-		preprocessAllVisualTag(sentenceModel, primarySceneModel);
-		
+		processVisualTags(sentenceModel, primarySceneModel);
+				
 		print("\nprimarySceneModel\n" + primarySceneModel);
 		return primarySceneModel;
 	}
@@ -384,6 +382,10 @@ public class Preprocessor {
 	}
 	
 	/**
+	 * This method preprocesses the SemanticTag of sentenceModel, both MainSemanticTags and SubSemanticTags.
+	 * it creates proper SceneElement based on the SenetncePart of that semanticTag and its related ScenePart.
+	 * then adds this SceneElement to the primarytSceneModel.
+	 * This method preprocesses the dependents (adjectives and mozaf_elaihs) of semanticTags too. 
 	 * 
 	 * @param semanticTag may be null.
 	 * @param sentenceModel guaranteed not to be null.
@@ -458,7 +460,7 @@ public class Preprocessor {
 				
 				//------------------- pre-processing dependents of semArgPart --------------------
 				
-				processDependentsOfSemanticArg(semArgPart, sceneElem);
+				preprocessDependentsOfSemanticArg(semArgPart, sceneElem);
 								
 				print("=============== end of preprocess " + semanticTag + " =======================");
 				
@@ -492,24 +494,79 @@ public class Preprocessor {
 		
 		switch(verbType.name()){
 			case("MORAKAB"):
-				actionVerbProcessing(sentenceModel, primarySceneModel);
+				preprocessingActionVerb(sentenceModel, primarySceneModel);
 				break;
 			case("BASIT"):
-				actionVerbProcessing(sentenceModel, primarySceneModel);			
+				preprocessingActionVerb(sentenceModel, primarySceneModel);			
 				break;			
 			case("BASIT_RABTI"):
 				//TODO: check this part!
-				rabtiVerbProcessing(verb, sentenceModel, primarySceneModel);
+				preprocessingRabtiVerb(verb, sentenceModel, primarySceneModel);
 				break;				
 			case("BASIT_NAMAFOLI"):
 				//TODO: check this part!
-				namafoliVerbProcessing(verb, sentenceModel, primarySceneModel);
+				preprocessingNamafoliVerb(verb, sentenceModel, primarySceneModel);
 				break;			
 			default:
 				print("Unknown verb type!");
 			
 		}		
 		print("\n--------------- end of verb preprocess -----------------------------");
+	}
+	
+	/**
+	 * This method processes the SubSemanticTags of sentenceModel.
+	 * The SubSemanticTags are as follow:
+	 * <li> if sentenceModel has Arg-LOC	کجا رویداد(فعل) اتفاق می‌افتد؟مکان فیزکی و انتزاعی 
+	 * 		<ul>ifLocation, setLocation of primarySceneModel.</ul>
+	 * </li>
+	 * <li>  if sentenceModel has Arg-DIR	مسیر حرکت 
+	 * 		<ul>this Arg will be process in processLocationOfScene method.</ul> 
+	 * </li>
+	 * <li>  if sentenceModel has Arg-TMP	زمان
+	 * 		<ul>if isTime, setTime of primarySceneModel.</ul> 
+	 * </li>
+	 * <li>  if sentenceModel has Arg-MNR	چگونه؟ </li>
+	 * <li>  if sentenceModel has Arg-PRP	منظور، هدف و انگیزه رویداد </li>
+	 * <li>  if sentenceModel has Arg-GOL	غایت فعل + برای کس یا چیز دیگر </li>
+	 * <li>  if sentenceModel has Arg-CAU	هدف انجام عمل، چرا؟ </li>
+	 * <li>  if sentenceModel has Arg-COM	همراه با چه کسی/نهادی </li>
+	 * <li>  if sentenceModel has Arg-INS	ابزار یا شیء انجام رویداد </li>
+	 * <li>  if sentenceModel has Arg-EXT	میزان تغییر حاصل از فعل </li>
+	 * <li>  if sentenceModel has Arg-REC	ضمایر انعکاسی و دوطرفه (خود، یکدیگر) </li>
+	 * <li>  if sentenceModel has Arg-MOD	فعل وجهی(باید، ممکن‌است، قادراست، شاید، احتمالا) </li>
+	 * <li>  if sentenceModel has Arg-NEG	عدم وقوع رویداد </li>
+	 * <li>  if sentenceModel has Arg-CND	تحلیل جملات شرطی </li>
+	 * <li>  if sentenceModel has Arg-DIS	علایم گفتمان (بنابراین، ازاین رو) </li>
+	 * <li>  if sentenceModel has Arg-ADV	هر قید دیگری که در بالا نگنجد. </li>
+		
+	 * @param sentenceModel
+	 * @param primarySceneModel
+	 */
+	private void processSubSemanticArgs(SentenceModel sentenceModel, SceneModel primarySceneModel) {
+		
+		
+		
+		//processing ArgM_LOC, if any.
+		SentencePart locPart = sentenceModel.getSentencePart(SubSemanticTag.LOC);
+		if(locPart != null){
+			print("SceneModel has " + locPart + " ArgM_LOC");
+			
+			SceneElement locElem = preprocessSemanticArg(SubSemanticTag.LOC.convertToSemanticTag(), sentenceModel, primarySceneModel);
+			
+			primarySceneModel.setLocation((Location) locElem);
+		}
+		
+		//processing ArgM_TMP, if any.
+		SentencePart tmpPart = sentenceModel.getSentencePart(SubSemanticTag.TMP);
+		if(tmpPart != null){
+			print("SceneModel has " + tmpPart + " ArgM_TMP");
+			
+			SceneElement tmpElem = preprocessSemanticArg(SubSemanticTag.TMP.convertToSemanticTag(), sentenceModel, primarySceneModel);
+			
+			primarySceneModel.setTime((Time) tmpElem);
+		}	
+		
 	}
 	
 	/**
@@ -589,20 +646,10 @@ public class Preprocessor {
 		print("\n=============== end of preprocessLocation ==========================");
 	}
 
-	private void preprocessSecondaryArgs(SentenceModel sentenceModel, SceneModel primarySceneModel) {
+	private void processVisualTags(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		// TODO Auto-generated method stub
 		
-	}
-
-	private void preprocessVisualTagVerb(SentenceModel sentenceModel, SceneModel primarySceneModel) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	private void preprocessAllVisualTag(SentenceModel sentenceModel, SceneModel primarySceneModel) {
-		// TODO Auto-generated method stub
-		
-	}
+	}	
 
 	/**
 	 * 
@@ -661,19 +708,20 @@ public class Preprocessor {
 	/**
 	 * this method process the dependents (adjectives and mozaf_elaihs) of semArgPart (if any).
 	 * it converts each adjective and mozaf_elaih of semArgPart to :
-	 * <ul> if scenePart of sceneElement is ROLE:
-	 * 		<li> it adds a RoleMood to sceneElement. </li>		  			
-	 * <ul> if scenePart of sceneElement is DYNAMIC_OBJECT or STATIC_OBJECT:
-	 *  	<li> it adds an ObjectState to sceneElement. </li> 		
-	 * </ul> 
-	 * <ul> if scenePart of sceneElement is LOCATION, TIME, SCENE_EMOTION, SCENE_GOAL:
-	 * 		<li> id dose nothing yet! </li>
-	 * <ul> 
+	 * <li> if scenePart of sceneElement is ROLE:
+	 * 		<ul> it adds a RoleMood to sceneElement. </ul>	
+	 * </li>	  			
+	 * <li> if scenePart of sceneElement is DYNAMIC_OBJECT or STATIC_OBJECT:
+	 *  	<ul> it adds an ObjectState to sceneElement. </ul> 		
+	 * </li> 
+	 * <li> if scenePart of sceneElement is LOCATION, TIME, SCENE_EMOTION, SCENE_GOAL:
+	 * 		<ul> id dose nothing yet! </ul>
+	 * <li> 
 	 * 
 	 * @param semArgPart
 	 * @param sceneElement
 	 */
-	private void processDependentsOfSemanticArg(SentencePart semArgPart, SceneElement sceneElement){
+	private void preprocessDependentsOfSemanticArg(SentencePart semArgPart, SceneElement sceneElement){
 		
 		//It means that this sentencePart has some adjectives
 		if(semArgPart.hasAnyAdjectives()){
@@ -733,14 +781,14 @@ public class Preprocessor {
 						print("what to do for moz of SCENE_GOAL ?!");//TODO
 		}			
 	}
-	
+
 	/**
 	 * 
 	 * @param verb guaranteed not to be null.
 	 * @param sentenceModel guaranteed not to be null.
 	 * @param primarySceneModel guaranteed not to be null.
 	 */
-	private void namafoliVerbProcessing(SentencePart verb, SentenceModel sentenceModel, SceneModel primarySceneModel) {
+	private void preprocessingNamafoliVerb(SentencePart verb, SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		
 		SentencePart arg1Part = sentenceModel.getArg1SentencePart();
 		
@@ -775,7 +823,7 @@ public class Preprocessor {
 	 * @param sentenceModel guaranteed not to be null.
 	 * @param primarySceneModel guaranteed not to be null.
 	 */
-	private void rabtiVerbProcessing(SentencePart verb, SentenceModel sentenceModel, SceneModel primarySceneModel) {
+	private void preprocessingRabtiVerb(SentencePart verb, SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		
 		SentencePart arg1Part = sentenceModel.getArg1SentencePart();
 		
@@ -810,7 +858,7 @@ public class Preprocessor {
 			print(verb + " is rabti but Arg2Part " + arg2Part + " is not adjective!");
 	}
 
-	private void actionVerbProcessing(SentenceModel sentenceModel, SceneModel primarySceneModel) {
+	private void preprocessingActionVerb(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		
 		SentencePart verb = sentenceModel.getVerb();
 		
