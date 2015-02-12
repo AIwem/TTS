@@ -806,18 +806,18 @@ public class TTSEngine {
 	 * recognizing that which scenePart has the node: 
 	 * a ROLE, DYNAMIC_OBJECT, STATIC_OBJECT, ACTION, LOCATION, TIME, EMOTION, GOAL or UNKNOWN?!
 	 * this method checks:
-	 * <ul> if semanticTag is ARG0, 
+	 * <li> if semanticTag is ARG0, 
 	 * 		then calls getArg0ScenePart() method. 
-	 * </ul>
-	 * <ul> if semanticTag is ARG1,  
+	 * </li>
+	 * <li> if semanticTag is ARG1,  
 	 * 		then calls getArg1ScenePart() method.
-	 * </ul> 		  			
-	 * <ul>if semanticTag is ARG2,
+	 * </li> 		  			
+	 * <li>if semanticTag is ARG2,
 	 *  	then calls getArg2ScenePart() method.
-	 * </ul>
-	 * <ul>if semanticTag is ARG3,
+	 * </li>
+	 * <li>if semanticTag is ARG3,
 	 *  	then calls getArg3ScenePart() method.
-	 * </ul>
+	 * </li>
 	 *  
 	 * @param pureNode the pure node fetched from kb.
 	 * @param pos the part of speech this node has.
@@ -878,10 +878,10 @@ public class TTSEngine {
 	 * because this is ARG0 node so it must perform an action.
 	 * only ROLE or DYNAMIC_OBJECT can perform action.
 	 * this method checks: 
-	 * <ul> if node pos is NOUN, then checks weather
-	 * 		<li> if isHuman, then returns ScenePart.ROLE </li>
-	 * 		<li> otherwise, returns ScenePart.DYNAMIC_OBJECT </li> 		
-	 * </ul>
+	 * <li> if node pos is NOUN, then checks weather
+	 * 		<ul> if isHuman, then returns ScenePart.ROLE </ul>
+	 * 		<ul> otherwise, returns ScenePart.DYNAMIC_OBJECT </ul> 		
+	 * </li>
 	 *  
 	 * @param pureNode the pure node fetched from kb.
 	 * @param pos the part of speech this node has.
@@ -920,12 +920,12 @@ public class TTSEngine {
 	 * because this is ARG1 node so the action is performed on it.
 	 * only ROLE, DYNAMIC_OBJECT, STATIC_OBJECT, or LOCATION can got action performed on!
 	 * this method checks: 
-	 * <ul> if node pos is NOUN, then checks weather
-	 * 		<li> if isHuman, then returns ScenePart.ROLE </li>
-	 * 		<li> if isAnimal, then returns ScenePart.DYNAMIC_OBJECT </li>
-	 * 		<li> if isLocation, then returns ScenePart.LOCATION </li>
-	 * 		<li> otherwise, returns ScenePart.STATIC_OBJECT </li> 		
-	 * </ul>
+	 * <li> if node pos is NOUN, then checks weather
+	 * 		<ul> if isHuman, then returns ScenePart.ROLE </ul>
+	 * 		<ul> if isAnimal, then returns ScenePart.DYNAMIC_OBJECT </ul>
+	 * 		<ul> if isLocation, then returns ScenePart.LOCATION </ul>
+	 * 		<ul> otherwise, returns ScenePart.STATIC_OBJECT </ul> 		
+	 * </li>
 	 *  
 	 * @param pureNode the pure node fetched from kb.
 	 * @param pos the part of speech this node has.
@@ -970,15 +970,15 @@ public class TTSEngine {
 	 * 
 	 * because this is ARG2 node so it can be any of extend, obj2, beneficiary, instrument, attribute, and goal-endstate.
 	 * this method checks: 
-	 * <ul> if ARG2 is ARG2_OBJ2 or ARG2_BENEFICIARY and pos in NOUN,
-	 * 		<li> if isHuman, then returns ScenePart.ROLE </li>
-	 * 		<li> if isAnimal, then returns ScenePart.DYNAMIC_OBJECT </li>
-	 * 		<li> if isLocation, then returns ScenePart.LOCATION </li>
-	 * 		<li> otherwise, returns ScenePart.STATIC_OBJECT </li> 		
-	 * </ul>
-	 * <ul> if ARG2 is ARG2_INSTRUMENT
-	 *		<li>then returns ScenePart.STATIC_OBJECT</li> 
-	 * </ul>
+	 * <li> if ARG2 is ARG2_OBJ2 or ARG2_BENEFICIARY and pos in NOUN,
+	 * 		<ul> if isHuman, then returns ScenePart.ROLE </ul>
+	 * 		<ul> if isAnimal, then returns ScenePart.DYNAMIC_OBJECT </ul>
+	 * 		<ul> if isLocation, then returns ScenePart.LOCATION </ul>
+	 * 		<ul> otherwise, returns ScenePart.STATIC_OBJECT </ul> 		
+	 * </li>
+	 * <li> if ARG2 is ARG2_INSTRUMENT
+	 *		<ul>then returns ScenePart.STATIC_OBJECT</ul> 
+	 * </li>
 	 *  
 	 * @param pureNode the pure node fetched from kb.
 	 * @param semanticTag 
@@ -1023,18 +1023,18 @@ public class TTSEngine {
 	 * 
 	 * because this is ARG3 node so it can be any of source-startpoint, beneficiary, instrument, attribute.
 	 * this method checks: 
-	 * <ul> if ARG3 is ARG3_BENEFICIARY and pos in NOUN,
-	 * 		<li> if isHuman, then returns ScenePart.ROLE </li>
-	 * 		<li> if isAnimal, then returns ScenePart.DYNAMIC_OBJECT </li>
-	 * 		<li> if isLocation, then returns ScenePart.LOCATION </li>
-	 * 		<li> otherwise, returns ScenePart.STATIC_OBJECT </li> 		
-	 * </ul>
-	 * <ul> if ARG3 is ARG3_INSTRUMENT
-	 *		<li>then returns ScenePart.STATIC_OBJECT</li> 
-	 * </ul>
-	 * <ul> if ARG3 is ARG3_STARTPOINT
-	 *		<li> if isLocation, then returns ScenePart.LOCATION</li> 
-	 * </ul>
+	 * <li> if ARG3 is ARG3_BENEFICIARY and pos in NOUN,
+	 * 		<ul> if isHuman, then returns ScenePart.ROLE </ul>
+	 * 		<ul> if isAnimal, then returns ScenePart.DYNAMIC_OBJECT </ul>
+	 * 		<ul> if isLocation, then returns ScenePart.LOCATION </ul>
+	 * 		<ul> otherwise, returns ScenePart.STATIC_OBJECT </ul> 		
+	 * </li>
+	 * <li> if ARG3 is ARG3_INSTRUMENT
+	 *		<ul>then returns ScenePart.STATIC_OBJECT</ul> 
+	 * </li>
+	 * <li> if ARG3 is ARG3_STARTPOINT
+	 *		<ul> if isLocation, then returns ScenePart.LOCATION</ul> 
+	 * </li>
 	 *  
 	 * @param pureNode the pure node fetched from kb.
 	 * @param semanticTag 
@@ -1079,9 +1079,9 @@ public class TTSEngine {
 	 * 
 	 * because this is ARG4 node so it can be only endpoint.
 	 * this method checks: 
-	 * <ul> if ARG4 is ARG4_ENDPOINT
-	 *		<li> if isLocation returns ScenePart.LOCATION</li> 
-	 * </ul>
+	 * <li> if ARG4 is ARG4_ENDPOINT
+	 *		<ul> if isLocation returns ScenePart.LOCATION</ul> 
+	 * </li>
 	 *  
 	 * @param pureNode the pure node fetched from kb. 
 	 * @return the ScenePart of pureNode, only LOCATION, or UNKNOWN. no null will be returned.
@@ -1095,16 +1095,62 @@ public class TTSEngine {
 	}
 	
 	/**
+	 * //TODO: compete
 	 * recognizing which scenePart has this SubSemanticArg node:
-	 * a LOCATION, TIME?
+	 * a ROLE, DYNAMIC_OBJECT, STATIC_OBJECT, LOCATION?
 	 *	 
-	 * this method checks: 
-	 * <ul> if subSemArg is ARG_DIR
-	 *		<li> if isLocation returns ScenePart.LOCATION</li> 
-	 * </ul>
-	 * <ul> if subSemArg is ARG_TMP
-	 *		<li> if isTime returns ScenePart.TIME</li> 
-	 * </ul>
+	 * this method checks:
+	 * <li> if subSemArg is Arg-LOC	کجا رویداد(فعل) اتفاق می‌افتد؟مکان فیزکی و انتزاعی
+	 *		<ul> if isLocation returns ScenePart.LOCATION</ul> 
+	 * </li> 
+	 * <li> if subSemArg is Arg-DIR	مسیر حرکت
+	 *		<ul> if isLocation returns ScenePart.LOCATION</ul> 
+	 * </li>
+	 * <li> if subSemArg is Arg-TMP	زمان
+	 *		<ul> if isTime returns ScenePart.TIME</ul> 
+	 * </li>
+	 * <li> if subSemArg is Arg-MNR	چگونه؟
+	 *		<ul> if isTime returns ScenePart.TIME</ul> 
+	 * </li>
+	 * <li> if subSemArg is Arg-PRP	منظور، هدف و انگیزه رویداد
+	 *		<ul> if isTime returns ScenePart.TIME</ul> 
+	 * </li>
+	 * <li> if subSemArg is Arg-GOL	غایت فعل + برای کس یا چیز دیگر(مقصد افعال حرکتی،سودبرنده افعال دیگر)
+	 * 		<ul> if isHuman, then returns ScenePart.ROLE </ul>
+	 * 		<ul> if isAnimal, then returns ScenePart.DYNAMIC_OBJECT </ul>
+	 * 		<ul> if isLocation, then returns ScenePart.LOCATION </ul>
+	 * 		<ul> otherwise, returns ScenePart.STATIC_OBJECT </ul>
+	 * </li> 
+	 * <li> if subSemArg is Arg-CAU	هدف انجام عمل، چرا؟ </li>
+	 *		<ul> if is returns ScenePart.</ul> 
+	 * </li>
+	 * <li> if subSemArg is Arg-COM	همراه با چه کسی/نهادی (انسان یا سازمان، شیء نمیشود)ه
+	 *		<ul> if is returns ScenePart.</ul> 
+	 * </li>
+	 * <li> if subSemArg is Arg-INS	ابزار یا شیء انجام رویداد
+	 *		<ul> if is returns ScenePart.</ul> 
+	 * </li>
+	 * <li> if subSemArg is Arg-EXT	میزان تغییر حاصل از فعل
+	 *		<ul> if is returns ScenePart.</ul> 
+	 * </li>
+	 * <li> if subSemArg is Arg-REC	ضمایر انعکاسی و دوطرفه (خود، یکدیگر)
+	 *		<ul> if is returns ScenePart.</ul> 
+	 * </li>
+	 * <li> if subSemArg is Arg-MOD	فعل وجهی(باید، ممکن‌است، قادراست، شاید، احتمالا)
+	 *		<ul> if is returns ScenePart.</ul> 
+	 * </li>
+	 * <li> if subSemArg is Arg-NEG	عدم وقوع رویداد
+	 *		<ul> if is returns ScenePart.</ul> 
+	 * </li>
+	 * <li> if subSemArg is Arg-CND	تحلیل جملات شرطی
+	 *		<ul> if is returns ScenePart.</ul> 
+	 * </li>
+	 * <li> if subSemArg is Arg-DIS	علایم گفتمان (بنابراین، ازاین رو)
+	 *		<ul> if is returns ScenePart.</ul> 
+	 * </li>
+	 * <li> if subSemArg is Arg-ADV	هر قید دیگری که در بالا نگنجد
+	 *		<ul> if is returns ScenePart.</ul> 
+	 * </li>		
 	 *  
 	 * @param pureNode the pure node fetched from kb. 
 	 * @return the ScenePart of pureNode, LOCATION, TIME or UNKNOWN. no null will be returned.
@@ -1115,16 +1161,41 @@ public class TTSEngine {
 			if(isLocation(pureNode))
 				return ScenePart.LOCATION;
 		
+		if(subSemArg == SubSemanticTag.LOC)
+			if(isLocation(pureNode))
+				return ScenePart.LOCATION;
+		
 		if(subSemArg == SubSemanticTag.TMP){
 		
 			//TODO: I must remove these lines!-------			
 			if(pureNode.getName().equals("بلافاصله#r1"))
-				return ScenePart.UNKNOWN;
+				return ScenePart.TIME;
 
 			//---------------------------------------		
 			
 			if(isTime(pureNode))
 				return ScenePart.TIME;
+		}
+		
+		if(subSemArg == SubSemanticTag.GOL){
+			
+			if(pureNode.getName().equals("پسر#n2"))				
+				return ScenePart.ROLE;
+			if(pureNode.getName().equals("مادر#n1"))
+				return ScenePart.ROLE;
+			
+			if(pos == POS.NOUN){
+				if(isHuman(pureNode))
+					return ScenePart.ROLE;
+				
+				if(isAnimal(pureNode))
+					return ScenePart.DYNAMIC_OBJECT;
+				
+				if(isLocation(pureNode))
+					return  ScenePart.LOCATION;
+				
+				return ScenePart.STATIC_OBJECT;
+			}			
 		}
 		
 		return ScenePart.UNKNOWN;

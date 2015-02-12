@@ -3,6 +3,7 @@ package sceneElement;
 
 
 import model.ScenePart;
+import model.SentencePart;
 import ir.ac.itrc.qqa.semantic.kb.Node;
 import ir.ac.itrc.qqa.semantic.util.MyError;
 
@@ -42,6 +43,34 @@ public class SceneElement {
 		return _node;
 	}
 	
+	public void addDependent(SentencePart dependent, String elementType){
+		
+		if(dependent == null){
+			MyError.error("null input parameter for addDependent");
+			return;
+		}		
+		
+		if(this.scenePart == ScenePart.ROLE)
+			 this.addRoleMoodToRole(dependent._name, dependent._wsd);
+			
+		else if(this.scenePart == ScenePart.DYNAMIC_OBJECT || this.scenePart == ScenePart.STATIC_OBJECT)
+			this.addStateToSceneObject(dependent._name, dependent._wsd);
+
+		else if(this.scenePart == ScenePart.LOCATION)
+			print("what to do for adj of LOCATION ?!");//TODO
+
+		else if(this.scenePart == ScenePart.SCENE_GOAL)
+			print("what to do for adj of SCENE_GOAL ?!");//TODO
+	
+		else if(this.scenePart == ScenePart.TIME)
+			print("what to do for adj of TIME ?!");//TODO
+	
+		else if(this.scenePart == ScenePart.SCENE_EMOTION)
+			print("what to do for adj of SCENE_GOAL ?!");//TODO
+
+		
+	}
+	
 	public void addRoleActionToRole(String name, Node node){
 		
 		try{
@@ -50,7 +79,7 @@ public class SceneElement {
 			role.addRole_action(roleAct);			
 		}
 		catch(Exception e){
-			System.out.println(e);
+			print("" + e);
 		}
 	}
 	
@@ -61,7 +90,7 @@ public class SceneElement {
 			dynObj.addObejct_action(objAct);			
 		}
 		catch(Exception e){
-			System.out.println(e);
+			print("" + e);
 		}
 	}
 	
@@ -72,7 +101,7 @@ public class SceneElement {
 			role.addRole_mood(rm);
 		}
 		catch(Exception e){			
-			System.out.println(e);		
+			print("" + e);		
 		}
 	}
 	
@@ -83,7 +112,7 @@ public class SceneElement {
 			sceObj.setCurrent_state(objState);				
 		}
 		catch(Exception e){			
-			System.out.println(e);		
+			print("" + e);		
 		}	
 	}
 
@@ -138,4 +167,10 @@ public class SceneElement {
 			time.mergeWith((Time)element);
 		}
 	}
+	
+	private void print(String toPrint){
+		print(toPrint);
+		
+	}
+
 }

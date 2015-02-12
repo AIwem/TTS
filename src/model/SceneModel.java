@@ -9,7 +9,9 @@ import java.util.ArrayList;
 
 import sceneElement.DynamicObject;
 import sceneElement.Location;
+import sceneElement.ObjectState;
 import sceneElement.Role;
+import sceneElement.RoleMood;
 import sceneElement.SceneElement;
 import sceneElement.SceneEmotion;
 import sceneElement.SceneGoal;
@@ -38,6 +40,8 @@ public class SceneModel {
 	private ArrayList<Location> alternativeLocations = new ArrayList<Location>();
 	
 	private Time time;
+	
+	private ArrayList<Time> alternativeTimes = new ArrayList<Time>();
 	
 	private ArrayList<SceneGoal> scene_goals = new ArrayList<SceneGoal>();
 		
@@ -80,16 +84,6 @@ public class SceneModel {
 		}
 	}
 	
-	public void addAlternativeLocation(Location location) {
-		if(location != null){
-			if(alternativeLocations == null)
-				alternativeLocations = new ArrayList<Location>();
-			
-			alternativeLocations.add(location);
-			print("alternativeLocation " + location + " added to SceneModel.");
-		}			
-	}
-
 	public void setTime(Time time) {
 		if(time != null){
 			if(this.time != null)
@@ -97,9 +91,10 @@ public class SceneModel {
 			
 			print("Time " + time + " set for SceneModel.");
 			this.time = time;
+			addAlternativeTime(time);
 		}		
 	}
-	
+		
 	//------------------ getter part -------------------
 
 	public StoryModel getStory() {
@@ -168,6 +163,10 @@ public class SceneModel {
 	
 	public Time getTime() {
 		return time;
+	}
+	
+	public ArrayList<Time> getAlternativeTimes(){
+		return alternativeTimes;
 	}
 	
 	public ArrayList<SceneEmotion> getScene_emotions() {
@@ -398,19 +397,74 @@ public class SceneModel {
 				addScene_emotion(sceEmo);
 	}
 	
+	public void addAlternativeLocation(Location location) {		
+		if(location != null){
+			if(alternativeLocations == null)
+				alternativeLocations = new ArrayList<Location>();
+			
+			if(!hasAlternativeLocation(location)){
+				alternativeLocations.add(location);
+				print("alternativeLocation " + location + " added to SceneModel.");
+			}
+			else
+				print("SceneModel has this " + location + " AlternativeLocation before!");			
+		}		
+	}
+
+
+	
+	public void addAlternativeTime(Time time) {
+		if(time != null){
+			if(alternativeTimes == null)
+				alternativeTimes = new ArrayList<Time>();
+			
+			if(!hasAlternativeTime(time)){
+				alternativeTimes.add(time);
+				print("alternativeTime " + time + " added to SceneModel.");
+			}
+			else
+				print("SceneModel has this " + time + " AlternativeTime before!");
+		}			
+	}
+	
 		/**
 	 * this method based on the ScenePart of the part adds a Role, DynamicObject, StaticObject, or ... to primarySceneModel.
 	 * TODO: we have assumed for simplicity which every scene has a unique Role, DyanamicObject, and StaticObject with a one name.
-	 * for example all «پسرک» refer to just one Role. 
+	 * for example all «پسرک» refer to just one Role.
+	 * <li> if ScenePart of SceneElement is ROLE 
+	 * 		<ul> then adds it to roles of primarySceneModel. </ul>
+	 * </li>
+	 * <li> if ScenePart of SceneElement is DYNAMIC_OBJECT 
+	 * 		<ul> then adds it to dynamic_objects of primarySceneModel. </ul> 
+	 * </li>
+	 * <li> if ScenePart of SceneElement is STATIC_OBJECT
+	 * 		<ul> then adds it to static_objects of primarySceneModel. </ul>
+	 * </li>
+	 * <li> if ScenePart of SceneElement is SCENE_EMOTION
+	 * 		<ul> then adds it to scene_emotions of primarySceneModel. </ul>
+	 * </li>
+	 * <li> if ScenePart of SceneElement is SCENE_GOAL
+	 * 		<ul> then adds it to scene_goals of primarySceneModel. </ul>
+	 * </li>
+	 * <li> if ScenePart of SceneElement is LOCATION
+	 * 		<ul> then adds it to alternativeLocations of primarySceneModel, not Location of primarySceneModel. </ul>
+	 * </li>
+	 * <li> if ScenePart of SceneElement is TIME
+	 * 		<ul> then adds it to alternativeTime of primarySceneModel, not Time of primarySceneModel. </ul>
+	 * </li>
+	 * <li> if ScenePart of SceneElement is ROlE_MOOD and forMainSceneElement is ROLE 
+	 * 		<ul> then adds it to role_moods of forMainSceneElement.</ul>
+	 * </li>
+	 * <li> if ScenePart of SceneElement is OBJECT_STATE and forMainSceneElement is SCENE_OBJECT 
+	 * 		<ul> then adds it to object_states of forMainSceneElement.</ul>
+	 * </li>
 	 * 
-	 * note that we do nothing for Location and Time of primarySceneModel. 
-	 * they will be processed in next phases.
-	 * 
-	 * @param sceneElement the new  SceneElement which is to be added to this SceneModel. 
+	 * @param sceneElement the new  SceneElement which is to be added to this SceneModel.
+	 * @param forMainSceneElement the main SceneElement which new sceneElement is to be added to it. 
 	 */
-	public void addToPrimarySceneModel(SceneElement sceneElement){
+	public void addToPrimarySceneModel(SceneElement sceneElement, SceneElement forMainSceneElement){
 		if(sceneElement == null || sceneElement.scenePart == null || sceneElement.scenePart == ScenePart.UNKNOWN){		
-			MyError.error("null input parameter for addToPrimarySceneModel !");
+			MyError.error("null or UNKNOWN input parameter for addToPrimarySceneModel !");
 			return;
 		}								
 		
@@ -426,24 +480,13 @@ public class SceneModel {
 			StaticObject staObj = (StaticObject) sceneElement;			
 			addStatic_object(staObj);
 		}
-		else if(sceneElement.scenePart == ScenePart.LOCATION){//TODO: check what else shall I do for this case!			
-//			if(getLocation() != null){
-//				MyError.error("the primarySceneModel has had a location before!" + getLocation());
-//				return;
-//			}
-//
-//			Location location = (Location) sceneElement;
-//			setLocation(location);
-			
+		else if(sceneElement.scenePart == ScenePart.LOCATION){
+			Location altLoc = (Location) sceneElement;
+			addAlternativeLocation(altLoc);			
 		}
-		else if(sceneElement.scenePart == ScenePart.TIME){//TODO: check what else shall I do for this case!
-//			if(getTime() != null){
-//				MyError.error("the primarySceneModel has had a time before!" + getTime());
-//				return;
-//			}
-//
-//			Time time = (Time) sceneElement;
-//			setTime(time);			
+		else if(sceneElement.scenePart == ScenePart.TIME){
+			Time altTime = (Time) sceneElement;
+			addAlternativeTime(altTime);
 		}
 		else if(sceneElement.scenePart == ScenePart.SCENE_EMOTION){
 			SceneEmotion sceEmo = (SceneEmotion) sceneElement;			
@@ -452,6 +495,18 @@ public class SceneModel {
 		else if(sceneElement.scenePart == ScenePart.SCENE_GOAL){
 			SceneGoal sceGoal = (SceneGoal) sceneElement;			
 			addScene_goal(sceGoal);						
+		}
+		else if(sceneElement.scenePart == ScenePart.ROLE_MOOD && forMainSceneElement != null && 
+				forMainSceneElement.scenePart == ScenePart.ROLE){
+			RoleMood rm = (RoleMood) sceneElement;
+			Role mainRole = (Role) forMainSceneElement;
+			mainRole.addRole_mood(rm);
+		}
+		else if(sceneElement.scenePart == ScenePart.OBJECT_STATE && forMainSceneElement != null && 
+				(forMainSceneElement.scenePart == ScenePart.DYNAMIC_OBJECT || forMainSceneElement.scenePart == ScenePart.STATIC_OBJECT)){
+			ObjectState objStat = (ObjectState) sceneElement;
+			DynamicObject mainObj = (DynamicObject) forMainSceneElement;
+			mainObj.addObject_state(objStat);
 		}
 	}
 	
@@ -572,6 +627,26 @@ public class SceneModel {
 			return false;
 	}	
 	
+	public boolean hasAlternativeLocation(Location locatin) {
+		if(locatin == null)
+			return false;
+		
+		for(Location loc: this.alternativeLocations)
+			if(loc.equals(locatin))
+				return true;	
+			return false;
+	}
+	
+	public boolean hasAlternativeTime (Time time) {
+		if(time == null)
+			return false;
+		
+		for(Time t: this.alternativeTimes)
+			if(t.equals(time))
+				return true;	
+			return false;
+	}	
+	
 	public boolean hasSceneElement(SceneElement sceneElement) {
 		
 		if(sceneElement == null || sceneElement.scenePart == null || sceneElement.scenePart == ScenePart.UNKNOWN){
@@ -640,6 +715,7 @@ public class SceneModel {
 		st += "\nlocation= " + location +
 		"\nalternativeLocations= " + alternativeLocations +
 		"\ntime= " + time +
+		"\nalternativeTimes= " + alternativeTimes +
 		"\nscene_goals= " + scene_goals + 
 		"\nscene_emotions= " + scene_emotions + "]\n";
 		
