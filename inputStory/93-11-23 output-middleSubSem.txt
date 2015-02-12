@@ -1,0 +1,279 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NSentence: Å”—ò «„—Ê“ œ— —«Â Œ«‰Â ç‘„‘ »Â Ìò ò»Ê — “Œ„Ì «› «œ
+
+=============== in   prepareNullSemanticTags =======================
+=============== end of prepareNullSemanticTags =====================
+
+=============== in     preprocess ARG0_EXPERIENCER =======================
+Å”—ò ............. in whichScenePart ....................
+Å”—#n2 ............. in getScenePart ........... ARG0_EXPERIENCER
+Å”—#n2 (1) ScenePart is ROLE
+Å”—ò added to SceneModel as Role.
+Å”—ò ARG0_EXPERIENCER has some adjectives:[Œ—œ”«·#a1 (1)]
+RoleMood Œ—œ”«·#a1 (1)=  Œ—œ”«·#a1 (1) added to Å”—ò
+=============== end of preprocess ARG0_EXPERIENCER =======================
+
+=============== in     preprocess ARG1_THEME =======================
+»Â Ìò ò»Ê — “Œ„Ì ............. in whichScenePart ....................
+ò»Ê —#n1 ............. in getScenePart ........... ARG1_THEME
+ò»Ê —#n1.............. in isHuman ...........................
+ò»Ê —#n1 (1) ScenePart is DYNAMIC_OBJECT
+»Â Ìò ò»Ê — “Œ„Ì added to SceneModel as Dynamic_object.
+»Â Ìò ò»Ê — “Œ„Ì ARG1_THEME has some adjectives:[Ìò, “Œ„Ì]
+current ObjectState of »Â Ìò ò»Ê — “Œ„Ì set to Ìò#n1 (1)=  Ìò
+ObjectState Ìò#n1 (1)=  Ìò added to »Â Ìò ò»Ê — “Œ„Ì
+current ObjectState of »Â Ìò ò»Ê — “Œ„Ì set to “Œ„Ì#a1 (1)=  “Œ„Ì
+ObjectState “Œ„Ì#a1 (1)=  “Œ„Ì added to »Â Ìò ò»Ê — “Œ„Ì
+=============== end of preprocess ARG1_THEME =======================
+
+--------------- in   verb preprocess -------------------------------
+verbRel added ---- : Å”—#n2 (1) --> *ç‘„ «› «œ‰#v (1) (1) --> ò»Ê —#n1 (1)
+
+ç‘„‘ù«› «œ vebType is: BASIT
+RoleAction ç‘„ «› «œ‰#v (1)=  ç‘„‘ù«› «œ added to Å”—ò
+--------------- end of verb preprocess -----------------------------
+
+=============== in processSubSemArgs ===============================
+SceneModel has «„—Ê“ ArgM_TMP
+=============== in     preprocess TMP =======================
+«„—Ê“ ............. in whichScenePart ....................
+«„—Ê“#n1 ............. in getScenePart ........... TMP
+«„—Ê“#n1.............. in isTime ............................
+«„—Ê“#n1 (1) ScenePart is TIME
+alternativeTime [«„—Ê“#n1 (1)=  «„—Ê“] added to SceneModel.
+=============== end of preprocess TMP =======================
+Time [«„—Ê“#n1 (1)=  «„—Ê“] set for SceneModel.
+SceneModel has this [«„—Ê“#n1 (1)=  «„—Ê“] AlternativeTime before!
+=============== end of processSubSemArgs ===========================
+
+
+=============== in processLocation =================================
+=============== in     preprocess DIR =======================
+œ— —«Â Œ«‰Â ............. in whichScenePart ....................
+—«Â#n9 ............. in getScenePart ........... DIR
+—«Â#n9.............. in isLocation ........................
+—«Â#n9 (1) ScenePart is LOCATION
+alternativeLocation [—«Â#n9 (1)=  œ— —«Â Œ«‰Â] added to SceneModel.
+œ— —«Â Œ«‰Â DIR has mozaf_elaih: [Œ«‰Â]
+what to do for adj of LOCATION ?!
+=============== end of preprocess DIR =======================
+SceneModel has this [—«Â#n9 (1)=  œ— —«Â Œ«‰Â] AlternativeLocation before!
+=============== end of processLocation =============================
+
+primarySceneModel
+roles= [
+	[Å”—#n2 (1)= Å”—ò role_actions=  [ç‘„ «› «œ‰#v (1)=  ç‘„‘ù«› «œ] role_goals=    [] role_emotions= [] role_moods=    [Œ—œ”«·#a1 (1)=  Œ—œ”«·#a1 (1)]]]
+dynamic_objs= [ò»Ê —#n1 (1)=  »Â Ìò ò»Ê — “Œ„Ì object_actions=  [] object_states=  [Ìò#n1 (1)=  Ìò, “Œ„Ì#a1 (1)=  “Œ„Ì]]
+static_objs= 
+location= null
+alternativeLocations= [[—«Â#n9 (1)=  œ— —«Â Œ«‰Â]]
+time= [«„—Ê“#n1 (1)=  «„—Ê“]
+alternativeTimes= [[«„—Ê“#n1 (1)=  «„—Ê“]]
+scene_goals= []
+scene_emotions= []]
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NSentence: »·«›«’·Â ò»Ê — —« »—œ‘ 
+=============== in   prepareNullSemanticTags =======================
+prepared ARG0_AGENT
+=============== end of prepareNullSemanticTags =====================
+
+=============== in     preprocess ARG0_AGENT =======================
+Å”—ò ............. in whichScenePart ....................
+Å”—#n2 (1) ScenePart is ROLE
+Å”—ò is redundant!
+Å”—ò ARG0_AGENT has some adjectives:[Œ—œ”«·#a1 (1)]
+Å”—ò role has had Œ—œ”«·#a1 (1)=  Œ—œ”«·#a1 (1) before!
+=============== end of preprocess ARG0_AGENT =======================
+
+=============== in     preprocess ARG1_THEME =======================
+ò»Ê — —« ............. in whichScenePart ....................
+ò»Ê —#n1 (1) ScenePart is DYNAMIC_OBJECT
+ò»Ê — —« is redundant!
+=============== end of preprocess ARG1_THEME =======================
+
+--------------- in   verb preprocess -------------------------------
+verbRel added ---- : Å”—#n2 (1) --> *»—œ«‘ ‰#v1 (1) (1) --> ò»Ê —#n1 (1)
+
+»—œ«‘  vebType is: BASIT
+RoleAction »—œ«‘ ‰#v1 (1)=  »—œ«‘  added to Å”—ò
+--------------- end of verb preprocess -----------------------------
+
+=============== in processSubSemArgs ===============================
+SceneModel has »·«›«’·Â ArgM_TMP
+=============== in     preprocess TMP =======================
+»·«›«’·Â ............. in whichScenePart ....................
+»·«›«’·Â#r1 ............. in getScenePart ........... TMP
+»·«›«’·Â#r1 (1) ScenePart is TIME
+alternativeTime [»·«›«’·Â#r1 (1)=  »·«›«’·Â] added to SceneModel.
+=============== end of preprocess TMP =======================
+the SceneModel previous Time: [«„—Ê“#n1 (1)=  «„—Ê“] replaced with [»·«›«’·Â#r1 (1)=  »·«›«’·Â]
+Time [»·«›«’·Â#r1 (1)=  »·«›«’·Â] set for SceneModel.
+SceneModel has this [»·«›«’·Â#r1 (1)=  »·«›«’·Â] AlternativeTime before!
+=============== end of processSubSemArgs ===========================
+
+=============== in processLocation =================================
+=============== end of processLocation =============================
+
+primarySceneModel
+roles= [
+	[Å”—#n2 (1)= Å”—ò role_actions=  [ç‘„ «› «œ‰#v (1)=  ç‘„‘ù«› «œ, »—œ«‘ ‰#v1 (1)=  »—œ«‘ ] role_goals=    [] role_emotions= [] role_moods=    [Œ—œ”«·#a1 (1)=  Œ—œ”«·#a1 (1)]]]
+dynamic_objs= [ò»Ê —#n1 (1)=  »Â Ìò ò»Ê — “Œ„Ì object_actions=  [] object_states=  [Ìò#n1 (1)=  Ìò, “Œ„Ì#a1 (1)=  “Œ„Ì]]
+static_objs= 
+location= null
+alternativeLocations= [[—«Â#n9 (1)=  œ— —«Â Œ«‰Â]]
+time= [»·«›«’·Â#r1 (1)=  »·«›«’·Â]
+alternativeTimes= [[«„—Ê“#n1 (1)=  «„—Ê“], [»·«›«’·Â#r1 (1)=  »·«›«’·Â]]
+scene_goals= []
+scene_emotions= []]
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NSentence: ‘—Ê⁄ »Â œÊÌœ‰ »Â ”„  Œ«‰Â ò—œ
+=============== in   prepareNullSemanticTags =======================
+prepared ARG0_AGENT
+=============== end of prepareNullSemanticTags =====================
+
+=============== in     preprocess ARG0_AGENT =======================
+Å”—ò ............. in whichScenePart ....................
+Å”—#n2 (1) ScenePart is ROLE
+Å”—ò is redundant!
+Å”—ò ARG0_AGENT has some adjectives:[Œ—œ”«·#a1 (1)]
+Å”—ò role has had Œ—œ”«·#a1 (1)=  Œ—œ”«·#a1 (1) before!
+=============== end of preprocess ARG0_AGENT =======================
+
+=============== in     preprocess ARG1_THEME =======================
+It is an infinitive so, the process should got performed for it again!
+
+--------------- in   verb preprocess -------------------------------
+verbRel added ---- : Å”—#n2 (1) --> *‘—Ê⁄ ò—œ‰#v1 (1) (1) --> œÊÌœ‰#v1 (1)
+
+‘—Ê⁄ ò—œ vebType is: BASIT
+RoleAction ‘—Ê⁄ ò—œ‰#v1 (1)=  ‘—Ê⁄ ò—œ added to Å”—ò
+--------------- end of verb preprocess -----------------------------
+
+=============== in processSubSemArgs ===============================
+=============== end of processSubSemArgs ===========================
+
+=============== in processLocation =================================
+=============== in     preprocess DIR =======================
+»Â ”„  Œ«‰Â ............. in whichScenePart ....................
+”„ #n4 ............. in getScenePart ........... DIR
+”„ #n4.............. in isLocation ........................
+”„ #n4 (1) ScenePart is LOCATION
+alternativeLocation [”„ #n4 (1)=  »Â ”„  Œ«‰Â] added to SceneModel.
+»Â ”„  Œ«‰Â DIR has mozaf_elaih: [Œ«‰Â]
+what to do for adj of LOCATION ?!
+=============== end of preprocess DIR =======================
+SceneModel has this [”„ #n4 (1)=  »Â ”„  Œ«‰Â] AlternativeLocation before!
+=============== end of processLocation =============================
+
+primarySceneModel
+roles= [
+	[Å”—#n2 (1)= Å”—ò role_actions=  [ç‘„ «› «œ‰#v (1)=  ç‘„‘ù«› «œ, »—œ«‘ ‰#v1 (1)=  »—œ«‘ , ‘—Ê⁄ ò—œ‰#v1 (1)=  ‘—Ê⁄ ò—œ] role_goals=    [] role_emotions= [] role_moods=    [Œ—œ”«·#a1 (1)=  Œ—œ”«·#a1 (1)]]]
+dynamic_objs= [ò»Ê —#n1 (1)=  »Â Ìò ò»Ê — “Œ„Ì object_actions=  [] object_states=  [Ìò#n1 (1)=  Ìò, “Œ„Ì#a1 (1)=  “Œ„Ì]]
+static_objs= 
+location= null
+alternativeLocations= [[—«Â#n9 (1)=  œ— —«Â Œ«‰Â], [”„ #n4 (1)=  »Â ”„  Œ«‰Â]]
+time= [»·«›«’·Â#r1 (1)=  »·«›«’·Â]
+alternativeTimes= [[«„—Ê“#n1 (1)=  «„—Ê“], [»·«›«’·Â#r1 (1)=  »·«›«’·Â]]
+scene_goals= []
+scene_emotions= []]
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NSentence: Ê«—œ Œ«‰Â ‘œ
+=============== in   prepareNullSemanticTags =======================
+prepared ARG0_INITIATOR
+=============== end of prepareNullSemanticTags =====================
+
+=============== in     preprocess ARG0_INITIATOR =======================
+Å”—ò ............. in whichScenePart ....................
+Å”—#n2 (1) ScenePart is ROLE
+Å”—ò added to SceneModel as Role.
+Å”—ò ARG0_INITIATOR has some adjectives:[Œ—œ”«·#a1 (1)]
+RoleMood Œ—œ”«·#a1 (1)=  Œ—œ”«·#a1 (1) added to Å”—ò
+=============== end of preprocess ARG0_INITIATOR =======================
+
+--------------- in   verb preprocess -------------------------------
+verbRel added ---- : Å”—#n2 (1) --> *Ê«—œ ‘œ‰#v2 (1) (1) --> ANY
+
+Ê«—œ ‘œ vebType is: MORAKAB
+RoleAction Ê«—œ ‘œ‰#v2 (1)=  Ê«—œ ‘œ added to Å”—ò
+--------------- end of verb preprocess -----------------------------
+
+=============== in     preprocess ARG4_ENDPOINT =======================
+Œ«‰Â ............. in whichScenePart ....................
+Œ«‰Â#n10 ............. in getScenePart ........... ARG4_ENDPOINT
+Œ«‰Â#n10.............. in isLocation ........................
+Œ«‰Â#n10 (1) ScenePart is LOCATION
+alternativeLocation [Œ«‰Â#n10 (1)=  Œ«‰Â] added to SceneModel.
+=============== end of preprocess ARG4_ENDPOINT =======================
+
+=============== in processSubSemArgs ===============================
+=============== end of processSubSemArgs ===========================
+
+=============== in processLocation =================================
+SceneModel has this [Œ«‰Â#n10 (1)=  Œ«‰Â] AlternativeLocation before!
+=============== end of processLocation =============================
+
+primarySceneModel
+roles= [
+	[Å”—#n2 (1)= Å”—ò role_actions=  [Ê«—œ ‘œ‰#v2 (1)=  Ê«—œ ‘œ] role_goals=    [] role_emotions= [] role_moods=    [Œ—œ”«·#a1 (1)=  Œ—œ”«·#a1 (1)]]]
+dynamic_objs= 
+static_objs= 
+location= null
+alternativeLocations= [[Œ«‰Â#n10 (1)=  Œ«‰Â]]
+time= null
+alternativeTimes= []
+scene_goals= []
+scene_emotions= []]
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NSentence: ò»Ê — —« »Â „«œ— ŒÊœ œ«œ
+=============== in   prepareNullSemanticTags =======================
+prepared ARG0_AGENT
+=============== end of prepareNullSemanticTags =====================
+
+=============== in     preprocess ARG0_AGENT =======================
+Å”—ò ............. in whichScenePart ....................
+Å”—#n2 (1) ScenePart is ROLE
+Å”—ò is redundant!
+Å”—ò ARG0_AGENT has some adjectives:[Œ—œ”«·#a1 (1)]
+Å”—ò role has had Œ—œ”«·#a1 (1)=  Œ—œ”«·#a1 (1) before!
+=============== end of preprocess ARG0_AGENT =======================
+
+=============== in     preprocess ARG1_THEME =======================
+ò»Ê — ............. in whichScenePart ....................
+ò»Ê —#n1 (1) ScenePart is DYNAMIC_OBJECT
+ò»Ê — added to SceneModel as Dynamic_object.
+=============== end of preprocess ARG1_THEME =======================
+
+=============== in     preprocess ARG2_OBJ2 =======================
+»Â „«œ— ŒÊœ ............. in whichScenePart ....................
+„«œ—#n1 ............. in getScenePart ........... ARG2_OBJ2
+„«œ—#n1 (1) ScenePart is ROLE
+»Â „«œ— ŒÊœ added to SceneModel as Role.
+»Â „«œ— ŒÊœ ARG2_OBJ2 has mozaf_elaih: [ŒÊœ]
+=============== end of preprocess ARG2_OBJ2 =======================
+
+--------------- in   verb preprocess -------------------------------
+verbRel added ---- : Å”—#n2 (1) --> *œ«œ‰#v5 (1) (1) --> ò»Ê —#n1 (1)
+
+œ«œ vebType is: BASIT
+RoleAction œ«œ‰#v5 (1)=  œ«œ added to Å”—ò
+--------------- end of verb preprocess -----------------------------
+
+=============== in processSubSemArgs ===============================
+=============== end of processSubSemArgs ===========================
+
+=============== in processLocation =================================
+=============== end of processLocation =============================
+
+primarySceneModel
+roles= [
+	[Å”—#n2 (1)= Å”—ò role_actions=  [Ê«—œ ‘œ‰#v2 (1)=  Ê«—œ ‘œ, œ«œ‰#v5 (1)=  œ«œ] role_goals=    [] role_emotions= [] role_moods=    [Œ—œ”«·#a1 (1)=  Œ—œ”«·#a1 (1)]]
+	[„«œ—#n1 (1)= »Â „«œ— ŒÊœ role_actions=  [] role_goals=    [] role_emotions= [] role_moods=    []]]
+dynamic_objs= [ò»Ê —#n1 (1)=  ò»Ê — object_actions=  [] object_states=  []]
+static_objs= 
+location= null
+alternativeLocations= [[Œ«‰Â#n10 (1)=  Œ«‰Â]]
+time= null
+alternativeTimes= []
+scene_goals= []
+scene_emotions= []]
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ «·Õ„œ··Â

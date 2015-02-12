@@ -302,13 +302,13 @@ public class Preprocessor {
 		checkAllSemanticTagsWithUser(sentenceModel, primarySceneModel);
 		
 		if(sentenceModel.getArg0() != null)
-			preprocessSemanticArg(sentenceModel.getArg0().convertToSemanticTag(), null, sentenceModel, primarySceneModel);
+			preprocessSemanticArg(sentenceModel.getArg0().convertToSemanticTag(), sentenceModel, primarySceneModel);
 		
 		if(sentenceModel.getArg1() != null)
-			preprocessSemanticArg(sentenceModel.getArg1().convertToSemanticTag(), null, sentenceModel, primarySceneModel);
+			preprocessSemanticArg(sentenceModel.getArg1().convertToSemanticTag(), sentenceModel, primarySceneModel);
 	
 		if(sentenceModel.getArg2() != null)
-			preprocessSemanticArg(sentenceModel.getArg2().convertToSemanticTag(), null, sentenceModel, primarySceneModel);
+			preprocessSemanticArg(sentenceModel.getArg2().convertToSemanticTag(), sentenceModel, primarySceneModel);
 
 		preprocessVerbArg(sentenceModel, primarySceneModel);
 		
@@ -317,13 +317,13 @@ public class Preprocessor {
 		SceneElement arg4SceneElem = null;
 		
 		if(sentenceModel.getArg3() != null)
-			arg3SceneElem = preprocessSemanticArg(sentenceModel.getArg3().convertToSemanticTag(), null, sentenceModel, primarySceneModel);
+			arg3SceneElem = preprocessSemanticArg(sentenceModel.getArg3().convertToSemanticTag(), sentenceModel, primarySceneModel);
 				
 		if(sentenceModel.getArg4() != null)
-			arg4SceneElem = preprocessSemanticArg(sentenceModel.getArg4().convertToSemanticTag(), null, sentenceModel, primarySceneModel);
+			arg4SceneElem = preprocessSemanticArg(sentenceModel.getArg4().convertToSemanticTag(), sentenceModel, primarySceneModel);
 		
 		if(sentenceModel.getArg5() != null)
-			preprocessSemanticArg(sentenceModel.getArg5().convertToSemanticTag(), null, sentenceModel, primarySceneModel);
+			preprocessSemanticArg(sentenceModel.getArg5().convertToSemanticTag(), sentenceModel, primarySceneModel);
 	
 		processSubSemanticArgs(sentenceModel, primarySceneModel);
 		
@@ -406,6 +406,9 @@ public class Preprocessor {
 	 * <li> if ScenePart of SceneElement is TIME
 	 * 		<ul> then adds it to alternativeTime of primarySceneModel, not Time of primarySceneModel. </ul>
 	 * </li>
+	 * <li> if ScenePart of SceneElement is ROLE_MOOD or OBJECT_STATE 
+	 * 		<ul> do nothing.</ul>
+	 * </li>
 	 * 
 	 * This method preprocesses the dependents (adjectives and mozaf_elaihs) of semanticTags too. 
 	 * 
@@ -414,7 +417,7 @@ public class Preprocessor {
 	 * @param primarySceneModel guaranteed not to be null.
 	 * @return the SceneElement created based on semanticTag
 	 */
-	private SceneElement preprocessSemanticArg(SemanticTag semanticTag, SceneElement forMainSceneElement, SentenceModel sentenceModel, SceneModel primarySceneModel) {
+	private SceneElement preprocessSemanticArg(SemanticTag semanticTag, SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		
 		if(semanticTag == null)
 			return null;
@@ -475,7 +478,7 @@ public class Preprocessor {
 				//It means that this semArgPart is a newly seen ScenePart which is to be added to primarySceneModel.
 				else{
 					//creates a new ScenePart based on semArgPart and adds it to the primarySceneModel or return null if it was redundant!
-					primarySceneModel.addToPrimarySceneModel(inputSceneElement, forMainSceneElement);
+					primarySceneModel.addToPrimarySceneModel(inputSceneElement);
 					
 					sceneElem = inputSceneElement;				
 				}
@@ -533,7 +536,7 @@ public class Preprocessor {
 				print("Unknown verb type!");
 			
 		}		
-		print("\n--------------- end of verb preprocess -----------------------------");
+		print("--------------- end of verb preprocess -----------------------------");
 	}
 	
 	/**
@@ -552,14 +555,17 @@ public class Preprocessor {
 	 * <li>  if sentenceModel has Arg-MNR	چگونه؟
 	 * 		<ul> if Arg0 of sentenceModel is Role, then adds RoleMood to it.</ul>
 	 * 		<ul> if Arg0 of sentenceModel is Dynamic_object, then adds Object_state to it.</ul> 
-	 * <li>isHuman, then returns ScenePart.ROLE </li>
-	 * 	<li> if isAnimal, then returns ScenePart.DYNAMIC_OBJECT </li>
-	 * 	<li> if isLocation, then returns ScenePart.LOCATION </li>
-	 * 	<li> otherwise, returns ScenePart.STATIC_OBJECT </li>
 	 *  
 	 * </li>
-	 * <li>  if sentenceModel has Arg-PRP	منظور، هدف و انگیزه رویداد </li>
-	 * <li>  if sentenceModel has Arg-GOL	غایت فعل + برای کس یا چیز دیگر(مقصد افعال حرکتی،سودبرنده افعال دیگر) </li>
+	 * <li>  if sentenceModel has Arg-PRP	منظور، هدف و انگیزه رویداد
+	 * 		<ul></ul> 
+	 * </li>
+	 * <li>  if sentenceModel has Arg-GOL	غایت فعل + برای کس یا چیز دیگر(مقصد افعال حرکتی،سودبرنده افعال دیگر)
+	 * 		<ul>isHuman, then returns ScenePart.ROLE </ul>
+	 * 		<ul> if isAnimal, then returns ScenePart.DYNAMIC_OBJECT </ul>
+	 * 		<ul> if isLocation, then returns ScenePart.LOCATION </ul>
+	 * 		<ul> otherwise, returns ScenePart.STATIC_OBJECT </ul>  
+	 * </li>
 	 * <li>  if sentenceModel has Arg-CAU	هدف انجام عمل، چرا؟ </li>
 	 * <li>  if sentenceModel has Arg-COM	همراه با چه کسی/نهادی (انسان یا سازمان، شیء نمیشود)ه </li>
 	 * <li>  if sentenceModel has Arg-INS	ابزار یا شیء انجام رویداد </li>
@@ -571,8 +577,8 @@ public class Preprocessor {
 	 * <li>  if sentenceModel has Arg-DIS	علایم گفتمان (بنابراین، ازاین رو) </li>
 	 * <li>  if sentenceModel has Arg-ADV	هر قید دیگری که در بالا نگنجد. </li>
 		
-	 * @param sentenceModel
-	 * @param primarySceneModel
+	 * @param sentenceModel guaranteed not to be null.
+	 * @param primarySceneModel guaranteed not to be null.
 	 */
 	private void processSubSemanticArgs(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 				
@@ -583,8 +589,8 @@ public class Preprocessor {
 		if(locPart != null){
 			print("SceneModel has " + locPart + " ArgM_LOC");
 			
-			//It can only return Location SceneElement, so it won't be added in preprocessSemanticArg-->addToPrimarySceneModel. 
-			SceneElement locElem = preprocessSemanticArg(SubSemanticTag.LOC.convertToSemanticTag(), null, sentenceModel, primarySceneModel);
+			//It can only return Location SceneElement. 
+			SceneElement locElem = preprocessSemanticArg(SubSemanticTag.LOC.convertToSemanticTag(), sentenceModel, primarySceneModel);
 			
 			if(locElem.scenePart == ScenePart.LOCATION)
 				primarySceneModel.setLocation((Location) locElem);
@@ -595,11 +601,31 @@ public class Preprocessor {
 		if(tmpPart != null){
 			print("SceneModel has " + tmpPart + " ArgM_TMP");
 
-			//It can only return Time SceneElement, so it won't be added in preprocessSemanticArg-->addToPrimarySceneModel.
-			SceneElement tmpElem = preprocessSemanticArg(SubSemanticTag.TMP.convertToSemanticTag(), null, sentenceModel, primarySceneModel);
+			//It can only return Time SceneElement.
+			SceneElement tmpElem = preprocessSemanticArg(SubSemanticTag.TMP.convertToSemanticTag(), sentenceModel, primarySceneModel);
 			
 			if(tmpElem.scenePart == ScenePart.TIME)
 				primarySceneModel.setTime((Time) tmpElem);
+		}
+		
+		//processing ArgM_MNR, if any.
+		SentencePart mnrPart = sentenceModel.getSentencePart(SubSemanticTag.MNR);
+		if(mnrPart != null){
+			print("SceneModel has " + mnrPart + " ArgM_MNR");
+			
+			SentencePart arg0Part = sentenceModel.getArg0SentencePart();
+			
+			if(arg0Part != null){
+				SceneElement arg0Elem = primarySceneModel.getSceneElement(arg0Part._wsd);
+				
+				if(arg0Elem != null){
+					arg0Elem.addDependent(mnrPart, "manner");
+				}
+				else
+					print("no SceneElement for Arg0 found in primarySceneModel, in order to " + mnrPart + " to be added to it!");
+			}
+			else
+				print("no Arg0Part found in sentnceModel, in order to " + mnrPart + " to be added to it!");			
 		}
 		
 		//processing ArgM_GOL, if any.
@@ -608,22 +634,10 @@ public class Preprocessor {
 			print("SceneModel has " + golPart + " ArgM_GOL");
 			
 			//It can return Role, Dynamic_object, Static_object, or Location SceneElement. 
-			preprocessSemanticArg(SubSemanticTag.GOL.convertToSemanticTag(), null, sentenceModel, primarySceneModel);
+			preprocessSemanticArg(SubSemanticTag.GOL.convertToSemanticTag(), sentenceModel, primarySceneModel);
 		}
-		
-		//processing ArgM_MNR, if any.
-		SentencePart mnrPart = sentenceModel.getSentencePart(SubSemanticTag.MNR);
-		if(mnrPart != null){
-			print("SceneModel has " + mnrPart + " ArgM_MNR");
-			
-			//It can only return RoleMood or Scene_state SceneElement. 
-			preprocessSemanticArg(SubSemanticTag.MNR.convertToSemanticTag(), null, sentenceModel, primarySceneModel);
-			addDependentToSceneElement(tmpPart, null);
-		}
-		
-		
 				
-		print("\n=============== end of processSubSemArgs ===========================");
+		print("=============== end of processSubSemArgs ===========================");
 	}
 	
 	/**
@@ -662,7 +676,7 @@ public class Preprocessor {
 					//Sentence has ARG_DIR
 					if(arg_dirPart != null){
 						
-						SceneElement arg_dirSceneElem = preprocessSemanticArg(SubSemanticTag.DIR.convertToSemanticTag(), null, sentenceModel, primarySceneModel) ;							
+						SceneElement arg_dirSceneElem = preprocessSemanticArg(SubSemanticTag.DIR.convertToSemanticTag(), sentenceModel, primarySceneModel) ;							
 						
 						if(arg_dirSceneElem == null){
 							MyError.error("the " + arg_dirPart + " could not convert to a SceneElement!");
@@ -689,7 +703,7 @@ public class Preprocessor {
 			//Sentence has ARG_DIR
 			if(arg_dirPart != null){
 				
-				SceneElement arg_dirSceneElem = preprocessSemanticArg(SubSemanticTag.DIR.convertToSemanticTag(), null, sentenceModel, primarySceneModel);
+				SceneElement arg_dirSceneElem = preprocessSemanticArg(SubSemanticTag.DIR.convertToSemanticTag(), sentenceModel, primarySceneModel);
 				
 				if(arg_dirSceneElem == null){
 					MyError.error("the " + arg_dirPart + " could not convert to a SceneElement!");
@@ -700,7 +714,7 @@ public class Preprocessor {
 			}								
 		}
 		
-		print("\n=============== end of processLocation =============================");		
+		print("=============== end of processLocation =============================");		
 	}
 
 	private void processVisualTags(SentenceModel sentenceModel, SceneModel primarySceneModel) {
@@ -762,34 +776,6 @@ public class Preprocessor {
 		}			
 	}
 	
-	private void addDependentToSceneElement(SentencePart dependent, SceneElement mainSceneElement){
-		
-		if(dependent == null || mainSceneElement == null){
-			MyError.error("null input parameter for addDependentToSceneElement");
-			return;
-		}		
-		
-		if(mainSceneElement.scenePart == ScenePart.ROLE)
-			 mainSceneElement.addRoleMoodToRole(dependent._name, dependent._wsd);
-			
-		else if(mainSceneElement.scenePart == ScenePart.DYNAMIC_OBJECT || mainSceneElement.scenePart == ScenePart.STATIC_OBJECT)
-			mainSceneElement.addStateToSceneObject(dependent._name, dependent._wsd);
-
-		else if(mainSceneElement.scenePart == ScenePart.LOCATION)
-			print("what to do for adj of LOCATION ?!");//TODO
-
-		else if(mainSceneElement.scenePart == ScenePart.SCENE_GOAL)
-			print("what to do for adj of SCENE_GOAL ?!");//TODO
-	
-		else if(mainSceneElement.scenePart == ScenePart.TIME)
-			print("what to do for adj of TIME ?!");//TODO
-	
-		else if(mainSceneElement.scenePart == ScenePart.SCENE_EMOTION)
-			print("what to do for adj of SCENE_GOAL ?!");//TODO
-
-		
-	}
-	
 	/**
 	 * this method process the dependents (adjectives and mozaf_elaihs) of semArgPart (if any).
 	 * it converts each adjective and mozaf_elaih of semArgPart to :
@@ -817,10 +803,7 @@ public class Preprocessor {
 			ArrayList<SentencePart> adjectives = semArgPart.getAdjectives();
 			
 			for(SentencePart adj:adjectives)
-				sceneElement.addDependent(adj, "adjective");
-//				sceneElement.addDependentToSceneElement(adj, sceneElement);
-//				addDependentToSceneElement(adj, sceneElement);
-			
+				sceneElement.addDependent(adj, "adjective");			
 		}
 		//It means that this sentencePart has some mozad_elaih
 		if(semArgPart.hasAnyMozaf_elaihs()){				
@@ -832,7 +815,7 @@ public class Preprocessor {
 			for(SentencePart moz:mozafs)
 				
 				if(!moz._wsd.getName().contains(zamir_enekasi))
-					addDependentToSceneElement(moz, sceneElement);		
+					sceneElement.addDependent(moz, "mozaf_elaih");
 		}			
 	}
 
@@ -858,17 +841,7 @@ public class Preprocessor {
 			return;
 		}		
 		
-		if(arg1Elem.scenePart == ScenePart.ROLE)
-			arg1Elem.addRoleMoodToRole(verb._name, verb._wsd);
-		
-		else if(arg1Elem.scenePart == ScenePart.DYNAMIC_OBJECT || arg1Elem.scenePart == ScenePart.STATIC_OBJECT)
-			arg1Elem.addStateToSceneObject(verb._name, verb._wsd);		
-		
-		else{
-			print("scenePart of " + arg1Elem + " was none of Role, DynamicObject, and StaticObject!");
-			return;
-		}
-		
+		arg1Elem.addDependent(verb, "adjective");
 	}
 
 	/**
@@ -897,16 +870,7 @@ public class Preprocessor {
 				return;
 			}		
 			
-			if(arg1Elem.scenePart == ScenePart.ROLE)
-				arg1Elem.addRoleMoodToRole(arg2Part._name, arg2Part._wsd);
-			
-			else if(arg1Elem.scenePart == ScenePart.DYNAMIC_OBJECT || arg1Elem.scenePart == ScenePart.STATIC_OBJECT)
-				arg1Elem.addStateToSceneObject(arg2Part._name, arg2Part._wsd);
-			
-			else{
-				print("scenePart of " + arg1Elem + " was none of Role, DynamicObject, and StaticObject!");
-				return;
-			}
+			arg1Elem.addDependent(arg2Part, "adjective");			
 		}
 		else
 			print(verb + " is rabti but Arg2Part " + arg2Part + " is not adjective!");
@@ -935,12 +899,7 @@ public class Preprocessor {
 			return;
 		}
 		
-		if(arg0Elem.scenePart == ScenePart.ROLE)
-			arg0Elem.addRoleActionToRole(verb._name, verb._wsd);
-		
-		else if(arg0Elem.scenePart == ScenePart.DYNAMIC_OBJECT)
-			arg0Elem.addObjectActionToDynmicAction(verb._name, verb._wsd);	
-		
+		arg0Elem.addDependent(verb, "action");	
 	}
 
 	/**
@@ -1131,25 +1090,13 @@ public class Preprocessor {
 			
 			//1:added, 0:merged, -1:Nop
 			int added = mainPart.addAdjective(adjPart);
-//			if(added == 1)
-//				print("----------------" + adjPart + " adjective added to " + mainPart + "\n");
-//			else if(added == 0)
-//				print("----------------" +  mainPart + " own adjective merged with " + adjPart + "\n");
-//			else
-//				print("----------------"+  mainPart + " has " + adjPart + " before\n");
 		}
 		else if(descriptor.getPos() == POS.NOUN){ //it means that descriptor is describing a mozaf_alaih.
 			
 			SentencePart mozPart = new SentencePart(referent.getName(), POS.NOUN, DependencyRelationType.MOZ, null, referent, null, sentence);
 			
 			//1:added, 0:merged, -1:Nop
-			int added = mainPart.addMozaf_elaih(mozPart); 
-//			if(added == 1)
-//				print("----------------" + mozPart + " mozaf_elaih added to " + mainPart + "\n");
-//			else if(added == 0)
-//				print("----------------" +  mainPart + " own mozaf_elaih merged with " + mozPart + "\n");
-//			else
-//				print("----------------"+  mainPart + " has " + mozPart + " before\n");
+			int added = mainPart.addMozaf_elaih(mozPart);
 		}
 	}
 

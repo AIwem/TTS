@@ -50,28 +50,48 @@ public class SceneElement {
 			return;
 		}		
 		
-		if(this.scenePart == ScenePart.ROLE)
-			 this.addRoleMoodToRole(dependent._name, dependent._wsd);
-			
-		else if(this.scenePart == ScenePart.DYNAMIC_OBJECT || this.scenePart == ScenePart.STATIC_OBJECT)
-			this.addStateToSceneObject(dependent._name, dependent._wsd);
-
-		else if(this.scenePart == ScenePart.LOCATION)
-			print("what to do for adj of LOCATION ?!");//TODO
-
-		else if(this.scenePart == ScenePart.SCENE_GOAL)
-			print("what to do for adj of SCENE_GOAL ?!");//TODO
-	
-		else if(this.scenePart == ScenePart.TIME)
-			print("what to do for adj of TIME ?!");//TODO
-	
-		else if(this.scenePart == ScenePart.SCENE_EMOTION)
-			print("what to do for adj of SCENE_GOAL ?!");//TODO
-
+		switch(elementType)
+		{
+			case("adjective"):
+			case("mozaf_elaih"):
+			case("manner"):
+			{		
+				if(this.scenePart == ScenePart.ROLE)
+					 this.addRoleMoodToRole(dependent._name, dependent._wsd);
+					
+				else if(this.scenePart == ScenePart.DYNAMIC_OBJECT || this.scenePart == ScenePart.STATIC_OBJECT)
+					this.addStateToSceneObject(dependent._name, dependent._wsd);
 		
+				else if(this.scenePart == ScenePart.LOCATION)
+					print("what to do for adj of LOCATION ?!");//TODO
+		
+				else if(this.scenePart == ScenePart.SCENE_GOAL)
+					print("what to do for adj of SCENE_GOAL ?!");//TODO
+			
+				else if(this.scenePart == ScenePart.TIME)
+					print("what to do for adj of TIME ?!");//TODO
+			
+				else if(this.scenePart == ScenePart.SCENE_EMOTION)
+					print("what to do for adj of SCENE_GOAL ?!");//TODO
+				return;
+			}
+			case("action"):{
+				if(this.scenePart == ScenePart.ROLE)
+					this.addRoleActionToRole(dependent._name, dependent._wsd);
+				
+				else if(this.scenePart == ScenePart.DYNAMIC_OBJECT)
+					this.addObjectActionToDynmicAction(dependent._name, dependent._wsd);
+				return;
+			}
+			default:
+				MyError.error("Unknown elementType: " + elementType);
+				
+				
+			
+		}
 	}
 	
-	public void addRoleActionToRole(String name, Node node){
+	private void addRoleActionToRole(String name, Node node){
 		
 		try{
 			Role role = (Role)this;
@@ -83,7 +103,7 @@ public class SceneElement {
 		}
 	}
 	
-	public void addObjectActionToDynmicAction(String name, Node node){		
+	private void addObjectActionToDynmicAction(String name, Node node){		
 		try{
 			DynamicObject dynObj = (DynamicObject)this;
 			ObjectAction objAct = new ObjectAction(name, node); 
@@ -94,7 +114,7 @@ public class SceneElement {
 		}
 	}
 	
-	public void addRoleMoodToRole(String name, Node node){		
+	private void addRoleMoodToRole(String name, Node node){		
 		try{
 			Role role = (Role)this;
 			RoleMood rm = new RoleMood(name, node);
@@ -105,7 +125,7 @@ public class SceneElement {
 		}
 	}
 	
-	public void addStateToSceneObject(String name, Node node) {
+	private void addStateToSceneObject(String name, Node node) {
 		try{
 			SceneObject sceObj = (SceneObject)this;			
 			ObjectState objState = new ObjectState(name, node);	
@@ -169,7 +189,7 @@ public class SceneElement {
 	}
 	
 	private void print(String toPrint){
-		print(toPrint);
+		System.out.println(toPrint);
 		
 	}
 

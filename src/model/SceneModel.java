@@ -9,9 +9,7 @@ import java.util.ArrayList;
 
 import sceneElement.DynamicObject;
 import sceneElement.Location;
-import sceneElement.ObjectState;
 import sceneElement.Role;
-import sceneElement.RoleMood;
 import sceneElement.SceneElement;
 import sceneElement.SceneEmotion;
 import sceneElement.SceneGoal;
@@ -452,17 +450,13 @@ public class SceneModel {
 	 * <li> if ScenePart of SceneElement is TIME
 	 * 		<ul> then adds it to alternativeTime of primarySceneModel, not Time of primarySceneModel. </ul>
 	 * </li>
-	 * <li> if ScenePart of SceneElement is ROlE_MOOD and forMainSceneElement is ROLE 
-	 * 		<ul> then adds it to role_moods of forMainSceneElement.</ul>
-	 * </li>
-	 * <li> if ScenePart of SceneElement is OBJECT_STATE and forMainSceneElement is SCENE_OBJECT 
-	 * 		<ul> then adds it to object_states of forMainSceneElement.</ul>
+	 * <li> if ScenePart of SceneElement is ROLE_MOOD or OBJECT_STATE 
+	 * 		<ul> do nothing.</ul>
 	 * </li>
 	 * 
-	 * @param sceneElement the new  SceneElement which is to be added to this SceneModel.
-	 * @param forMainSceneElement the main SceneElement which new sceneElement is to be added to it. 
+	 * @param sceneElement the new  SceneElement which is to be added to this SceneModel.  
 	 */
-	public void addToPrimarySceneModel(SceneElement sceneElement, SceneElement forMainSceneElement){
+	public void addToPrimarySceneModel(SceneElement sceneElement){
 		if(sceneElement == null || sceneElement.scenePart == null || sceneElement.scenePart == ScenePart.UNKNOWN){		
 			MyError.error("null or UNKNOWN input parameter for addToPrimarySceneModel !");
 			return;
@@ -495,19 +489,7 @@ public class SceneModel {
 		else if(sceneElement.scenePart == ScenePart.SCENE_GOAL){
 			SceneGoal sceGoal = (SceneGoal) sceneElement;			
 			addScene_goal(sceGoal);						
-		}
-		else if(sceneElement.scenePart == ScenePart.ROLE_MOOD && forMainSceneElement != null && 
-				forMainSceneElement.scenePart == ScenePart.ROLE){
-			RoleMood rm = (RoleMood) sceneElement;
-			Role mainRole = (Role) forMainSceneElement;
-			mainRole.addRole_mood(rm);
-		}
-		else if(sceneElement.scenePart == ScenePart.OBJECT_STATE && forMainSceneElement != null && 
-				(forMainSceneElement.scenePart == ScenePart.DYNAMIC_OBJECT || forMainSceneElement.scenePart == ScenePart.STATIC_OBJECT)){
-			ObjectState objStat = (ObjectState) sceneElement;
-			DynamicObject mainObj = (DynamicObject) forMainSceneElement;
-			mainObj.addObject_state(objStat);
-		}
+		}		
 	}
 	
 	//------------------ has   part -------------------

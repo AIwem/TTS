@@ -1110,10 +1110,10 @@ public class TTSEngine {
 	 *		<ul> if isTime returns ScenePart.TIME</ul> 
 	 * </li>
 	 * <li> if subSemArg is Arg-MNR	چگونه؟
-	 *		<ul> if isTime returns ScenePart.TIME</ul> 
+	 *		<ul> this method won't be called!</ul> 
 	 * </li>
 	 * <li> if subSemArg is Arg-PRP	منظور، هدف و انگیزه رویداد
-	 *		<ul> if isTime returns ScenePart.TIME</ul> 
+	 *		<ul> if is returns ScenePart.</ul> 
 	 * </li>
 	 * <li> if subSemArg is Arg-GOL	غایت فعل + برای کس یا چیز دیگر(مقصد افعال حرکتی،سودبرنده افعال دیگر)
 	 * 		<ul> if isHuman, then returns ScenePart.ROLE </ul>
@@ -1196,7 +1196,7 @@ public class TTSEngine {
 				
 				return ScenePart.STATIC_OBJECT;
 			}			
-		}
+		}	
 		
 		return ScenePart.UNKNOWN;
 	}
