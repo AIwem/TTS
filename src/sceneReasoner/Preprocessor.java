@@ -540,17 +540,16 @@ public class Preprocessor {
 	}
 	
 	/**
-	 * //TODO: compete
 	 * This method processes the SubSemanticTags of sentenceModel.
 	 * The SubSemanticTags are as follow:
 	 * <li> if sentenceModel has Arg-LOC	کجا رویداد(فعل) اتفاق می‌افتد؟مکان فیزکی و انتزاعی 
-	 * 		<ul>if isLocation, setLocation of primarySceneModel.</ul>
+	 * 		<ul> if isLocation, setLocation of primarySceneModel.</ul>
 	 * </li>
 	 * <li>  if sentenceModel has Arg-DIR	مسیر حرکت 
-	 * 		<ul>this Arg will be process in processLocationOfScene method.</ul> 
+	 * 		<ul> this Arg will be process in processLocationOfScene method.</ul> 
 	 * </li>
 	 * <li>  if sentenceModel has Arg-TMP	زمان
-	 * 		<ul>if isTime, setTime of primarySceneModel.</ul> 
+	 * 		<ul> if isTime, setTime of primarySceneModel.</ul> 
 	 * </li>
 	 * <li>  if sentenceModel has Arg-MNR	چگونه؟
 	 * 		<ul> if Arg0 of sentenceModel is Role, then adds RoleMood to it.</ul>
@@ -558,24 +557,46 @@ public class Preprocessor {
 	 *  
 	 * </li>
 	 * <li>  if sentenceModel has Arg-PRP	منظور، هدف و انگیزه رویداد
-	 * 		<ul></ul> 
+	 * 		<ul> adds to scene_goals of primarySceneModel via preprocessSemanticArg.</ul> 
 	 * </li>
 	 * <li>  if sentenceModel has Arg-GOL	غایت فعل + برای کس یا چیز دیگر(مقصد افعال حرکتی،سودبرنده افعال دیگر)
-	 * 		<ul>isHuman, then returns ScenePart.ROLE </ul>
-	 * 		<ul> if isAnimal, then returns ScenePart.DYNAMIC_OBJECT </ul>
-	 * 		<ul> if isLocation, then returns ScenePart.LOCATION </ul>
-	 * 		<ul> otherwise, returns ScenePart.STATIC_OBJECT </ul>  
+	 * 		<ul> if isHuman, adds to roles of primarySceneModel via preprocessSemanticArg.</ul>
+	 * 		<ul> if isAnimal, adds to dynamic_objects of primarySceneModel via preprocessSemanticArg.</ul>
+	 * 		<ul> if isLocation, adds to alternativeLocations of primarySceneModel via preprocessSemanticArg. </ul>
+	 * 		<ul> otherwise, adds to static_objects of primarySceneModel via preprocessSemanticArg. </ul>  
 	 * </li>
-	 * <li>  if sentenceModel has Arg-CAU	هدف انجام عمل، چرا؟ </li>
-	 * <li>  if sentenceModel has Arg-COM	همراه با چه کسی/نهادی (انسان یا سازمان، شیء نمیشود)ه </li>
-	 * <li>  if sentenceModel has Arg-INS	ابزار یا شیء انجام رویداد </li>
-	 * <li>  if sentenceModel has Arg-EXT	میزان تغییر حاصل از فعل </li>
-	 * <li>  if sentenceModel has Arg-REC	ضمایر انعکاسی و دوطرفه (خود، یکدیگر) </li>
-	 * <li>  if sentenceModel has Arg-MOD	فعل وجهی(باید، ممکن‌است، قادراست، شاید، احتمالا) </li>
-	 * <li>  if sentenceModel has Arg-NEG	عدم وقوع رویداد </li>
-	 * <li>  if sentenceModel has Arg-CND	تحلیل جملات شرطی </li>
-	 * <li>  if sentenceModel has Arg-DIS	علایم گفتمان (بنابراین، ازاین رو) </li>
-	 * <li>  if sentenceModel has Arg-ADV	هر قید دیگری که در بالا نگنجد. </li>
+	 * <li>  if sentenceModel has Arg-CAU	هدف انجام عمل، چرا؟ 
+	 * 		<ul> adds to scene_goals of primarySceneModel via preprocessSemanticArg.</ul>
+	 * </li>
+	 * <li>  if sentenceModel has Arg-COM	همراه با چه کسی/نهادی (انسان یا سازمان، شیء نمیشود)ه 
+	 * 		<ul> if isHuman, adds to roles of primarySceneModel via preprocessSemanticArg.</ul>
+	 * 		<ul> if isAnimal, adds to dynamic_objects of primarySceneModel via preprocessSemanticArg.</ul>		
+	 * </li>
+	 * <li>  if sentenceModel has Arg-INS	ابزار یا شیء انجام رویداد
+	 * 		<ul> if isAnimal, adds to dynamic_objects of primarySceneModel via preprocessSemanticArg.</ul>
+	 * 		<ul> else adds to static_objects of primarySceneModel via preprocessSemanticArg.</ul> 
+	 * </li>
+	 * <li>  if sentenceModel has Arg-EXT	میزان تغییر حاصل از فعل
+	 * 		<ul> no processing yet! </ul> 
+	 * </li>
+	 * <li>  if sentenceModel has Arg-REC	ضمایر انعکاسی و دوطرفه (خود، یکدیگر)
+	 * 		 <ul> no processing yet! </ul>
+	 * </li>
+	 * <li>  if sentenceModel has Arg-MOD	فعل وجهی(باید، ممکن‌است، قادراست، شاید، احتمالا) 
+	 * 		<ul> no processing yet! </ul>
+	 * </li>
+	 * <li>  if sentenceModel has Arg-NEG	عدم وقوع رویداد
+	 * 	 	<ul> no processing yet! </ul> 
+	 * </li>
+	 * <li>  if sentenceModel has Arg-CND	تحلیل جملات شرطی 
+	 * 	 	<ul> no processing yet! </ul>
+	 * </li>
+	 * <li>  if sentenceModel has Arg-DIS	علایم گفتمان (بنابراین، ازاین رو) 
+	 * 	 	<ul> no processing yet! </ul>
+	 * </li>
+	 * <li>  if sentenceModel has Arg-ADV	هر قید دیگری که در بالا نگنجد.
+	 * 	 	<ul> no processing yet! </ul> 
+	 * </li>
 		
 	 * @param sentenceModel guaranteed not to be null.
 	 * @param primarySceneModel guaranteed not to be null.
@@ -619,13 +640,26 @@ public class Preprocessor {
 				SceneElement arg0Elem = primarySceneModel.getSceneElement(arg0Part._wsd);
 				
 				if(arg0Elem != null){
-					arg0Elem.addDependent(mnrPart, "manner");
+					//It can be added as RoleMood or ObjectState to Arg0
+					SceneElement mnrElem = arg0Elem.addDependent(mnrPart, "manner");
+					
+					if(mnrElem != null)
+						preprocessDependentsOfSemanticArg(mnrPart, mnrElem);
 				}
 				else
 					print("no SceneElement for Arg0 found in primarySceneModel, in order to " + mnrPart + " to be added to it!");
 			}
 			else
 				print("no Arg0Part found in sentnceModel, in order to " + mnrPart + " to be added to it!");			
+		}
+
+		//processing ArgM_PRP, if any.
+		SentencePart prpPart = sentenceModel.getSentencePart(SubSemanticTag.PRP);
+		if(prpPart != null){
+			print("SceneModel has " + prpPart + " ArgM_PRP");
+			
+			//It can return only Scene_goal SceneElement. 
+			preprocessSemanticArg(SubSemanticTag.PRP.convertToSemanticTag(), sentenceModel, primarySceneModel);
 		}
 		
 		//processing ArgM_GOL, if any.
@@ -636,7 +670,34 @@ public class Preprocessor {
 			//It can return Role, Dynamic_object, Static_object, or Location SceneElement. 
 			preprocessSemanticArg(SubSemanticTag.GOL.convertToSemanticTag(), sentenceModel, primarySceneModel);
 		}
-				
+
+		//processing ArgM_CAU, if any.
+		SentencePart cauPart = sentenceModel.getSentencePart(SubSemanticTag.CAU);
+		if(cauPart != null){
+			print("SceneModel has " + cauPart + " ArgM_CAU");
+			
+			//It can return only Scene_goal SceneElement. 
+			preprocessSemanticArg(SubSemanticTag.CAU.convertToSemanticTag(), sentenceModel, primarySceneModel);
+		}
+		
+		//processing ArgM_COM, if any.
+		SentencePart comPart = sentenceModel.getSentencePart(SubSemanticTag.COM);
+		if(comPart != null){
+			print("SceneModel has " + comPart + " ArgM_COM");
+			
+			//It can return only Role or Dynamic_object SceneElement. 
+			preprocessSemanticArg(SubSemanticTag.COM.convertToSemanticTag(), sentenceModel, primarySceneModel);
+		}
+	
+		//processing ArgM_INS, if any.
+		SentencePart insPart = sentenceModel.getSentencePart(SubSemanticTag.INS);
+		if(insPart != null){
+			print("SceneModel has " + insPart + " ArgM_INS");
+			
+			//It can return only Dynamic_object or Static_object SceneElement. 
+			preprocessSemanticArg(SubSemanticTag.INS.convertToSemanticTag(), sentenceModel, primarySceneModel);
+		}
+		
 		print("=============== end of processSubSemArgs ===========================");
 	}
 	

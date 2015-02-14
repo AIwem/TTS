@@ -17,7 +17,5 @@ public class RoleAction extends Action {
 	public void setActor(Role actor) {
 		this.actor = actor;
 	}
-	
-	
 
 }

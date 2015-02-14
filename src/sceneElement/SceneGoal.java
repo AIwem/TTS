@@ -10,9 +10,4 @@ public class SceneGoal extends Goal {
 		super(name, node);
 		this.scenePart = ScenePart.SCENE_GOAL;
 	}
-
-	public void mergeWith(SceneGoal sceGoal) {
-		
-	}
-
 }

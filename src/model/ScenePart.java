@@ -22,6 +22,9 @@ public enum ScenePart {
 	GOAL,
 	ROLE_GOAL,
 	SCENE_GOAL,	
+	
+	ROAL_MOOD,
+	OBJECT_STATE,
 		
 	UNKNOWN
 }

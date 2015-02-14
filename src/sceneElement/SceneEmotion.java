@@ -11,10 +11,4 @@ public class SceneEmotion  extends Emotion{
 		super(name, node);
 		this.scenePart = ScenePart.SCENE_EMOTION;
 	}
-
-	public void mergeWith(SceneEmotion scene_emotion) {
-		
-	}
-
-
 }

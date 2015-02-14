@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import model.ScenePart;
 import ir.ac.itrc.qqa.semantic.kb.Node;
+import ir.ac.itrc.qqa.semantic.util.Common;
 
 public class SceneObject extends SceneElement{
 	
@@ -23,28 +24,54 @@ public class SceneObject extends SceneElement{
 		return current_state;
 	}
 	
+	
+	public ObjectState getObject_state(Node node){
+		if(node == null)
+			return null;
+		
+		if(!Common.isEmpty(object_states))
+			for(ObjectState objStat:object_states)
+				if(objStat._node.equalsRelaxed(node))
+					return objStat;
+		return null;	
+	}
+		
 	public boolean hasObject_state(ObjectState objState){
 		if(objState != null && object_states.contains(objState))
 			return true;
 		return false;
 	}
 
-	public boolean setCurrent_state(ObjectState current_state) {
+	/**
+	 * sets the current_state of this SceneObject and 
+	 * adds this current_state to object_states of this SceneObject via addObjectState. 
+	 * 
+	 * @param current_state
+	 * @return
+	 */
+	public ObjectState setCurrent_state(ObjectState current_state) {
 		if(object_states != null){
 //			TODO: temporarily ignore the object_states of a SceneObject for setting current_state!
 //			if(object_states.contains(current_state)){				
 				this.current_state = current_state;
 				System.out.println("current ObjectState of " + this._name + " set to " + current_state);
-				addObject_state(current_state);
-				return true;
+				return addObject_state(current_state);
+				
 		}
 //			}
 //			else
 //				MyError.error(current_state + " is not in the object_states of " + this._name);
-		return false;
+		return null;
 	}	
 	
-	public boolean addObject_state(ObjectState state){
+	/**
+	 * adds state as ObjectState to this SceneObject or 
+	 * merges it with the existing equivalent ObjectState of this SceneObject.
+	 * 
+	 * @param state
+	 * @return
+	 */
+	public ObjectState addObject_state(ObjectState state){
 		if(this.object_states == null)
 			this.object_states = new ArrayList<ObjectState>();
 		
@@ -52,17 +79,28 @@ public class SceneObject extends SceneElement{
 			if(!hasObject_state(state)){
 				this.object_states.add(state);
 				System.out.println("ObjectState " + state + " added to " + this._name);
-				return true;
+				return state;
 			}
-			else
+			else{
 				System.out.println(this._name + " Objec has had " + state + " before!");
-		return false;
+				ObjectState exist = getObject_state(state._node);
+				if(exist != null)
+					exist.mergeWith(state);
+				return exist;
+			}
+		return null;
 	}
 	
-	public void mergeWith(SceneObject scenObj) {
-		
+	public void mergeWith(SceneObject scenObj) {		
 		if(scenObj == null)
 			return;
+		
+		if(this._name == null || this._name.equals(""))
+			if(scenObj._name != null && !scenObj._name.equals(""))
+				this._name = scenObj._name;
+		
+		if(this._node == null && scenObj._node != null)
+			this._node = scenObj._node;
 		
 		for(ObjectState stat:scenObj.object_states)
 			this.addObject_state(stat);

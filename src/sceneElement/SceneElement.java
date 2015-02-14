@@ -43,11 +43,11 @@ public class SceneElement {
 		return _node;
 	}
 	
-	public void addDependent(SentencePart dependent, String elementType){
+	public SceneElement addDependent(SentencePart dependent, String elementType){
 		
 		if(dependent == null){
 			MyError.error("null input parameter for addDependent");
-			return;
+			return null;
 		}		
 		
 		switch(elementType)
@@ -57,82 +57,117 @@ public class SceneElement {
 			case("manner"):
 			{		
 				if(this.scenePart == ScenePart.ROLE)
-					 this.addRoleMoodToRole(dependent._name, dependent._wsd);
+					 return this.addRoleMoodToRole(dependent._name, dependent._wsd);
 					
 				else if(this.scenePart == ScenePart.DYNAMIC_OBJECT || this.scenePart == ScenePart.STATIC_OBJECT)
-					this.addStateToSceneObject(dependent._name, dependent._wsd);
+					return this.addStateToSceneObject(dependent._name, dependent._wsd);
 		
-				else if(this.scenePart == ScenePart.LOCATION)
+				else if(this.scenePart == ScenePart.LOCATION){
 					print("what to do for adj of LOCATION ?!");//TODO
-		
-				else if(this.scenePart == ScenePart.SCENE_GOAL)
+					return null;
+				}		
+				else if(this.scenePart == ScenePart.SCENE_GOAL){
 					print("what to do for adj of SCENE_GOAL ?!");//TODO
-			
-				else if(this.scenePart == ScenePart.TIME)
+					return null;
+				}
+				else if(this.scenePart == ScenePart.TIME){
 					print("what to do for adj of TIME ?!");//TODO
-			
-				else if(this.scenePart == ScenePart.SCENE_EMOTION)
+					return null;
+				}
+				else if(this.scenePart == ScenePart.SCENE_EMOTION){
 					print("what to do for adj of SCENE_GOAL ?!");//TODO
-				return;
+					return null;
+				}
+				break;
 			}
 			case("action"):{
 				if(this.scenePart == ScenePart.ROLE)
-					this.addRoleActionToRole(dependent._name, dependent._wsd);
+					return this.addRoleActionToRole(dependent._name, dependent._wsd);
 				
 				else if(this.scenePart == ScenePart.DYNAMIC_OBJECT)
-					this.addObjectActionToDynmicAction(dependent._name, dependent._wsd);
-				return;
+					return this.addObjectActionToDynmicAction(dependent._name, dependent._wsd);
+				break;
 			}
 			default:
-				MyError.error("Unknown elementType: " + elementType);
-				
-				
-			
+				MyError.error("Unknown elementType: " + elementType);				
 		}
+		return null;
 	}
 	
-	private void addRoleActionToRole(String name, Node node){
+	/**
+	 * creates a RoleAction and calls addRole_action for this Role. 
+	 *  
+	 * @param name
+	 * @param node
+	 * @return
+	 */
+	private RoleAction addRoleActionToRole(String name, Node node){
 		
 		try{
 			Role role = (Role)this;
 			RoleAction roleAct = new RoleAction(name, node); 
-			role.addRole_action(roleAct);			
+			return role.addRole_action(roleAct);			
 		}
 		catch(Exception e){
 			print("" + e);
+			return null;
 		}
 	}
 	
-	private void addObjectActionToDynmicAction(String name, Node node){		
+	/**
+	 * creates a ObjectAction and calls addObject_action for this ObjectAction.
+	 * 
+	 * @param name
+	 * @param node
+	 */
+	
+	private ObjectAction addObjectActionToDynmicAction(String name, Node node){		
 		try{
 			DynamicObject dynObj = (DynamicObject)this;
 			ObjectAction objAct = new ObjectAction(name, node); 
-			dynObj.addObejct_action(objAct);			
+			return dynObj.addObejct_action(objAct);
 		}
 		catch(Exception e){
 			print("" + e);
+			return null;
 		}
 	}
 	
-	private void addRoleMoodToRole(String name, Node node){		
+	/**
+	 * creates a RoleMood and calls addRole_mood for this Role.
+	 * 
+	 * @param name
+	 * @param node
+	 * @return
+	 */
+	private RoleMood addRoleMoodToRole(String name, Node node){		
 		try{
 			Role role = (Role)this;
 			RoleMood rm = new RoleMood(name, node);
-			role.addRole_mood(rm);
+			return role.addRole_mood(rm);
 		}
 		catch(Exception e){			
-			print("" + e);		
+			print("" + e);
+			return null;
 		}
 	}
 	
-	private void addStateToSceneObject(String name, Node node) {
+	/**
+	 * creates a SceneObject and calls setCurrent_state for this SceneObject. 
+	 * 
+	 * @param name
+	 * @param node
+	 * @return
+	 */
+	private ObjectState addStateToSceneObject(String name, Node node) {
 		try{
 			SceneObject sceObj = (SceneObject)this;			
 			ObjectState objState = new ObjectState(name, node);	
-			sceObj.setCurrent_state(objState);				
+			return sceObj.setCurrent_state(objState);				
 		}
 		catch(Exception e){			
-			print("" + e);		
+			print("" + e);
+			return null;
 		}	
 	}
 
@@ -185,7 +220,7 @@ public class SceneElement {
 		else if(this.scenePart == ScenePart.TIME && element.scenePart == ScenePart.TIME){
 			Time time = (Time)this;
 			time.mergeWith((Time)element);
-		}
+		}		
 	}
 	
 	private void print(String toPrint){

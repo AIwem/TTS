@@ -1113,7 +1113,7 @@ public class TTSEngine {
 	 *		<ul> this method won't be called!</ul> 
 	 * </li>
 	 * <li> if subSemArg is Arg-PRP	منظور، هدف و انگیزه رویداد
-	 *		<ul> if is returns ScenePart.</ul> 
+	 *		<ul> returns ScenePart.SCENE_GOAL</ul> 
 	 * </li>
 	 * <li> if subSemArg is Arg-GOL	غایت فعل + برای کس یا چیز دیگر(مقصد افعال حرکتی،سودبرنده افعال دیگر)
 	 * 		<ul> if isHuman, then returns ScenePart.ROLE </ul>
@@ -1122,34 +1122,36 @@ public class TTSEngine {
 	 * 		<ul> otherwise, returns ScenePart.STATIC_OBJECT </ul>
 	 * </li> 
 	 * <li> if subSemArg is Arg-CAU	هدف انجام عمل، چرا؟ </li>
-	 *		<ul> if is returns ScenePart.</ul> 
+	 *		<ul> returns ScenePart.SCENE_GOAL</ul> 
 	 * </li>
 	 * <li> if subSemArg is Arg-COM	همراه با چه کسی/نهادی (انسان یا سازمان، شیء نمیشود)ه
-	 *		<ul> if is returns ScenePart.</ul> 
+	 *		<ul> if isHuman, then returns ScenePart.ROLE </ul>
+	 * 		<ul> if isAnimal, then returns ScenePart.DYNAMIC_OBJECT </ul> 		 
 	 * </li>
 	 * <li> if subSemArg is Arg-INS	ابزار یا شیء انجام رویداد
-	 *		<ul> if is returns ScenePart.</ul> 
+	 * 		<ul> if isAnimal, then returns ScenePart.DYNAMIC_OBJECT </ul>
+	 *		<ul> else returns ScenePart.STATIC_OBJECT</ul> 
 	 * </li>
 	 * <li> if subSemArg is Arg-EXT	میزان تغییر حاصل از فعل
-	 *		<ul> if is returns ScenePart.</ul> 
+	 *		<ul> nothing yet! </ul> 
 	 * </li>
 	 * <li> if subSemArg is Arg-REC	ضمایر انعکاسی و دوطرفه (خود، یکدیگر)
-	 *		<ul> if is returns ScenePart.</ul> 
+	 *		<ul> nothing yet! </ul> 
 	 * </li>
 	 * <li> if subSemArg is Arg-MOD	فعل وجهی(باید، ممکن‌است، قادراست، شاید، احتمالا)
-	 *		<ul> if is returns ScenePart.</ul> 
+	 *		<ul> nothing yet! </ul> 
 	 * </li>
 	 * <li> if subSemArg is Arg-NEG	عدم وقوع رویداد
-	 *		<ul> if is returns ScenePart.</ul> 
+	 *		<ul> nothing yet! </ul> 
 	 * </li>
 	 * <li> if subSemArg is Arg-CND	تحلیل جملات شرطی
-	 *		<ul> if is returns ScenePart.</ul> 
+	 *		<ul> nothing yet! </ul> 
 	 * </li>
 	 * <li> if subSemArg is Arg-DIS	علایم گفتمان (بنابراین، ازاین رو)
-	 *		<ul> if is returns ScenePart.</ul> 
+	 *		<ul> nothing yet! </ul> 
 	 * </li>
 	 * <li> if subSemArg is Arg-ADV	هر قید دیگری که در بالا نگنجد
-	 *		<ul> if is returns ScenePart.</ul> 
+	 *		<ul> nothing yet! </ul> 
 	 * </li>		
 	 *  
 	 * @param pureNode the pure node fetched from kb. 
@@ -1196,7 +1198,23 @@ public class TTSEngine {
 				
 				return ScenePart.STATIC_OBJECT;
 			}			
-		}	
+		}
+		if(subSemArg == SubSemanticTag.PRP || subSemArg == SubSemanticTag.CAU)			
+			return ScenePart.SCENE_GOAL;
+		
+		if(subSemArg == SubSemanticTag.COM){
+			if(isHuman(pureNode))
+				return ScenePart.ROLE;
+			
+			if(isAnimal(pureNode))
+				return ScenePart.DYNAMIC_OBJECT;
+		}
+		
+		if(subSemArg == SubSemanticTag.INS){
+			if(isHuman(pureNode))
+				return ScenePart.ROLE;
+			return ScenePart.STATIC_OBJECT;
+		}		
 		
 		return ScenePart.UNKNOWN;
 	}

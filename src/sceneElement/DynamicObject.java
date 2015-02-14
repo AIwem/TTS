@@ -41,7 +41,14 @@ public class DynamicObject extends SceneObject{
 		return false;
 	}
 	
-	public boolean addObejct_action(ObjectAction action) {
+	/**
+	 * adds action as ObjectAction to this DynamicObject or 
+	 * merges it with the existing equivalent ObjectAction of this DyanamicObject.
+	 * 
+	 * @param action
+	 * @return
+	 */
+	public ObjectAction addObejct_action(ObjectAction action) {
 		if(this.object_actions == null)
 			this.object_actions = new ArrayList<ObjectAction>();
 		
@@ -49,11 +56,16 @@ public class DynamicObject extends SceneObject{
 			if(!hasObject_action(action)){
 				this.object_actions.add(action);
 				System.out.println("ObjectAction " + action + " added to " + this._name);
-				return true;
+				return action;
 			}
-			else
+			else{
 				System.out.println(this._name + " DynamicObjec has had " + action + " before!");
-		return false;		
+				ObjectAction exist = getObject_action(action._node);
+				if(exist != null)
+					exist.mergeWith(action);
+				return exist;
+			}
+		return null;
 	}
 	
 	@Override

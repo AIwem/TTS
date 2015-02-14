@@ -1,0 +1,67 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NSentence: Å”—ò «„—Ê“ œ— —«Â Œ«‰Â ç‘„‘ »Â Ìò ò»Ê — “Œ„Ì «› «œ
+primarySceneModel
+roles= [
+	[Å”—#n2 (1)= Å”—ò role_actions=  [ç‘„ «› «œ‰#v (1)=  ç‘„‘ù«› «œ] role_goals=    [] role_emotions= [] role_moods=    [Œ—œ”«·#a1 (1)=  Œ—œ”«·#a1 (1)]]]
+dynamic_objs= [ò»Ê —#n1 (1)=  »Â Ìò ò»Ê — “Œ„Ì object_actions=  [] object_states=  [Ìò#n1 (1)=  Ìò, “Œ„Ì#a1 (1)=  “Œ„Ì]]
+static_objs= 
+location= null
+alternativeLocations= [[—«Â#n9 (1)=  œ— —«Â Œ«‰Â]]
+time= [«„—Ê“#n1 (1)=  «„—Ê“]
+alternativeTimes= [[«„—Ê“#n1 (1)=  «„—Ê“]]
+scene_goals= []
+scene_emotions= []]
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NSentence: »·«›«’·Â ò»Ê — —« »—œ‘ 
+primarySceneModel
+roles= [
+	[Å”—#n2 (1)= Å”—ò role_actions=  [ç‘„ «› «œ‰#v (1)=  ç‘„‘ù«› «œ, »—œ«‘ ‰#v1 (1)=  »—œ«‘ ] role_goals=    [] role_emotions= [] role_moods=    [Œ—œ”«·#a1 (1)=  Œ—œ”«·#a1 (1)]]]
+dynamic_objs= [ò»Ê —#n1 (1)=  »Â Ìò ò»Ê — “Œ„Ì object_actions=  [] object_states=  [Ìò#n1 (1)=  Ìò, “Œ„Ì#a1 (1)=  “Œ„Ì]]
+static_objs= 
+location= null
+alternativeLocations= [[—«Â#n9 (1)=  œ— —«Â Œ«‰Â]]
+time= [»·«›«’·Â#r1 (1)=  »·«›«’·Â]
+alternativeTimes= [[«„—Ê“#n1 (1)=  «„—Ê“], [»·«›«’·Â#r1 (1)=  »·«›«’·Â]]
+scene_goals= []
+scene_emotions= []]
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NSentence: ‘—Ê⁄ »Â œÊÌœ‰ »Â ”„  Œ«‰Â ò—œ
+primarySceneModel
+roles= [
+	[Å”—#n2 (1)= Å”—ò role_actions=  [ç‘„ «› «œ‰#v (1)=  ç‘„‘ù«› «œ, »—œ«‘ ‰#v1 (1)=  »—œ«‘ , ‘—Ê⁄ ò—œ‰#v1 (1)=  ‘—Ê⁄ ò—œ] role_goals=    [] role_emotions= [] role_moods=    [Œ—œ”«·#a1 (1)=  Œ—œ”«·#a1 (1)]]]
+dynamic_objs= [ò»Ê —#n1 (1)=  »Â Ìò ò»Ê — “Œ„Ì object_actions=  [] object_states=  [Ìò#n1 (1)=  Ìò, “Œ„Ì#a1 (1)=  “Œ„Ì]]
+static_objs= 
+location= null
+alternativeLocations= [[—«Â#n9 (1)=  œ— —«Â Œ«‰Â], [”„ #n4 (1)=  »Â ”„  Œ«‰Â]]
+time= [»·«›«’·Â#r1 (1)=  »·«›«’·Â]
+alternativeTimes= [[«„—Ê“#n1 (1)=  «„—Ê“], [»·«›«’·Â#r1 (1)=  »·«›«’·Â]]
+scene_goals= []
+scene_emotions= []]
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NSentence: Ê«—œ Œ«‰Â ‘œ
+primarySceneModel
+roles= [
+	[Å”—#n2 (1)= Å”—ò role_actions=  [Ê«—œ ‘œ‰#v2 (1)=  Ê«—œ ‘œ] role_goals=    [] role_emotions= [] role_moods=    [Œ—œ”«·#a1 (1)=  Œ—œ”«·#a1 (1)]]]
+dynamic_objs= 
+static_objs= 
+location= null
+alternativeLocations= [[Œ«‰Â#n10 (1)=  Œ«‰Â]]
+time= null
+alternativeTimes= []
+scene_goals= []
+scene_emotions= []]
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NSentence: ò»Ê — —« »Â „«œ— ŒÊœ œ«œ
+primarySceneModel
+roles= [
+	[Å”—#n2 (1)= Å”—ò role_actions=  [Ê«—œ ‘œ‰#v2 (1)=  Ê«—œ ‘œ, œ«œ‰#v5 (1)=  œ«œ] role_goals=    [] role_emotions= [] role_moods=    [Œ—œ”«·#a1 (1)=  Œ—œ”«·#a1 (1)]]
+	[„«œ—#n1 (1)= »Â „«œ— ŒÊœ role_actions=  [] role_goals=    [] role_emotions= [] role_moods=    []]]
+dynamic_objs= [ò»Ê —#n1 (1)=  ò»Ê — object_actions=  [] object_states=  []]
+static_objs= 
+location= null
+alternativeLocations= [[Œ«‰Â#n10 (1)=  Œ«‰Â]]
+time= null
+alternativeTimes= []
+scene_goals= []
+scene_emotions= []]
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ «·Õ„œ··Â
