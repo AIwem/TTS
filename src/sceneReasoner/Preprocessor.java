@@ -290,11 +290,11 @@ public class Preprocessor {
 	 * @param storyModel the StoryModel which the returned sceneModel is to be added to. guaranteed not to be null.
 	 * @return SceneModel containing input sentenceModel 
 	 */	 
-	public SceneModel preprocessScene(SentenceModel sentenceModel, SceneModel primarySceneModel, StoryModel storyModel){		
+	public void preprocessScene(SentenceModel sentenceModel, SceneModel primarySceneModel, StoryModel storyModel){		
 		
 		if(sentenceModel == null || primarySceneModel == null || storyModel == null){
 			MyError.error("None of senetecenModel, sceneModel, and storyModel should be null! " + sentenceModel);
-			return null;
+			return; //null;
 		}		
 		
 		prepareNullSemanticTags(sentenceModel, primarySceneModel, storyModel);
@@ -332,7 +332,7 @@ public class Preprocessor {
 		processVisualTags(sentenceModel, primarySceneModel);
 				
 		print("\nprimarySceneModel\n" + primarySceneModel);
-		return primarySceneModel;
+//		return primarySceneModel;
 	}
 	
 	/**

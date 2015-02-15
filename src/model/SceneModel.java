@@ -703,6 +703,18 @@ public class SceneModel {
 		
 		return st;
 	}
+
+//	public void mergeElementWith(SceneModel mergee) {
+//		if(mergee == null){
+//			MyError.error("SceneModel can not merge with null!");
+//			return;
+//		}
+//		
+//		for(Role role:this.roles)
+//			if(mergee.hasRole(role))
+//				role.mergeWith(role);
+//		
+//	}
 	
 }
 			

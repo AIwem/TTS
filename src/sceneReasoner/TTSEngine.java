@@ -108,9 +108,6 @@ public class TTSEngine {
 		if(!isKbInitialized)
 			loadKb();
 		
-		//-------------- converting natural language sentences of a scene to their equivalent sentencs_scenes SceneModel ------
-		ArrayList<SceneModel> sentencs_scenes = new ArrayList<SceneModel>();
-		
 		SceneModel primarySceneModel = new SceneModel(storyModel);
 		storyModel.addScene(primarySceneModel);
 				
@@ -128,27 +125,17 @@ public class TTSEngine {
 			primarySceneModel.addSentence(sentence);
 			sentence.setScene(primarySceneModel);
 			
-			SceneModel cur_sen_scene = _pp.preprocessScene(sentence, primarySceneModel, storyModel);
-			
-			if(cur_sen_scene != null)
-				sentencs_scenes.add(cur_sen_scene);
-							
+			_pp.preprocessScene(sentence, primarySceneModel, storyModel);
+										
 			System.out.println("sentenceModel after preprocess: \n" + sentence + "\n");			
 		}
 		
-		//-------------- merging primary SceneModels of each sentences of this scene ----------------------------------------
-//		SceneModel currentPrimaryScene = _sr.mergeScenesOfSentences(sentencs_scenes);
-		
-		//-------------- adding primarySceneModel of the current scene to the stroyModel ------------------------------------
-//		storyModel.addScene(currentPrimaryScene);
-//		currentPrimaryScene.setStory(storyModel);
-		
-//		print("merged primary SceneModel\n" + currentPrimaryScene);
-		
 		if(isLastScene){//the last scene of story
 			
-			//-------------- merging primarySceneModels of different scenes previously added to storyModel ------------------
-			_sr.mergeScenes(storyModel);
+			//-------------- postprocessing Location and Time of different scenes previously added to storyModel ------------
+			_sr.postprocessLocation(storyModel);
+			
+			_sr.postprocessTime(storyModel);
 			
 			//-------------- enriching primarySceneModels of different scenes previously added to storyModel ----------------
 			_sr.enrichSceneModel(storyModel);
@@ -828,6 +815,23 @@ public class TTSEngine {
 		
 		print(pureNode + " ............. in getScenePart ........... " + semanticTag);
 		
+		//TODO: I must remove these lines!-------			
+		if(pureNode.getName().equals("پسر#n2"))
+			return ScenePart.ROLE;
+		if(pureNode.getName().equals("مادر#n1"))
+			return ScenePart.ROLE;
+		if(pureNode.getName().equals("یک#n1"))
+			return ScenePart.SCENE_OBJECT;
+		if(pureNode.getName().equals("راه#n9"))
+			return ScenePart.LOCATION;
+		if(pureNode.getName().equals("سمت#n4"))
+			return ScenePart.LOCATION;
+		if(pureNode.getName().equals("خانه#n10"))
+			return ScenePart.LOCATION;	
+		if(pureNode.getName().equals("بلافاصله#r1"))
+			return ScenePart.TIME;
+		//---------------------------------------			
+		
 		if(pureNode == null || pos == null || semanticTag == null)
 			return ScenePart.UNKNOWN;
 
@@ -888,22 +892,7 @@ public class TTSEngine {
 	 * @return the ScenePart of pureNode, including ROLE, DYNAMIC_OBJECT, or UNKNOWN. no null will be returned.
 	 */
 	private ScenePart getArg0ScenePart(Node pureNode, POS pos) {
-		
-		//TODO: I must remove these lines!-------			
-		if(pureNode.getName().equals("پسر#n2"))
-			return ScenePart.ROLE;
-		
-//		if(pure_node.getName().equals("یک#n1"))
-//			return ScenePart.SCENE_OBJECT;
-//		if(pure_node.getName().equals("راه#n9"))
-//			return ScenePart.LOCATION;
-//		if(pure_node.getName().equals("سمت#n4"))
-//			return ScenePart.LOCATION;
-//		if(pure_node.getName().equals("خانه#n10"))
-//			return ScenePart.SCENE_OBJECT;			
-		//---------------------------------------			
-
-		
+				
 		if(pos == POS.NOUN){
 			if(isHuman(pureNode))
 				return ScenePart.ROLE;
@@ -932,21 +921,6 @@ public class TTSEngine {
 	 * @return the ScenePart of pureNode, including ROLE, DYNAMIC_OBJECT, or UNKNOWN. no null will be returned.
 	 */
 	private ScenePart getArg1ScenePart(Node pureNode, POS pos) {
-		
-		//TODO: I must remove these lines!-------			
-		if(pureNode.getName().equals("پسر#n2"))
-			return ScenePart.ROLE;
-		
-//		if(pure_node.getName().equals("یک#n1"))
-//			return ScenePart.SCENE_OBJECT;
-//		if(pure_node.getName().equals("راه#n9"))
-//			return ScenePart.LOCATION;
-//		if(pure_node.getName().equals("سمت#n4"))
-//			return ScenePart.LOCATION;
-//		if(pure_node.getName().equals("خانه#n10"))
-//			return ScenePart.SCENE_OBJECT;			
-		//---------------------------------------			
-
 		
 		if(pos == POS.NOUN){
 			if(isHuman(pureNode))
@@ -988,12 +962,7 @@ public class TTSEngine {
 	private ScenePart getArg2ScenePart(Node pureNode, MainSemanticTag semanticTag, POS pos) {
 		
 		if(semanticTag == MainSemanticTag.ARG2_OBJ2 || semanticTag == MainSemanticTag.ARG2_BENEFICIARY){
-			
-			if(pureNode.getName().equals("پسر#n2"))				
-				return ScenePart.ROLE;
-			if(pureNode.getName().equals("مادر#n1"))
-				return ScenePart.ROLE;
-			
+		
 			if(pos == POS.NOUN){
 				if(isHuman(pureNode))
 					return ScenePart.ROLE;
@@ -1044,12 +1013,7 @@ public class TTSEngine {
 	private ScenePart getArg3ScenePart(Node pureNode, MainSemanticTag semanticTag, POS pos) {
 		
 		if(semanticTag == MainSemanticTag.ARG3_BENEFICIARY){
-			
-			if(pureNode.getName().equals("پسر#n2"))				
-				return ScenePart.ROLE;
-			if(pureNode.getName().equals("مادر#n1"))
-				return ScenePart.ROLE;
-			
+					
 			if(pos == POS.NOUN){
 				if(isHuman(pureNode))
 					return ScenePart.ROLE;
@@ -1095,7 +1059,6 @@ public class TTSEngine {
 	}
 	
 	/**
-	 * //TODO: compete
 	 * recognizing which scenePart has this SubSemanticArg node:
 	 * a ROLE, DYNAMIC_OBJECT, STATIC_OBJECT, LOCATION?
 	 *	 
@@ -1167,25 +1130,12 @@ public class TTSEngine {
 			if(isLocation(pureNode))
 				return ScenePart.LOCATION;
 		
-		if(subSemArg == SubSemanticTag.TMP){
-		
-			//TODO: I must remove these lines!-------			
-			if(pureNode.getName().equals("بلافاصله#r1"))
-				return ScenePart.TIME;
-
-			//---------------------------------------		
-			
+		if(subSemArg == SubSemanticTag.TMP)		
 			if(isTime(pureNode))
 				return ScenePart.TIME;
-		}
 		
-		if(subSemArg == SubSemanticTag.GOL){
-			
-			if(pureNode.getName().equals("پسر#n2"))				
-				return ScenePart.ROLE;
-			if(pureNode.getName().equals("مادر#n1"))
-				return ScenePart.ROLE;
-			
+		
+		if(subSemArg == SubSemanticTag.GOL)				
 			if(pos == POS.NOUN){
 				if(isHuman(pureNode))
 					return ScenePart.ROLE;
@@ -1198,7 +1148,7 @@ public class TTSEngine {
 				
 				return ScenePart.STATIC_OBJECT;
 			}			
-		}
+		
 		if(subSemArg == SubSemanticTag.PRP || subSemArg == SubSemanticTag.CAU)			
 			return ScenePart.SCENE_GOAL;
 		

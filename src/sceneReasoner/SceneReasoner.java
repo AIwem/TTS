@@ -294,12 +294,46 @@ public class SceneReasoner {
 	}
 
 		
-	public void mergeScenes(StoryModel storyModel) {		
-		
-	}
+//	public void mergeSceneElements(StoryModel storyModel) {
+//		if(storyModel == null){
+//			MyError.error("null storyModel for merging scenes!");
+//			return;
+//		}
+//		
+//		ArrayList<SceneModel> storyScenes = storyModel.getScenes();
+//		int scene_num = -1;
+//		if(storyScenes != null)
+//			scene_num = storyScenes.size();
+//		
+//		for(int i = 0; i < scene_num; i++){
+//			for(int j = 0; j < scene_num; j++){
+//				if(j == i)
+//					continue;
+//				SceneModel merger = storyScenes.get(i);
+//				SceneModel mergee = storyScenes.get(j);
+//				
+//				if(mergee != null && merger != null)
+//					merger.mergeElementWith(mergee);
+//			}
+//		}
+//			
+//		
+//	}
 
 	public void enrichSceneModel(StoryModel storyModel) {
 	
+		
+	}
+
+
+	public void postprocessLocation(StoryModel storyModel) {
+	
+		
+	}
+
+
+	public void postprocessTime(StoryModel storyModel) {
+		// TODO Auto-generated method stub
 		
 	}
 	
