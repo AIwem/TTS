@@ -105,3 +105,8 @@
 81	f˸دادن§v-7663	MainSemArg	ARG0_AGENT
 82	f˸دادن§v-7663	MainSemArg	ARG1_THEME
 83	f˸دادن§v-7663	MainSemArg	ARG2_OBJ2
+84	f˸تکه تکه کردن§v-9529	MainSemArg	ARG0_AGENT
+85	f˸تکه تکه کردن§v-9529	MainSemArg	ARG1_PATIENT
+86	f˸تکه تکه کردن§v-9529	MainSemArg	ARG2_INSTRUMENT
+87	f˸دور افکندن§v-8570	MainSemArg	ARG0_AGENT
+88	f˸دور افکندن§v-8570	MainSemArg	ARG1_THEME

@@ -2,8 +2,11 @@ package userInterface;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 import model.StoryModel;
@@ -11,8 +14,8 @@ import sceneReasoner.TTSEngine;
 
 public class UI {
 	
-	private String inputStoryFilePath = "inputStory/inputStrory6.txt";
-	private String mainKbFilePath = "kb/farsnet--21.txt";
+	private String inputStoryFilePath = "inputStory/inputStrory7.txt";
+	private String mainKbFilePath = "kb/farsnet--22.txt";
 //	private String mainKbFilePath = "kb/farsnet.txt";
 	private String myKbFilePath = "kb/injuredPigeon6.txt";
 	//private String myKbFilePath = "kb/injuredPigeon_simple.txt";
@@ -42,6 +45,13 @@ public class UI {
 		int story_num = 0;		
 		StoryModel storyModel = new StoryModel("story"+story_num);		
 		
+		PrintWriter writer = null;
+		try {
+			writer = new PrintWriter("sceneOutput.txt", "UTF-8");
+		} catch (FileNotFoundException | UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		
 		for(String line:inputs){
 			
 			if(line.equals("«داستان جدید»")){				
@@ -52,7 +62,7 @@ public class UI {
 			else if(line.equals("«صحنه جدید»")){
 				
 				//Then give the sentences of a scene to TTSEngine to enrich. 
-			 	tts.TextToScene(current_scene_lines, storyModel, false);		 	
+			 	tts.TextToScene(current_scene_lines, storyModel, false, writer);		 	
 				
 				current_scene_lines = new ArrayList<String>();
 				continue;
@@ -60,8 +70,10 @@ public class UI {
 			current_scene_lines.add(line);			
 		}
 		//sentences of the last scene will be sent to TTSEngine to enrich. 
-	 	tts.TextToScene(current_scene_lines, storyModel, true);	 	
-	 	
+	 	tts.TextToScene(current_scene_lines, storyModel, true, writer);
+
+		writer.close();
+			
 	 	return storyModel;
 	}
 

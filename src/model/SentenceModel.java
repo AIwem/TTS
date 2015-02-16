@@ -451,6 +451,24 @@ public class SentenceModel{
 		return NLSentence;
 	}
 	
+	public ArrayList<SentencePart> getSentencePartsWithSourceNumber(int number) {
+		ArrayList<SentencePart> allPart = new ArrayList<SentencePart>();
+		
+		for(SentencePart sbj:subjects)
+			if(sbj != null && sbj.get_sourceOfSynNum() == number)
+				allPart.add(sbj);
+		
+		for(SentencePart obj:objects)
+			if(obj != null && obj.get_sourceOfSynNum() == number)
+				allPart.add(obj);
+		
+		for(SentencePart adv:adverbs)
+			if(adv != null && adv.get_sourceOfSynNum() == number)
+				allPart.add(adv);
+		
+		return allPart;				
+	}
+	
 	/**
 	 * 
 	 * @return returns the SemanticTags of all parts of this sentence. guaranteed not to be null.
@@ -839,6 +857,8 @@ public class SentenceModel{
 		
 		return wsd; //rs + "\n" + wsd;
 	}
+
+	
 
 	
 

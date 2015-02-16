@@ -53,7 +53,7 @@ public class Preprocessor {
 	 */
 //	private String sentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
 //	private String sentenceInfosFileName = "inputStory/sentenceInfos_SS.txt";
-	private String sentenceInfosFileName = "inputStory/SentenceInfos11.txt";
+	private String sentenceInfosFileName = "inputStory/SentenceInfos12.txt";
 
 	public Preprocessor(KnowledgeBase kb, SemanticReasoner re, TTSEngine ttsEngine) {
 		this._kb = kb;
@@ -361,18 +361,13 @@ public class Preprocessor {
 				missingMainArgs.add(necess);
 //		print("missings " + missingMainArgs);
 		
-		prepareNullSemanticTagsForAScene(sentenceModel, missingMainArgs, primarySceneModel);
+//		prepareNullSemanticTagsForAScene(sentenceModel, missingMainArgs, primarySceneModel);
 		
-		while(!Common.isEmpty(missingMainArgs)){
-//			print("new mis " + missingMainArgs + "scene ");
-			ArrayList<SceneModel> allScene = storyModel.getScenes();
-			
-			if(!Common.isEmpty(allScene))
-				for(SceneModel oldScene:allScene)
-					if(!oldScene.equals(primarySceneModel))
-						prepareNullSemanticTagsForAScene(sentenceModel, missingMainArgs, oldScene);
-		}
-		
+		if(!Common.isEmpty(missingMainArgs))
+			for(SceneModel scene:storyModel.getScenes())
+				if(!scene.equals(primarySceneModel))
+					prepareNullSemanticTagsForAScene(sentenceModel, missingMainArgs, scene);
+				
 		print("=============== end of prepareNullSemanticTags =====================");
 	}	
 	
@@ -625,7 +620,7 @@ public class Preprocessor {
 			//It can only return Time SceneElement.
 			SceneElement tmpElem = preprocessSemanticArg(SubSemanticTag.TMP.convertToSemanticTag(), sentenceModel, primarySceneModel);
 			
-			if(tmpElem.scenePart == ScenePart.TIME)
+			if(tmpElem != null && tmpElem.scenePart == ScenePart.TIME)
 				primarySceneModel.setTime((Time) tmpElem);
 		}
 		
@@ -801,33 +796,34 @@ public class Preprocessor {
 				
 				for(MainSemanticTag miss:missingMainArgs){
 					
-//					print("for missed " + miss);
+					if(miss != null && (miss.isArg0() || miss.isArg1())){
 					
-					for(SentenceModel sent:allSentences){
-						if(sent.equals(sentenceModel))
-							continue;
-						
-//						print("In sentence: " + sent.getOriginalSentence());
-						
-						if(miss != null && miss.isArg0() && sent.hasArg0()){							
-							SentencePart arg0SentencePart = sent.getArg0SentencePart();
+						for(SentenceModel sent:allSentences){
+							if(sent.equals(sentenceModel))
+								continue;
 							
-							arg0SentencePart.set_semanticTag(miss.name());
-							preparedMainArgs.add(arg0SentencePart._semanticTag.convertToMainSemanticTag());							
-							sentenceModel.setPrerparedSentencePart(arg0SentencePart);						
+	//						print("In sentence: " + sent.getOriginalSentence());
 							
-							print("prepared " + arg0SentencePart._semanticTag);
-							break;
-						}
-						else if(miss != null && miss.isArg1() && sent.hasArg1()){
-							SentencePart arg1SentencePart = sent.getArg1SentencePart();
-							
-							arg1SentencePart.set_semanticTag(miss.name());
-							preparedMainArgs.add(arg1SentencePart._semanticTag.convertToMainSemanticTag());
-							sentenceModel.setPrerparedSentencePart(arg1SentencePart);
-							
-							print("prepared " + arg1SentencePart._semanticTag);
-							break;
+							if(miss.isArg0() && sent.hasArg0()){							
+								SentencePart arg0SentencePart = sent.getArg0SentencePart();
+								
+								arg0SentencePart.set_semanticTag(miss.name());
+								preparedMainArgs.add(arg0SentencePart._semanticTag.convertToMainSemanticTag());							
+								sentenceModel.setPrerparedSentencePart(arg0SentencePart);						
+								
+								print("prepared " + arg0SentencePart._semanticTag);
+								break;
+							}
+							else if(miss.isArg1() && sent.hasArg1()){
+								SentencePart arg1SentencePart = sent.getArg1SentencePart();
+								
+								arg1SentencePart.set_semanticTag(miss.name());
+								preparedMainArgs.add(arg1SentencePart._semanticTag.convertToMainSemanticTag());
+								sentenceModel.setPrerparedSentencePart(arg1SentencePart);
+								
+								print("prepared " + arg1SentencePart._semanticTag);
+								break;
+							}
 						}
 					}					
 				}

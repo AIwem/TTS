@@ -344,6 +344,56 @@ public class SentencePart {
 		return null;
 	}
 	
+	public SentencePart getRootPart() {
+		if(_senteceModel == null)
+			return null;
+					
+		SentencePart verb = this._senteceModel.getVerb();
+		
+		if(verb == null)
+			return null;
+		
+		for(SentencePart sPart:this.sub_parts)
+			if(sPart._sourceOfSynNum == verb._number)
+				return sPart;
+		
+		return null;
+	}
+	
+	public SentencePart getInnerPart() {
+		if(_senteceModel == null)
+			return null;
+					
+		SentencePart verb = this._senteceModel.getVerb();
+		
+		if(verb == null)
+			return null;
+				
+		SentencePart rootPart = getRootPart();
+		
+		if(rootPart == null)
+			return null;
+		
+		SentencePart found = rootPart; 
+		
+//		int flag = -1;
+		
+		while(found != null){
+			boolean flag = false;			
+			for(SentencePart sPart:this.sub_parts){				
+				if(sPart._sourceOfSynNum == found._number){
+					found = sPart;
+					flag = true;
+					break;
+				}
+			}			
+			if(flag == false)
+				return found;
+		}
+		
+		return null;
+	}
+	
 	public VerbType getVerbType(){
 		if(isVerb()){			
 			if(_name.contains("افتاد"))
@@ -357,7 +407,11 @@ public class SentencePart {
 			if(_name.contains("وارد شد"))
 				return VerbType.MORAKAB;
 			if(_name.contains("داد"))
-				return VerbType.BASIT;					
+				return VerbType.BASIT;
+			if(_name.contains("شکست"))
+				return VerbType.BASIT;
+			if(_name.contains("دور انداخت"))
+				return VerbType.MORAKAB;
 					
 		}
 		return VerbType.UNKNOWN;
@@ -644,9 +698,6 @@ public class SentencePart {
 			if(!Common.isEmpty(newPart.capacities))
 				capacities = newPart.capacities;
 		}
-	}
-
-	
-	
+	}	
 	
 }

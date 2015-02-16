@@ -78,7 +78,7 @@ public class SceneModel {
 			print("Location " + location + " set for SceneModel.");
 			
 			this.location = location;
-			addAlternativeLocation(location);
+//			addAlternativeLocation(location);
 		}
 	}
 	
@@ -89,7 +89,7 @@ public class SceneModel {
 			
 			print("Time " + time + " set for SceneModel.");
 			this.time = time;
-			addAlternativeTime(time);
+//			addAlternativeTime(time);
 		}		
 	}
 		
@@ -281,6 +281,18 @@ public class SceneModel {
 				return getScene_goal(sceneElement._node);
 		
 		return null;
+	}
+	
+	public SentencePart findSentencePartofSceneElement(SceneElement sceneElement){
+		if(sceneElement == null)
+			return null;
+		
+		for(SentenceModel sentence:this.sentences){
+			SentencePart part = sentence.getSentencePart(sceneElement._node);
+			if(part != null)
+				return part;
+		}
+		return null;		
 	}
 	//------------------ add   part -------------------
 	

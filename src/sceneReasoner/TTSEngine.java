@@ -12,6 +12,7 @@ import ir.ac.itrc.qqa.semantic.reasoning.SemanticReasoner;
 import ir.ac.itrc.qqa.semantic.util.Common;
 import ir.ac.itrc.qqa.semantic.util.MyError;
 
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
@@ -96,9 +97,10 @@ public class TTSEngine {
 	 * @param scene_inputNL input natural language sentences describing a single scene.
 	 * @param storyModel the stroyModel which this scene belongs to.
 	 * @param isLastScene is scene_inputNL describing the last scene of the story?  
+	 * @param writer 
 	 * @return 
 	 */
-	public void TextToScene(ArrayList<String> scene_inputNL, StoryModel storyModel, boolean isLastScene){
+	public void TextToScene(ArrayList<String> scene_inputNL, StoryModel storyModel, boolean isLastScene, PrintWriter writer){
 		
 		if(scene_inputNL == null || scene_inputNL.size() == 0 || storyModel == null){
 			MyError.error("bad input lines!");
@@ -127,9 +129,10 @@ public class TTSEngine {
 			
 			_pp.preprocessScene(sentence, primarySceneModel, storyModel);
 										
-			System.out.println("sentenceModel after preprocess: \n" + sentence + "\n");			
+			System.out.println("sentenceModel after preprocess: \n" + sentence + "\n");
+						
 		}
-		
+				
 		if(isLastScene){//the last scene of story
 			
 			//-------------- postprocessing Location and Time of different scenes previously added to storyModel ------------
@@ -139,7 +142,11 @@ public class TTSEngine {
 			
 			//-------------- enriching primarySceneModels of different scenes previously added to storyModel ----------------
 			_sr.enrichSceneModel(storyModel);
+						
+			for(SceneModel scene:storyModel.getScenes())
+				writer.println("\nprimarySceneModel\n" + scene);
 		}
+	
 	}
 		
 	public void checkSemanticReasoner1(Node argument, Node descriptor, Node referent)	{
@@ -669,6 +676,21 @@ public class TTSEngine {
 		pq = new PlausibleQuestion();
 		pq.descriptor = KnowledgeBase.HPR_ISA;
 		pq.argument = node;			
+		pq.referent = _TTSKb.addConcept("محل§n-12748", false);
+		
+		answers = writeAnswersTo(pq.descriptor, node, pq.referent);
+		//ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
+		for(PlausibleAnswer ans:answers ){
+			print("answer: " + ans);
+			if(ans.answer == KnowledgeBase.HPR_YES){
+				print(node.getName() + " isLocation محل \n");
+				return true;				
+			}
+		}
+		
+		pq = new PlausibleQuestion();
+		pq.descriptor = KnowledgeBase.HPR_ISA;
+		pq.argument = node;			
 		pq.referent = _TTSKb.addConcept("راه§n-12894", false);
 		
 		answers = writeAnswersTo(pq.descriptor, node, pq.referent);
@@ -822,14 +844,18 @@ public class TTSEngine {
 			return ScenePart.ROLE;
 		if(pureNode.getName().equals("یک#n1"))
 			return ScenePart.SCENE_OBJECT;
+		if(pureNode.getName().equals("کبوتر#n1"))
+			return ScenePart.DYNAMIC_OBJECT;
 		if(pureNode.getName().equals("راه#n9"))
 			return ScenePart.LOCATION;
-		if(pureNode.getName().equals("سمت#n4"))
+		if(pureNode.getName().equals("سمت#n6"))
+			return ScenePart.LOCATION;
+		if(pureNode.getName().equals("طرف#n3"))
 			return ScenePart.LOCATION;
 		if(pureNode.getName().equals("خانه#n10"))
 			return ScenePart.LOCATION;	
 		if(pureNode.getName().equals("بلافاصله#r1"))
-			return ScenePart.TIME;
+			return ScenePart.TIME;		
 		//---------------------------------------			
 		
 		if(pureNode == null || pos == null || semanticTag == null)
@@ -1122,7 +1148,7 @@ public class TTSEngine {
 	 */
 	private ScenePart getSubArgScenePart(Node pureNode, SubSemanticTag subSemArg, POS pos) {
 		
-		if(subSemArg == SubSemanticTag.DIR)
+		if(subSemArg == SubSemanticTag.DIR || subSemArg == SubSemanticTag.DIR_P)
 			if(isLocation(pureNode))
 				return ScenePart.LOCATION;
 		

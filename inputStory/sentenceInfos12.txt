@@ -1,0 +1,105 @@
+sentence:پسرک امروز در راه خانه چشمش به یک کبوتر زخمی افتاد
+
+name:پسرک			POS:NOUN		SYN:SBJ		SRC:11	SEM:ARG0_EXPERIENCER	WSD:پسر#n2_وضعیت سنی#a_خردسال#a1	sub_part:-	num:1
+
+name:امروز			POS:ADVERB		SYN:ADVRB	SRC:11	SEM:ArgM_TMP			WSD:امروز#n1				sub_part:-			num:2
+
+name:در راه خانه	POS:NOUN		SYN:ADVRB	SRC:	SEM:ArgM_DIR			WSD:4_mozaf#n_5				sub_part:3,4,5		num:
+name:در				POS:UNKNOWN		SYN:ADVRB	SRC:11	SEM:ArgM_DIR_P			WSD:-						sub_part:-			num:3
+name:راه			POS:NOUN		SYN:POSDEP	SRC:3	SEM:ArgM_DIR_P			WSD:راه#n9					sub_part:-			num:4
+name:خانه			POS:NOUN		SYN:MOZ		SRC:4	SEM:ArgM_DIR_P			WSD:خانه#n10				sub_part:-			num:5
+
+name:به یک کبوتر زخمی	POS:NOUN	SYN:OBJ		SRC:	SEM:ARG1_THEME			WSD:9_وضعیت سلامتی#a_10		sub_part:7,8,9,10	num:
+name:به				POS:UNKNOWN		SYN:VPP		SRC:11	SEM:ARG1_THEME_P		WSD:-						sub_part:-			num:7
+name:یک				POS:UNKNOWN		SYN:NPREMOD	SRC:9	SEM:ARG1_THEME_P		WSD:یک#n1					sub_part:-			num:8
+name:کبوتر			POS:NOUN		SYN:POSDEP	SRC:7	SEM:ARG1_THEME_P		WSD:کبوتر#n1				sub_part:-			num:9
+name:زخمی			POS:ADJECTIVE	SYN:NPOSTMOD	SRC:9	SEM:ARG1_THEME_P	WSD:زخمی#a1					sub_part:-			num:10
+
+name:چشمش‌افتاد		POS:VERB		SYN:ROOT	SRC:	SEM:-					WSD:چشم افتادن#v			sub_part:6,11		num:
+name:چشمش			POS:NOUN		SYN:NVE		SRC:11	SEM:-					WSD:-						sub_part:-			num:6
+name:افتاد			POS:VERB		SYN:ROOT	SRC:0	SEM:-					WSD:-						sub_part:-			num:11
+
+#------------------------------------------------------
+sentence:بلافاصله کبوتر را بردشت
+
+name:بلافاصله		POS:ADVERB		SYN:ADVRB	SRC:4	SEM:ArgM_TMP		WSD:بلافاصله#r1			sub_part:-				num:1
+
+name:کبوتر را		POS:NOUN		SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:کبوتر#n1			sub_part:2,3			num:
+name:کبوتر			POS:NOUN		SYN:PREDEP	SRC:3	SEM:ARG1_THEME_P	WSD:کبوتر#n1			sub_part:-				num:2
+name:را				POS:UNKNOWN		SYN:OBJ		SRC:4	SEM:ARG1_THEME_P	WSD:-					sub_part:-				num:3
+
+name:برداشت			POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:برداشتن#v1			sub_part:-				num:4
+
+#------------------------------------------------------
+sentence:شروع به دویدن به سمت خانه کرد
+
+name:شروع کرد		POS:VERB		SYN:ROOT	SRC:	SEM:-				WSD:شروع کردن#v1		sub_part:1,7			num:
+name:شروع			POS:NOUN		SYN:NVE		SRC:7	SEM:-				WSD:-					sub_part:-				num:1
+name:کرد			POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:-					sub_part:-				num:7
+
+name:به دویدن		POS:UNKNOWN		SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:دویدن#v1			sub_part:2,3			num:
+name:به				POS:UNKNOWN		SYN:NPP		SRC:7	SEM:ARG1_THEME_P	WSD:-					sub_part:-				num:2
+name:دویدن			POS:NOUN		SYN:POSDEP	SRC:2	SEM:ARG1_THEME_P	WSD:دویدن#v1			sub_part:-				num:3
+
+name:به سمت خانه	POS:NOUN		SYN:ADVRB	SRC:	SEM:ArgM_DIR		WSD:5_mozaf#n_6			sub_part:4,5,6			num:
+name:به				POS:UNKNOWN		SYN:NPP		SRC:3	SEM:ArgM_DIR_P		WSD:-					sub_part:-				num:4
+name:سمت			POS:NOUN		SYN:POSDEP	SRC:4	SEM:ArgM_DIR_P		WSD:سمت#n6				sub_part:-				num:5
+name:خانه			POS:NOUN		SYN:MOZ		SRC:5	SEM:ArgM_DIR_P		WSD:خانه#n10			sub_part:-				num:6
+
+#------------------------------------------------------
+sentence:وارد خانه شد
+
+name:خانه			POS:NOUN		SYN:ADVRB	SRC:3	SEM:ARG4_ENDPOINT	WSD:خانه#n10			sub_part:-				num:2
+
+name:وارد شد		POS:VERB		SYN:ROOT	SRC:	SEM:-				WSD:وارد شدن#v2			sub_part:1,3			num:
+name:وارد			POS:NOUN		SYN:NVE		SRC:3	SEM:-				WSD:-					sub_part:-				num:1
+name:شد				POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:-					sub_part:-				num:3
+
+#------------------------------------------------------
+sentence:کبوتر را به مادر خود داد
+
+name:کبوتر			POS:NOUN		SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:کبوتر#n1			sub_part:1,2			num:
+name:کبوتر			POS:NOUN		SYN:PREDEP	SRC:2	SEM:ARG1_THEME_P	WSD:کبوتر#n1			sub_part:-				num:1
+name:را				POS:UNKNOWN		SYN:OBJ		SRC:6	SEM:ARG1_THEME_P	WSD:کبوتر#n1			sub_part:-				num:2
+
+name:به مادر خود	POS:NOUN		SYN:ADVRB	SRC:	SEM:ARG2_OBJ2		WSD:4_mozaf#n_5			sub_part:3,4,5			num:
+name:به				POS:UNKNOWN		SYN:VPP		SRC:6	SEM:ARG2_OBJ2_P		WSD:-					sub_part:-				num:3
+name:مادر			POS:NOUN		SYN:POSDEP	SRC:3	SEM:ARG2_OBJ2_P		WSD:مادر#n1				sub_part:-				num:4
+name:خود			POS:UNKNOWN		SYN:MOZ		SRC:4	SEM:ARG2_OBJ2_P		WSD:خود#n3				sub_part:-				num:5
+
+
+name:داد			POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:دادن#v5				sub_part:-				num:6
+
+#------------------------------------------------------
+sentence:سپس به طرف اتاقش دوید
+name:سپس			POS:UNKNOWN		SYN:ADVRB	SRC:5	SEM:ArgM_TMP		WSD:سپس#a1			sub_part:-				num:1
+
+name:به طرف اتاقش	POS:NOUN		SYN:ADVRB	SRC:	SEM:ArgM_DIR		WSD:3_mozaf#n_4		sub_part:2,3,4			num:
+name:به				POS:UNKNOWN		SYN:VPP		SRC:5	SEM:ArgM_DIR_P		WSD:-				sub_part:-				num:2
+name:طرف			POS:NOUN		SYN:POSDEP	SRC:2	SEM:ArgM_DIR_P		WSD:طرف#n3			sub_part:-				num:3
+name:اتاقش			POS:NOUN		SYN:MOZ		SRC:3	SEM:ArgM_DIR_P		WSD:اتاق#n2			sub_part:-				num:4
+
+name:دوید			POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:دویدن#v1		sub_part:-				num:5
+
+#------------------------------------------------------
+sentence:تیروکمان خود را برداشت
+
+name:تیروکمان خود را	POS:NOUN	SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:1_mozaf3n_2		sub_part:1,2,3			num:
+name:تیروکمان		POS:NOUN		SYN:PREDEP	SRC:3	SEM:ARG1_THEME_P	WSD:تیر#n4			sub_part:-				num:1
+name:خود			POS:NOUN		SYN:MOZ		SRC:2	SEM:ARG1_THEME_P	WSD:خود#n3			sub_part:-				num:2
+name:را				POS:UNKNOWN		SYN:OBJ		SRC:4	SEM:ARG1_THEME_P	WSD:-				sub_part:-				num:3
+
+name:برداشت			POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:برداشتن#v1		sub_part:-				num:4
+
+#------------------------------------------------------
+sentence:شکست
+
+name:شکست			POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:شکستن#v4		sub_part:-				num:1
+
+#------------------------------------------------------
+sentence:دور انداخت
+
+name:دور انداخت		POS:VERB		SYN:ROOT	SRC:	SEM:-				WSD:دور انداختن#v2	sub_part:1,2			num:
+name:دور			POS:NOUN		SYN:NVE		SRC:2	SEM:-				WSD:-				sub_part:-				num:1
+name:انداخت			POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:-				sub_part:-				num:2
+

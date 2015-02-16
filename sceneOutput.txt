@@ -1,0 +1,40 @@
+
+primarySceneModel
+roles= [
+	[پسر#n2 (1)= پسرک role_actions=  [چشم افتادن#v (1)=  چشمش‌افتاد] role_goals=    [] role_emotions= [] role_moods=    [خردسال#a1 (1)=  خردسال#a1 (1)]]]
+dynamic_objs= [کبوتر#n1 (1)=  به یک کبوتر زخمی object_actions=  [] object_states=  [یک#n1 (1)=  یک, زخمی#a1 (1)=  زخمی]]
+static_objs= 
+location= [راه#n9 (1)=  در راه خانه]
+alternativeLocations= [[راه#n9 (1)=  در راه خانه], [سمت#n6 (1)=  به سمت خانه]]
+time= [بلافاصله#r1 (1)=  بلافاصله]
+alternativeTimes= [[امروز#n1 (1)=  امروز], [بلافاصله#r1 (1)=  بلافاصله]]
+scene_goals= []
+scene_emotions= []]
+
+
+primarySceneModel
+roles= [
+	[پسر#n2 (1)= پسرک role_actions=  [وارد شدن#v2 (1)=  وارد شد, دادن#v5 (1)=  داد, دویدن#v1 (2)=  دوید] role_goals=    [] role_emotions= [] role_moods=    [خردسال#a1 (1)=  خردسال#a1 (1)]]
+	[مادر#n1 (1)= به مادر خود role_actions=  [] role_goals=    [] role_emotions= [] role_moods=    []]]
+dynamic_objs= [کبوتر#n1 (1)=  کبوتر object_actions=  [] object_states=  []]
+static_objs= 
+location= [خانه#n10 (1)=  خانه]
+alternativeLocations= [[خانه#n10 (1)=  خانه], [طرف#n3 (1)=  به طرف اتاقش]]
+time= [سپس#a1 (1)=  سپس]
+alternativeTimes= [[سپس#a1 (1)=  سپس]]
+scene_goals= []
+scene_emotions= []]
+
+
+primarySceneModel
+roles= [
+	[پسر#n2 (1)= پسرک role_actions=  [برداشتن#v1 (2)=  برداشت, شکستن#v4 (1)=  شکست, دور انداختن#v2 (1)=  دور انداخت] role_goals=    [] role_emotions= [] role_moods=    [خردسال#a1 (1)=  خردسال#a1 (1)]]]
+dynamic_objs= [کبوتر#n1 (1)=  به یک کبوتر زخمی object_actions=  [] object_states=  [یک#n1 (1)=  یک, زخمی#a1 (1)=  زخمی, یک#n1 (1)=  یک, زخمی#a1 (1)=  زخمی]]
+static_objs= [تیر#n4 (1)=  تیروکمان خود را object_states=  []]
+location= [اتاق#n2 (1)=  اتاقش]
+alternativeLocations= []
+time= [سپس#a1 (1)=  سپس]
+alternativeTimes= []
+scene_goals= []
+scene_emotions= []]
+

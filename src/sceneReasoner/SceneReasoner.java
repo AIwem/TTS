@@ -10,11 +10,15 @@ import sceneElement.SceneGoal;
 import sceneElement.StaticObject;
 import sceneElement.Time;
 import model.SceneModel;
+import model.ScenePart;
 import model.SentenceModel;
+import model.SentencePart;
 import model.StoryModel;
+import model.SubSemanticTag;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleStatement;
 import ir.ac.itrc.qqa.semantic.reasoning.SemanticReasoner;
+import ir.ac.itrc.qqa.semantic.util.Common;
 import ir.ac.itrc.qqa.semantic.util.MyError;
 
 /**
@@ -320,21 +324,129 @@ public class SceneReasoner {
 //		
 //	}
 
+	/**
+	 * This method postprocesses the Location of every SceneModels of stroyModel based on 
+	 * location and alternativeLocations of them.
+	 * 
+	 * @param storyModel guaranteed not to be null.
+	 */
+	public void postprocessLocation(StoryModel storyModel) {		
+		ArrayList<SceneModel> storyScenes = storyModel.getScenes();
+		
+		int scene_num = -1;
+		if(storyScenes != null)
+			scene_num = storyScenes.size();
+		
+		for(int i = 0; i < scene_num; i++){
+			
+			SceneModel currentScene = storyScenes.get(i);
+			
+			if(currentScene != null)
+				if(currentScene.getLocation() == null){
+					
+					ArrayList<Location> altLocs = currentScene.getAlternativeLocations();
+					
+					if(!Common.isEmpty(altLocs)){
+						if(altLocs.size() == 1)
+							currentScene.setLocation(altLocs.get(0));
+						else//TODO: design better logic for setLocation from alternativeLocations.
+							currentScene.setLocation(altLocs.get(0));
+					}
+					else if(i >= 1){
+						SceneModel lastScene = storyScenes.get(i-1);
+						if(lastScene != null && lastScene.getAlternativeLocations() != null){
+							ArrayList<Location> lastScene_altLocs = lastScene.getAlternativeLocations();
+							
+							if(!Common.isEmpty(lastScene_altLocs)){
+								Location candidLoc = lastScene_altLocs.get(lastScene_altLocs.size() - 1);
+								if(candidLoc != null){
+									SentencePart candidPart = lastScene.findSentencePartofSceneElement(candidLoc);
+									if(candidPart._semanticTag == SubSemanticTag.DIR.convertToSemanticTag()){
+										SentencePart innerPart = candidPart.getInnerPart();
+										if(innerPart != null){
+											print("inner part of " + candidPart +" %%%%%%%%%%%%%%%%%%%%%%%%% " + innerPart);
+											
+											ScenePart scenePart = _ttsEngine.whichScenePart(innerPart);
+											
+											if(scenePart != null || scenePart != ScenePart.UNKNOWN)												
+												currentScene.setLocation(new Location(innerPart._name, innerPart._wsd));
+										}
+									}
+								}
+							}
+							
+						}
+					}
+				}
+			
+		}		
+	}
+	
+
+	/**
+	 * This method postprocesses the Time of every SceneModels of stroyModel based on 
+	 * time and alternativeTimes of them.
+	 * 
+	 * @param storyModel guaranteed not to be null.
+	 */
+	public void postprocessTime(StoryModel storyModel) {
+		ArrayList<SceneModel> storyScenes = storyModel.getScenes();
+		
+		int scene_num = -1;
+		if(storyScenes != null)
+			scene_num = storyScenes.size();
+		
+		for(int i = 0; i < scene_num; i++){
+			
+			SceneModel currentScene = storyScenes.get(i);
+			
+			if(currentScene != null)
+				if(currentScene.getTime() == null){
+					
+					ArrayList<Time> altTimes = currentScene.getAlternativeTimes();
+					
+					if(!Common.isEmpty(altTimes)){
+						if(altTimes.size() == 1)
+							currentScene.setTime(altTimes.get(0));
+						else//TODO: design better logic for setTime from alternativeTimes.
+							currentScene.setTime(altTimes.get(0));
+					}
+					else if(i >= 1){
+						SceneModel lastScene = storyScenes.get(i-1);
+						if(lastScene != null && lastScene.getAlternativeTimes() != null){
+							ArrayList<Time> lastScene_altTimes = lastScene.getAlternativeTimes();
+							
+							if(!Common.isEmpty(lastScene_altTimes)){
+								Time candidTime = lastScene_altTimes.get(lastScene_altTimes.size() - 1);
+//								if(candidTime != null){
+//									
+//									SentencePart candidPart = lastScene.findSentencePartofSceneElement(candidTime);
+//									
+//									if(candidPart._semanticTag == SubSemanticTag.TMP.convertToSemanticTag()){
+//										SentencePart innerPart = candidPart.getInnerPart();
+//										if(innerPart != null){
+//											print("inner part of " + candidPart +" %%%%%%%%%%%%%%%%%%%%%%%%% " + innerPart);
+//											
+//											ScenePart scenePart = _ttsEngine.whichScenePart(innerPart);
+//											
+//											if(scenePart != null || scenePart != ScenePart.UNKNOWN)												
+//												currentScene.setLocation(new Location(innerPart._name, innerPart._wsd));
+//										}
+//									}
+//								}
+								currentScene.setTime(candidTime);
+							}
+							
+						}
+					}
+				}
+		}
+		
+	}
+
 	public void enrichSceneModel(StoryModel storyModel) {
 	
 		
 	}
 
-
-	public void postprocessLocation(StoryModel storyModel) {
-	
-		
-	}
-
-
-	public void postprocessTime(StoryModel storyModel) {
-		// TODO Auto-generated method stub
-		
-	}
-	
 }

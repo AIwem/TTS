@@ -71,18 +71,35 @@ name:خود			POS:UNKNOWN		SYN:MOZ		SRC:4	SEM:ARG2_OBJ2_P		WSD:خود#n3				sub_
 name:داد			POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:دادن#v5				sub_part:-				num:6
 
 #------------------------------------------------------
-#sentence:سپس به طرف اتاقش دوید
+sentence:سپس به طرف اتاقش دوید
+name:سپس			POS:		SYN:	SRC:0	SEM:ArgM_TMP		WSD:				sub_part:-				num:
 
+name:به طرف اتاقش	POS:		SYN:	SRC:0	SEM:ArgM_DIR		WSD:				sub_part:-				num:
+name:به				POS:		SYN:	SRC:0	SEM:ArgM_DIR_P		WSD:				sub_part:-				num:
+name:طرف			POS:		SYN:	SRC:0	SEM:ArgM_DIR_P		WSD:				sub_part:-				num:
+name:اتاقش			POS:		SYN:	SRC:0	SEM:ArgM_DIR_P		WSD:				sub_part:-				num:
+
+name:دوید			POS:		SYN:	SRC:0	SEM:-				WSD:				sub_part:-				num:
 
 #------------------------------------------------------
-#sentence:تیروکمان خود را برداشت 
+sentence:تیروکمان خود را برداشت 
 
+name:تیروکمان خود را	POS:		SYN:	SRC:0	SEM:-				WSD:				sub_part:-				num:
+name:تیروکمان		POS:		SYN:	SRC:0	SEM:-				WSD:				sub_part:-				num:
+name:خود			POS:		SYN:	SRC:0	SEM:-				WSD:				sub_part:-				num:
+name:را				POS:		SYN:	SRC:0	SEM:-				WSD:				sub_part:-				num:
+
+name:برداشت			POS:		SYN:	SRC:0	SEM:-				WSD:				sub_part:-				num:
 
 #------------------------------------------------------
-#sentence:شکست
+sentence:شکست
 
+name:شکست			POS:		SYN:	SRC:0	SEM:-				WSD:				sub_part:-				num:
 
 #------------------------------------------------------
-#sentence:دور انداخت
+sentence:دور انداخت
 
-#name:				sentence_part:					POS:NOUN		SYN:		WSD:						sub_part:-				dep:		num:
+name:دور انداخت		POS:		SYN:	SRC:0	SEM:-				WSD:				sub_part:-				num:
+name:دور			POS:		SYN:	SRC:0	SEM:-				WSD:				sub_part:-				num:
+name:انداخت			POS:		SYN:	SRC:0	SEM:-				WSD:				sub_part:-				num:
+
