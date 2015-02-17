@@ -110,3 +110,7 @@
 86	f˸تکه تکه کردن§v-9529	MainSemArg	ARG2_INSTRUMENT
 87	f˸دور افکندن§v-8570	MainSemArg	ARG0_AGENT
 88	f˸دور افکندن§v-8570	MainSemArg	ARG1_THEME
+89	f˸رویت کردن§v-8581	MainSemArg	ARG0_EXPERIENCER
+90	f˸رویت کردن§v-8581	MainSemArg	ARG1_THEME
+91	f˸بودن§v-9332	MainSemArg	ARG1_PATIENT
+92	f˸بودن§v-9332	MainSemArg	ARG2_GOAL_ENDSTATE

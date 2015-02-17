@@ -718,6 +718,8 @@ public class TTSEngine {
 				
 		print(node + ".............. in isTime ............................");
 		
+		//TODO: add "زمان خاص§n-12649"
+		
 		PlausibleQuestion pq = new PlausibleQuestion();
 		pq.descriptor = KnowledgeBase.HPR_ISA;
 		pq.argument = node;			
@@ -858,6 +860,10 @@ public class TTSEngine {
 			return ScenePart.LOCATION;
 		if(pureNode.getName().equals("بلافاصله#r1"))
 			return ScenePart.TIME;		
+		if(pureNode.getName().equals("نفر#n4"))
+			return ScenePart.ROLE;
+		if(pureNode.getName().equals("معلم#n1"))
+			return ScenePart.ROLE;
 		//---------------------------------------			
 		
 		if(pureNode == null || pos == null || semanticTag == null)
