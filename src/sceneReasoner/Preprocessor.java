@@ -361,7 +361,7 @@ public class Preprocessor {
 				missingMainArgs.add(necess);
 //		print("missings " + missingMainArgs);
 		
-//		prepareNullSemanticTagsForAScene(sentenceModel, missingMainArgs, primarySceneModel);
+		prepareNullSemanticTagsForAScene(sentenceModel, missingMainArgs, primarySceneModel);
 		
 		if(!Common.isEmpty(missingMainArgs))
 			for(SceneModel scene:storyModel.getScenes())

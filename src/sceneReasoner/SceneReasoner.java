@@ -407,10 +407,22 @@ public class SceneReasoner {
 					
 					if(!Common.isEmpty(altTimes)){
 						for(Time t:altTimes){							
-							if(t != currentTime && isValidSceneTime(t)){
-								currentScene.setTime(t);
-								flag = true;
-								break;
+							if(t != currentTime){
+								if(isValidSceneTime(t)){
+									currentScene.setTime(t);
+									flag = true;
+									break;
+								}
+								else{ // it is fori or sepas
+									if(i > 1){
+										SceneModel lastScene = storyScenes.get(i-1);
+										if(lastScene != null && lastScene.getTime() != null){
+											currentScene.setTime(lastScene.getTime());
+											flag = true;
+											break;
+										}											
+									}
+								}
 							}
 						}
 					}					
@@ -431,6 +443,12 @@ public class SceneReasoner {
 									if(isValidSceneTime(beforeTime)){
 										currentScene.setTime(beforeTime);
 										break;
+									}
+									else{// it is fori or sepas										
+										if(lastScene.getTime() != null){
+											currentScene.setTime(lastScene.getTime());											
+											break;
+										}						
 									}
 								}
 								if(currentScene.getTime() == null)//set a time for scene anyway!!!
