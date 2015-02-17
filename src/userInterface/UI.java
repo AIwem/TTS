@@ -47,7 +47,7 @@ public class UI {
 		
 		PrintWriter writer = null;
 		try {
-			writer = new PrintWriter("sceneOutput.txt", "UTF-8");
+			writer = new PrintWriter("inputStory\\sceneOutput.txt", "UTF-8");
 		} catch (FileNotFoundException | UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
@@ -135,8 +135,8 @@ public class UI {
 		System.out.println("بسم الله الرحمن الرحیم و توکلت علی الله");
 	
 		UI ui = new UI();
-		StoryModel sm = ui.TTS();
-		
+		StoryModel sm = ui.TTS();		
+
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ الحمدلله");
 		
 //		Node arg = ui.tts._TTSKb.addConcept("چشم افتادن#v");

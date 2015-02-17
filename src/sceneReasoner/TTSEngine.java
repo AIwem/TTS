@@ -665,7 +665,7 @@ public class TTSEngine {
 		
 		ArrayList<PlausibleAnswer> answers = writeAnswersTo(pq.descriptor, node, pq.referent);
 		//ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
-		for(PlausibleAnswer ans:answers ){
+		for(PlausibleAnswer ans:answers){
 			print("answer: " + ans);
 			if(ans.answer == KnowledgeBase.HPR_YES){
 				print(node.getName() + " isLocation جا \n");
@@ -853,7 +853,9 @@ public class TTSEngine {
 		if(pureNode.getName().equals("طرف#n3"))
 			return ScenePart.LOCATION;
 		if(pureNode.getName().equals("خانه#n10"))
-			return ScenePart.LOCATION;	
+			return ScenePart.LOCATION;
+		if(pureNode.getName().equals("اتاق#n2"))
+			return ScenePart.LOCATION;
 		if(pureNode.getName().equals("بلافاصله#r1"))
 			return ScenePart.TIME;		
 		//---------------------------------------			
