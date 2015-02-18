@@ -776,7 +776,7 @@ public class TTSEngine {
 		pq.referent = referent;
 		pq.descriptor = descriptor;
 		
-		print("\nQuestio: " + pq.argument + " -->" + pq.descriptor + " --> " + pq.referent);
+		print("\nQuestion: " + pq.argument + " -->" + pq.descriptor + " --> " + pq.referent);
 		
 		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);		
 		
@@ -880,6 +880,10 @@ public class TTSEngine {
 			return ScenePart.ROLE;
 		if(pureNode.getName().equals("معلم#n1"))
 			return ScenePart.ROLE;
+		if(pureNode.getName().equals("جا#n5"))
+			return ScenePart.LOCATION;
+		if(pureNode.getName().equals("وسایل#n1"))
+			return ScenePart.STATIC_OBJECT;		
 		//---------------------------------------			
 		
 		if(pureNode == null || pos == null || semanticTag == null)
@@ -972,20 +976,22 @@ public class TTSEngine {
 	 */
 	private ScenePart getArg1ScenePart(Node pureNode, POS pos) {
 		
-		if(pos == POS.NOUN){
-			if(isHuman(pureNode))
-				return ScenePart.ROLE;
-			
-			if(isAnimal(pureNode))
-				return ScenePart.DYNAMIC_OBJECT;
-			
-			if(isLocation(pureNode))
-				return  ScenePart.LOCATION;
-			
-			return ScenePart.STATIC_OBJECT;
-		}
+//		if(pos == POS.NOUN){
 		
-		return ScenePart.UNKNOWN;
+		
+		if(isAnimal(pureNode))
+			return ScenePart.DYNAMIC_OBJECT;
+		
+		if(isLocation(pureNode))
+			return  ScenePart.LOCATION;
+		
+		if(isHuman(pureNode))
+			return ScenePart.ROLE;
+		
+		return ScenePart.STATIC_OBJECT;
+//	}
+		
+//		return ScenePart.UNKNOWN;
 	}
 	
 	/**
@@ -1013,18 +1019,19 @@ public class TTSEngine {
 		
 		if(semanticTag == MainSemanticTag.ARG2_OBJ2 || semanticTag == MainSemanticTag.ARG2_BENEFICIARY){
 		
-			if(pos == POS.NOUN){
-				if(isHuman(pureNode))
-					return ScenePart.ROLE;
-				
-				if(isAnimal(pureNode))
-					return ScenePart.DYNAMIC_OBJECT;
-				
-				if(isLocation(pureNode))
-					return  ScenePart.LOCATION;
-				
-				return ScenePart.STATIC_OBJECT;
-			}
+//			if(pos == POS.NOUN){
+	
+			if(isAnimal(pureNode))
+				return ScenePart.DYNAMIC_OBJECT;
+			
+			if(isLocation(pureNode))
+				return  ScenePart.LOCATION;
+			
+			if(isHuman(pureNode))
+				return ScenePart.ROLE;
+					
+			return ScenePart.STATIC_OBJECT;
+//		}
 		}
 		else if(semanticTag == MainSemanticTag.ARG2_INSTRUMENT){//TODO: check if it is correct?
 			return ScenePart.STATIC_OBJECT;
@@ -1064,9 +1071,7 @@ public class TTSEngine {
 		
 		if(semanticTag == MainSemanticTag.ARG3_BENEFICIARY){
 					
-			if(pos == POS.NOUN){
-				if(isHuman(pureNode))
-					return ScenePart.ROLE;
+//			if(pos == POS.NOUN){
 				
 				if(isAnimal(pureNode))
 					return ScenePart.DYNAMIC_OBJECT;
@@ -1074,8 +1079,11 @@ public class TTSEngine {
 				if(isLocation(pureNode))
 					return  ScenePart.LOCATION;
 				
+				if(isHuman(pureNode))
+					return ScenePart.ROLE;
+	
 				return ScenePart.STATIC_OBJECT;
-			}
+//			}
 		}
 		else if(semanticTag == MainSemanticTag.ARG3_INSTRUMENT){//TODO: check if it is correct?
 			return ScenePart.STATIC_OBJECT;

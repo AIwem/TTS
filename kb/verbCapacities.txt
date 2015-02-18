@@ -124,3 +124,11 @@
 100	f˸برگشتن§v-9260	MainSemArg	ARG2_GOAL_ENDSTATE
 101	f˸خارج شدن§v-8450	MainSemArg	ARG0_AGENT
 102	f˸خارج شدن§v-8450	MainSemArg	ARG3_SOURCE_STARTPOINT
+103	f˸پرسش کردن§v-8136	MainSemArg	ARG0_AGENT
+104	f˸پرسش کردن§v-8136	MainSemArg	ARG1_THEME
+105	f˸پرسش کردن§v-8136	MainSemArg	ARG2_OBJ2
+106	f˸گفتن§v-7774	MainSemArg	ARG0_AGENT
+107	f˸گفتن§v-7774	MainSemArg	ARG1_THEME
+108	f˸گفتن§v-7774	MainSemArg	ARG2_OBJ2
+109	f˸دانستن§v-8456	MainSemArg	ARG0_AGENT
+110	f˸دانستن§v-8456	MainSemArg	ARG1_THEME

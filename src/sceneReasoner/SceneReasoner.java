@@ -325,7 +325,10 @@ public class SceneReasoner {
 	 * 
 	 * @param storyModel guaranteed not to be null.
 	 */
-	public void postprocessLocation(StoryModel storyModel) {		
+	public void postprocessLocation(StoryModel storyModel) {
+				
+		print("=============== in postprocessLocation =============================");
+		
 		ArrayList<SceneModel> storyScenes = storyModel.getScenes();
 		
 		int scene_num = -1;
@@ -375,6 +378,8 @@ public class SceneReasoner {
 				}
 			
 		}		
+				
+		print("=============== end of postprocessLocation =========================");
 	}
 	
 
@@ -385,6 +390,9 @@ public class SceneReasoner {
 	 * @param storyModel guaranteed not to be null.
 	 */
 	public void postprocessTime(StoryModel storyModel) {
+				
+		print("=============== in postprocessTime =================================");
+		
 		ArrayList<SceneModel> storyScenes = storyModel.getScenes();
 		
 		int scene_num = -1;
@@ -460,6 +468,8 @@ public class SceneReasoner {
 				}
 			}
 		}		
+				
+		print("=============== end of postprocessTime =============================");
 	}
 
 	private boolean isValidSceneTime(Time time) {

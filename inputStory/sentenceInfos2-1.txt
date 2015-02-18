@@ -26,36 +26,36 @@ sentence:معلم جای خالی او را دید
 
 name:معلم		POS:NOUN		SYN:SBJ		SRC:6	SEM:ARG0_EXPERIENCER	WSD:معلم#n1	sub_part:-		num:1
 
-name:جای خالی او را	POS:UNKNOWN	SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:2_mozaf#n_3	sub_part:2,3,4,5	num:
+name:جای خالی او را	POS:NOUN	SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:2_mozaf#n_3	sub_part:2,3,4,5	num:
 name:جای		POS:NOUN		SYN:PREDEP	SRC:5	SEM:ARG1_THEME_P	WSD:جا#n5		sub_part:-		num:2
 name:خالی		POS:ADJECTIVE	SYN:NPOSTMOD	SRC:2	SEM:ARG1_THEME_P	WSD:خالی#a2	sub_part:-		num:3
 name:او			POS:UNKNOWN		SYN:MOZ		SRC:2	SEM:ARG1_THEME_P	WSD:-			sub_part:-		num:4
 name:را			POS:UNKNOWN		SYN:OBJ		SRC:6	SEM:ARG1_THEME_P	WSD:-			sub_part:-		num:5
 
-name:دید		POS:UNKNOWN		SYN:ROOT	SRC:0	SEM:ARG1_THEME		WSD:دیدن#v5		sub_part:-		num:6
+name:دید		POS:UNKNOWN		SYN:ROOT	SRC:0	SEM:-				WSD:دیدن#v5		sub_part:-		num:6
 
 #------------------------------------------------------
 sentence:معلم از سعید، دوست محمد پرسید که او کجاست؟
 
 name:معلم		POS:NOUN		SYN:SBJ		SRC:6	SEM:ARG0_AGENT		WSD:معلم#n1		sub_part:-		num:1
 
-name:از سعید	POS:NOUN		SYN:???		SRC:	SEM:ARG1_THEME		WSD:سعید#n		sub_part:2,3	num:
+name:از سعید	POS:NOUN		SYN:ADVRB	SRC:	SEM:ARG1_THEME		WSD:سعید#n		sub_part:2,3	num:
 name:از			POS:UNKNOWN		SYN:VPP		SRC:6	SEM:ARG1_THEME_P	WSD:-			sub_part:-		num:2
 name:سعید		POS:NOUN		SYN:POSDEP	SRC:2	SEM:ARG1_THEME_P	WSD:سعید#n		sub_part:-		num:3
 
-name:دوست محمد	POS:NOUN		SYN:???		SRC:	SEM:???				WSD:			sub_part:4,5	num:
+name:دوست محمد	POS:NOUN		SYN:ADVRB	SRC:	SEM:-				WSD:			sub_part:4,5	num:
 name:دوست		POS:NOUN		SYN:POSDEP	SRC:3	SEM:				WSD:			sub_part:-		num:4
 name:محمد		POS:NOUN		SYN:MOZ		SRC:4	SEM:				WSD:محمد#n		sub_part:-		num:5
 
 name:پرسید		POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:پرسیدن#v1	sub_part:-		num:6
 
-name:که			POS:UNKNOWN		SYN:VCL???	SRC:6	SEM:ARG2_OBJ2		WSD:-			sub_part:-		num:7
+name:که			POS:UNKNOWN		SYN:VCL		SRC:6	SEM:ARG2_OBJ2		WSD:-			sub_part:-		num:7
 
-name:او			POS:UNKNOWN		SYN:SBJ		SRC:10	SEM:ARG1			WSD:محمد#n		sub_part:-		num:8
+name:او			POS:UNKNOWN		SYN:SBJ		SRC:10	SEM:ARG1_PATIENT	WSD:محمد#n		sub_part:-		num:8
 
 name:کجا		POS:NOUN		SYN:MOS		SRC:10	SEM:ARG2_GOAL_ENDSTATE	WSD:-		sub_part:-		num:9
 
-name:است		POS:VERB		SYN:PRD???	SRC:7	SEM:-				WSD:بودن#v2		sub_part:-		num:10
+name:است		POS:VERB		SYN:PRD		SRC:7	SEM:-				WSD:بودن#v2		sub_part:-		num:10
 
 #------------------------------------------------------
 sentence:سعید گفت که خبر ندارد
@@ -64,16 +64,16 @@ name:سعید		POS:NOUN		SYN:SBJ		SRC:2	SEM:ARG0_AGENT		WSD:سعید#n		sub_part
 
 name:گفت		POS:VERB		SYN:ROOT	SRC:3	SEM:-				WSD:گفتن#v1		sub_part:-		num:2
 
-name:که			POS:UNKNOWN		SYN:VCL???	SRC:3	SEM:ARG1_THEME		WSD:-			sub_part:-		num:3
+name:که			POS:UNKNOWN		SYN:VCL		SRC:3	SEM:ARG1_THEME		WSD:-			sub_part:-		num:3
 
-name:خبر ندارد	POS:VERB		SYN:PRD???	SRC:	SEM:-				WSD:خبر داشتن#v1	sub_part:4,5	num:
+name:خبر ندارد	POS:VERB		SYN:PRD		SRC:	SEM:-				WSD:خبر داشتن#v1	sub_part:4,5	num:
 name:خبر		POS:NOUN		SYN:NVE		SRC:2	SEM:-				WSD:-			sub_part:-		num:4
-name:ندارد		POS:VERB		SYN:PRD???	SRC:6	SEM:-				WSD:-			sub_part:-		num:5
+name:ندارد		POS:VERB		SYN:PRD		SRC:6	SEM:-				WSD:-			sub_part:-		num:5
 
 #------------------------------------------------------
 sentence:اما در حین گفتن بغض کرد
 
-name:اما		POS:UNKNOWN		SYN:ADVRB	SRC:6	SEM:ARG_DIS			WSD:-			sub_part:-		num:1
+name:اما		POS:UNKNOWN		SYN:ADVRB	SRC:6	SEM:ArgM_DIS		WSD:-			sub_part:-		num:1
 
 name:در حین گفتن	POS:UNKNOWN	SYN:ADVRB	SRC:	SEM:ArgM_TMP		WSD:3_mozaf#n_4	sub_part:2,3,4	num:
 name:در			POS:UNKNOWN		SYN:ADVRB	SRC:6	SEM:ArgM_TMP_P		WSD:-			sub_part:-		num:2
@@ -89,7 +89,7 @@ sentence:معلم وسایلش را روی میز گذاشت
 
 name:معلم		POS:NOUN		SYN:SBJ		SRC:6	SEM:ARG0_AGENT		WSD:معلم#n1		sub_part:-		num:1
 
-name:وسایلش را	POS:UNKNOWN		SYN:OBJ		SRC:	SEM:ARG1_PATIENT	WSD:وسایل#n1	sub_part:2,3	num:
+name:وسایلش را	POS:NOUN		SYN:OBJ		SRC:	SEM:ARG1_PATIENT	WSD:وسایل#n1	sub_part:2,3	num:
 name:وسایلش		POS:NOUN		SYN:PREDEP	SRC:3	SEM:ARG1_PATIENT_P	WSD:وسایل#n1	sub_part:-		num:2
 name:را			POS:UNKNOWN		SYN:OBJ		SRC:6	SEM:ARG1_PATIENT_P	WSD:-			sub_part:-		num:3
 
