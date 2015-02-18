@@ -406,12 +406,28 @@ public class SentencePart {
 				return VerbType.BASIT;
 			if(_name.contains("وارد شد"))
 				return VerbType.MORAKAB;
+			if(_name.contains("خارج شد"))
+				return VerbType.MORAKAB;
 			if(_name.contains("داد"))
 				return VerbType.BASIT;
 			if(_name.contains("شکست"))
-				return VerbType.BASIT;
+				return VerbType.BASIT_NAMAFOLI;
 			if(_name.contains("دور انداخت"))
 				return VerbType.MORAKAB;
+			if(_name.contains("بودن"))
+				return VerbType.BASIT_RABTI;
+			if(_name.contains("دیدن"))
+				return VerbType.BASIT;
+			if(_name.contains("پرسید"))
+				return VerbType.BASIT;
+			if(_name.contains("بغض کردن"))
+				return VerbType.BASIT;
+			if(_name.contains("گذاشت"))
+				return VerbType.BASIT;
+			if(_name.contains("خیره شدن"))
+				return VerbType.MORAKAB;
+			if(_name.contains("برگشت"))
+				return VerbType.BASIT;
 					
 		}
 		return VerbType.UNKNOWN;

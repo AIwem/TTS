@@ -687,6 +687,22 @@ public class TTSEngine {
 				return true;				
 			}
 		}
+				
+		pq = new PlausibleQuestion();
+		pq.descriptor = KnowledgeBase.HPR_ISA;
+		pq.argument = node;			
+		pq.referent = _TTSKb.addConcept("ساختار§n-12875", false);
+		
+		answers = writeAnswersTo(pq.descriptor, node, pq.referent);
+		//ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
+		for(PlausibleAnswer ans:answers ){
+			print("answer: " + ans);
+			if(ans.answer == KnowledgeBase.HPR_YES){
+				print(node.getName() + " isLocation ساختار \n");
+				return true;				
+			}
+		}
+
 		
 		pq = new PlausibleQuestion();
 		pq.descriptor = KnowledgeBase.HPR_ISA;
@@ -760,10 +776,10 @@ public class TTSEngine {
 		pq.referent = referent;
 		pq.descriptor = descriptor;
 		
-		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
-		
-		
 		print("\nQuestio: " + pq.argument + " -->" + pq.descriptor + " --> " + pq.referent);
+		
+		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);		
+		
 		print("Answers: " + answers.size());
 		
 		int count = 0;

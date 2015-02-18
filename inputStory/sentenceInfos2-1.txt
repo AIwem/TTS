@@ -11,7 +11,7 @@ name:شد			POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:-		sub_part:-			num:4
 #------------------------------------------------------
 sentence:محمد امروز در کلاس نبود
 
-name:محمد		POS:NOUN		SYN:SBJ		SRC:5	SEM:Arg1_PATIENT	WSD:نفر#n4		sub_part:-		num:1
+name:محمد		POS:NOUN		SYN:SBJ		SRC:5	SEM:Arg1_PATIENT	WSD:محمد#n		sub_part:-		num:1
 
 name:امروز		POS:NOUN		SYN:ADVRB	SRC:5	SEM:ArgM_TMP		WSD:امروز#n1	sub_part:-		num:2
 
@@ -26,7 +26,7 @@ sentence:معلم جای خالی او را دید
 
 name:معلم		POS:NOUN		SYN:SBJ		SRC:6	SEM:ARG0_EXPERIENCER	WSD:معلم#n1	sub_part:-		num:1
 
-name:جای خالی او را	POS:UNKNOWN	SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:2_mozaf_3	sub_part:2,3,4,5	num:
+name:جای خالی او را	POS:UNKNOWN	SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:2_mozaf#n_3	sub_part:2,3,4,5	num:
 name:جای		POS:NOUN		SYN:PREDEP	SRC:5	SEM:ARG1_THEME_P	WSD:جا#n5		sub_part:-		num:2
 name:خالی		POS:ADJECTIVE	SYN:NPOSTMOD	SRC:2	SEM:ARG1_THEME_P	WSD:خالی#a2	sub_part:-		num:3
 name:او			POS:UNKNOWN		SYN:MOZ		SRC:2	SEM:ARG1_THEME_P	WSD:-			sub_part:-		num:4
@@ -37,72 +37,98 @@ name:دید		POS:UNKNOWN		SYN:ROOT	SRC:0	SEM:ARG1_THEME		WSD:دیدن#v5		sub_pa
 #------------------------------------------------------
 sentence:معلم از سعید، دوست محمد پرسید که او کجاست؟
 
-name:معلم		POS:NOUN		SYN:SBJ		SRC:4	SEM:ARG0_EXPERIENCER	WSD:معلم#n1	sub_part:-	num:1
+name:معلم		POS:NOUN		SYN:SBJ		SRC:6	SEM:ARG0_AGENT		WSD:معلم#n1		sub_part:-		num:1
 
-name:از سعید	POS:NOUN		SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:کبوتر#n1			sub_part:2,3			num:
-name:از			POS:NOUN		SYN:PREDEP	SRC:3	SEM:ARG1_THEME_P	WSD:کبوتر#n1			sub_part:-				num:2
-name:سعید		POS:UNKNOWN		SYN:OBJ		SRC:4	SEM:ARG1_THEME_P	WSD:-					sub_part:-				num:3
+name:از سعید	POS:NOUN		SYN:???		SRC:	SEM:ARG1_THEME		WSD:سعید#n		sub_part:2,3	num:
+name:از			POS:UNKNOWN		SYN:VPP		SRC:6	SEM:ARG1_THEME_P	WSD:-			sub_part:-		num:2
+name:سعید		POS:NOUN		SYN:POSDEP	SRC:2	SEM:ARG1_THEME_P	WSD:سعید#n		sub_part:-		num:3
 
-name:دوست محمد	POS:NOUN		SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:کبوتر#n1			sub_part:2,3			num:
-name:دوست		POS:NOUN		SYN:PREDEP	SRC:3	SEM:ARG1_THEME_P	WSD:کبوتر#n1			sub_part:-				num:2
-name:محمد		POS:UNKNOWN		SYN:OBJ		SRC:4	SEM:ARG1_THEME_P	WSD:-					sub_part:-				num:3
+name:دوست محمد	POS:NOUN		SYN:???		SRC:	SEM:???				WSD:			sub_part:4,5	num:
+name:دوست		POS:NOUN		SYN:POSDEP	SRC:3	SEM:				WSD:			sub_part:-		num:4
+name:محمد		POS:NOUN		SYN:MOZ		SRC:4	SEM:				WSD:محمد#n		sub_part:-		num:5
 
-name:پرسید		POS:NOUN		SYN:ADVRB	SRC:3	SEM:ARG4_ENDPOINT	WSD:خانه#n10			sub_part:-				num:2
+name:پرسید		POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:پرسیدن#v1	sub_part:-		num:6
 
-name:که			POS:NOUN		SYN:ADVRB	SRC:3	SEM:ARG4_ENDPOINT	WSD:خانه#n10			sub_part:-				num:2
+name:که			POS:UNKNOWN		SYN:VCL???	SRC:6	SEM:ARG2_OBJ2		WSD:-			sub_part:-		num:7
 
-name:او			POS:NOUN		SYN:ADVRB	SRC:3	SEM:ARG4_ENDPOINT	WSD:خانه#n10			sub_part:-				num:2
+name:او			POS:UNKNOWN		SYN:SBJ		SRC:10	SEM:ARG1			WSD:محمد#n		sub_part:-		num:8
 
-name:کجا است؟	POS:VERB		SYN:ROOT	SRC:	SEM:-				WSD:وارد شدن#v2			sub_part:1,3			num:
-name:کجا		POS:NOUN		SYN:NVE		SRC:3	SEM:-				WSD:-					sub_part:-				num:1
-name:است		POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:-					sub_part:-				num:3
+name:کجا		POS:NOUN		SYN:MOS		SRC:10	SEM:ARG2_GOAL_ENDSTATE	WSD:-		sub_part:-		num:9
+
+name:است		POS:VERB		SYN:PRD???	SRC:7	SEM:-				WSD:بودن#v2		sub_part:-		num:10
 
 #------------------------------------------------------
 sentence:سعید گفت که خبر ندارد
 
-name:گفت		POS:NOUN		SYN:ADVRB	SRC:3	SEM:ARG4_ENDPOINT	WSD:خانه#n10			sub_part:-				num:2
+name:سعید		POS:NOUN		SYN:SBJ		SRC:2	SEM:ARG0_AGENT		WSD:سعید#n		sub_part:-		num:1
 
-name:که			POS:NOUN		SYN:ADVRB	SRC:3	SEM:ARG4_ENDPOINT	WSD:خانه#n10			sub_part:-				num:2
+name:گفت		POS:VERB		SYN:ROOT	SRC:3	SEM:-				WSD:گفتن#v1		sub_part:-		num:2
 
-name:خبر ندارد	POS:NOUN		SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:کبوتر#n1			sub_part:1,2			num:
-name:خبر		POS:NOUN		SYN:PREDEP	SRC:2	SEM:ARG1_THEME_P	WSD:کبوتر#n1			sub_part:-				num:1
-name:ندارد		POS:UNKNOWN		SYN:OBJ		SRC:6	SEM:ARG1_THEME_P	WSD:کبوتر#n1			sub_part:-				num:2
+name:که			POS:UNKNOWN		SYN:VCL???	SRC:3	SEM:ARG1_THEME		WSD:-			sub_part:-		num:3
+
+name:خبر ندارد	POS:VERB		SYN:PRD???	SRC:	SEM:-				WSD:خبر داشتن#v1	sub_part:4,5	num:
+name:خبر		POS:NOUN		SYN:NVE		SRC:2	SEM:-				WSD:-			sub_part:-		num:4
+name:ندارد		POS:VERB		SYN:PRD???	SRC:6	SEM:-				WSD:-			sub_part:-		num:5
 
 #------------------------------------------------------
 sentence:اما در حین گفتن بغض کرد
 
-name:سپس			POS:UNKNOWN		SYN:ADVRB	SRC:5	SEM:ArgM_TMP		WSD:سپس#a1			sub_part:-				num:1
+name:اما		POS:UNKNOWN		SYN:ADVRB	SRC:6	SEM:ARG_DIS			WSD:-			sub_part:-		num:1
 
-name:به طرف اتاقش	POS:NOUN		SYN:ADVRB	SRC:	SEM:ArgM_DIR		WSD:3_mozaf#n_4		sub_part:2,3,4			num:
-name:به				POS:UNKNOWN		SYN:VPP		SRC:5	SEM:ArgM_DIR_P		WSD:-				sub_part:-				num:2
-name:طرف			POS:NOUN		SYN:POSDEP	SRC:2	SEM:ArgM_DIR_P		WSD:طرف#n3			sub_part:-				num:3
-name:اتاقش			POS:NOUN		SYN:MOZ		SRC:3	SEM:ArgM_DIR_P		WSD:اتاق#n2			sub_part:-				num:4
+name:در حین گفتن	POS:UNKNOWN	SYN:ADVRB	SRC:	SEM:ArgM_TMP		WSD:3_mozaf#n_4	sub_part:2,3,4	num:
+name:در			POS:UNKNOWN		SYN:ADVRB	SRC:6	SEM:ArgM_TMP_P		WSD:-			sub_part:-		num:2
+name:حین		POS:NOUN		SYN:POSDEP	SRC:2	SEM:ArgM_TMP_P		WSD:زمان#n5		sub_part:-		num:3
+name:گفتن		POS:NOUN		SYN:MOZ		SRC:3	SEM:ArgM_TMP_P		WSD:گفتن#v1		sub_part:-		num:4
 
-name:دوید			POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:دویدن#v1		sub_part:-				num:5
+name:بغض کرد	POS:VERB		SYN:ROOT	SRC:	SEM:-				WSD:بغض کردن#v1	sub_part:5,6	num:
+name:بغض		POS:NOUN		SYN:NVE		SRC:2	SEM:-				WSD:-			sub_part:-		num:5
+name:کرد		POS:VERB		SYN:ROOT	SRC:6	SEM:-				WSD:-			sub_part:-		num:6
 
 #------------------------------------------------------
 sentence:معلم وسایلش را روی میز گذاشت
 
-name:معلم		POS:NOUN		SYN:SBJ		SRC:4	SEM:ARG0_EXPERIENCER	WSD:معلم#n1	sub_part:-	num:1
+name:معلم		POS:NOUN		SYN:SBJ		SRC:6	SEM:ARG0_AGENT		WSD:معلم#n1		sub_part:-		num:1
 
-name:تیروکمان خود را	POS:NOUN	SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:1_mozaf3n_2		sub_part:1,2,3			num:
-name:تیروکمان		POS:NOUN		SYN:PREDEP	SRC:3	SEM:ARG1_THEME_P	WSD:تیر#n4			sub_part:-				num:1
-name:خود			POS:NOUN		SYN:MOZ		SRC:2	SEM:ARG1_THEME_P	WSD:خود#n3			sub_part:-				num:2
-name:را				POS:UNKNOWN		SYN:OBJ		SRC:4	SEM:ARG1_THEME_P	WSD:-				sub_part:-				num:3
+name:وسایلش را	POS:UNKNOWN		SYN:OBJ		SRC:	SEM:ARG1_PATIENT	WSD:وسایل#n1	sub_part:2,3	num:
+name:وسایلش		POS:NOUN		SYN:PREDEP	SRC:3	SEM:ARG1_PATIENT_P	WSD:وسایل#n1	sub_part:-		num:2
+name:را			POS:UNKNOWN		SYN:OBJ		SRC:6	SEM:ARG1_PATIENT_P	WSD:-			sub_part:-		num:3
 
-name:برداشت			POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:برداشتن#v1		sub_part:-				num:4
+name:روی میز	POS:NOUN		SYN:ADVRB	SRC:	SEM:ARG2_OBJ2		WSD:4_mozaf#n_5	sub_part:4,5	num:
+name:روی		POS:NOUN		SYN:VPP		SRC:6	SEM:ARG2_OBJ2_P		WSD:روی#n5		sub_part:-		num:4
+name:میز		POS:NOUN		SYN:POSDEP	SRC:4	SEM:ARG2_OBJ2_P		WSD:میز#n2		sub_part:-		num:5
+
+name:گذاشت		POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:گذاشتن#v3	sub_part:-		num:6
 
 #------------------------------------------------------
-sentence:و به حیاط مدرسه خیره شد
+sentence:به حیاط مدرسه خیره شد
 
-name:شکست			POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:شکستن#v4		sub_part:-				num:1
+name:به حیاط	POS:NOUN		SYN:ADVRB	SRC:	SEM:ARG1_THEME		WSD:2_mozaf#n_3	sub_part:1,2,3	num:
+name:به			POS:UNKNOWN		SYN:VPP		SRC:5	SEM:ARG1_THEME_P	WSD:-			sub_part:-		num:1
+name:حیاط		POS:NOUN		SYN:POSDEP	SRC:1	SEM:ARG1_THEME_P	WSD:حیاط#n1		sub_part:-		num:2
+name:مدرسه		POS:NOUN		SYN:MOZ		SRC:2	SEM:ARG1_THEME_P	WSD:مدرسه#n1	sub_part:-		num:3
+
+name:خیره شد	POS:VERB		SYN:ROOT	SRC:	SEM:-				WSD:خیره شدن#v2	sub_part:4,5	num:
+name:خیره		POS:NOUN		SYN:NVE		SRC:5	SEM:-				WSD:-			sub_part:-		num:4
+name:شد			POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:-			sub_part:-		num:5
 
 #------------------------------------------------------
 sentence:بعد از چند لحظه برگشت
 
-name:دور انداخت		POS:VERB		SYN:ROOT	SRC:	SEM:-				WSD:دور انداختن#v2	sub_part:1,2			num:
-name:دور			POS:NOUN		SYN:NVE		SRC:2	SEM:-				WSD:-				sub_part:-				num:1
-name:انداخت			POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:-				sub_part:-				num:2
+name:بعد از چند لحظه	POS:NOUN	SYN:ADVRB	SRC:	SEM:ArgM_TMP	WSD:1_mozaf#n_4	sub_part:1,2,3,4	num:
+name:بعد		POS:UNKNOWN		SYN:ADVRB	SRC:5	SEM:ArgM_TMP_P		WSD:بعد#r1		sub_part:-		num:1
+name:از			POS:NOUN		SYN:POSDEP	SRC:1	SEM:ArgM_TMP_P		WSD:-			sub_part:-		num:2
+name:چند		POS:NOUN		SYN:NPREMOD	SRC:4	SEM:ArgM_TMP_P		WSD:-			sub_part:-		num:3
+name:لحظه		POS:NOUN		SYN:POSDEP	SRC:2	SEM:ArgM_TMP_P		WSD:لحظه#n1		sub_part:-		num:4
+
+name:برگشت		POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:برگشتن#v3	sub_part:-		num:5
 
 #------------------------------------------------------
-و از کلاس خارج شد
+sentence:از کلاس خارج شد
+
+name:از کلاس		POS:NOUN		SYN:ADVRB	SRC:	SEM:ARG3_SOURCE_STARTPOINT		WSD:اتاق#n2	sub_part:1,2	num:
+name:از			POS:UNKNOWN		SYN:VPP		SRC:4	SEM:ARG3_SOURCE_STARTPOINT_P	WSD:-		sub_part:-		num:1
+name:کلاس		POS:NOUN		SYN:POSDEP	SRC:1	SEM:ARG3_SOURCE_STARTPOINT_P	WSD:اتاق#n2	sub_part:-		num:2
+
+name:خارج شد	POS:VERB		SYN:ROOT	SRC:	SEM:-			WSD:خارج شدن#v1		sub_part:3,4	num:
+name:خارج		POS:NOUN		SYN:NVE		SRC:4	SEM:-			WSD:-				sub_part:-		num:3
+name:شد			POS:VERB		SYN:ROOT	SRC:0	SEM:-			WSD:-				sub_part:-		num:4
