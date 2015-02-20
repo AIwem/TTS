@@ -395,38 +395,40 @@ public class SentencePart {
 	}
 	
 	public VerbType getVerbType(){
-		if(isVerb()){			
-			if(_name.contains("افتاد"))
+		if(_wsd != null && isVerb()){			
+			if(_wsd.getName().contains("افتاد"))
 				return VerbType.BASIT;
-			if(_name.contains("برداشت"))
+			if(_wsd.getName().contains("برداشت"))
 				return VerbType.BASIT;
-			if(_name.contains("کرد"))
+			if(_wsd.getName().contains("کرد"))
 				return VerbType.BASIT;
-			if(_name.contains("دوید"))
+			if(_wsd.getName().contains("دوید"))
 				return VerbType.BASIT;
-			if(_name.contains("وارد شد"))
+			if(_wsd.getName().contains("وارد شد"))
 				return VerbType.MORAKAB;
-			if(_name.contains("خارج شد"))
+			if(_wsd.getName().contains("خارج شد"))
 				return VerbType.MORAKAB;
-			if(_name.contains("داد"))
+			if(_wsd.getName().contains("داد"))
 				return VerbType.BASIT;
-			if(_name.contains("شکست"))
+			if(_wsd.getName().contains("شکست"))
 				return VerbType.BASIT_NAMAFOLI;
-			if(_name.contains("دور انداخت"))
+			if(_wsd.getName().contains("دور انداخت"))
 				return VerbType.MORAKAB;
-			if(_name.contains("بودن"))
+			if(_wsd.getName().contains("بودن"))
 				return VerbType.BASIT_RABTI;
-			if(_name.contains("دیدن"))
+			if(_wsd.getName().contains("دیدن"))
 				return VerbType.BASIT;
-			if(_name.contains("پرسید"))
+			if(_wsd.getName().contains("پرسید"))
 				return VerbType.BASIT;
-			if(_name.contains("بغض کردن"))
+			if(_wsd.getName().contains("بغض کردن"))
 				return VerbType.BASIT;
-			if(_name.contains("گذاشت"))
+			if(_wsd.getName().contains("گذاشت"))
 				return VerbType.BASIT;
-			if(_name.contains("خیره شدن"))
+			if(_wsd.getName().contains("خیره شد"))
 				return VerbType.MORAKAB;
-			if(_name.contains("برگشت"))
+			if(_wsd.getName().contains("برگشت"))
+				return VerbType.BASIT;
+			if(_wsd.getName().contains("گفت"))
 				return VerbType.BASIT;
 					
 		}
@@ -505,7 +507,7 @@ public class SentencePart {
 			_semanticTag = SemanticTag.fromString(semTag);
 		
 		if(_semanticTag == null)
-			MyError.error("bad semantcTag name " + semTag);	
+			MyError.error("bad semantcTag name " + semTag + " for " + this._name);	
 	}
 	
 	public void set_wsd_name(String wsd_name) {

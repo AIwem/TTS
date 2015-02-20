@@ -26,10 +26,10 @@ sentence:معلم جای خالی او را دید
 
 name:معلم		POS:NOUN		SYN:SBJ		SRC:6	SEM:ARG0_EXPERIENCER	WSD:معلم#n1	sub_part:-		num:1
 
-name:جای خالی او را	POS:NOUN	SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:2_mozaf#n_3	sub_part:2,3,4,5	num:
+name:جای خالی او را	POS:NOUN	SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:2_adjective#a_3	sub_part:2,3,4,5	num:
 name:جای		POS:NOUN		SYN:PREDEP	SRC:5	SEM:ARG1_THEME_P	WSD:جا#n5		sub_part:-		num:2
 name:خالی		POS:ADJECTIVE	SYN:NPOSTMOD	SRC:2	SEM:ARG1_THEME_P	WSD:خالی#a2	sub_part:-		num:3
-name:او			POS:UNKNOWN		SYN:MOZ		SRC:2	SEM:ARG1_THEME_P	WSD:-			sub_part:-		num:4
+name:او			POS:UNKNOWN		SYN:MOZ		SRC:2	SEM:ARG1_THEME_P	WSD:محمد#n		sub_part:-		num:4
 name:را			POS:UNKNOWN		SYN:OBJ		SRC:6	SEM:ARG1_THEME_P	WSD:-			sub_part:-		num:5
 
 name:دید		POS:UNKNOWN		SYN:ROOT	SRC:0	SEM:-				WSD:دیدن#v5		sub_part:-		num:6
@@ -43,8 +43,8 @@ name:از سعید	POS:NOUN		SYN:ADVRB	SRC:	SEM:ARG1_THEME		WSD:سعید#n		sub_
 name:از			POS:UNKNOWN		SYN:VPP		SRC:6	SEM:ARG1_THEME_P	WSD:-			sub_part:-		num:2
 name:سعید		POS:NOUN		SYN:POSDEP	SRC:2	SEM:ARG1_THEME_P	WSD:سعید#n		sub_part:-		num:3
 
-name:دوست محمد	POS:NOUN		SYN:ADVRB	SRC:	SEM:-				WSD:			sub_part:4,5	num:
-name:دوست		POS:NOUN		SYN:POSDEP	SRC:3	SEM:				WSD:			sub_part:-		num:4
+name:دوست محمد	POS:NOUN		SYN:ADVRB	SRC:	SEM:-				WSD:-			sub_part:4,5	num:
+name:دوست		POS:NOUN		SYN:POSDEP	SRC:3	SEM:				WSD:-			sub_part:-		num:4
 name:محمد		POS:NOUN		SYN:MOZ		SRC:4	SEM:				WSD:محمد#n		sub_part:-		num:5
 
 name:پرسید		POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:پرسیدن#v1	sub_part:-		num:6
@@ -89,9 +89,9 @@ sentence:معلم وسایلش را روی میز گذاشت
 
 name:معلم		POS:NOUN		SYN:SBJ		SRC:6	SEM:ARG0_AGENT		WSD:معلم#n1		sub_part:-		num:1
 
-name:وسایلش را	POS:NOUN		SYN:OBJ		SRC:	SEM:ARG1_PATIENT	WSD:وسایل#n1	sub_part:2,3	num:
-name:وسایلش		POS:NOUN		SYN:PREDEP	SRC:3	SEM:ARG1_PATIENT_P	WSD:وسایل#n1	sub_part:-		num:2
-name:را			POS:UNKNOWN		SYN:OBJ		SRC:6	SEM:ARG1_PATIENT_P	WSD:-			sub_part:-		num:3
+name:وسایلش را	POS:NOUN		SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:وسایل#n1	sub_part:2,3	num:
+name:وسایلش		POS:NOUN		SYN:PREDEP	SRC:3	SEM:ARG1_THEME_P	WSD:وسایل#n1	sub_part:-		num:2
+name:را			POS:UNKNOWN		SYN:OBJ		SRC:6	SEM:ARG1_THEME_P	WSD:-			sub_part:-		num:3
 
 name:روی میز	POS:NOUN		SYN:ADVRB	SRC:	SEM:ARG2_OBJ2		WSD:4_mozaf#n_5	sub_part:4,5	num:
 name:روی		POS:NOUN		SYN:VPP		SRC:6	SEM:ARG2_OBJ2_P		WSD:روی#n5		sub_part:-		num:4

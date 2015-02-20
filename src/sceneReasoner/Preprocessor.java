@@ -53,8 +53,8 @@ public class Preprocessor {
 	 */
 //	private String sentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
 //	private String sentenceInfosFileName = "inputStory/sentenceInfos_SS.txt";
-//	private String sentenceInfosFileName = "inputStory/SentenceInfos12.txt";
-	private String sentenceInfosFileName = "inputStory/SentenceInfos2-1.txt";
+	private String sentenceInfosFileName = "inputStory/SentenceInfos12.txt";
+//	private String sentenceInfosFileName = "inputStory/SentenceInfos2-1.txt";
 
 	public Preprocessor(KnowledgeBase kb, SemanticReasoner re, TTSEngine ttsEngine) {
 		this._kb = kb;
@@ -258,7 +258,8 @@ public class Preprocessor {
 				allocate_wsd(sentence, currentPart, false);
 			
 			if(currentPart._wsd == null)
-				MyError.error(currentPart._wsd_name + " couldn't get allocated!");				
+				print(currentPart._wsd_name + " couldn't get allocated!");
+//				MyError.error(currentPart._wsd_name + " couldn't get allocated!");				
 			
 		}
 

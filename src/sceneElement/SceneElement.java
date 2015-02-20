@@ -63,19 +63,19 @@ public class SceneElement {
 					return this.addStateToSceneObject(dependent._name, dependent._wsd);
 		
 				else if(this.scenePart == ScenePart.LOCATION){
-					print("what to do for adj of LOCATION ?!");//TODO
+					print("what to do for " + elementType + " of LOCATION ?!");//TODO
 					return null;
 				}		
 				else if(this.scenePart == ScenePart.SCENE_GOAL){
-					print("what to do for adj of SCENE_GOAL ?!");//TODO
+					print("what to do for " + elementType + " of SCENE_GOAL ?!");//TODO
 					return null;
 				}
 				else if(this.scenePart == ScenePart.TIME){
-					print("what to do for adj of TIME ?!");//TODO
+					print("what to do for " + elementType + " of TIME ?!");//TODO
 					return null;
 				}
 				else if(this.scenePart == ScenePart.SCENE_EMOTION){
-					print("what to do for adj of SCENE_GOAL ?!");//TODO
+					print("what to do for " + elementType + " of SCENE_GOAL ?!");//TODO
 					return null;
 				}
 				break;

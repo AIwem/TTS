@@ -880,6 +880,8 @@ public class TTSEngine {
 			return ScenePart.ROLE;
 		if(pureNode.getName().equals("معلم#n1"))
 			return ScenePart.ROLE;
+		if(pureNode.getName().equals("محمد#n"))
+			return ScenePart.ROLE;
 		if(pureNode.getName().equals("جا#n5"))
 			return ScenePart.LOCATION;
 		if(pureNode.getName().equals("وسایل#n1"))
