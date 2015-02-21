@@ -53,8 +53,8 @@ public class Preprocessor {
 	 */
 //	private String sentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
 //	private String sentenceInfosFileName = "inputStory/sentenceInfos_SS.txt";
-	private String sentenceInfosFileName = "inputStory/SentenceInfos12.txt";
-//	private String sentenceInfosFileName = "inputStory/SentenceInfos2-1.txt";
+//	private String sentenceInfosFileName = "inputStory/SentenceInfos12.txt";
+	private String sentenceInfosFileName = "inputStory/SentenceInfos2-1.txt";
 
 	public Preprocessor(KnowledgeBase kb, SemanticReasoner re, TTSEngine ttsEngine) {
 		this._kb = kb;
@@ -706,7 +706,10 @@ public class Preprocessor {
 	 * @param primarySceneModel guaranteed not to be null.
 	 */
 	private void processLocationOfScene(SentenceModel sentenceModel, SceneElement arg3SceneElement, SceneElement arg4SceneElement, SceneModel primarySceneModel) {
-				
+		
+		if(primarySceneModel.getLocation() != null)
+			return;
+		
 		print("\n=============== in processLocation =================================");
 		
 		SentencePart arg3Part = sentenceModel.getArg3SentencePart();
@@ -724,7 +727,7 @@ public class Preprocessor {
 				
 				//Sentence has ARG4_ENDPOINT
 				if(arg4Part != null && arg4SceneElement != null)			 
-						primarySceneModel.addAlternativeLocation((Location)arg4SceneElement);				
+					primarySceneModel.addAlternativeLocation((Location)arg4SceneElement);				
 				
 				//Sentence hasn't ARG4_ENDPOINT
 				else{
