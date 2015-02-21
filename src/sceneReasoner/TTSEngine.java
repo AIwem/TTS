@@ -1221,8 +1221,12 @@ public class TTSEngine {
 		}
 		
 		if(subSemArg == SubSemanticTag.INS){
-			if(isHuman(pureNode))
-				return ScenePart.ROLE;
+			if(isAnimal(pureNode))
+				return ScenePart.DYNAMIC_OBJECT;
+			
+//			if(isHuman(pureNode))
+//				return ScenePart.ROLE;
+			
 			return ScenePart.STATIC_OBJECT;
 		}		
 		

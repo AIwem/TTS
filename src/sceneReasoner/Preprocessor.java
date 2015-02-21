@@ -258,8 +258,8 @@ public class Preprocessor {
 				allocate_wsd(sentence, currentPart, false);
 			
 			if(currentPart._wsd == null)
-				print(currentPart._wsd_name + " couldn't get allocated!");
-//				MyError.error(currentPart._wsd_name + " couldn't get allocated!");				
+//				print(currentPart._wsd_name + " couldn't get allocated!");
+				MyError.error(currentPart._wsd_name + " couldn't get allocated!");				
 			
 		}
 
