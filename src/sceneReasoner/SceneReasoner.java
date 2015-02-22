@@ -477,19 +477,25 @@ public class SceneReasoner {
 										break;
 									}									
 								}
-								// all of lastScene_altTimes has been fori or sepas!
-								if(!flag){								
-									//set the Time of the lastScene for current_scene anyway!!!
-									if(lastScene.getTime() != null){
-										currentScene.setTime(lastScene.getTime());
-										print("lastScene Time " + lastScene.getTime() +" %%%%%%%%%%%%%%%%%%%%%%%%% has been set!");
-									}
-									else{ //set the last time of lastScene_altTimes for current_scene anyway!!!										
-										currentScene.setTime(lastScene_altTimes.get(lastScene_altTimes.size() - 1));
-										print("the last of lastScene_altTimes " + currentScene.getTime() +" %%%%%%%%%%%%%%%%%%%%%%%%% has been set!");
-									}
+							}
+							// lastScene_altTimes is empty or all of it has been fori or sepas!
+							if(!flag){								
+								//set the Time of the lastScene for current_scene anyway!!!
+								if(lastScene.getTime() != null){
+									currentScene.setTime(lastScene.getTime());
+									print("lastScene Time " + lastScene.getTime() +" %%%%%%%%%%%%%%%%%%%%%%%%% has been set!");
 								}
-							}							
+								//set the last time of altTimes for current_scene anyway!!!
+								else if(!Common.isEmpty(altTimes)){ 										
+									currentScene.setTime(altTimes.get(altTimes.size() - 1));
+									print("the last of altTimes " + currentScene.getTime() +" %%%%%%%%%%%%%%%%%%%%%%%%% has been set!");
+								}
+								//set the last time of lastScene_altTimes for current_scene anyway!!!
+								else if(!Common.isEmpty(lastScene_altTimes)){ 									
+									currentScene.setTime(lastScene_altTimes.get(lastScene_altTimes.size() - 1));
+									print("the last of lastScene_altTimes " + currentScene.getTime() +" %%%%%%%%%%%%%%%%%%%%%%%%% has been set!");
+								}
+							}													
 						}
 					}
 				}
