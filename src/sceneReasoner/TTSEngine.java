@@ -938,7 +938,7 @@ public class TTSEngine {
 	 * because this is ARG0 node so it must perform an action.
 	 * only ROLE or DYNAMIC_OBJECT can perform action.
 	 * this method checks: 
-	 * <li> if node pos is NOUN, then checks weather
+	 * <li> it checks weather
 	 * 		<ul> if isHuman, then returns ScenePart.ROLE </ul>
 	 * 		<ul> otherwise, returns ScenePart.DYNAMIC_OBJECT </ul> 		
 	 * </li>
@@ -949,13 +949,13 @@ public class TTSEngine {
 	 */
 	private ScenePart getArg0ScenePart(Node pureNode, POS pos) {
 				
-		if(pos == POS.NOUN){
+//		if(pos == POS.NOUN){
 			if(isHuman(pureNode))
 				return ScenePart.ROLE;
 			
 			return ScenePart.DYNAMIC_OBJECT; 
-		}			
-		return ScenePart.UNKNOWN;
+//		}			
+//		return ScenePart.UNKNOWN;
 	}
 	
 	/**
@@ -965,7 +965,7 @@ public class TTSEngine {
 	 * because this is ARG1 node so the action is performed on it.
 	 * only ROLE, DYNAMIC_OBJECT, STATIC_OBJECT, or LOCATION can got action performed on!
 	 * this method checks: 
-	 * <li> if node pos is NOUN, then checks weather
+	 * <li> it checks weather
 	 * 		<ul> if isHuman, then returns ScenePart.ROLE </ul>
 	 * 		<ul> if isAnimal, then returns ScenePart.DYNAMIC_OBJECT </ul>
 	 * 		<ul> if isLocation, then returns ScenePart.LOCATION </ul>
@@ -1002,7 +1002,7 @@ public class TTSEngine {
 	 * 
 	 * because this is ARG2 node so it can be any of extend, obj2, beneficiary, instrument, attribute, and goal-endstate.
 	 * this method checks: 
-	 * <li> if ARG2 is ARG2_OBJ2 or ARG2_BENEFICIARY and pos in NOUN,
+	 * <li> if ARG2 is ARG2_OBJ2 or ARG2_BENEFICIARY,
 	 * 		<ul> if isHuman, then returns ScenePart.ROLE </ul>
 	 * 		<ul> if isAnimal, then returns ScenePart.DYNAMIC_OBJECT </ul>
 	 * 		<ul> if isLocation, then returns ScenePart.LOCATION </ul>
@@ -1051,7 +1051,7 @@ public class TTSEngine {
 	 * 
 	 * because this is ARG3 node so it can be any of source-startpoint, beneficiary, instrument, attribute.
 	 * this method checks: 
-	 * <li> if ARG3 is ARG3_BENEFICIARY and pos in NOUN,
+	 * <li> if ARG3 is ARG3_BENEFICIARY,
 	 * 		<ul> if isHuman, then returns ScenePart.ROLE </ul>
 	 * 		<ul> if isAnimal, then returns ScenePart.DYNAMIC_OBJECT </ul>
 	 * 		<ul> if isLocation, then returns ScenePart.LOCATION </ul>
@@ -1195,8 +1195,8 @@ public class TTSEngine {
 				return ScenePart.TIME;
 		
 		
-		if(subSemArg == SubSemanticTag.GOL)				
-			if(pos == POS.NOUN){
+		if(subSemArg == SubSemanticTag.GOL)	{			
+//			if(pos == POS.NOUN){
 				if(isHuman(pureNode))
 					return ScenePart.ROLE;
 				
@@ -1207,7 +1207,8 @@ public class TTSEngine {
 					return  ScenePart.LOCATION;
 				
 				return ScenePart.STATIC_OBJECT;
-			}			
+//			}			
+		}
 		
 		if(subSemArg == SubSemanticTag.PRP || subSemArg == SubSemanticTag.CAU)			
 			return ScenePart.SCENE_GOAL;
