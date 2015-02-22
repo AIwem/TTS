@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import sceneElement.Location;
 import sceneElement.Time;
+import model.MainSemanticTag;
 import model.SceneModel;
 import model.ScenePart;
 import model.SentencePart;
@@ -352,31 +353,60 @@ public class SceneReasoner {
 					}
 					else if(i >= 1){
 						SceneModel lastScene = storyScenes.get(i-1);
+						
 						if(lastScene != null && lastScene.getAlternativeLocations() != null){
+							
 							ArrayList<Location> lastScene_altLocs = lastScene.getAlternativeLocations();
 							
-							if(!Common.isEmpty(lastScene_altLocs)){
-								Location candidLoc = lastScene_altLocs.get(lastScene_altLocs.size() - 1);
-								if(candidLoc != null){
-									SentencePart candidPart = lastScene.findSentencePartofSceneElement(candidLoc);
-									if(candidPart._semanticTag == SubSemanticTag.DIR.convertToSemanticTag()){
-										SentencePart innerPart = candidPart.getInnerPart();
-										if(innerPart != null){
-											print("inner part of " + candidPart +" %%%%%%%%%%%%%%%%%%%%%%%%% " + innerPart);
+							if(!Common.isEmpty(lastScene_altLocs)){								
+								
+								for(int index = lastScene_altLocs.size() - 1; index >= 0; index--){
+								
+									Location candidLoc = lastScene_altLocs.get(index);
+								
+									if(candidLoc != null){							
+										
+										SentencePart candidPart = lastScene.findSentencePartofSceneElement(candidLoc);
+										
+										//if it is ArgM_DIR, then set its core as Location of currentScene.
+										if(candidPart._semanticTag == SubSemanticTag.DIR.convertToSemanticTag()){ 
 											
-											ScenePart scenePart = _ttsEngine.whichScenePart(innerPart);
+											SentencePart innerPart = candidPart.getInnerPart();
 											
-											if(scenePart != null || scenePart != ScenePart.UNKNOWN)												
-												currentScene.setLocation(new Location(innerPart._name, innerPart._wsd));
+											if(innerPart != null){
+												print("inner part of " + candidPart +" %%%%%%%%%%%%%%%%%%%%%%%%% " + innerPart);
+												
+												ScenePart scenePart = _ttsEngine.whichScenePart(innerPart);
+												
+												if(scenePart != null || scenePart != ScenePart.UNKNOWN){												
+													currentScene.setLocation(new Location(innerPart._name, innerPart._wsd));
+													print("the lastScene AergM_Dir innerPart" + currentScene.getLocation() +" %%%%%%%%%%%%%%%%%%%%%%%%% has been set!");
+													break;
+												}
+											}
+										}
+										//if it is ARG4, then set that as Location of currentScene.
+										else if(candidPart._semanticTag == MainSemanticTag.ARG4_ENDPOINT.convertToSemanticTag()){
+											ScenePart scenePart = _ttsEngine.whichScenePart(candidPart);
+											
+											if(scenePart == ScenePart.LOCATION){
+												currentScene.setLocation(new Location(candidPart._name, candidPart._wsd));
+												print("the lastScene Arg4 " + currentScene.getLocation() +" %%%%%%%%%%%%%%%%%%%%%%%%% has been set!");
+												break;
+											}
 										}
 									}
+								}
+								//set the last Location of lastScene_altLocs for current_scene anyway!!!
+								if(currentScene.getLocation() == null){									
+									currentScene.setLocation(lastScene_altLocs.get(lastScene_altLocs.size() - 1));
+									print("the last of lastScene_altLocs " + currentScene.getLocation() +" %%%%%%%%%%%%%%%%%%%%%%%%% has been set!");
 								}
 							}
 							
 						}
 					}
-				}
-			
+				}			
 		}		
 				
 		print("=============== end of postprocessLocation =========================");
@@ -418,22 +448,14 @@ public class SceneReasoner {
 							if(t != currentTime){
 								if(isValidSceneTime(t)){
 									currentScene.setTime(t);
+									print("altTime " + t +" %%%%%%%%%%%%%%%%%%%%%%%%% has been set!");
 									flag = true;
 									break;
 								}
-								else{ // it is fori or sepas
-									if(i >= 1){
-										SceneModel lastScene = storyScenes.get(i-1);
-										if(lastScene != null && lastScene.getTime() != null){
-											currentScene.setTime(lastScene.getTime());
-											flag = true;
-											break;
-										}											
-									}
-								}
 							}
-						}
-					}					
+						}						
+					}
+					// altTime is empty or all of it has been fori or sepas!
 					if(!flag && i >= 1){
 						
 						SceneModel lastScene = storyScenes.get(i-1);
@@ -444,24 +466,29 @@ public class SceneReasoner {
 							
 							if(!Common.isEmpty(lastScene_altTimes)){
 								
-								for(int index = lastScene_altTimes.size() - 1; index < lastScene_altTimes.size(); index--){
+								for(int index = lastScene_altTimes.size() - 1; index >= 0; index--){
 									
 									Time beforeTime = lastScene_altTimes.get(index);
 									
 									if(isValidSceneTime(beforeTime)){
 										currentScene.setTime(beforeTime);
+										print("lastScene altTime " + beforeTime +" %%%%%%%%%%%%%%%%%%%%%%%%% has been set!");
+										flag = true;
 										break;
+									}									
+								}
+								// all of lastScene_altTimes has been fori or sepas!
+								if(!flag){								
+									//set the Time of the lastScene for current_scene anyway!!!
+									if(lastScene.getTime() != null){
+										currentScene.setTime(lastScene.getTime());
+										print("lastScene Time " + lastScene.getTime() +" %%%%%%%%%%%%%%%%%%%%%%%%% has been set!");
 									}
-									else{// it is fori or sepas										
-										if(lastScene.getTime() != null){
-											currentScene.setTime(lastScene.getTime());											
-											break;
-										}						
+									else{ //set the last time of lastScene_altTimes for current_scene anyway!!!										
+										currentScene.setTime(lastScene_altTimes.get(lastScene_altTimes.size() - 1));
+										print("the last of lastScene_altTimes " + currentScene.getTime() +" %%%%%%%%%%%%%%%%%%%%%%%%% has been set!");
 									}
 								}
-								if(currentScene.getTime() == null)//set a time for scene anyway!!!
-									currentScene.setTime(lastScene_altTimes.get(lastScene_altTimes.size() - 1));									
-							
 							}							
 						}
 					}
