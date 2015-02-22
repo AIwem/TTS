@@ -422,7 +422,7 @@ public class SceneReasoner {
 									break;
 								}
 								else{ // it is fori or sepas
-									if(i > 1){
+									if(i >= 1){
 										SceneModel lastScene = storyScenes.get(i-1);
 										if(lastScene != null && lastScene.getTime() != null){
 											currentScene.setTime(lastScene.getTime());
