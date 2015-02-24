@@ -1,0 +1,46 @@
+sentence:شب کریسمس بود
+name:شب کریسمس		POS:NOUN		SYN:SBJ		SRC:	SEM:ARG2_OBJ2			WSD:				sub_part:1,2	num:
+name:شب				POS:NOUN		SYN:MOS		SRC:3	SEM:ARG2_OBJ2_P			WSD:				sub_part:-		num:1
+name:کریسمس			POS:NOUN		SYN:MOZ		SRC:1	SEM:ARG2_OBJ2_P			WSD:				sub_part:-		num:2
+
+name:بود			POS:VERB		SYN:ROOT	SRC:0	SEM:ARG0_EXPERIENCER	WSD:پسر#n2_وضعیت سنی#a_خردسال#a1	sub_part:-	num:3
+#------------------------------------------------------
+sentence:توی یک خانه بزرگ، بچه ها در تخت خواب های کوچکشان به خواب رفته بودند
+
+name:توی یک خانه بزرگ	POS:NOUN	SYN:ADVRB		SRC:	SEM:ArgM_LOC		WSD:3_adjective#a_4	sub_part:1,2,3,4	num:
+name:توی			POS:UNKNOWN		SYN:ADVRB		SRC:12	SEM:ArgM_LOC_P		WSD:-				sub_part:-			num:1
+name:یک				POS:NOUN		SYN:NPREMOD		SRC:3	SEM:ArgM_LOC_P		WSD:-				sub_part:-			num:2
+name:خانه			POS:NOUN		SYN:POSDEP		SRC:1	SEM:ArgM_LOC_P		WSD:خانه#n10		sub_part:-			num:3
+name:بزرگ			POS:NOUN		SYN:NPOSTMOD	SRC:3	SEM:ArgM_LOC_P		WSD:-				sub_part:-			num:4
+
+name:بچه ها			POS:NOUN		SYN:SBJ			SRC:12	SEM:Arg0_AGENT		WSD:-				sub_part:-			num:5
+
+name:در تخت خواب های کوچکشان	POS:NOUN	SYN:ADVRB	SRC:	SEM:ArgM_LOC	WSD:8_adjective#a_9	sub_part:6,7,8,9		num:
+name:در				POS:UNKNOWN		SYN:ADVRB		SRC:12	SEM:ArgM_LOC_P		WSD:-				sub_part:-			num:6
+name:تخت			POS:NOUN		SYN:POSDEP		SRC:6	SEM:ArgM_LOC_P		WSD:یک#n1			sub_part:-			num:7
+name:خواب های		POS:NOUN		SYN:MOZ			SRC:7	SEM:ArgM_LOC_P		WSD:یک#n1			sub_part:-			num:8
+name:کوچکشان		POS:ADJECTIVE	SYN:NPOSTMOD	SRC:8	SEM:ArgM_LOC_P		WSD:کبوتر#n1		sub_part:-			num:9
+
+name:به خواب رفته بودند	POS:VERB	SYN:ROOT		SRC:	SEM:-				WSD:چشم افتادن#v	sub_part:10,11,12	num:
+name:به				POS:UNKNOWN		SYN:NVE			SRC:12	SEM:-				WSD:-				sub_part:-			num:10
+name:خواب			POS:NOUN		SYN:POSDEP		SRC:10	SEM:-				WSD:-				sub_part:-			num:11
+name:رفته بودند		POS:NOUN		SYN:ROOT		SRC:0	SEM:-				WSD:-				sub_part:-			num:12
+
+
+#------------------------------------------------------
+sentence:یک مرتبه صدای بلند زنگ‌ها به گوش رسید
+#------------------------------------------------------
+sentence:دختری با یک جفت پای برهنه از روی تخت بیرون پرید 
+#------------------------------------------------------
+sentence:به سمت پنجره رفت
+#------------------------------------------------------
+sentence:با یک صورت کوچولو، با موهای فرفری که روی نوک پنجه پایش ایستاده
+#------------------------------------------------------
+sentence:نوک بینی اش را به شیشه سرد پنجره چسبانده بود
+#------------------------------------------------------
+sentence:با دو چشم درشتش بیرون را نگاه میکرد
+#------------------------------------------------------
+sentence:بابا نوئل سوار بر سورتمه درازی از راه رسید
+#------------------------------------------------------
+sentence:چند تا گوزن آن را میکشیدند
+

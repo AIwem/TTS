@@ -426,6 +426,8 @@ public class SentencePart {
 				return VerbType.BASIT;
 			if(_wsd.getName().contains("خیره شد"))
 				return VerbType.MORAKAB;
+			if(_wsd.getName().contains("به خواب رفت"))
+				return VerbType.MORAKAB;
 			if(_wsd.getName().contains("برگشت"))
 				return VerbType.BASIT;
 			if(_wsd.getName().contains("گفت"))

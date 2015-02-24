@@ -116,7 +116,7 @@
 92	f˸بودن§v-9332	MainSemArg	ARG2_GOAL_ENDSTATE
 93	f˸بغض کردن§v-8049	MainSemArg	ARG0_AGENT
 94	f˸هشتن§v-9211	MainSemArg	ARG0_AGENT
-95	f˸هشتن§v-9211	MainSemArg	ARG1_PATIENT 
+95	f˸هشتن§v-9211	MainSemArg	ARG1_THEME 
 96	f˸هشتن§v-9211	MainSemArg	ARG2_OBJ2
 97	f˸چشم دوختن§v-8506	MainSemArg	ARG0_EXPERIENCER
 98	f˸چشم دوختن§v-8506	MainSemArg	ARG1_THEME
