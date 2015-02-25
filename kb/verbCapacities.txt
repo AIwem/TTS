@@ -132,3 +132,13 @@
 108	f˸گفتن§v-7774	MainSemArg	ARG2_OBJ2
 109	f˸دانستن§v-8456	MainSemArg	ARG0_AGENT
 110	f˸دانستن§v-8456	MainSemArg	ARG1_THEME
+111	f˸به خواب رفتن§v-7722	MainSemArg	ARG0_AGENT
+112	f˸شنیده شدن§v-7803	MainSemArg	ARG0_INITIATOR
+113	f˸بودن§v-9328	MainSemArg	ARG1_PATIENT
+114	f˸بودن§v-9328	MainSemArg	ARG2_OBJ2
+115	f˸جست زدن§v-9493	MainSemArg	Arg0_AGENT
+116	f˸جست زدن§v-9493	MainSemArg	ARG2_INSTRUMENT
+117	f˸جست زدن§v-9493	MainSemArg	ARG3_SOURCE_STARTPOINT
+118	f˸پوییدن§v-7700	MainSemArg	Arg0_AGENT
+119	f˸پوییدن§v-7700	MainSemArg	ARG2_INSTRUMENT
+120	f˸پوییدن§v-7700	MainSemArg	ARG3_SOURCE_STARTPOINT

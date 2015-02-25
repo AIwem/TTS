@@ -102,10 +102,9 @@ public class TTSEngine {
 	 */
 	public void TextToScene(ArrayList<String> scene_inputNL, StoryModel storyModel, boolean isLastScene, PrintWriter writer){
 		
-		if(scene_inputNL == null || scene_inputNL.size() == 0 || storyModel == null){
-			MyError.error("bad input lines!");
-			return;
-		}
+		if(scene_inputNL == null || scene_inputNL.size() == 0 || storyModel == null)
+			MyError.exit("bad input lines!");			
+		
 					
 		if(!isKbInitialized)
 			loadKb();
@@ -885,7 +884,15 @@ public class TTSEngine {
 		if(pureNode.getName().equals("جا#n5"))
 			return ScenePart.LOCATION;
 		if(pureNode.getName().equals("وسایل#n1"))
-			return ScenePart.STATIC_OBJECT;		
+			return ScenePart.STATIC_OBJECT;	
+		if(pureNode.getName().equals("صدا#n2"))
+			return ScenePart.DYNAMIC_OBJECT;
+		if(pureNode.getName().equals("یک‌باره#r1"))
+			return ScenePart.TIME;
+		if(pureNode.getName().equals("دختر#n3"))
+			return ScenePart.ROLE;
+		if(pureNode.getName().equals("بچه#n6"))
+			return ScenePart.ROLE;		
 		//---------------------------------------			
 		
 		if(pureNode == null || pos == null || semanticTag == null)

@@ -54,7 +54,8 @@ public class Preprocessor {
 //	private String sentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
 //	private String sentenceInfosFileName = "inputStory/sentenceInfos_SS.txt";
 //	private String sentenceInfosFileName = "inputStory/SentenceInfos12.txt";
-	private String sentenceInfosFileName = "inputStory/SentenceInfos2-1.txt";
+//	private String sentenceInfosFileName = "inputStory/SentenceInfos2-1.txt";
+	private String sentenceInfosFileName = "inputStory/SentenceInfos3.txt";
 
 	public Preprocessor(KnowledgeBase kb, SemanticReasoner re, TTSEngine ttsEngine) {
 		this._kb = kb;
@@ -1218,6 +1219,8 @@ public class Preprocessor {
 
 	private  ArrayList<Node>  loadVerbSemanticArguments(SentenceModel sentence) {
 		SentencePart verbPart = sentence.getVerb();
+		if(verbPart == null)
+			return null;
 		
 		Node pure_verb = _ttsEngine.getPureNode(verbPart._wsd);
 		

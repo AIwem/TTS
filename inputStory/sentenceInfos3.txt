@@ -1,9 +1,9 @@
 sentence:شب کریسمس بود
-name:شب کریسمس		POS:NOUN		SYN:SBJ		SRC:	SEM:ARG2_OBJ2			WSD:				sub_part:1,2	num:
-name:شب				POS:NOUN		SYN:MOS		SRC:3	SEM:ARG2_OBJ2_P			WSD:				sub_part:-		num:1
-name:کریسمس			POS:NOUN		SYN:MOZ		SRC:1	SEM:ARG2_OBJ2_P			WSD:				sub_part:-		num:2
+name:شب کریسمس		POS:NOUN		SYN:SBJ			SRC:	SEM:ARG1_PATIENT		WSD:1_mozaf#n_2		sub_part:1,2	num:
+name:شب				POS:NOUN		SYN:MOS			SRC:3	SEM:ARG1_PATIENT_P			WSD:شب#n3			sub_part:-		num:1
+name:کریسمس			POS:NOUN		SYN:MOZ			SRC:1	SEM:ARG1_PATIENT_P			WSD:کریسمس#n1		sub_part:-		num:2
 
-name:بود			POS:VERB		SYN:ROOT	SRC:0	SEM:ARG0_EXPERIENCER	WSD:پسر#n2_وضعیت سنی#a_خردسال#a1	sub_part:-	num:3
+name:بود			POS:VERB		SYN:ROOT		SRC:0	SEM:-					WSD:بودن#v6			sub_part:-	num:3
 #------------------------------------------------------
 sentence:توی یک خانه بزرگ، بچه ها در تخت خواب های کوچکشان به خواب رفته بودند
 
@@ -11,28 +11,70 @@ name:توی یک خانه بزرگ	POS:NOUN	SYN:ADVRB		SRC:	SEM:ArgM_LOC		WSD:3_
 name:توی			POS:UNKNOWN		SYN:ADVRB		SRC:12	SEM:ArgM_LOC_P		WSD:-				sub_part:-			num:1
 name:یک				POS:NOUN		SYN:NPREMOD		SRC:3	SEM:ArgM_LOC_P		WSD:-				sub_part:-			num:2
 name:خانه			POS:NOUN		SYN:POSDEP		SRC:1	SEM:ArgM_LOC_P		WSD:خانه#n10		sub_part:-			num:3
-name:بزرگ			POS:NOUN		SYN:NPOSTMOD	SRC:3	SEM:ArgM_LOC_P		WSD:-				sub_part:-			num:4
+name:بزرگ			POS:NOUN		SYN:NPOSTMOD	SRC:3	SEM:ArgM_LOC_P		WSD:بزرگ#a1			sub_part:-			num:4
 
-name:بچه ها			POS:NOUN		SYN:SBJ			SRC:12	SEM:Arg0_AGENT		WSD:-				sub_part:-			num:5
+name:بچه ها			POS:NOUN		SYN:SBJ			SRC:12	SEM:Arg0_AGENT		WSD:بچه#n6			sub_part:-			num:5
 
-name:در تخت خواب های کوچکشان	POS:NOUN	SYN:ADVRB	SRC:	SEM:ArgM_LOC	WSD:8_adjective#a_9	sub_part:6,7,8,9		num:
-name:در				POS:UNKNOWN		SYN:ADVRB		SRC:12	SEM:ArgM_LOC_P		WSD:-				sub_part:-			num:6
-name:تخت			POS:NOUN		SYN:POSDEP		SRC:6	SEM:ArgM_LOC_P		WSD:یک#n1			sub_part:-			num:7
-name:خواب های		POS:NOUN		SYN:MOZ			SRC:7	SEM:ArgM_LOC_P		WSD:یک#n1			sub_part:-			num:8
-name:کوچکشان		POS:ADJECTIVE	SYN:NPOSTMOD	SRC:8	SEM:ArgM_LOC_P		WSD:کبوتر#n1		sub_part:-			num:9
+name:در تخت خواب های کوچکشان	POS:NOUN	SYN:ADVRB	SRC:	SEM:ArgM_LOC	WSD:6_mozaf#n_7		sub_part:6,7,8,9	num:
+name:در				POS:UNKNOWN		SYN:ADVRB		SRC:12	SEM:ArgM_LOC_P		WSD:روی#n5			sub_part:-			num:6
+name:تخت			POS:NOUN		SYN:POSDEP		SRC:6	SEM:ArgM_LOC_P		WSD:تخت#n1			sub_part:-			num:7
+name:خواب های		POS:NOUN		SYN:MOZ			SRC:7	SEM:ArgM_LOC_P		WSD:خواب#n2			sub_part:-			num:8
+name:کوچکشان		POS:ADJECTIVE	SYN:NPOSTMOD	SRC:8	SEM:ArgM_LOC_P		WSD:کوچک#a1			sub_part:-			num:9
 
-name:به خواب رفته بودند	POS:VERB	SYN:ROOT		SRC:	SEM:-				WSD:چشم افتادن#v	sub_part:10,11,12	num:
+name:به خواب رفته بودند	POS:VERB	SYN:ROOT		SRC:	SEM:-				WSD:به خواب رفتن#v1	sub_part:10,11,12	num:
 name:به				POS:UNKNOWN		SYN:NVE			SRC:12	SEM:-				WSD:-				sub_part:-			num:10
 name:خواب			POS:NOUN		SYN:POSDEP		SRC:10	SEM:-				WSD:-				sub_part:-			num:11
 name:رفته بودند		POS:NOUN		SYN:ROOT		SRC:0	SEM:-				WSD:-				sub_part:-			num:12
 
-
 #------------------------------------------------------
 sentence:یک مرتبه صدای بلند زنگ‌ها به گوش رسید
+
+name:یک مرتبه		POS:NOUN		SYN:ADVRB		SRC:	SEM:ArgM_TMP		WSD:یک‌باره#r1		sub_part:1,2		num:
+name:یک				POS:UNKNOWN		SYN:NPREMOD		SRC:2	SEM:ArgM_TMP_P		WSD:-				sub_part:-			num:1
+name:مرتبه			POS:NOUN		SYN:ADVRB		SRC:8	SEM:ArgM_TMP_P		WSD:-				sub_part:-			num:2
+
+name:صدای بلند زنگ‌ها	POS:NOUN	SYN:SBJ			SRC:	SEM:Arg0_INITIATOR	WSD:3_adjective#a_4		sub_part:3,4,5		num:
+name:صدای			POS:NOUN		SYN:SBJ			SRC:8	SEM:Arg0_INITIATOR_P	WSD:صدا#n2		sub_part:-			num:3
+name:بلند			POS:ADJECTIVE	SYN:NPOSTMOD	SRC:3	SEM:Arg0_INITIATOR_P	WSD:بلند#a2		sub_part:-			num:4
+name:زنگ‌ها			POS:NOUN		SYN:MOZ			SRC:3	SEM:Arg0_INITIATOR_P	WSD:زنگ#n3		sub_part:-			num:5
+
+
+name:به گوش رسید	POS:VERB		SYN:ROOT		SRC:	SEM:-				WSD: شنیده شدن#v1	sub_part:6,7,8		num:
+name:به				POS:UNKNOWN		SYN:VPP			SRC:8	SEM:-				WSD:-				sub_part:-			num:6
+name:گوش			POS:NOUN		SYN:POSDEP		SRC:6	SEM:-				WSD:-				sub_part:-			num:7
+name:رسید			POS:VERB		SYN:ROOT		SRC:0	SEM:-				WSD:-				sub_part:-			num:8
+
 #------------------------------------------------------
-sentence:دختری با یک جفت پای برهنه از روی تخت بیرون پرید 
+sentence:دختری با یک جفت پای برهنه از روی تخت بیرون پرید
+
+name:دختری			POS:NOUN		SYN:SBJ			SRC:11	SEM:Arg0_AGENT		WSD:دختر#n3			sub_part:-			num:1
+
+name:با یک جفت پای برهنه	POS:NOUN	SYN:ADVRB	SRC:	SEM:ARG2_INSTRUMENT	WSD:5_adjective#a_6	sub_part:2,3,4,5,6	num:
+name:با				POS:UNKNOWN		SYN:ADVRB		SRC:11	SEM:ARG2_INSTRUMENT_P	WSD:-			sub_part:-			num:2
+name:یک				POS:UNKNOWN		SYN:NPREMOD		SRC:4	SEM:ARG2_INSTRUMENT_P	WSD:-			sub_part:-			num:3
+name:جفت			POS:NOUN		SYN:POSDEP		SRC:5	SEM:ARG2_INSTRUMENT_P	WSD:-			sub_part:-			num:4
+name:پای			POS:NOUN		SYN:NPOSTMOD	SRC:2	SEM:ARG2_INSTRUMENT_P	WSD:پا#n3		sub_part:-			num:5
+name:برهنه			POS:ADJECTIVE	SYN:NPOSTMOD	SRC:5	SEM:ARG2_INSTRUMENT_P	WSD:برهنه#a1	sub_part:-			num:6
+
+name:از روی تخت		POS:NOUN		SYN:ADVRB	SRC:	SEM:ARG3_SOURCE_STARTPOINT	WSD:8_mozaf#n_9	sub_part:7,8,9	num:
+name:از				POS:UNKNOWN		SYN:ADVRB		SRC:11	SEM:ARG3_SOURCE_STARTPOINT_P	WSD:-		sub_part:-		num:7
+name:روی			POS:NOUN		SYN:POSDEP		SRC:7	SEM:ARG3_SOURCE_STARTPOINT_P	WSD:روی#n5	sub_part:-		num:8
+name:تخت			POS:NOUN		SYN:MOZ			SRC:8	SEM:ARG3_SOURCE_STARTPOINT_P	WSD:تخت#n1	sub_part:-		num:9
+
+name:بیرون پرید		POS:VERB		SYN:ROOT		SRC:	SEM:-				WSD:پریدن#v6		sub_part:10,11,12	num:
+name:بیرون			POS:NOUN		SYN:ADVC		SRC:11	SEM:-				WSD:-				sub_part:-			num:10
+name:پرید			POS:VERB		SYN:ROOT		SRC:0	SEM:-				WSD:-				sub_part:-			num:11
+
 #------------------------------------------------------
 sentence:به سمت پنجره رفت
+
+name:به سمت پنجره	POS:NOUN		SYN:ADVRB		SRC:	SEM:Arg4_ENDPOINT	WSD:2_mozaf#n_3		sub_part:1,2,3		num:
+name:به				POS:NOUN		SYN:VPP			SRC:4	SEM:Arg4_ENDPOINT_P	WSD:-				sub_part:-			num:1
+name:سمت			POS:NOUN		SYN:POSDEP		SRC:1	SEM:Arg4_ENDPOINT_P	WSD:سمت#n6			sub_part:-			num:2
+name:پنجره			POS:NOUN		SYN:MOZ			SRC:2	SEM:Arg4_ENDPOINT_P	WSD:پنجره#n1		sub_part:-			num:3
+
+name:رفت			POS:NOUN		SYN:ROOT		SRC:0	SEM:-				WSD:رفتن#v7			sub_part:-			num:4
+
 #------------------------------------------------------
 sentence:با یک صورت کوچولو، با موهای فرفری که روی نوک پنجه پایش ایستاده
 #------------------------------------------------------
