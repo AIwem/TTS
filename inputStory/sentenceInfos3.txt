@@ -51,8 +51,8 @@ name:دختری			POS:NOUN		SYN:SBJ			SRC:11	SEM:Arg0_AGENT			WSD:دختر#n3		s
 name:با یک جفت پای برهنه	POS:NOUN	SYN:ADVRB	SRC:	SEM:ARG2_INSTRUMENT		WSD:5_adjective#a_6	sub_part:2,3,4,5,6	num:
 name:با				POS:UNKNOWN		SYN:ADVRB		SRC:11	SEM:ARG2_INSTRUMENT_P	WSD:-			sub_part:-		num:2
 name:یک				POS:UNKNOWN		SYN:NPREMOD		SRC:4	SEM:ARG2_INSTRUMENT_P	WSD:-			sub_part:-		num:3
-name:جفت			POS:NOUN		SYN:POSDEP		SRC:5	SEM:ARG2_INSTRUMENT_P	WSD:-			sub_part:-		num:4
-name:پای			POS:NOUN		SYN:NPOSTMOD	SRC:2	SEM:ARG2_INSTRUMENT_P	WSD:پا#n3		sub_part:-		num:5
+name:جفت			POS:NOUN		SYN:PREDEP		SRC:5	SEM:ARG2_INSTRUMENT_P	WSD:-			sub_part:-		num:4
+name:پای			POS:NOUN		SYN:POSDEP		SRC:2	SEM:ARG2_INSTRUMENT_P	WSD:پا#n3		sub_part:-		num:5
 name:برهنه			POS:ADJECTIVE	SYN:NPOSTMOD	SRC:5	SEM:ARG2_INSTRUMENT_P	WSD:برهنه#a1	sub_part:-		num:6
 
 name:از روی تخت		POS:NOUN		SYN:ADVRB		SRC:	SEM:ARG3_SOURCE_STARTPOINT		WSD:8_mozaf#n_9	sub_part:7,8,9	num:

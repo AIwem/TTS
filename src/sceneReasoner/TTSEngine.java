@@ -1048,6 +1048,7 @@ public class TTSEngine {
 //		}
 		}
 		else if(semanticTag == MainSemanticTag.ARG2_INSTRUMENT){//TODO: check if it is correct?
+
 			return ScenePart.STATIC_OBJECT;
 		}
 		else if(semanticTag == MainSemanticTag.ARG2_GOAL_ENDSTATE){

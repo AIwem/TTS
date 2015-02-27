@@ -924,7 +924,7 @@ public class Preprocessor {
 			return;
 		}		
 		
-		if(arg2Part.isAdjective()){
+//		if(arg2Part.isAdjective()){
 		
 			SceneElement arg1Elem = primarySceneModel.getSceneElement(arg1Part._wsd);
 			
@@ -934,9 +934,9 @@ public class Preprocessor {
 			}		
 			
 			arg1Elem.addDependent(arg2Part, "adjective");			
-		}
-		else
-			print(verb + " is rabti but Arg2Part " + arg2Part + " is not adjective!");
+//		}
+//		else
+//			print(verb + " is rabti but Arg2Part " + arg2Part + " is not adjective!");
 	}
 
 	private void preprocessingActionVerb(SentenceModel sentenceModel, SceneModel primarySceneModel) {
