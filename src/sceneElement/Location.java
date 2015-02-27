@@ -20,6 +20,6 @@ public class Location extends SceneElement{
 		if(location == null)
 			return;
 		//TODO: check what else shall I do for this case!
-		MyError.error("I don't know how to merge two locations!");
+		MyError.error("I don't know how to merge two locations! 1:" + this + " and 2:" + location);
 	}
 }

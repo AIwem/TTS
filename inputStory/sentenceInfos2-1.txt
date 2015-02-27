@@ -44,8 +44,8 @@ name:از			POS:UNKNOWN		SYN:VPP		SRC:6	SEM:ARG1_THEME_P	WSD:-			sub_part:-		num
 name:سعید		POS:NOUN		SYN:POSDEP	SRC:2	SEM:ARG1_THEME_P	WSD:سعید#n		sub_part:-		num:3
 
 name:دوست محمد	POS:NOUN		SYN:ADVRB	SRC:	SEM:-				WSD:-			sub_part:4,5	num:
-name:دوست		POS:NOUN		SYN:POSDEP	SRC:3	SEM:				WSD:-			sub_part:-		num:4
-name:محمد		POS:NOUN		SYN:MOZ		SRC:4	SEM:				WSD:محمد#n		sub_part:-		num:5
+name:دوست		POS:NOUN		SYN:POSDEP	SRC:3	SEM:-				WSD:-			sub_part:-		num:4
+name:محمد		POS:NOUN		SYN:MOZ		SRC:4	SEM:-				WSD:محمد#n		sub_part:-		num:5
 
 name:پرسید		POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:پرسیدن#v1	sub_part:-		num:6
 

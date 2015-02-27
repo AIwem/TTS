@@ -892,7 +892,12 @@ public class TTSEngine {
 		if(pureNode.getName().equals("دختر#n3"))
 			return ScenePart.ROLE;
 		if(pureNode.getName().equals("بچه#n6"))
-			return ScenePart.ROLE;		
+			return ScenePart.ROLE;
+		if(pureNode.getName().equals("نوک#n1"))
+			return ScenePart.STATIC_OBJECT;
+		if(pureNode.getName().equals("شیشه#n3"))
+			return ScenePart.STATIC_OBJECT;
+		
 		//---------------------------------------			
 		
 		if(pureNode == null || pos == null || semanticTag == null)

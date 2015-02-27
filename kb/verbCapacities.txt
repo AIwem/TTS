@@ -139,6 +139,24 @@
 115	f˸جست زدن§v-9493	MainSemArg	Arg0_AGENT
 116	f˸جست زدن§v-9493	MainSemArg	ARG2_INSTRUMENT
 117	f˸جست زدن§v-9493	MainSemArg	ARG3_SOURCE_STARTPOINT
-118	f˸پوییدن§v-7700	MainSemArg	Arg0_AGENT
-119	f˸پوییدن§v-7700	MainSemArg	ARG2_INSTRUMENT
-120	f˸پوییدن§v-7700	MainSemArg	ARG3_SOURCE_STARTPOINT
+118	f˸جست زدن§v-9493	MainSemArg	ARG4_ENDPOINT
+119	f˸پوییدن§v-7700	MainSemArg	Arg0_AGENT
+120	f˸پوییدن§v-7700	MainSemArg	ARG2_INSTRUMENT
+121	f˸پوییدن§v-7700	MainSemArg	ARG3_SOURCE_STARTPOINT
+122	f˸پوییدن§v-7700	MainSemArg	ARG4_ENDPOINT
+123	f˸سرپا بودن§v-7963	MainSemArg	ARG0_AGENT
+124	f˸سرپا بودن§v-7963	MainSemArg	ARG2_OBJ2
+125	f˸متصل گرداندن§v-7632	MainSemArg	ARG0_AGENT
+126	f˸متصل گرداندن§v-7632	MainSemArg	ARG1_PATIENT
+127	f˸متصل گرداندن§v-7632	MainSemArg	ARG2_OBJ2
+128	f˸متصل گرداندن§v-7632	MainSemArg	ARG3_INSTRUMENT
+129	f˸نگاه کردن§v-21753	MainSemArg	ARG0_AGENT
+130	f˸نگاه کردن§v-21753	MainSemArg	ARG1_THEME
+131	f˸نگاه کردن§v-21753	MainSemArg	ARG2_INSTRUMENT
+132	f˸رسیدن§v-8613	MainSemArg	Arg0_AGENT
+133	f˸رسیدن§v-8613	MainSemArg	ARG2_INSTRUMENT
+134	f˸رسیدن§v-8613	MainSemArg	ARG3_SOURCE_STARTPOINT
+135	f˸رسیدن§v-8613	MainSemArg	ARG4_ENDPOINT
+136	f˸کشیدن§v-19133	MainSemArg	Arg0_AGENT
+137	f˸کشیدن§v-19133	MainSemArg	ARG1_THEME
+138	f˸کشیدن§v-19133	MainSemArg	ARG2_INSTRUMENT

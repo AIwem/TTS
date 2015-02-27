@@ -19,7 +19,7 @@ public class Time  extends SceneElement{
 		if(time == null)
 			return;
 		//TODO: check what else shall I do for this case!
-		MyError.error("I don't know how to merge two times!");
+		MyError.error("I don't know how to merge two times! 1:" + this + " and 2:" + time);
 	}
 
 }

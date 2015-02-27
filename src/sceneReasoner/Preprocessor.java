@@ -1095,6 +1095,8 @@ public class Preprocessor {
 						_ttsEngine.addRelationInstance(relation_name, wsd);
 					}
 				}
+				else
+					descriptor = wsd;
 			}
 			part.set_wsd(argument);
 			
