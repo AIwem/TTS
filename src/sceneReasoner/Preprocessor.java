@@ -53,9 +53,9 @@ public class Preprocessor {
 	 */
 //	private String sentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
 //	private String sentenceInfosFileName = "inputStory/sentenceInfos_SS.txt";
-//	private String sentenceInfosFileName = "inputStory/SentenceInfos12.txt";
+	private String sentenceInfosFileName = "inputStory/SentenceInfos12.txt";
 //	private String sentenceInfosFileName = "inputStory/SentenceInfos2-1.txt";
-	private String sentenceInfosFileName = "inputStory/SentenceInfos3.txt";
+//	private String sentenceInfosFileName = "inputStory/SentenceInfos3.txt";
 
 	public Preprocessor(KnowledgeBase kb, SemanticReasoner re, TTSEngine ttsEngine) {
 		this._kb = kb;
@@ -905,6 +905,21 @@ public class Preprocessor {
 		}		
 		
 		arg1Elem.addDependent(verb, "adjective");
+		
+		//------
+		SentencePart arg0Part = sentenceModel.getArg0SentencePart();
+		
+		if(arg0Part != null){
+			
+			SceneElement arg0Elem = primarySceneModel.getSceneElement(arg0Part._wsd);
+			
+			if(arg0Elem == null){
+				print(arg0Part + " can not be found in primarySceneModel!");
+				return;
+			}
+			
+			arg0Elem.addDependent(verb, "action");			
+		}			
 	}
 
 	/**

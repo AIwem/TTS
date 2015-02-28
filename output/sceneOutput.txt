@@ -1,38 +1,39 @@
 
 primarySceneModel
 roles= [
-	[بچه#n6 (1)= بچه ها role_actions=  [به خواب رفتن#v1 (1)=  به خواب رفته بودند] role_goals=    [] role_emotions= [] role_moods=    []]]
-dynamic_objs= [صدا#n2 (1)=  صدای بلند زنگ‌ها object_actions=  [ شنیده شدن#v1 (1)=  به گوش رسید] object_states=  [بلند#a2 (1)=  بلند, زنگ#n3 (1)=  زنگ‌ها]]
-static_objs= [شب#n3 (1)=  شب کریسمس object_states=  [کریسمس#n1 (1)=  کریسمس]]
-location= [خانه#n10 (1)=  توی یک خانه بزرگ]
-alternativeLocations= [[خانه#n10 (1)=  توی یک خانه بزرگ]]
-time= [یک‌باره#r1 (1)=  یک مرتبه]
-alternativeTimes= [[یک‌باره#r1 (1)=  یک مرتبه]]
+	[پسر#n2 (1)= پسرک role_actions=  [چشم افتادن#v (1)=  چشمش‌افتاد, برداشتن#v1 (1)=  برداشت, شروع کردن#v1 (1)=  شروع کرد] role_goals=    [] role_emotions= [] role_moods=    [خردسال#a1 (1)=  خردسال#a1 (1)]]]
+dynamic_objs= [کبوتر#n1 (1)=  به یک کبوتر زخمی object_actions=  [] object_states=  [یک#n1 (1)=  یک, زخمی#a1 (1)=  زخمی]]
+static_objs= 
+location= [راه#n9 (1)=  در راه خانه]
+alternativeLocations= [[راه#n9 (1)=  در راه خانه], [سمت#n6 (1)=  به سمت خانه]]
+time= [امروز#n1 (1)=  امروز]
+alternativeTimes= [[امروز#n1 (1)=  امروز], [بلافاصله#r1 (1)=  بلافاصله]]
 scene_goals= []
 scene_emotions= []]
 
 
 primarySceneModel
 roles= [
-	[دختر#n3 (1)= دختری role_actions=  [پریدن#v6 (1)=  بیرون پرید, رفتن#v7 (1)=  رفت, ایستادن#v4 (1)=  ایستاده, چسباندن#v3 (1)=  چسبانده بود, نگاه کردن#v2 (1)=  نگاه میکرد] role_goals=    [] role_emotions= [] role_moods=    [صورت#n3 (1)=  با یک صورت کوچولو]]]
+	[پسر#n2 (1)= پسرک role_actions=  [وارد شدن#v2 (1)=  وارد شد, دادن#v5 (1)=  داد, دویدن#v1 (2)=  دوید] role_goals=    [] role_emotions= [] role_moods=    [خردسال#a1 (1)=  خردسال#a1 (1)]]
+	[مادر#n1 (1)= به مادر خود role_actions=  [] role_goals=    [] role_emotions= [] role_moods=    []]]
+dynamic_objs= [کبوتر#n1 (1)=  کبوتر object_actions=  [] object_states=  []]
+static_objs= 
+location= [خانه#n10 (1)=  خانه]
+alternativeLocations= [[خانه#n10 (1)=  خانه], [طرف#n3 (1)=  به طرف اتاقش]]
+time= [امروز#n1 (1)=  امروز]
+alternativeTimes= [[سپس#a1 (1)=  سپس]]
+scene_goals= []
+scene_emotions= []]
+
+
+primarySceneModel
+roles= [
+	[پسر#n2 (1)= پسرک role_actions=  [برداشتن#v1 (2)=  برداشت, شکستن#v4 (1)=  شکست, دور انداختن#v2 (1)=  دور انداخت] role_goals=    [] role_emotions= [] role_moods=    [خردسال#a1 (1)=  خردسال#a1 (1)]]]
 dynamic_objs= 
-static_objs= [پا#n3 (1)=  با یک جفت پای برهنه object_states=  [null=  یک, برهنه#a1 (1)=  برهنه]][نوک#n1 (1)=  نوک بینی اش را object_states=  [بینی#n1 (1)=  بینی اش]][شیشه#n3 (1)=  به شیشه سرد پنجره object_states=  [سرد#a2 (1)=  سرد, پنجره#n1 (1)=  پنجره]][چشم#n2 (1)=  با دو چشم درشتش object_states=  [null=  دو, درشت#a1 (1)=  درشتش]]
-location= [روی#n5 (1)=  از روی تخت]
-alternativeLocations= [[روی#n5 (1)=  از روی تخت], [سمت#n6 (1)=  به سمت پنجره], [بیرون#n2 (1)=  بیرون را]]
-time= [یک‌باره#r1 (1)=  یک مرتبه]
-alternativeTimes= []
-scene_goals= []
-scene_emotions= []]
-
-
-primarySceneModel
-roles= [
-	[بابا نوئل#n1 (1)= بابا نوئل role_actions=  [رسیدن#v8 (1)=  رسید] role_goals=    [] role_emotions= [] role_moods=    [سوار#n1 (1)=  سوار]]]
-dynamic_objs= [گوزن#n1 (1)=  چند تا گوزن object_actions=  [کشیدن#v1 (1)=  میکشیدند] object_states=  []]
-static_objs= [سورتمه#n1 (1)=  بر سورتمه درازی object_states=  [دراز#a3 (1)=  درازی]]
-location= [راه#n9 (1)=  از راه]
-alternativeLocations= [[راه#n9 (1)=  از راه]]
-time= [یک‌باره#r1 (1)=  یک مرتبه]
+static_objs= [تیر#n4 (1)=  تیروکمان خود را object_states=  [شکستن#v4 (1)=  شکست]]
+location= [اتاق#n2 (1)=  اتاقش]
+alternativeLocations= []
+time= [امروز#n1 (1)=  امروز]
 alternativeTimes= []
 scene_goals= []
 scene_emotions= []]
