@@ -1,0 +1,7 @@
+1	من	من	PR	PR	person=1|number=SING|senID=001	4	SBJ	_	_
+2	به	به	PREP	PREP	senID=001	4	VPP	_	_
+3	مدرسه	مدرسه	N	N	number=SING|senID=001	2	POSDEP	_	_
+4	رفتم	رفت#روب,رو	V	V	person=1|number=SING|tma=G|senID=001	0	ROOT	_	_
+5	.	.	PUNC	PUNC	senID=001	4	PUNC	_	_
+
+

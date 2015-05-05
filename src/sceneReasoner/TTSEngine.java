@@ -126,7 +126,7 @@ public class TTSEngine {
 			primarySceneModel.addSentence(sentence);
 			sentence.setScene(primarySceneModel);
 			
-			_pp.preprocessScene(sentence, primarySceneModel, storyModel);
+//			_pp.preprocessScene(sentence, primarySceneModel, storyModel);
 										
 			System.out.println("sentenceModel after preprocess: \n" + sentence + "\n");
 						

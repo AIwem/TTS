@@ -1,0 +1,5 @@
+1	امروز	امروز	ADV	ADV	senID=001
+2	هوا	هوا	N	N	number=SING|senID=001
+3	گرم	گرم	ADJ	ADJ	senID=001
+4	است	است#است	V	V	person=3|number=SING|tma=H|senID=001
+5	.	.	PUNC	PUNC	senID=001

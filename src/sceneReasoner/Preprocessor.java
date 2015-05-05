@@ -1,5 +1,6 @@
 package sceneReasoner;
 
+import ir.ac.itrc.qqa.nlp.PersianTools;
 import ir.ac.itrc.qqa.semantic.enums.DependencyRelationType;
 import ir.ac.itrc.qqa.semantic.enums.POS;
 import ir.ac.itrc.qqa.semantic.enums.SourceType;
@@ -220,6 +221,21 @@ public class Preprocessor {
 		
 		SentenceModel sentence = new SentenceModel(NLsentence);
 		
+		
+		PersianTools persianTool = new PersianTools();
+		
+		String parsedSen = persianTool.parser(NLsentence);
+		
+		for(String p:parsedSen.split("\n"))
+			print(p);
+		
+//		print(parsedSen);
+		
+		print("^^^^^^^^^^^^^^^^^^");
+
+//		SentencePart currentPart = createPart(parsedSen, sentence);
+		
+		/*
 		//this array has information of all parts of this sentence.
 		ArrayList<String> senPartStrs = findSentenceInfos(NLsentence);
 		
@@ -266,18 +282,23 @@ public class Preprocessor {
 
 		//now senParts has all parts' objects of this sentence, so we specify which is subject, object, adverb, ...						
 		sentence.arrageSentenceParts(NLsentence, senParts);
+		*/
+		
+		
 		
 		//adding verb relation to KB.
 		//delayed to preprocessScene after preparing nullSemanticTags
 		/*ArrayList<PlausibleStatement> verbRelations = */ //defineVerbRelation(sentence);
 		
-		//loading verb SemanticArguments.
-		ArrayList<Node> semArgs = loadVerbSemanticArguments(sentence);
-		
+				
 		SentencePart verb = sentence.getVerb();
 		
-		if(verb != null)
+		if(verb != null){
+			//loading verb SemanticArguments.
+			ArrayList<Node> semArgs = loadVerbSemanticArguments(sentence);
 			verb.setCapacities(semArgs);
+		
+		}
 		else
 			MyError.error("this sentnce has no verb! " + sentence);
 		

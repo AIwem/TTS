@@ -1,0 +1,6 @@
+1	من	من	PR	PR	person=1|number=SING|wcID=111111111110111	0	ROOT	_	_
+2	به	به	PREP	PREP	wcID=1110110	0	ROOT	_	_
+3	مدرسه	مدرسه	N	N	number=SING|wcID=1111001000110	0	ROOT	_	_
+4	رفتم	رفت#روب,رو	V	V	person=1|number=SING|tma=G|wcID=101111111	0	ROOT	_	_
+5	.	.	PUNC	PUNC	wcID=000	0	ROOT	_	_
+

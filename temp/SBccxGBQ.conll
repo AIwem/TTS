@@ -1,0 +1,4 @@
+1	تیروکمان	تیروکمان	N	N	number=SING|senID=001
+2	خود	خود	PR	PR	senID=001
+3	را	را	POSTP	POSTP	senID=001
+4	برداشت	برداشت	V	V	person=3|number=SING|tma=G|senID=001
