@@ -283,12 +283,12 @@ public class SceneModel {
 		return null;
 	}
 	
-	public SentencePart findSentencePartofSceneElement(SceneElement sceneElement){
+	public Word findSentencePartofSceneElement(SceneElement sceneElement){
 		if(sceneElement == null)
 			return null;
 		
 		for(SentenceModel sentence:this.sentences){
-			SentencePart part = sentence.getSentencePart(sceneElement._node);
+			Word part = sentence.getSentencePart(sceneElement._node);
 			if(part != null)
 				return part;
 		}

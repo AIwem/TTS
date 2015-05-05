@@ -21,7 +21,7 @@ import model.SceneModel;
 import model.ScenePart;
 import model.SemanticTag;
 import model.SentenceModel;
-import model.SentencePart;
+import model.Word;
 import model.StoryModel;
 import model.SubSemanticTag;
 
@@ -1256,7 +1256,7 @@ public class TTSEngine {
 	 * @return returns a ROLE, DYNAMIC_OBJECT, STATIC_OBJECT, ACTION, LOCATION, TIME, EMOTION, GOAL or UNKNOWN?! no null will be returned!
 	 */
 	
-	public ScenePart whichScenePart(SentencePart sentencePart){
+	public ScenePart whichScenePart(Word sentencePart){
 
 		print(sentencePart + " ............. in whichScenePart ....................");
 		
@@ -1283,7 +1283,7 @@ public class TTSEngine {
 		else{
 			Node pureNode = getPureNode(partNode);
 		
-			sp = getScenePart(pureNode, sentencePart._pos, sentencePart._semanticTag);
+			sp = getScenePart(pureNode, sentencePart._gpos, sentencePart._semanticTag);
 			
 			addTo_seen_sceneParts(pureName, sp);
 		

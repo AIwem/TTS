@@ -30,47 +30,47 @@ public class SentenceModel{
 	/**
 	 * subject(s) of this sentence.
 	 */
-	private ArrayList<SentencePart> subjects = new ArrayList<SentencePart>();
+	private ArrayList<Word> subjects = new ArrayList<Word>();
 	
 	/**
 	 * The only verb of this sentence.
 	 */
-	private SentencePart verb;
+	private Word verb;
 	
 	/**
 	 * object(s) of this sentence, if any.
 	 */
-	private ArrayList<SentencePart> objects = new ArrayList<SentencePart>();
+	private ArrayList<Word> objects = new ArrayList<Word>();
 	
 	/**
 	 * adverb(s) of this sentence, if any.
 	 */
-	private ArrayList<SentencePart> adverbs = new ArrayList<SentencePart>();
+	private ArrayList<Word> adverbs = new ArrayList<Word>();
 	
 	public SentenceModel(String originalSentence){
 		this.NLSentence = originalSentence;			
-		this.subjects = new ArrayList<SentencePart>();
-		this.objects = new ArrayList<SentencePart>();
-		this.adverbs = new ArrayList<SentencePart>();
+		this.subjects = new ArrayList<Word>();
+		this.objects = new ArrayList<Word>();
+		this.adverbs = new ArrayList<Word>();
 	}
 	
 	public SentenceModel(String originalSentence, SceneModel sceneModel){
 		this.NLSentence = originalSentence;
 		this.scene = sceneModel;				
-		this.subjects = new ArrayList<SentencePart>();
-		this.objects = new ArrayList<SentencePart>();
-		this.adverbs = new ArrayList<SentencePart>();
+		this.subjects = new ArrayList<Word>();
+		this.objects = new ArrayList<Word>();
+		this.adverbs = new ArrayList<Word>();
 	}
 	
 	public void setScene(SceneModel scene) {
 		this.scene = scene;
 	}
 	
-	public void setSubjects(ArrayList<SentencePart> subjects) {
+	public void setSubjects(ArrayList<Word> subjects) {
 		this.subjects = subjects;
 	}
 	
-	public void setVerb(SentencePart verb) {
+	public void setVerb(Word verb) {
 		this.verb = verb;
 	}
 	
@@ -79,18 +79,18 @@ public class SentenceModel{
 	 * @param verb verb of this sentence.
 	 */
 	public void setVerb(String verb) {
-		this.verb = new SentencePart(verb, DependencyRelationType.ROOT, this);
+		this.verb = new Word(verb, DependencyRelationType.ROOT, this);
 	}
 	
-	public void setObjects(ArrayList<SentencePart> objects) {
+	public void setObjects(ArrayList<Word> objects) {
 		this.objects = objects;
 	}
 	
-	public void setAdverbs(ArrayList<SentencePart> adverbs) {
+	public void setAdverbs(ArrayList<Word> adverbs) {
 		this.adverbs = adverbs;
 	}
 	
-	public void setPrerparedSentencePart(SentencePart newSentencePart){		
+	public void setPrerparedSentencePart(Word newSentencePart){		
 		if(newSentencePart == null)
 			return;	
 		
@@ -221,18 +221,18 @@ public class SentenceModel{
 		return null;
 	}	
 	
-	public SentencePart getArg0SentencePart(){
+	public Word getArg0SentencePart(){
 		MainSemanticTag arg0 = getArg0();
 		if(arg0 != null){
-			for(SentencePart sbj:subjects)
+			for(Word sbj:subjects)
 				if(sbj != null && sbj._semanticTag != null && sbj._semanticTag.name().equals(arg0.name()))
 					return sbj;
 			
-			for(SentencePart obj:objects)
+			for(Word obj:objects)
 				if(obj != null && obj._semanticTag != null && obj._semanticTag.name().equals(arg0.name()))
 					return obj;
 			
-			for(SentencePart adv:adverbs)
+			for(Word adv:adverbs)
 				if(adv != null && adv._semanticTag != null && adv._semanticTag.name().equals(arg0.name()))
 					return adv;
 		}	
@@ -247,18 +247,18 @@ public class SentenceModel{
 		return null;
 	}
 	
-	public SentencePart getArg1SentencePart(){
+	public Word getArg1SentencePart(){
 		MainSemanticTag arg1 = getArg1();
 		if(arg1 != null){
-			for(SentencePart sbj:subjects)
+			for(Word sbj:subjects)
 				if(sbj != null && sbj._semanticTag != null && sbj._semanticTag.name().equals(arg1.name()))
 					return sbj;
 			
-			for(SentencePart obj:objects)
+			for(Word obj:objects)
 				if(obj != null && obj._semanticTag != null && obj._semanticTag.name().equals(arg1.name()))
 					return obj;
 			
-			for(SentencePart adv:adverbs)
+			for(Word adv:adverbs)
 				if(adv != null && adv._semanticTag != null && adv._semanticTag.name().equals(arg1.name()))
 					return adv;
 		}	
@@ -273,18 +273,18 @@ public class SentenceModel{
 		return null;
 	}
 	
-	public SentencePart getArg2SentencePart() {
+	public Word getArg2SentencePart() {
 		MainSemanticTag arg2 = getArg2();
 		if(arg2 != null){
-			for(SentencePart sbj:subjects)
+			for(Word sbj:subjects)
 				if(sbj != null && sbj._semanticTag != null && sbj._semanticTag.name().equals(arg2.name()))
 					return sbj;
 			
-			for(SentencePart obj:objects)
+			for(Word obj:objects)
 				if(obj != null && obj._semanticTag != null && obj._semanticTag.name().equals(arg2.name()))
 					return obj;
 			
-			for(SentencePart adv:adverbs)
+			for(Word adv:adverbs)
 				if(adv != null && adv._semanticTag != null && adv._semanticTag.name().equals(arg2.name()))
 					return adv;
 		}	
@@ -300,18 +300,18 @@ public class SentenceModel{
 		return null;
 	}
 	
-	public SentencePart getArg3SentencePart() {		
+	public Word getArg3SentencePart() {		
 		MainSemanticTag arg3 = getArg3();
 		if(arg3 != null){
-			for(SentencePart sbj:subjects)
+			for(Word sbj:subjects)
 				if(sbj != null && sbj._semanticTag != null && sbj._semanticTag.name().equals(arg3.name()))
 					return sbj;
 			
-			for(SentencePart obj:objects)
+			for(Word obj:objects)
 				if(obj != null && obj._semanticTag != null && obj._semanticTag.name().equals(arg3.name()))
 					return obj;
 			
-			for(SentencePart adv:adverbs)
+			for(Word adv:adverbs)
 				if(adv != null && adv._semanticTag != null && adv._semanticTag.name().equals(arg3.name()))
 					return adv;
 		}	
@@ -326,18 +326,18 @@ public class SentenceModel{
 		return null;
 	}
 	
-	public SentencePart getArg4SentencePart() {		
+	public Word getArg4SentencePart() {		
 		MainSemanticTag arg4 = getArg4();
 		if(arg4 != null){
-			for(SentencePart sbj:subjects)
+			for(Word sbj:subjects)
 				if(sbj != null && sbj._semanticTag != null && sbj._semanticTag.name().equals(arg4.name()))
 					return sbj;
 			
-			for(SentencePart obj:objects)
+			for(Word obj:objects)
 				if(obj != null && obj._semanticTag != null && obj._semanticTag.name().equals(arg4.name()))
 					return obj;
 			
-			for(SentencePart adv:adverbs)
+			for(Word adv:adverbs)
 				if(adv != null && adv._semanticTag != null && adv._semanticTag.name().equals(arg4.name()))
 					return adv;
 		}	
@@ -352,18 +352,18 @@ public class SentenceModel{
 		return null;
 	}
 	
-	public SentencePart getArg5SentencePart() {
+	public Word getArg5SentencePart() {
 		MainSemanticTag arg5 = getArg5();
 		if(arg5 != null){
-			for(SentencePart sbj:subjects)
+			for(Word sbj:subjects)
 				if(sbj != null && sbj._semanticTag != null && sbj._semanticTag.name().equals(arg5.name()))
 					return sbj;
 			
-			for(SentencePart obj:objects)
+			for(Word obj:objects)
 				if(obj != null && obj._semanticTag != null && obj._semanticTag.name().equals(arg5.name()))
 					return obj;
 			
-			for(SentencePart adv:adverbs)
+			for(Word adv:adverbs)
 				if(adv != null && adv._semanticTag != null && adv._semanticTag.name().equals(arg5.name()))
 					return adv;
 		}	
@@ -374,14 +374,14 @@ public class SentenceModel{
 		return scene;
 	}
 		
-	public ArrayList<SentencePart> getSubjects() {
+	public ArrayList<Word> getSubjects() {
 		return subjects;
 	}
 	
 	/** 
 	 * @return the first subject.
 	 */
-	public SentencePart getFirstSubject(){
+	public Word getFirstSubject(){
 		if(subjects != null && subjects.size() > 0)
 			return subjects.get(0);
 		return null;	
@@ -389,29 +389,29 @@ public class SentenceModel{
 	
 	public ArrayList<String> getSubjectsString() {
 		ArrayList<String> sbjStr = new ArrayList<String>(); 
-		for(SentencePart sbj:subjects)
-			sbjStr.add(sbj._name);			
+		for(Word sbj:subjects)
+			sbjStr.add(sbj._word);			
 		return sbjStr;
 	}
 	
-	public SentencePart getVerb() {
+	public Word getVerb() {
 		return verb;
 	}
 	
 	public String getVerbString() {
 		if(verb != null)
-			return verb._name;
+			return verb._word;
 		return "";
 	}
 
-	public ArrayList<SentencePart> getObjects() {
+	public ArrayList<Word> getObjects() {
 		return objects;
 	}
 	
 	/** 
 	 * @return the first object.
 	 */
-	public SentencePart getFirstObject(){
+	public Word getFirstObject(){
 		if(objects != null && objects.size() > 0)
 			return objects.get(0);
 		return null;		
@@ -419,20 +419,20 @@ public class SentenceModel{
 	
 	public ArrayList<String> getObjectsString() {
 		ArrayList<String> objStr = new ArrayList<String>(); 
-		for(SentencePart obj:objects)
-			objStr.add(obj._name);			
+		for(Word obj:objects)
+			objStr.add(obj._word);			
 		return objStr;
 	}
 
 
-	public ArrayList<SentencePart> getAdverbs() {
+	public ArrayList<Word> getAdverbs() {
 		return adverbs;
 	}
 	
 	/** 
 	 * @return the first adverb.
 	 */
-	public SentencePart getFirstAdverb(){	
+	public Word getFirstAdverb(){	
 		if(adverbs != null && adverbs.size() > 0)
 			return adverbs.get(0);
 		return null;	
@@ -442,8 +442,8 @@ public class SentenceModel{
 	
 	public ArrayList<String> getAdverbsString() {
 		ArrayList<String> advStr = new ArrayList<String>(); 
-		for(SentencePart adv:adverbs)
-			advStr.add(adv._name);			
+		for(Word adv:adverbs)
+			advStr.add(adv._word);			
 		return advStr;
 	}
 	
@@ -451,18 +451,18 @@ public class SentenceModel{
 		return NLSentence;
 	}
 	
-	public ArrayList<SentencePart> getSentencePartsWithSourceNumber(int number) {
-		ArrayList<SentencePart> allPart = new ArrayList<SentencePart>();
+	public ArrayList<Word> getSentencePartsWithSourceNumber(int number) {
+		ArrayList<Word> allPart = new ArrayList<Word>();
 		
-		for(SentencePart sbj:subjects)
+		for(Word sbj:subjects)
 			if(sbj != null && sbj.get_sourceOfSynNum() == number)
 				allPart.add(sbj);
 		
-		for(SentencePart obj:objects)
+		for(Word obj:objects)
 			if(obj != null && obj.get_sourceOfSynNum() == number)
 				allPart.add(obj);
 		
-		for(SentencePart adv:adverbs)
+		for(Word adv:adverbs)
 			if(adv != null && adv.get_sourceOfSynNum() == number)
 				allPart.add(adv);
 		
@@ -477,15 +477,15 @@ public class SentenceModel{
 		
 		ArrayList<SemanticTag> allSemanticTags = new ArrayList<SemanticTag>();
 		
-		for(SentencePart sbj:subjects)
+		for(Word sbj:subjects)
 			if(sbj != null && sbj._semanticTag != null)
 				allSemanticTags.add(sbj._semanticTag);
 		
-		for(SentencePart obj:objects)
+		for(Word obj:objects)
 			if(obj != null && obj._semanticTag != null)
 				allSemanticTags.add(obj._semanticTag);
 		
-		for(SentencePart adv:adverbs)
+		for(Word adv:adverbs)
 			if(adv != null && adv._semanticTag != null)
 				allSemanticTags.add(adv._semanticTag);
 		
@@ -500,7 +500,7 @@ public class SentenceModel{
 		
 		ArrayList<MainSemanticTag> existingMainSemanticTags = new ArrayList<MainSemanticTag>();
 		
-		for(SentencePart sbj:subjects)
+		for(Word sbj:subjects)
 			if(sbj != null && sbj._semanticTag != null)
 				if(sbj._semanticTag.isMainSemanticTag()){
 					MainSemanticTag converted = sbj._semanticTag.convertToMainSemanticTag();
@@ -508,7 +508,7 @@ public class SentenceModel{
 						existingMainSemanticTags.add(converted);
 				}
 		
-		for(SentencePart obj:objects)
+		for(Word obj:objects)
 			if(obj != null && obj._semanticTag != null)
 				if(obj._semanticTag.isMainSemanticTag()){
 					MainSemanticTag converted = obj._semanticTag.convertToMainSemanticTag();
@@ -516,7 +516,7 @@ public class SentenceModel{
 						existingMainSemanticTags.add(converted);
 				}
 		
-		for(SentencePart adv:adverbs)
+		for(Word adv:adverbs)
 			if(adv != null && adv._semanticTag != null)
 				if(adv._semanticTag.isMainSemanticTag()){
 					MainSemanticTag converted = adv._semanticTag.convertToMainSemanticTag();
@@ -536,7 +536,7 @@ public class SentenceModel{
 		
 		ArrayList<SubSemanticTag> allSubSemanticTags = new ArrayList<SubSemanticTag>();
 		
-		for(SentencePart sbj:subjects)
+		for(Word sbj:subjects)
 			if(sbj != null && sbj._semanticTag != null)
 				if(sbj._semanticTag.isSubSemanticTag()){
 					SubSemanticTag converted = sbj._semanticTag.convertToSubSemanticTag();
@@ -544,7 +544,7 @@ public class SentenceModel{
 						allSubSemanticTags.add(converted);				
 				}
 		
-		for(SentencePart obj:objects)
+		for(Word obj:objects)
 			if(obj != null && obj._semanticTag != null)
 				if(obj._semanticTag.isSubSemanticTag()){
 					SubSemanticTag converted = obj._semanticTag.convertToSubSemanticTag();
@@ -552,7 +552,7 @@ public class SentenceModel{
 						allSubSemanticTags.add(converted);
 				}
 		
-		for(SentencePart adv:adverbs)
+		for(Word adv:adverbs)
 			if(adv != null && adv._semanticTag != null)
 				if(adv._semanticTag.isSubSemanticTag()){
 					SubSemanticTag converted = adv._semanticTag.convertToSubSemanticTag();
@@ -573,13 +573,13 @@ public class SentenceModel{
 	 * 
 	 * @param subject
 	 */
-	public void addSingleSubject(SentencePart subject) {
+	public void addSingleSubject(Word subject) {
 		if(subject == null){
 			MyError.error("added subject could not be null");
 			return;
 		}
 		if(this.subjects == null)
-			this.subjects = new ArrayList<SentencePart>();
+			this.subjects = new ArrayList<Word>();
 		this.subjects.add(subject);		
 	}
 		
@@ -593,11 +593,11 @@ public class SentenceModel{
 	 */
 	public void addSubjects(String... subjects) {
 		if(this.subjects == null)
-			this.subjects = new ArrayList<SentencePart>();
+			this.subjects = new ArrayList<Word>();
 		
 		for(String sbj:subjects)
 			if(sbj != null)
-				this.subjects.add(new SentencePart(sbj, DependencyRelationType.SBJ, this));			
+				this.subjects.add(new Word(sbj, DependencyRelationType.SBJ, this));			
 				
 	}
 	
@@ -606,13 +606,13 @@ public class SentenceModel{
 	 * 
 	 * @param object
 	 */
-	public void addSingleObject(SentencePart object) {
+	public void addSingleObject(Word object) {
 		if(object == null){
 			MyError.error("added object could not be null");
 			return;
 		}
 		if(this.objects == null)
-			this.objects = new ArrayList<SentencePart>();
+			this.objects = new ArrayList<Word>();
 		this.objects.add(object);		
 	}
 		
@@ -626,10 +626,10 @@ public class SentenceModel{
 	 */
 	public void addObjects(String... objects) {
 		if(this.objects == null)
-			this.objects = new ArrayList<SentencePart>();
+			this.objects = new ArrayList<Word>();
 		for(String obj:objects)
 			if(obj!= null)
-				this.objects.add(new SentencePart(obj, DependencyRelationType.OBJ, this));		
+				this.objects.add(new Word(obj, DependencyRelationType.OBJ, this));		
 	}
 
 	
@@ -643,13 +643,13 @@ public class SentenceModel{
 	 * 
 	 * @param adverb
 	 */	
-	public void addSingleAdverb(SentencePart adverb) {
+	public void addSingleAdverb(Word adverb) {
 		if(adverb == null){
 			MyError.error("added adverb could not be null");
 			return;
 		}
 		if(this.adverbs == null)
-			this.adverbs = new ArrayList<SentencePart>();
+			this.adverbs = new ArrayList<Word>();
 		this.adverbs.add(adverb);		
 	}
 		
@@ -663,11 +663,11 @@ public class SentenceModel{
 	 */
 	public void addAdverbs(String... adverbs) {
 		if(this.adverbs == null)
-			this.adverbs = new ArrayList<SentencePart>();
+			this.adverbs = new ArrayList<Word>();
 		
 		for(String adv:adverbs)
 			if(adv!= null)
-				this.adverbs.add(new SentencePart(adv, DependencyRelationType.ADVRB, this));
+				this.adverbs.add(new Word(adv, DependencyRelationType.ADVRB, this));
 	}
 	
 	
@@ -688,17 +688,17 @@ public class SentenceModel{
 		return necessarySemArg; 
 	}
 
-	public SentencePart getSentencePart(Node partNode) {		
+	public Word getSentencePart(Node partNode) {		
 		
-		for(SentencePart sbj:subjects)
+		for(Word sbj:subjects)
 			if(sbj != null && sbj._wsd.equalsRelaxed(partNode))
 				return sbj;				
 		
-		for(SentencePart obj:objects)
+		for(Word obj:objects)
 			if(obj != null && obj._wsd.equalsRelaxed(partNode))
 				return obj;
 		
-		for(SentencePart adv:adverbs)
+		for(Word adv:adverbs)
 			if(adv != null && adv._wsd.equalsRelaxed(partNode))
 				return adv;
 		
@@ -708,7 +708,7 @@ public class SentenceModel{
 		return null;
 	}
 	
-	public SentencePart getSentencePart(SemanticTag semanticTag){
+	public Word getSentencePart(SemanticTag semanticTag){
 		if(semanticTag == null)
 			return null;
 		
@@ -721,7 +721,7 @@ public class SentenceModel{
 		return null;	
 	}
 	
-	public SentencePart getSentencePart(MainSemanticTag mainSemanticTag) {
+	public Word getSentencePart(MainSemanticTag mainSemanticTag) {
 		if(mainSemanticTag == null)
 			return null;
 		
@@ -747,19 +747,19 @@ public class SentenceModel{
 	}
 	
 	
-	public SentencePart getSentencePart(SubSemanticTag subSemanticArg) {	
+	public Word getSentencePart(SubSemanticTag subSemanticArg) {	
 		if(subSemanticArg == null)
 			return null;
 			
-		for(SentencePart sbj:subjects)
+		for(Word sbj:subjects)
 			if(sbj != null && sbj._semanticTag != null && sbj._semanticTag.name().equals(subSemanticArg.name()))
 				return sbj;
 		
-		for(SentencePart obj:objects)
+		for(Word obj:objects)
 			if(obj != null && obj._semanticTag != null && obj._semanticTag.name().equals(subSemanticArg.name()))
 				return obj;
 		
-		for(SentencePart adv:adverbs)
+		for(Word adv:adverbs)
 			if(adv != null && adv._semanticTag != null && adv._semanticTag.name().equals(subSemanticArg.name()))
 				return adv;
 		
@@ -776,9 +776,9 @@ public class SentenceModel{
 	 * @param sentence sentence object which is to be completed.
 	 * @param senParts different SentencePart object of this sentence. guaranteed not to be null.
 	 */
-	public void arrageSentenceParts(String NLSentence, ArrayList<SentencePart> senParts) {
+	public void arrageSentenceParts(String NLSentence, ArrayList<Word> senParts) {
 		
-		for(SentencePart part:senParts){
+		for(Word part:senParts){
 			if(part == null)
 				continue;	
 			
@@ -829,7 +829,7 @@ public class SentenceModel{
 		
 		
 		String wsd = "subjects:";		
-		for(SentencePart sbj:subjects)
+		for(Word sbj:subjects)
 			if(sbj._wsd != null)
 				wsd += sbj._wsd.toString() + ", ";
 			else
@@ -842,14 +842,14 @@ public class SentenceModel{
 			wsd += "null";
 	
 		wsd += "\nobjects:";		
-		for(SentencePart obj:objects)
+		for(Word obj:objects)
 			if(obj._wsd != null)
 				wsd += obj._wsd.toString() + ", ";
 			else
 				wsd += "null, ";
 		
 		wsd += "\nadverbs";		
-		for(SentencePart adv:adverbs)			
+		for(Word adv:adverbs)			
 			if(adv._wsd != null)
 				wsd += adv._wsd.toString() + ", ";
 			else

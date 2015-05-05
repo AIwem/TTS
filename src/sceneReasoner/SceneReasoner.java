@@ -7,7 +7,7 @@ import sceneElement.Time;
 import model.MainSemanticTag;
 import model.SceneModel;
 import model.ScenePart;
-import model.SentencePart;
+import model.Word;
 import model.StoryModel;
 import model.SubSemanticTag;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
@@ -366,12 +366,12 @@ public class SceneReasoner {
 								
 									if(candidLoc != null){							
 										
-										SentencePart candidPart = lastScene.findSentencePartofSceneElement(candidLoc);
+										Word candidPart = lastScene.findSentencePartofSceneElement(candidLoc);
 										
 										//if it is ArgM_DIR, then set its core as Location of currentScene.
 										if(candidPart._semanticTag == SubSemanticTag.DIR.convertToSemanticTag()){ 
 											
-											SentencePart innerPart = candidPart.getInnerPart();
+											Word innerPart = candidPart.getInnerPart();
 											
 											if(innerPart != null){
 												print("inner part of " + candidPart +" %%%%%%%%%%%%%%%%%%%%%%%%% " + innerPart);
@@ -379,7 +379,7 @@ public class SceneReasoner {
 												ScenePart scenePart = _ttsEngine.whichScenePart(innerPart);
 												
 												if(scenePart != null || scenePart != ScenePart.UNKNOWN){												
-													currentScene.setLocation(new Location(innerPart._name, innerPart._wsd));
+													currentScene.setLocation(new Location(innerPart._word, innerPart._wsd));
 													print("the lastScene AergM_Dir innerPart" + currentScene.getLocation() +" %%%%%%%%%%%%%%%%%%%%%%%%% has been set!");
 													break;
 												}
@@ -390,7 +390,7 @@ public class SceneReasoner {
 											ScenePart scenePart = _ttsEngine.whichScenePart(candidPart);
 											
 											if(scenePart == ScenePart.LOCATION){
-												currentScene.setLocation(new Location(candidPart._name, candidPart._wsd));
+												currentScene.setLocation(new Location(candidPart._word, candidPart._wsd));
 												print("the lastScene Arg4 " + currentScene.getLocation() +" %%%%%%%%%%%%%%%%%%%%%%%%% has been set!");
 												break;
 											}

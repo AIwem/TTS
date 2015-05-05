@@ -9,109 +9,137 @@ import ir.ac.itrc.qqa.semantic.util.Common;
 import ir.ac.itrc.qqa.semantic.util.MyError;
 
 /**
- * some SentencePart objects together make a sentence. one or multiple SentencePart objects for sentence subject.
- * only one SentencePart object for sentence verb.
- * one or multiple SentencePart objects for sentence object.
- * one or multiple SentencePart objects for sentence adverb.
+ * Some Word instances together make a Phrase and some Phrase instances together make a Sentence.
  * 
- * each SentencePart object holds different information about the single noun/verb or noun-phrase/verb-phrase.
- * information like its name, 
- * its Part-Of-Speech (e.g. NOUN, ADJECTIVE, VERB, ...)
- * its Semantic-Role-Label (e.g. SUBJECT, VERB, OBJECT, ...)
+ * Each Word object holds different information about itself.
+ * information like its _number, _word, _lem, _pos, _synTAg, _semTag, ... 
  *  
  * @author hashemi
  *
  */
-public class SentencePart {
+public class Word {
 	
 	/**
-	 * senteceModel which this part belongs to.
+	 * TODO: check to delete or not!
+	 * senteceModel which this Word belongs to.
 	 */
 	public SentenceModel _senteceModel;
 	
 	/**
-	 * name of this part
+	 * Phrase which this Word belongs to.
 	 */
-	public String _name;
+	public SentenceModel _phrase;
 	
 	/**
-	 * this part Part-Of-Speech.
+	 * number of this Word object in sentence.
 	 */
-	public POS	_pos = null;
+	private int _number = -1;
 	
 	/**
-	 * this part SyntaxTag 
+	 * word String of this Word object.
+	 */
+	public String _word;
+	
+	/**
+	 * lem of this Word object.
+	 */
+	public String _lem;
+	
+	/**
+	 * great Part-Of-Speech of this Word object.
+	 */
+	public POS	_gpos = null;
+	
+	/**
+	 * small Part-Of-Speech of this Word object.
+	 */
+	public POS	_spos = null;
+	
+	/**
+	 * properties of this Word object.
+	 */
+	public String	_props = null;
+	
+	
+	/**
+	 * this Word SyntaxTag 
 	 */
 	public DependencyRelationType _syntaxTag = null;
 	
 	/**
-	 * the number of the source SentencePart of this part's _syntaxTag
+	 * the number of the source Word of this Word's _syntaxTag
 	 */
-	private int _sourceOfSynNum = -1;	
+	private int _srcOfSynTag_number = -1;	
 	
 	/**
-	 * this part Semantic-Role-Label.
+	 * this Word Semantic-Role-Label.
 	 */
 	public SemanticTag _semanticTag = null;
 	
 	/**
-	 * this part Word_Sense_Disambiguation. 
-	 * It means mapping of this part to KB concepts.
+	 * Word_Sense_Disambiguation of this Word object.. 
+	 * It means mapping of this Word to KB concepts.
 	 */
 	public Node _wsd = null;
 	
 	/**
-	 * this part Word_Sense_Disambiguation name. 
+	 * the String name of Word_Sense_Disambiguation of this Word object. 
 	 */
 	public String _wsd_name;
 	
 	/**
-	 * sub_part of this part. for example "کبوتر زخمی" has sub_parts of "کبوتر" and "زخمی".
+	 * TODO: must be deleted!
+	 * sub_part of this Word. for example "کبوتر زخمی" has sub_parts of "کبوتر" and "زخمی".
 	 * we have assumed that sub_parts has depth of 1. It means each sub_part has no sub_part in itself.
 	 */
-	private ArrayList<SentencePart> sub_parts;
+	private ArrayList<Word> sub_parts;
 	
 	/**
-	 * The adjectives of this SentencePart. 
+	 * TODO: check to be deleted or not!
+	 * 
+	 * The adjectives of this Word. 
 	 */
-	private ArrayList<SentencePart> adjectives;
+	private ArrayList<Word> adjectives;
 	
 	/**
-	 * The mozaf_elaih of this SentencePart. 
+	 * TODO: check to be deleted or not!
+	 * 
+	 * The mozaf_elaih of this Word. 
 	 */
-	private ArrayList<SentencePart> mozaf_elaih;
+	private ArrayList<Word> mozaf_elaih;
 	
 //	/**
-//	 * this part dependency in noun-phrase or verb-phrase.
+//	 * this Word dependency in noun-phrase or verb-phrase.
 //	 */
 //	public DEP _dep = null;
 	
 	
 
-	/**
-	 * this part number
-	 */
-	private int _number = -1;
+	
 	
 	
 
 	/**
-	 * capacities of this SentencePart, it can be verb, noun, adjective or ...
+	 * TODO: check to be deleted or not!
+	 * 
+	 * capacities of this Word, it can be verb, noun, adjective or ...
 	 */
 	public ArrayList<Node> capacities = null;
 	
+	
+	
 
-	public SentencePart(String _name, String number, SentenceModel senteceModel) {
-		this._name = _name;		
+	public Word(String _name, String number, SentenceModel senteceModel) {
+		this._word = _name;		
 		this.set_number(number);
 		this._senteceModel = senteceModel;
 	}
 	
 	/**
-	 * @param _name
+	 * @param _word
 	 * @param sentenceModel
 	 */
-	public SentencePart(String number, SentenceModel sentenceModel) {
+	public Word(String number, SentenceModel sentenceModel) {
 		this.set_number(number);;
 		this._senteceModel = sentenceModel;
 	}
@@ -120,8 +148,8 @@ public class SentencePart {
 	 * @param _name
 	 * @param _synTag
 	 */
-	public SentencePart(String _name, DependencyRelationType _synTag, SentenceModel sentenceModel) {
-		this._name = _name;
+	public Word(String _name, DependencyRelationType _synTag, SentenceModel sentenceModel) {
+		this._word = _name;
 		this._syntaxTag = _synTag;
 		this._senteceModel = sentenceModel;
 	}
@@ -135,9 +163,9 @@ public class SentencePart {
 	 * @param sub_parts
 	 * @param sentenceModel 
 	 */
-	public SentencePart(String _name, POS _pos, DependencyRelationType _synTag, SemanticTag semanticTag, Node wsd, ArrayList<SentencePart> sub_parts, SentenceModel sentenceModel) {
-		this._name = _name;		
-		this._pos = _pos;
+	public Word(String _name, POS _pos, DependencyRelationType _synTag, SemanticTag semanticTag, Node wsd, ArrayList<Word> sub_parts, SentenceModel sentenceModel) {
+		this._word = _name;		
+		this._gpos = _pos;
 		this._syntaxTag = _synTag;
 		this._semanticTag = semanticTag;
 		this._wsd = wsd;
@@ -146,7 +174,7 @@ public class SentencePart {
 	}
 	
 	/**
-	 * checks weather this part object _syntaxTag is SBJ or not?
+	 * checks weather this Word object _syntaxTag is SBJ or not?
 	 * @return
 	 */
 	public boolean isSubject(){
@@ -156,7 +184,7 @@ public class SentencePart {
 	}
 	
 	/**
-	 * checks weather this part object _syntaxTag is OBJ or not?
+	 * checks weather this Word object _syntaxTag is OBJ or not?
 	 * @return
 	 */
 	public boolean isObject(){
@@ -166,7 +194,7 @@ public class SentencePart {
 	}
 	
 	/**
-	 * checks weather this part object _syntaxTag is VERB or not?
+	 * checks weather this Word object _syntaxTag is VERB or not?
 	 * @return
 	 */
 	public boolean isVerb(){
@@ -176,7 +204,7 @@ public class SentencePart {
 	}
 	
 	/**
-	 * checks weather this part object _syntaxTag  is ADVERB or not?
+	 * checks weather this Word object _syntaxTag  is ADVERB or not?
 	 * ADVRB: to constraint verbs, nouns, adjectives or ...
 	 * NADV: prepositional complements of nouns
 	 * ADVC: adverbial complements of verbs
@@ -191,7 +219,7 @@ public class SentencePart {
 	}
 	
 	public boolean isAdjective(){
-		if(_pos == POS.ADJECTIVE || _syntaxTag == DependencyRelationType.NPREMOD || _syntaxTag == DependencyRelationType.NPOSTMOD)
+		if(_gpos == POS.ADJECTIVE || _syntaxTag == DependencyRelationType.NPREMOD || _syntaxTag == DependencyRelationType.NPOSTMOD)
 			return true;
 		return false;
 	}
@@ -203,8 +231,8 @@ public class SentencePart {
 	}
 	
 	public boolean isInfinitive() {
-		//TODO: correct this part!
-		if(_name.contains("دویدن"))
+		//TODO: correct this Word!
+		if(_word.contains("دویدن"))
 			return true;
 		return false;
 	}
@@ -219,7 +247,7 @@ public class SentencePart {
 	
 	public boolean hasAdjective(Node adj_node){
 		if(!Common.isEmpty(adjectives))
-			for(SentencePart adj:adjectives)
+			for(Word adj:adjectives)
 				if(adj._wsd != null && adj._wsd.equalsRelaxed(adj_node))
 					return true;
 		return false;		
@@ -231,7 +259,7 @@ public class SentencePart {
 	
 	public boolean hasMozaf_elaih(Node moz_node){
 		if(!Common.isEmpty(mozaf_elaih))
-			for(SentencePart moz:mozaf_elaih)
+			for(Word moz:mozaf_elaih)
 				if(moz._wsd != null && moz._wsd.equalsRelaxed(moz_node))
 					return true;
 		return false;		
@@ -260,69 +288,69 @@ public class SentencePart {
 	 * @param number the number of returned sub_part
 	 * @return
 	 */
-	public SentencePart getSub_part(int number){
+	public Word getSub_part(int number){
 		if(!hasSub_parts()){
 			if(this._number == number)
 				return this;
-			MyError.error(this + " SentencePart hasn't any sub_part");
+			MyError.error(this + " Word hasn't any sub_part");
 			return null;
 		}
 		
-		for(SentencePart p:sub_parts)
+		for(Word p:sub_parts)
 			if(p._number == number)
 				return p;
-		MyError.error(this + " SentencePart hasn't such a sub_part with number " + number);
+		MyError.error(this + " Word hasn't such a sub_part with number " + number);
 		return null;
 	}
 	
-	public ArrayList<SentencePart> getSub_parts() {
+	public ArrayList<Word> getSub_parts() {
 		return sub_parts;
 	}
 	
 	public int get_sourceOfSynNum() {
-		return _sourceOfSynNum;
+		return _srcOfSynTag_number;
 	}
 	
-	public ArrayList<SentencePart> getAdjectives() {
+	public ArrayList<Word> getAdjectives() {
 		return adjectives;
 	}
 	
-	public SentencePart getAdjective(Node adj_node){
+	public Word getAdjective(Node adj_node){
 		if(!Common.isEmpty(adjectives))
-			for(SentencePart adj:adjectives)
+			for(Word adj:adjectives)
 				if(adj._wsd != null && adj._wsd.equalsRelaxed(adj_node))
 					return adj;
 		return null;		
 	}
 	
-	public ArrayList<SentencePart> getMozaf_elaih() {
+	public ArrayList<Word> getMozaf_elaih() {
 		return mozaf_elaih;
 	}
 	
-	public SentencePart getMozaf_elaih(Node moz_node){
+	public Word getMozaf_elaih(Node moz_node){
 		if(!Common.isEmpty(mozaf_elaih))
-			for(SentencePart moz:mozaf_elaih)
+			for(Word moz:mozaf_elaih)
 				if(moz._wsd != null && moz._wsd.equalsRelaxed(moz_node))
 					return moz;
 		return null;		
 	}
 	
-//	public SentencePart getPreSub_part() {
+//	public Word getPreSub_part() {
 //		if(!hasSub_parts())
 //			return null;
 //		
-//		for(SentencePart p:sub_parts)
+//		for(Word p:sub_parts)
 //			if(p._dep == DEP.PRE)
 //				return p;
 //		MyError.error("sub_parts has no PRE part!" + this.getStr());
 //		return null;
 //	}	
 //	
-//	public SentencePart getPostSub_part() {
+//	public Word getPostSub_part() {
 //		if(!hasSub_parts())
 //			return null;
 //		
-//		for(SentencePart p:sub_parts)
+//		for(Word p:sub_parts)
 //			if(p._dep == DEP.POST)
 //				return p;
 //		MyError.error("sub_parts has no POST part!" + this.getStr());
@@ -344,44 +372,44 @@ public class SentencePart {
 		return null;
 	}
 	
-	public SentencePart getRootPart() {
+	public Word getRootPart() {
 		if(_senteceModel == null)
 			return null;
 					
-		SentencePart verb = this._senteceModel.getVerb();
+		Word verb = this._senteceModel.getVerb();
 		
 		if(verb == null)
 			return null;
 		
-		for(SentencePart sPart:this.sub_parts)
-			if(sPart._sourceOfSynNum == verb._number)
+		for(Word sPart:this.sub_parts)
+			if(sPart._srcOfSynTag_number == verb._number)
 				return sPart;
 		
 		return null;
 	}
 	
-	public SentencePart getInnerPart() {
+	public Word getInnerPart() {
 		if(_senteceModel == null)
 			return null;
 					
-		SentencePart verb = this._senteceModel.getVerb();
+		Word verb = this._senteceModel.getVerb();
 		
 		if(verb == null)
 			return null;
 				
-		SentencePart rootPart = getRootPart();
+		Word rootPart = getRootPart();
 		
 		if(rootPart == null)
 			return null;
 		
-		SentencePart found = rootPart; 
+		Word found = rootPart; 
 		
 //		int flag = -1;
 		
 		while(found != null){
 			boolean flag = false;			
-			for(SentencePart sPart:this.sub_parts){				
-				if(sPart._sourceOfSynNum == found._number){
+			for(Word sPart:this.sub_parts){				
+				if(sPart._srcOfSynTag_number == found._number){
 					found = sPart;
 					flag = true;
 					break;
@@ -440,10 +468,10 @@ public class SentencePart {
 	//public String toString() {
  	public String getStr() {		
 		String rs = "name=";
-		if(_name != null) rs += "" + _name; 
+		if(_word != null) rs += "" + _word; 
 		else rs += "-";
 		rs += " POS=";
-		if(_pos != null) rs += "" + _pos;
+		if(_gpos != null) rs += "" + _gpos;
 		else rs += "-";
 		rs += " SYN=";
 		if(_syntaxTag != null) rs += "" + _syntaxTag;
@@ -471,7 +499,7 @@ public class SentencePart {
 	@Override
 	//public String getStr() {
 	public String toString() {
-		return _name;
+		return _word;
 	}
 	
 	public void set_number(String number) {
@@ -483,9 +511,9 @@ public class SentencePart {
 
 	public void set_pos(String pos) {
 		if(pos != null && !pos.equals("") && !pos.equals("-"))
-			this._pos = POS.fromString(pos);
+			this._gpos = POS.fromString(pos);
 		
-		if(_pos == null)
+		if(_gpos == null)
 			MyError.error("bad pos name " + pos);	
 	}
 
@@ -499,9 +527,9 @@ public class SentencePart {
 	
 	public void set_sourceOfSynNum(String sourceOfSynNum) {
 		if(sourceOfSynNum == null || sourceOfSynNum.equals("") || sourceOfSynNum.equals("-"))
-			this._sourceOfSynNum = -1;
+			this._srcOfSynTag_number = -1;
 		else
-			this._sourceOfSynNum = Integer.parseInt(sourceOfSynNum);
+			this._srcOfSynTag_number = Integer.parseInt(sourceOfSynNum);
 	}
 	
 	public void set_semanticTag(String semTag) {
@@ -509,7 +537,7 @@ public class SentencePart {
 			_semanticTag = SemanticTag.fromString(semTag);
 		
 		if(_semanticTag == null)
-			MyError.error("bad semantcTag name " + semTag + " for " + this._name);	
+			MyError.error("bad semantcTag name " + semTag + " for " + this._word);	
 	}
 	
 	public void set_wsd_name(String wsd_name) {
@@ -532,7 +560,7 @@ public class SentencePart {
 		this.capacities = capacities;
 	}
 
-	public void setSub_parts(ArrayList<SentencePart> sub_parts) {
+	public void setSub_parts(ArrayList<Word> sub_parts) {
 		
 		this.sub_parts = sub_parts;
 		
@@ -540,17 +568,17 @@ public class SentencePart {
 		boolean hasAdj = false;
 		
 		if(adjectives == null)
-			adjectives = new ArrayList<SentencePart>();
+			adjectives = new ArrayList<Word>();
 		else
 			hasAdj = true;
 		
 		if(mozaf_elaih == null)
-			mozaf_elaih = new ArrayList<SentencePart>();
+			mozaf_elaih = new ArrayList<Word>();
 		else
 			hasMoz = true;
 		
 		if(sub_parts != null)			
-			for(SentencePart subPart:sub_parts)
+			for(Word subPart:sub_parts)
 				if(subPart.isMozaf_elaih()){
 					System.out.println("first here in setSub_parts!");
 					hasMoz = true;
@@ -571,35 +599,35 @@ public class SentencePart {
 	}
 		
 	
-	public void setAdjectives(ArrayList<SentencePart> adjectives) {
+	public void setAdjectives(ArrayList<Word> adjectives) {
 		this.adjectives = adjectives;
 	}
 	
-	public void setMozaf_elaih(ArrayList<SentencePart> mozaf_elaih) {
+	public void setMozaf_elaih(ArrayList<Word> mozaf_elaih) {
 		this.mozaf_elaih = mozaf_elaih;
 	}
 	
 	/**
 	 * 
 	 * @param adj
-	 * @return an integer, 1 means adj added, 0 means the SentencePart own adjective has merged with adj, and -1 means nothing happened! 
+	 * @return an integer, 1 means adj added, 0 means the Word own adjective has merged with adj, and -1 means nothing happened! 
 	 */
-	public int addAdjective(SentencePart adj){
+	public int addAdjective(Word adj){
 		if(adj == null)
 			return -1;
 		
 		if(adjectives == null)
-			adjectives = new ArrayList<SentencePart>();
+			adjectives = new ArrayList<Word>();
 		
 		if(!hasAdjective(adj._wsd)){
-			System.out.println(adj._wsd + " adj added to " + this._name + "\n");
+			System.out.println(adj._wsd + " adj added to " + this._word + "\n");
 			adjectives.add(adj);
 			return 1;
 		}
 		else{
-			System.out.println(this._name + " has this " + adj._wsd + " adj before! so they will merge \n");
+			System.out.println(this._word + " has this " + adj._wsd + " adj before! so they will merge \n");
 			
-			SentencePart oldAdj = getAdjective(adj._wsd);
+			Word oldAdj = getAdjective(adj._wsd);
 			
 			if(oldAdj != null){
 				oldAdj.mergeWith(adj);			
@@ -611,24 +639,24 @@ public class SentencePart {
 	/**
 	 * 
 	 * @param moz
-	 * @return  an integer, 1 means moz added, 0 means the SentencePart own mozaf_elaih has merged with moz, and -1 means nothing happened!
+	 * @return  an integer, 1 means moz added, 0 means the Word own mozaf_elaih has merged with moz, and -1 means nothing happened!
 	 */
-	public int addMozaf_elaih(SentencePart moz){
+	public int addMozaf_elaih(Word moz){
 		if(moz == null)
 			return -1;
 		
 		if(mozaf_elaih == null)
-			mozaf_elaih = new ArrayList<SentencePart>();
+			mozaf_elaih = new ArrayList<Word>();
 		
 		if(!hasMozaf_elaih(moz._wsd)){
-			System.out.println(moz._wsd + " mozaf added to " + this._name + "\n");
+			System.out.println(moz._wsd + " mozaf added to " + this._word + "\n");
 			mozaf_elaih.add(moz);
 			return 1;
 		}
 		else{
-			System.out.println(this._name + " has this " + moz._wsd + " mozaf before! so they will merge \n");
+			System.out.println(this._word + " has this " + moz._wsd + " mozaf before! so they will merge \n");
 			
-			SentencePart oldMoz = getMozaf_elaih(moz._wsd);
+			Word oldMoz = getMozaf_elaih(moz._wsd);
 			
 			if(oldMoz != null){
 				oldMoz.mergeWith(moz);			
@@ -639,12 +667,12 @@ public class SentencePart {
 	}
 	
 	/**
-	 * this method merges called SentencePart with the input SentencePart, newPart.
-	 * in merging the called SentencePart is main, it means that only when a parameter in 
-	 * called SentencePart is null it is replaced with the newPart SentencePart.
-	 * @param newPart the SentencePart is to be merged with this SentencePart.
+	 * this method merges called Word with the input Word, newWord.
+	 * in merging the called Word is main, it means that only when a parameter in 
+	 * called Word is null it is replaced with the newWord Word.
+	 * @param newWord the Word is to be merged with this Word.
 	 */
-	public void mergeWith(SentencePart newPart){
+	public void mergeWith(Word newPart){
 		if(newPart == null)
 			return;
 		
@@ -652,21 +680,21 @@ public class SentencePart {
 			if(newPart._senteceModel != null)
 				_senteceModel = newPart._senteceModel;
 		
-		if(_name == null || _name.equals(""))
-			if(newPart._name != null && !newPart._name.equals(""))
-				_name = newPart._name;
+		if(_word == null || _word.equals(""))
+			if(newPart._word != null && !newPart._word.equals(""))
+				_word = newPart._word;
 		
-		if(_pos == null || _pos == POS.ANY)
-			if(newPart._pos == null && newPart._pos != POS.ANY)
-				_pos = newPart._pos;
+		if(_gpos == null || _gpos == POS.ANY)
+			if(newPart._gpos == null && newPart._gpos != POS.ANY)
+				_gpos = newPart._gpos;
 		
 		if(_syntaxTag == null || _syntaxTag == DependencyRelationType.ANY)
 			if(newPart._syntaxTag != null && newPart._syntaxTag != DependencyRelationType.ANY)
 				_syntaxTag = newPart._syntaxTag;
 		
-		if(_sourceOfSynNum < 0)
-			if(newPart._sourceOfSynNum >= 0)
-				_sourceOfSynNum = newPart._sourceOfSynNum;
+		if(_srcOfSynTag_number < 0)
+			if(newPart._srcOfSynTag_number >= 0)
+				_srcOfSynTag_number = newPart._srcOfSynTag_number;
 			
 		if(_semanticTag == null)
 			if(newPart._semanticTag != null)
@@ -685,8 +713,8 @@ public class SentencePart {
 				sub_parts = newPart.sub_parts;
 		}
 		else if(!Common.isEmpty(newPart.sub_parts))
-			for(SentencePart sp:sub_parts){
-				SentencePart relSubPart = newPart.getSub_part(sp._number);				
+			for(Word sp:sub_parts){
+				Word relSubPart = newPart.getSub_part(sp._number);				
 				sp.mergeWith(relSubPart);
 			}
 		
@@ -695,8 +723,8 @@ public class SentencePart {
 				adjectives = newPart.adjectives;
 		}
 		else if(!Common.isEmpty(newPart.adjectives))
-			for(SentencePart adj:adjectives){
-				SentencePart relAdj = newPart.getAdjective(adj._wsd);				
+			for(Word adj:adjectives){
+				Word relAdj = newPart.getAdjective(adj._wsd);				
 				adj.mergeWith(relAdj);
 			}				
 		
@@ -705,8 +733,8 @@ public class SentencePart {
 				mozaf_elaih = newPart.mozaf_elaih;
 		}
 		else if(!Common.isEmpty(newPart.mozaf_elaih))
-			for(SentencePart moz:mozaf_elaih){
-				SentencePart relMoz = newPart.getMozaf_elaih(moz._wsd);				
+			for(Word moz:mozaf_elaih){
+				Word relMoz = newPart.getMozaf_elaih(moz._wsd);				
 				moz.mergeWith(relMoz);
 			}				
 		
