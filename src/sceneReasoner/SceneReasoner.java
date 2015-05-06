@@ -7,7 +7,7 @@ import sceneElement.Time;
 import model.MainSemanticTag;
 import model.SceneModel;
 import model.ScenePart;
-import model.Word;
+import model.Word_old;
 import model.StoryModel;
 import model.SubSemanticTag;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
@@ -366,12 +366,12 @@ public class SceneReasoner {
 								
 									if(candidLoc != null){							
 										
-										Word candidPart = lastScene.findSentencePartofSceneElement(candidLoc);
+										Word_old candidPart = lastScene.findSentencePartofSceneElement(candidLoc);
 										
 										//if it is ArgM_DIR, then set its core as Location of currentScene.
 										if(candidPart._semanticTag == SubSemanticTag.DIR.convertToSemanticTag()){ 
 											
-											Word innerPart = candidPart.getInnerPart();
+											Word_old innerPart = candidPart.getInnerPart();
 											
 											if(innerPart != null){
 												print("inner part of " + candidPart +" %%%%%%%%%%%%%%%%%%%%%%%%% " + innerPart);

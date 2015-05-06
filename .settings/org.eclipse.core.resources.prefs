@@ -3,6 +3,7 @@ encoding//kb/backup/injuredPigeon.txt=UTF-8
 encoding//src/model/SceneModel.java=UTF-8
 encoding//src/model/VerbType.java=UTF-8
 encoding//src/model/Word.java=UTF-8
+encoding//src/model/Word_old.java=UTF-8
 encoding//src/sceneReasoner/Preprocessor.java=UTF-8
 encoding//src/sceneReasoner/SceneReasoner.java=UTF-8
 encoding//src/sceneReasoner/TTSEngine.java=UTF-8

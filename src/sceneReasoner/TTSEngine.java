@@ -21,7 +21,8 @@ import model.SceneModel;
 import model.ScenePart;
 import model.SemanticTag;
 import model.SentenceModel;
-import model.Word;
+import model.SentenceModel_old;
+import model.Word_old;
 import model.StoryModel;
 import model.SubSemanticTag;
 
@@ -123,8 +124,8 @@ public class TTSEngine {
 				return;
 			}
 			
-			primarySceneModel.addSentence(sentence);
-			sentence.setScene(primarySceneModel);
+//			primarySceneModel.addSentence(sentence);
+//			sentence.setScene(primarySceneModel);
 			
 //			_pp.preprocessScene(sentence, primarySceneModel, storyModel);
 										
@@ -1256,7 +1257,7 @@ public class TTSEngine {
 	 * @return returns a ROLE, DYNAMIC_OBJECT, STATIC_OBJECT, ACTION, LOCATION, TIME, EMOTION, GOAL or UNKNOWN?! no null will be returned!
 	 */
 	
-	public ScenePart whichScenePart(Word sentencePart){
+	public ScenePart whichScenePart(Word_old sentencePart){
 
 		print(sentencePart + " ............. in whichScenePart ....................");
 		

@@ -25,7 +25,7 @@ public class SceneModel {
 	
 	private StoryModel storyModel;
 	
-	private ArrayList<SentenceModel> sentences = new ArrayList<SentenceModel>();
+	private ArrayList<SentenceModel_old> sentences = new ArrayList<SentenceModel_old>();
 			
 	private ArrayList<Role> roles = new ArrayList<Role>();	
 	
@@ -48,7 +48,7 @@ public class SceneModel {
 	
 	public SceneModel(StoryModel storyModel) {		
 		this.storyModel = storyModel;
-		this.sentences = new ArrayList<SentenceModel>();		
+		this.sentences = new ArrayList<SentenceModel_old>();		
 		this.roles = new ArrayList<Role>();
 		this.static_objects = new ArrayList<StaticObject>();
 		this.dynamic_objescts = new ArrayList<DynamicObject>();
@@ -57,7 +57,7 @@ public class SceneModel {
 	}
 	
 	public SceneModel(){
-		this.sentences = new ArrayList<SentenceModel>();		
+		this.sentences = new ArrayList<SentenceModel_old>();		
 		this.roles = new ArrayList<Role>();
 		this.static_objects = new ArrayList<StaticObject>();
 		this.dynamic_objescts = new ArrayList<DynamicObject>();
@@ -99,7 +99,7 @@ public class SceneModel {
 		return storyModel;
 	}
 
-	public ArrayList<SentenceModel> getSentences() {
+	public ArrayList<SentenceModel_old> getSentences() {
 		return sentences;
 	}
 
@@ -283,12 +283,12 @@ public class SceneModel {
 		return null;
 	}
 	
-	public Word findSentencePartofSceneElement(SceneElement sceneElement){
+	public Word_old findSentencePartofSceneElement(SceneElement sceneElement){
 		if(sceneElement == null)
 			return null;
 		
-		for(SentenceModel sentence:this.sentences){
-			Word part = sentence.getSentencePart(sceneElement._node);
+		for(SentenceModel_old sentence:this.sentences){
+			Word_old part = sentence.getSentencePart(sceneElement._node);
 			if(part != null)
 				return part;
 		}
@@ -296,18 +296,18 @@ public class SceneModel {
 	}
 	//------------------ add   part -------------------
 	
-	public void addSentence(SentenceModel sentence) {
+	public void addSentence(SentenceModel_old sentence) {
 		if(this.sentences == null)
-			this.sentences = new ArrayList<SentenceModel>();
+			this.sentences = new ArrayList<SentenceModel_old>();
 		
 		if(sentence != null)
 			if(!hasSentence(sentence))
 				this.sentences.add(sentence);
 	}
 	
-	public void addAllSentences(ArrayList<SentenceModel> sentences) {
+	public void addAllSentences(ArrayList<SentenceModel_old> sentences) {
 		if(!Common.isEmpty(sentences))
-			for(SentenceModel sen:sentences)
+			for(SentenceModel_old sen:sentences)
 				addSentence(sen);
 	}
 
@@ -569,11 +569,11 @@ public class SceneModel {
 	}
 
 
-	public boolean hasSentence(SentenceModel sentence) {
+	public boolean hasSentence(SentenceModel_old sentence) {
 		if(sentence == null)
 			return false;
 		
-		for(SentenceModel sen:this.sentences)
+		for(SentenceModel_old sen:this.sentences)
 			if(sen == sentence)
 				return true;
 		return false;

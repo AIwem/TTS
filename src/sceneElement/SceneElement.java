@@ -3,7 +3,7 @@ package sceneElement;
 
 
 import model.ScenePart;
-import model.Word;
+import model.Word_old;
 import ir.ac.itrc.qqa.semantic.kb.Node;
 import ir.ac.itrc.qqa.semantic.util.MyError;
 
@@ -43,7 +43,7 @@ public class SceneElement {
 		return _node;
 	}
 	
-	public SceneElement addDependent(Word dependent, String elementType){
+	public SceneElement addDependent(Word_old dependent, String elementType){
 		
 		if(dependent == null){
 			MyError.error("null input parameter for addDependent");
