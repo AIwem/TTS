@@ -1,9 +1,8 @@
 package model;
 
-import java.util.ArrayList;
+
 
 import ir.ac.itrc.qqa.semantic.enums.DependencyRelationType;
-import ir.ac.itrc.qqa.semantic.enums.POS;
 import ir.ac.itrc.qqa.semantic.kb.Node;
 import ir.ac.itrc.qqa.semantic.util.MyError;
 
@@ -63,7 +62,7 @@ public class Word {
 	/**
 	 * the number of the source Word of this Word's _syntaxTag
 	 */
-	private int _srcOfSynTag_number = -1;	
+	public int _srcOfSynTag_number = -1;	
 	
 	/**
 	 * this Word Semantic-Role-Label.
@@ -90,8 +89,8 @@ public class Word {
 	 * @param wStr the String definition of this word as parsed by Syntax Parser.
 	 */
 	public Word(String wStr, SentenceModel sentence) {
-		print(wStr);
-		
+//		print(wStr);
+				
 		String[] parts = wStr.split("(\t)+");
 		
 		if(parts.length != 10){			
@@ -116,7 +115,7 @@ public class Word {
 		
 		//discarding parts[4], [8] and [9]
 		
-//		print(getStr());
+		print(getStr2());
 	}
 	
 	@Override
@@ -171,7 +170,7 @@ public class Word {
 	}
 	
 	public boolean isAdjective(){
-		if(_gPOS == POS.ADJECTIVE || _syntaxTag == DependencyRelationType.NPREMOD || _syntaxTag == DependencyRelationType.NPOSTMOD)
+		if(_gPOS == POS.ADJ || _syntaxTag == DependencyRelationType.NPREMOD || _syntaxTag == DependencyRelationType.NPOSTMOD)
 			return true;
 		return false;
 	}
@@ -215,6 +214,23 @@ public class Word {
 		return rs;
 	}	
 
+ 	//public String toString() {
+ 	 public String getStr2() {
+ 	 		String rs = "" + _number;		
+ 			rs += "\t";
+ 			if(_word != null) rs += "" + _word; 
+ 			else rs += "-";
+ 			rs += "\t";
+ 			if(_gPOS != null) rs += "" + _gPOS;
+ 			else rs += "-";
+ 			rs += "\t";
+ 			if(_syntaxTag != null) rs += "" + _syntaxTag;
+ 			else rs += "-";
+ 			rs += "\t" + _srcOfSynTag_number;
+ 			rs += "\n";
+ 			return rs;
+ 		}
+ 	
 	public void set_number(String number) {
 		if(number == null || number.equals("") || number.equals("-"))
 			this._number = -1;
