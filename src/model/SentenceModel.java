@@ -18,9 +18,14 @@ public class SentenceModel {
 	private String NLSentence;
 	
 	/**
-	 * words of this sentence.
+	 * Words of this sentence.
 	 */
 	private ArrayList<Word> _words = new ArrayList<Word>();
+	
+	/**
+	 * Phrases of this sentence.
+	 */
+	private ArrayList<Phrase> _phrases = new ArrayList<Phrase>();
 	
 	/**
 	 * input parameter words contains String definition of each word of this SentenceModel.
@@ -39,6 +44,23 @@ public class SentenceModel {
 		arrangeWords();
 	}
 	
+	//-------------------- setter part --------------------------
+	/**
+	 * @param scene the scene to set
+	 */	
+	public void setScene(SceneModel scene) {
+		this.scene = scene;
+	}	
+	
+	/**
+	 * @param phrases the _phrases to set
+	 */
+	public void set_phrases(ArrayList<Phrase> phrases) {
+		this._phrases = phrases;
+	}
+	
+	//-------------------- getter part --------------------------
+	
 	public String getOriginalSentence() {
 		return NLSentence;
 	}	
@@ -53,6 +75,20 @@ public class SentenceModel {
 		return null;
 	}
 	
+	/**
+	 * @return the scene
+	 */
+	public SceneModel getScene() {
+		return scene;
+	}
+	
+	/**
+	 * @return the _phrases
+	 */
+	public ArrayList<Phrase> get_phrases() {
+		return _phrases;
+	}
+	
 	private ArrayList<Word> getWordsWithSourceNumber(int number) {
 		
 		ArrayList<Word> allStartingWords = new ArrayList<Word>();		
@@ -63,6 +99,16 @@ public class SentenceModel {
 					allStartingWords.add(wrd);
 			
 		return allStartingWords;
+	}
+	
+	//-------------------- end of getter part --------------------------
+	
+	public void addPhrase(Phrase new_phrase){
+		if(_phrases == null)
+			_phrases = new ArrayList<Phrase>();
+		
+		if(new_phrase != null)
+			_phrases.add(new_phrase);
 	}
 	
 	private void makePhrases(Word phraseHead, ArrayList<Word> phraseWords){
@@ -77,13 +123,8 @@ public class SentenceModel {
 		if(Common.isEmpty(fromThis))
 			return;
 		
-//		for(Word w:fromThis)
-//			if(!phraseWords.contains(w))
-//				phraseWords.add(w);
-		
 		for(Word ph_w:fromThis)					
-			makePhrases(ph_w, phraseWords);			
-	
+			makePhrases(ph_w, phraseWords);
 	}
 	
 	private void arrangeWords(){
@@ -95,37 +136,33 @@ public class SentenceModel {
 		int vNum = verb._number;
 		
 		ArrayList<Word> phraseHeads = getWordsWithSourceNumber(vNum);
-		
-		print("verb num: " + vNum);
-		
-		for(Word w:phraseHeads)
-			print(w._number + "\t" + w._word);
-		
+			
 		if(Common.isEmpty(phraseHeads))
 			return;
 					
+		//------------ detect and generate phrases in this sentence ------------
+		
 		for(Word ph_h:phraseHeads){
 			
 			ArrayList<Word> phraseWords = new ArrayList<Word>();
 			
 			makePhrases(ph_h, phraseWords);
 			
-			print("phrase with head " + ph_h);
+			Phrase ph = new Phrase(ph_h, phraseWords);
 			
-			for(Word w:phraseWords)
-				print(w._number + "\t" + w._word);
-		}
-		
-//		print("phrase words: \n");
-//		
-//		for(Word ph_w:phraseWords)
-//			print(ph_w._number + "\t" + ph_w._word);
-//		 
+			this.addPhrase(ph);
+			
+			print(""+ ph);
+		}		 
 	}
 	
 	private void print(String s){
 		System.out.println(s);
 	}
+
+	
+
+	
 		
 
 }

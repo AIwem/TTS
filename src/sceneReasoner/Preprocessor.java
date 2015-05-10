@@ -227,12 +227,9 @@ public class Preprocessor {
 		String[] word_strs = parsedSen.split("\n");
 		
 		SentenceModel sentence = new SentenceModel(NLsentence, word_strs);
-				
-//		print(parsedSen);
-		
+
 		print("^^^^^^^^^^^^^^^^^^");
 
-//		SentencePart currentPart = createPart(parsedSen, sentence);
 		
 		/*
 		//this array has information of all parts of this sentence.

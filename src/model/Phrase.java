@@ -8,24 +8,14 @@ public class Phrase {
 	
 	private ArrayList<Word> _words = new ArrayList<Word>();
 	
-	private ArrayList<Word> _word_srcs = new ArrayList<Word>();
+//	private ArrayList<Word> _word_srcs = new ArrayList<Word>();
 	
-	
-	
-	public Phrase(Word headWord, int[] word_srcs, Word[] words){
+	public Phrase(Word headWord, ArrayList<Word> words){
 		this.set_headWord(headWord);
-		this.setWords(words);
+		this.set_words(words);
 	}
 	
-	//-------------------- setter parts --------------------------
-	
-	public void setWords(Word... words){
-		if(_words == null)
-			_words = new ArrayList<Word>();
-		for(Word w:words)
-			this._words.add(w);
-	}
-
+	//-------------------- setter part --------------------------
 	/**
 	 * @param _headWord the _headWord to set
 	 */
@@ -33,8 +23,15 @@ public class Phrase {
 		this._headWord = _headWord;
 	}
 	
+	/**
+	 * @param _words the _words to set
+	 */
+	public void set_words(ArrayList<Word> words) {
+		if(words != null)
+			_words = words;		
+	}
 
-	//-------------------- getter parts --------------------------
+	//-------------------- getter part --------------------------
 	
 	/**
 	 * @return the _headWord
@@ -43,5 +40,18 @@ public class Phrase {
 		return _headWord;
 	}
 
+	
+	public ArrayList<Word> get_words() {
+		return _words;
+	}
+
+	@Override
+	public String toString() {
+		String str = "Phrase with head: " + _headWord + " \n";
+		for(Word w:_words)
+			str += w + "  ";
+		return str;
+	}
+	
 }
 

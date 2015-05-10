@@ -124,6 +124,8 @@ public class Word {
 		return _word;
 	}
 	
+	//-------------------- is part --------------------------
+	
 	/**
 	 * checks weather this Word object _syntaxTag is SBJ or not?
 	 * @return
@@ -188,48 +190,7 @@ public class Word {
 		return false;
 	}
 	
-	//public String toString() {
- 	public String getStr() {
- 		String rs = "number=" + _number;		
-		rs += " name=";
-		if(_word != null) rs += "" + _word; 
-		else rs += "-";
-		rs += " POS=";
-		if(_gPOS != null) rs += "" + _gPOS;
-		else rs += "-";
-		rs += " Syn=";
-		if(_syntaxTag != null) rs += "" + _syntaxTag;
-		else rs += "-";
-		rs += " SynSrc=" + _srcOfSynTag_number;
-		rs += " Sem=";
-		if(_semanticTag != null) rs += "" + _semanticTag;
-		else rs += "-";
-		rs += " wsd=";
-		if(_wsd != null) rs += _wsd;
-		else rs += "-";
-		rs += " Wsd_name=";
-		if(_wsd_name != null) rs += _wsd_name;
-		else rs += "-";
-		rs += "\n";
-		return rs;
-	}	
-
- 	//public String toString() {
- 	 public String getStr2() {
- 	 		String rs = "" + _number;		
- 			rs += "\t";
- 			if(_word != null) rs += "" + _word; 
- 			else rs += "-";
- 			rs += "\t";
- 			if(_gPOS != null) rs += "" + _gPOS;
- 			else rs += "-";
- 			rs += "\t";
- 			if(_syntaxTag != null) rs += "" + _syntaxTag;
- 			else rs += "-";
- 			rs += "\t" + _srcOfSynTag_number;
- 			rs += "\n";
- 			return rs;
- 		}
+ 	//-------------------- setter part --------------------------
  	
 	public void set_number(String number) {
 		if(number == null || number.equals("") || number.equals("-"))
@@ -282,6 +243,53 @@ public class Word {
 	public void set_wsd(Node wsd) {
 		this._wsd = wsd;
 	}
+
+	//-------------------- getter part --------------------------
+	
+	//public String toString() {
+ 	public String getStr() {
+ 		String rs = "number=" + _number;		
+		rs += " name=";
+		if(_word != null) rs += "" + _word; 
+		else rs += "-";
+		rs += " POS=";
+		if(_gPOS != null) rs += "" + _gPOS;
+		else rs += "-";
+		rs += " Syn=";
+		if(_syntaxTag != null) rs += "" + _syntaxTag;
+		else rs += "-";
+		rs += " SynSrc=" + _srcOfSynTag_number;
+		rs += " Sem=";
+		if(_semanticTag != null) rs += "" + _semanticTag;
+		else rs += "-";
+		rs += " wsd=";
+		if(_wsd != null) rs += _wsd;
+		else rs += "-";
+		rs += " Wsd_name=";
+		if(_wsd_name != null) rs += _wsd_name;
+		else rs += "-";
+		rs += "\n";
+		return rs;
+	}	
+
+ 	//public String toString() {
+ 	 public String getStr2() {
+ 	 		String rs = "" + _number;		
+ 			rs += "\t";
+ 			if(_word != null) rs += "" + _word; 
+ 			else rs += "-";
+ 			rs += "\t";
+ 			if(_gPOS != null) rs += "" + _gPOS;
+ 			else rs += "-";
+ 			rs += "\t";
+ 			if(_syntaxTag != null) rs += "" + _syntaxTag;
+ 			else rs += "-";
+ 			rs += "\t" + _srcOfSynTag_number;
+ 			rs += "\n";
+ 			return rs;
+ 		}
+ 	 
+
 	
 	private void print(String s){
 		System.out.println(s);
