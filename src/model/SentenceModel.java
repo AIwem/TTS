@@ -65,9 +65,10 @@ public class SentenceModel {
 		return allStartingWords;
 	}
 	
-	private void makePhrases(Word phraseHead, ArrayList<Word> phraseWords, Integer index){
+	private void makePhrases(Word phraseHead, ArrayList<Word> phraseWords){
 		if(phraseHead == null)
 			return;		
+		
 		if(!phraseWords.contains(phraseHead))
 			phraseWords.add(phraseHead);
 		
@@ -76,16 +77,13 @@ public class SentenceModel {
 		if(Common.isEmpty(fromThis))
 			return;
 		
-		for(Word w:fromThis)
-			if(!phraseWords.contains(w))
-				phraseWords.add(w);
+//		for(Word w:fromThis)
+//			if(!phraseWords.contains(w))
+//				phraseWords.add(w);
 		
-		
-		while( (index+1) < phraseWords.size()){
-			index++;
-			Word cur_w = phraseWords.get(index);		
-			makePhrases(cur_w, phraseWords, index);			
-		}	
+		for(Word ph_w:fromThis)					
+			makePhrases(ph_w, phraseWords);			
+	
 	}
 	
 	private void arrangeWords(){
@@ -110,7 +108,7 @@ public class SentenceModel {
 			
 			ArrayList<Word> phraseWords = new ArrayList<Word>();
 			
-			makePhrases(ph_h, phraseWords, 0);
+			makePhrases(ph_h, phraseWords);
 			
 			print("phrase with head " + ph_h);
 			
