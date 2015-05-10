@@ -123,8 +123,19 @@ public class SentenceModel {
 		if(Common.isEmpty(fromThis))
 			return;
 		
-		for(Word ph_w:fromThis)					
+		for(Word ph_w:fromThis){
+			
+			if(ph_w.isAdjective()){
+				System.out.println("first here in makePhrase!");
+				phraseHead.addAdjective(ph_w);
+			}
+			else if(ph_w.isMozaf_elaih()){
+				System.out.println("first here in makePhrase!");
+				phraseHead.addMozaf_elaih(ph_w);
+			}
+			
 			makePhrases(ph_w, phraseWords);
+		}
 	}
 	
 	private void arrangeWords(){

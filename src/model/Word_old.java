@@ -630,6 +630,7 @@ public class Word_old {
 			return -1;
 		}
 	}
+	
 	/**
 	 * 
 	 * @param moz

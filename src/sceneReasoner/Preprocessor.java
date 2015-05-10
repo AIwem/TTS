@@ -23,6 +23,7 @@ import model.MainSemanticTag;
 import model.ScenePart;
 import model.SemanticTag;
 import model.SentenceModel;
+import model.Word;
 import model.Word_old;
 import model.SceneModel;
 import model.SentenceModel_old;
@@ -55,8 +56,8 @@ public class Preprocessor {
 	 */
 //	private String sentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
 //	private String sentenceInfosFileName = "inputStory/sentenceInfos_SS.txt";
-	private String sentenceInfosFileName = "inputStory/SentenceInfos12.txt";
-//	private String sentenceInfosFileName = "inputStory/SentenceInfos2-1.txt";
+//	private String sentenceInfosFileName = "inputStory/SentenceInfos1-2.txt";
+	private String sentenceInfosFileName = "inputStory/SentenceInfos2-2.txt";
 //	private String sentenceInfosFileName = "inputStory/SentenceInfos3.txt";
 
 	public Preprocessor(KnowledgeBase kb, SemanticReasoner re, TTSEngine ttsEngine) {
@@ -155,57 +156,57 @@ public class Preprocessor {
 	}
 	
 	
-//	/**
-//	 * This method gets partStr and return the its equivalent Part object.
-//	 * partStr has all information about current Part. 
-//	 * this information has a format like this:
-//	 * 
-//	 * name:کبوتر را	POS:NOUN	SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:کبوتر#n1	sub_part:2,3	num:
-//	 * name:کبوتر	POS:NOUN	SYN:PREDEP	SRC:3	SEM:ARG1_THEME_P	WSD:کبوتر#n1	sub_part:-		num:2
-//	 * name:را	POS:UNKNOWN	SYN:OBJ		SRC:4	SEM:ARG1_THEME_P	WSD:-		sub_part:-		num:3
-//	 * 
-//	 * @param partStr partStr has all information about current Part.
-//	 * @return equivalent Part Object.
-//	 */
-//	private Word_old createPart(String partStr, SentenceModel_old senteceModel){
-//	
-//		String[] parts = partStr.split("(\t)+");
-//		
-//		if(parts.length != 8){			
-//			MyError.error("Bad sentence information format " + partStr + " parts-num " + parts.length);
-//			return null;
-//		}
-//					
-//		for(int i = 0; i < parts.length; i++)
-//			parts[i] = parts[i].substring(parts[i].indexOf(":")+1);				
-//		
-//		Word_old newPart = new Word_old(parts[0], parts[7], senteceModel);			
-//		
-//		if(parts[1] != null && !parts[1].equals("-"))
-//			newPart.set_pos(parts[1]);
-//			
-//		newPart.set_syntaxTag(parts[2]);
-//		
-//		newPart.set_sourceOfSynNum(parts[3]);
-//		
-//		if(parts[4] != null && !parts[4].equals("-"))
-//			newPart.set_semanticTag(parts[4]);
-//		
-//		newPart.set_wsd_name(parts[5]);
-//		
-//		if(parts[6] != null && !parts[6].equals("-")){				
-//			String[] subs = parts[6].split(",");
-//			
-//			ArrayList<Word_old> subParts = new ArrayList<Word_old>();
-//			for(String s:subs)			
-//				subParts.add(new Word_old(s, senteceModel));
-//			
-//			newPart.setSub_parts(subParts);
-//		}		
-//				
-//		//print(newPart.getStr());
-//		return newPart;		
-//	}
+	/**
+	 * This method gets partStr and return the its equivalent Part object.
+	 * partStr has all information about current Part. 
+	 * this information has a format like this:
+	 * 
+	 * name:کبوتر را	POS:NOUN	SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:کبوتر#n1	sub_part:2,3	num:
+	 * name:کبوتر	POS:NOUN	SYN:PREDEP	SRC:3	SEM:ARG1_THEME_P	WSD:کبوتر#n1	sub_part:-		num:2
+	 * name:را	POS:UNKNOWN	SYN:OBJ		SRC:4	SEM:ARG1_THEME_P	WSD:-		sub_part:-		num:3
+	 * 
+	 * @param partStr partStr has all information about current Part.
+	 * @return equivalent Part Object.
+	 */
+	private Word_old createPart(String partStr, SentenceModel_old senteceModel){
+	
+		String[] parts = partStr.split("(\t)+");
+		
+		if(parts.length != 8){			
+			MyError.error("Bad sentence information format " + partStr + " parts-num " + parts.length);
+			return null;
+		}
+					
+		for(int i = 0; i < parts.length; i++)
+			parts[i] = parts[i].substring(parts[i].indexOf(":")+1);				
+		
+		Word_old newPart = new Word_old(parts[0], parts[7], senteceModel);			
+		
+		if(parts[1] != null && !parts[1].equals("-"))
+			newPart.set_pos(parts[1]);
+			
+		newPart.set_syntaxTag(parts[2]);
+		
+		newPart.set_sourceOfSynNum(parts[3]);
+		
+		if(parts[4] != null && !parts[4].equals("-"))
+			newPart.set_semanticTag(parts[4]);
+		
+		newPart.set_wsd_name(parts[5]);
+		
+		if(parts[6] != null && !parts[6].equals("-")){				
+			String[] subs = parts[6].split(",");
+			
+			ArrayList<Word_old> subParts = new ArrayList<Word_old>();
+			for(String s:subs)			
+				subParts.add(new Word_old(s, senteceModel));
+			
+			newPart.setSub_parts(subParts);
+		}		
+				
+		//print(newPart.getStr());
+		return newPart;		
+	}
 
 	private void print(String s){
 		System.out.println(s);
@@ -230,19 +231,18 @@ public class Preprocessor {
 
 		print("^^^^^^^^^^^^^^^^^^");
 
-		
 		/*
 		//this array has information of all parts of this sentence.
-		ArrayList<String> senPartStrs = findSentenceInfos(NLsentence);
+		ArrayList<String> extraWordInfos = findSentenceInfos(NLsentence);
 		
-		if(senPartStrs == null)
+		if(extraWordInfos == null)
 			return null;
 		
-		ArrayList<SentencePart> senParts = new ArrayList<SentencePart> ();
+		ArrayList<Word> senParts = new ArrayList<Word>();
 		
-		for(int i = 0; i < senPartStrs.size(); i++){
+		for(int i = 0; i < extraWordInfos.size(); i++){
 			
-			String currentPartStr = senPartStrs.get(i);
+			String currentPartStr = extraWordInfos.get(i);
 			
 			SentencePart currentPart = createPart(currentPartStr, sentence);		
 			
@@ -251,9 +251,9 @@ public class Preprocessor {
 			if(currentPart != null && currentPart.hasSub_parts()){
 				ArrayList<SentencePart> subParts = new ArrayList<SentencePart> (currentPart.getSub_parts().size());
 				
-				for(int j = 0; j < currentPart.getSub_parts().size() && (i+1)<senPartStrs.size(); j++){
+				for(int j = 0; j < currentPart.getSub_parts().size() && (i+1)<extraWordInfos.size(); j++){
 					i++;
-					String subPartStr = senPartStrs.get(i);
+					String subPartStr = extraWordInfos.get(i);
 					SentencePart sPart = createPart(subPartStr, sentence);					
 					if(sPart != null)
 						subParts.add(sPart);							
@@ -261,13 +261,11 @@ public class Preprocessor {
 				currentPart.setSub_parts(subParts);							
 			}						
 			senParts.add(currentPart);
-
 			//setting _wsd of currentPart to the proper Node of KB.			
 			if(currentPart.isVerb())
 				//isnewNode parameter is true, because every verb is new a one!
 				allocate_wsd(sentence ,currentPart, true);
 			else
-
 				allocate_wsd(sentence, currentPart, false);
 			
 			if(currentPart._wsd == null)
@@ -275,20 +273,17 @@ public class Preprocessor {
 				MyError.error(currentPart._wsd_name + " couldn't get allocated!");				
 			
 		}
-
 		//now senParts has all parts' objects of this sentence, so we specify which is subject, object, adverb, ...						
 		sentence.arrageSentenceParts(NLsentence, senParts);
-		
-		
-		*/
-		
+*/		
+
 		//adding verb relation to KB.
 		//delayed to preprocessScene after preparing nullSemanticTags
 		/*ArrayList<PlausibleStatement> verbRelations = */ //defineVerbRelation(sentence);
 		
-		/*
+		
 				
-		Word_old verb = sentence.getVerb();
+		Word verb = sentence.getVerb();
 		
 		if(verb != null){
 			//loading verb SemanticArguments.
@@ -298,7 +293,7 @@ public class Preprocessor {
 		}
 		else
 			MyError.error("this sentnce has no verb! " + sentence);
-		*/
+		
 		return sentence;
 		
 	}
@@ -1252,8 +1247,8 @@ public class Preprocessor {
 		return verbRelations;
 	}
 
-	private  ArrayList<Node>  loadVerbSemanticArguments(SentenceModel_old sentence) {
-		Word_old verbPart = sentence.getVerb();
+	private  ArrayList<Node>  loadVerbSemanticArguments(SentenceModel sentence) {
+		Word verbPart = sentence.getVerb();
 		if(verbPart == null)
 			return null;
 		

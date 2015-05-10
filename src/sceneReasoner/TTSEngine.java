@@ -21,7 +21,6 @@ import model.SceneModel;
 import model.ScenePart;
 import model.SemanticTag;
 import model.SentenceModel;
-import model.SentenceModel_old;
 import model.Word_old;
 import model.StoryModel;
 import model.SubSemanticTag;

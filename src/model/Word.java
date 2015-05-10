@@ -2,8 +2,11 @@ package model;
 
 
 
+import java.util.ArrayList;
+
 import ir.ac.itrc.qqa.semantic.enums.DependencyRelationType;
 import ir.ac.itrc.qqa.semantic.kb.Node;
+import ir.ac.itrc.qqa.semantic.util.Common;
 import ir.ac.itrc.qqa.semantic.util.MyError;
 
 /**
@@ -79,6 +82,28 @@ public class Word {
 	 * the String name of Word_Sense_Disambiguation of this Word object. 
 	 */
 	public String _wsd_name;
+	
+	/**
+	 * TODO: check to be deleted or not!
+	 * 
+	 * The adjectives of this Word. 
+	 */
+	private ArrayList<Word> adjectives;
+	
+	/**
+	 * TODO: check to be deleted or not!
+	 * 
+	 * The mozaf_elaih of this Word. 
+	 */	
+	private ArrayList<Word> mozaf_elaih;
+	
+	/**
+	 * TODO: check to be deleted or not!
+	 * 
+	 * capacities of this Word, it can be verb, noun, adjective or ...
+	 */
+	private ArrayList<Node> capacities = null;
+	
 	
 	/**
 	 * This constructor gets an input string in the format 
@@ -243,8 +268,36 @@ public class Word {
 	public void set_wsd(Node wsd) {
 		this._wsd = wsd;
 	}
+	
+	public void setCapacities(ArrayList<Node> capacities) {
+		this.capacities = capacities;
+	}
+	
+	public void setAdjectives(ArrayList<Word> adjectives) {
+		this.adjectives = adjectives;
+	}
+	
+	public void setMozaf_elaih(ArrayList<Word> mozaf_elaih) {
+		this.mozaf_elaih = mozaf_elaih;
+	}
 
 	//-------------------- getter part --------------------------
+	
+	public ArrayList<Node> getCapacities() {
+		return capacities;
+	}
+	
+	public Node getCapacity(String capacity_name) {		
+		if(capacity_name == null || capacity_name.equals(""))
+			return null; 
+			
+		if(!Common.isEmpty(capacities))
+			for(Node cap:capacities)
+				if(capacity_name.equals(cap.getName()))
+					return cap;
+		return null;
+	}
+	
 	
 	//public String toString() {
  	public String getStr() {
@@ -287,9 +340,203 @@ public class Word {
  			rs += "\t" + _srcOfSynTag_number;
  			rs += "\n";
  			return rs;
- 		}
+ 	}
  	 
+ 	public ArrayList<Word> getAdjectives() {
+		return adjectives;
+	}
+ 	 
+ 	public Word getAdjective(Node adj_node){
+		if(!Common.isEmpty(adjectives))
+			for(Word adj:adjectives)
+				if(adj._wsd != null && adj._wsd.equalsRelaxed(adj_node))
+					return adj;
+		return null;		
+	}
+	
+	public ArrayList<Word> getMozaf_elaih() {
+		return mozaf_elaih;
+	}
+	
+	public Word getMozaf_elaih(Node moz_node){
+		if(!Common.isEmpty(mozaf_elaih))
+			for(Word moz:mozaf_elaih)
+				if(moz._wsd != null && moz._wsd.equalsRelaxed(moz_node))
+					return moz;
+		return null;		
+	}
+ 	
+  	//-------------------- add part -----------------------------
+ 	 
+ 	/**
+ 	 * 
+ 	 * @param adj
+ 	 * @return an integer, 1 means adj added, 0 means the Word own adjective has merged with adj, and -1 means nothing happened! 
+ 	 */
+ 	public int addAdjective(Word adj){
+ 		if(adj == null)
+ 			return -1;
+ 		
+ 		if(adjectives == null)
+ 			adjectives = new ArrayList<Word>();
+ 		
+ 		if(!hasAdjective(adj._wsd)){
+ 			System.out.println(adj._wsd + " adj added to " + this._word + "\n");
+ 			adjectives.add(adj);
+ 			return 1;
+ 		}
+ 		else{
+ 			System.out.println(this._word + " has this " + adj._wsd + " adj before! so they will merge \n");
+ 			
+ 			Word oldAdj = getAdjective(adj._wsd);
+ 			
+ 			if(oldAdj != null){
+ 				oldAdj.mergeWith(adj);			
+ 				return 0;
+ 			}
+ 			return -1;
+ 		}
+ 	}
+ 	/**
+ 	 * 
+ 	 * @param moz
+ 	 * @return  an integer, 1 means moz added, 0 means the Word own mozaf_elaih has merged with moz, and -1 means nothing happened!
+ 	 */
+ 	public int addMozaf_elaih(Word moz){
+ 		if(moz == null)
+ 			return -1;
+ 		
+ 		if(mozaf_elaih == null)
+ 			mozaf_elaih = new ArrayList<Word>();
+ 		
+ 		if(!hasMozaf_elaih(moz._wsd)){
+ 			System.out.println(moz._wsd + " mozaf added to " + this._word + "\n");
+ 			mozaf_elaih.add(moz);
+ 			return 1;
+ 		}
+ 		else{
+ 			System.out.println(this._word + " has this " + moz._wsd + " mozaf before! so they will merge \n");
+ 			
+ 			Word oldMoz = getMozaf_elaih(moz._wsd);
+ 			
+ 			if(oldMoz != null){
+ 				oldMoz.mergeWith(moz);			
+ 				return 0;
+ 			}					
+ 			return -1;
+ 		}
+ 	}
+ 	 
+ 	//-------------------- has part -----------------------------
+ 	
+ 	public boolean hasAnyAdjectives(){
+		return !Common.isEmpty(adjectives);
+	}
+	
+	public boolean hasAdjective(Node adj_node){
+		if(!Common.isEmpty(adjectives))
+			for(Word adj:adjectives)
+				if(adj._wsd != null && adj._wsd.equalsRelaxed(adj_node))
+					return true;
+		return false;		
+	}
+	
+	public boolean hasAnyMozaf_elaihs(){
+		return !Common.isEmpty(mozaf_elaih);
+	}
+	
+	public boolean hasMozaf_elaih(Node moz_node){
+		if(!Common.isEmpty(mozaf_elaih))
+			for(Word moz:mozaf_elaih)
+				if(moz._wsd != null && moz._wsd.equalsRelaxed(moz_node))
+					return true;
+		return false;		
+	}
+	
+ 	//-------------------- end of part --------------------------
+	
+	/**
+	 * this method merges called Word with the input Word, newWord.
+	 * in merging the called Word is main, it means that only when a parameter in 
+	 * called Word is null it is replaced with the newWord Word.
+	 * @param newWord the Word is to be merged with this Word.
+	 */
+	public void mergeWith(Word newWord){
+		if(newWord == null)
+			return;
+		
+		if(_senteceModel == null)
+			if(newWord._senteceModel != null)
+				_senteceModel = newWord._senteceModel;
+		
+		if(_word == null || _word.equals(""))
+			if(newWord._word != null && !newWord._word.equals(""))
+				_word = newWord._word;
+		
+		if(_gPOS == null || _gPOS == POS.UNKNOWN)
+			if(newWord._gPOS == null && newWord._gPOS != POS.UNKNOWN)
+				_gPOS = newWord._gPOS;
+		
+		if(_syntaxTag == null || _syntaxTag == DependencyRelationType.ANY)
+			if(newWord._syntaxTag != null && newWord._syntaxTag != DependencyRelationType.ANY)
+				_syntaxTag = newWord._syntaxTag;
+		
+		if(_srcOfSynTag_number < 0)
+			if(newWord._srcOfSynTag_number >= 0)
+				_srcOfSynTag_number = newWord._srcOfSynTag_number;
+			
+		if(_semanticTag == null)
+			if(newWord._semanticTag != null)
+				_semanticTag = newWord._semanticTag;
 
+		if(_wsd == null)
+			if(newWord._wsd != null)
+				_wsd = newWord._wsd;
+		
+		if(_wsd_name == null || _wsd_name.equals(""))
+			if(newWord._wsd_name != null && !newWord.equals(""))
+				_wsd_name = newWord._wsd_name;
+		
+//		if(Common.isEmpty(sub_parts)){
+//			if(!Common.isEmpty(newWord.sub_parts))
+//				sub_parts = newWord.sub_parts;
+//		}
+//		else if(!Common.isEmpty(newWord.sub_parts))
+//			for(Word_old sp:sub_parts){
+//				Word_old relSubPart = newWord.getSub_part(sp._number);				
+//				sp.mergeWith(relSubPart);
+//			}
+		
+		if(Common.isEmpty(adjectives)){
+			if(!Common.isEmpty(newWord.adjectives))
+				adjectives = newWord.adjectives;
+		}
+		else if(!Common.isEmpty(newWord.adjectives))
+			for(Word adj:adjectives){
+				Word relAdj = newWord.getAdjective(adj._wsd);				
+				adj.mergeWith(relAdj);
+			}				
+		
+		if(Common.isEmpty(mozaf_elaih)){
+			if(!Common.isEmpty(newWord.mozaf_elaih))
+				mozaf_elaih = newWord.mozaf_elaih;
+		}
+		else if(!Common.isEmpty(newWord.mozaf_elaih))
+			for(Word moz:mozaf_elaih){
+				Word relMoz = newWord.getMozaf_elaih(moz._wsd);				
+				moz.mergeWith(relMoz);
+			}				
+		
+		if(_number < 0)
+			if(newWord._number >= 0)
+				_number = newWord._number;
+		
+		if(Common.isEmpty(capacities)){
+			if(!Common.isEmpty(newWord.capacities))
+				capacities = newWord.capacities;
+		}
+	}	
+	
 	
 	private void print(String s){
 		System.out.println(s);

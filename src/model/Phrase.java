@@ -1,5 +1,7 @@
 package model;
 
+import ir.ac.itrc.qqa.semantic.util.Common;
+
 import java.util.ArrayList;
 
 public class Phrase {
@@ -24,11 +26,24 @@ public class Phrase {
 	}
 	
 	/**
-	 * @param _words the _words to set
+	 * @param words the words to set
 	 */
 	public void set_words(ArrayList<Word> words) {
-		if(words != null)
-			_words = words;		
+		if(!Common.isEmpty(words))
+			for(Word w:words)
+				add_word(w);
+	}
+	
+	/**
+	 * @param newWord the newWord to be added to this Phrase _words.
+	 */
+	public void add_word(Word newWord) {
+		if(_words == null)
+			_words = new ArrayList<Word>();
+		
+		if(!_words.contains(newWord)){
+			_words.add(newWord);
+		}
 	}
 
 	//-------------------- getter part --------------------------
