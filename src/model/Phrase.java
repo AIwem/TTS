@@ -6,11 +6,14 @@ import java.util.ArrayList;
 
 public class Phrase {
 	
+	/**
+	 * senteceModel which this Phrase belongs to.
+	 */
+	public SentenceModel _senteceModel;
+	
 	private Word _headWord = null;
 	
 	private ArrayList<Word> _words = new ArrayList<Word>();
-	
-//	private ArrayList<Word> _word_srcs = new ArrayList<Word>();
 	
 	public Phrase(Word headWord, ArrayList<Word> words){
 		this.set_headWord(headWord);
@@ -43,6 +46,7 @@ public class Phrase {
 		
 		if(!_words.contains(newWord)){
 			_words.add(newWord);
+			newWord._phrase = this;
 		}
 	}
 

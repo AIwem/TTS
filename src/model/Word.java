@@ -21,7 +21,6 @@ import ir.ac.itrc.qqa.semantic.util.MyError;
 public class Word {
 	
 	/**
-	 * TODO: check to delete or not!
 	 * senteceModel which this Word belongs to.
 	 */
 	public SentenceModel _senteceModel;
@@ -182,7 +181,7 @@ public class Word {
 	}
 	
 	/**
-	 * checks weather this Word object _syntaxTag  is ADVERB or not?
+	 * checks weather this Word object _syntaxTag is ADVERB or not?
 	 * ADVRB: to constraint verbs, nouns, adjectives or ...
 	 * NADV: prepositional complements of nouns
 	 * ADVC: adverbial complements of verbs

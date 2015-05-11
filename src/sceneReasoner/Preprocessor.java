@@ -281,6 +281,7 @@ public class Preprocessor {
 		//delayed to preprocessScene after preparing nullSemanticTags
 		/*ArrayList<PlausibleStatement> verbRelations = */ //defineVerbRelation(sentence);
 		
+		/*
 		
 				
 		Word verb = sentence.getVerb();
@@ -293,7 +294,7 @@ public class Preprocessor {
 		}
 		else
 			MyError.error("this sentnce has no verb! " + sentence);
-		
+		*/
 		return sentence;
 		
 	}
@@ -1166,7 +1167,6 @@ public class Preprocessor {
 		return null;
 	}
 
-	
 	@SuppressWarnings("unused")
 	private void add_adjective_mozaf(SentenceModel_old sentence, Word_old mainPart, Node descriptor, Node referent) {
 		

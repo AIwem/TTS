@@ -10,3 +10,27 @@ alternativeTimes= []
 scene_goals= []
 scene_emotions= []]
 
+
+primarySceneModel
+roles= []
+dynamic_objs= 
+static_objs= 
+location= null
+alternativeLocations= []
+time= null
+alternativeTimes= []
+scene_goals= []
+scene_emotions= []]
+
+
+primarySceneModel
+roles= []
+dynamic_objs= 
+static_objs= 
+location= null
+alternativeLocations= []
+time= null
+alternativeTimes= []
+scene_goals= []
+scene_emotions= []]
+

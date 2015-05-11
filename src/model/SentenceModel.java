@@ -107,8 +107,10 @@ public class SentenceModel {
 		if(_phrases == null)
 			_phrases = new ArrayList<Phrase>();
 		
-		if(new_phrase != null)
+		if(new_phrase != null){
 			_phrases.add(new_phrase);
+			new_phrase._senteceModel = this;
+		}
 	}
 	
 	private void makePhrases(Word phraseHead, ArrayList<Word> phraseWords){

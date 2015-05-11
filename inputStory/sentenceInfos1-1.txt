@@ -2,107 +2,103 @@ sentence:پسرک امروز در راه خانه چشمش به یک کبوتر 
 
 name:پسرک			SEM:ARG0_EXPERIENCER	WSD:پسر#n2_وضعیت سنی#a_خردسال#a1	num:1
 
-name:امروز			SEM:ArgM_TMP			WSD:امروز#n1						num:2
+name:امروز			SEM:ArgM_TMP			WSD:امروز#n1				num:2
 
-name:در راه خانه	SEM:ArgM_DIR			WSD:4_mozaf#n_5						num:
-name:در				SEM:ArgM_DIR_P			WSD:-								num:3
-name:راه			SEM:ArgM_DIR_P			WSD:راه#n9							num:4
-name:خانه			SEM:ArgM_DIR_P			WSD:خانه#n10						num:5
+name:در_Phrase		SEM:-					WSD:4_mozaf#n_5				num:
+name:در				SEM:-					WSD:-						num:3
+name:راه			SEM:ArgM_DIR			WSD:راه#n9					num:4
+name:خانه			SEM:-					WSD:خانه#n10				num:5
 
-name:به یک کبوتر زخمی	SEM:ARG1_THEME			WSD:9_وضعیت سلامتی#a_10			num:
-name:به				SEM:ARG1_THEME_P		WSD:-								num:7
-name:یک				SEM:ARG1_THEME_P		WSD:یک#n1							num:8
-name:کبوتر			SEM:ARG1_THEME_P		WSD:کبوتر#n1						num:9
-name:زخمی			SEM:ARG1_THEME_P	WSD:زخمی#a1								num:10
+name:به_Phrase		SEM:-					WSD:9_وضعیت سلامتی#a_10		num:
+name:به				SEM:					WSD:-						num:7
+name:یک				SEM:					WSD:یک#n1					num:8
+name:کبوتر			SEM:ARG1_THEME			WSD:کبوتر#n1				num:9
+name:زخمی			SEM:-					WSD:زخمی#a1					num:10
 
-name:چشمش‌افتاد		SEM:-					WSD:چشم افتادن#v					num:
-name:چشمش			SEM:-					WSD:-								num:6
-name:افتاد			SEM:-					WSD:-								num:11
+name:چشمش‌افتاد		SEM:-					WSD:چشم افتادن#v?			num:
+name:چشمش			SEM:-					WSD:-						num:6
+name:افتاد			SEM:-					WSD:چشم افتادن#v			num:11
 
 #------------------------------------------------------
 sentence:بلافاصله کبوتر را بردشت
 
-name:بلافاصله		POS:ADVERB		SYN:ADVRB	SRC:4	SEM:ArgM_TMP		WSD:بلافاصله#r1			sub_part:-				num:1
+name:بلافاصله		SEM:ArgM_TMP			WSD:بلافاصله#r1				num:1
 
-name:کبوتر را		POS:NOUN		SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:کبوتر#n1			sub_part:2,3			num:
-name:کبوتر			POS:NOUN		SYN:PREDEP	SRC:3	SEM:ARG1_THEME_P	WSD:کبوتر#n1			sub_part:-				num:2
-name:را				POS:UNKNOWN		SYN:OBJ		SRC:4	SEM:ARG1_THEME_P	WSD:-					sub_part:-				num:3
+name:کبوتر			SEM:ARG1_THEME			WSD:کبوتر#n1				num:2
+name:را				SEM:-					WSD:-						num:3
 
-name:برداشت			POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:برداشتن#v1			sub_part:-				num:4
+name:برداشت			PSEM:-					WSD:برداشتن#v1				num:4
 
 #------------------------------------------------------
 sentence:شروع به دویدن به سمت خانه کرد
 
-name:شروع کرد		POS:VERB		SYN:ROOT	SRC:	SEM:-				WSD:شروع کردن#v1		sub_part:1,7			num:
-name:شروع			POS:NOUN		SYN:NVE		SRC:7	SEM:-				WSD:-					sub_part:-				num:1
-name:کرد			POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:-					sub_part:-				num:7
+name:شروع کرد		SEM:-					WSD:شروع کردن#v1?			num:
+name:شروع			SEM:-					WSD:-						num:1
+name:کرد			SEM:-					WSD:شروع کردن#v1			num:7
 
-name:به دویدن		POS:UNKNOWN		SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:دویدن#v1			sub_part:2,3			num:
-name:به				POS:UNKNOWN		SYN:NPP		SRC:7	SEM:ARG1_THEME_P	WSD:-					sub_part:-				num:2
-name:دویدن			POS:NOUN		SYN:POSDEP	SRC:2	SEM:ARG1_THEME_P	WSD:دویدن#v1			sub_part:-				num:3
+name:به دویدن		SEM:-					WSD:-						num:
+name:به				SEM:-					WSD:-						num:2
+name:دویدن			SEM:ARG1_THEME			WSD:دویدن#v1				num:3
 
-name:به سمت خانه	POS:NOUN		SYN:ADVRB	SRC:	SEM:ArgM_DIR		WSD:5_mozaf#n_6			sub_part:4,5,6			num:
-name:به				POS:UNKNOWN		SYN:NPP		SRC:3	SEM:ArgM_DIR_P		WSD:-					sub_part:-				num:4
-name:سمت			POS:NOUN		SYN:POSDEP	SRC:4	SEM:ArgM_DIR_P		WSD:سمت#n6				sub_part:-				num:5
-name:خانه			POS:NOUN		SYN:MOZ		SRC:5	SEM:ArgM_DIR_P		WSD:خانه#n10			sub_part:-				num:6
+name:به_Phrae		SEM:-					WSD:5_mozaf#n_6				num:
+name:به				SEM:-					WSD:-						num:4
+name:سمت			SEM:ArgM_DIR			WSD:سمت#n6					num:5
+name:خانه			SEM:-					WSD:خانه#n10				num:6
 
 #------------------------------------------------------
 sentence:وارد خانه شد
 
-name:خانه			SEM:ARG4_ENDPOINT	WSD:خانه#n10			num:2
+name:خانه			SEM:ARG4_ENDPOINT	WSD:خانه#n10					num:2
 
-name:وارد شد		SEM:-				WSD:وارد شدن#v2			num:
-name:وارد			SEM:-				WSD:-					num:1
-name:شد				SEM:-				WSD:-					num:3
+name:وارد شد		SEM:-				WSD:وارد شدن#v2					num:
+name:وارد			SEM:-				WSD:-							num:1
+name:شد				SEM:-				WSD:-							num:3
 
 #------------------------------------------------------
 sentence:کبوتر را به مادر خود داد
 
-name:کبوتر را		SEM:ARG1_THEME		WSD:کبوتر#n1			num:
+name:کبوتر را		SEM:-				WSD:کبوتر#n1					num:
+name:کبوتر			SEM:ARG1_THEME		WSD:کبوتر#n1					num:1
+name:را				SEM:-				WSD:-							num:2
 
-name:به مادر خود	SEM:ARG2_OBJ2		WSD:4_mozaf#n_5			num:
+name:به مادر خود	SEM:-				WSD:4_mozaf#n_5					num:
+name:به				SEM:-				WSD:-							num:3
+name:مادر			SEM:ARG2_OBJ2		WSD:مادر#n1						num:4
+name:خود			SEM:-				WSD:خود#n3						num:5
 
-
-
-name:کبوتر			SEM:ARG1_THEME		WSD:کبوتر#n1			num:1
-name:را				SEM:-				WSD:-					num:2
-
-name:به				SEM:-				WSD:4_mozaf#n_5			num:3
-name:مادر			SEM:ARG2_OBJ2		WSD:مادر#n1				num:4
-name:خود			SEM:-				WSD:خود#n3				num:5
-
-name:داد			SEM:-				WSD:دادن#v5				num:6
+name:داد			SEM:-				WSD:دادن#v5						num:6
 
 #------------------------------------------------------
 sentence:سپس به طرف اتاقش دوید
-name:سپس			POS:UNKNOWN		SYN:ADVRB	SRC:5	SEM:ArgM_TMP		WSD:سپس#a1			sub_part:-				num:1
 
-name:به طرف اتاقش	POS:NOUN		SYN:ADVRB	SRC:	SEM:ArgM_DIR		WSD:3_mozaf#n_4		sub_part:2,3,4			num:
-name:به				POS:UNKNOWN		SYN:VPP		SRC:5	SEM:ArgM_DIR_P		WSD:-				sub_part:-				num:2
-name:طرف			POS:NOUN		SYN:POSDEP	SRC:2	SEM:ArgM_DIR_P		WSD:طرف#n3			sub_part:-				num:3
-name:اتاقش			POS:NOUN		SYN:MOZ		SRC:3	SEM:ArgM_DIR_P		WSD:اتاق#n2			sub_part:-				num:4
+name:سپس			SEM:ArgM_TMP		WSD:سپس#a1						num:1
 
-name:دوید			POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:دویدن#v1		sub_part:-				num:5
+name:به طرف اتاقش	SEM:-				WSD:3_mozaf#n_4					num:
+name:به				SEM:-				WSD:-							num:2
+name:طرف			SEM:ArgM_DIR		WSD:طرف#n3						num:3
+name:اتاقش			SEM:-				WSD:اتاق#n2						num:4
+
+name:دوید			SEM:-				WSD:دویدن#v1					num:5
 
 #------------------------------------------------------
 sentence:تیروکمان خود را برداشت
 
-name:تیروکمان خود را	POS:NOUN	SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:1_mozaf3n_2		sub_part:1,2,3			num:
-name:تیروکمان		POS:NOUN		SYN:PREDEP	SRC:3	SEM:ARG1_THEME_P	WSD:تیر#n4			sub_part:-				num:1
-name:خود			POS:NOUN		SYN:MOZ		SRC:2	SEM:ARG1_THEME_P	WSD:خود#n3			sub_part:-				num:2
-name:را				POS:UNKNOWN		SYN:OBJ		SRC:4	SEM:ARG1_THEME_P	WSD:-				sub_part:-				num:3
+name:تیروکمان خود را	SEM:-			WSD:1_mozaf3n_2					num:
+name:تیروکمان		SEM:ARG1_THEME		WSD:تیر#n4						num:1
+name:خود			SEM:-				WSD:خود#n3						num:2
+name:را				SEM:-				WSD:-							num:3
 
-name:برداشت			POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:برداشتن#v1		sub_part:-				num:4
+name:برداشت			SEM:-				WSD:برداشتن#v1					num:4
 
 #------------------------------------------------------
 sentence:شکست
 
-name:شکست			POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:شکستن#v4		sub_part:-				num:1
+name:شکست			SEM:-				WSD:شکستن#v4					num:1
 
 #------------------------------------------------------
 sentence:دور انداخت
 
-name:دور انداخت		POS:VERB		SYN:ROOT	SRC:	SEM:-				WSD:دور انداختن#v2	sub_part:1,2			num:
-name:دور			POS:NOUN		SYN:NVE		SRC:2	SEM:-				WSD:-				sub_part:-				num:1
-name:انداخت			POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:-				sub_part:-				num:2
+name:دور انداخت		SEM:-				WSD:دور انداختن#v2				num:
+name:دور			SEM:-				WSD:-							num:1
+name:انداخت			SEM:-				WSD:-							num:2
 
