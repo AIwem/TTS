@@ -57,11 +57,18 @@ public class SentenceModel {
 	 */
 	public void set_phrases(ArrayList<Phrase> phrases) {
 		this._phrases = phrases;
+	}	
+
+	/**
+	 * @param words the words to set
+	 */
+	public void set_words(ArrayList<Word> words) {
+		this._words = words;
 	}
 	
 	//-------------------- getter part --------------------------
 	
-	public String getOriginalSentence() {
+	public String getNLSentence() {
 		return NLSentence;
 	}	
 
@@ -88,6 +95,41 @@ public class SentenceModel {
 	public ArrayList<Phrase> get_phrases() {
 		return _phrases;
 	}
+	
+	/**
+	 * @return the _words
+	 */
+	public ArrayList<Word> get_words() {
+		return _words;
+	}
+	
+	/**
+	 * 
+	 * @param word_name the Word of this SentenceModel with _wordName word_name.
+	 * @return 
+	 */
+	public Word get_word(String word_name) {
+		if(!Common.isEmpty(_words))
+			for(Word w:_words)
+				if(w._wordName.equalsIgnoreCase(word_name))
+					return w;
+		return null;
+	}
+	
+	
+	/**
+	 * 
+	 * @param word_number the Word of this SentenceModel with _number word_number.
+	 * @return 
+	 */
+	public Word get_word(int word_number) {
+		if(!Common.isEmpty(_words))
+			for(Word w:_words)
+				if(w._number == word_number)
+					return w;
+		return null;
+	}
+	
 	
 	private ArrayList<Word> getWordsWithSourceNumber(int number) {
 		

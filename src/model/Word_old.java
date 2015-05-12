@@ -130,7 +130,7 @@ public class Word_old {
 	}
 	
 	/**
-	 * @param _word
+	 * @param _wordName
 	 * @param sentenceModel
 	 */
 	public Word_old(String number, SentenceModel_old sentenceModel) {

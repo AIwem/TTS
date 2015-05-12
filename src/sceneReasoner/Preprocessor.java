@@ -56,8 +56,8 @@ public class Preprocessor {
 	 */
 //	private String sentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
 //	private String sentenceInfosFileName = "inputStory/sentenceInfos_SS.txt";
-//	private String sentenceInfosFileName = "inputStory/SentenceInfos1-2.txt";
-	private String sentenceInfosFileName = "inputStory/SentenceInfos2-2.txt";
+	private String sentenceInfosFileName = "inputStory/SentenceInfos1-2.txt";
+//	private String sentenceInfosFileName = "inputStory/SentenceInfos2-2.txt";
 //	private String sentenceInfosFileName = "inputStory/SentenceInfos3.txt";
 
 	public Preprocessor(KnowledgeBase kb, SemanticReasoner re, TTSEngine ttsEngine) {
@@ -157,55 +157,44 @@ public class Preprocessor {
 	
 	
 	/**
-	 * This method gets partStr and return the its equivalent Part object.
-	 * partStr has all information about current Part. 
-	 * this information has a format like this:
+	 * This method gets extraWordInfo and completes that Word instance in the sentenceModel.
+	 * extraWordInfo has a format like this:
 	 * 
-	 * name:کبوتر را	POS:NOUN	SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:کبوتر#n1	sub_part:2,3	num:
-	 * name:کبوتر	POS:NOUN	SYN:PREDEP	SRC:3	SEM:ARG1_THEME_P	WSD:کبوتر#n1	sub_part:-		num:2
-	 * name:را	POS:UNKNOWN	SYN:OBJ		SRC:4	SEM:ARG1_THEME_P	WSD:-		sub_part:-		num:3
+	 * name:پسرک			SEM:ARG0_EXPERIENCER	WSD:پسر#n2_وضعیت سنی#a_خردسال#a1	num:1
+	 * name:کبوتر			SEM:ARG1_THEME			WSD:کبوتر#n1					num:7
 	 * 
-	 * @param partStr partStr has all information about current Part.
-	 * @return equivalent Part Object.
+	 * @param extraWordInfo has information about Semantic Argument and WSD of current Word.
+	 * @return completed Word instance in the sentenceModel.
 	 */
-	private Word_old createPart(String partStr, SentenceModel_old senteceModel){
+	private Word completeWordInfo(String extraWordInfo, SentenceModel senteceModel){
 	
-		String[] parts = partStr.split("(\t)+");
+		String[] parts = extraWordInfo.split("(\t)+");
 		
-		if(parts.length != 8){			
-			MyError.error("Bad sentence information format " + partStr + " parts-num " + parts.length);
+		if(parts.length != 4){			
+			MyError.error("Bad Word information format " + extraWordInfo + " parts-num " + parts.length);
 			return null;
 		}
 					
 		for(int i = 0; i < parts.length; i++)
 			parts[i] = parts[i].substring(parts[i].indexOf(":")+1);				
 		
-		Word_old newPart = new Word_old(parts[0], parts[7], senteceModel);			
+		Word sentenceWord = senteceModel.get_word(parts[0]);
 		
-		if(parts[1] != null && !parts[1].equals("-"))
-			newPart.set_pos(parts[1]);
+		if(sentenceWord != null){		
+					
+			if(parts[1] != null && !parts[1].equals("-"))
+				sentenceWord.set_semanticTag(parts[1]);
 			
-		newPart.set_syntaxTag(parts[2]);
-		
-		newPart.set_sourceOfSynNum(parts[3]);
-		
-		if(parts[4] != null && !parts[4].equals("-"))
-			newPart.set_semanticTag(parts[4]);
-		
-		newPart.set_wsd_name(parts[5]);
-		
-		if(parts[6] != null && !parts[6].equals("-")){				
-			String[] subs = parts[6].split(",");
-			
-			ArrayList<Word_old> subParts = new ArrayList<Word_old>();
-			for(String s:subs)			
-				subParts.add(new Word_old(s, senteceModel));
-			
-			newPart.setSub_parts(subParts);
+			sentenceWord.set_wsd_name(parts[2]);
+		}
+		else{
+			MyError.error("compelte درـPhrase");
+			//TODO: complete!!!!!!!!!!!!!!!
+			String ph_headStr = parts[0];
+			print("************************** " + parts[0]);
 		}		
-				
-		//print(newPart.getStr());
-		return newPart;		
+		
+		return sentenceWord;		
 	}
 
 	private void print(String s){
@@ -231,51 +220,64 @@ public class Preprocessor {
 
 		print("^^^^^^^^^^^^^^^^^^");
 
-		/*
+		
 		//this array has information of all parts of this sentence.
 		ArrayList<String> extraWordInfos = findSentenceInfos(NLsentence);
 		
 		if(extraWordInfos == null)
 			return null;
 		
-		ArrayList<Word> senParts = new ArrayList<Word>();
+		//----------
+		
+//		for(Word sentWord:sentence.get_words()){
+//			
+//		}
+		
+		//----------
+		
+//		ArrayList<Word> senParts = new ArrayList<Word>();
 		
 		for(int i = 0; i < extraWordInfos.size(); i++){
 			
-			String currentPartStr = extraWordInfos.get(i);
+			String currentWordInfo = extraWordInfos.get(i);
 			
-			SentencePart currentPart = createPart(currentPartStr, sentence);		
+			Word currentWord = completeWordInfo(currentWordInfo, sentence);
 			
-			//it means next line are informations of sub_parts of this current_part.
-			// we have assumed that sub_parts has depth of 1. It means each sub_part has no sub_part in itself.
-			if(currentPart != null && currentPart.hasSub_parts()){
-				ArrayList<SentencePart> subParts = new ArrayList<SentencePart> (currentPart.getSub_parts().size());
-				
-				for(int j = 0; j < currentPart.getSub_parts().size() && (i+1)<extraWordInfos.size(); j++){
-					i++;
-					String subPartStr = extraWordInfos.get(i);
-					SentencePart sPart = createPart(subPartStr, sentence);					
-					if(sPart != null)
-						subParts.add(sPart);							
-				}
-				currentPart.setSub_parts(subParts);							
-			}						
-			senParts.add(currentPart);
+			if(currentWord == null){
+				MyError.error("compelte درـPhrase");
+			}
+			
+//			//it means next line are informations of sub_parts of this current_part.
+//			// we have assumed that sub_parts has depth of 1. It means each sub_part has no sub_part in itself.
+//			if(currentPart != null && currentPart.hasSub_parts()){
+//				ArrayList<SentencePart> subParts = new ArrayList<SentencePart> (currentPart.getSub_parts().size());
+//				
+//				for(int j = 0; j < currentPart.getSub_parts().size() && (i+1)<extraWordInfos.size(); j++){
+//					i++;
+//					String subPartStr = extraWordInfos.get(i);
+//					SentencePart sPart = completeWordInfo(subPartStr, sentence);					
+//					if(sPart != null)
+//						subParts.add(sPart);							
+//				}
+//				currentPart.setSub_parts(subParts);							
+//			}						
+//			senParts.add(currentPart);
+			
 			//setting _wsd of currentPart to the proper Node of KB.			
-			if(currentPart.isVerb())
+			if(currentWord.isVerb())
 				//isnewNode parameter is true, because every verb is new a one!
-				allocate_wsd(sentence ,currentPart, true);
+				allocate_wsd(sentence ,currentWord, true);
 			else
-				allocate_wsd(sentence, currentPart, false);
+				allocate_wsd(sentence, currentWord, false);
 			
-			if(currentPart._wsd == null)
+			if(currentWord._wsd == null)
 //				print(currentPart._wsd_name + " couldn't get allocated!");
-				MyError.error(currentPart._wsd_name + " couldn't get allocated!");				
+				MyError.error(currentWord._wsd_name + " couldn't get allocated!");				
 			
 		}
 		//now senParts has all parts' objects of this sentence, so we specify which is subject, object, adverb, ...						
-		sentence.arrageSentenceParts(NLsentence, senParts);
-*/		
+//		sentence.arrageSentenceParts(NLsentence, senParts);
+		
 
 		//adding verb relation to KB.
 		//delayed to preprocessScene after preparing nullSemanticTags
@@ -1000,34 +1002,34 @@ public class Preprocessor {
 	 * if part's wsd_name has just one part, it is the main concept name, so it must directly maps to a node in _kb.
 	 * if part's wsd_name has more than one part which includes one MAIN and probably a PRE or POST, so it must be mapped to a plausible statement in a _kb.
 	 * 
-	 * @param part the part its wsd parameter to be set.
+	 * @param word the part its wsd parameter to be set.
 	 * @param isNewNode is this part a new instance or is is the same as seen before.
 	 * @param synTag the SyntaxTag of this node in the sentence.
 	 */
-	private void allocate_wsd(SentenceModel_old sentence, Word_old part, boolean isNewNode){
-		if(part == null)
+	private void allocate_wsd(SentenceModel sentence, Word word, boolean isNewNode){
+		if(word == null)
 			return;
 			
-		String wsd_name = part._wsd_name;
+		String wsd_name = word._wsd_name;
 		
 		if(wsd_name == null || wsd_name.equals("-"))
 			return;
 		
-		//TODO: I have an assumption that sub_parts has simple (just concept name) _wsd_name.
-		if(part.hasSub_parts())
-			for(Word_old p:part.getSub_parts())
-				if(p._wsd == null && p._wsd_name != null && !p._wsd_name.equals("-")){																				
-					Node wsd = _ttsEngine.findorCreateInstance(p._wsd_name, isNewNode);
-					if(wsd != null)
-						p.set_wsd(wsd);
-				} 
+//		//TODO: I have an assumption that sub_parts has simple (just concept name) _wsd_name.
+//		if(word.hasSub_parts())
+//			for(Word_old p:word.getSub_parts())
+//				if(p._wsd == null && p._wsd_name != null && !p._wsd_name.equals("-")){																				
+//					Node wsd = _ttsEngine.findorCreateInstance(p._wsd_name, isNewNode);
+//					if(wsd != null)
+//						p.set_wsd(wsd);
+//				} 
 		
-		//it means that it is not just node but plausible statement for example MAIN_وضعیت سلامتی_POST
+		//it means that it is not just node but plausible statement for example: پسر#n2_وضعیت سنی#a_خردسال#a1
 		if(wsd_name.indexOf("_") != -1){
 			
-			String[] sub_parts = wsd_name.split("_"); //1_وضعیت سنی#a_خردسال#a1 --> [part_num:1 --> وضعیت سلامتی --> خردسال#a1]
+			String[] word_elements = wsd_name.split("_"); //1_وضعیت سنی#a_خردسال#a1 --> [word_num:1 --> وضعیت سلامتی --> خردسال#a1]
 			
-			if(sub_parts.length != 3){
+			if(word_elements.length != 3){
 				MyError.error("wrong wsd_name" + wsd_name);
 				return;
 			}
@@ -1042,47 +1044,47 @@ public class Preprocessor {
 			
 			for(int i = 0; i < 3; i++){
 				
-				Node cur_part_wsd = null;
+				Node cur_word_node = null;
 				
 				try {
-					int part_num = -1;
+					int word_num = -1;
 					
-					//if it dosen't throw exception, it means that cur_part is a number
-			        part_num = Integer.parseInt(sub_parts[i]);
+					//if it dosen't throw exception, it means that cur_word is a number
+			        word_num = Integer.parseInt(word_elements[i]);
 			        
-			        Word_old cur_part = null;
+			        Word cur_part = null;
 			        
 			        //it is a valid part_num. 
-			        if(part_num != -1){
-			        	cur_part = part.getSub_part(part_num);
-			        	cur_part_wsd = cur_part._wsd;			        	
+			        if(word_num != -1){
+			        	cur_part = sentence.get_word(word_num);
+			        	cur_word_node = cur_part._wsd;			        	
 			        }
 			        
 			        if(i == 0 || i == 2)
-			    		if(cur_part_wsd != null)
+			    		if(cur_word_node != null)
 							if(argument == null)
-								argument = cur_part_wsd;
+								argument = cur_word_node;
 							else if(referent == null)
-								referent = cur_part_wsd;					
+								referent = cur_word_node;					
 			    	
 			        
 			    } catch (NumberFormatException e) {
-			    	//if it has thrown an exception it means that sub_part[i] is the name of a concept.
+			    	//if it has thrown an exception it means that word_elements[i] is the name of a concept.
 			    	//it is argument or referent
 			    	if(i == 0 || i == 2){
-			    		cur_part_wsd = _ttsEngine.findorCreateInstance(sub_parts[i], isNewNode);
+			    		cur_word_node = _ttsEngine.findorCreateInstance(word_elements[i], isNewNode);
 			    		
-			    		if(cur_part_wsd != null){
+			    		if(cur_word_node != null){
 							
 			    			if(argument == null)
-								argument = cur_part_wsd;
+								argument = cur_word_node;
 							else if(referent == null)
-								referent = cur_part_wsd;
+								referent = cur_word_node;
 						}
 			    	}
 			    	//it is descriptor
 			    	else{
-			    		relation_name = sub_parts[1];
+			    		relation_name = word_elements[1];
 						wsd = _ttsEngine.findRelationInstance(relation_name);
 						if(wsd == null){
 							//it must got directly fetched from kb, and then addRelation will clone it.
@@ -1127,15 +1129,15 @@ public class Preprocessor {
 				else
 					descriptor = wsd;
 			}
-			part.set_wsd(argument);
+			word.set_wsd(argument);
 			
-			add_adjective_mozaf(sentence, part, descriptor, referent);
+			add_adjective_mozaf(sentence, word, descriptor, referent);
 			//return;
 		}
 		else{
 			//it means this part wsd_name is just one concept name, so we find or add it in sceneModel.			
 			Node wsd = _ttsEngine.findorCreateInstance(wsd_name, isNewNode);
-			part.set_wsd(wsd);
+			word.set_wsd(wsd);
 		}		
 	}
 	
@@ -1168,7 +1170,7 @@ public class Preprocessor {
 	}
 
 	@SuppressWarnings("unused")
-	private void add_adjective_mozaf(SentenceModel_old sentence, Word_old mainPart, Node descriptor, Node referent) {
+	private void add_adjective_mozaf(SentenceModel sentence, Word mainPart, Node descriptor, Node referent) {
 		
 		if(sentence == null || mainPart == null || descriptor == null || referent == null){
 			MyError.error("null input parameter for add_adjective_mozaf!");
@@ -1178,18 +1180,19 @@ public class Preprocessor {
 		}
 		
 		if(descriptor.getPos() == POS.ADJECTIVE){ //it means that descriptor is describing an adjective.
+			//TODO: complete!!!!!!!!!!!!!!!1
 		
-			Word_old adjPart = new Word_old(referent.getName(), POS.ADJECTIVE, DependencyRelationType.NPOSTMOD, null, referent, null, sentence);
-			
-			//1:added, 0:merged, -1:Nop
-			int added = mainPart.addAdjective(adjPart);
+//			Word_old adjPart = new Word_old(referent.getName(), POS.ADJECTIVE, DependencyRelationType.NPOSTMOD, null, referent, null, sentence);
+//			
+//			//1:added, 0:merged, -1:Nop
+//			int added = mainPart.addAdjective(adjPart);
 		}
 		else if(descriptor.getPos() == POS.NOUN){ //it means that descriptor is describing a mozaf_alaih.
-			
-			Word_old mozPart = new Word_old(referent.getName(), POS.NOUN, DependencyRelationType.MOZ, null, referent, null, sentence);
-			
-			//1:added, 0:merged, -1:Nop
-			int added = mainPart.addMozaf_elaih(mozPart);
+			//TODO: complete!!!!!!!!!!!!!!!
+//			Word_old mozPart = new Word_old(referent.getName(), POS.NOUN, DependencyRelationType.MOZ, null, referent, null, sentence);
+//			
+//			//1:added, 0:merged, -1:Nop
+//			int added = mainPart.addMozaf_elaih(mozPart);
 		}
 	}
 

@@ -15,6 +15,8 @@ public class Phrase {
 	
 	private ArrayList<Word> _words = new ArrayList<Word>();
 	
+	private int size = 0; 
+	
 	public Phrase(Word headWord, ArrayList<Word> words){
 		this.set_headWord(headWord);
 		this.set_words(words);
@@ -25,7 +27,7 @@ public class Phrase {
 	 * @param _headWord the _headWord to set
 	 */
 	public void set_headWord(Word _headWord) {
-		this._headWord = _headWord;
+		this._headWord = _headWord;		
 	}
 	
 	/**
@@ -46,6 +48,7 @@ public class Phrase {
 		
 		if(!_words.contains(newWord)){
 			_words.add(newWord);
+			size++;
 			newWord._phrase = this;
 		}
 	}
@@ -69,6 +72,7 @@ public class Phrase {
 		String str = "Phrase with head: " + _headWord + " \n";
 		for(Word w:_words)
 			str += w + "  ";
+		str += " size: " + size;
 		return str;
 	}
 	

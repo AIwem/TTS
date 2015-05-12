@@ -1,4 +1,4 @@
-sentence:پسرک امروز در راه خانه چشمش به یک کبوتر زخمی افتاد
+sentence:پسرک امروز در راه خانه یک کبوتر زخمی را دید
 
 name:پسرک			SEM:ARG0_EXPERIENCER	WSD:پسر#n2_وضعیت سنی#a_خردسال#a1	num:1
 
@@ -9,15 +9,13 @@ name:در				SEM:-					WSD:-						num:3
 name:راه			SEM:ArgM_DIR			WSD:راه#n9					num:4
 name:خانه			SEM:-					WSD:خانه#n10				num:5
 
-name:به_Phrase		SEM:-					WSD:9_وضعیت سلامتی#a_10		num:
-name:به				SEM:					WSD:-						num:7
-name:یک				SEM:					WSD:یک#n1					num:8
-name:کبوتر			SEM:ARG1_THEME			WSD:کبوتر#n1				num:9
-name:زخمی			SEM:-					WSD:زخمی#a1					num:10
+name:را_Phrase		SEM:-					WSD:7_وضعیت سلامتی#a_8		num:
+name:یک				SEM:					WSD:یک#n1					num:6
+name:کبوتر			SEM:ARG1_THEME			WSD:کبوتر#n1				num:7
+name:زخمی			SEM:-					WSD:زخمی#a1					num:8
+name:را				SEM:					WSD:-						num:9
 
-name:چشمش‌افتاد		SEM:-					WSD:چشم افتادن#v?			num:
-name:چشمش			SEM:-					WSD:-						num:6
-name:افتاد			SEM:-					WSD:چشم افتادن#v			num:11
+name:دید			SEM:-					WSD:دیدن#v5					num:10
 
 #------------------------------------------------------
 sentence:بلافاصله کبوتر را بردشت

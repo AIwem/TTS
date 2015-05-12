@@ -38,7 +38,7 @@ public class Word {
 	/**
 	 * word String of this Word object.
 	 */
-	public String _word;
+	public String _wordName;
 	
 	/**
 	 * lem of this Word object.
@@ -125,7 +125,7 @@ public class Word {
 		
 		this.set_number(parts[0].trim());
 		
-		this._word = parts[1].trim();
+		this._wordName = parts[1].trim();
 		
 		this._lem = parts[2].trim();
 		
@@ -145,7 +145,7 @@ public class Word {
 	@Override
 	//public String getStr() {
 	public String toString() {
-		return _word;
+		return _wordName;
 	}
 	
 	//-------------------- is part --------------------------
@@ -209,7 +209,7 @@ public class Word {
 	
 	public boolean isInfinitive() {
 		//TODO: correct this Word!
-		if(_word.contains("دویدن"))
+		if(_wordName.contains("دویدن"))
 			return true;
 		return false;
 	}
@@ -256,7 +256,7 @@ public class Word {
 			_semanticTag = SemanticTag.fromString(semTag);
 		
 		if(_semanticTag == null)
-			MyError.error("bad semantcTag name " + semTag + " for " + this._word);	
+			MyError.error("bad semantcTag name " + semTag + " for " + this._wordName);	
 	}
 	
 	public void set_wsd_name(String wsd_name) {
@@ -302,7 +302,7 @@ public class Word {
  	public String getStr() {
  		String rs = "number=" + _number;		
 		rs += " name=";
-		if(_word != null) rs += "" + _word; 
+		if(_wordName != null) rs += "" + _wordName; 
 		else rs += "-";
 		rs += " POS=";
 		if(_gPOS != null) rs += "" + _gPOS;
@@ -328,7 +328,7 @@ public class Word {
  	 public String getStr2() {
  	 		String rs = "" + _number;		
  			rs += "\t";
- 			if(_word != null) rs += "" + _word; 
+ 			if(_wordName != null) rs += "" + _wordName; 
  			else rs += "-";
  			rs += "\t";
  			if(_gPOS != null) rs += "" + _gPOS;
@@ -380,12 +380,12 @@ public class Word {
  			adjectives = new ArrayList<Word>();
  		
  		if(!hasAdjective(adj._wsd)){
- 			System.out.println(adj._wsd + " adj added to " + this._word + "\n");
+ 			System.out.println(adj._wsd + " adj added to " + this._wordName + "\n");
  			adjectives.add(adj);
  			return 1;
  		}
  		else{
- 			System.out.println(this._word + " has this " + adj._wsd + " adj before! so they will merge \n");
+ 			System.out.println(this._wordName + " has this " + adj._wsd + " adj before! so they will merge \n");
  			
  			Word oldAdj = getAdjective(adj._wsd);
  			
@@ -409,12 +409,12 @@ public class Word {
  			mozaf_elaih = new ArrayList<Word>();
  		
  		if(!hasMozaf_elaih(moz._wsd)){
- 			System.out.println(moz._wsd + " mozaf added to " + this._word + "\n");
+ 			System.out.println(moz._wsd + " mozaf added to " + this._wordName + "\n");
  			mozaf_elaih.add(moz);
  			return 1;
  		}
  		else{
- 			System.out.println(this._word + " has this " + moz._wsd + " mozaf before! so they will merge \n");
+ 			System.out.println(this._wordName + " has this " + moz._wsd + " mozaf before! so they will merge \n");
  			
  			Word oldMoz = getMozaf_elaih(moz._wsd);
  			
@@ -468,9 +468,9 @@ public class Word {
 			if(newWord._senteceModel != null)
 				_senteceModel = newWord._senteceModel;
 		
-		if(_word == null || _word.equals(""))
-			if(newWord._word != null && !newWord._word.equals(""))
-				_word = newWord._word;
+		if(_wordName == null || _wordName.equals(""))
+			if(newWord._wordName != null && !newWord._wordName.equals(""))
+				_wordName = newWord._wordName;
 		
 		if(_gPOS == null || _gPOS == POS.UNKNOWN)
 			if(newWord._gPOS == null && newWord._gPOS != POS.UNKNOWN)
