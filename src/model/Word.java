@@ -83,22 +83,19 @@ public class Word {
 	public String _wsd_name;
 	
 	/**
-	 * TODO: check to be deleted or not!
-	 * 
+	 *  
 	 * The adjectives of this Word. 
 	 */
 	private ArrayList<Word> adjectives;
 	
 	/**
-	 * TODO: check to be deleted or not!
-	 * 
+	 *  
 	 * The mozaf_elaih of this Word. 
 	 */	
 	private ArrayList<Word> mozaf_elaih;
 	
 	/**
-	 * TODO: check to be deleted or not!
-	 * 
+	 *  
 	 * capacities of this Word, it can be verb, noun, adjective or ...
 	 */
 	private ArrayList<Node> capacities = null;
@@ -141,6 +138,63 @@ public class Word {
 		
 		print(getStr2());
 	}
+	
+	/**
+	 * @param senteceModel
+	 * @param phrase
+	 * @param number
+	 * @param wordName
+	 * @param lem
+	 * @param gPOS
+	 * @param props
+	 * @param syntaxTag
+	 * @param srcOfSynTag_number
+	 * @param semanticTag
+	 * @param wsd
+	 * @param wsd_name
+	 */
+	public Word(SentenceModel senteceModel, Phrase phrase, int number, String wordName, String lem, POS gPOS, String props, 
+			DependencyRelationType syntaxTag, int srcOfSynTag_number, SemanticTag semanticTag, Node wsd, String wsd_name) {
+		super();
+		this._senteceModel = senteceModel;
+		this._phrase = phrase;
+		this._number = number;
+		this._wordName = wordName;
+		this._lem = lem;
+		this._gPOS = gPOS;
+		this._props = props;
+		this._syntaxTag = syntaxTag;
+		this._srcOfSynTag_number = srcOfSynTag_number;
+		this._semanticTag = semanticTag;
+		this._wsd = wsd;
+		this._wsd_name = wsd_name;
+	}
+	
+	/**
+	 * @param senteceModel
+	 * @param phrase
+	 * @param number
+	 * @param wordName
+	 * @param gPOS
+	 * @param syntaxTag
+	 * @param srcOfSynTag_number
+	 * @param semanticTag
+	 * @param wsd
+	 */
+	public Word(SentenceModel senteceModel, Phrase phrase, int number, String wordName, POS gPOS, 
+			DependencyRelationType syntaxTag, int srcOfSynTag_number, SemanticTag semanticTag, Node wsd) {
+		super();
+		this._senteceModel = senteceModel;
+		this._phrase = phrase;
+		this._number = number;
+		this._wordName = wordName;		
+		this._gPOS = gPOS;		
+		this._syntaxTag = syntaxTag;
+		this._srcOfSynTag_number = srcOfSynTag_number;
+		this._semanticTag = semanticTag;
+		this._wsd = wsd;		
+	}
+	
 	
 	@Override
 	//public String getStr() {
@@ -468,14 +522,30 @@ public class Word {
 			if(newWord._senteceModel != null)
 				_senteceModel = newWord._senteceModel;
 		
+		if(_phrase == null)
+			if(newWord._phrase != null)
+				_phrase = newWord._phrase;
+		
+		if(_number < 0)
+			if(newWord._number >= 0)
+				_number = newWord._number;
+		
 		if(_wordName == null || _wordName.equals(""))
 			if(newWord._wordName != null && !newWord._wordName.equals(""))
 				_wordName = newWord._wordName;
+		
+		if(_lem == null || _lem.equals(""))
+			if(newWord._lem != null && !newWord._lem.equals(""))
+				_lem = newWord._lem;
 		
 		if(_gPOS == null || _gPOS == POS.UNKNOWN)
 			if(newWord._gPOS == null && newWord._gPOS != POS.UNKNOWN)
 				_gPOS = newWord._gPOS;
 		
+		if(_props == null || _props.equals(""))
+			if(newWord._props != null && !newWord._props.equals(""))
+				_props = newWord._props;
+				
 		if(_syntaxTag == null || _syntaxTag == DependencyRelationType.ANY)
 			if(newWord._syntaxTag != null && newWord._syntaxTag != DependencyRelationType.ANY)
 				_syntaxTag = newWord._syntaxTag;
@@ -495,17 +565,7 @@ public class Word {
 		if(_wsd_name == null || _wsd_name.equals(""))
 			if(newWord._wsd_name != null && !newWord.equals(""))
 				_wsd_name = newWord._wsd_name;
-		
-//		if(Common.isEmpty(sub_parts)){
-//			if(!Common.isEmpty(newWord.sub_parts))
-//				sub_parts = newWord.sub_parts;
-//		}
-//		else if(!Common.isEmpty(newWord.sub_parts))
-//			for(Word_old sp:sub_parts){
-//				Word_old relSubPart = newWord.getSub_part(sp._number);				
-//				sp.mergeWith(relSubPart);
-//			}
-		
+			
 		if(Common.isEmpty(adjectives)){
 			if(!Common.isEmpty(newWord.adjectives))
 				adjectives = newWord.adjectives;
@@ -524,11 +584,7 @@ public class Word {
 			for(Word moz:mozaf_elaih){
 				Word relMoz = newWord.getMozaf_elaih(moz._wsd);				
 				moz.mergeWith(relMoz);
-			}				
-		
-		if(_number < 0)
-			if(newWord._number >= 0)
-				_number = newWord._number;
+			}
 		
 		if(Common.isEmpty(capacities)){
 			if(!Common.isEmpty(newWord.capacities))

@@ -114,7 +114,7 @@ public class TTSEngine {
 				
 		for(String NLsentence:scene_inputNL){
 			
-			print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NSentence: " + NLsentence);
+			print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NSentence: " + NLsentence);
 			
 			SentenceModel sentence = _pp.preprocessSentence(NLsentence);	
 			

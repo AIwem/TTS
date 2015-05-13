@@ -1,0 +1,5 @@
+1	وارد	وارد	PREP	PREP	senID=001	3	NVE	_	_
+2	خانه	خانه	N	N	number=SING|senID=001	1	POSDEP	_	_
+3	شد	شد#شو	V	V	person=3|number=SING|tma=G|senID=001	0	ROOT	_	_
+
+

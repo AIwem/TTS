@@ -1,0 +1,103 @@
+sentence:پسرک امروز در راه خانه یک کبوتر زخمی را دید
+
+name:پسرک			SEM:ARG0_EXPERIENCER	WSD:پسر#n2_وضعیت سنی#a_خردسال#a1	num:1
+
+name:امروز			SEM:ArgM_TMP			WSD:امروز#n1				num:2
+
+name:در				SEM:-					WSD:-						num:3
+name:راه			SEM:ArgM_DIR			WSD:راه#n9					num:4
+name:خانه			SEM:-					WSD:خانه#n10				num:5
+name:در_Phrase		SEM:-					WSD:4_mozaf#n_5				num:
+
+
+name:یک				SEM:					WSD:یک#n1					num:6
+name:کبوتر			SEM:ARG1_THEME			WSD:کبوتر#n1				num:7
+name:زخمی			SEM:-					WSD:زخمی#a1					num:8
+name:را				SEM:					WSD:-						num:9
+name:را_Phrase		SEM:-					WSD:7_وضعیت سلامتی#a_8		num:
+
+name:دید			SEM:-					WSD:دیدن#v5					num:10
+
+#------------------------------------------------------
+sentence:بلافاصله کبوتر را بردشت
+
+name:بلافاصله		SEM:ArgM_TMP			WSD:بلافاصله#r1				num:1
+
+name:کبوتر			SEM:ARG1_THEME			WSD:کبوتر#n1				num:2
+name:را				SEM:-					WSD:-						num:3
+
+name:برداشت			PSEM:-					WSD:برداشتن#v1				num:4
+
+#------------------------------------------------------
+sentence:شروع به دویدن به سمت خانه کرد
+
+name:شروع کرد		SEM:-					WSD:شروع کردن#v1?			num:
+name:شروع			SEM:-					WSD:-						num:1
+name:کرد			SEM:-					WSD:شروع کردن#v1			num:7
+
+name:به دویدن		SEM:-					WSD:-						num:
+name:به				SEM:-					WSD:-						num:2
+name:دویدن			SEM:ARG1_THEME			WSD:دویدن#v1				num:3
+
+name:به				SEM:-					WSD:-						num:4
+name:سمت			SEM:ArgM_DIR			WSD:سمت#n6					num:5
+name:خانه			SEM:-					WSD:خانه#n10				num:6
+name:به_Phrae		SEM:-					WSD:5_mozaf#n_6				num:
+
+#------------------------------------------------------
+sentence:وارد خانه شد
+
+name:خانه			SEM:ARG4_ENDPOINT	WSD:خانه#n10					num:2
+
+name:وارد شد		SEM:-				WSD:وارد شدن#v2					num:
+name:وارد			SEM:-				WSD:-							num:1
+name:شد				SEM:-				WSD:-							num:3
+
+#------------------------------------------------------
+sentence:کبوتر را به مادر خود داد
+
+name:کبوتر را		SEM:-				WSD:کبوتر#n1					num:
+name:کبوتر			SEM:ARG1_THEME		WSD:کبوتر#n1					num:1
+name:را				SEM:-				WSD:-							num:2
+
+name:به				SEM:-				WSD:-							num:3
+name:مادر			SEM:ARG2_OBJ2		WSD:مادر#n1						num:4
+name:خود			SEM:-				WSD:خود#n3						num:5
+name:به مادر خود	SEM:-				WSD:4_mozaf#n_5					num:
+
+name:داد			SEM:-				WSD:دادن#v5						num:6
+
+#------------------------------------------------------
+sentence:سپس به طرف اتاقش دوید
+
+name:سپس			SEM:ArgM_TMP		WSD:سپس#a1						num:1
+
+name:به				SEM:-				WSD:-							num:2
+name:طرف			SEM:ArgM_DIR		WSD:طرف#n3						num:3
+name:اتاقش			SEM:-				WSD:اتاق#n2						num:4
+name:به طرف اتاقش	SEM:-				WSD:3_mozaf#n_4					num:
+
+name:دوید			SEM:-				WSD:دویدن#v1					num:5
+
+#------------------------------------------------------
+sentence:تیروکمان خود را برداشت
+
+name:تیروکمان		SEM:ARG1_THEME		WSD:تیر#n4						num:1
+name:خود			SEM:-				WSD:خود#n3						num:2
+name:را				SEM:-				WSD:-							num:3
+name:تیروکمان خود را	SEM:-			WSD:1_mozaf3n_2					num:
+
+name:برداشت			SEM:-				WSD:برداشتن#v1					num:4
+
+#------------------------------------------------------
+sentence:شکست
+
+name:شکست			SEM:-				WSD:شکستن#v4					num:1
+
+#------------------------------------------------------
+sentence:دور انداخت
+
+name:دور انداخت		SEM:-				WSD:دور انداختن#v2				num:
+name:دور			SEM:-				WSD:-							num:1
+name:انداخت			SEM:-				WSD:-							num:2
+

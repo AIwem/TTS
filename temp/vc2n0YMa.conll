@@ -1,0 +1,10 @@
+1	پسرک	پسرک	N	N	number=SING|senID=001
+2	امروز	امروز	ADV	ADV	senID=001
+3	در	در	PREP	PREP	senID=001
+4	راه	راه	N	N	number=SING|senID=001
+5	خانه	خانه	N	N	number=SING|senID=001
+6	یک	یک	NUM	NUM	senID=001
+7	کبوتر	کبوتر	N	N	number=SING|senID=001
+8	زخمی	زخمی	ADJ	ADJ	senID=001
+9	را	را	POSTP	POSTP	senID=001
+10	دید	دید	V	V	person=3|number=SING|tma=G|senID=001

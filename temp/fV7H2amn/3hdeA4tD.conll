@@ -1,0 +1,11 @@
+1	پسرک	پسرک	N	N	number=SING|wcID=111111111110111	0	ROOT	_	_
+2	امروز	امروز	ADV	ADV	wcID=111111111111111	0	ROOT	_	_
+3	در	در	PREP	PREP	wcID=1110101	0	ROOT	_	_
+4	راه	راه	N	N	number=SING|wcID=1111001010110	0	ROOT	_	_
+5	خانه	خانه	N	N	number=SING|wcID=11110010001110	0	ROOT	_	_
+6	یک	یک	NUM	NUM	wcID=11100010	0	ROOT	_	_
+7	کبوتر	کبوتر	N	N	number=SING|wcID=11110110110100	0	ROOT	_	_
+8	زخمی	زخمی	ADJ	ADJ	wcID=111111001111011	0	ROOT	_	_
+9	را	را	POSTP	POSTP	wcID=111111110	0	ROOT	_	_
+10	دید	دید	V	V	person=3|number=SING|tma=G|wcID=111111010010111	0	ROOT	_	_
+

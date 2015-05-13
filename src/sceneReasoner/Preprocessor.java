@@ -2,7 +2,7 @@ package sceneReasoner;
 
 import ir.ac.itrc.qqa.nlp.PersianTools;
 import ir.ac.itrc.qqa.semantic.enums.DependencyRelationType;
-import ir.ac.itrc.qqa.semantic.enums.POS;
+//import ir.ac.itrc.qqa.semantic.enums.POS;
 import ir.ac.itrc.qqa.semantic.enums.SourceType;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
 import ir.ac.itrc.qqa.semantic.kb.Node;
@@ -20,6 +20,7 @@ import java.util.ArrayList;
 
 import sceneElement.*;
 import model.MainSemanticTag;
+import model.POS;
 import model.ScenePart;
 import model.SemanticTag;
 import model.SentenceModel;
@@ -41,6 +42,8 @@ import model.VerbType;
  */
 public class Preprocessor {
 	
+	private PersianTools persianTool = null;
+	
 	private KnowledgeBase _kb;
 //	private SemanticReasoner _re;
 	private TTSEngine _ttsEngine = null;
@@ -48,6 +51,7 @@ public class Preprocessor {
 //	private ArrayList<PlausibleStatement> default_contexts = null;
 	private String mainSemanticArgumet_name = "MainSemArg";
 	private String zamir_enekasi = "خود#n3";
+	private String fake_word_name = "fake_Word";
 	
 	
 	/**
@@ -56,7 +60,7 @@ public class Preprocessor {
 	 */
 //	private String sentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
 //	private String sentenceInfosFileName = "inputStory/sentenceInfos_SS.txt";
-	private String sentenceInfosFileName = "inputStory/SentenceInfos1-2.txt";
+	private String sentenceInfosFileName = "inputStory/SentenceInfos1-3.txt";
 //	private String sentenceInfosFileName = "inputStory/SentenceInfos2-2.txt";
 //	private String sentenceInfosFileName = "inputStory/SentenceInfos3.txt";
 
@@ -64,6 +68,8 @@ public class Preprocessor {
 		this._kb = kb;
 //		this._re = re;
 		this._ttsEngine = ttsEngine;
+		
+		persianTool = new PersianTools();
 	}		
 	
 	/**
@@ -188,10 +194,20 @@ public class Preprocessor {
 			sentenceWord.set_wsd_name(parts[2]);
 		}
 		else{
-			MyError.error("compelte درـPhrase" + parts[0]);
-			//TODO: complete!!!!!!!!!!!!!!!
-			String ph_headStr = parts[0];
-			print("************************** " + parts[0]);
+			print("************************** here in phrase Word " + parts[0]);
+			
+			String phraseName = parts[0];
+
+			//It means that this record of input is defining a phrase so
+			//we must generate a fake Word with this wsd_name in order to just adding its relation to KB.
+			if(phraseName.indexOf("_Phrase") != -1){
+				String ph_headStr = phraseName.substring(0, phraseName.indexOf("_Phrase"));
+															
+				Word fakeWord = new Word(senteceModel, senteceModel.get_phrase(ph_headStr), -1, fake_word_name , "", POS.UNKNOWN, ""
+						, DependencyRelationType.ANY, -1, null, null, parts[2]);
+
+				sentenceWord = fakeWord;				
+			}			
 		}		
 		
 		return sentenceWord;		
@@ -210,8 +226,6 @@ public class Preprocessor {
 	 */
 	public SentenceModel preprocessSentence(String NLsentence) {
 		
-		PersianTools persianTool = new PersianTools();
-		
 		String parsedSen = persianTool.parser(NLsentence);
 		
 		String[] word_strs = parsedSen.split("\n");
@@ -227,16 +241,6 @@ public class Preprocessor {
 		if(extraWordInfos == null)
 			return null;
 		
-		//----------
-		
-//		for(Word sentWord:sentence.get_words()){
-//			
-//		}
-		
-		//----------
-		
-//		ArrayList<Word> senParts = new ArrayList<Word>();
-		
 		for(int i = 0; i < extraWordInfos.size(); i++){
 			
 			String currentWordInfo = extraWordInfos.get(i);
@@ -244,24 +248,12 @@ public class Preprocessor {
 			Word currentWord = completeWordInfo(currentWordInfo, sentence);
 			
 			if(currentWord == null){
-				MyError.error("compelte درـPhrase");
+				MyError.error("The word with \"" + currentWordInfo + "\" couldn't be completed!" );
+				return sentence;
 			}
 			
-//			//it means next line are informations of sub_parts of this current_part.
-//			// we have assumed that sub_parts has depth of 1. It means each sub_part has no sub_part in itself.
-//			if(currentPart != null && currentPart.hasSub_parts()){
-//				ArrayList<SentencePart> subParts = new ArrayList<SentencePart> (currentPart.getSub_parts().size());
-//				
-//				for(int j = 0; j < currentPart.getSub_parts().size() && (i+1)<extraWordInfos.size(); j++){
-//					i++;
-//					String subPartStr = extraWordInfos.get(i);
-//					SentencePart sPart = completeWordInfo(subPartStr, sentence);					
-//					if(sPart != null)
-//						subParts.add(sPart);							
-//				}
-//				currentPart.setSub_parts(subParts);							
-//			}						
-//			senParts.add(currentPart);
+			if(currentWord._number < 0 && currentWord._wordName != null && currentWord._wordName.equals(fake_word_name))
+				print("^^^^^^^^^^^^^^^^^^^^^^^^^^^ in fake_word");
 			
 			//setting _wsd of currentPart to the proper Node of KB.			
 			if(currentWord.isVerb())
@@ -271,21 +263,15 @@ public class Preprocessor {
 				allocate_wsd(sentence, currentWord, false);
 			
 			if(currentWord._wsd == null)
-//				print(currentPart._wsd_name + " couldn't get allocated!");
-				MyError.error(currentWord._wsd_name + " couldn't get allocated!");				
+				print(currentWord._wsd_name + " couldn't get allocate for word: " + currentWord);
+//				MyError.error(currentWord._wsd_name + " couldn't get allocated!");				
 			
 		}
-		//now senParts has all parts' objects of this sentence, so we specify which is subject, object, adverb, ...						
-//		sentence.arrageSentenceParts(NLsentence, senParts);
-		
 
 		//adding verb relation to KB.
 		//delayed to preprocessScene after preparing nullSemanticTags
 		/*ArrayList<PlausibleStatement> verbRelations = */ //defineVerbRelation(sentence);
-		
-		/*
-		
-				
+						
 		Word verb = sentence.getVerb();
 		
 		if(verb != null){
@@ -296,7 +282,7 @@ public class Preprocessor {
 		}
 		else
 			MyError.error("this sentnce has no verb! " + sentence);
-		*/
+	
 		return sentence;
 		
 	}
@@ -1014,16 +1000,7 @@ public class Preprocessor {
 		
 		if(wsd_name == null || wsd_name.equals("-"))
 			return;
-		
-//		//TODO: I have an assumption that sub_parts has simple (just concept name) _wsd_name.
-//		if(word.hasSub_parts())
-//			for(Word_old p:word.getSub_parts())
-//				if(p._wsd == null && p._wsd_name != null && !p._wsd_name.equals("-")){																				
-//					Node wsd = _ttsEngine.findorCreateInstance(p._wsd_name, isNewNode);
-//					if(wsd != null)
-//						p.set_wsd(wsd);
-//				} 
-		
+	
 		//it means that it is not just node but plausible statement for example: پسر#n2_وضعیت سنی#a_خردسال#a1 or 7_وضعیت سلامتی#a_8
 		if(wsd_name.indexOf("_") != -1){
 			
@@ -1035,9 +1012,9 @@ public class Preprocessor {
 			}
 			
 			Node argument = null;
-			Node referent = null;
 			Node descriptor = null;
-			
+			Node referent = null;			
+					
 			PlausibleStatement wsd = null;
 			
 			String relation_name = null;
@@ -1063,9 +1040,9 @@ public class Preprocessor {
 			        if(i == 0 || i == 2)
 			    		if(cur_word_node != null)
 							if(argument == null)
-								argument = cur_word_node;
+								argument = cur_word_node;								
 							else if(referent == null)
-								referent = cur_word_node;					
+								referent = cur_word_node;						
 			    	
 			        
 			    } catch (NumberFormatException e) {
@@ -1080,6 +1057,7 @@ public class Preprocessor {
 								argument = cur_word_node;
 							else if(referent == null)
 								referent = cur_word_node;
+							
 						}
 			    	}
 			    	//it is descriptor
@@ -1179,20 +1157,19 @@ public class Preprocessor {
 			return;
 		}
 		
-		if(descriptor.getPos() == POS.ADJECTIVE){ //it means that descriptor is describing an adjective.
-			//TODO: complete!!!!!!!!!!!!!!!1
-		
-//			Word_old adjPart = new Word_old(referent.getName(), POS.ADJECTIVE, DependencyRelationType.NPOSTMOD, null, referent, null, sentence);
-//			
-//			//1:added, 0:merged, -1:Nop
-//			int added = mainPart.addAdjective(adjPart);
+		if(descriptor.getPos() == ir.ac.itrc.qqa.semantic.enums.POS.ADJECTIVE){ //it means that descriptor is describing an adjective.
+
+			Word adjWord = new Word(sentence, null, -1, referent.getName(),POS.ADJ, DependencyRelationType.NPOSTMOD, mainPart._number, null, referent);
+			
+			//1:added, 0:merged, -1:Nop
+			int added = mainPart.addAdjective(adjWord);
 		}
-		else if(descriptor.getPos() == POS.NOUN){ //it means that descriptor is describing a mozaf_alaih.
-			//TODO: complete!!!!!!!!!!!!!!!
-//			Word_old mozPart = new Word_old(referent.getName(), POS.NOUN, DependencyRelationType.MOZ, null, referent, null, sentence);
-//			
-//			//1:added, 0:merged, -1:Nop
-//			int added = mainPart.addMozaf_elaih(mozPart);
+		else if(descriptor.getPos() == ir.ac.itrc.qqa.semantic.enums.POS.NOUN){ //it means that descriptor is describing a mozaf_alaih.
+			
+			Word mozWord = new Word(sentence, null, -1, referent.getName(),POS.N, DependencyRelationType.MOZ, mainPart._number, null, referent);
+		
+			//1:added, 0:merged, -1:Nop
+			int added = mainPart.addMozaf_elaih(mozWord);
 		}
 	}
 

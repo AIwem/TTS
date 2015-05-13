@@ -93,7 +93,39 @@ public class SentenceModel {
 	 * @return the _phrases
 	 */
 	public ArrayList<Phrase> get_phrases() {
-		return _phrases;
+		return _phrases;	
+	}
+	
+	/**
+	 * 
+	 * @param phrase_head
+	 * @return the Phrase with head phrase_head.
+	 */
+	public Phrase get_phrase(Word phrase_head){
+		if(phrase_head == null)
+			return null;
+		
+		if(Common.isEmpty(_phrases))
+			return null;
+		
+		for(Phrase ph:_phrases)
+			if(ph.get_headWord() == phrase_head)
+				return ph;
+		return null;
+	}
+	
+	public Phrase get_phrase(String phrase_head_name){
+		if(phrase_head_name == null || phrase_head_name.equals(""))
+			return null;
+		
+		Word ph_head = get_word(phrase_head_name);
+		
+		if(ph_head == null){
+			MyError.error("This sentence hasn't such a phrase with head " + phrase_head_name);
+			return null;
+		}
+		
+		return get_phrase(ph_head);
 	}
 	
 	/**
@@ -170,11 +202,11 @@ public class SentenceModel {
 		for(Word ph_w:fromThis){
 			
 			if(ph_w.isAdjective()){
-				System.out.println("first here in makePhrase!");
+				System.out.println("\nfirst here in makePhrase!");
 				phraseHead.addAdjective(ph_w);
 			}
 			else if(ph_w.isMozaf_elaih()){
-				System.out.println("first here in makePhrase!");
+				System.out.println("\nfirst here in makePhrase!");
 				phraseHead.addMozaf_elaih(ph_w);
 			}
 			
