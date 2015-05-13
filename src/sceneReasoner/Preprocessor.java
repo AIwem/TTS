@@ -188,7 +188,7 @@ public class Preprocessor {
 			sentenceWord.set_wsd_name(parts[2]);
 		}
 		else{
-			MyError.error("compelte درـPhrase");
+			MyError.error("compelte درـPhrase" + parts[0]);
 			//TODO: complete!!!!!!!!!!!!!!!
 			String ph_headStr = parts[0];
 			print("************************** " + parts[0]);
@@ -1024,7 +1024,7 @@ public class Preprocessor {
 //						p.set_wsd(wsd);
 //				} 
 		
-		//it means that it is not just node but plausible statement for example: پسر#n2_وضعیت سنی#a_خردسال#a1
+		//it means that it is not just node but plausible statement for example: پسر#n2_وضعیت سنی#a_خردسال#a1 or 7_وضعیت سلامتی#a_8
 		if(wsd_name.indexOf("_") != -1){
 			
 			String[] word_elements = wsd_name.split("_"); //1_وضعیت سنی#a_خردسال#a1 --> [word_num:1 --> وضعیت سلامتی --> خردسال#a1]
@@ -1052,12 +1052,12 @@ public class Preprocessor {
 					//if it dosen't throw exception, it means that cur_word is a number
 			        word_num = Integer.parseInt(word_elements[i]);
 			        
-			        Word cur_part = null;
+			        Word cur_word = null;
 			        
-			        //it is a valid part_num. 
+			        //it is a valid word_num. 
 			        if(word_num != -1){
-			        	cur_part = sentence.get_word(word_num);
-			        	cur_word_node = cur_part._wsd;			        	
+			        	cur_word = sentence.get_word(word_num);
+			        	cur_word_node = cur_word._wsd;			        	
 			        }
 			        
 			        if(i == 0 || i == 2)
