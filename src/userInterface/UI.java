@@ -136,7 +136,7 @@ public class UI {
 	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		System.out.println("بسم الله الرحمن الرحیم و توکلت علی الله");
-	
+		
 		UI ui = new UI();
 		StoryModel sm = ui.TTS();		
 

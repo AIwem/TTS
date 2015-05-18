@@ -25,7 +25,7 @@ public class SceneModel {
 	
 	private StoryModel storyModel;
 	
-	private ArrayList<SentenceModel_old> sentences = new ArrayList<SentenceModel_old>();
+	private ArrayList<SentenceModel> sentences = new ArrayList<SentenceModel>();
 			
 	private ArrayList<Role> roles = new ArrayList<Role>();	
 	
@@ -48,7 +48,7 @@ public class SceneModel {
 	
 	public SceneModel(StoryModel storyModel) {		
 		this.storyModel = storyModel;
-		this.sentences = new ArrayList<SentenceModel_old>();		
+		this.sentences = new ArrayList<SentenceModel>();		
 		this.roles = new ArrayList<Role>();
 		this.static_objects = new ArrayList<StaticObject>();
 		this.dynamic_objescts = new ArrayList<DynamicObject>();
@@ -57,7 +57,7 @@ public class SceneModel {
 	}
 	
 	public SceneModel(){
-		this.sentences = new ArrayList<SentenceModel_old>();		
+		this.sentences = new ArrayList<SentenceModel>();		
 		this.roles = new ArrayList<Role>();
 		this.static_objects = new ArrayList<StaticObject>();
 		this.dynamic_objescts = new ArrayList<DynamicObject>();
@@ -99,7 +99,7 @@ public class SceneModel {
 		return storyModel;
 	}
 
-	public ArrayList<SentenceModel_old> getSentences() {
+	public ArrayList<SentenceModel> getSentences() {
 		return sentences;
 	}
 
@@ -202,7 +202,7 @@ public class SceneModel {
 	
 	/**
 	 * @param s
-	 * @return the SceneElement (Role, DynamicObject, StaticObject, ...) which this SceneModel has based on sentencePart._wsd
+	 * @return the SceneElement (Role, DynamicObject, StaticObject, ...) which this SceneModel has based on Word._wsd
 	 */
 	public SceneElement getSceneElement(Node node) {		
 		if(node == null){
@@ -241,7 +241,7 @@ public class SceneModel {
 	
 	/**
 	 * @param sceneElement
-	 * @return the SceneElement (Role, DynamicObject, StaticObject, ...) which this SceneModel has based on part._wsd
+	 * @return the SceneElement (Role, DynamicObject, StaticObject, ...) which this SceneModel has based on Word._wsd
 	 */
 	public SceneElement getSceneElement(SceneElement sceneElement) {
 		
@@ -283,31 +283,32 @@ public class SceneModel {
 		return null;
 	}
 	
-	public Word_old findSentencePartofSceneElement(SceneElement sceneElement){
+	public Word findWordOfSceneElement(SceneElement sceneElement){
 		if(sceneElement == null)
 			return null;
 		
-		for(SentenceModel_old sentence:this.sentences){
-			Word_old part = sentence.getSentencePart(sceneElement._node);
-			if(part != null)
-				return part;
+		for(SentenceModel sentence:this.sentences){
+			Word wrd = sentence.getWord(sceneElement._node);
+			if(wrd != null)
+				return wrd;
 		}
 		return null;		
 	}
+	
 	//------------------ add   part -------------------
 	
-	public void addSentence(SentenceModel_old sentence) {
+	public void addSentence(SentenceModel sentence) {
 		if(this.sentences == null)
-			this.sentences = new ArrayList<SentenceModel_old>();
+			this.sentences = new ArrayList<SentenceModel>();
 		
 		if(sentence != null)
 			if(!hasSentence(sentence))
 				this.sentences.add(sentence);
 	}
 	
-	public void addAllSentences(ArrayList<SentenceModel_old> sentences) {
+	public void addAllSentences(ArrayList<SentenceModel> sentences) {
 		if(!Common.isEmpty(sentences))
-			for(SentenceModel_old sen:sentences)
+			for(SentenceModel sen:sentences)
 				addSentence(sen);
 	}
 
@@ -569,11 +570,11 @@ public class SceneModel {
 	}
 
 
-	public boolean hasSentence(SentenceModel_old sentence) {
+	public boolean hasSentence(SentenceModel sentence) {
 		if(sentence == null)
 			return false;
 		
-		for(SentenceModel_old sen:this.sentences)
+		for(SentenceModel sen:this.sentences)
 			if(sen == sentence)
 				return true;
 		return false;

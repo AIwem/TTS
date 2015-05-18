@@ -3,7 +3,7 @@ package sceneElement;
 
 
 import model.ScenePart;
-import model.Word_old;
+import model.Word;
 import ir.ac.itrc.qqa.semantic.kb.Node;
 import ir.ac.itrc.qqa.semantic.util.MyError;
 
@@ -43,7 +43,7 @@ public class SceneElement {
 		return _node;
 	}
 	
-	public SceneElement addDependent(Word_old dependent, String elementType){
+	public SceneElement addDependent(Word dependent, String elementType){
 		
 		if(dependent == null){
 			MyError.error("null input parameter for addDependent");
@@ -57,10 +57,10 @@ public class SceneElement {
 			case("manner"):
 			{		
 				if(this.scenePart == ScenePart.ROLE)
-					 return this.addRoleMoodToRole(dependent._word, dependent._wsd);
+					 return this.addRoleMoodToRole(dependent._wordName, dependent._wsd);
 					
 				else if(this.scenePart == ScenePart.DYNAMIC_OBJECT || this.scenePart == ScenePart.STATIC_OBJECT)
-					return this.addStateToSceneObject(dependent._word, dependent._wsd);
+					return this.addStateToSceneObject(dependent._wordName, dependent._wsd);
 		
 				else if(this.scenePart == ScenePart.LOCATION){
 					print("what to do for " + elementType + " of LOCATION ?!");//TODO
@@ -82,10 +82,10 @@ public class SceneElement {
 			}
 			case("action"):{
 				if(this.scenePart == ScenePart.ROLE)
-					return this.addRoleActionToRole(dependent._word, dependent._wsd);
+					return this.addRoleActionToRole(dependent._wordName, dependent._wsd);
 				
 				else if(this.scenePart == ScenePart.DYNAMIC_OBJECT)
-					return this.addObjectActionToDynmicAction(dependent._word, dependent._wsd);
+					return this.addObjectActionToDynmicAction(dependent._wordName, dependent._wsd);
 				break;
 			}
 			default:

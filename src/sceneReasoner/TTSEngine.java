@@ -1,7 +1,7 @@
 package sceneReasoner;
 
 import ir.ac.itrc.qqa.semantic.enums.ExecutionMode;
-import ir.ac.itrc.qqa.semantic.enums.POS;
+//import ir.ac.itrc.qqa.semantic.enums.POS;
 import ir.ac.itrc.qqa.semantic.enums.SourceType;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
 import ir.ac.itrc.qqa.semantic.kb.Node;
@@ -17,11 +17,12 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 
 import model.MainSemanticTag;
+import model.POS;
 import model.SceneModel;
 import model.ScenePart;
 import model.SemanticTag;
 import model.SentenceModel;
-import model.Word_old;
+import model.Word;
 import model.StoryModel;
 import model.SubSemanticTag;
 
@@ -123,10 +124,10 @@ public class TTSEngine {
 				return;
 			}
 			
-//			primarySceneModel.addSentence(sentence);
-//			sentence.setScene(primarySceneModel);
+			primarySceneModel.addSentence(sentence);
+			sentence.setScene(primarySceneModel);
 			
-//			_pp.preprocessScene(sentence, primarySceneModel, storyModel);
+			_pp.preprocessScene(sentence, primarySceneModel, storyModel);
 										
 			System.out.println("sentenceModel after preprocess: \n" + sentence + "\n");
 						
@@ -961,7 +962,7 @@ public class TTSEngine {
 	 */
 	private ScenePart getArg0ScenePart(Node pureNode, POS pos) {
 				
-//		if(pos == POS.NOUN){
+//		if(pos == POS.N){
 			if(isHuman(pureNode))
 				return ScenePart.ROLE;
 			
@@ -990,7 +991,7 @@ public class TTSEngine {
 	 */
 	private ScenePart getArg1ScenePart(Node pureNode, POS pos) {
 		
-//		if(pos == POS.NOUN){
+//		if(pos == POS.N){
 		
 		
 		if(isAnimal(pureNode))
@@ -1033,7 +1034,7 @@ public class TTSEngine {
 		
 		if(semanticTag == MainSemanticTag.ARG2_OBJ2 || semanticTag == MainSemanticTag.ARG2_BENEFICIARY){
 		
-//			if(pos == POS.NOUN){
+//			if(pos == POS.N){
 	
 			if(isAnimal(pureNode))
 				return ScenePart.DYNAMIC_OBJECT;
@@ -1086,7 +1087,7 @@ public class TTSEngine {
 		
 		if(semanticTag == MainSemanticTag.ARG3_BENEFICIARY){
 					
-//			if(pos == POS.NOUN){
+//			if(pos == POS.N){
 				
 				if(isAnimal(pureNode))
 					return ScenePart.DYNAMIC_OBJECT;
@@ -1252,18 +1253,18 @@ public class TTSEngine {
 	 * If if finds then return the previously reasoned ScenePart,
 	 * otherwise it calls getScenePart to reason about the ScenePart of this sentencePart
 	 * 
-	 * @param sentencePart the sentencePart which its ScenePart is to be reasoned about.
+	 * @param word the sentencePart which its ScenePart is to be reasoned about.
 	 * @return returns a ROLE, DYNAMIC_OBJECT, STATIC_OBJECT, ACTION, LOCATION, TIME, EMOTION, GOAL or UNKNOWN?! no null will be returned!
 	 */
 	
-	public ScenePart whichScenePart(Word_old sentencePart){
+	public ScenePart whichScenePart(Word word){
 
-		print(sentencePart + " ............. in whichScenePart ....................");
+		print(word + " ............. in whichScenePart ....................");
 		
-		if(sentencePart == null)
+		if(word == null)
 			return ScenePart.UNKNOWN;
 		
-		Node partNode = sentencePart._wsd;
+		Node partNode = word._wsd;
 		
 		if(partNode == null)
 			return ScenePart.UNKNOWN;
@@ -1283,7 +1284,7 @@ public class TTSEngine {
 		else{
 			Node pureNode = getPureNode(partNode);
 		
-			sp = getScenePart(pureNode, sentencePart._gpos, sentencePart._semanticTag);
+			sp = getScenePart(pureNode, word._gPOS, word._semanticTag);
 			
 			addTo_seen_sceneParts(pureName, sp);
 		

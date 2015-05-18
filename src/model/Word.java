@@ -196,6 +196,38 @@ public class Word {
 	}
 	
 	
+	public Word makeDeepCopy(SentenceModel copy_sentence, Phrase copy_phrase){
+		
+		if(copy_sentence == null)
+			copy_sentence = this._senteceModel;
+		
+		if(copy_phrase == null)
+			copy_phrase = this._phrase;
+		
+		Word cpWord = new Word(copy_sentence, copy_phrase, -1, this._wordName, this._lem, this._gPOS,
+				this._props, this._syntaxTag, -1, this._semanticTag, this._wsd, this._wsd_name);
+				
+		if(!Common.isEmpty(adjectives)){
+			cpWord.adjectives = new ArrayList<Word>();
+			for(Word adj:adjectives)
+				cpWord.adjectives.add(adj.makeDeepCopy(copy_sentence, copy_phrase));
+		}
+		
+		if(!Common.isEmpty(mozaf_elaih)){
+			cpWord.mozaf_elaih = new ArrayList<Word>();
+			for(Word moz:mozaf_elaih)
+				cpWord.mozaf_elaih.add(moz.makeDeepCopy(copy_sentence, copy_phrase));
+		}
+		
+		if(!Common.isEmpty(capacities)){
+			cpWord.capacities = new ArrayList<Node>();		
+			for(Node cap:capacities)
+				cpWord.capacities.add(cap.makeCopy(cap.getName()));
+		}
+		
+		return cpWord;
+	}
+	
 	@Override
 	//public String getStr() {
 	public String toString() {
@@ -419,6 +451,52 @@ public class Word {
 		return null;		
 	}
  	
+	public VerbType getVerbType(){
+		
+		//TODO: correct this method later !!!
+		
+		if(_wsd != null && isVerb()){			
+			if(_wsd.getName().contains("افتاد"))
+				return VerbType.BASIT;
+			if(_wsd.getName().contains("برداشت"))
+				return VerbType.BASIT;
+			if(_wsd.getName().contains("کرد"))
+				return VerbType.BASIT;
+			if(_wsd.getName().contains("دوید"))
+				return VerbType.BASIT;
+			if(_wsd.getName().contains("وارد شد"))
+				return VerbType.MORAKAB;
+			if(_wsd.getName().contains("خارج شد"))
+				return VerbType.MORAKAB;
+			if(_wsd.getName().contains("داد"))
+				return VerbType.BASIT;
+			if(_wsd.getName().contains("شکست"))
+				return VerbType.BASIT_NAMAFOLI;
+			if(_wsd.getName().contains("دور انداخت"))
+				return VerbType.MORAKAB;
+			if(_wsd.getName().contains("بودن"))
+				return VerbType.BASIT_RABTI;
+			if(_wsd.getName().contains("دیدن"))
+				return VerbType.BASIT;
+			if(_wsd.getName().contains("پرسید"))
+				return VerbType.BASIT;
+			if(_wsd.getName().contains("بغض کردن"))
+				return VerbType.BASIT;
+			if(_wsd.getName().contains("گذاشت"))
+				return VerbType.BASIT;
+			if(_wsd.getName().contains("خیره شد"))
+				return VerbType.MORAKAB;
+			if(_wsd.getName().contains("به خواب رفت"))
+				return VerbType.MORAKAB;
+			if(_wsd.getName().contains("برگشت"))
+				return VerbType.BASIT;
+			if(_wsd.getName().contains("گفت"))
+				return VerbType.BASIT;
+					
+		}
+		return VerbType.BASIT;
+	}
+	
   	//-------------------- add part -----------------------------
  	 
  	/**

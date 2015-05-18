@@ -25,9 +25,7 @@ import model.ScenePart;
 import model.SemanticTag;
 import model.SentenceModel;
 import model.Word;
-import model.Word_old;
 import model.SceneModel;
-import model.SentenceModel_old;
 import model.StoryModel;
 import model.SubSemanticTag;
 import model.VerbType;
@@ -295,7 +293,7 @@ public class Preprocessor {
 	 * @param storyModel the StoryModel which the returned sceneModel is to be added to. guaranteed not to be null.
 	 * @return SceneModel containing input sentenceModel 
 	 */	 
-	public void preprocessScene(SentenceModel_old sentenceModel, SceneModel primarySceneModel, StoryModel storyModel){		
+	public void preprocessScene(SentenceModel sentenceModel, SceneModel primarySceneModel, StoryModel storyModel){		
 		
 		if(sentenceModel == null || primarySceneModel == null || storyModel == null){
 			MyError.error("None of senetecenModel, sceneModel, and storyModel should be null! " + sentenceModel);
@@ -348,7 +346,7 @@ public class Preprocessor {
 	 * @param primarySceneModel the sceneModel which sentenceModel belongs to. guaranteed not to be null.
 	 * @param storyModel the storyModel which primarySceneModel belongs to. guaranteed not to be null.
 	 */
-	private void prepareNullSemanticTags(SentenceModel_old sentenceModel, SceneModel primarySceneModel, StoryModel storyModel) {
+	private void prepareNullSemanticTags(SentenceModel sentenceModel, SceneModel primarySceneModel, StoryModel storyModel) {
 		
 		print("\n=============== in   prepareNullSemanticTags =======================");
 		
@@ -370,14 +368,15 @@ public class Preprocessor {
 		
 		if(!Common.isEmpty(missingMainArgs))
 			for(SceneModel scene:storyModel.getScenes())
-				if(!scene.equals(primarySceneModel))
-					prepareNullSemanticTagsForAScene(sentenceModel, missingMainArgs, scene);
-				
+				if(!Common.isEmpty(missingMainArgs))
+					if(!scene.equals(primarySceneModel))
+						prepareNullSemanticTagsForAScene(sentenceModel, missingMainArgs, scene);
+					
 		print("=============== end of prepareNullSemanticTags =====================");
 	}	
 	
 	
-	private void checkAllSemanticTagsWithUser(SentenceModel_old sentenceModel, SceneModel primarySceneModel){
+	private void checkAllSemanticTagsWithUser(SentenceModel sentenceModel, SceneModel primarySceneModel){
 		//TODO check with user!		
 	}
 	
@@ -417,7 +416,7 @@ public class Preprocessor {
 	 * @param primarySceneModel guaranteed not to be null.
 	 * @return the SceneElement created based on semanticTag
 	 */
-	private SceneElement preprocessSemanticArg(SemanticTag semanticTag, SentenceModel_old sentenceModel, SceneModel primarySceneModel) {
+	private SceneElement preprocessSemanticArg(SemanticTag semanticTag, SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		
 		if(semanticTag == null)
 			return null;
@@ -427,15 +426,15 @@ public class Preprocessor {
 			print("\n=============== in     preprocess " + semanticTag + " =======================");
 			
 			
-			Word_old semArgPart = sentenceModel.getSentencePart(semanticTag);
+			Word semArgWord = sentenceModel.getWord(semanticTag);
 			
-			if(semArgPart == null){				
+			if(semArgWord == null){				
 				MyError.error("the sentenceModel has " + semanticTag + " but it didn't find!" + sentenceModel);
 				return null;
 			}
 			
 			//It means that it is verb (infinitive) so the processing must perform on it and its dependents too!
-			if(semArgPart.isInfinitive()){
+			if(semArgWord.isInfinitive()){
 				//TODO: complete this part later!
 				print("It is an infinitive so, the process should got performed for it again!");
 				
@@ -444,17 +443,17 @@ public class Preprocessor {
 			else{
 						
 				//reasoning ScenePart from KB, ROLE,DYNAMIC_OBJECT, STATIC_OBJECT, ....
-				ScenePart scenePart = _ttsEngine.whichScenePart(semArgPart);
+				ScenePart scenePart = _ttsEngine.whichScenePart(semArgWord);
 				
 				if(scenePart == null || scenePart == ScenePart.UNKNOWN){
-					MyError.error("the " + semanticTag +": " + semArgPart + " ScenePart was not found!");
+					MyError.error("the " + semanticTag +": " + semArgWord + " ScenePart was not found!");
 					return null;
 				}
 				
-				SceneElement inputSceneElement = createSceneElement(semArgPart, scenePart);
+				SceneElement inputSceneElement = createSceneElement(semArgWord, scenePart);
 				
 				if(inputSceneElement == null){
-					MyError.error("the " + semArgPart + " could not convert to a SceneElement!");
+					MyError.error("the " + semArgWord + " could not convert to a SceneElement!");
 					return null;
 				}
 				
@@ -470,7 +469,7 @@ public class Preprocessor {
 					sceneElem = primarySceneModel.getSceneElement(inputSceneElement);
 					
 					if(sceneElem == null){
-						MyError.error("primarySceneModel has " + semArgPart + " but it could not be found!");
+						MyError.error("primarySceneModel has " + semArgWord + " but it could not be found!");
 						return null;
 					}
 					sceneElem.mergeWith(inputSceneElement);	
@@ -485,7 +484,7 @@ public class Preprocessor {
 				
 				//------------------- pre-processing dependents of semArgPart --------------------
 				
-				preprocessDependentsOfSemanticArg(semArgPart, sceneElem);
+				preprocessDependentsOfSemanticArg(semArgWord, sceneElem);
 								
 				print("=============== end of preprocess " + semanticTag + " =======================");
 				
@@ -499,14 +498,14 @@ public class Preprocessor {
 	 * @param sentenceModel guaranteed not to be null.
 	 * @param primarySceneModel guaranteed not to be null.
 	 */
-	private void preprocessVerbArg(SentenceModel_old sentenceModel, SceneModel primarySceneModel) {
+	private void preprocessVerbArg(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 				
 		print("\n--------------- in   verb preprocess -------------------------------");
 		
 		//TODO: check the correct place of this statement!
 		defineVerbRelation(sentenceModel);
 		
-		Word_old verb = sentenceModel.getVerb();
+		Word verb = sentenceModel.getVerb();
 		
 		if(verb == null){
 			MyError.error("The SentenceModel has no verb as a mistake!");
@@ -601,14 +600,14 @@ public class Preprocessor {
 	 * @param sentenceModel guaranteed not to be null.
 	 * @param primarySceneModel guaranteed not to be null.
 	 */
-	private void processSubSemanticArgs(SentenceModel_old sentenceModel, SceneModel primarySceneModel) {
+	private void processSubSemanticArgs(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 				
 		print("\n=============== in processSubSemArgs ===============================");
 		
 		//processing ArgM_LOC, if any.
-		Word_old locPart = sentenceModel.getSentencePart(SubSemanticTag.LOC);
-		if(locPart != null){
-			print("SceneModel has " + locPart + " ArgM_LOC");
+		Word locWord = sentenceModel.getWord(SubSemanticTag.LOC);
+		if(locWord != null){
+			print("SceneModel has " + locWord + " ArgM_LOC");
 			
 			//It can only return Location SceneElement. 
 			SceneElement locElem = preprocessSemanticArg(SubSemanticTag.LOC.convertToSemanticTag(), sentenceModel, primarySceneModel);
@@ -618,9 +617,9 @@ public class Preprocessor {
 		}
 		
 		//processing ArgM_TMP, if any.
-		Word_old tmpPart = sentenceModel.getSentencePart(SubSemanticTag.TMP);
-		if(tmpPart != null){
-			print("SceneModel has " + tmpPart + " ArgM_TMP");
+		Word tmpWord = sentenceModel.getWord(SubSemanticTag.TMP);
+		if(tmpWord != null){
+			print("SceneModel has " + tmpWord + " ArgM_TMP");
 
 			//It can only return Time SceneElement.
 			SceneElement tmpElem = preprocessSemanticArg(SubSemanticTag.TMP.convertToSemanticTag(), sentenceModel, primarySceneModel);
@@ -630,69 +629,69 @@ public class Preprocessor {
 		}
 		
 		//processing ArgM_MNR, if any.
-		Word_old mnrPart = sentenceModel.getSentencePart(SubSemanticTag.MNR);
-		if(mnrPart != null){
-			print("SceneModel has " + mnrPart + " ArgM_MNR");
+		Word mnrWord = sentenceModel.getWord(SubSemanticTag.MNR);
+		if(mnrWord != null){
+			print("SceneModel has " + mnrWord + " ArgM_MNR");
 			
-			Word_old arg0Part = sentenceModel.getArg0SentencePart();
+			Word arg0Word = sentenceModel.getArg0Word();
 			
-			if(arg0Part != null){
-				SceneElement arg0Elem = primarySceneModel.getSceneElement(arg0Part._wsd);
+			if(arg0Word != null){
+				SceneElement arg0Elem = primarySceneModel.getSceneElement(arg0Word._wsd);
 				
 				if(arg0Elem != null){
 					//It can be added as RoleMood or ObjectState to Arg0
-					SceneElement mnrElem = arg0Elem.addDependent(mnrPart, "manner");
+					SceneElement mnrElem = arg0Elem.addDependent(mnrWord, "manner");
 					
 					if(mnrElem != null)
-						preprocessDependentsOfSemanticArg(mnrPart, mnrElem);
+						preprocessDependentsOfSemanticArg(mnrWord, mnrElem);
 				}
 				else
-					print("no SceneElement for Arg0 found in primarySceneModel, in order to " + mnrPart + " to be added to it!");
+					print("no SceneElement for Arg0 found in primarySceneModel, in order to " + mnrWord + " to be added to it!");
 			}
 			else
-				print("no Arg0Part found in sentnceModel, in order to " + mnrPart + " to be added to it!");			
+				print("no Arg0Part found in sentnceModel, in order to " + mnrWord + " to be added to it!");			
 		}
 
 		//processing ArgM_PRP, if any.
-		Word_old prpPart = sentenceModel.getSentencePart(SubSemanticTag.PRP);
-		if(prpPart != null){
-			print("SceneModel has " + prpPart + " ArgM_PRP");
+		Word prpWord = sentenceModel.getWord(SubSemanticTag.PRP);
+		if(prpWord != null){
+			print("SceneModel has " + prpWord + " ArgM_PRP");
 			
 			//It can return only Scene_goal SceneElement. 
 			preprocessSemanticArg(SubSemanticTag.PRP.convertToSemanticTag(), sentenceModel, primarySceneModel);
 		}
 		
 		//processing ArgM_GOL, if any.
-		Word_old golPart = sentenceModel.getSentencePart(SubSemanticTag.GOL);
-		if(golPart != null){
-			print("SceneModel has " + golPart + " ArgM_GOL");
+		Word golWord = sentenceModel.getWord(SubSemanticTag.GOL);
+		if(golWord != null){
+			print("SceneModel has " + golWord + " ArgM_GOL");
 			
 			//It can return Role, Dynamic_object, Static_object, or Location SceneElement. 
 			preprocessSemanticArg(SubSemanticTag.GOL.convertToSemanticTag(), sentenceModel, primarySceneModel);
 		}
 
 		//processing ArgM_CAU, if any.
-		Word_old cauPart = sentenceModel.getSentencePart(SubSemanticTag.CAU);
-		if(cauPart != null){
-			print("SceneModel has " + cauPart + " ArgM_CAU");
+		Word cauWord = sentenceModel.getWord(SubSemanticTag.CAU);
+		if(cauWord != null){
+			print("SceneModel has " + cauWord + " ArgM_CAU");
 			
 			//It can return only Scene_goal SceneElement. 
 			preprocessSemanticArg(SubSemanticTag.CAU.convertToSemanticTag(), sentenceModel, primarySceneModel);
 		}
 		
 		//processing ArgM_COM, if any.
-		Word_old comPart = sentenceModel.getSentencePart(SubSemanticTag.COM);
-		if(comPart != null){
-			print("SceneModel has " + comPart + " ArgM_COM");
+		Word comWord = sentenceModel.getWord(SubSemanticTag.COM);
+		if(comWord != null){
+			print("SceneModel has " + comWord + " ArgM_COM");
 			
 			//It can return only Role or Dynamic_object SceneElement. 
 			preprocessSemanticArg(SubSemanticTag.COM.convertToSemanticTag(), sentenceModel, primarySceneModel);
 		}
 	
 		//processing ArgM_INS, if any.
-		Word_old insPart = sentenceModel.getSentencePart(SubSemanticTag.INS);
-		if(insPart != null){
-			print("SceneModel has " + insPart + " ArgM_INS");
+		Word insWord = sentenceModel.getWord(SubSemanticTag.INS);
+		if(insWord != null){
+			print("SceneModel has " + insWord + " ArgM_INS");
 			
 			//It can return only Dynamic_object or Static_object SceneElement. 
 			preprocessSemanticArg(SubSemanticTag.INS.convertToSemanticTag(), sentenceModel, primarySceneModel);
@@ -708,20 +707,20 @@ public class Preprocessor {
 	 * @param arg4SceneElement
 	 * @param primarySceneModel guaranteed not to be null.
 	 */
-	private void processLocationOfScene(SentenceModel_old sentenceModel, SceneElement arg3SceneElement, SceneElement arg4SceneElement, SceneModel primarySceneModel) {
+	private void processLocationOfScene(SentenceModel sentenceModel, SceneElement arg3SceneElement, SceneElement arg4SceneElement, SceneModel primarySceneModel) {
 		
 		if(primarySceneModel.getLocation() != null)
 			return;
 		
 		print("\n=============== in processLocation =================================");
 		
-		Word_old arg3Part = sentenceModel.getArg3SentencePart();
+		Word arg3Word = sentenceModel.getArg3Word();
 		
-		Word_old arg4Part = sentenceModel.getArg4SentencePart();
+		Word arg4Word = sentenceModel.getArg4Word();
 		
-		if(arg3Part != null && arg3Part._semanticTag != null && arg3Part._semanticTag.isMainSemanticTag()){
+		if(arg3Word != null && arg3Word._semanticTag != null && arg3Word._semanticTag.isMainSemanticTag()){
 		
-			MainSemanticTag arg3SemArg = arg3Part._semanticTag.convertToMainSemanticTag();
+			MainSemanticTag arg3SemArg = arg3Word._semanticTag.convertToMainSemanticTag();
 			
 			//Sentence has ARG3_SOURCE_STARTPOINT
 			if(arg3SemArg == MainSemanticTag.ARG3_SOURCE_STARTPOINT && arg3SceneElement != null && arg3SceneElement.scenePart == ScenePart.LOCATION){
@@ -729,21 +728,21 @@ public class Preprocessor {
 				primarySceneModel.setLocation((Location)arg3SceneElement);
 				
 				//Sentence has ARG4_ENDPOINT
-				if(arg4Part != null && arg4SceneElement != null)			 
+				if(arg4Word != null && arg4SceneElement != null)			 
 					primarySceneModel.addAlternativeLocation((Location)arg4SceneElement);				
 				
 				//Sentence hasn't ARG4_ENDPOINT
 				else{
 					
-					Word_old arg_dirPart = sentenceModel.getSentencePart(SubSemanticTag.DIR);
+					Word arg_dirWord = sentenceModel.getWord(SubSemanticTag.DIR);
 					
 					//Sentence has ARG_DIR
-					if(arg_dirPart != null){
+					if(arg_dirWord != null){
 						
 						SceneElement arg_dirSceneElem = preprocessSemanticArg(SubSemanticTag.DIR.convertToSemanticTag(), sentenceModel, primarySceneModel) ;							
 						
 						if(arg_dirSceneElem == null){
-							MyError.error("the " + arg_dirPart + " could not convert to a SceneElement!");
+							MyError.error("the " + arg_dirWord + " could not convert to a SceneElement!");
 							return;
 						}							
 
@@ -756,21 +755,21 @@ public class Preprocessor {
 		//Sentence hasn't ARG3_SOURCE_STARTPOINT but maybe have arg4Part or arg_dirPart
 		
 		//Sentence has ARG4_ENDPOINT
-		if(arg4Part != null)			
+		if(arg4Word != null)			
 				primarySceneModel.addAlternativeLocation((Location)arg4SceneElement);				
 		
 		//Sentence hasn't ARG4_ENDPOINT
 		else{
 			
-			Word_old arg_dirPart = sentenceModel.getSentencePart(SubSemanticTag.DIR);
+			Word arg_dirWord = sentenceModel.getWord(SubSemanticTag.DIR);
 			
 			//Sentence has ARG_DIR
-			if(arg_dirPart != null){
+			if(arg_dirWord != null){
 				
 				SceneElement arg_dirSceneElem = preprocessSemanticArg(SubSemanticTag.DIR.convertToSemanticTag(), sentenceModel, primarySceneModel);
 				
 				if(arg_dirSceneElem == null){
-					MyError.error("the " + arg_dirPart + " could not convert to a SceneElement!");
+					MyError.error("the " + arg_dirWord + " could not convert to a SceneElement!");
 					return;
 				}
 				
@@ -781,9 +780,8 @@ public class Preprocessor {
 		print("=============== end of processLocation =============================");		
 	}
 
-	private void processVisualTags(SentenceModel_old sentenceModel, SceneModel primarySceneModel) {
-		// TODO Auto-generated method stub
-		
+	private void processVisualTags(SentenceModel sentenceModel, SceneModel primarySceneModel) {
+		// TODO Auto-generated method stub		
 	}	
 
 	/**
@@ -792,13 +790,13 @@ public class Preprocessor {
 	 * @param missingMainArgs guaranteed not to be null.
 	 * @param sceneModel guaranteed not to be null.
 	 */
-	private void prepareNullSemanticTagsForAScene(SentenceModel_old sentenceModel, ArrayList<MainSemanticTag> missingMainArgs, SceneModel sceneModel){		
+	private void prepareNullSemanticTagsForAScene(SentenceModel sentenceModel, ArrayList<MainSemanticTag> missingMainArgs, SceneModel sceneModel){		
 		
 		if(!Common.isEmpty(missingMainArgs)){
 			
 			ArrayList<MainSemanticTag> preparedMainArgs = new ArrayList<MainSemanticTag>();
 			
-			ArrayList<SentenceModel_old> allSentences = sceneModel.getSentences();
+			ArrayList<SentenceModel> allSentences = sceneModel.getSentences();
 			
 			if(!Common.isEmpty(allSentences)){		
 				
@@ -806,30 +804,33 @@ public class Preprocessor {
 					
 					if(miss != null && (miss.isArg0() || miss.isArg1())){
 					
-						for(SentenceModel_old sent:allSentences){
+						for(SentenceModel sent:allSentences){
 							if(sent.equals(sentenceModel))
 								continue;
 							
-	//						print("In sentence: " + sent.getOriginalSentence());
+//							print("In sentence: " + sent.getOriginalSentence());
 							
 							if(miss.isArg0() && sent.hasArg0()){							
-								Word_old arg0SentencePart = sent.getArg0SentencePart();
+								Word arg0Word = sent.getArg0Word();
 								
-								arg0SentencePart.set_semanticTag(miss.name());
-								preparedMainArgs.add(arg0SentencePart._semanticTag.convertToMainSemanticTag());							
-								sentenceModel.setPrerparedSentencePart(arg0SentencePart);						
-								
-								print("prepared " + arg0SentencePart._semanticTag);
-								break;
+								if(arg0Word != null){									
+									Word copyArg0Word = arg0Word.makeDeepCopy(sentenceModel, null);  
+									copyArg0Word.set_semanticTag(miss.name());
+									preparedMainArgs.add(copyArg0Word._semanticTag.convertToMainSemanticTag());							
+									sentenceModel.setPrerparedWord(copyArg0Word); //TODO: check if it is correct !!!!!!!!!						
+									
+									print("prepared " + copyArg0Word._semanticTag);
+									break;
+								}
 							}
 							else if(miss.isArg1() && sent.hasArg1()){
-								Word_old arg1SentencePart = sent.getArg1SentencePart();
+								Word arg1Word = sent.getArg1Word();
 								
-								arg1SentencePart.set_semanticTag(miss.name());
-								preparedMainArgs.add(arg1SentencePart._semanticTag.convertToMainSemanticTag());
-								sentenceModel.setPrerparedSentencePart(arg1SentencePart);
+								arg1Word.set_semanticTag(miss.name());
+								preparedMainArgs.add(arg1Word._semanticTag.convertToMainSemanticTag());
+//								sentenceModel.setPrerparedSentencePart(arg1Word);sentenceModel.setPrerparedWord(copyArg0Word); //TODO: check if it is correct !!!!!!!!!
 								
-								print("prepared " + arg1SentencePart._semanticTag);
+								print("prepared " + arg1Word._semanticTag);
 								break;
 							}
 						}
@@ -854,30 +855,30 @@ public class Preprocessor {
 	 * 		<ul> it dose nothing yet! </ul>
 	 * <li> 
 	 * 
-	 * @param semArgPart guaranteed not to be null.
+	 * @param semArgWord guaranteed not to be null.
 	 * @param sceneElement guaranteed not to be null.
 	 * @param primarySceneModel guaranteed not to be null.
 	 */
-	private void preprocessDependentsOfSemanticArg(Word_old semArgPart, SceneElement sceneElement){
+	private void preprocessDependentsOfSemanticArg(Word semArgWord, SceneElement sceneElement){
 		
 		//It means that this sentencePart has some adjectives
-		if(semArgPart.hasAnyAdjectives()){
+		if(semArgWord.hasAnyAdjectives()){
 			
-			print(semArgPart + " " + semArgPart._semanticTag + " has some adjectives:" + semArgPart.getAdjectives());
+			print(semArgWord + " " + semArgWord._semanticTag + " has some adjectives:" + semArgWord.getAdjectives());
 			
-			ArrayList<Word_old> adjectives = semArgPart.getAdjectives();
+			ArrayList<Word> adjectives = semArgWord.getAdjectives();
 			
-			for(Word_old adj:adjectives)
+			for(Word adj:adjectives)
 				sceneElement.addDependent(adj, "adjective");			
 		}
 		//It means that this sentencePart has some mozad_elaih
-		if(semArgPart.hasAnyMozaf_elaihs()){				
+		if(semArgWord.hasAnyMozaf_elaihs()){				
 			
-			print(semArgPart  + " " + semArgPart._semanticTag + " has mozaf_elaih: " + semArgPart.getMozaf_elaih());
+			print(semArgWord  + " " + semArgWord._semanticTag + " has mozaf_elaih: " + semArgWord.getMozaf_elaih());
 			
-			ArrayList<Word_old> mozafs = semArgPart.getMozaf_elaih();
+			ArrayList<Word> mozafs = semArgWord.getMozaf_elaih();
 			
-			for(Word_old moz:mozafs)
+			for(Word moz:mozafs)
 				
 				if(moz._wsd != null && !moz._wsd.getName().contains(zamir_enekasi))
 					sceneElement.addDependent(moz, "mozaf_elaih");
@@ -890,33 +891,33 @@ public class Preprocessor {
 	 * @param sentenceModel guaranteed not to be null.
 	 * @param primarySceneModel guaranteed not to be null.
 	 */
-	private void preprocessingNamafoliVerb(Word_old verb, SentenceModel_old sentenceModel, SceneModel primarySceneModel) {
+	private void preprocessingNamafoliVerb(Word verb, SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		
-		Word_old arg1Part = sentenceModel.getArg1SentencePart();
+		Word arg1Word = sentenceModel.getArg1Word();
 		
-		if(arg1Part == null){
+		if(arg1Word == null){
 			print(verb + " is namafoli but ARG1 not found as a mistake!");
 			return;
 		}		
 		
-		SceneElement arg1Elem = primarySceneModel.getSceneElement(arg1Part._wsd);
+		SceneElement arg1Elem = primarySceneModel.getSceneElement(arg1Word._wsd);
 		
 		if(arg1Elem == null){
-			print(arg1Part + " can not be found in primarySceneModel!");
+			print(arg1Word + " can not be found in primarySceneModel!");
 			return;
 		}		
 		
 		arg1Elem.addDependent(verb, "adjective");
 		
 		//------
-		Word_old arg0Part = sentenceModel.getArg0SentencePart();
+		Word arg0Word = sentenceModel.getArg0Word();
 		
-		if(arg0Part != null){
+		if(arg0Word != null){
 			
-			SceneElement arg0Elem = primarySceneModel.getSceneElement(arg0Part._wsd);
+			SceneElement arg0Elem = primarySceneModel.getSceneElement(arg0Word._wsd);
 			
 			if(arg0Elem == null){
-				print(arg0Part + " can not be found in primarySceneModel!");
+				print(arg0Word + " can not be found in primarySceneModel!");
 				return;
 			}
 			
@@ -930,52 +931,52 @@ public class Preprocessor {
 	 * @param sentenceModel guaranteed not to be null.
 	 * @param primarySceneModel guaranteed not to be null.
 	 */
-	private void preprocessingRabtiVerb(Word_old verb, SentenceModel_old sentenceModel, SceneModel primarySceneModel) {
+	private void preprocessingRabtiVerb(Word verb, SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		
-		Word_old arg1Part = sentenceModel.getArg1SentencePart();
+		Word arg1Word = sentenceModel.getArg1Word();
 		
-		Word_old arg2Part = sentenceModel.getArg2SentencePart();
+		Word arg2Word = sentenceModel.getArg2Word();
 		
-		if(arg1Part == null || arg2Part == null){
+		if(arg1Word == null || arg2Word == null){
 			print(verb + " is rabti but ARG1 or ARG2 not found as a mistake!");
 			return;
 		}		
 		
 //		if(arg2Part.isAdjective()){
 		
-			SceneElement arg1Elem = primarySceneModel.getSceneElement(arg1Part._wsd);
+			SceneElement arg1Elem = primarySceneModel.getSceneElement(arg1Word._wsd);
 			
 			if(arg1Elem == null){
-				print(arg1Part + " can not be found in primarySceneModel!");
+				print(arg1Word + " can not be found in primarySceneModel!");
 				return;
 			}		
 			
-			arg1Elem.addDependent(arg2Part, "adjective");			
+			arg1Elem.addDependent(arg2Word, "adjective");			
 //		}
 //		else
 //			print(verb + " is rabti but Arg2Part " + arg2Part + " is not adjective!");
 	}
 
-	private void preprocessingActionVerb(SentenceModel_old sentenceModel, SceneModel primarySceneModel) {
+	private void preprocessingActionVerb(SentenceModel sentenceModel, SceneModel primarySceneModel) {
 		
-		Word_old verb = sentenceModel.getVerb();
+		Word verb = sentenceModel.getVerb();
 		
 		if(verb == null){
 			MyError.error("The SentenceModel has no verb as a mistake!");
 			return;
 		}
 		
-		Word_old arg0Part = sentenceModel.getArg0SentencePart();
+		Word arg0Word = sentenceModel.getArg0Word();
 		
-		if(arg0Part == null){
-			MyError.error("The " + verb + " is BASIT, but has no Arg0Part as a mistake!");
+		if(arg0Word == null){
+			MyError.error("The " + verb + " is BASIT, but has no Arg0Word as a mistake!");
 			return;
 		}
 		
-		SceneElement arg0Elem = primarySceneModel.getSceneElement(arg0Part._wsd);
+		SceneElement arg0Elem = primarySceneModel.getSceneElement(arg0Word._wsd);
 		
 		if(arg0Elem == null){
-			print(arg0Part + " can not be found in primarySceneModel!");
+			print(arg0Word + " can not be found in primarySceneModel!");
 			return;
 		}
 		
@@ -1119,31 +1120,31 @@ public class Preprocessor {
 		}		
 	}
 	
-	private SceneElement createSceneElement(Word_old part, ScenePart scenePart){
+	private SceneElement createSceneElement(Word word, ScenePart scenePart){
 		
-		if(part == null || scenePart == null || scenePart == ScenePart.UNKNOWN){
+		if(word == null || scenePart == null || scenePart == ScenePart.UNKNOWN){
 			MyError.error("null input parameter for createSceneElement !");
 			return null;
 		}								
 		
 		if(scenePart == ScenePart.ROLE)			
-				return new Role(part._word, part._wsd);
+				return new Role(word._wordName, word._wsd);
 		else if(scenePart == ScenePart.ROLE_ACTION)
-			return new RoleAction(part._word, part._wsd);
+			return new RoleAction(word._wordName, word._wsd);
 		else if(scenePart == ScenePart.DYNAMIC_OBJECT)
-			return new DynamicObject(part._word, part._wsd);
+			return new DynamicObject(word._wordName, word._wsd);
 		else if(scenePart == ScenePart.OBJECT_ACTION)
-			return new ObjectAction(part._word, part._wsd);
+			return new ObjectAction(word._wordName, word._wsd);
 		else if(scenePart == ScenePart.STATIC_OBJECT)
-			return new StaticObject(part._word, part._wsd);				
+			return new StaticObject(word._wordName, word._wsd);				
 		else if(scenePart == ScenePart.LOCATION)
-			return new Location(part._word, part._wsd);			
+			return new Location(word._wordName, word._wsd);			
 		else if(scenePart == ScenePart.TIME)
-			return new Time(part._word, part._wsd);
+			return new Time(word._wordName, word._wsd);
 		else if(scenePart == ScenePart.SCENE_EMOTION)
-			return new SceneEmotion(part._word, part._wsd);
+			return new SceneEmotion(word._wordName, word._wsd);
 		else if(scenePart == ScenePart.SCENE_GOAL)
-			return new SceneGoal(part._word, part._wsd);
+			return new SceneGoal(word._wordName, word._wsd);
 		return null;
 	}
 
@@ -1182,14 +1183,18 @@ public class Preprocessor {
 	 * @param sentenceModel guaranteed not to be null.
 	 * @param primarySceneModel guaranteed not to be null.
 	 */
-	private ArrayList<PlausibleStatement> defineVerbRelation(SentenceModel_old sentenceModel){
+	private ArrayList<PlausibleStatement> defineVerbRelation(SentenceModel sentenceModel){
 		
 		ArrayList<PlausibleStatement> verbRelations = new ArrayList<PlausibleStatement>();
 		
-		Word_old verb = sentenceModel.getVerb();
+		//TODO: to correct this method !!!!!!!!!!!!!!!!!!!!!
+		
+		/*
+		Word verb = sentenceModel.getVerb();
+		
 		
 		//here _wsd of subject(s), object(s), and adverb(s) of this sentence has been allocated!								
-		ArrayList<Word_old> subjects = sentenceModel.getSubjects();
+		ArrayList<Word> subjects = sentenceModel.getSubjects();
 		
 		if(verb == null || subjects == null || subjects.size() == 0){
 			MyError.error("sentence with verb " + verb + " has no subject part! " + sentenceModel);
@@ -1224,6 +1229,7 @@ public class Preprocessor {
 				print("verbRel added ---- : " + rel.argument.getName() + " --> " + rel.getName() + " --> " + rel.referent.getName() + "\n");				
 			}
 		}
+		*/
 		return verbRelations;
 	}
 

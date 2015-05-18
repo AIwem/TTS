@@ -7,7 +7,7 @@ import sceneElement.Time;
 import model.MainSemanticTag;
 import model.SceneModel;
 import model.ScenePart;
-import model.Word_old;
+import model.Word;
 import model.StoryModel;
 import model.SubSemanticTag;
 import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
@@ -366,33 +366,42 @@ public class SceneReasoner {
 								
 									if(candidLoc != null){							
 										
-										Word_old candidPart = lastScene.findSentencePartofSceneElement(candidLoc);
+										Word candidWord = lastScene.findWordOfSceneElement(candidLoc);
 										
-										//if it is ArgM_DIR, then set its core as Location of currentScene.
-										if(candidPart._semanticTag == SubSemanticTag.DIR.convertToSemanticTag()){ 
-											
-											Word_old innerPart = candidPart.getInnerPart();
-											
-											if(innerPart != null){
-												print("inner part of " + candidPart +" %%%%%%%%%%%%%%%%%%%%%%%%% " + innerPart);
+										if(candidWord != null){
+										
+											//if it is ArgM_DIR, then set its core as Location of currentScene.
+											if(candidWord._semanticTag == SubSemanticTag.DIR.convertToSemanticTag()){ 
+												//TODO: correct!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+
+												ArrayList<Word> mozafs = candidWord.getMozaf_elaih();
 												
-												ScenePart scenePart = _ttsEngine.whichScenePart(innerPart);
+												Word innerDirection = null;
 												
-												if(scenePart != null || scenePart != ScenePart.UNKNOWN){												
-													currentScene.setLocation(new Location(innerPart._word, innerPart._wsd));
-													print("the lastScene AergM_Dir innerPart" + currentScene.getLocation() +" %%%%%%%%%%%%%%%%%%%%%%%%% has been set!");
-													break;
+												if(!Common.isEmpty(mozafs))
+													 innerDirection = mozafs.get(0);
+												
+												if(innerDirection != null){
+													print("inner direction of " + candidWord +" %%%%%%%%%%%%%%%%%%%%%%%%% " + innerDirection);
+													
+													ScenePart scenePart = _ttsEngine.whichScenePart(innerDirection);
+													
+													if(scenePart != null || scenePart != ScenePart.UNKNOWN){												
+														currentScene.setLocation(new Location(innerDirection._wordName, innerDirection._wsd));
+														print("the lastScene ArgM_Dir innerDirection " + currentScene.getLocation() +" %%%%%%%%%%%%%%%%%%%%%%%%% has been set!");
+														break;
+													}
 												}
 											}
-										}
-										//if it is ARG4, then set that as Location of currentScene.
-										else if(candidPart._semanticTag == MainSemanticTag.ARG4_ENDPOINT.convertToSemanticTag()){
-											ScenePart scenePart = _ttsEngine.whichScenePart(candidPart);
-											
-											if(scenePart == ScenePart.LOCATION){
-												currentScene.setLocation(new Location(candidPart._word, candidPart._wsd));
-												print("the lastScene Arg4 " + currentScene.getLocation() +" %%%%%%%%%%%%%%%%%%%%%%%%% has been set!");
-												break;
+											//if it is ARG4, then set that as Location of currentScene.
+											else if(candidWord._semanticTag == MainSemanticTag.ARG4_ENDPOINT.convertToSemanticTag()){
+												ScenePart scenePart = _ttsEngine.whichScenePart(candidWord);
+												
+												if(scenePart == ScenePart.LOCATION){
+													currentScene.setLocation(new Location(candidWord._wordName, candidWord._wsd));
+													print("the lastScene Arg4 " + currentScene.getLocation() +" %%%%%%%%%%%%%%%%%%%%%%%%% has been set!");
+													break;
+												}
 											}
 										}
 									}
