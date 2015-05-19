@@ -1,0 +1,8 @@
+1	شروع	شروع	N	N	number=SING|senID=001
+2	به	به	PREP	PREP	senID=001
+3	دویدن	دوید	N	INFI	number=SING|senID=001
+4	به	به	PREP	PREP	senID=001
+5	سمت	سمت	N	N	number=SING|senID=001
+6	خانه	خانه	N	N	number=SING|senID=001
+7	کرد	کرد#کن	V	V	person=3|number=SING|tma=G|senID=001
+8	.	.	PUNC	PUNC	senID=001

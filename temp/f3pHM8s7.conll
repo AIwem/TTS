@@ -1,0 +1,7 @@
+1	تیروکمان	تیروکمان	N	N	number=SING|senID=001	3	PREDEP	_	_
+2	خود	خود	PR	PR	senID=001	1	MOZ	_	_
+3	را	را	POSTP	POSTP	senID=001	4	OBJ	_	_
+4	برداشت	برداشت	V	V	person=3|number=SING|tma=G|senID=001	0	ROOT	_	_
+5	.	.	PUNC	PUNC	senID=001	4	PUNC	_	_
+
+

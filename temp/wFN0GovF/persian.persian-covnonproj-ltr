@@ -1,0 +1,5 @@
+1	وارد	وارد	PREP	PREP	wcID=111111001111110	3	ADVRB	_	_
+2	خانه	خانه	N	N	number=SING|wcID=11110010001110	1	POSDEP	_	_
+3	شد	شد#شو	V	V	person=3|number=SING|tma=G|wcID=100010	0	ROOT	_	_
+4	.	.	PUNC	PUNC	wcID=000	3	PUNC	_	_
+

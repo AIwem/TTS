@@ -1,0 +1,5 @@
+1	.	.	PUNC	PUNC	wcID=000	2	PUNC	_	_
+2	شد	شد#شو	V	V	person=3|number=SING|tma=G|wcID=100010	0	ROOT	_	_
+3	خانه	خانه	N	N	number=SING|wcID=11110010001110	4	POSDEP	_	_
+4	وارد	وارد	PREP	PREP	wcID=111111001111110	2	NVE	_	_
+

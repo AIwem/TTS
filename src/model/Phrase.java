@@ -1,5 +1,6 @@
 package model;
 
+import ir.ac.itrc.qqa.semantic.enums.DependencyRelationType;
 import ir.ac.itrc.qqa.semantic.util.Common;
 
 import java.util.ArrayList;
@@ -67,6 +68,17 @@ public class Phrase {
 		return _words;
 	}
 
+	public Word get_wordWithSyntax(DependencyRelationType syntaxTag) {
+		if(syntaxTag == null)
+			return null;
+		if(!Common.isEmpty(_words))
+			for(Word wrd:_words)
+				if(wrd._syntaxTag == syntaxTag)
+					return wrd;
+		return null;
+	}
+
+	
 	@Override
 	public String toString() {
 		String str = "Phrase with head: " + _headWord + " \n";

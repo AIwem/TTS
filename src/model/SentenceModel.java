@@ -1,5 +1,6 @@
 package model;
 
+import ir.ac.itrc.qqa.semantic.enums.DependencyRelationType;
 import ir.ac.itrc.qqa.semantic.kb.Node;
 import ir.ac.itrc.qqa.semantic.util.Common;
 import ir.ac.itrc.qqa.semantic.util.MyError;
@@ -47,6 +48,27 @@ public class SentenceModel {
 			Word wd = new Word(wStr, this);
 			this._words.add(wd);
 		}
+		
+		//------------------ correct Parser Error --------------
+		if(NLSentence.equals("پسرک امروز در راه خانه یک کبوتر زخمی را دید.")){
+			Word emroz = get_word(2);
+			emroz._srcOfSynTag_number = getVerb()._number;
+		}
+		else if(NLSentence.equals("سپس به طرف اتاقش دوید.")){
+			Word betarafe = get_word(2);
+			betarafe._syntaxTag = DependencyRelationType.VPP;
+		}
+		else if(NLSentence.equals("شکست.")){
+			_words.remove(0);
+			_words.get(0)._wordName = "شکست";			
+		}
+		else if(NLSentence.equals("دور انداخت.")){
+			_words.remove(2);		
+			_words.get(0)._syntaxTag = DependencyRelationType.NVE;
+			_words.get(1)._wordName = "انداخت";			
+		}
+		//------------------ end of correct Parser Error --------------
+		
 		arrangeWords();
 	}
 	
@@ -201,6 +223,11 @@ public class SentenceModel {
 				if(wrd != null && wrd.isVerb())
 					return wrd;
 		
+		if(!Common.isEmpty(_prepared_words))
+			for(Word wrd:_prepared_words)
+				if(wrd != null && wrd.isVerb())
+					return wrd;
+		
 		MyError.error("This sentence has no verb!: " + this);
 		return null;
 	}
@@ -219,6 +246,18 @@ public class SentenceModel {
 						MyError.error("This Sentence has subject " + wrd + " but it is not head of a phrase!");
 					}
 				}
+		
+		if(!Common.isEmpty(_prepared_words))
+			for(Word wrd:_prepared_words)
+				if(wrd != null && wrd.isSubject()){
+					Phrase sbj_ph = wrd._phrase;// get_phrase(wrd);
+					if(sbj_ph != null)
+						sbj_phrases.add(sbj_ph);
+					else{
+						MyError.error("This Sentence has subject " + wrd + " but it is not head of a phrase!");
+					}
+				}
+		
 		if(sbj_phrases.size() > 0)
 			return sbj_phrases;
 		else
@@ -236,9 +275,21 @@ public class SentenceModel {
 					if(obj_ph != null)
 						obj_phrases.add(obj_ph);
 					else{
-						MyError.error("This Sentence has object " + wrd + " but it is not head of a phrase!");
+						MyError.error("This Sentence has object " + wrd + " in _prepared_words but it is not head of a phrase!");
 					}
 				}
+		
+		if(!Common.isEmpty(_prepared_words))
+			for(Word wrd:_prepared_words)
+				if(wrd != null && wrd.isObject()){
+					Phrase obj_ph = wrd._phrase; //get_phrase(wrd);
+					if(obj_ph != null)
+						obj_phrases.add(obj_ph);
+					else{
+						MyError.error("This Sentence has object " + wrd + " in _prepared_words but it is not head of a phrase!");
+					}
+				}
+		
 		if(obj_phrases.size() > 0)
 			return obj_phrases;
 		else
@@ -308,6 +359,11 @@ public class SentenceModel {
 			for(Word w:_words)
 				if(w._wordName.equalsIgnoreCase(word_name))
 					return w;
+		//TODO: is it correct to search in _prepared_words too?!
+		if(!Common.isEmpty(_prepared_words))
+			for(Word w:_prepared_words)
+				if(w._wordName.equalsIgnoreCase(word_name))
+					return w;
 		return null;
 	}
 	
@@ -351,6 +407,11 @@ public class SentenceModel {
 				if(wrd != null && wrd._semanticTag != null)
 					allSemanticTags.add(wrd._semanticTag);
 		
+		if(!Common.isEmpty(_prepared_words))		
+			for(Word wrd:_prepared_words)
+				if(wrd != null && wrd._semanticTag != null)
+					allSemanticTags.add(wrd._semanticTag);
+		
 		return allSemanticTags;
 	}
 	
@@ -369,7 +430,16 @@ public class SentenceModel {
 						if(converted != null)				
 							existingMainSemanticTags.add(converted);
 					}
-						
+		
+		if(!Common.isEmpty(_prepared_words))
+			for(Word wrd:_prepared_words)
+				if(wrd != null && wrd._semanticTag != null)
+					if(wrd._semanticTag.isMainSemanticTag()){
+						MainSemanticTag converted = wrd._semanticTag.convertToMainSemanticTag();
+						if(converted != null)				
+							existingMainSemanticTags.add(converted);
+					}
+		
 		return existingMainSemanticTags;
 	}
 	
@@ -389,7 +459,16 @@ public class SentenceModel {
 						if(converted != null)				
 							allSubSemanticTags.add(converted);				
 					}
-			
+		
+		if(!Common.isEmpty(_prepared_words))
+			for(Word wrd:_prepared_words)
+				if(wrd != null && wrd._semanticTag != null)
+					if(wrd._semanticTag.isSubSemanticTag()){
+						SubSemanticTag converted = wrd._semanticTag.convertToSubSemanticTag();
+						if(converted != null)				
+							allSubSemanticTags.add(converted);				
+					}
+		
 		return allSubSemanticTags;
 	}
 	
@@ -421,11 +500,17 @@ public class SentenceModel {
 	
 	public Word getArg0Word(){
 		MainSemanticTag arg0 = getArg0();
-		if(arg0 != null)
+		if(arg0 != null){
 			if(!Common.isEmpty(_words))
 				for(Word wrd:_words)			
 					if(wrd != null && wrd._semanticTag != null && wrd._semanticTag.name().equals(arg0.name()))
 						return wrd;
+			
+			if(!Common.isEmpty(_prepared_words))
+				for(Word wrd:_prepared_words)			
+					if(wrd != null && wrd._semanticTag != null && wrd._semanticTag.name().equals(arg0.name()))
+						return wrd;
+		}
 		return null;
 	}
 	
@@ -439,11 +524,17 @@ public class SentenceModel {
 	
 	public Word getArg1Word(){
 		MainSemanticTag arg1 = getArg1();
-		if(arg1 != null)
+		if(arg1 != null){
 			if(!Common.isEmpty(_words))
 				for(Word wrd:_words)			
 					if(wrd != null && wrd._semanticTag != null && wrd._semanticTag.name().equals(arg1.name()))
 						return wrd;
+			
+			if(!Common.isEmpty(_prepared_words))
+				for(Word wrd:_prepared_words)			
+					if(wrd != null && wrd._semanticTag != null && wrd._semanticTag.name().equals(arg1.name()))
+						return wrd;
+		}
 		return null;
 	}
 	
@@ -457,11 +548,17 @@ public class SentenceModel {
 	
 	public Word getArg2Word() {
 		MainSemanticTag arg2 = getArg2();
-		if(arg2 != null)
+		if(arg2 != null){
 			if(!Common.isEmpty(_words))
 				for(Word wrd:_words)			
 					if(wrd != null && wrd._semanticTag != null && wrd._semanticTag.name().equals(arg2.name()))
-						return wrd;		
+						return wrd;
+			
+			if(!Common.isEmpty(_prepared_words))
+				for(Word wrd:_prepared_words)			
+					if(wrd != null && wrd._semanticTag != null && wrd._semanticTag.name().equals(arg2.name()))
+						return wrd;
+		}
 		return null;
 	}
 
@@ -476,12 +573,18 @@ public class SentenceModel {
 	
 	public Word getArg3Word() {		
 		MainSemanticTag arg3 = getArg3();
-		if(arg3 != null)
+		if(arg3 != null){
 			if(!Common.isEmpty(_words))
 				for(Word wrd:_words)			
 					if(wrd != null && wrd._semanticTag != null && wrd._semanticTag.name().equals(arg3.name()))
 						return wrd;
+			
+			if(!Common.isEmpty(_prepared_words))
+				for(Word wrd:_prepared_words)			
+					if(wrd != null && wrd._semanticTag != null && wrd._semanticTag.name().equals(arg3.name()))
+						return wrd;
 		
+		}
 		return null;
 	}
 	
@@ -495,11 +598,18 @@ public class SentenceModel {
 	
 	public Word getArg4Word() {		
 		MainSemanticTag arg4 = getArg4();
-		if(arg4 != null)
+		if(arg4 != null){
 			if(!Common.isEmpty(_words))
 				for(Word wrd:_words)			
 					if(wrd != null && wrd._semanticTag != null && wrd._semanticTag.name().equals(arg4.name()))
-						return wrd;				
+						return wrd;
+			
+			if(!Common.isEmpty(_prepared_words))
+				for(Word wrd:_prepared_words)			
+					if(wrd != null && wrd._semanticTag != null && wrd._semanticTag.name().equals(arg4.name()))
+						return wrd;			
+			
+		}
 		return null;
 	}
 	
@@ -513,15 +623,19 @@ public class SentenceModel {
 	
 	public Word getArg5Word() {
 		MainSemanticTag arg5 = getArg5();
-		if(arg5 != null)
+		if(arg5 != null){
 			if(!Common.isEmpty(_words))
 				for(Word wrd:_words)					
 					if(wrd != null && wrd._semanticTag != null && wrd._semanticTag.name().equals(arg5.name()))
-						return wrd;			
+						return wrd;
+			
+			if(!Common.isEmpty(_prepared_words))
+				for(Word wrd:_prepared_words)					
+					if(wrd != null && wrd._semanticTag != null && wrd._semanticTag.name().equals(arg5.name()))
+						return wrd;
+		}
 		return null;
 	}
-
-	
 		
 	public Word getWord(Node wordNode) {		
 		
@@ -529,6 +643,12 @@ public class SentenceModel {
 			for(Word wrd:_words)					
 				if(wrd != null && wrd._wsd != null && wrd._wsd.equalsRelaxed(wordNode))
 					return wrd;
+		
+		if(!Common.isEmpty(_prepared_words))
+			for(Word wrd:_prepared_words)					
+				if(wrd != null && wrd._wsd != null && wrd._wsd.equalsRelaxed(wordNode))
+					return wrd;
+
 		return null;
 	}
 	
@@ -577,6 +697,11 @@ public class SentenceModel {
 			
 		if(!Common.isEmpty(_words))
 			for(Word wrd:_words)		
+				if(wrd != null && wrd._semanticTag != null && wrd._semanticTag.name().equals(subSemanticArg.name()))
+					return wrd;
+		
+		if(!Common.isEmpty(_prepared_words))
+			for(Word wrd:_prepared_words)		
 				if(wrd != null && wrd._semanticTag != null && wrd._semanticTag.name().equals(subSemanticArg.name()))
 					return wrd;
 		return null;

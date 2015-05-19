@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import sceneElement.*;
 import model.MainSemanticTag;
 import model.POS;
+import model.Phrase;
 import model.ScenePart;
 import model.SemanticTag;
 import model.SentenceModel;
@@ -230,7 +231,7 @@ public class Preprocessor {
 		
 		SentenceModel sentence = new SentenceModel(NLsentence, word_strs);
 
-		print("^^^^^^^^^^^^^^^^^^");
+		print("^^^^^^^^^^^^^^^^^");
 
 		
 		//this array has information of all parts of this sentence.
@@ -377,7 +378,7 @@ public class Preprocessor {
 	
 	
 	private void checkAllSemanticTagsWithUser(SentenceModel sentenceModel, SceneModel primarySceneModel){
-		//TODO check with user!		
+		
 	}
 	
 	/**
@@ -826,12 +827,22 @@ public class Preprocessor {
 							else if(miss.isArg1() && sent.hasArg1()){
 								Word arg1Word = sent.getArg1Word();
 								
-								arg1Word.set_semanticTag(miss.name());
-								preparedMainArgs.add(arg1Word._semanticTag.convertToMainSemanticTag());
-//								sentenceModel.setPrerparedSentencePart(arg1Word);sentenceModel.setPrerparedWord(copyArg0Word); //TODO: check if it is correct !!!!!!!!!
-								
-								print("prepared " + arg1Word._semanticTag);
-								break;
+								if(arg1Word != null){
+									Word copyArg1Word = arg1Word.makeDeepCopy(sentenceModel, null);
+									copyArg1Word.set_semanticTag(miss.name());
+									
+									if(!copyArg1Word.isObject()){
+										Phrase arg1_ph = arg1Word._phrase;
+										if(arg1_ph != null && arg1_ph.get_headWord() != null && arg1_ph.get_headWord().isObject())
+											copyArg1Word._syntaxTag = DependencyRelationType.OBJ;										
+									}
+									
+									preparedMainArgs.add(copyArg1Word._semanticTag.convertToMainSemanticTag());
+									sentenceModel.setPrerparedWord(copyArg1Word); //TODO: check if it is correct !!!!!!!!!
+									
+									print("prepared " + copyArg1Word._semanticTag);
+									break;
+								}
 							}
 						}
 					}					
@@ -1189,36 +1200,50 @@ public class Preprocessor {
 		
 		//TODO: to correct this method !!!!!!!!!!!!!!!!!!!!!
 		
-		/*
+		
 		Word verb = sentenceModel.getVerb();
 		
 		
-		//here _wsd of subject(s), object(s), and adverb(s) of this sentence has been allocated!								
-		ArrayList<Word> subjects = sentenceModel.getSubjects();
+		//here _wsd of subject(s), object(s) of this sentence has been allocated!								
+		ArrayList<Phrase> sbj_phrases = sentenceModel.get_subject_phrases();
 		
-		if(verb == null || subjects == null || subjects.size() == 0){
-			MyError.error("sentence with verb " + verb + " has no subject part! " + sentenceModel);
+		if(verb == null || sbj_phrases == null || sbj_phrases.size() == 0){
+			MyError.error("sentence with verb " + verb + " has no subject phrase! " + sentenceModel);
 			return verbRelations;
 		}
 		
-		for(Word_old sbj:subjects){				
+		for(Phrase sbj_ph:sbj_phrases){
 			
-			ArrayList<Word_old> objects = sentenceModel.getObjects();
+			Word sbj = sbj_ph.get_headWord();
+			
+			if(sbj == null)
+				continue;
+			
+			ArrayList<Phrase> obj_phrases = sentenceModel.get_object_phrases();
 			
 			boolean transitive_verb = false;
 			
-			if(objects != null && objects.size() > 0)
+			if(obj_phrases != null && obj_phrases.size() > 0)
 				
-				for(Word_old obj:objects)
+				for(Phrase obj_ph:obj_phrases)
 					
-					if(obj != null){						
+					if(obj_ph != null){
+						
 						//it is a transitive verb.
 						transitive_verb = true;
 						
-						//adding the relation of this sentence to kb.
-						PlausibleStatement rel = _kb.addRelation(sbj._wsd, obj._wsd, verb._wsd, SourceType.TTS);
-						verbRelations.add(rel);
-						print("verbRel added ---- : " + rel.argument.getName() + " --> " + rel.getName() + " --> " + rel.referent.getName() + "\n");														
+						Word obj = obj_ph.get_wordWithSyntax(DependencyRelationType.PREDEP);
+						
+						if(obj == null){
+							MyError.error("This " + obj_ph + " pharse has no PREDEP Word!");
+							continue;
+						}
+						else{
+							//adding the relation of this sentence to kb.
+							PlausibleStatement rel = _kb.addRelation(sbj._wsd, obj._wsd, verb._wsd, SourceType.TTS);
+							verbRelations.add(rel);
+							print("verbRel added ---- : " + rel.argument.getName() + " --> " + rel.getName() + " --> " + rel.referent.getName() + "\n");
+						}
 					}				
 			
 			if(!transitive_verb){
@@ -1229,7 +1254,7 @@ public class Preprocessor {
 				print("verbRel added ---- : " + rel.argument.getName() + " --> " + rel.getName() + " --> " + rel.referent.getName() + "\n");				
 			}
 		}
-		*/
+		
 		return verbRelations;
 	}
 

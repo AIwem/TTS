@@ -1,0 +1,5 @@
+1	بلافاصله	بلافاصله	ADV	ADV	senID=001
+2	کبوتر	کبوتر	N	N	number=SING|senID=001
+3	را	را	POSTP	POSTP	senID=001
+4	برداشت	برداشت	V	V	person=3|number=SING|tma=G|senID=001
+5	.	.	PUNC	PUNC	senID=001

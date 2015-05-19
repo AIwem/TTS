@@ -1,0 +1,7 @@
+1	کبوتر	کبوتر	N	N	number=SING|senID=001
+2	را	را	POSTP	POSTP	senID=001
+3	به	به	PREP	PREP	senID=001
+4	مادر	مادر	N	N	number=SING|senID=001
+5	خود	خود	PR	PR	senID=001
+6	داد	داد#ده	V	V	person=3|number=SING|tma=G|senID=001
+7	.	.	PUNC	PUNC	senID=001
