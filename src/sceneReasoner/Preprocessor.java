@@ -57,11 +57,10 @@ public class Preprocessor {
 	 * We have no NLP module to process input text and convert it to related part,
 	 * so temporarily we aught to read these processed information from a file named  SentenceInfosFileName. 
 	 */
-//	private String sentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
-//	private String sentenceInfosFileName = "inputStory/sentenceInfos_SS.txt";
-	private String sentenceInfosFileName = "inputStory/SentenceInfos1-3.txt";
-//	private String sentenceInfosFileName = "inputStory/SentenceInfos2-2.txt";
-//	private String sentenceInfosFileName = "inputStory/SentenceInfos3.txt";
+
+//	private String sentenceInfosFileName = "inputStory/SentenceInfos1-3.txt";
+//	private String sentenceInfosFileName = "inputStory/SentenceInfos2-3.txt";
+	private String sentenceInfosFileName = "inputStory/SentenceInfos3-1.txt";
 
 	public Preprocessor(KnowledgeBase kb, SemanticReasoner re, TTSEngine ttsEngine) {
 		this._kb = kb;
@@ -248,7 +247,8 @@ public class Preprocessor {
 			
 			if(currentWord == null){
 				MyError.error("The word with \"" + currentWordInfo + "\" couldn't be completed!" );
-				return sentence;
+				continue;
+				//return sentence;
 			}
 			
 			if(currentWord._number < 0 && currentWord._wordName != null && currentWord._wordName.equals(fake_word_name))
@@ -804,8 +804,11 @@ public class Preprocessor {
 				for(MainSemanticTag miss:missingMainArgs){
 					
 					if(miss != null && (miss.isArg0() || miss.isArg1())){
-					
-						for(SentenceModel sent:allSentences){
+
+						//for(SentenceModel sent:allSentences){						
+						for(int index = allSentences.size() - 1; index >= 0; index--){
+							SentenceModel sent = allSentences.get(index);
+
 							if(sent.equals(sentenceModel))
 								continue;
 							
@@ -1208,8 +1211,14 @@ public class Preprocessor {
 		ArrayList<Phrase> sbj_phrases = sentenceModel.get_subject_phrases();
 		
 		if(verb == null || sbj_phrases == null || sbj_phrases.size() == 0){
-			MyError.error("sentence with verb " + verb + " has no subject phrase! " + sentenceModel);
-			return verbRelations;
+			
+			sbj_phrases = sentenceModel.get_mosnad_phrases();
+			
+			if(sbj_phrases == null || sbj_phrases.size() == 0){
+				
+				MyError.error("sentence with verb " + verb + " has no subject nor mosnad phrase! " + sentenceModel);
+				return verbRelations;
+			}
 		}
 		
 		for(Phrase sbj_ph:sbj_phrases){

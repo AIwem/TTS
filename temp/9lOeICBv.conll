@@ -1,0 +1,6 @@
+1	سعید	سعید	N	N	number=SING|senID=001
+2	گفت	گفت#گو	V	V	person=3|number=SING|tma=G|senID=001
+3	که	که	SUBR	SUBR	senID=001
+4	خبر	خبر	N	N	number=SING|senID=001
+5	ندارد	داشت#دار	V	V	person=3|number=SING|tma=H_NEG|senID=001
+6	.	.	PUNC	PUNC	senID=001

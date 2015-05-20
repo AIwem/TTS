@@ -1,0 +1,7 @@
+1	چند	چند	PREP	PREP	senID=001
+2	تا	تا	SUBR	SUBR	senID=001
+3	گوزن	گوزن	N	N	number=SING|senID=001
+4	آن	آن	PR	PR	number=SING|senID=001
+5	را	را	POSTP	POSTP	senID=001
+6	میکشیدند	میکشیدند	V	V	person=3|number=SING|tma=H|senID=001
+7	.	.	PUNC	PUNC	senID=001

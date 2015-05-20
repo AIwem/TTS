@@ -1,0 +1,7 @@
+1	معلم	معلم	N	N	number=SING|senID=001
+2	جای	جای	N	N	number=SING|senID=001
+3	خالی	خالی	ADJ	ADJ	senID=001
+4	او	او	PR	PR	person=3|number=SING|senID=001
+5	را	را	POSTP	POSTP	senID=001
+6	دید	دید	V	V	person=3|number=SING|tma=G|senID=001
+7	.	.	PUNC	PUNC	senID=001

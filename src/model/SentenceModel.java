@@ -67,6 +67,53 @@ public class SentenceModel {
 			_words.get(0)._syntaxTag = DependencyRelationType.NVE;
 			_words.get(1)._wordName = "انداخت";			
 		}
+		else if(NLSentence.equals("معلم جای خالی او را دید.")){			
+			_words.get(1)._syntaxTag = DependencyRelationType.PREDEP;
+			_words.get(1)._srcOfSynTag_number = 5;				
+		}
+		else if(NLSentence.equals("بعد از چند لحظه برگشت.")){			
+			_words.get(0)._syntaxTag = DependencyRelationType.ADVRB;
+			_words.get(1)._syntaxTag = DependencyRelationType.MOZ;
+			_words.get(1)._srcOfSynTag_number = 1;										
+		}
+		else if(NLSentence.equals("دختری با یک جفت پای برهنه از روی تخت بیرون پرید.")){			
+			_words.get(4)._syntaxTag = DependencyRelationType.POSDEP;			
+			_words.get(4)._srcOfSynTag_number = 2;
+			_words.get(3)._syntaxTag = DependencyRelationType.MESU;
+			_words.get(3)._srcOfSynTag_number = 5;
+			_words.get(6)._syntaxTag = DependencyRelationType.VPP;
+			_words.remove(9);
+			_words.get(9)._wordName = "پرید";
+			_words.get(9)._number = 10;
+			_words.get(10)._number = 11;
+			_words.get(0)._srcOfSynTag_number = 10;
+			_words.get(1)._srcOfSynTag_number = 10;
+			_words.get(6)._srcOfSynTag_number = 10;
+			_words.get(8)._srcOfSynTag_number = 10;
+			_words.get(10)._srcOfSynTag_number = 10;			
+		}
+		else if(NLSentence.equals("نوک بینی اش را به شیشه سرد پنجره چسبانده بود.")){
+			_words.get(1)._syntaxTag = DependencyRelationType.PREDEP;
+			_words.get(0)._srcOfSynTag_number = 4;
+			_words.get(2)._syntaxTag = DependencyRelationType.MOZ;			
+			_words.get(2)._srcOfSynTag_number = 2;
+			_words.get(7)._syntaxTag = DependencyRelationType.MOZ;
+			_words.get(7)._srcOfSynTag_number = 6;			
+		}
+		else if(NLSentence.equals("بابا نوئل سوار بر سورتمه درازی از راه رسید.")){
+			_words.get(0)._syntaxTag = DependencyRelationType.ADVRB;						
+		}
+		else if(NLSentence.equals("چند تا گوزن آن را میکشیدند.")){
+			_words.get(0)._syntaxTag = DependencyRelationType.NPREMOD;			
+			_words.get(0)._srcOfSynTag_number = 2;
+			_words.get(1)._syntaxTag = DependencyRelationType.MESU;
+			_words.get(1)._srcOfSynTag_number = 3;			
+			_words.get(2)._syntaxTag = DependencyRelationType.SBJ;
+			_words.get(2)._srcOfSynTag_number = 6;
+			_words.get(3)._syntaxTag = DependencyRelationType.PREDEP;
+			_words.get(3)._srcOfSynTag_number = 5;
+		}
+		
 		//------------------ end of correct Parser Error --------------
 		
 		arrangeWords();
@@ -292,6 +339,38 @@ public class SentenceModel {
 		
 		if(obj_phrases.size() > 0)
 			return obj_phrases;
+		else
+			return null;
+	}
+	
+public ArrayList<Phrase> get_mosnad_phrases() {
+		
+		ArrayList<Phrase> mos_phrases = new ArrayList<Phrase>();
+		
+		if(!Common.isEmpty(_words))
+			for(Word wrd:_words)
+				if(wrd != null && wrd.isMosnad()){
+					Phrase mos_ph = get_phrase(wrd);
+					if(mos_ph != null)
+						mos_phrases.add(mos_ph);
+					else{
+						MyError.error("This Sentence has mosnad " + wrd + " but it is not head of a phrase!");
+					}
+				}
+		
+		if(!Common.isEmpty(_prepared_words))
+			for(Word wrd:_prepared_words)
+				if(wrd != null && wrd.isMosnad()){
+					Phrase mos_ph = wrd._phrase;// get_phrase(wrd);
+					if(mos_ph != null)
+						mos_phrases.add(mos_ph);
+					else{
+						MyError.error("This Sentence has mosnad " + wrd + " but it is not head of a phrase!");
+					}
+				}
+		
+		if(mos_phrases.size() > 0)
+			return mos_phrases;
 		else
 			return null;
 	}

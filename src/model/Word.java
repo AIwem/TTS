@@ -257,6 +257,16 @@ public class Word {
 	}
 	
 	/**
+	 * checks weather this Word object _syntaxTag is MOS or not?
+	 * @return
+	 */
+	public boolean isMosnad(){
+		if(_syntaxTag == DependencyRelationType.MOS)
+			return true;
+		return false;		
+	}
+	
+	/**
 	 * checks weather this Word object _syntaxTag is VERB or not?
 	 * @return
 	 */

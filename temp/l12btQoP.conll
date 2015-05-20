@@ -1,0 +1,9 @@
+1	یک	یک	NUM	NUM	senID=001
+2	مرتبه	مرتبه	N	N	number=SING|senID=001
+3	صدای	صدا	N	N	number=SING|senID=001
+4	بلند	بلند	ADJ	ADJ	senID=001
+5	زنگ‌ها	زنگ	N	N	number=PLUR|senID=001
+6	به	به	PREP	PREP	senID=001
+7	گوش	گوش	N	N	number=SING|senID=001
+8	رسید	رسید#رس	V	V	person=3|number=SING|tma=G|senID=001
+9	.	.	PUNC	PUNC	senID=001

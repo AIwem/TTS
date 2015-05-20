@@ -1,0 +1,9 @@
+1	بابانویل	بابانویل	N	N	number=SING|senID=001
+2	سوار	سوار	N	N	number=SING|senID=001
+3	بر	بر	PREP	PREP	senID=001
+4	سورتمه	سورتمه	N	N	number=SING|senID=001
+5	درازی	دراز	ADJ	ADJ	senID=001
+6	از	از	PREP	PREP	senID=001
+7	راه	راه	N	N	number=SING|senID=001
+8	رسید	رسید#رس	V	V	person=3|number=SING|tma=G|senID=001
+9	.	.	PUNC	PUNC	senID=001

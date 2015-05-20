@@ -1,0 +1,9 @@
+1	نوک	نوک	N	N	number=SING|senID=001
+2	بینی	بینی	N	N	number=SING|senID=001
+3	اش	اش	PR	PR	person=3|number=SING|senID=001
+4	را	را	POSTP	POSTP	senID=001
+5	به	به	PREP	PREP	senID=001
+6	شیشه	شیشه	N	N	number=SING|senID=001
+7	سرد	سرد	ADJ	ADJ	senID=001
+8	پنجره	پنجره	N	N	number=SING|senID=001
+9	چسبانده‌بود	چسباند#چسبان	V	V	person=3|number=SING|tma=G|senID=001

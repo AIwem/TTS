@@ -121,7 +121,7 @@ public class TTSEngine {
 			
 			if(sentence == null){
 				MyError.error(" the " + NLsentence + " couldn't get preprocessed!");
-				return;
+				continue;
 			}
 			
 			primarySceneModel.addSentence(sentence);

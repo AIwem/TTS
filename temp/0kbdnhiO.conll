@@ -1,0 +1,12 @@
+1	معلم	معلم	N	N	number=SING|senID=001
+2	از	از	PREP	PREP	senID=001
+3	سعید	سعید	N	N	number=SING|senID=001
+4	،	،	PUNC	PUNC	senID=001
+5	دوست	دوست	N	N	number=SING|senID=001
+6	محمد	محمد	N	N	number=SING|senID=001
+7	پرسید	پرسید#پرس	V	V	person=3|number=SING|tma=G|senID=001
+8	که	که	SUBR	SUBR	senID=001
+9	او	او	PR	PR	person=3|number=SING|senID=001
+10	کجا	کجا	ADV	INTG	senID=001
+11	ست	است#است	V	V	person=3|number=SING|tma=H|senID=001
+12	?	?	PUNC	PUNC	senID=001

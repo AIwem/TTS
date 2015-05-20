@@ -1,0 +1,12 @@
+1	دختری	دختر	N	N	number=SING|senID=001
+2	با	با	PREP	PREP	senID=001
+3	یک	یک	NUM	NUM	senID=001
+4	جفت	جفت	N	N	number=SING|senID=001
+5	پای	پای	N	N	number=SING|senID=001
+6	برهنه	برهنه	ADJ	ADJ	senID=001
+7	ازروی	ازروی	N	N	number=SING|senID=001
+8	تخت	تخت	N	N	number=SING|senID=001
+9	بیرون	بیرون	N	N	number=SING|senID=001
+10	پر	پر	ADJ	ADJ	senID=001
+11	ید	هست#هست	V	V	person=2|number=PLUR|tma=H|senID=001
+12	.	.	PUNC	PUNC	senID=001
