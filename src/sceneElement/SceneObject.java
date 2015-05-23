@@ -2,6 +2,7 @@ package sceneElement;
 
 import java.util.ArrayList;
 
+import model.SceneModel;
 import model.ScenePart;
 import ir.ac.itrc.qqa.semantic.kb.Node;
 import ir.ac.itrc.qqa.semantic.util.Common;
@@ -12,12 +13,12 @@ public class SceneObject extends SceneElement{
 	
 	protected ObjectState current_state = null;
 	
-	public SceneObject() {
-		super();
+	public SceneObject(SceneModel scene) {
+		super(scene);
 	}
 
-	public SceneObject(String name, Node node) {
-		super(name, ScenePart.SCENE_OBJECT, node);
+	public SceneObject(SceneModel scene, String name, Node node) {
+		super(scene, name, ScenePart.SCENE_OBJECT, node);
 	}
 
 	public ObjectState getCurrent_state() {

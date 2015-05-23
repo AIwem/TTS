@@ -1,13 +1,14 @@
 package sceneElement;
 
+import model.SceneModel;
 import model.ScenePart;
 import ir.ac.itrc.qqa.semantic.kb.Node;
 import ir.ac.itrc.qqa.semantic.util.MyError;
 
 public class Time  extends SceneElement{
 
-	public Time(String name, Node node) {
-		 super(name, ScenePart.TIME, node);
+	public Time(SceneModel scene, String name, Node node) {
+		 super(scene, name, ScenePart.TIME, node);
 	}
 
 	@Override

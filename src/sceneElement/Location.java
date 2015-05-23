@@ -1,5 +1,6 @@
 package sceneElement;
 
+import model.SceneModel;
 import model.ScenePart;
 import ir.ac.itrc.qqa.semantic.kb.Node;
 import ir.ac.itrc.qqa.semantic.util.MyError;
@@ -7,8 +8,8 @@ import ir.ac.itrc.qqa.semantic.util.MyError;
 
 public class Location extends SceneElement{
 	
-	public Location(String name, Node node) {
-		super(name, ScenePart.LOCATION, node);
+	public Location(SceneModel scene, String name, Node node) {
+		super(scene, name, ScenePart.LOCATION, node);
 	}
 
 	@Override

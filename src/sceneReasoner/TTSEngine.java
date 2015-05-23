@@ -619,6 +619,16 @@ public class TTSEngine {
 	}
 	
 	/**
+	 * checks if node isAnimal or ... returns true.
+	 * @param node the pure node fetched from kb.
+	 * @return
+	 */
+	
+	private boolean isDynamicObject(Node node){
+		return isAnimal(node);
+	}
+	
+	/**
 	 * checks if node is a child of "جانور§n-12239" returns true.
 	 * @param node the pure node fetched from kb.
 	 * @return
@@ -845,6 +855,12 @@ public class TTSEngine {
 	 * <li>if semanticTag is ARG3,
 	 *  	then calls getArg3ScenePart() method.
 	 * </li>
+	 * <li>if semanticTag is ARG4,
+	 *  	then calls getArg4ScenePart() method.
+	 * </li>
+	 * <li>if semanticTag is a SubSemanticTag,
+	 *  	then calls getSubArgScenePart method.
+	 * </li>
 	 *  
 	 * @param pureNode the pure node fetched from kb.
 	 * @param pos the part of speech this node has.
@@ -991,10 +1007,9 @@ public class TTSEngine {
 	 */
 	private ScenePart getArg1ScenePart(Node pureNode, POS pos) {
 		
-//		if(pos == POS.N){
+//		if(pos == POS.N){		
 		
-		
-		if(isAnimal(pureNode))
+		if(isDynamicObject(pureNode))
 			return ScenePart.DYNAMIC_OBJECT;
 		
 		if(isLocation(pureNode))
@@ -1036,7 +1051,7 @@ public class TTSEngine {
 		
 //			if(pos == POS.N){
 	
-			if(isAnimal(pureNode))
+			if(isDynamicObject(pureNode))
 				return ScenePart.DYNAMIC_OBJECT;
 			
 			if(isLocation(pureNode))
@@ -1089,7 +1104,7 @@ public class TTSEngine {
 					
 //			if(pos == POS.N){
 				
-				if(isAnimal(pureNode))
+				if(isDynamicObject(pureNode))
 					return ScenePart.DYNAMIC_OBJECT;
 				
 				if(isLocation(pureNode))
@@ -1214,7 +1229,7 @@ public class TTSEngine {
 				if(isHuman(pureNode))
 					return ScenePart.ROLE;
 				
-				if(isAnimal(pureNode))
+				if(isDynamicObject(pureNode))
 					return ScenePart.DYNAMIC_OBJECT;
 				
 				if(isLocation(pureNode))
@@ -1231,12 +1246,12 @@ public class TTSEngine {
 			if(isHuman(pureNode))
 				return ScenePart.ROLE;
 			
-			if(isAnimal(pureNode))
+			if(isDynamicObject(pureNode))
 				return ScenePart.DYNAMIC_OBJECT;
 		}
 		
 		if(subSemArg == SubSemanticTag.INS){
-			if(isAnimal(pureNode))
+			if(isDynamicObject(pureNode))
 				return ScenePart.DYNAMIC_OBJECT;
 			
 //			if(isHuman(pureNode))
@@ -1249,11 +1264,62 @@ public class TTSEngine {
 	}
 	
 	/**
+	 * this methods searches the internal structure of this TTSEngine (seen_sceneParts) to check whether this node is DYNAMIC_OBJECT?
+	 * If didn't find it calls isDynamicObejct to reason whether this word ScenePart is DYNAMIC_OBJECT or not.
+	 * 
+	 * @param word the word which its ScenePart is to be reasoned about.
+	 * @return returns whether this word is DYNAMIC_OBJECT or not?
+	 */
+
+	public boolean isWordDynamicObject(Word word){		
+		
+		print(word + " ............. in isWordDynamicObject ...............");
+		
+		if(word == null || word._wsd == null)
+			return false;
+		
+		Node partNode = word._wsd;
+				
+		String pureName = makePureName(partNode);
+		
+		if(pureName == null || pureName.equals(""))
+			return false;	
+		
+		ScenePart sp = null;	
+		
+		boolean isDyn = false;
+		
+		//if it is seen before!
+		if(seen_sceneParts.containsKey(pureName)){			
+			sp = seen_sceneParts.get(pureName);
+			if(sp == ScenePart.DYNAMIC_OBJECT)
+				isDyn = true;		
+		} 
+		else{//if it isn't seen before!
+			Node pureNode = getPureNode(partNode);
+			
+			isDyn = isDynamicObject(pureNode);
+					
+			if(isDyn)				
+				sp = ScenePart.DYNAMIC_OBJECT;		
+			else
+				sp = ScenePart.STATIC_OBJECT;
+			
+			addTo_seen_sceneParts(pureName, sp);		
+		}
+
+		print(partNode + " ScenePart is " + sp);			
+		
+		return isDyn;
+
+	}
+	
+	/**
 	 * this methods searches the internal structure of this TTSEngine (seen_sceneParts) to find the ScenePart mapped to this node.
 	 * If if finds then return the previously reasoned ScenePart,
-	 * otherwise it calls getScenePart to reason about the ScenePart of this sentencePart
+	 * otherwise it calls getScenePart to reason about the ScenePart of this word
 	 * 
-	 * @param word the sentencePart which its ScenePart is to be reasoned about.
+	 * @param word the word which its ScenePart is to be reasoned about.
 	 * @return returns a ROLE, DYNAMIC_OBJECT, STATIC_OBJECT, ACTION, LOCATION, TIME, EMOTION, GOAL or UNKNOWN?! no null will be returned!
 	 */
 	
@@ -1261,13 +1327,10 @@ public class TTSEngine {
 
 		print(word + " ............. in whichScenePart ....................");
 		
-		if(word == null)
+		if(word == null || word._wsd == null)
 			return ScenePart.UNKNOWN;
 		
 		Node partNode = word._wsd;
-		
-		if(partNode == null)
-			return ScenePart.UNKNOWN;
 		
 		String pureName = makePureName(partNode);
 		
@@ -1293,7 +1356,5 @@ public class TTSEngine {
 		print(partNode + " ScenePart is " + sp);			
 		return sp;
 	}
-
-	
 
 }

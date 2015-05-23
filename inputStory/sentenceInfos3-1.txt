@@ -101,7 +101,7 @@ name:را				SEM:-				WSD:-				num:4
 name:نوک_Phrase		SEM:-				WSD:1_mozaf#n_2		num:
 
 name:به				SEM:-				WSD:-				num:5
-name:شیشه			SEM:ARG2_OBJ2_P		WSD:شیشه#n3			num:6
+name:شیشه			SEM:ARG2_OBJ2		WSD:شیشه#n3			num:6
 name:سرد			SEM:-				WSD:سرد#a2			num:7
 name:پنجره			SEM:-				WSD:پنجره#n1		num:8
 name:به_Phrase		SEM:-				WSD:6_adjective#a_7	num:

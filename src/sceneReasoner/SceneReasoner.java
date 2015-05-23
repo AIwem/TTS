@@ -372,7 +372,6 @@ public class SceneReasoner {
 										
 											//if it is ArgM_DIR, then set its core as Location of currentScene.
 											if(candidWord._semanticTag == SubSemanticTag.DIR.convertToSemanticTag()){ 
-												//TODO: correct!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
 
 												ArrayList<Word> mozafs = candidWord.getMozaf_elaih();
 												
@@ -387,7 +386,7 @@ public class SceneReasoner {
 													ScenePart scenePart = _ttsEngine.whichScenePart(innerDirection);
 													
 													if(scenePart != null || scenePart != ScenePart.UNKNOWN){												
-														currentScene.setLocation(new Location(innerDirection._wordName, innerDirection._wsd));
+														currentScene.setLocation(new Location(currentScene, innerDirection._wordName, innerDirection._wsd));
 														print("the lastScene ArgM_Dir innerDirection " + currentScene.getLocation() +" %%%%%%%%%%%%%%%%%%%%%%%%% has been set!");
 														break;
 													}
@@ -398,7 +397,7 @@ public class SceneReasoner {
 												ScenePart scenePart = _ttsEngine.whichScenePart(candidWord);
 												
 												if(scenePart == ScenePart.LOCATION){
-													currentScene.setLocation(new Location(candidWord._wordName, candidWord._wsd));
+													currentScene.setLocation(new Location(currentScene, candidWord._wordName, candidWord._wsd));
 													print("the lastScene Arg4 " + currentScene.getLocation() +" %%%%%%%%%%%%%%%%%%%%%%%%% has been set!");
 													break;
 												}
@@ -411,8 +410,7 @@ public class SceneReasoner {
 									currentScene.setLocation(lastScene_altLocs.get(lastScene_altLocs.size() - 1));
 									print("the last of lastScene_altLocs " + currentScene.getLocation() +" %%%%%%%%%%%%%%%%%%%%%%%%% has been set!");
 								}
-							}
-							
+							}							
 						}
 					}
 				}			

@@ -59,8 +59,8 @@ public class Preprocessor {
 	 */
 
 //	private String sentenceInfosFileName = "inputStory/SentenceInfos1-3.txt";
-//	private String sentenceInfosFileName = "inputStory/SentenceInfos2-3.txt";
-	private String sentenceInfosFileName = "inputStory/SentenceInfos3-1.txt";
+	private String sentenceInfosFileName = "inputStory/SentenceInfos2-3.txt";
+//	private String sentenceInfosFileName = "inputStory/SentenceInfos3-1.txt";
 
 	public Preprocessor(KnowledgeBase kb, SemanticReasoner re, TTSEngine ttsEngine) {
 		this._kb = kb;
@@ -445,13 +445,13 @@ public class Preprocessor {
 						
 				//reasoning ScenePart from KB, ROLE,DYNAMIC_OBJECT, STATIC_OBJECT, ....
 				ScenePart scenePart = _ttsEngine.whichScenePart(semArgWord);
-				
+								
 				if(scenePart == null || scenePart == ScenePart.UNKNOWN){
 					MyError.error("the " + semanticTag +": " + semArgWord + " ScenePart was not found!");
 					return null;
 				}
-				
-				SceneElement inputSceneElement = createSceneElement(semArgWord, scenePart);
+			
+				SceneElement inputSceneElement = createSceneElement(semArgWord, scenePart, primarySceneModel);
 				
 				if(inputSceneElement == null){
 					MyError.error("the " + semArgWord + " could not convert to a SceneElement!");
@@ -641,7 +641,7 @@ public class Preprocessor {
 				
 				if(arg0Elem != null){
 					//It can be added as RoleMood or ObjectState to Arg0
-					SceneElement mnrElem = arg0Elem.addDependent(mnrWord, "manner");
+					SceneElement mnrElem = arg0Elem.addDependent(mnrWord, "manner", _ttsEngine);
 					
 					if(mnrElem != null)
 						preprocessDependentsOfSemanticArg(mnrWord, mnrElem);
@@ -883,7 +883,7 @@ public class Preprocessor {
 			ArrayList<Word> adjectives = semArgWord.getAdjectives();
 			
 			for(Word adj:adjectives)
-				sceneElement.addDependent(adj, "adjective");			
+				sceneElement.addDependent(adj, "adjective", _ttsEngine);			
 		}
 		//It means that this sentencePart has some mozad_elaih
 		if(semArgWord.hasAnyMozaf_elaihs()){				
@@ -895,7 +895,7 @@ public class Preprocessor {
 			for(Word moz:mozafs)
 				
 				if(moz._wsd != null && !moz._wsd.getName().contains(zamir_enekasi))
-					sceneElement.addDependent(moz, "mozaf_elaih");
+					sceneElement.addDependent(moz, "mozaf_elaih", _ttsEngine);
 		}			
 	}
 
@@ -921,7 +921,7 @@ public class Preprocessor {
 			return;
 		}		
 		
-		arg1Elem.addDependent(verb, "adjective");
+		arg1Elem.addDependent(verb, "adjective", _ttsEngine);
 		
 		//------
 		Word arg0Word = sentenceModel.getArg0Word();
@@ -935,7 +935,7 @@ public class Preprocessor {
 				return;
 			}
 			
-			arg0Elem.addDependent(verb, "action");			
+			arg0Elem.addDependent(verb, "action", _ttsEngine);			
 		}			
 	}
 
@@ -965,7 +965,7 @@ public class Preprocessor {
 				return;
 			}		
 			
-			arg1Elem.addDependent(arg2Word, "adjective");			
+			arg1Elem.addDependent(arg2Word, "adjective", _ttsEngine);			
 //		}
 //		else
 //			print(verb + " is rabti but Arg2Part " + arg2Part + " is not adjective!");
@@ -994,7 +994,7 @@ public class Preprocessor {
 			return;
 		}
 		
-		arg0Elem.addDependent(verb, "action");	
+		arg0Elem.addDependent(verb, "action", _ttsEngine);	
 	}
 
 	/**
@@ -1134,7 +1134,7 @@ public class Preprocessor {
 		}		
 	}
 	
-	private SceneElement createSceneElement(Word word, ScenePart scenePart){
+	private SceneElement createSceneElement(Word word, ScenePart scenePart, SceneModel scene){
 		
 		if(word == null || scenePart == null || scenePart == ScenePart.UNKNOWN){
 			MyError.error("null input parameter for createSceneElement !");
@@ -1142,23 +1142,23 @@ public class Preprocessor {
 		}								
 		
 		if(scenePart == ScenePart.ROLE)			
-				return new Role(word._wordName, word._wsd);
+				return new Role(scene, word._wordName, word._wsd);
 		else if(scenePart == ScenePart.ROLE_ACTION)
-			return new RoleAction(word._wordName, word._wsd);
+			return new RoleAction(scene, word._wordName, word._wsd);
 		else if(scenePart == ScenePart.DYNAMIC_OBJECT)
-			return new DynamicObject(word._wordName, word._wsd);
+			return new DynamicObject(scene, word._wordName, word._wsd);
 		else if(scenePart == ScenePart.OBJECT_ACTION)
-			return new ObjectAction(word._wordName, word._wsd);
+			return new ObjectAction(scene, word._wordName, word._wsd);
 		else if(scenePart == ScenePart.STATIC_OBJECT)
-			return new StaticObject(word._wordName, word._wsd);				
+			return new StaticObject(scene, word._wordName, word._wsd);				
 		else if(scenePart == ScenePart.LOCATION)
-			return new Location(word._wordName, word._wsd);			
+			return new Location(scene, word._wordName, word._wsd);			
 		else if(scenePart == ScenePart.TIME)
-			return new Time(word._wordName, word._wsd);
+			return new Time(scene, word._wordName, word._wsd);
 		else if(scenePart == ScenePart.SCENE_EMOTION)
-			return new SceneEmotion(word._wordName, word._wsd);
+			return new SceneEmotion(scene, word._wordName, word._wsd);
 		else if(scenePart == ScenePart.SCENE_GOAL)
-			return new SceneGoal(word._wordName, word._wsd);
+			return new SceneGoal(scene, word._wordName, word._wsd);
 		return null;
 	}
 

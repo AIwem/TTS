@@ -92,8 +92,15 @@ public class SentenceModel {
 			_words.get(8)._srcOfSynTag_number = 10;
 			_words.get(10)._srcOfSynTag_number = 10;			
 		}
+		else if(NLSentence.equals("با یک صورت کوچولو، با موهای فرفری روی نوک پنجه پایش ایستاده.")){			
+			_words.get(8)._syntaxTag = DependencyRelationType.ADVRB;
+			_words.get(8)._srcOfSynTag_number = 12;
+			_words.get(9)._syntaxTag = DependencyRelationType.MOZ;			
+			_words.get(10)._syntaxTag = DependencyRelationType.MOZ;
+			_words.get(10)._srcOfSynTag_number = 10;
+		}
 		else if(NLSentence.equals("نوک بینی اش را به شیشه سرد پنجره چسبانده بود.")){
-			_words.get(1)._syntaxTag = DependencyRelationType.PREDEP;
+			_words.get(0)._syntaxTag = DependencyRelationType.PREDEP;
 			_words.get(0)._srcOfSynTag_number = 4;
 			_words.get(2)._syntaxTag = DependencyRelationType.MOZ;			
 			_words.get(2)._srcOfSynTag_number = 2;

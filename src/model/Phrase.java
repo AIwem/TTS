@@ -68,6 +68,10 @@ public class Phrase {
 		return _words;
 	}
 
+	public int getSize() {
+		return size;
+	}
+
 	public Word get_wordWithSyntax(DependencyRelationType syntaxTag) {
 		if(syntaxTag == null)
 			return null;
