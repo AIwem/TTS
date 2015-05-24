@@ -1,0 +1,127 @@
+sentence:معلم از سعید، دوست محمد پرسید که او کجاست؟
+
+1	معلم	N		SBJ		7		ARG0_AGENT		معلم#n1
+
+2	از		PREP	VPP		7		-				-
+
+3	سعید	N		POSDEP	2		ARG1_THEME		سعید#n		
+
+4	،		PUNC	PUNC	3		-				-
+
+5	دوست	N		NVE		7		-				-	
+
+6	محمد	N		MOZ		5		-				محمد#n
+
+7	پرسید	V		ROOT	0		-				پرسیدن#v1
+
+8	که		SUBR	VCL		7		ARG2_OBJ2		-
+
+9	او		PR		SBJ		11		ARG1_PATIENT	محمد#n
+
+10	کجا		UNKNOWN	MOS		11		ARG2_GOAL_ENDSTATE	-
+
+11	ست		V		PRD		8		-				بودن#v2
+
+12	?		PUNC	PUNC	7
+
+Phrase with head: معلم 
+معلم   size: 1
+Phrase with head: از 
+از  سعید  ،   size: 3
+
+first here in makePhrase!
+null mozaf added to دوست
+
+Phrase with head: دوست 
+دوست  محمد   size: 2
+Phrase with head: که 
+که  ست  او  کجا   size: 4
+Phrase with head: ? 
+?   size: 1
+
+name:معلم		SEM:ARG0_AGENT		WSD:معلم#n1		num:1
+
+name:از			SEM:-				WSD:-			num:2
+name:سعید		SEM:ARG1_THEME		WSD:سعید#n		num:3
+
+name:دوست		SEM:-				WSD:-			num:4
+name:محمد		SEM:-				WSD:محمد#n		num:5
+
+name:پرسید		SEM:-				WSD:پرسیدن#v1	num:6
+
+name:که			SEM:ARG2_OBJ2		WSD:-			num:7
+name:او			SEM:ARG1_PATIENT	WSD:محمد#n		num:8
+name:کجا		SEM:ARG2_GOAL_ENDSTATE	WSD:-		num:9
+name:ست			SEM:-				WSD:بودن#v2		num:10
+
+#------------------------------------------------------
+sentence:سعید گفت که خبر ندارد.
+
+1	سعید	N		SBJ		2		ARG0_AGENT		سعید#n
+
+2	گفت		V		ROOT	0		-				گفتن#v1
+
+3	که		SUBR	VCL		2		ARG1_THEME		-
+
+4	خبر		N		OBJ		5		-				-
+
+5	ندارد	V		PRD		3		-				خبر داشتن#v1
+
+6	.		PUNC	PUNC	2
+
+Phrase with head: سعید 
+سعید   size: 1
+Phrase with head: که 
+که  ندارد  خبر   size: 3
+Phrase with head: . 
+.   size: 1
+
+name:سعید		SEM:ARG0_AGENT		WSD:سعید#n		num:1
+
+name:گفت		SEM:-				WSD:گفتن#v1		num:2
+
+name:که			SEM:ARG1_THEME		WSD:-			num:3
+name:خبر		SEM:-				WSD:-			num:4
+name:ندارد		SEM:-				WSD:خبر داشتن#v1	num:5
+
+#------------------------------------------------------
+sentence:اما در حین گفتن بغض کرد.
+
+1	اما		CONJ	VCONJ	6	ArgM_DIS	-
+
+2	در		PREP	ADVRB	6	-			-
+
+3	حین		N		POSDEP	2	ArgM_TMP	زمان#n5
+
+4	گفتن	N		MOZ		3	-			گفتن#v1
+
+5	بغض		N		NVE		6	-			-
+
+6	کرد		V		ROOT	0	-			بغض کردن#v1
+
+7	.		PUNC	PUNC	6
+
+Phrase with head: اما 
+اما   size: 1
+
+first here in makePhrase!
+null mozaf added to حین
+
+Phrase with head: در 
+در  حین  گفتن   size: 3
+Phrase with head: بغض 
+بغض   size: 1
+Phrase with head: . 
+.   size: 1
+
+name:اما		SEM:ArgM_DIS		WSD:-			num:1
+
+name:در			SEM:-				WSD:-			num:2
+name:حین		SEM:ArgM_TMP		WSD:زمان#n5		num:3
+name:گفتن		SEM:-				WSD:گفتن#v1		num:4
+name:در_Phrase	SEM:-				WSD:3_mozaf#n_4	num:
+
+name:بغض		SEM:-				WSD:-			num:5
+name:کرد		SEM:-				WSD:بغض کردن#v1	num:6
+
+#------------------------------------------------------

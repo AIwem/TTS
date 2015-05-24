@@ -5,7 +5,7 @@ roles= [
 	[محمد#n (1)= محمد role_actions=  [] role_goals=    [] role_emotions= [] role_moods=    [اتاق#n2 (1)=  کلاس]]
 	[سعید#n (1)= سعید role_actions=  [گفتن#v1 (1)=  گفت, بغض کردن#v1 (1)=  کرد] role_goals=    [] role_emotions= [] role_moods=    []]]
 dynamic_objs= 
-static_objs= [وسایل#n1 (1)=  وسایلش object_states=  []][مدرسه#n1 (1)=  مدرسه object_states=  []]
+static_objs= [وسایل#n1 (1)=  وسایلش object_states=  []][میز#n2 (1)=  میز#n2 (1) object_states=  []][مدرسه#n1 (1)=  مدرسه object_states=  []]
 location= [اتاق#n2 (1)=  کلاس]
 alternativeLocations= [[اتاق#n2 (1)=  کلاس], [جا#n5 (1)=  جای], [روی#n5 (1)=  روی], [حیاط#n1 (1)=  حیاط]]
 time= [امروز#n1 (1)=  امروز]

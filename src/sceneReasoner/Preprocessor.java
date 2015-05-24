@@ -1124,7 +1124,12 @@ public class Preprocessor {
 			}
 			word.set_wsd(argument);
 			
-			add_adjective_mozaf(sentence, word, descriptor, referent);
+			Word argWord = sentence.getWord(argument);
+			
+			if(argWord != null)
+				add_adjective_mozaf(sentence, argWord, descriptor, referent);
+			else
+				add_adjective_mozaf(sentence, word, descriptor, referent);
 			//return;
 		}
 		else{
