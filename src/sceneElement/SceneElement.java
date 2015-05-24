@@ -78,10 +78,17 @@ public class SceneElement {
 					
 						boolean isDyn = ttsEngine.isWordDynamicObject(dependent);
 						
+						boolean isRole = ttsEngine.isWordRole(dependent);
+						
 						if(isDyn){
 							DynamicObject dynObj = new DynamicObject(this._scene, dependent._wordName, dependent._wsd); 
 							this._scene.addDynamic_object(dynObj);
 							return dynObj;
+						}
+						else if(isRole){
+							Role role = new Role(this._scene, dependent._wordName, dependent._wsd); 
+							this._scene.addRole(role);
+							return role;
 						}
 						else{
 							StaticObject staObj = new StaticObject(this._scene, dependent._wordName, dependent._wsd);

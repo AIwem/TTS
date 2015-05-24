@@ -106,7 +106,7 @@ sentence:بعد از چند لحظه برگشت.
 name:بعداز		SEM:ArgM_TMP		WSD:بعد#r1		num:1
 name:چند		SEM:-				WSD:-			num:2
 name:لحظه		SEM:-				WSD:لحظه#n1		num:3
-name:بعداز_Phrase	SEM:-				WSD:1_mozaf#n_3	num:
+name:بعداز_Phrase	SEM:-			WSD:1_mozaf#n_3	num:
 
 name:برگشت		SEM:-				WSD:برگشتن#v3	num:4
 

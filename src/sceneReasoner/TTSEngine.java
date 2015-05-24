@@ -1303,7 +1303,7 @@ public class TTSEngine {
 			if(isDyn)				
 				sp = ScenePart.DYNAMIC_OBJECT;		
 			else
-				sp = ScenePart.STATIC_OBJECT;
+				sp = ScenePart.UNKNOWN;
 			
 			addTo_seen_sceneParts(pureName, sp);		
 		}
@@ -1313,6 +1313,58 @@ public class TTSEngine {
 		return isDyn;
 
 	}
+
+	/**
+	 * this methods searches the internal structure of this TTSEngine (seen_sceneParts) to check whether this node is ROLE?
+	 * If didn't find it calls isHuman to reason whether this word ScenePart is ROLE or not.
+	 * 
+	 * @param word the word which its ScenePart is to be reasoned about.
+	 * @return returns whether this word is ROLE or not?
+	 */
+
+	public boolean isWordRole(Word word){		
+		
+		print(word + " ............. in isWordRole .....................");
+		
+		if(word == null || word._wsd == null)
+			return false;
+		
+		Node partNode = word._wsd;
+				
+		String pureName = makePureName(partNode);
+		
+		if(pureName == null || pureName.equals(""))
+			return false;	
+		
+		ScenePart sp = null;	
+		
+		boolean isRole = false;
+		
+		//if it is seen before!
+		if(seen_sceneParts.containsKey(pureName)){			
+			sp = seen_sceneParts.get(pureName);
+			if(sp == ScenePart.ROLE)
+				isRole = true;		
+		} 
+		else{//if it isn't seen before!
+			Node pureNode = getPureNode(partNode);
+			
+			isRole = isHuman(pureNode);
+					
+			if(isRole)				
+				sp = ScenePart.ROLE;		
+			else
+				sp = ScenePart.UNKNOWN;
+			
+			addTo_seen_sceneParts(pureName, sp);		
+		}
+
+		print(partNode + " ScenePart is " + sp);			
+		
+		return isRole;
+
+	}
+
 	
 	/**
 	 * this methods searches the internal structure of this TTSEngine (seen_sceneParts) to find the ScenePart mapped to this node.
