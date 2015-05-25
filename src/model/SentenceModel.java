@@ -50,23 +50,37 @@ public class SentenceModel {
 		}
 		
 		//------------------ correct Parser Error --------------
+		
+			//------------------ story 1: injured pigeon --------------
+		
 		if(NLSentence.equals("پسرک امروز در راه خانه یک کبوتر زخمی را دید.")){
-			Word emroz = get_word(2);
+			Word emroz = getWord(2);
 			emroz._srcOfSynTag_number = getVerb()._number;
 		}
-		else if(NLSentence.equals("سپس به طرف اتاقش دوید.")){
-			Word betarafe = get_word(2);
-			betarafe._syntaxTag = DependencyRelationType.VPP;
+		if(NLSentence.equals("شروع به دويدن به سمت خانه کرد.")){
+			_words.get(0)._syntaxTag = DependencyRelationType.NVE;
+			_words.get(5)._syntaxTag = DependencyRelationType.MOZ;
+			_words.get(5)._srcOfSynTag_number = 5;
+		}
+		else if(NLSentence.equals("سپس به طرف اتاقش دوید.")){			
+			_words.get(1)._syntaxTag = DependencyRelationType.VPP;
 		}
 		else if(NLSentence.equals("شکست.")){
 			_words.remove(0);
-			_words.get(0)._wordName = "شکست";			
+			_words.get(0)._wordName = "شکست";		
+			_words.get(0)._number = 1;
+			_words.get(1)._number = 2;
+			_words.get(1)._srcOfSynTag_number = 1;
 		}
 		else if(NLSentence.equals("دور انداخت.")){
 			_words.remove(2);		
 			_words.get(0)._syntaxTag = DependencyRelationType.NVE;
 			_words.get(1)._wordName = "انداخت";			
+			_words.get(2)._number = 3;
 		}
+		
+		//------------------ story 2: absence f Mohammad --------------
+		
 		else if(NLSentence.equals("معلم جای خالی او را دید.")){			
 			_words.get(1)._syntaxTag = DependencyRelationType.PREDEP;
 			_words.get(1)._srcOfSynTag_number = 5;				
@@ -76,11 +90,14 @@ public class SentenceModel {
 			_words.get(1)._syntaxTag = DependencyRelationType.MOZ;
 			_words.get(1)._srcOfSynTag_number = 1;										
 		}
+		
+		//------------------ story 3: Christmas night --------------
+		
 		else if(NLSentence.equals("دختری با یک جفت پای برهنه از روی تخت بیرون پرید.")){			
-			_words.get(4)._syntaxTag = DependencyRelationType.POSDEP;			
-			_words.get(4)._srcOfSynTag_number = 2;
 			_words.get(3)._syntaxTag = DependencyRelationType.MESU;
 			_words.get(3)._srcOfSynTag_number = 5;
+			_words.get(4)._syntaxTag = DependencyRelationType.POSDEP;			
+			_words.get(4)._srcOfSynTag_number = 2;			
 			_words.get(6)._syntaxTag = DependencyRelationType.VPP;
 			_words.remove(9);
 			_words.get(9)._wordName = "پرید";
@@ -108,7 +125,7 @@ public class SentenceModel {
 			_words.get(7)._srcOfSynTag_number = 6;			
 		}
 		else if(NLSentence.equals("بابا نوئل سوار بر سورتمه درازی از راه رسید.")){
-			_words.get(0)._syntaxTag = DependencyRelationType.ADVRB;						
+			_words.get(1)._syntaxTag = DependencyRelationType.ADVRB;						
 		}
 		else if(NLSentence.equals("چند تا گوزن آن را میکشیدند.")){
 			_words.get(0)._syntaxTag = DependencyRelationType.NPREMOD;			
@@ -286,6 +303,56 @@ public class SentenceModel {
 		return null;
 	}
 	
+	public ArrayList<Word> get_all_verb_in_wsd(){
+		ArrayList<Word> verbWords = new ArrayList<Word>();
+		
+		if(!Common.isEmpty(_words))
+			for(Word wrd:_words){				
+				
+				String wsd_name = null;
+				
+				if(wrd._wsd != null)
+					wsd_name = wrd._wsd.getName();
+				
+				 if(wsd_name != null && wsd_name.contains("#v"))
+					 verbWords.add(wrd);
+			}
+		
+		if(!Common.isEmpty(_prepared_words))
+			for(Word wrd:_prepared_words){				
+				
+				String wsd_name = null;
+				
+				if(wrd._wsd != null)
+					wsd_name = wrd._wsd.getName();
+				
+				 if(wsd_name.contains("#v"))
+					 verbWords.add(wrd);
+			}
+		
+		return verbWords;
+	}
+	
+	public ArrayList<Word> get_subjects() {
+		
+		ArrayList<Word> sbjs = new ArrayList<Word>();
+		
+		if(!Common.isEmpty(_words))
+			for(Word wrd:_words)
+				if(wrd != null && wrd.isSubject())
+					sbjs.add(wrd);					
+		
+		if(!Common.isEmpty(_prepared_words))
+			for(Word wrd:_prepared_words)
+				if(wrd != null && wrd.isSubject())
+					sbjs.add(wrd);
+					
+		if(sbjs.size() > 0)
+			return sbjs;
+		else
+			return null;
+	}
+	
 	public ArrayList<Phrase> get_subject_phrases() {
 		
 		ArrayList<Phrase> sbj_phrases = new ArrayList<Phrase>();
@@ -293,27 +360,47 @@ public class SentenceModel {
 		if(!Common.isEmpty(_words))
 			for(Word wrd:_words)
 				if(wrd != null && wrd.isSubject()){
-					Phrase sbj_ph = get_phrase(wrd);
+					Phrase sbj_ph = get_phrase_with_head(wrd);
 					if(sbj_ph != null)
 						sbj_phrases.add(sbj_ph);
 					else{
-						MyError.error("This Sentence has subject " + wrd + " but it is not head of a phrase!");
+						MyError.error("This Sentence has subject " + wrd + " in _words but it is not head of a phrase!");
 					}
 				}
 		
 		if(!Common.isEmpty(_prepared_words))
 			for(Word wrd:_prepared_words)
 				if(wrd != null && wrd.isSubject()){
-					Phrase sbj_ph = wrd._phrase;// get_phrase(wrd);
+					Phrase sbj_ph = wrd._phrase;// get_phrase_with_head(wrd);
 					if(sbj_ph != null)
 						sbj_phrases.add(sbj_ph);
 					else{
-						MyError.error("This Sentence has subject " + wrd + " but it is not head of a phrase!");
+						MyError.error("This Sentence has subject " + wrd + " in _prepared_words  but it is not head of a phrase!");
 					}
 				}
 		
 		if(sbj_phrases.size() > 0)
 			return sbj_phrases;
+		else
+			return null;
+	}
+	
+	public ArrayList<Word> get_objects() {
+		
+		ArrayList<Word> objs = new ArrayList<Word>();
+		
+		if(!Common.isEmpty(_words))
+			for(Word wrd:_words)
+				if(wrd != null && wrd.isObject())
+					objs.add(wrd);					
+		
+		if(!Common.isEmpty(_prepared_words))
+			for(Word wrd:_prepared_words)
+				if(wrd != null && wrd.isObject())
+					objs.add(wrd);
+					
+		if(objs.size() > 0)
+			return objs;
 		else
 			return null;
 	}
@@ -325,18 +412,18 @@ public class SentenceModel {
 		if(!Common.isEmpty(_words))
 			for(Word wrd:_words)
 				if(wrd != null && wrd.isObject()){
-					Phrase obj_ph = get_phrase(wrd);
+					Phrase obj_ph = get_phrase_with_head(wrd);
 					if(obj_ph != null)
 						obj_phrases.add(obj_ph);
 					else{
-						MyError.error("This Sentence has object " + wrd + " in _prepared_words but it is not head of a phrase!");
+						MyError.error("This Sentence has object " + wrd + " in _words but it is not head of a phrase!");
 					}
 				}
 		
 		if(!Common.isEmpty(_prepared_words))
 			for(Word wrd:_prepared_words)
 				if(wrd != null && wrd.isObject()){
-					Phrase obj_ph = wrd._phrase; //get_phrase(wrd);
+					Phrase obj_ph = wrd._phrase; //get_phrase_with_head(wrd);
 					if(obj_ph != null)
 						obj_phrases.add(obj_ph);
 					else{
@@ -350,29 +437,49 @@ public class SentenceModel {
 			return null;
 	}
 	
-public ArrayList<Phrase> get_mosnad_phrases() {
+	public ArrayList<Word> get_mosnads() {
+		
+		ArrayList<Word> moss = new ArrayList<Word>();
+		
+		if(!Common.isEmpty(_words))
+			for(Word wrd:_words)
+				if(wrd != null && wrd.isMosnad())
+					moss.add(wrd);					
+		
+		if(!Common.isEmpty(_prepared_words))
+			for(Word wrd:_prepared_words)
+				if(wrd != null && wrd.isMosnad())
+					moss.add(wrd);
+					
+		if(moss.size() > 0)
+			return moss;
+		else
+			return null;
+	}
+	
+	public ArrayList<Phrase> get_mosnad_phrases() {
 		
 		ArrayList<Phrase> mos_phrases = new ArrayList<Phrase>();
 		
 		if(!Common.isEmpty(_words))
 			for(Word wrd:_words)
 				if(wrd != null && wrd.isMosnad()){
-					Phrase mos_ph = get_phrase(wrd);
+					Phrase mos_ph = get_phrase_with_head(wrd);
 					if(mos_ph != null)
 						mos_phrases.add(mos_ph);
 					else{
-						MyError.error("This Sentence has mosnad " + wrd + " but it is not head of a phrase!");
+						MyError.error("This Sentence has mosnad " + wrd + " in _words but it is not head of a phrase!");
 					}
 				}
 		
 		if(!Common.isEmpty(_prepared_words))
 			for(Word wrd:_prepared_words)
 				if(wrd != null && wrd.isMosnad()){
-					Phrase mos_ph = wrd._phrase;// get_phrase(wrd);
+					Phrase mos_ph = wrd._phrase;// get_phrase_with_head(wrd);
 					if(mos_ph != null)
 						mos_phrases.add(mos_ph);
 					else{
-						MyError.error("This Sentence has mosnad " + wrd + " but it is not head of a phrase!");
+						MyError.error("This Sentence has mosnad " + wrd + " in _prepared_words but it is not head of a phrase!");
 					}
 				}
 		
@@ -401,7 +508,7 @@ public ArrayList<Phrase> get_mosnad_phrases() {
 	 * @param phrase_head
 	 * @return the Phrase with head phrase_head.
 	 */
-	public Phrase get_phrase(Word phrase_head){
+	public Phrase get_phrase_with_head(Word phrase_head){
 		if(phrase_head == null)
 			return null;
 		
@@ -414,24 +521,24 @@ public ArrayList<Phrase> get_mosnad_phrases() {
 		return null;
 	}
 	
-	public Phrase get_phrase(String phrase_head_name){
+	public Phrase get_phrase_with_head(String phrase_head_name){
 		if(phrase_head_name == null || phrase_head_name.equals(""))
 			return null;
 		
-		Word ph_head = get_word(phrase_head_name);
+		Word ph_head = getWord(phrase_head_name);
 		
 		if(ph_head == null){
 			MyError.error("This sentence hasn't such a phrase with head " + phrase_head_name);
 			return null;
 		}
 		
-		return get_phrase(ph_head);
+		return get_phrase_with_head(ph_head);
 	}
 	
 	/**
 	 * @return the _words
 	 */
-	public ArrayList<Word> get_words() {
+	public ArrayList<Word> getWords() {
 		return _words;
 	}
 	
@@ -440,7 +547,7 @@ public ArrayList<Phrase> get_mosnad_phrases() {
 	 * @param word_name the Word of this SentenceModel with _wordName word_name.
 	 * @return 
 	 */
-	public Word get_word(String word_name) {
+	public Word getWord(String word_name) {
 		if(!Common.isEmpty(_words))
 			for(Word w:_words)
 				if(w._wordName.equalsIgnoreCase(word_name))
@@ -459,7 +566,7 @@ public ArrayList<Phrase> get_mosnad_phrases() {
 	 * @param word_number the Word of this SentenceModel with _number word_number.
 	 * @return 
 	 */
-	public Word get_word(int word_number) {
+	public Word getWord(int word_number) {
 		if(!Common.isEmpty(_words))
 			for(Word w:_words)
 				if(w._number == word_number)
@@ -467,7 +574,76 @@ public ArrayList<Phrase> get_mosnad_phrases() {
 		return null;
 	}
 	
+	public Word getWord(Node wordNode) {		
+		
+		if(!Common.isEmpty(_words))
+			for(Word wrd:_words)					
+				if(wrd != null && wrd._wsd != null && wrd._wsd.equalsRelaxed(wordNode))
+					return wrd;
+		
+		if(!Common.isEmpty(_prepared_words))
+			for(Word wrd:_prepared_words)					
+				if(wrd != null && wrd._wsd != null && wrd._wsd.equalsRelaxed(wordNode))
+					return wrd;
+
+		return null;
+	}
 	
+	public Word getWord(SemanticTag semanticTag){
+		if(semanticTag == null)
+			return null;
+		
+		if(semanticTag.isMainSemanticTag())
+			return getWord(semanticTag.convertToMainSemanticTag());
+		
+		else if(semanticTag.isSubSemanticTag())
+			return getWord(semanticTag.convertToSubSemanticTag());
+					
+		return null;	
+	}
+	
+	public Word getWord(MainSemanticTag mainSemanticTag) {
+		if(mainSemanticTag == null)
+			return null;
+		
+		if(mainSemanticTag.isArg0())
+			return getArg0Word();
+
+		if(mainSemanticTag.isArg1())
+			return getArg1Word();
+
+		if(mainSemanticTag.isArg2())
+			return getArg2Word();
+
+		if(mainSemanticTag.isArg3())
+			return getArg3Word();
+
+		if(mainSemanticTag.isArg4())
+			return getArg4Word();
+		
+		if(mainSemanticTag.isArg5())
+			return getArg5Word();
+		
+		return null;
+	}
+	
+	
+	public Word getWord(SubSemanticTag subSemanticArg) {	
+		if(subSemanticArg == null)
+			return null;
+			
+		if(!Common.isEmpty(_words))
+			for(Word wrd:_words)		
+				if(wrd != null && wrd._semanticTag != null && wrd._semanticTag.name().equals(subSemanticArg.name()))
+					return wrd;
+		
+		if(!Common.isEmpty(_prepared_words))
+			for(Word wrd:_prepared_words)		
+				if(wrd != null && wrd._semanticTag != null && wrd._semanticTag.name().equals(subSemanticArg.name()))
+					return wrd;
+		return null;
+	}
+		
 	private ArrayList<Word> getWordsWithSourceNumber(int number) {
 		
 		ArrayList<Word> allStartingWords = new ArrayList<Word>();		
@@ -723,75 +899,6 @@ public ArrayList<Phrase> get_mosnad_phrases() {
 		return null;
 	}
 		
-	public Word getWord(Node wordNode) {		
-		
-		if(!Common.isEmpty(_words))
-			for(Word wrd:_words)					
-				if(wrd != null && wrd._wsd != null && wrd._wsd.equalsRelaxed(wordNode))
-					return wrd;
-		
-		if(!Common.isEmpty(_prepared_words))
-			for(Word wrd:_prepared_words)					
-				if(wrd != null && wrd._wsd != null && wrd._wsd.equalsRelaxed(wordNode))
-					return wrd;
-
-		return null;
-	}
-	
-	public Word getWord(SemanticTag semanticTag){
-		if(semanticTag == null)
-			return null;
-		
-		if(semanticTag.isMainSemanticTag())
-			return getWord(semanticTag.convertToMainSemanticTag());
-		
-		else if(semanticTag.isSubSemanticTag())
-			return getWord(semanticTag.convertToSubSemanticTag());
-					
-		return null;	
-	}
-	
-	public Word getWord(MainSemanticTag mainSemanticTag) {
-		if(mainSemanticTag == null)
-			return null;
-		
-		if(mainSemanticTag.isArg0())
-			return getArg0Word();
-
-		if(mainSemanticTag.isArg1())
-			return getArg1Word();
-
-		if(mainSemanticTag.isArg2())
-			return getArg2Word();
-
-		if(mainSemanticTag.isArg3())
-			return getArg3Word();
-
-		if(mainSemanticTag.isArg4())
-			return getArg4Word();
-		
-		if(mainSemanticTag.isArg5())
-			return getArg5Word();
-		
-		return null;
-	}
-	
-	
-	public Word getWord(SubSemanticTag subSemanticArg) {	
-		if(subSemanticArg == null)
-			return null;
-			
-		if(!Common.isEmpty(_words))
-			for(Word wrd:_words)		
-				if(wrd != null && wrd._semanticTag != null && wrd._semanticTag.name().equals(subSemanticArg.name()))
-					return wrd;
-		
-		if(!Common.isEmpty(_prepared_words))
-			for(Word wrd:_prepared_words)		
-				if(wrd != null && wrd._semanticTag != null && wrd._semanticTag.name().equals(subSemanticArg.name()))
-					return wrd;
-		return null;
-	}
 	
 	//-------------------- end of getter part --------------------------
 	
@@ -838,9 +945,9 @@ public ArrayList<Phrase> get_mosnad_phrases() {
 		if(verb == null)
 			return;
 		
-		int vNum = verb._number;
+		int root_num = verb._number;
 		
-		ArrayList<Word> phraseHeads = getWordsWithSourceNumber(vNum);
+		ArrayList<Word> phraseHeads = getWordsWithSourceNumber(root_num);
 			
 		if(Common.isEmpty(phraseHeads))
 			return;
@@ -859,6 +966,45 @@ public ArrayList<Phrase> get_mosnad_phrases() {
 			
 			print(""+ ph);
 		}		 
+		
+		ArrayList<Word> allVerb = get_all_verb_in_wsd();
+		
+		if(allVerb != null && allVerb.size() > 1){
+			for(Word vb:allVerb){
+				if(vb._number == root_num)
+					continue;
+				
+				//now vb is a verb in the sentence but not the ROOT verb of this SentnceModel.
+				int vb_num = vb._number;
+				
+				@SuppressWarnings("unused")
+				ArrayList<Word> startFromVerb = getWordsWithSourceNumber(vb_num);
+				/*
+				 * دویدن: 		 به 		دویدن به سمت خانه
+				 * ست: 		او، کجا		او کجاست
+				 * ندارد: 		خبر 		خبر ندارد
+				 * 	گفتن:		ه- 		-
+				 */
+			}
+		}
+		
+	}
+	/**
+	 * This method returns true only when even one of the words is not null and its _wsd is not null too.
+	 * @param words
+	 * @return
+	 */
+	public static boolean is_list_or_wsd_empty(ArrayList<Word> words){
+		if(Common.isEmpty(words))
+			return true;
+		
+		boolean empty = true;
+		
+		for(Word wd:words)
+			if(wd != null && wd._wsd != null)
+				empty = false;
+		
+		return empty;
 	}
 	
 	private void print(String s){

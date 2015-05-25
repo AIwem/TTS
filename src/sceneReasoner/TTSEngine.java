@@ -914,7 +914,8 @@ public class TTSEngine {
 			return ScenePart.STATIC_OBJECT;
 		if(pureNode.getName().equals("شیشه#n3"))
 			return ScenePart.STATIC_OBJECT;
-		
+		if(pureNode.getName().equals("روی#n5"))
+			return ScenePart.LOCATION;
 		//---------------------------------------			
 		
 		if(pureNode == null || pos == null || semanticTag == null)
@@ -1211,7 +1212,7 @@ public class TTSEngine {
 	 */
 	private ScenePart getSubArgScenePart(Node pureNode, SubSemanticTag subSemArg, POS pos) {
 		
-		if(subSemArg == SubSemanticTag.DIR || subSemArg == SubSemanticTag.DIR_P)
+		if(subSemArg == SubSemanticTag.DIR)
 			if(isLocation(pureNode))
 				return ScenePart.LOCATION;
 		

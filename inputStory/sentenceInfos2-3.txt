@@ -59,7 +59,7 @@ name:سعید		SEM:ARG0_AGENT		WSD:سعید#n		num:1
 name:گفت		SEM:-				WSD:گفتن#v1		num:2
 
 name:که			SEM:ARG1_THEME		WSD:-			num:3
-name:خبر		SEM:-				WSD:-			num:4
+name:خبر		SEM:-				WSD:خبر#n5	num:4
 name:ندارد		SEM:-				WSD:خبر داشتن#v1	num:5
 
 #------------------------------------------------------
@@ -93,12 +93,13 @@ name:گذاشت		SEM:-				WSD:گذاشتن#v3	num:6
 sentence:به حیاط مدرسه خیره شد.
 
 name:به			SEM:-				WSD:-			num:1
-name:حیاط		SEM:ARG1_THEME		WSD:حیاط#n1		num:2
+name:حیاط		SEM:-				WSD:حیاط#n1		num:2
 name:مدرسه		SEM:-				WSD:مدرسه#n1	num:3
-name:به_Phrase	SEM:-				WSD:2_mozaf#n_3	num:
+name:خیره		SEM:ARG2_GOAL_ENDSTATE	WSD:خیره#a1	num:4
+name:خیره_Phrase	SEM:-			WSD:2_mozaf#n_3	num:
 
-name:خیره		SEM:-				WSD:-			num:4
-name:شد			SEM:-				WSD:خیره شدن#v2	num:5
+name:شد			SEM:-				WSD:شدن#v2	num:5
+
 
 #------------------------------------------------------
 sentence:بعد از چند لحظه برگشت.

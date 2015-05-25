@@ -307,6 +307,9 @@ public class Word {
 		//TODO: correct this Word!
 		if(_wordName.contains("دویدن"))
 			return true;
+		if(_wordName.contains("گفتن"))
+			return true;
+		
 		return false;
 	}
 	
@@ -494,6 +497,8 @@ public class Word {
 				return VerbType.BASIT;
 			if(_wsd.getName().contains("گذاشت"))
 				return VerbType.BASIT;
+			if(_wsd.getName().contains("شد"))
+				return VerbType.BASIT_RABTI;
 			if(_wsd.getName().contains("خیره شد"))
 				return VerbType.MORAKAB;
 			if(_wsd.getName().contains("به خواب رفت"))

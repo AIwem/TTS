@@ -58,8 +58,8 @@ public class Preprocessor {
 	 * so temporarily we aught to read these processed information from a file named  SentenceInfosFileName. 
 	 */
 
-//	private String sentenceInfosFileName = "inputStory/SentenceInfos1-3.txt";
-	private String sentenceInfosFileName = "inputStory/SentenceInfos2-3.txt";
+	private String sentenceInfosFileName = "inputStory/SentenceInfos1-3.txt";
+//	private String sentenceInfosFileName = "inputStory/SentenceInfos2-3.txt";
 //	private String sentenceInfosFileName = "inputStory/SentenceInfos3-1.txt";
 
 	public Preprocessor(KnowledgeBase kb, SemanticReasoner re, TTSEngine ttsEngine) {
@@ -182,7 +182,7 @@ public class Preprocessor {
 		for(int i = 0; i < parts.length; i++)
 			parts[i] = parts[i].substring(parts[i].indexOf(":")+1);				
 		
-		Word sentenceWord = senteceModel.get_word(parts[0]);
+		Word sentenceWord = senteceModel.getWord(parts[0]);
 		
 		if(sentenceWord != null){		
 					
@@ -201,7 +201,7 @@ public class Preprocessor {
 			if(phraseName.indexOf("_Phrase") != -1){
 				String ph_headStr = phraseName.substring(0, phraseName.indexOf("_Phrase"));
 															
-				Word fakeWord = new Word(senteceModel, senteceModel.get_phrase(ph_headStr), -1, fake_word_name , "", POS.UNKNOWN, ""
+				Word fakeWord = new Word(senteceModel, senteceModel.get_phrase_with_head(ph_headStr), -1, fake_word_name , "", POS.UNKNOWN, ""
 						, DependencyRelationType.ANY, -1, null, null, parts[2]);
 
 				sentenceWord = fakeWord;				
@@ -821,7 +821,7 @@ public class Preprocessor {
 									Word copyArg0Word = arg0Word.makeDeepCopy(sentenceModel, null);  
 									copyArg0Word.set_semanticTag(miss.name());
 									preparedMainArgs.add(copyArg0Word._semanticTag.convertToMainSemanticTag());							
-									sentenceModel.setPrerparedWord(copyArg0Word); //TODO: check if it is correct !!!!!!!!!						
+									sentenceModel.setPrerparedWord(copyArg0Word);						
 									
 									print("prepared " + copyArg0Word._semanticTag);
 									break;
@@ -841,7 +841,7 @@ public class Preprocessor {
 									}
 									
 									preparedMainArgs.add(copyArg1Word._semanticTag.convertToMainSemanticTag());
-									sentenceModel.setPrerparedWord(copyArg1Word); //TODO: check if it is correct !!!!!!!!!
+									sentenceModel.setPrerparedWord(copyArg1Word);
 									
 									print("prepared " + copyArg1Word._semanticTag);
 									break;
@@ -1048,7 +1048,7 @@ public class Preprocessor {
 			        
 			        //it is a valid word_num. 
 			        if(word_num != -1){
-			        	cur_word = sentence.get_word(word_num);
+			        	cur_word = sentence.getWord(word_num);
 			        	cur_word_node = cur_word._wsd;			        	
 			        }
 			        
@@ -1192,7 +1192,7 @@ public class Preprocessor {
 			int added = mainPart.addMozaf_elaih(mozWord);
 		}
 	}
-
+	
 	/**
 	 * this method defines the proper relation resulted from the verb of this sentence.
 	 * It is important to note that when this method is called _wsd parameter of  
@@ -1205,73 +1205,156 @@ public class Preprocessor {
 	private ArrayList<PlausibleStatement> defineVerbRelation(SentenceModel sentenceModel){
 		
 		ArrayList<PlausibleStatement> verbRelations = new ArrayList<PlausibleStatement>();
-		
-		//TODO: to correct this method !!!!!!!!!!!!!!!!!!!!!
-		
-		
+					
 		Word verb = sentenceModel.getVerb();
 		
+		//here _wsd of subject(s), object(s), verb and ... of this sentence has been allocated!
 		
-		//here _wsd of subject(s), object(s) of this sentence has been allocated!								
-		ArrayList<Phrase> sbj_phrases = sentenceModel.get_subject_phrases();
-		
-		if(verb == null || sbj_phrases == null || sbj_phrases.size() == 0){
-			
-			sbj_phrases = sentenceModel.get_mosnad_phrases();
-			
-			if(sbj_phrases == null || sbj_phrases.size() == 0){
-				
-				MyError.error("sentence with verb " + verb + " has no subject nor mosnad phrase! " + sentenceModel);
-				return verbRelations;
-			}
+		if(verb == null || verb._wsd == null){
+			MyError.error("sentence has no verb or its verb: " + verb + " _wsd is null!" + sentenceModel.getNLSentence());
+			return verbRelations;
 		}
 		
-		for(Phrase sbj_ph:sbj_phrases){
+		ArrayList<Word> sbj_words = sentenceModel.get_subjects();
+		
+		if(SentenceModel.is_list_or_wsd_empty(sbj_words)){
+		
+			ArrayList<Phrase> sbj_phrases = sentenceModel.get_subject_phrases();
 			
-			Word sbj = sbj_ph.get_headWord();
+			if(Common.isEmpty(sbj_phrases)){
+				MyError.error("sentence with verb " + verb + " has no subject phrase! " + sentenceModel);
+				return verbRelations;	
+			}
 			
-			if(sbj == null)
-				continue;
+			sbj_words = new ArrayList<Word>();
 			
-			ArrayList<Phrase> obj_phrases = sentenceModel.get_object_phrases();
-			
-			boolean transitive_verb = false;
-			
-			if(obj_phrases != null && obj_phrases.size() > 0)
+			for(Phrase sbj_ph:sbj_phrases)
+				sbj_words.add(sbj_ph.get_headWord());			
+		}
+		
+		if(!SentenceModel.is_list_or_wsd_empty(sbj_words)){
+		
+			for(Word sbj:sbj_words){
 				
-				for(Phrase obj_ph:obj_phrases)
+				if(sbj == null || sbj._wsd == null){
+					MyError.error("evene subject: " + sbj + " or its _wsd is null! ");
+					continue;
+				}
+	
+				boolean transitive_verb = false;
+				
+				ArrayList<Word> obj_words = sentenceModel.get_objects();
+				
+				if(SentenceModel.is_list_or_wsd_empty(obj_words)){
 					
-					if(obj_ph != null){
+					ArrayList<Phrase> obj_phrases = sentenceModel.get_object_phrases();
+					
+					if(!Common.isEmpty(obj_phrases)){
 						
-						//it is a transitive verb.
-						transitive_verb = true;
+						obj_words = new ArrayList<Word>();
 						
-						Word obj = obj_ph.get_wordWithSyntax(DependencyRelationType.PREDEP);
-						
-						if(obj == null){
-							MyError.error("This " + obj_ph + " pharse has no PREDEP Word!");
-							continue;
+						for(Phrase obj_ph:obj_phrases){
+							
+							if(obj_ph != null){
+								
+								Word obj = obj_ph.get_wordWithSyntax(DependencyRelationType.PREDEP);
+								
+								if(obj == null || obj._wsd == null){
+									MyError.error("This " + obj_ph + " pharse has no PREDEP Word or its _wsd is null!");								
+									continue;
+								}
+								else{
+									//it is a transitive verb.
+									transitive_verb = true;
+									obj_words.add(obj);
+								}				
+							}
 						}
-						else{
-							//adding the relation of this sentence to kb.
-							PlausibleStatement rel = _kb.addRelation(sbj._wsd, obj._wsd, verb._wsd, SourceType.TTS);
-							verbRelations.add(rel);
-							print("verbRel added ---- : " + rel.argument.getName() + " --> " + rel.getName() + " --> " + rel.referent.getName() + "\n");
+					}
+				}
+				else
+					transitive_verb = true;
+				
+				if(!SentenceModel.is_list_or_wsd_empty(obj_words)){
+				
+					for(Word obj:obj_words){
+						
+						if(obj == null || obj._wsd == null){
+							MyError.error("evene object: " + obj + " or its _wsd is null! ");
+							continue;	
 						}
+						
+						//adding the relation of this sentence to kb.
+						PlausibleStatement rel = _kb.addRelation(sbj._wsd, obj._wsd, verb._wsd, SourceType.TTS);
+						verbRelations.add(rel);
+						print("verbRel added1 ---- : " + rel.argument.getName() + " --> " + rel.getName() + " --> " + rel.referent.getName() + "\n");						
 					}				
-			
-			if(!transitive_verb){
-				//TODO check if using "KnowledgeBase.HPR_ANY" as referent is correct?!
-				//adding the relation of this sentence to kb. 
-				PlausibleStatement rel = _kb.addRelation(sbj._wsd, KnowledgeBase.HPR_ANY, verb._wsd, SourceType.TTS);
-				verbRelations.add(rel);
-				print("verbRel added ---- : " + rel.argument.getName() + " --> " + rel.getName() + " --> " + rel.referent.getName() + "\n");				
+				}
+							
+				if(!transitive_verb){
+					
+					ArrayList<Word> mos_words = sentenceModel.get_mosnads();
+					
+					if(SentenceModel.is_list_or_wsd_empty(mos_words)){
+					
+						ArrayList<Phrase> mos_phrases = sentenceModel.get_mosnad_phrases();				
+						
+						if(!Common.isEmpty(mos_phrases)){
+							
+							mos_words = new ArrayList<Word>();
+							
+							for(Phrase mos_ph:mos_phrases){
+								
+								if(mos_ph != null){
+									
+									Word mos = mos_ph.get_wordWithSyntax(DependencyRelationType.POSDEP);
+									
+									if(mos == null || mos._wsd == null){									
+										MyError.error("This " + mos_ph + " pharse has no POSDEP Word or its _wsd is null!");										
+										continue;									
+									}									
+									else{
+										//it is a transitive verb.
+										transitive_verb = true;
+										mos_words.add(mos);
+									}	
+								}									
+							}
+						}
+					}
+					else
+						transitive_verb = true;
+					
+					if(!SentenceModel.is_list_or_wsd_empty(mos_words)){
+						
+						for(Word mos:mos_words){
+							
+							if(mos == null || mos._wsd == null){
+								MyError.error("evene mosnad: " + mos + " or its _wsd is null! ");
+								continue;	
+							}
+						
+							//adding the relation of this sentence to kb.
+							PlausibleStatement rel = _kb.addRelation(sbj._wsd, mos._wsd, verb._wsd, SourceType.TTS);
+							verbRelations.add(rel);
+							print("verbRel added2 ---- : " + rel.argument.getName() + " --> " + rel.getName() + " --> " + rel.referent.getName() + "\n");						
+						}					
+					}
+				}				
+				
+				if(!transitive_verb){
+					//TODO check if using "KnowledgeBase.HPR_ANY" as referent is correct?!
+					//adding the relation of this sentence to kb. 
+					PlausibleStatement rel = _kb.addRelation(sbj._wsd, KnowledgeBase.HPR_ANY, verb._wsd, SourceType.TTS);
+					verbRelations.add(rel);
+					print("verbRel added3 ---- : " + rel.argument.getName() + " --> " + rel.getName() + " --> " + rel.referent.getName() + "\n");				
+				}
 			}
 		}
 		
 		return verbRelations;
 	}
-
+	
 	private  ArrayList<Node>  loadVerbSemanticArguments(SentenceModel sentence) {
 		Word verbPart = sentence.getVerb();
 		if(verbPart == null)
