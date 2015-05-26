@@ -35,6 +35,31 @@ public class SentenceModel {
 	private ArrayList<Phrase> _phrases = new ArrayList<Phrase>();
 	
 	/**
+	 * describe whether this sentence instance is a nested one or not.
+	 */
+	@SuppressWarnings("unused")
+	private boolean is_nested = false;
+	
+	/**
+	 * nested sentences in this sentence, it can have depth of 1 only. means a nested sentence, itself can not have nested sentence.  
+	 */
+	private ArrayList<SentenceModel> _nested_sentences = new ArrayList<SentenceModel>();
+	
+	/**
+	 * The father SentenceModel of this nested sentence, if any. 
+	 */
+	private SentenceModel father_sentence = null;
+
+	public SentenceModel(SceneModel scene, SentenceModel father_sentence) {
+		this.scene = scene;
+		
+		if(father_sentence != null)
+			is_nested = true;
+		
+		this.father_sentence = father_sentence;	
+	}
+		
+	/**
 	 * input parameter words contains String definition of each word of this SentenceModel.
 	 * @param words
 	 */
@@ -141,14 +166,18 @@ public class SentenceModel {
 		//------------------ end of correct Parser Error --------------
 		
 		arrangeWords();
-	}
-	
+	}	
+
 	//-------------------- setter part --------------------------
 	/**
 	 * @param scene the scene to set
 	 */	
 	public void setScene(SceneModel scene) {
 		this.scene = scene;
+		ArrayList<SentenceModel> nest_sents = get_nested_sentences();
+		if(!Common.isEmpty(nest_sents))
+			for(SentenceModel sent:nest_sents)
+				sent.setScene(scene);
 	}	
 	
 	/**
@@ -288,6 +317,14 @@ public class SentenceModel {
 		return NLSentence;
 	}	
 
+	public ArrayList<SentenceModel> get_nested_sentences() {
+		return _nested_sentences;
+	}
+	
+	public SentenceModel getFather_sentence() {
+		return father_sentence;
+	}
+	
 	public Word getVerb(){
 		if(!Common.isEmpty(_words))
 			for(Word wrd:_words)
@@ -501,6 +538,19 @@ public class SentenceModel {
 	 */
 	public ArrayList<Phrase> get_phrases() {
 		return _phrases;	
+	}
+	
+	public Phrase get_phrase_with_word(Word phrase_word){
+		if(phrase_word == null)
+			return null;
+		
+		if(Common.isEmpty(_phrases))
+			return null;
+		
+		for(Phrase ph:_phrases)
+			if(ph.get_words() != null && ph.get_words().contains(phrase_word))
+				return ph;
+		return null;
 	}
 	
 	/**
@@ -902,7 +952,47 @@ public class SentenceModel {
 	
 	//-------------------- end of getter part --------------------------
 	
-	public void addPhrase(Phrase new_phrase){
+	private void add_nested_sentence(SentenceModel nested) {
+		if(nested == null)
+			return;
+		
+		if(_nested_sentences == null)
+			_nested_sentences = new ArrayList<SentenceModel>();
+		
+		nested.is_nested = true;
+		
+		if(!_nested_sentences.contains(nested))
+			_nested_sentences.add(nested);		
+	}
+	
+	private void addWord(Word new_word){
+		if(_words == null)
+			_words = new ArrayList<Word>();
+		
+		if(new_word != null){
+			_words.add(new_word);
+			new_word._senteceModel = this;			
+		}
+	}
+	
+	private boolean removeWord(Word word){
+		if(word == null)
+			return false;
+		
+		if(_words == null){
+			word._senteceModel = null;
+			return true;
+		}
+		
+		if(_words.contains(word)){
+			word._senteceModel = null;
+			_words.remove(word);
+			return true;
+		}
+		return false;
+	}
+	
+	private void addPhrase(Phrase new_phrase){
 		if(_phrases == null)
 			_phrases = new ArrayList<Phrase>();
 		
@@ -910,6 +1000,23 @@ public class SentenceModel {
 			_phrases.add(new_phrase);
 			new_phrase._senteceModel = this;
 		}
+	}	
+	
+	private boolean removePhrase(Phrase phrase){
+		if(phrase == null)
+			return false;
+		
+		if(_phrases == null){
+			phrase._senteceModel = null;
+			return true;
+		}
+		
+		if(_phrases.contains(phrase)){
+			phrase._senteceModel = null;
+			_phrases.remove(phrase);
+			return true;
+		}
+		return false;
 	}
 	
 	private void makePhrases(Word phraseHead, ArrayList<Word> phraseWords){
@@ -965,30 +1072,84 @@ public class SentenceModel {
 			this.addPhrase(ph);
 			
 			print(""+ ph);
-		}		 
+		}		
+	}
+	
+	public void make_nested_sentences(){
+		
+		print("*********************");
+		
+		Word verb = getVerb();
+		
+		if(verb == null)
+			return;
+		
+		int root_num = verb._number;
 		
 		ArrayList<Word> allVerb = get_all_verb_in_wsd();
 		
 		if(allVerb != null && allVerb.size() > 1){
 			for(Word vb:allVerb){
 				if(vb._number == root_num)
-					continue;
+					continue;				
 				
-				//now vb is a verb in the sentence but not the ROOT verb of this SentnceModel.
-				int vb_num = vb._number;
-				
-				@SuppressWarnings("unused")
-				ArrayList<Word> startFromVerb = getWordsWithSourceNumber(vb_num);
 				/*
 				 * دویدن: 		 به 		دویدن به سمت خانه
 				 * ست: 		او، کجا		او کجاست
 				 * ندارد: 		خبر 		خبر ندارد
 				 * 	گفتن:		ه- 		-
 				 */
+
+				//now vb is a verb in the sentence but not the ROOT verb of this SentnceModel.
+				int vb_num = vb._number;
+				
+				SentenceModel nested= new SentenceModel(this.scene, this);
+				
+				this.add_nested_sentence(nested);
+				
+				this.removeWord(vb);
+				
+				vb._srcOfSynTag_number = 0;
+				
+				nested.addWord(vb);
+				
+				ArrayList<Word> startFromVerb = getWordsWithSourceNumber(vb_num);
+				
+				if(Common.isEmpty(startFromVerb))
+					continue;
+							
+				//------------ detect and generate phrases in this nested sentence ------------
+				
+				for(Word ph_h:startFromVerb){
+					
+					ArrayList<Word> phraseWords = new ArrayList<Word>();
+					
+					makePhrases(ph_h, phraseWords);
+					
+					Phrase ph = new Phrase(ph_h, phraseWords);
+					
+					nested.addPhrase(ph);
+						
+					if(ph.get_words() != null){
+						for(Word w:ph.get_words()){
+							this.removeWord(w);
+							Phrase old_ph = this.get_phrase_with_word(w);
+							this.removePhrase(old_ph);
+							nested.addWord(w);
+						}									
+					}					
+				}
+				
+				print("\n nested: " + vb + "   " + nested);
+				print(""+ nested.get_phrases());
 			}
-		}
-		
+		}		
+		print("\n this "  + verb);
+		for(Phrase p:_phrases)
+			print("" + p);
 	}
+	
+
 	/**
 	 * This method returns true only when even one of the words is not null and its _wsd is not null too.
 	 * @param words
@@ -1007,8 +1168,15 @@ public class SentenceModel {
 		return empty;
 	}
 	
+	@Override
+	public String toString() {
+		return NLSentence;
+	}
+	
 	private void print(String s){
 		System.out.println(s);
 	}
+
+	
 
 }

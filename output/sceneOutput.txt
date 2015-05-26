@@ -1,7 +1,7 @@
 
 primarySceneModel
 roles= [
-	[پسر#n2 (1)= پسرک role_actions=  [دیدن#v5 (1)=  دید, برداشتن#v1 (1)=  برداشت, شروع کردن#v1 (1)=  کرد] role_goals=    [] role_emotions= [] role_moods=    [خردسال#a1 (1)=  خردسال#a1 (1)]]]
+	[پسر#n2 (1)= پسرک role_actions=  [دیدن#v5 (1)=  دید, برداشتن#v1 (1)=  برداشت, شروع کردن#v1 (1)=  کرد, دویدن#v1 (1)=  دویدن] role_goals=    [] role_emotions= [] role_moods=    [خردسال#a1 (1)=  خردسال#a1 (1)]]]
 dynamic_objs= [کبوتر#n1 (1)=  کبوتر object_actions=  [] object_states=  [یک#n1 (1)=  یک, زخمی#a1 (1)=  زخمی]]
 static_objs= [خانه#n10 (1)=  خانه object_states=  []]
 location= [راه#n9 (1)=  راه]

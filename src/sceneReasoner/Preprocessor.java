@@ -262,9 +262,8 @@ public class Preprocessor {
 				allocate_wsd(sentence, currentWord, false);
 			
 			if(currentWord._wsd == null)
-				print(currentWord._wsd_name + " couldn't get allocate for word: " + currentWord);
-//				MyError.error(currentWord._wsd_name + " couldn't get allocated!");				
-			
+				print(currentWord._wsd_name + " couldn't get allocated for word: " + currentWord);
+//				MyError.error(currentWord._wsd_name + " couldn't get allocated!");			
 		}
 
 		//adding verb relation to KB.
@@ -274,10 +273,25 @@ public class Preprocessor {
 		Word verb = sentence.getVerb();
 		
 		if(verb != null){
+			
+			sentence.make_nested_sentences();
+			
 			//loading verb SemanticArguments.
 			ArrayList<Node> semArgs = loadVerbSemanticArguments(sentence);
 			verb.setCapacities(semArgs);
-		
+			
+			ArrayList<SentenceModel> nested_sents = sentence.get_nested_sentences();
+			
+			if(!Common.isEmpty(nested_sents)){
+				for(SentenceModel nest:nested_sents){
+					Word vb = nest.getVerb();
+					
+					if(vb != null){
+						ArrayList<Node> semArgsNest = loadVerbSemanticArguments(nest);
+						vb.setCapacities(semArgsNest);
+					}
+				}
+			}		
 		}
 		else
 			MyError.error("this sentnce has no verb! " + sentence);

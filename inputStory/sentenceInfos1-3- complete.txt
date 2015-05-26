@@ -183,12 +183,18 @@ sentence:شکست.
 
 1	شکست	V		ROOT	0
 
-2	.		PUNC	PUNC	2
+2	.		PUNC	PUNC	1
 
 name:شکست			SEM:-				WSD:شکستن#v4					num:1
 
 #------------------------------------------------------
 sentence:دور انداخت.
+
+1	دور		N		NVE		2
+
+2	انداخت	V		ROOT	0
+
+3	.		PUNC	PUNC	2
 
 #name:دور انداخت	SEM:-				WSD:دور انداختن#v2				num:
 name:دور			SEM:-				WSD:-							num:1

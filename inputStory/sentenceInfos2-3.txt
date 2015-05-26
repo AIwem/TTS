@@ -47,8 +47,13 @@ name:محمد		SEM:-				WSD:محمد#n		num:5
 name:پرسید		SEM:-				WSD:پرسیدن#v1	num:6
 
 name:که			SEM:ARG2_OBJ2		WSD:-			num:7
+
+#------------
+
 name:او			SEM:ARG1_PATIENT	WSD:محمد#n		num:8
+
 name:کجا		SEM:ARG2_GOAL_ENDSTATE	WSD:-		num:9
+
 name:ست			SEM:-				WSD:بودن#v2		num:10
 
 #------------------------------------------------------
@@ -59,7 +64,11 @@ name:سعید		SEM:ARG0_AGENT		WSD:سعید#n		num:1
 name:گفت		SEM:-				WSD:گفتن#v1		num:2
 
 name:که			SEM:ARG1_THEME		WSD:-			num:3
+
+#------------
+
 name:خبر		SEM:-				WSD:خبر#n5	num:4
+
 name:ندارد		SEM:-				WSD:خبر داشتن#v1	num:5
 
 #------------------------------------------------------
@@ -69,7 +78,13 @@ name:اما		SEM:ArgM_DIS		WSD:-			num:1
 
 name:در			SEM:-				WSD:-			num:2
 name:حین		SEM:ArgM_TMP		WSD:زمان#n5		num:3
+
+#------------
+
 name:گفتن		SEM:-				WSD:گفتن#v1		num:4
+
+#------------
+
 name:در_Phrase	SEM:-				WSD:3_mozaf#n_4	num:
 
 name:بغض		SEM:-				WSD:-			num:5

@@ -123,11 +123,19 @@ public class TTSEngine {
 				MyError.error(" the " + NLsentence + " couldn't get preprocessed!");
 				continue;
 			}
-			
+									
 			primarySceneModel.addSentence(sentence);
 			sentence.setScene(primarySceneModel);
 			
 			_pp.preprocessScene(sentence, primarySceneModel, storyModel);
+			
+			ArrayList<SentenceModel> nested_sents = sentence.get_nested_sentences();
+			
+			if(!Common.isEmpty(nested_sents))
+				for(SentenceModel nest:nested_sents)
+					_pp.preprocessScene(nest, primarySceneModel, storyModel);
+				
+			
 										
 			System.out.println("sentenceModel after preprocess: \n" + sentence + "\n");
 						

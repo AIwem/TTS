@@ -89,11 +89,13 @@ sentence:„⁄·„ «“ ”⁄Ìœ° œÊ”  „Õ„œ Å—”Ìœ òÂ «Ê òÃ«” ø
 
 8	òÂ		SUBR	VCL		7
 
+#------------
 9	«Ê		PR		SBJ		11
 
 10	òÃ«		UNKNOWN	MOS		11
 
 11	” 		V		PRD		8
+#------------
 
 12	?		PUNC	PUNC	7
 
@@ -108,9 +110,14 @@ name:„Õ„œ		SEM:-				WSD:„Õ„œ#n		num:5
 name:Å—”Ìœ		SEM:-				WSD:Å—”Ìœ‰#v1	num:6
 
 name:òÂ			SEM:ARG2_OBJ2		WSD:-			num:7
+
+#------------
 name:«Ê			SEM:ARG1_PATIENT	WSD:„Õ„œ#n		num:8
+
 name:òÃ«		SEM:ARG2_GOAL_ENDSTATE	WSD:-		num:9
+
 name:” 			SEM:-				WSD:»Êœ‰#v2		num:10
+#------------
 
 #------------------------------------------------------
 sentence:”⁄Ìœ ê›  òÂ Œ»— ‰œ«—œ.
@@ -121,9 +128,11 @@ sentence:”⁄Ìœ ê›  òÂ Œ»— ‰œ«—œ.
 
 3	òÂ		SUBR	VCL		2
 
+#------------
 4	Œ»—		N		OBJ		5
 
 5	‰œ«—œ	V		PRD		3
+#------------
 
 6	.		PUNC	PUNC	2
 
@@ -132,8 +141,12 @@ name:”⁄Ìœ		SEM:ARG0_AGENT		WSD:”⁄Ìœ#n		num:1
 name:ê› 		SEM:-				WSD:ê› ‰#v1		num:2
 
 name:òÂ			SEM:ARG1_THEME		WSD:-			num:3
+
+#------------
 name:Œ»—		SEM:-				WSD:-			num:4
+
 name:‰œ«—œ		SEM:-				WSD:Œ»— œ«‘ ‰#v1	num:5
+#------------
 
 #------------------------------------------------------
 sentence:«„« œ— ÕÌ‰ ê› ‰ »€÷ ò—œ.
@@ -144,7 +157,9 @@ sentence:«„« œ— ÕÌ‰ ê› ‰ »€÷ ò—œ.
 
 3	ÕÌ‰		N		POSDEP	2
 
+#------------
 4	ê› ‰	N		MOZ		3
+#------------
 
 5	»€÷		N		NVE		6
 
@@ -156,7 +171,11 @@ name:«„«		SEM:ArgM_DIS		WSD:-			num:1
 
 name:œ—			SEM:-				WSD:-			num:2
 name:ÕÌ‰		SEM:ArgM_TMP		WSD:“„«‰#n5		num:3
+
+#------------
 name:ê› ‰		SEM:-				WSD:ê› ‰#v1		num:4
+#------------
+
 name:œ—_Phrase	SEM:-				WSD:3_mozaf#n_4	num:
 
 name:»€÷		SEM:-				WSD:-			num:5

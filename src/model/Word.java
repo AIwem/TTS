@@ -271,7 +271,7 @@ public class Word {
 	 * @return
 	 */
 	public boolean isVerb(){
-		if(_syntaxTag == DependencyRelationType.ROOT)
+		if(_syntaxTag == DependencyRelationType.ROOT || _srcOfSynTag_number == 0)
 			return true;
 		return false;		
 	}
