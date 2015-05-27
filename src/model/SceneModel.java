@@ -159,6 +159,19 @@ public class SceneModel {
 		return alternativeLocations;
 	}
 	
+	public Location getAlternativeLocation(Node alternative_location_node) {
+		if(alternative_location_node == null)
+			return null;
+		
+		for(Location altLoc: this.alternativeLocations)
+			if(altLoc._node.equalsRelaxed(alternative_location_node))
+				return altLoc;
+		
+		MyError.error("this SceneModel has no such a " + alternative_location_node + " Location as alternativeLocation.");
+		return null;
+	}	
+	
+	
 	public Time getTime() {
 		return time;
 	}
@@ -166,6 +179,18 @@ public class SceneModel {
 	public ArrayList<Time> getAlternativeTimes(){
 		return alternativeTimes;
 	}
+	
+	public Time getAlternativeTime(Node alternative_time_node) {
+		if(alternative_time_node == null)
+			return null;
+		
+		for(Time altTime: this.alternativeTimes)
+			if(altTime._node.equalsRelaxed(alternative_time_node))
+				return altTime;
+		
+		MyError.error("this SceneModel has no such a " + alternative_time_node + " Time as alternativeTime.");
+		return null;
+	}	
 	
 	public ArrayList<SceneEmotion> getScene_emotions() {
 		return scene_emotions;
@@ -210,32 +235,48 @@ public class SceneModel {
 			return null;
 		}								
 		
-		for(Role role:roles)
-			if(role._node.equalsRelaxed(node))
-				return role;
+		if(!Common.isEmpty(roles))
+			for(Role role:roles)
+				if(role._node.equalsRelaxed(node))
+					return role;
+			
+		if(!Common.isEmpty(dynamic_objescts))
+			for(DynamicObject dynObj:dynamic_objescts)
+				if(dynObj._node.equalsRelaxed(node))
+					return dynObj;
 		
-		for(DynamicObject dynObj:dynamic_objescts)
-			if(dynObj._node.equalsRelaxed(node))
-				return dynObj;
+		if(!Common.isEmpty(static_objects))
+			for(StaticObject staObj:static_objects)
+				if(staObj._node.equalsRelaxed(node))
+					return staObj;
 		
-		for(StaticObject staObj:static_objects)
-			if(staObj._node.equalsRelaxed(node))
-				return staObj;
 		
 		if(location != null && location._node.equalsRelaxed(node))
 			return location;
 		
+		if(!Common.isEmpty(alternativeLocations))
+			for(Location loc:alternativeLocations)
+				if(loc._node.equalsRelaxed(node))
+					return loc;
+			
 		if(time != null && time._node.equalsRelaxed(node))
 			return time;
 		
-		for(SceneEmotion emot:scene_emotions)
-			if(emot._node.equalsRelaxed(node))
-				return emot;
+		if(!Common.isEmpty(alternativeTimes))
+			for(Time ti:alternativeTimes)
+				if(ti._node.equalsRelaxed(node))
+					return ti;
 		
-		for(SceneGoal goal:scene_goals)
-			if(goal._node.equalsRelaxed(node))
-				return goal;
+		if(!Common.isEmpty(scene_emotions))
+			for(SceneEmotion emot:scene_emotions)
+				if(emot._node.equalsRelaxed(node))
+					return emot;
 		
+		if(!Common.isEmpty(scene_goals))
+			for(SceneGoal goal:scene_goals)
+				if(goal._node.equalsRelaxed(node))
+					return goal;
+			
 		return null;
 	}
 	
@@ -252,30 +293,30 @@ public class SceneModel {
 		
 		ScenePart scenePart = sceneElement.scenePart;
 		
-		if(scenePart == ScenePart.ROLE){			
+		if(scenePart == ScenePart.ROLE)			
 			if(hasRole(sceneElement._node))
-				return getRole(sceneElement._node);
-		}
-		else if(scenePart == ScenePart.DYNAMIC_OBJECT){		
+				return getRole(sceneElement._node);		
+		
+		else if(scenePart == ScenePart.DYNAMIC_OBJECT)		
 			if(hasDynamic_object(sceneElement._node))
-				return getDynamic_object(sceneElement._node);
-		}				
-		else if(scenePart == ScenePart.STATIC_OBJECT){
+				return getDynamic_object(sceneElement._node);		
+		
+		else if(scenePart == ScenePart.STATIC_OBJECT)
 			if(hasStatic_object(sceneElement._node))
-				return getStatic_object(sceneElement._node);
-		}		
-		else if(scenePart == ScenePart.LOCATION){
-			if(getLocation() != null)
-				return getLocation();			
-		}		
-		else if(scenePart == ScenePart.TIME){
-			if(getTime() != null)
-				return getTime();
-		}
-		else if(scenePart == ScenePart.SCENE_EMOTION){
+				return getStatic_object(sceneElement._node);		
+		
+		else if(scenePart == ScenePart.LOCATION)
+			if(hasAlternativeLocation(sceneElement._node))			
+				return getAlternativeLocation(sceneElement._node);
+				
+		else if(scenePart == ScenePart.TIME)
+			if(hasAlternativeTime(sceneElement._node))
+				return getAlternativeTime(sceneElement._node);
+		
+		else if(scenePart == ScenePart.SCENE_EMOTION)
 			if(hasScene_emotion(sceneElement._node))
 				return getScene_emotion(sceneElement._node);
-		}
+		
 		else if(scenePart == ScenePart.SCENE_GOAL)
 			if(hasScene_goal(sceneElement._node))
 				return getScene_goal(sceneElement._node);
@@ -599,8 +640,6 @@ public class SceneModel {
 				return true;
 		return false;
 	}
-	
-
 
 	public boolean hasScene_goal(Node scene_goal_node) {
 		if(scene_goal_node == null)
@@ -609,7 +648,7 @@ public class SceneModel {
 		for(SceneGoal sceGoal: this.scene_goals)
 			if(sceGoal._node.equalsRelaxed(scene_goal_node))
 				return true;	
-			return false;
+		return false;
 	}
 	
 	public boolean hasScene_goal(SceneGoal scene_goal) {
@@ -619,18 +658,39 @@ public class SceneModel {
 		for(SceneGoal sceGoal: this.scene_goals)
 			if(sceGoal.equals(scene_goal))
 				return true;	
-			return false;
+		return false;
 	}	
 	
-	public boolean hasAlternativeLocation(Location locatin) {
-		if(locatin == null)
+	public boolean hasAlternativeLocation(Node locatin_node) {
+		if(locatin_node == null)
 			return false;
 		
 		for(Location loc: this.alternativeLocations)
-			if(loc.equals(locatin))
-				return true;	
-			return false;
+			if(loc._node.equalsRelaxed(locatin_node))
+				return true;
+		return false;
 	}
+	
+	public boolean hasAlternativeLocation(Location location) {
+		if(location == null)
+			return false;
+		
+		for(Location loc: this.alternativeLocations)
+			if(loc.equals(location))
+				return true;	
+		return false;
+	}
+	
+	public boolean hasAlternativeTime (Node time_node) {
+		if(time_node == null)
+			return false;
+		
+		for(Time t: this.alternativeTimes)
+			if(t._node.equalsRelaxed(time_node))
+				return true;	
+		return false;
+	}	
+	
 	
 	public boolean hasAlternativeTime (Time time) {
 		if(time == null)
@@ -673,16 +733,31 @@ public class SceneModel {
 			if(getLocation() != null)
 				if(getLocation()._node.equalsRelaxed(sceneElement._node))
 					return true;
+				else if(hasAlternativeLocation(sceneElement._node))
+					return true;
 				else
 					return false;
-
 		
 		else if(scenePart == ScenePart.TIME)
 			if(getTime() != null)
 				if(getTime()._node.equalsRelaxed(sceneElement._node))
 					return true;
+				else if(hasAlternativeTime(sceneElement._node))
+					return true;
 				else
 					return false;						
+		
+		else if(scenePart == ScenePart.SCENE_EMOTION)
+			if(hasScene_emotion(sceneElement._node))				
+				return true;
+			else
+				return false;
+		
+		else if(scenePart == ScenePart.SCENE_GOAL)
+			if(hasScene_goal(sceneElement._node))				
+				return true;
+			else
+				return false;
 		
 		return false;
 	}	
