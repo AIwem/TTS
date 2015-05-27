@@ -1,0 +1,79 @@
+sentence:شروع به دویدن به سمت خانه کرد.
+
+1	شروع	N		NVE		7		-				-
+
+2	به		PREP	NPP		1		-				-
+
+3	دويدن	N		POSDEP	2		ARG1_THEME		دویدن#v1
+
+4	به		PREP	NPP		3		-				-	
+
+5	سمت		N		POSDEP	4		ArgM_DIR		سمت#n6
+
+6	خانه	خانه	MOZ		5		-				خانه#n10
+
+7	کرد		V		ROOT	0		-				شروع کردن#v1
+
+8	.		PUNC	PUNC	
+
+#------------------------------------------------------
+sentence:معلم از سعید، دوست محمد پرسید که او کجاست؟
+
+1	معلم	N		SBJ		7		ARG0_AGENT		معلم#n1
+
+2	از		PREP	VPP		7		-				-
+
+3	سعید	N		POSDEP	2		ARG1_THEME		سعید#n		
+
+4	،		PUNC	PUNC	3		-				-
+
+5	دوست	N		NVE		7		-				-	
+
+6	محمد	N		MOZ		5		-				محمد#n
+
+7	پرسید	V		ROOT	0		-				پرسیدن#v1
+
+8	که		SUBR	VCL		7		ARG2_OBJ2		-
+
+9	او		PR		SBJ		11		ARG1_PATIENT	محمد#n
+
+10	کجا		UNKNOWN	MOS		11		ARG2_GOAL_ENDSTATE	-
+
+11	ست		V		PRD		8		-				بودن#v2
+
+12	?		PUNC	PUNC	7
+
+#------------------------------------------------------
+sentence:سعید گفت که خبر ندارد.
+
+1	سعید	N		SBJ		2		ARG0_AGENT		سعید#n
+
+2	گفت		V		ROOT	0		-				گفتن#v1
+
+3	که		SUBR	VCL		2		ARG1_THEME		-
+
+4	خبر		N		OBJ		5		-				-
+
+5	ندارد	V		PRD		3		-				خبر داشتن#v1
+
+6	.		PUNC	PUNC	2
+
+
+#------------------------------------------------------
+sentence:اما در حین گفتن بغض کرد.
+
+1	اما		CONJ	VCONJ	6	ArgM_DIS	-
+
+2	در		PREP	ADVRB	6	-			-
+
+3	حین		N		POSDEP	2	ArgM_TMP	زمان#n5
+
+4	گفتن	N		MOZ		3	-			گفتن#v1
+
+5	بغض		N		NVE		6	-			-
+
+6	کرد		V		ROOT	0	-			بغض کردن#v1
+
+7	.		PUNC	PUNC	6
+
+#------------------------------------------------------

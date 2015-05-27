@@ -8,6 +8,7 @@ import ir.ac.itrc.qqa.semantic.util.Common;
 
 import java.util.ArrayList;
 
+import model.SceneModel;
 import model.ScenePart;
 
 
@@ -25,8 +26,8 @@ public class Role extends SceneElement{
 	
 	private ArrayList<RoleMood> role_moods = new ArrayList<RoleMood>();
 
-	public Role(String name, Node node) {
-		super(name, ScenePart.ROLE, node);
+	public Role(SceneModel scene, String name, Node node) {
+		super(scene, name, ScenePart.ROLE, node);
 		this.role_actions = new ArrayList<RoleAction>();
 		this.role_goals = new ArrayList<RoleGoal>();
 		this.role_emotions = new ArrayList<RoleEmotion>();

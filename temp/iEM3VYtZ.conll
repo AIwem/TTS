@@ -1,0 +1,13 @@
+1	با	با	PREP	PREP	senID=001
+2	یک	یک	NUM	NUM	senID=001
+3	صورت	صورت	N	N	number=SING|senID=001
+4	کوچولو	کوچولو	ADJ	ADJ	senID=001
+5	،	،	PUNC	PUNC	senID=001
+6	با	با	PREP	PREP	senID=001
+7	موهای	مو	N	N	number=PLUR|senID=001
+8	فرفری	فرفری	ADJ	ADJ	senID=001
+9	روی	روی	PREP	PREP	senID=001
+10	نوک‌پنجه	نوک‌پنجه	N	N	number=SING|senID=001
+11	پایش	پای	N	N	number=SING|senID=001
+12	ایستاده	ایستاد#ایست	V	V	person=3|number=SING|tma=G|senID=001
+13	.	.	PUNC	PUNC	senID=001

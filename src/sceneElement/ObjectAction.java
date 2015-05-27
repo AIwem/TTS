@@ -1,13 +1,14 @@
 package sceneElement;
 
+import model.SceneModel;
 import ir.ac.itrc.qqa.semantic.kb.Node;
 
 public class ObjectAction extends Action {
 
 	private DynamicObject actor = null;
 	
-	public ObjectAction(String _name, Node _node) {
-		super(_name, _node);		
+	public ObjectAction(SceneModel scene, String name, Node node) {
+		super(scene, name, node);		
 	}
 
 	public DynamicObject getActor() {

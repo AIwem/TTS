@@ -1,0 +1,8 @@
+1	به	به	PREP	PREP	senID=001	4	AJPP	_	_
+2	حیاط	حیاط	N	N	number=SING|senID=001	1	POSDEP	_	_
+3	مدرسه	مدرسه	N	N	number=SING|senID=001	2	MOZ	_	_
+4	خیره	خیره	ADJ	ADJ	senID=001	5	MOS	_	_
+5	شد	شد#شو	V	V	person=3|number=SING|tma=G|senID=001	0	ROOT	_	_
+6	.	.	PUNC	PUNC	senID=001	5	PUNC	_	_
+
+

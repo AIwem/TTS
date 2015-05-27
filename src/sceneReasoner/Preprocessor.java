@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import sceneElement.*;
 import model.MainSemanticTag;
 import model.POS;
+import model.Phrase;
 import model.ScenePart;
 import model.SemanticTag;
 import model.SentenceModel;
@@ -56,11 +57,10 @@ public class Preprocessor {
 	 * We have no NLP module to process input text and convert it to related part,
 	 * so temporarily we aught to read these processed information from a file named  SentenceInfosFileName. 
 	 */
-//	private String sentenceInfosFileName = "inputStory/sentenceInfos2_simple.txt";
-//	private String sentenceInfosFileName = "inputStory/sentenceInfos_SS.txt";
+
 	private String sentenceInfosFileName = "inputStory/SentenceInfos1-3.txt";
-//	private String sentenceInfosFileName = "inputStory/SentenceInfos2-2.txt";
-//	private String sentenceInfosFileName = "inputStory/SentenceInfos3.txt";
+//	private String sentenceInfosFileName = "inputStory/SentenceInfos2-3.txt";
+//	private String sentenceInfosFileName = "inputStory/SentenceInfos3-1.txt";
 
 	public Preprocessor(KnowledgeBase kb, SemanticReasoner re, TTSEngine ttsEngine) {
 		this._kb = kb;
@@ -182,7 +182,7 @@ public class Preprocessor {
 		for(int i = 0; i < parts.length; i++)
 			parts[i] = parts[i].substring(parts[i].indexOf(":")+1);				
 		
-		Word sentenceWord = senteceModel.get_word(parts[0]);
+		Word sentenceWord = senteceModel.getWord(parts[0]);
 		
 		if(sentenceWord != null){		
 					
@@ -201,7 +201,7 @@ public class Preprocessor {
 			if(phraseName.indexOf("_Phrase") != -1){
 				String ph_headStr = phraseName.substring(0, phraseName.indexOf("_Phrase"));
 															
-				Word fakeWord = new Word(senteceModel, senteceModel.get_phrase(ph_headStr), -1, fake_word_name , "", POS.UNKNOWN, ""
+				Word fakeWord = new Word(senteceModel, senteceModel.get_phrase_with_head(ph_headStr), -1, fake_word_name , "", POS.UNKNOWN, ""
 						, DependencyRelationType.ANY, -1, null, null, parts[2]);
 
 				sentenceWord = fakeWord;				
@@ -230,7 +230,7 @@ public class Preprocessor {
 		
 		SentenceModel sentence = new SentenceModel(NLsentence, word_strs);
 
-		print("^^^^^^^^^^^^^^^^^^");
+		print("^^^^^^^^^^^^^^^^^");
 
 		
 		//this array has information of all parts of this sentence.
@@ -247,7 +247,8 @@ public class Preprocessor {
 			
 			if(currentWord == null){
 				MyError.error("The word with \"" + currentWordInfo + "\" couldn't be completed!" );
-				return sentence;
+				continue;
+				//return sentence;
 			}
 			
 			if(currentWord._number < 0 && currentWord._wordName != null && currentWord._wordName.equals(fake_word_name))
@@ -261,9 +262,8 @@ public class Preprocessor {
 				allocate_wsd(sentence, currentWord, false);
 			
 			if(currentWord._wsd == null)
-				print(currentWord._wsd_name + " couldn't get allocate for word: " + currentWord);
-//				MyError.error(currentWord._wsd_name + " couldn't get allocated!");				
-			
+				print(currentWord._wsd_name + " couldn't get allocated for word: " + currentWord);
+//				MyError.error(currentWord._wsd_name + " couldn't get allocated!");			
 		}
 
 		//adding verb relation to KB.
@@ -273,10 +273,25 @@ public class Preprocessor {
 		Word verb = sentence.getVerb();
 		
 		if(verb != null){
+			
+			sentence.make_nested_sentences();
+			
 			//loading verb SemanticArguments.
 			ArrayList<Node> semArgs = loadVerbSemanticArguments(sentence);
 			verb.setCapacities(semArgs);
-		
+			
+			ArrayList<SentenceModel> nested_sents = sentence.get_nested_sentences();
+			
+			if(!Common.isEmpty(nested_sents)){
+				for(SentenceModel nest:nested_sents){
+					Word vb = nest.getVerb();
+					
+					if(vb != null){
+						ArrayList<Node> semArgsNest = loadVerbSemanticArguments(nest);
+						vb.setCapacities(semArgsNest);
+					}
+				}
+			}		
 		}
 		else
 			MyError.error("this sentnce has no verb! " + sentence);
@@ -377,7 +392,7 @@ public class Preprocessor {
 	
 	
 	private void checkAllSemanticTagsWithUser(SentenceModel sentenceModel, SceneModel primarySceneModel){
-		//TODO check with user!		
+		
 	}
 	
 	/**
@@ -444,13 +459,13 @@ public class Preprocessor {
 						
 				//reasoning ScenePart from KB, ROLE,DYNAMIC_OBJECT, STATIC_OBJECT, ....
 				ScenePart scenePart = _ttsEngine.whichScenePart(semArgWord);
-				
+								
 				if(scenePart == null || scenePart == ScenePart.UNKNOWN){
 					MyError.error("the " + semanticTag +": " + semArgWord + " ScenePart was not found!");
 					return null;
 				}
-				
-				SceneElement inputSceneElement = createSceneElement(semArgWord, scenePart);
+			
+				SceneElement inputSceneElement = createSceneElement(semArgWord, scenePart, primarySceneModel);
 				
 				if(inputSceneElement == null){
 					MyError.error("the " + semArgWord + " could not convert to a SceneElement!");
@@ -640,7 +655,7 @@ public class Preprocessor {
 				
 				if(arg0Elem != null){
 					//It can be added as RoleMood or ObjectState to Arg0
-					SceneElement mnrElem = arg0Elem.addDependent(mnrWord, "manner");
+					SceneElement mnrElem = arg0Elem.addDependent(mnrWord, "manner", _ttsEngine);
 					
 					if(mnrElem != null)
 						preprocessDependentsOfSemanticArg(mnrWord, mnrElem);
@@ -803,8 +818,11 @@ public class Preprocessor {
 				for(MainSemanticTag miss:missingMainArgs){
 					
 					if(miss != null && (miss.isArg0() || miss.isArg1())){
-					
-						for(SentenceModel sent:allSentences){
+
+						//for(SentenceModel sent:allSentences){						
+						for(int index = allSentences.size() - 1; index >= 0; index--){
+							SentenceModel sent = allSentences.get(index);
+
 							if(sent.equals(sentenceModel))
 								continue;
 							
@@ -817,7 +835,7 @@ public class Preprocessor {
 									Word copyArg0Word = arg0Word.makeDeepCopy(sentenceModel, null);  
 									copyArg0Word.set_semanticTag(miss.name());
 									preparedMainArgs.add(copyArg0Word._semanticTag.convertToMainSemanticTag());							
-									sentenceModel.setPrerparedWord(copyArg0Word); //TODO: check if it is correct !!!!!!!!!						
+									sentenceModel.setPrerparedWord(copyArg0Word);						
 									
 									print("prepared " + copyArg0Word._semanticTag);
 									break;
@@ -826,12 +844,22 @@ public class Preprocessor {
 							else if(miss.isArg1() && sent.hasArg1()){
 								Word arg1Word = sent.getArg1Word();
 								
-								arg1Word.set_semanticTag(miss.name());
-								preparedMainArgs.add(arg1Word._semanticTag.convertToMainSemanticTag());
-//								sentenceModel.setPrerparedSentencePart(arg1Word);sentenceModel.setPrerparedWord(copyArg0Word); //TODO: check if it is correct !!!!!!!!!
-								
-								print("prepared " + arg1Word._semanticTag);
-								break;
+								if(arg1Word != null){
+									Word copyArg1Word = arg1Word.makeDeepCopy(sentenceModel, null);
+									copyArg1Word.set_semanticTag(miss.name());
+									
+									if(!copyArg1Word.isObject()){
+										Phrase arg1_ph = arg1Word._phrase;
+										if(arg1_ph != null && arg1_ph.get_headWord() != null && arg1_ph.get_headWord().isObject())
+											copyArg1Word._syntaxTag = DependencyRelationType.OBJ;										
+									}
+									
+									preparedMainArgs.add(copyArg1Word._semanticTag.convertToMainSemanticTag());
+									sentenceModel.setPrerparedWord(copyArg1Word);
+									
+									print("prepared " + copyArg1Word._semanticTag);
+									break;
+								}
 							}
 						}
 					}					
@@ -869,7 +897,7 @@ public class Preprocessor {
 			ArrayList<Word> adjectives = semArgWord.getAdjectives();
 			
 			for(Word adj:adjectives)
-				sceneElement.addDependent(adj, "adjective");			
+				sceneElement.addDependent(adj, "adjective", _ttsEngine);			
 		}
 		//It means that this sentencePart has some mozad_elaih
 		if(semArgWord.hasAnyMozaf_elaihs()){				
@@ -881,7 +909,7 @@ public class Preprocessor {
 			for(Word moz:mozafs)
 				
 				if(moz._wsd != null && !moz._wsd.getName().contains(zamir_enekasi))
-					sceneElement.addDependent(moz, "mozaf_elaih");
+					sceneElement.addDependent(moz, "mozaf_elaih", _ttsEngine);
 		}			
 	}
 
@@ -907,7 +935,7 @@ public class Preprocessor {
 			return;
 		}		
 		
-		arg1Elem.addDependent(verb, "adjective");
+		arg1Elem.addDependent(verb, "adjective", _ttsEngine);
 		
 		//------
 		Word arg0Word = sentenceModel.getArg0Word();
@@ -921,7 +949,7 @@ public class Preprocessor {
 				return;
 			}
 			
-			arg0Elem.addDependent(verb, "action");			
+			arg0Elem.addDependent(verb, "action", _ttsEngine);			
 		}			
 	}
 
@@ -951,7 +979,7 @@ public class Preprocessor {
 				return;
 			}		
 			
-			arg1Elem.addDependent(arg2Word, "adjective");			
+			arg1Elem.addDependent(arg2Word, "adjective", _ttsEngine);			
 //		}
 //		else
 //			print(verb + " is rabti but Arg2Part " + arg2Part + " is not adjective!");
@@ -980,7 +1008,7 @@ public class Preprocessor {
 			return;
 		}
 		
-		arg0Elem.addDependent(verb, "action");	
+		arg0Elem.addDependent(verb, "action", _ttsEngine);	
 	}
 
 	/**
@@ -1034,7 +1062,7 @@ public class Preprocessor {
 			        
 			        //it is a valid word_num. 
 			        if(word_num != -1){
-			        	cur_word = sentence.get_word(word_num);
+			        	cur_word = sentence.getWord(word_num);
 			        	cur_word_node = cur_word._wsd;			        	
 			        }
 			        
@@ -1110,7 +1138,12 @@ public class Preprocessor {
 			}
 			word.set_wsd(argument);
 			
-			add_adjective_mozaf(sentence, word, descriptor, referent);
+			Word argWord = sentence.getWord(argument);
+			
+			if(argWord != null)
+				add_adjective_mozaf(sentence, argWord, descriptor, referent);
+			else
+				add_adjective_mozaf(sentence, word, descriptor, referent);
 			//return;
 		}
 		else{
@@ -1120,7 +1153,7 @@ public class Preprocessor {
 		}		
 	}
 	
-	private SceneElement createSceneElement(Word word, ScenePart scenePart){
+	private SceneElement createSceneElement(Word word, ScenePart scenePart, SceneModel scene){
 		
 		if(word == null || scenePart == null || scenePart == ScenePart.UNKNOWN){
 			MyError.error("null input parameter for createSceneElement !");
@@ -1128,23 +1161,23 @@ public class Preprocessor {
 		}								
 		
 		if(scenePart == ScenePart.ROLE)			
-				return new Role(word._wordName, word._wsd);
+				return new Role(scene, word._wordName, word._wsd);
 		else if(scenePart == ScenePart.ROLE_ACTION)
-			return new RoleAction(word._wordName, word._wsd);
+			return new RoleAction(scene, word._wordName, word._wsd);
 		else if(scenePart == ScenePart.DYNAMIC_OBJECT)
-			return new DynamicObject(word._wordName, word._wsd);
+			return new DynamicObject(scene, word._wordName, word._wsd);
 		else if(scenePart == ScenePart.OBJECT_ACTION)
-			return new ObjectAction(word._wordName, word._wsd);
+			return new ObjectAction(scene, word._wordName, word._wsd);
 		else if(scenePart == ScenePart.STATIC_OBJECT)
-			return new StaticObject(word._wordName, word._wsd);				
+			return new StaticObject(scene, word._wordName, word._wsd);				
 		else if(scenePart == ScenePart.LOCATION)
-			return new Location(word._wordName, word._wsd);			
+			return new Location(scene, word._wordName, word._wsd);			
 		else if(scenePart == ScenePart.TIME)
-			return new Time(word._wordName, word._wsd);
+			return new Time(scene, word._wordName, word._wsd);
 		else if(scenePart == ScenePart.SCENE_EMOTION)
-			return new SceneEmotion(word._wordName, word._wsd);
+			return new SceneEmotion(scene, word._wordName, word._wsd);
 		else if(scenePart == ScenePart.SCENE_GOAL)
-			return new SceneGoal(word._wordName, word._wsd);
+			return new SceneGoal(scene, word._wordName, word._wsd);
 		return null;
 	}
 
@@ -1173,7 +1206,7 @@ public class Preprocessor {
 			int added = mainPart.addMozaf_elaih(mozWord);
 		}
 	}
-
+	
 	/**
 	 * this method defines the proper relation resulted from the verb of this sentence.
 	 * It is important to note that when this method is called _wsd parameter of  
@@ -1186,53 +1219,156 @@ public class Preprocessor {
 	private ArrayList<PlausibleStatement> defineVerbRelation(SentenceModel sentenceModel){
 		
 		ArrayList<PlausibleStatement> verbRelations = new ArrayList<PlausibleStatement>();
-		
-		//TODO: to correct this method !!!!!!!!!!!!!!!!!!!!!
-		
-		/*
+					
 		Word verb = sentenceModel.getVerb();
 		
+		//here _wsd of subject(s), object(s), verb and ... of this sentence has been allocated!
 		
-		//here _wsd of subject(s), object(s), and adverb(s) of this sentence has been allocated!								
-		ArrayList<Word> subjects = sentenceModel.getSubjects();
-		
-		if(verb == null || subjects == null || subjects.size() == 0){
-			MyError.error("sentence with verb " + verb + " has no subject part! " + sentenceModel);
+		if(verb == null || verb._wsd == null){
+			MyError.error("sentence has no verb or its verb: " + verb + " _wsd is null!" + sentenceModel.getNLSentence());
 			return verbRelations;
 		}
 		
-		for(Word_old sbj:subjects){				
+		ArrayList<Word> sbj_words = sentenceModel.get_subjects();
+		
+		if(SentenceModel.is_list_or_wsd_empty(sbj_words)){
+		
+			ArrayList<Phrase> sbj_phrases = sentenceModel.get_subject_phrases();
 			
-			ArrayList<Word_old> objects = sentenceModel.getObjects();
+			if(Common.isEmpty(sbj_phrases)){
+				MyError.error("sentence with verb " + verb + " has no subject phrase! " + sentenceModel);
+				return verbRelations;	
+			}
 			
-			boolean transitive_verb = false;
+			sbj_words = new ArrayList<Word>();
 			
-			if(objects != null && objects.size() > 0)
+			for(Phrase sbj_ph:sbj_phrases)
+				sbj_words.add(sbj_ph.get_headWord());			
+		}
+		
+		if(!SentenceModel.is_list_or_wsd_empty(sbj_words)){
+		
+			for(Word sbj:sbj_words){
 				
-				for(Word_old obj:objects)
+				if(sbj == null || sbj._wsd == null){
+					MyError.error("evene subject: " + sbj + " or its _wsd is null! ");
+					continue;
+				}
+	
+				boolean transitive_verb = false;
+				
+				ArrayList<Word> obj_words = sentenceModel.get_objects();
+				
+				if(SentenceModel.is_list_or_wsd_empty(obj_words)){
 					
-					if(obj != null){						
-						//it is a transitive verb.
-						transitive_verb = true;
+					ArrayList<Phrase> obj_phrases = sentenceModel.get_object_phrases();
+					
+					if(!Common.isEmpty(obj_phrases)){
+						
+						obj_words = new ArrayList<Word>();
+						
+						for(Phrase obj_ph:obj_phrases){
+							
+							if(obj_ph != null){
+								
+								Word obj = obj_ph.get_wordWithSyntax(DependencyRelationType.PREDEP);
+								
+								if(obj == null || obj._wsd == null){
+									MyError.error("This " + obj_ph + " pharse has no PREDEP Word or its _wsd is null!");								
+									continue;
+								}
+								else{
+									//it is a transitive verb.
+									transitive_verb = true;
+									obj_words.add(obj);
+								}				
+							}
+						}
+					}
+				}
+				else
+					transitive_verb = true;
+				
+				if(!SentenceModel.is_list_or_wsd_empty(obj_words)){
+				
+					for(Word obj:obj_words){
+						
+						if(obj == null || obj._wsd == null){
+							MyError.error("evene object: " + obj + " or its _wsd is null! ");
+							continue;	
+						}
 						
 						//adding the relation of this sentence to kb.
 						PlausibleStatement rel = _kb.addRelation(sbj._wsd, obj._wsd, verb._wsd, SourceType.TTS);
 						verbRelations.add(rel);
-						print("verbRel added ---- : " + rel.argument.getName() + " --> " + rel.getName() + " --> " + rel.referent.getName() + "\n");														
+						print("verbRel added1 ---- : " + rel.argument.getName() + " --> " + rel.getName() + " --> " + rel.referent.getName() + "\n");						
 					}				
-			
-			if(!transitive_verb){
-				//TODO check if using "KnowledgeBase.HPR_ANY" as referent is correct?!
-				//adding the relation of this sentence to kb. 
-				PlausibleStatement rel = _kb.addRelation(sbj._wsd, KnowledgeBase.HPR_ANY, verb._wsd, SourceType.TTS);
-				verbRelations.add(rel);
-				print("verbRel added ---- : " + rel.argument.getName() + " --> " + rel.getName() + " --> " + rel.referent.getName() + "\n");				
+				}
+							
+				if(!transitive_verb){
+					
+					ArrayList<Word> mos_words = sentenceModel.get_mosnads();
+					
+					if(SentenceModel.is_list_or_wsd_empty(mos_words)){
+					
+						ArrayList<Phrase> mos_phrases = sentenceModel.get_mosnad_phrases();				
+						
+						if(!Common.isEmpty(mos_phrases)){
+							
+							mos_words = new ArrayList<Word>();
+							
+							for(Phrase mos_ph:mos_phrases){
+								
+								if(mos_ph != null){
+									
+									Word mos = mos_ph.get_wordWithSyntax(DependencyRelationType.POSDEP);
+									
+									if(mos == null || mos._wsd == null){									
+										MyError.error("This " + mos_ph + " pharse has no POSDEP Word or its _wsd is null!");										
+										continue;									
+									}									
+									else{
+										//it is a transitive verb.
+										transitive_verb = true;
+										mos_words.add(mos);
+									}	
+								}									
+							}
+						}
+					}
+					else
+						transitive_verb = true;
+					
+					if(!SentenceModel.is_list_or_wsd_empty(mos_words)){
+						
+						for(Word mos:mos_words){
+							
+							if(mos == null || mos._wsd == null){
+								MyError.error("evene mosnad: " + mos + " or its _wsd is null! ");
+								continue;	
+							}
+						
+							//adding the relation of this sentence to kb.
+							PlausibleStatement rel = _kb.addRelation(sbj._wsd, mos._wsd, verb._wsd, SourceType.TTS);
+							verbRelations.add(rel);
+							print("verbRel added2 ---- : " + rel.argument.getName() + " --> " + rel.getName() + " --> " + rel.referent.getName() + "\n");						
+						}					
+					}
+				}				
+				
+				if(!transitive_verb){
+					//TODO check if using "KnowledgeBase.HPR_ANY" as referent is correct?!
+					//adding the relation of this sentence to kb. 
+					PlausibleStatement rel = _kb.addRelation(sbj._wsd, KnowledgeBase.HPR_ANY, verb._wsd, SourceType.TTS);
+					verbRelations.add(rel);
+					print("verbRel added3 ---- : " + rel.argument.getName() + " --> " + rel.getName() + " --> " + rel.referent.getName() + "\n");				
+				}
 			}
 		}
-		*/
+		
 		return verbRelations;
 	}
-
+	
 	private  ArrayList<Node>  loadVerbSemanticArguments(SentenceModel sentence) {
 		Word verbPart = sentence.getVerb();
 		if(verbPart == null)

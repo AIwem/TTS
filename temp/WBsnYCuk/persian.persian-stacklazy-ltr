@@ -1,0 +1,5 @@
+1	تیروکمان	تیروکمان	N	N	number=SING	3	PREDEP	_	_
+2	خود	خود	PR	PR	wcID=11111010000	1	MOZ	_	_
+3	را	را	POSTP	POSTP	wcID=111111110	4	OBJ	_	_
+4	برداشت	برداشت	V	V	person=3|number=SING|tma=G|wcID=111111010111011	0	ROOT	_	_
+

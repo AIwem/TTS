@@ -1,0 +1,5 @@
+1	معلم	معلم	N	N	number=SING|senID=001
+2	وارد	وارد	PREP	PREP	senID=001
+3	کلاس	کلاس	N	N	number=SING|senID=001
+4	شد	شد#شو	V	V	person=3|number=SING|tma=G|senID=001
+5	.	.	PUNC	PUNC	senID=001

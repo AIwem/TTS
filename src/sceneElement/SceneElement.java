@@ -2,13 +2,17 @@ package sceneElement;
 
 
 
+import sceneReasoner.TTSEngine;
+import model.SceneModel;
 import model.ScenePart;
 import model.Word;
 import ir.ac.itrc.qqa.semantic.kb.Node;
 import ir.ac.itrc.qqa.semantic.util.MyError;
 
 public class SceneElement {
-
+	
+	public SceneModel _scene;
+	
 	public String _name;
 	
 	public ScenePart scenePart;
@@ -16,15 +20,17 @@ public class SceneElement {
 	public Node _node;	
 	
 	
-	public SceneElement(){
+	public SceneElement(SceneModel scene){
 		super();
+		this._scene = scene;
 	}
 	
-	public SceneElement(String _name, ScenePart scenePart, Node _node) {
+	public SceneElement(SceneModel scene, String name, ScenePart scenePart, Node node) {
 		super();
-		this._name = _name;
+		this._scene = scene;
+		this._name = name;
 		this.scenePart = scenePart;
-		this._node = _node;		
+		this._node = node;		
 	}
 
 	public void setName(String _name) {
@@ -43,12 +49,14 @@ public class SceneElement {
 		return _node;
 	}
 	
-	public SceneElement addDependent(Word dependent, String elementType){
+	public SceneElement addDependent(Word dependent, String elementType, TTSEngine ttsEngine){
 		
-		if(dependent == null){
+		if(dependent == null || elementType == null){
 			MyError.error("null input parameter for addDependent");
 			return null;
 		}		
+		if(dependent._wsd == null)
+			return null;
 		
 		switch(elementType)
 		{
@@ -63,8 +71,31 @@ public class SceneElement {
 					return this.addStateToSceneObject(dependent._wordName, dependent._wsd);
 		
 				else if(this.scenePart == ScenePart.LOCATION){
-					print("what to do for " + elementType + " of LOCATION ?!");//TODO
-					return null;
+					
+					if(elementType.equals("mozaf_elaih") && ttsEngine != null){
+					
+						print("\nobject in Location for " + elementType + " of LOCATION. \n");
+					
+						boolean isDyn = ttsEngine.isWordDynamicObject(dependent);
+						
+						boolean isRole = ttsEngine.isWordRole(dependent);
+						
+						if(isDyn){
+							DynamicObject dynObj = new DynamicObject(this._scene, dependent._wordName, dependent._wsd); 
+							this._scene.addDynamic_object(dynObj);
+							return dynObj;
+						}
+						else if(isRole){
+							Role role = new Role(this._scene, dependent._wordName, dependent._wsd); 
+							this._scene.addRole(role);
+							return role;
+						}
+						else{
+							StaticObject staObj = new StaticObject(this._scene, dependent._wordName, dependent._wsd);
+							this._scene.addStatic_object(staObj);
+							return staObj;
+						}
+					}
 				}		
 				else if(this.scenePart == ScenePart.SCENE_GOAL){
 					print("what to do for " + elementType + " of SCENE_GOAL ?!");//TODO
@@ -75,7 +106,7 @@ public class SceneElement {
 					return null;
 				}
 				else if(this.scenePart == ScenePart.SCENE_EMOTION){
-					print("what to do for " + elementType + " of SCENE_GOAL ?!");//TODO
+					print("what to do for " + elementType + " of SCENE_EMOTION ?!");//TODO
 					return null;
 				}
 				break;
@@ -105,7 +136,7 @@ public class SceneElement {
 		
 		try{
 			Role role = (Role)this;
-			RoleAction roleAct = new RoleAction(name, node); 
+			RoleAction roleAct = new RoleAction(this._scene, name, node); 
 			return role.addRole_action(roleAct);			
 		}
 		catch(Exception e){
@@ -124,7 +155,7 @@ public class SceneElement {
 	private ObjectAction addObjectActionToDynmicAction(String name, Node node){		
 		try{
 			DynamicObject dynObj = (DynamicObject)this;
-			ObjectAction objAct = new ObjectAction(name, node); 
+			ObjectAction objAct = new ObjectAction(this._scene, name, node); 
 			return dynObj.addObejct_action(objAct);
 		}
 		catch(Exception e){
@@ -143,7 +174,7 @@ public class SceneElement {
 	private RoleMood addRoleMoodToRole(String name, Node node){		
 		try{
 			Role role = (Role)this;
-			RoleMood rm = new RoleMood(name, node);
+			RoleMood rm = new RoleMood(this._scene, name, node);
 			return role.addRole_mood(rm);
 		}
 		catch(Exception e){			
@@ -162,7 +193,7 @@ public class SceneElement {
 	private ObjectState addStateToSceneObject(String name, Node node) {
 		try{
 			SceneObject sceObj = (SceneObject)this;			
-			ObjectState objState = new ObjectState(name, node);	
+			ObjectState objState = new ObjectState(this._scene, name, node);	
 			return sceObj.setCurrent_state(objState);				
 		}
 		catch(Exception e){			

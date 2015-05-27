@@ -1,0 +1,5 @@
+1	به	به	PREP	PREP	senID=001
+2	سمت	سمت	N	N	number=SING|senID=001
+3	پنجره	پنجره	N	N	number=SING|senID=001
+4	رفت	رفت#روب,رو	V	V	person=3|number=SING|tma=G|senID=001
+5	.	.	PUNC	PUNC	senID=001

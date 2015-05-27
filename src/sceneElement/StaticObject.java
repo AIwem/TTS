@@ -1,13 +1,14 @@
 package sceneElement;
 
+import model.SceneModel;
 import model.ScenePart;
 import ir.ac.itrc.qqa.semantic.kb.Node;
 
 public class StaticObject extends SceneObject {
 
 		
-	public StaticObject(String _name, Node _node) {
-		super(_name, _node);
+	public StaticObject(SceneModel scene, String name, Node node) {
+		super(scene, name, node);
 		this.scenePart = ScenePart.STATIC_OBJECT;
 	}
 

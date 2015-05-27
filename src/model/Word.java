@@ -257,11 +257,21 @@ public class Word {
 	}
 	
 	/**
+	 * checks weather this Word object _syntaxTag is MOS or not?
+	 * @return
+	 */
+	public boolean isMosnad(){
+		if(_syntaxTag == DependencyRelationType.MOS)
+			return true;
+		return false;		
+	}
+	
+	/**
 	 * checks weather this Word object _syntaxTag is VERB or not?
 	 * @return
 	 */
 	public boolean isVerb(){
-		if(_syntaxTag == DependencyRelationType.ROOT)
+		if(_syntaxTag == DependencyRelationType.ROOT || _srcOfSynTag_number == 0)
 			return true;
 		return false;		
 	}
@@ -297,6 +307,9 @@ public class Word {
 		//TODO: correct this Word!
 		if(_wordName.contains("دویدن"))
 			return true;
+		if(_wordName.contains("گفتن"))
+			return true;
+		
 		return false;
 	}
 	
@@ -484,6 +497,8 @@ public class Word {
 				return VerbType.BASIT;
 			if(_wsd.getName().contains("گذاشت"))
 				return VerbType.BASIT;
+			if(_wsd.getName().contains("شد"))
+				return VerbType.BASIT_RABTI;
 			if(_wsd.getName().contains("خیره شد"))
 				return VerbType.MORAKAB;
 			if(_wsd.getName().contains("به خواب رفت"))

@@ -1,0 +1,12 @@
+1	توی	تو	PREP	PREP	senID=001
+2	یک	یک	NUM	NUM	senID=001
+3	خانه	خانه	N	N	number=SING|senID=001
+4	بزرگ	بزرگ	ADJ	ADJ	senID=001
+5	،	،	PUNC	PUNC	senID=001
+6	بچه‌ها	بچه	N	N	number=PLUR|senID=001
+7	در	در	PREP	PREP	senID=001
+8	تختخواب‌های	تختخواب	N	N	number=SING|senID=001
+9	کوچکشان	کوچک	ADJ	ADJ	senID=001
+10	به	به	PREP	PREP	senID=001
+11	خواب	خواب	N	N	number=SING|senID=001
+12	رفته‌بودند	رفت#روب,رو	V	V	person=3|number=PLUR|tma=G|senID=001

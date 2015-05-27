@@ -1,13 +1,14 @@
 package sceneElement;
 
+import model.SceneModel;
 import ir.ac.itrc.qqa.semantic.kb.Node;
 
 public class RoleAction extends Action {
 	
 	private Role actor = null;
 
-	public RoleAction(String _name, Node _node) {
-		super(_name, _node);		
+	public RoleAction(SceneModel scene, String name, Node node) {
+		super(scene, name, node);		
 	}
 
 	public Role getActor() {

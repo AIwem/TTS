@@ -1,0 +1,133 @@
+sentence:معلم وارد کلاس شد
+
+name:معلم		POS:NOUN		SYN:SBJ		SRC:4	SEM:ARG0_AGENT		WSD:معلم#n1		sub_part:-		num:1
+
+name:کلاس		POS:NOUN		SYN:ADVRB	SRC:2	SEM:Arg4_ENDPOINT	WSD:اتاق#n2		sub_part:-		num:3
+
+name:وارد شد	POS:VERB		SYN:ROOT	SRC:	SEM:-				WSD:وارد شدن#v2	sub_part:2,4	num:
+name:وارد		POS:NOUN		SYN:NVE		SRC:4	SEM:-				WSD:-		sub_part:-			num:2
+name:شد			POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:-		sub_part:-			num:4
+
+#------------------------------------------------------
+sentence:محمد امروز در کلاس نبود
+
+name:محمد		POS:NOUN		SYN:SBJ		SRC:5	SEM:Arg1_PATIENT	WSD:محمد#n		sub_part:-		num:1
+
+name:امروز		POS:NOUN		SYN:ADVRB	SRC:5	SEM:ArgM_TMP		WSD:امروز#n1	sub_part:-		num:2
+
+name:در کلاس		POS:UNKNOWN		SYN:ADVRB	SRC:	SEM:ARG2_GOAL_ENDSTATE	WSD:اتاق#n2	sub_part:3,4	num:
+name:در			POS:UNKNOWN		SYN:MOS		SRC:5	SEM:ARG2_GOAL_ENDSTATE_P	WSD:-	sub_part:-		num:3
+name:کلاس		POS:NOUN		SYN:POSDEP	SRC:4	SEM:ARG2_GOAL_ENDSTATE_P	WSD:اتاق#n2	sub_part:-	num:4
+
+name:نبود		POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:بودن#v2		sub_part:-		num:5
+
+#------------------------------------------------------
+sentence:معلم جای خالی او را دید
+
+name:معلم		POS:NOUN		SYN:SBJ		SRC:6	SEM:ARG0_EXPERIENCER	WSD:معلم#n1	sub_part:-		num:1
+
+name:جای خالی او را	POS:NOUN	SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:2_adjective#a_3	sub_part:2,3,4,5	num:
+name:جای		POS:NOUN		SYN:PREDEP	SRC:5	SEM:ARG1_THEME_P	WSD:جا#n5		sub_part:-		num:2
+name:خالی		POS:ADJECTIVE	SYN:NPOSTMOD	SRC:2	SEM:ARG1_THEME_P	WSD:خالی#a2	sub_part:-		num:3
+name:او			POS:UNKNOWN		SYN:MOZ		SRC:2	SEM:ARG1_THEME_P	WSD:محمد#n		sub_part:-		num:4
+name:را			POS:UNKNOWN		SYN:OBJ		SRC:6	SEM:ARG1_THEME_P	WSD:-			sub_part:-		num:5
+
+name:دید		POS:UNKNOWN		SYN:ROOT	SRC:0	SEM:-				WSD:دیدن#v5		sub_part:-		num:6
+
+#------------------------------------------------------
+sentence:معلم از سعید، دوست محمد پرسید که او کجاست؟
+
+name:از سعید	SEM:ARG1_THEME		WSD:سعید#n		num:
+name:دوست محمد	SEM:-				WSD:-			num:
+
+name:معلم		SEM:ARG0_AGENT		WSD:معلم#n1		num:1
+
+name:از			SEM:-				WSD:-			num:2
+name:سعید		SEM:ARG1_THEME		WSD:سعید#n		num:3
+
+name:دوست		SEM:-				WSD:-			num:4
+name:محمد		SEM:-				WSD:محمد#n		num:5
+
+name:پرسید		SEM:-				WSD:پرسیدن#v1	num:6
+
+name:که			SEM:ARG2_OBJ2		WSD:-			num:7
+name:او			SEM:ARG1_PATIENT	WSD:محمد#n		num:8
+name:کجا		SEM:ARG2_GOAL_ENDSTATE	WSD:-		num:9
+name:است		SEM:-				WSD:بودن#v2		num:10
+
+#------------------------------------------------------
+sentence:سعید گفت که خبر ندارد
+
+name:خبر ندارد	SEM:-				WSD:خبر داشتن#v1	num:
+
+
+name:سعید		SEM:ARG0_AGENT		WSD:سعید#n		num:1
+
+name:گفت		SEM:-				WSD:گفتن#v1		num:2
+
+name:که			SEM:ARG1_THEME		WSD:-			num:3
+name:خبر		SEM:-				WSD:-			num:4
+name:ندارد		SEM:-				WSD:-			num:5
+
+#------------------------------------------------------
+sentence:اما در حین گفتن بغض کرد
+
+name:اما		POS:UNKNOWN		SYN:ADVRB	SRC:6	SEM:ArgM_DIS		WSD:-			sub_part:-		num:1
+
+name:در حین گفتن	POS:UNKNOWN	SYN:ADVRB	SRC:	SEM:ArgM_TMP		WSD:3_mozaf#n_4	sub_part:2,3,4	num:
+name:در			POS:UNKNOWN		SYN:ADVRB	SRC:6	SEM:ArgM_TMP_P		WSD:-			sub_part:-		num:2
+name:حین		POS:NOUN		SYN:POSDEP	SRC:2	SEM:ArgM_TMP_P		WSD:زمان#n5		sub_part:-		num:3
+name:گفتن		POS:NOUN		SYN:MOZ		SRC:3	SEM:ArgM_TMP_P		WSD:گفتن#v1		sub_part:-		num:4
+
+name:بغض کرد	POS:VERB		SYN:ROOT	SRC:	SEM:-				WSD:بغض کردن#v1	sub_part:5,6	num:
+name:بغض		POS:NOUN		SYN:NVE		SRC:2	SEM:-				WSD:-			sub_part:-		num:5
+name:کرد		POS:VERB		SYN:ROOT	SRC:6	SEM:-				WSD:-			sub_part:-		num:6
+
+#------------------------------------------------------
+sentence:معلم وسایلش را روی میز گذاشت
+
+name:معلم		POS:NOUN		SYN:SBJ		SRC:6	SEM:ARG0_AGENT		WSD:معلم#n1		sub_part:-		num:1
+
+name:وسایلش را	POS:NOUN		SYN:OBJ		SRC:	SEM:ARG1_THEME		WSD:وسایل#n1	sub_part:2,3	num:
+name:وسایلش		POS:NOUN		SYN:PREDEP	SRC:3	SEM:ARG1_THEME_P	WSD:وسایل#n1	sub_part:-		num:2
+name:را			POS:UNKNOWN		SYN:OBJ		SRC:6	SEM:ARG1_THEME_P	WSD:-			sub_part:-		num:3
+
+name:روی میز	POS:NOUN		SYN:ADVRB	SRC:	SEM:ARG2_OBJ2		WSD:4_mozaf#n_5	sub_part:4,5	num:
+name:روی		POS:NOUN		SYN:VPP		SRC:6	SEM:ARG2_OBJ2_P		WSD:روی#n5		sub_part:-		num:4
+name:میز		POS:NOUN		SYN:POSDEP	SRC:4	SEM:ARG2_OBJ2_P		WSD:میز#n2		sub_part:-		num:5
+
+name:گذاشت		POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:گذاشتن#v3	sub_part:-		num:6
+
+#------------------------------------------------------
+sentence:به حیاط مدرسه خیره شد
+
+name:به حیاط	POS:NOUN		SYN:ADVRB	SRC:	SEM:ARG1_THEME		WSD:2_mozaf#n_3	sub_part:1,2,3	num:
+name:به			POS:UNKNOWN		SYN:VPP		SRC:5	SEM:ARG1_THEME_P	WSD:-			sub_part:-		num:1
+name:حیاط		POS:NOUN		SYN:POSDEP	SRC:1	SEM:ARG1_THEME_P	WSD:حیاط#n1		sub_part:-		num:2
+name:مدرسه		POS:NOUN		SYN:MOZ		SRC:2	SEM:ARG1_THEME_P	WSD:مدرسه#n1	sub_part:-		num:3
+
+name:خیره شد	POS:VERB		SYN:ROOT	SRC:	SEM:-				WSD:خیره شدن#v2	sub_part:4,5	num:
+name:خیره		POS:NOUN		SYN:NVE		SRC:5	SEM:-				WSD:-			sub_part:-		num:4
+name:شد			POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:-			sub_part:-		num:5
+
+#------------------------------------------------------
+sentence:بعد از چند لحظه برگشت
+
+name:بعد از چند لحظه	POS:NOUN	SYN:ADVRB	SRC:	SEM:ArgM_TMP	WSD:1_mozaf#n_4	sub_part:1,2,3,4	num:
+name:بعد		POS:UNKNOWN		SYN:ADVRB	SRC:5	SEM:ArgM_TMP_P		WSD:بعد#r1		sub_part:-		num:1
+name:از			POS:NOUN		SYN:POSDEP	SRC:1	SEM:ArgM_TMP_P		WSD:-			sub_part:-		num:2
+name:چند		POS:NOUN		SYN:NPREMOD	SRC:4	SEM:ArgM_TMP_P		WSD:-			sub_part:-		num:3
+name:لحظه		POS:NOUN		SYN:POSDEP	SRC:2	SEM:ArgM_TMP_P		WSD:لحظه#n1		sub_part:-		num:4
+
+name:برگشت		POS:VERB		SYN:ROOT	SRC:0	SEM:-				WSD:برگشتن#v3	sub_part:-		num:5
+
+#------------------------------------------------------
+sentence:از کلاس خارج شد
+
+name:از کلاس		POS:NOUN		SYN:ADVRB	SRC:	SEM:ARG3_SOURCE_STARTPOINT		WSD:اتاق#n2	sub_part:1,2	num:
+name:از			POS:UNKNOWN		SYN:VPP		SRC:4	SEM:ARG3_SOURCE_STARTPOINT_P	WSD:-		sub_part:-		num:1
+name:کلاس		POS:NOUN		SYN:POSDEP	SRC:1	SEM:ARG3_SOURCE_STARTPOINT_P	WSD:اتاق#n2	sub_part:-		num:2
+
+name:خارج شد	POS:VERB		SYN:ROOT	SRC:	SEM:-			WSD:خارج شدن#v1		sub_part:3,4	num:
+name:خارج		POS:NOUN		SYN:NVE		SRC:4	SEM:-			WSD:-				sub_part:-		num:3
+name:شد			POS:VERB		SYN:ROOT	SRC:0	SEM:-			WSD:-				sub_part:-		num:4

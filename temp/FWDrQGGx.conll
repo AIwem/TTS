@@ -1,0 +1,5 @@
+1	بعداز	بعداز	N	N	number=SING|senID=001
+2	چند	چند	PREP	PREP	senID=001
+3	لحظه	لحظه	N	N	number=SING|senID=001
+4	برگشت	برگشت	V	V	person=3|number=SING|tma=G|senID=001
+5	.	.	PUNC	PUNC	senID=001

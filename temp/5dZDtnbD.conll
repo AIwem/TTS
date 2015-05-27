@@ -1,0 +1,9 @@
+1	با	با	PREP	PREP	senID=001
+2	دو	دو	NUM	NUM	senID=001
+3	چشم	چشم	N	N	number=SING|senID=001
+4	درشتش	درشت	ADJ	ADJ	senID=001
+5	بیرون	بیرون	N	N	number=SING|senID=001
+6	را	را	POSTP	POSTP	senID=001
+7	نگاه	نگاه	N	N	number=SING|senID=001
+8	میکرد	میکرد	V	V	person=3|number=SING|tma=H|senID=001
+9	.	.	PUNC	PUNC	senID=001

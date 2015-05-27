@@ -1,0 +1,136 @@
+sentence:معلم وارد کلاس شد.
+
+name:معلم		SEM:ARG0_AGENT		WSD:معلم#n1		num:1
+
+name:وارد		SEM:-				WSD:-			num:2
+
+name:کلاس		SEM:Arg4_ENDPOINT	WSD:اتاق#n2		num:3
+
+name:شد			SEM:-				WSD:وارد شدن#v2	num:4
+
+#------------------------------------------------------
+sentence:محمد امروز در کلاس نبود.
+
+name:محمد		SEM:Arg1_PATIENT	WSD:محمد#n		num:1
+
+name:امروز		SEM:ArgM_TMP		WSD:امروز#n1	num:2
+
+name:در			SEM:-				WSD:-			num:3
+name:کلاس		SEM:ARG2_GOAL_ENDSTATE	WSD:اتاق#n2	num:4
+
+name:نبود		SEM:-				WSD:بودن#v2		num:5
+
+#------------------------------------------------------
+sentence:معلم جای خالی او را دید.
+
+name:معلم		SEM:ARG0_EXPERIENCER	WSD:معلم#n1	num:1
+
+name:جای		SEM:ARG1_THEME		WSD:جا#n5		num:2
+name:خالی		SEM:-				WSD:خالی#a2		num:3
+name:او			SEM:-				WSD:محمد#n		num:4
+name:را			SEM:-				WSD:-			num:5
+name:جای_Phrase	SEM:-				WSD:2_adjective#a_3	num:
+
+name:دید		SEM:-				WSD:دیدن#v5	num:6
+
+#------------------------------------------------------
+sentence:معلم از سعید، دوست محمد پرسید که او کجاست؟
+
+name:معلم		SEM:ARG0_AGENT		WSD:معلم#n1		num:1
+
+name:از			SEM:-				WSD:-			num:2
+name:سعید		SEM:ARG1_THEME		WSD:سعید#n		num:3
+
+name:دوست		SEM:-				WSD:-			num:4
+name:محمد		SEM:-				WSD:محمد#n		num:5
+
+name:پرسید		SEM:-				WSD:پرسیدن#v1	num:6
+
+name:که			SEM:ARG2_OBJ2		WSD:-			num:7
+
+#------------
+
+name:او			SEM:ARG1_PATIENT	WSD:محمد#n		num:8
+
+name:کجا		SEM:ARG2_GOAL_ENDSTATE	WSD:-		num:9
+
+name:ست			SEM:-				WSD:بودن#v2		num:10
+
+#------------------------------------------------------
+sentence:سعید گفت که خبر ندارد.
+
+name:سعید		SEM:ARG0_AGENT		WSD:سعید#n		num:1
+
+name:گفت		SEM:-				WSD:گفتن#v1		num:2
+
+name:که			SEM:ARG1_THEME		WSD:-			num:3
+
+#------------
+
+name:خبر		SEM:-				WSD:خبر#n5	num:4
+
+name:ندارد		SEM:-				WSD:خبر داشتن#v1	num:5
+
+#------------------------------------------------------
+sentence:اما در حین گفتن بغض کرد.
+
+name:اما		SEM:ArgM_DIS		WSD:-			num:1
+
+name:در			SEM:-				WSD:-			num:2
+name:حین		SEM:ArgM_TMP		WSD:زمان#n5		num:3
+
+#------------
+
+name:گفتن		SEM:-				WSD:گفتن#v1		num:4
+
+#------------
+
+name:در_Phrase	SEM:-				WSD:3_mozaf#n_4	num:
+
+name:بغض		SEM:-				WSD:-			num:5
+name:کرد		SEM:-				WSD:بغض کردن#v1	num:6
+
+#------------------------------------------------------
+sentence:معلم وسایلش را روی میز گذاشت.
+
+name:معلم		SEM:ARG0_AGENT		WSD:معلم#n1		num:1
+
+name:وسایلش		SEM:ARG1_THEME		WSD:وسایل#n1	num:2
+name:را			SEM:-				WSD:-			num:3
+
+name:روی		SEM:ARG2_OBJ2		WSD:روی#n5		num:4
+name:میز		SEM:-				WSD:میز#n2		num:5
+name:روی_Phrase	SEM:-				WSD:4_mozaf#n_5	num:
+
+name:گذاشت		SEM:-				WSD:گذاشتن#v3	num:6
+
+#------------------------------------------------------
+sentence:به حیاط مدرسه خیره شد.
+
+name:به			SEM:-				WSD:-			num:1
+name:حیاط		SEM:-				WSD:حیاط#n1		num:2
+name:مدرسه		SEM:-				WSD:مدرسه#n1	num:3
+name:خیره		SEM:ARG2_GOAL_ENDSTATE	WSD:خیره#a1	num:4
+name:خیره_Phrase	SEM:-			WSD:2_mozaf#n_3	num:
+
+name:شد			SEM:-				WSD:شدن#v2	num:5
+
+
+#------------------------------------------------------
+sentence:بعد از چند لحظه برگشت.
+
+name:بعداز		SEM:ArgM_TMP		WSD:بعد#r1		num:1
+name:چند		SEM:-				WSD:-			num:2
+name:لحظه		SEM:-				WSD:لحظه#n1		num:3
+name:بعداز_Phrase	SEM:-			WSD:1_mozaf#n_3	num:
+
+name:برگشت		SEM:-				WSD:برگشتن#v3	num:4
+
+#------------------------------------------------------
+sentence:از کلاس خارج شد.
+
+name:از			SEM:-				WSD:-		num:1
+name:کلاس		SEM:ARG3_SOURCE_STARTPOINT	WSD:اتاق#n2	num:2
+
+name:خارج		SEM:-				WSD:-				num:3
+name:شد			SEM:-				WSD:خارج شدن#v1		num:4

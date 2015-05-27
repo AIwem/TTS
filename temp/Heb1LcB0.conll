@@ -1,0 +1,6 @@
+1	محمد	محمد	N	N	number=SING|senID=001
+2	امروز	امروز	ADV	ADV	senID=001
+3	در	در	PREP	PREP	senID=001
+4	کلاس	کلاس	N	N	number=SING|senID=001
+5	نبود	بود#باش	V	V	person=3|number=SING|tma=G_NEG|senID=001
+6	.	.	PUNC	PUNC	senID=001
