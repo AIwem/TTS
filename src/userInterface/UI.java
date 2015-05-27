@@ -16,8 +16,8 @@ public class UI {
 	
 
 //	private String inputStoryFilePath = "inputStory/inputStrory8.txt";
-//	private String inputStoryFilePath = "inputStory/inputStrory2-1.txt";
-	private String inputStoryFilePath = "inputStory/inputStrory3.txt";
+	private String inputStoryFilePath = "inputStory/inputStrory2-1.txt";
+//	private String inputStoryFilePath = "inputStory/inputStrory3.txt";
 //	private String mainKbFilePath = "kb/farsnet--23.txt";
 	private String mainKbFilePath = "kb/farsnet.txt";
 	private String myKbFilePath = "kb/injuredPigeon6.txt";

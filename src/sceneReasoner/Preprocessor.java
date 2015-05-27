@@ -59,8 +59,8 @@ public class Preprocessor {
 	 */
 
 //	private String sentenceInfosFileName = "inputStory/SentenceInfos1-3.txt";
-//	private String sentenceInfosFileName = "inputStory/SentenceInfos2-3.txt";
-	private String sentenceInfosFileName = "inputStory/SentenceInfos3-1.txt";
+	private String sentenceInfosFileName = "inputStory/SentenceInfos2-3.txt";
+//	private String sentenceInfosFileName = "inputStory/SentenceInfos3-1.txt";
 
 	public Preprocessor(KnowledgeBase kb, SemanticReasoner re, TTSEngine ttsEngine) {
 		this._kb = kb;

@@ -249,8 +249,7 @@ public class SceneModel {
 			for(StaticObject staObj:static_objects)
 				if(staObj._node.equalsRelaxed(node))
 					return staObj;
-		
-		
+				
 		if(location != null && location._node.equalsRelaxed(node))
 			return location;
 		
@@ -297,27 +296,27 @@ public class SceneModel {
 			if(hasRole(sceneElement._node))
 				return getRole(sceneElement._node);		
 		
-		else if(scenePart == ScenePart.DYNAMIC_OBJECT)		
+		if(scenePart == ScenePart.DYNAMIC_OBJECT)		
 			if(hasDynamic_object(sceneElement._node))
 				return getDynamic_object(sceneElement._node);		
 		
-		else if(scenePart == ScenePart.STATIC_OBJECT)
+		if(scenePart == ScenePart.STATIC_OBJECT)
 			if(hasStatic_object(sceneElement._node))
 				return getStatic_object(sceneElement._node);		
 		
-		else if(scenePart == ScenePart.LOCATION)
+		if(scenePart == ScenePart.LOCATION)
 			if(hasAlternativeLocation(sceneElement._node))			
 				return getAlternativeLocation(sceneElement._node);
-				
-		else if(scenePart == ScenePart.TIME)
+		
+		if(scenePart == ScenePart.TIME)
 			if(hasAlternativeTime(sceneElement._node))
 				return getAlternativeTime(sceneElement._node);
 		
-		else if(scenePart == ScenePart.SCENE_EMOTION)
+		if(scenePart == ScenePart.SCENE_EMOTION)
 			if(hasScene_emotion(sceneElement._node))
 				return getScene_emotion(sceneElement._node);
 		
-		else if(scenePart == ScenePart.SCENE_GOAL)
+		if(scenePart == ScenePart.SCENE_GOAL)
 			if(hasScene_goal(sceneElement._node))
 				return getScene_goal(sceneElement._node);
 		
@@ -717,19 +716,19 @@ public class SceneModel {
 			else
 				return false;
 		
-		else if(scenePart == ScenePart.DYNAMIC_OBJECT)		
+		if(scenePart == ScenePart.DYNAMIC_OBJECT)		
 			if(hasDynamic_object(sceneElement._node))				
 				return true;
 			else
 				return false;
 		
-		else if(scenePart == ScenePart.STATIC_OBJECT)
+		if(scenePart == ScenePart.STATIC_OBJECT)
 			if(hasStatic_object(sceneElement._node))				
 				return true;			
 			else
 				return false;
 		
-		else if(scenePart == ScenePart.LOCATION)
+		if(scenePart == ScenePart.LOCATION)
 			if(getLocation() != null)
 				if(getLocation()._node.equalsRelaxed(sceneElement._node))
 					return true;
@@ -738,7 +737,7 @@ public class SceneModel {
 				else
 					return false;
 		
-		else if(scenePart == ScenePart.TIME)
+		if(scenePart == ScenePart.TIME)
 			if(getTime() != null)
 				if(getTime()._node.equalsRelaxed(sceneElement._node))
 					return true;
@@ -747,13 +746,13 @@ public class SceneModel {
 				else
 					return false;						
 		
-		else if(scenePart == ScenePart.SCENE_EMOTION)
+		if(scenePart == ScenePart.SCENE_EMOTION)
 			if(hasScene_emotion(sceneElement._node))				
 				return true;
 			else
 				return false;
 		
-		else if(scenePart == ScenePart.SCENE_GOAL)
+		if(scenePart == ScenePart.SCENE_GOAL)
 			if(hasScene_goal(sceneElement._node))				
 				return true;
 			else
