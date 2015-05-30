@@ -967,6 +967,26 @@ public class TTSEngine {
 	}		
 	
 	/**
+	 * 
+	 * 
+	 * @param pureNode the pure node fetched from kb.  
+	 * @return the ScenePart of pureNode, otherwise ScenePart.UNKNOWN not null.
+	 */
+	private ScenePart getGeneralScenePart(Node pureNode) {
+		
+		if(isDynamicObject(pureNode))
+			return ScenePart.DYNAMIC_OBJECT;
+		
+		if(isLocation(pureNode))
+			return  ScenePart.LOCATION;
+		
+		if(isHuman(pureNode))
+			return ScenePart.ROLE;
+				
+		return ScenePart.STATIC_OBJECT;		
+	}
+	
+	/**
 	 * recognizing which scenePart has this ARG0 node: 
 	 * a ROLE, DYNAMIC_OBJECT?
 	 * 
@@ -1402,15 +1422,20 @@ public class TTSEngine {
 			sp = seen_sceneParts.get(pureName);	
 
 		//if it isn't seen before!
-		else{
+		else if(word._semanticTag != null){
 			Node pureNode = getPureNode(partNode);
 		
-			sp = getScenePart(pureNode, word._gPOS, word._semanticTag);
+			sp = getScenePart(pureNode, word._gPOS, word._semanticTag);			
+		}
+		else{
+			Node pureNode = getPureNode(partNode);
 			
+			sp = getGeneralScenePart(pureNode);		
+		}
+		
+		if(sp != null && sp != ScenePart.UNKNOWN)
 			addTo_seen_sceneParts(pureName, sp);
 		
-		}
-
 		print(partNode + " ScenePart is " + sp);			
 		return sp;
 	}

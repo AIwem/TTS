@@ -1,5 +1,8 @@
 package userInterface;
 
+import ir.ac.itrc.qqa.semantic.kb.Node;
+import ir.ac.itrc.qqa.semantic.reasoning.PlausibleTerm;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -15,11 +18,11 @@ import sceneReasoner.TTSEngine;
 public class UI {
 	
 
-//	private String inputStoryFilePath = "inputStory/inputStrory8.txt";
-	private String inputStoryFilePath = "inputStory/inputStrory2-1.txt";
+	private String inputStoryFilePath = "inputStory/inputStrory8.txt";
+//	private String inputStoryFilePath = "inputStory/inputStrory2-1.txt";
 //	private String inputStoryFilePath = "inputStory/inputStrory3.txt";
-//	private String mainKbFilePath = "kb/farsnet--23.txt";
-	private String mainKbFilePath = "kb/farsnet.txt";
+	private String mainKbFilePath = "kb/farsnet--23.txt";
+//	private String mainKbFilePath = "kb/farsnet.txt";
 	private String myKbFilePath = "kb/injuredPigeon6.txt";
 	//private String myKbFilePath = "kb/injuredPigeon_simple.txt";
 	//private String myKbFilePath = "kb/injuredPigeon_SS.txt";
@@ -142,17 +145,17 @@ public class UI {
 
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ الحمدلله");
 		
-//		Node arg = ui.tts._TTSKb.addConcept("چشم افتادن#v");
-//		Node desNode =  ui.tts._TTSKb.addConcept("*چشم افتادن#v (1) (1)");
-//		PlausibleTerm desc = (PlausibleTerm)desNode; 
-//		desc.relationType = ui.tts._TTSKb.addConcept("چشم افتادن#v (1)");
-//		
-//		Node ref = ui.tts._TTSKb.addConcept("کبوتر#n1 (1)");
-//				
-//		ui.tts.checkSemanticReasoner1(arg, desc, ref);
-//		
-//		//ui.tts.checkSemanticReasoner1();
-//		//ui.tts.checkSemanticReasoner2(psm.getDynamic_objects().get(0)._node);	
+		Node arg = ui.tts._TTSKb.addConcept("دیدن#v5");
+		Node desNode =  ui.tts._TTSKb.addConcept("*دیدن#v5 (1) (1)");
+		PlausibleTerm desc = (PlausibleTerm)desNode; 
+		desc.relationType = ui.tts._TTSKb.addConcept("دیدن#v5 (1)");
+		
+		Node ref = ui.tts._TTSKb.addConcept("کبوتر#n1 (1)");
+				
+		ui.tts.checkSemanticReasoner1(arg, desc, ref);
+		
+		//ui.tts.checkSemanticReasoner1();
+		//ui.tts.checkSemanticReasoner2(psm.getDynamic_objects().get(0)._node);	
 	}
 }
 
