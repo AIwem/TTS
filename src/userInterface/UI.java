@@ -21,11 +21,11 @@ import sceneReasoner.TTSEngine;
 public class UI {
 	
 
-	private String inputStoryFilePath = "inputStory/inputStrory8.txt";
+//	private String inputStoryFilePath = "inputStory/inputStrory8.txt";
 //	private String inputStoryFilePath = "inputStory/inputStrory2-1.txt";
-//	private String inputStoryFilePath = "inputStory/inputStrory3.txt";
-	private String mainKbFilePath = "kb/farsnet--23.txt";
-//	private String mainKbFilePath = "kb/farsnet.txt";
+	private String inputStoryFilePath = "inputStory/inputStrory3.txt";
+//	private String mainKbFilePath = "kb/farsnet--23.txt";
+	private String mainKbFilePath = "kb/farsnet.txt";
 	private String myKbFilePath = "kb/injuredPigeon6.txt";
 	//private String myKbFilePath = "kb/injuredPigeon_simple.txt";
 	//private String myKbFilePath = "kb/injuredPigeon_SS.txt";
@@ -140,16 +140,16 @@ public class UI {
 	}
 	
 	private void testKB(){
-		Node arg = tts._TTSKb.addConcept("پسر#n2 (1)");
+		Node arg = tts._TTSKb.addConcept("پسر#n2 [1]");
 		Node desNode =  tts._TTSKb.addConcept("مواجه شدن#v");
 //		PlausibleStatement desc = (PlausibleStatement)desNode; 
-//		desc.relationType = tts._TTSKb.addConcept("دیدن#v5 (1)");
+//		desc.relationType = tts._TTSKb.addConcept("دیدن#v5 [1]");
 		Node ref = tts._TTSKb.addConcept("حیوان#n1");
 		
-//		Node nafar = tts._TTSKb.addConcept("نفر#n (1)");
+//		Node nafar = tts._TTSKb.addConcept("نفر#n [1]");
 //		ArrayList<PlausibleStatement> ans1 = nafar.findOutRelations(KnowledgeBase.HPR_ANY);
 //		
-//		Node hes = tts._TTSKb.addConcept("حس#n (1)");
+//		Node hes = tts._TTSKb.addConcept("حس#n [1]");
 //		ArrayList<PlausibleStatement> ans2 = hes.findInRelations(KnowledgeBase.HPR_ANY);
 //		Node des = ans.get(0);
 //		Node ref = ans.get(0).referent;
@@ -167,7 +167,7 @@ public class UI {
 
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ الحمدلله");
 		
-		ui.testKB();
+//		ui.testKB();
 	}
 }
 

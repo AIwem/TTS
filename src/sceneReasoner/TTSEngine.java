@@ -477,7 +477,7 @@ public class TTSEngine {
 	 	
 	 	String instanceName = originalName;
 	 	
-		instanceName = instanceName + " ("+ index + ")";
+		instanceName = instanceName + " ["+ index + "]";
 		
 		//adding this instance concept to the knowledge base.
 		Node instanceNode = _TTSKb.addConcept(instanceName, false, SourceType.TTS);
@@ -519,7 +519,7 @@ public class TTSEngine {
 		
 		boolean isInstance = false;
 		//both instances created by "createInstance" and relations added by addRelation have (index) at the end of their names. 
-		int index = name.indexOf("(");
+		int index = name.indexOf("[");
 		if(index != -1)
 			isInstance = true;
 		//instances created by addRelation have an * at their beginning.			
@@ -546,7 +546,7 @@ public class TTSEngine {
 			if(pure_name == null)
 				return null;
 			
-			int index1 = pure_name.indexOf("(");			
+			int index1 = pure_name.indexOf("[");			
 			if(index1 != -1)
 				pure_name = pure_name.substring(0, index1).trim();
 				
