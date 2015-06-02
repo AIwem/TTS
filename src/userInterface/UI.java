@@ -160,7 +160,7 @@ public class UI {
 	}
 
 	public static void main(String[] args) {
-		System.out.println("بسم الله الرحمن الرحیم و توکلت علی الله");
+		System.out.println("بسم الله الرحمن الرحیم و توکلت علی الله ");
 		
 		UI ui = new UI();
 		StoryModel sm = ui.TTS();		
