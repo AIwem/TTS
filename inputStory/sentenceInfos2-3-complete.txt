@@ -225,12 +225,12 @@ sentence:»Â ÕÌ«ÿ „œ—”Â ŒÌ—Â ‘œ.
 6	.		PUNC	PUNC	5
 
 name:»Â			SEM:-				WSD:-			num:1
-name:ÕÌ«ÿ		SEM:-				WSD:ÕÌ«ÿ#n1		num:2
+name:ÕÌ«ÿ		SEM:ARG1_THEME		WSD:ÕÌ«ÿ#n1		num:2
 name:„œ—”Â		SEM:-				WSD:„œ—”Â#n1	num:3
-name:ŒÌ—Â		SEM:ARG2_GOAL_ENDSTATE	WSD:ŒÌ—Â#a1	num:4
+name:ŒÌ—Â		SEM:-				WSD:ŒÌ—Â#a1		num:4
 name:ŒÌ—Â_Phrase	SEM:-			WSD:2_mozaf#n_3	num:
 
-name:‘œ			SEM:-				WSD:‘œ‰#v2	num:5
+name:‘œ			SEM:-				WSD:ŒÌ—Â ‘œ‰#v2	num:5
 
 #------------------------------------------------------
 sentence:»⁄œ «“ ç‰œ ·ÕŸÂ »—ê‘ .

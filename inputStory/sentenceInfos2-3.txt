@@ -108,12 +108,12 @@ name:گذاشت		SEM:-				WSD:گذاشتن#v3	num:6
 sentence:به حیاط مدرسه خیره شد.
 
 name:به			SEM:-				WSD:-			num:1
-name:حیاط		SEM:-				WSD:حیاط#n1		num:2
+name:حیاط		SEM:ARG1_THEME		WSD:حیاط#n1		num:2
 name:مدرسه		SEM:-				WSD:مدرسه#n1	num:3
-name:خیره		SEM:ARG2_GOAL_ENDSTATE	WSD:خیره#a1	num:4
+name:خیره		SEM:-				WSD:خیره#a1		num:4
 name:خیره_Phrase	SEM:-			WSD:2_mozaf#n_3	num:
 
-name:شد			SEM:-				WSD:شدن#v2	num:5
+name:شد			SEM:-				WSD:خیره شدن#v2	num:5
 
 
 #------------------------------------------------------

@@ -77,10 +77,8 @@ public class SceneElement {
 						print("\nobject in Location for " + elementType + " of LOCATION: " + this + " \n");
 						
 						ScenePart sp = ttsEngine.whichScenePart(dependent);
-						
-						SceneElement sl = new SceneElement(this._scene, dependent._wordName, sp, dependent._wsd);
-																					
-						this._scene.addToPrimarySceneModel(sl);
+																											
+						this._scene.addToPrimarySceneModel(this._scene.createSceneElement(dependent, sp));
 					
 //						boolean isDyn = ttsEngine.isWordDynamicObject(dependent);
 //						

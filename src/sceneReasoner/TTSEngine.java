@@ -74,8 +74,8 @@ public class TTSEngine {
 		this.verbCapacitiesPath = verbCapacitiesPath;
 		
 		this._TTSKb = new KnowledgeBase();
-		this._re = new SemanticReasoner(_TTSKb, ExecutionMode.RELEASE);
-		_re.setMaxReasoningDepth(12);
+		this._re = new SemanticReasoner(_TTSKb, ExecutionMode.DEBUG);
+		_re.setMaxReasoningDepth(15);
 		_re.setMaximumAnswers(1);
 		
 		loadKb();
@@ -135,7 +135,7 @@ public class TTSEngine {
 				for(SentenceModel nest:nested_sents)
 					_pp.preprocessScene(nest, primarySceneModel, storyModel);
 														
-			System.out.println("sentenceModel after preprocess: \n" + sentence + "\n");						
+			_pp.loadVisualCapacities(sentence, primarySceneModel);						
 		}
 				
 		if(isLastScene){//the last scene of story
@@ -160,10 +160,11 @@ public class TTSEngine {
 		PlausibleQuestion pq = new PlausibleQuestion();
 		pq.argument = argument;
 		pq.referent = referent;
-		pq.descriptor = descriptor;		
+//		PlausibleStatement ps = (PlausibleStatement)descriptor;
+		pq.descriptor = descriptor;//.relationType;		
 		
-		ArrayList<PlausibleStatement> ans = descriptor.findOutRelations(KnowledgeBase.HPR_CXTIME);
-		pq.cxTime = ans.get(0).referent;
+//		ArrayList<PlausibleStatement> ans = descriptor.findOutRelations(KnowledgeBase.HPR_CXTIME);
+//		pq.cxTime = ans.get(0).referent;
 		
 	  
 
@@ -235,10 +236,10 @@ public class TTSEngine {
 		int loaded = 0;
 		Long start = System.currentTimeMillis();
 		
-		loaded = _TTSKb.importKb(mainKbFilePath);		
-		loaded = _TTSKb.importKb(myKbFilePath);	
+		loaded = _TTSKb.importKb(mainKbFilePath);
 		loaded = _TTSKb.importKb(verbCapacitiesPath);
-		
+		loaded = _TTSKb.importKb(myKbFilePath);	
+				
 		Long end = System.currentTimeMillis();
 				
 		System.out.println("در مدت زمان «" + (end - start)/100 + "» دهم ثانیه در حافظه بار شد.");
@@ -982,6 +983,9 @@ public class TTSEngine {
 		
 		if(isHuman(pureNode))
 			return ScenePart.ROLE;
+		
+		if(isTime(pureNode))
+			return ScenePart.TIME;
 				
 		return ScenePart.STATIC_OBJECT;		
 	}
@@ -1289,107 +1293,107 @@ public class TTSEngine {
 		return ScenePart.UNKNOWN;
 	}
 	
-	/**
-	 * this methods searches the internal structure of this TTSEngine (seen_sceneParts) to check whether this node is DYNAMIC_OBJECT?
-	 * If didn't find it calls isDynamicObejct to reason whether this word ScenePart is DYNAMIC_OBJECT or not.
-	 * 
-	 * @param word the word which its ScenePart is to be reasoned about.
-	 * @return returns whether this word is DYNAMIC_OBJECT or not?
-	 */
-
-	public boolean isWordDynamicObject(Word word){		
-		
-		print(word + " ............. in isWordDynamicObject ...............");
-		
-		if(word == null || word._wsd == null)
-			return false;
-		
-		Node partNode = word._wsd;
-				
-		String pureName = makePureName(partNode);
-		
-		if(pureName == null || pureName.equals(""))
-			return false;	
-		
-		ScenePart sp = null;	
-		
-		boolean isDyn = false;
-		
-		//if it is seen before!
-		if(seen_sceneParts.containsKey(pureName)){			
-			sp = seen_sceneParts.get(pureName);
-			if(sp == ScenePart.DYNAMIC_OBJECT)
-				isDyn = true;		
-		} 
-		else{//if it isn't seen before!
-			Node pureNode = getPureNode(partNode);
-			
-			isDyn = isDynamicObject(pureNode);
-					
-			if(isDyn)				
-				sp = ScenePart.DYNAMIC_OBJECT;		
-			else
-				sp = ScenePart.UNKNOWN;
-			
-			addTo_seen_sceneParts(pureName, sp);		
-		}
-
-		print(partNode + " ScenePart is " + sp);			
-		
-		return isDyn;
-
-	}
-
-	/**
-	 * this methods searches the internal structure of this TTSEngine (seen_sceneParts) to check whether this node is ROLE?
-	 * If didn't find it calls isHuman to reason whether this word ScenePart is ROLE or not.
-	 * 
-	 * @param word the word which its ScenePart is to be reasoned about.
-	 * @return returns whether this word is ROLE or not?
-	 */
-
-	public boolean isWordRole(Word word){		
-		
-		print(word + " ............. in isWordRole .....................");
-		
-		if(word == null || word._wsd == null)
-			return false;
-		
-		Node partNode = word._wsd;
-				
-		String pureName = makePureName(partNode);
-		
-		if(pureName == null || pureName.equals(""))
-			return false;	
-		
-		ScenePart sp = null;	
-		
-		boolean isRole = false;
-		
-		//if it is seen before!
-		if(seen_sceneParts.containsKey(pureName)){			
-			sp = seen_sceneParts.get(pureName);
-			if(sp == ScenePart.ROLE)
-				isRole = true;		
-		} 
-		else{//if it isn't seen before!
-			Node pureNode = getPureNode(partNode);
-			
-			isRole = isHuman(pureNode);
-					
-			if(isRole)				
-				sp = ScenePart.ROLE;		
-			else
-				sp = ScenePart.UNKNOWN;
-			
-			addTo_seen_sceneParts(pureName, sp);		
-		}
-
-		print(partNode + " ScenePart is " + sp);			
-		
-		return isRole;
-
-	}
+//	/**
+//	 * this methods searches the internal structure of this TTSEngine (seen_sceneParts) to check whether this node is DYNAMIC_OBJECT?
+//	 * If didn't find it calls isDynamicObejct to reason whether this word ScenePart is DYNAMIC_OBJECT or not.
+//	 * 
+//	 * @param word the word which its ScenePart is to be reasoned about.
+//	 * @return returns whether this word is DYNAMIC_OBJECT or not?
+//	 */
+//
+//	public boolean isWordDynamicObject(Word word){		
+//		
+//		print(word + " ............. in isWordDynamicObject ...............");
+//		
+//		if(word == null || word._wsd == null)
+//			return false;
+//		
+//		Node partNode = word._wsd;
+//				
+//		String pureName = makePureName(partNode);
+//		
+//		if(pureName == null || pureName.equals(""))
+//			return false;	
+//		
+//		ScenePart sp = null;	
+//		
+//		boolean isDyn = false;
+//		
+//		//if it is seen before!
+//		if(seen_sceneParts.containsKey(pureName)){			
+//			sp = seen_sceneParts.get(pureName);
+//			if(sp == ScenePart.DYNAMIC_OBJECT)
+//				isDyn = true;		
+//		} 
+//		else{//if it isn't seen before!
+//			Node pureNode = getPureNode(partNode);
+//			
+//			isDyn = isDynamicObject(pureNode);
+//					
+//			if(isDyn)				
+//				sp = ScenePart.DYNAMIC_OBJECT;		
+//			else
+//				sp = ScenePart.UNKNOWN;
+//			
+//			addTo_seen_sceneParts(pureName, sp);		
+//		}
+//
+//		print(partNode + " ScenePart is " + sp);			
+//		
+//		return isDyn;
+//
+//	}
+//
+//	/**
+//	 * this methods searches the internal structure of this TTSEngine (seen_sceneParts) to check whether this node is ROLE?
+//	 * If didn't find it calls isHuman to reason whether this word ScenePart is ROLE or not.
+//	 * 
+//	 * @param word the word which its ScenePart is to be reasoned about.
+//	 * @return returns whether this word is ROLE or not?
+//	 */
+//
+//	public boolean isWordRole(Word word){		
+//		
+//		print(word + " ............. in isWordRole .....................");
+//		
+//		if(word == null || word._wsd == null)
+//			return false;
+//		
+//		Node partNode = word._wsd;
+//				
+//		String pureName = makePureName(partNode);
+//		
+//		if(pureName == null || pureName.equals(""))
+//			return false;	
+//		
+//		ScenePart sp = null;	
+//		
+//		boolean isRole = false;
+//		
+//		//if it is seen before!
+//		if(seen_sceneParts.containsKey(pureName)){			
+//			sp = seen_sceneParts.get(pureName);
+//			if(sp == ScenePart.ROLE)
+//				isRole = true;		
+//		} 
+//		else{//if it isn't seen before!
+//			Node pureNode = getPureNode(partNode);
+//			
+//			isRole = isHuman(pureNode);
+//					
+//			if(isRole)				
+//				sp = ScenePart.ROLE;		
+//			else
+//				sp = ScenePart.UNKNOWN;
+//			
+//			addTo_seen_sceneParts(pureName, sp);		
+//		}
+//
+//		print(partNode + " ScenePart is " + sp);			
+//		
+//		return isRole;
+//
+//	}
 
 	
 	/**
@@ -1416,12 +1420,14 @@ public class TTSEngine {
 			return ScenePart.UNKNOWN;	
 		
 		ScenePart sp = null;	
+		boolean flag = false;
 		
 		//if it is seen before!
-		if(seen_sceneParts.containsKey(pureName))			
+		if(seen_sceneParts.containsKey(pureName)){			
 			sp = seen_sceneParts.get(pureName);	
-
-		//if it isn't seen before!
+			flag = true;
+			
+		}//if it isn't seen before!
 		else if(word._semanticTag != null){
 			Node pureNode = getPureNode(partNode);
 		
@@ -1433,7 +1439,7 @@ public class TTSEngine {
 			sp = getGeneralScenePart(pureNode);		
 		}
 		
-		if(sp != null && sp != ScenePart.UNKNOWN)
+		if(!flag && sp != null && sp != ScenePart.UNKNOWN)
 			addTo_seen_sceneParts(pureName, sp);
 		
 		print(partNode + " ScenePart is " + sp);			

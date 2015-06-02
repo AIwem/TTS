@@ -277,7 +277,7 @@ public class Preprocessor {
 			sentence.make_nested_sentences();
 			
 			//loading verb SemanticArguments.
-			ArrayList<Node> semArgs = loadVerbSemanticArguments(sentence);
+			ArrayList<Node> semArgs = loadVerbSemanticCapacities(sentence);
 			verb.setCapacities(semArgs);
 			
 			ArrayList<SentenceModel> nested_sents = sentence.get_nested_sentences();
@@ -287,7 +287,7 @@ public class Preprocessor {
 					Word vb = nest.getVerb();
 					
 					if(vb != null){
-						ArrayList<Node> semArgsNest = loadVerbSemanticArguments(nest);
+						ArrayList<Node> semArgsNest = loadVerbSemanticCapacities(nest);
 						vb.setCapacities(semArgsNest);
 					}
 				}
@@ -346,9 +346,7 @@ public class Preprocessor {
 		processSubSemanticArgs(sentenceModel, primarySceneModel);
 		
 		processLocationOfScene(sentenceModel, arg3SceneElem, arg4SceneElem, primarySceneModel);
-		
-		processVisualTags(sentenceModel, primarySceneModel);
-				
+						
 		print("\nprimarySceneModel\n" + primarySceneModel);
 //		return primarySceneModel;
 	}
@@ -465,7 +463,7 @@ public class Preprocessor {
 					return null;
 				}
 			
-				SceneElement inputSceneElement = createSceneElement(semArgWord, scenePart, primarySceneModel);
+				SceneElement inputSceneElement = primarySceneModel.createSceneElement(semArgWord, scenePart);
 				
 				if(inputSceneElement == null){
 					MyError.error("the " + semArgWord + " could not convert to a SceneElement!");
@@ -794,10 +792,6 @@ public class Preprocessor {
 		
 		print("=============== end of processLocation =============================");		
 	}
-
-	private void processVisualTags(SentenceModel sentenceModel, SceneModel primarySceneModel) {
-		// TODO Auto-generated method stub		
-	}	
 
 	/**
 	 * 
@@ -1153,34 +1147,6 @@ public class Preprocessor {
 		}		
 	}
 	
-	private SceneElement createSceneElement(Word word, ScenePart scenePart, SceneModel scene){
-		
-		if(word == null || scenePart == null || scenePart == ScenePart.UNKNOWN){
-			MyError.error("null input parameter for createSceneElement !");
-			return null;
-		}								
-		
-		if(scenePart == ScenePart.ROLE)			
-				return new Role(scene, word._wordName, word._wsd);
-		else if(scenePart == ScenePart.ROLE_ACTION)
-			return new RoleAction(scene, word._wordName, word._wsd);
-		else if(scenePart == ScenePart.DYNAMIC_OBJECT)
-			return new DynamicObject(scene, word._wordName, word._wsd);
-		else if(scenePart == ScenePart.OBJECT_ACTION)
-			return new ObjectAction(scene, word._wordName, word._wsd);
-		else if(scenePart == ScenePart.STATIC_OBJECT)
-			return new StaticObject(scene, word._wordName, word._wsd);				
-		else if(scenePart == ScenePart.LOCATION)
-			return new Location(scene, word._wordName, word._wsd);			
-		else if(scenePart == ScenePart.TIME)
-			return new Time(scene, word._wordName, word._wsd);
-		else if(scenePart == ScenePart.SCENE_EMOTION)
-			return new SceneEmotion(scene, word._wordName, word._wsd);
-		else if(scenePart == ScenePart.SCENE_GOAL)
-			return new SceneGoal(scene, word._wordName, word._wsd);
-		return null;
-	}
-
 	@SuppressWarnings("unused")
 	private void add_adjective_mozaf(SentenceModel sentence, Word mainPart, Node descriptor, Node referent) {
 		
@@ -1301,7 +1267,10 @@ public class Preprocessor {
 						//adding the relation of this sentence to kb.
 						PlausibleStatement rel = _kb.addRelation(sbj._wsd, obj._wsd, verb._wsd, SourceType.TTS);
 						verbRelations.add(rel);
-						print("verbRel added1 ---- : " + rel.argument.getName() + " --> " + rel.getName() + " --> " + rel.referent.getName() + "\n");						
+						print("verbRel added1 ---- : " + rel.argument.getName() + " --> " + rel.getName() + " --> " + rel.referent.getName() + "\n");
+						
+//						PlausibleStatement ps2 = _kb.addRelation(rel, _kb.addConcept("اکنون§n-12609"), KnowledgeBase.HPR_CXTIME, SourceType.TTS);
+//						print("relation added ------------- : " + ps2.argument + " -- " + ps2 + " -- " + ps2.referent);	
 					}				
 				}
 							
@@ -1369,7 +1338,7 @@ public class Preprocessor {
 		return verbRelations;
 	}
 	
-	private  ArrayList<Node>  loadVerbSemanticArguments(SentenceModel sentence) {
+	private  ArrayList<Node>  loadVerbSemanticCapacities(SentenceModel sentence) {
 		Word verbPart = sentence.getVerb();
 		if(verbPart == null)
 			return null;
@@ -1399,6 +1368,10 @@ public class Preprocessor {
 				semArgs.add(arg.answer);
 		
 		return semArgs;		
+	}
+	
+	public void loadVisualCapacities(SentenceModel sentenceModel, SceneModel primarySceneModel) {
+		// TODO Auto-generated method stub		
 	}
 
 	

@@ -9,7 +9,9 @@ import java.util.ArrayList;
 
 import sceneElement.DynamicObject;
 import sceneElement.Location;
+import sceneElement.ObjectAction;
 import sceneElement.Role;
+import sceneElement.RoleAction;
 import sceneElement.SceneElement;
 import sceneElement.SceneEmotion;
 import sceneElement.SceneGoal;
@@ -760,6 +762,34 @@ public class SceneModel {
 		
 		return false;
 	}	
+	
+	public SceneElement createSceneElement(Word word, ScenePart scenePart){
+		
+		if(word == null || scenePart == null || scenePart == ScenePart.UNKNOWN){
+			MyError.error("null input parameter for createSceneElement !");
+			return null;
+		}								
+		
+		if(scenePart == ScenePart.ROLE)			
+				return new Role(this, word._wordName, word._wsd);
+		else if(scenePart == ScenePart.ROLE_ACTION)
+			return new RoleAction(this, word._wordName, word._wsd);
+		else if(scenePart == ScenePart.DYNAMIC_OBJECT)
+			return new DynamicObject(this, word._wordName, word._wsd);
+		else if(scenePart == ScenePart.OBJECT_ACTION)
+			return new ObjectAction(this, word._wordName, word._wsd);
+		else if(scenePart == ScenePart.STATIC_OBJECT)
+			return new StaticObject(this, word._wordName, word._wsd);				
+		else if(scenePart == ScenePart.LOCATION)
+			return new Location(this, word._wordName, word._wsd);			
+		else if(scenePart == ScenePart.TIME)
+			return new Time(this, word._wordName, word._wsd);
+		else if(scenePart == ScenePart.SCENE_EMOTION)
+			return new SceneEmotion(this, word._wordName, word._wsd);
+		else if(scenePart == ScenePart.SCENE_GOAL)
+			return new SceneGoal(this, word._wordName, word._wsd);
+		return null;
+	}
 		
 	private void print(String toPrint){
 		System.out.println(toPrint);

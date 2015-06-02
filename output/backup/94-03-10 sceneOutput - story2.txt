@@ -1,0 +1,15 @@
+
+primarySceneModel
+roles= [
+	[معلم#n1 (1)= معلم role_actions=  [وارد شدن#v2 (1)=  شد, دیدن#v5 (1)=  دید, پرسیدن#v1 (1)=  پرسید, گذاشتن#v3 (1)=  گذاشت, برگشتن#v3 (1)=  برگشت, خارج شدن#v1 (1)=  شد] role_goals=    [] role_emotions= [] role_moods=    []]
+	[محمد#n (1)= محمد role_actions=  [] role_goals=    [] role_emotions= [] role_moods=    [اتاق#n2 (1)=  کلاس]]
+	[سعید#n (1)= سعید role_actions=  [گفتن#v1 (1)=  گفت, خبر داشتن#v1 (1)=  ندارد, بغض کردن#v1 (1)=  کرد] role_goals=    [] role_emotions= [] role_moods=    []]]
+dynamic_objs= 
+static_objs= [وسایل#n1 (1)=  وسایلش object_states=  []][میز#n2 (1)=  میز#n2 (1) object_states=  []]
+location= [اتاق#n2 (1)=  کلاس]
+alternativeLocations= [[اتاق#n2 (1)=  کلاس], [جا#n5 (1)=  جای], [روی#n5 (1)=  روی], [حیاط#n1 (1)=  حیاط], [مدرسه#n1 (1)=  مدرسه]]
+time= [امروز#n1 (1)=  امروز]
+alternativeTimes= [[امروز#n1 (1)=  امروز], [زمان#n5 (1)=  حین], [بعد#r1 (1)=  بعداز]]
+scene_goals= []
+scene_emotions= []]
+

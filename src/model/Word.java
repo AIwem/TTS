@@ -371,6 +371,28 @@ public class Word {
 		this.capacities = capacities;
 	}
 	
+	public void addCapacity(Node capacity){
+		if(capacity == null)
+			return;
+		
+		if(capacities == null)
+			capacities = new ArrayList<Node>();
+		
+		if(!capacities.contains(capacity))
+			capacities.add(capacity);
+	}
+	
+	public void addCapacities(ArrayList<Node> capacities){
+		if(Common.isEmpty(capacities))
+			return;
+		
+		if(this.capacities == null)
+			capacities = new ArrayList<Node>();
+		
+		for(Node cap:capacities)
+			addCapacity(cap);
+	}
+	
 	public void setAdjectives(ArrayList<Word> adjectives) {
 		this.adjectives = adjectives;
 	}
@@ -496,11 +518,11 @@ public class Word {
 			if(_wsd.getName().contains("بغض کردن"))
 				return VerbType.BASIT;
 			if(_wsd.getName().contains("گذاشت"))
-				return VerbType.BASIT;
-			if(_wsd.getName().contains("شد"))
-				return VerbType.BASIT_RABTI;
+				return VerbType.BASIT;			
 			if(_wsd.getName().contains("خیره شد"))
 				return VerbType.MORAKAB;
+			if(_wsd.getName().contains("شد"))
+				return VerbType.BASIT_RABTI;
 			if(_wsd.getName().contains("به خواب رفت"))
 				return VerbType.MORAKAB;
 			if(_wsd.getName().contains("برگشت"))

@@ -1,7 +1,8 @@
 package userInterface;
 
+import ir.ac.itrc.qqa.semantic.kb.KnowledgeBase;
 import ir.ac.itrc.qqa.semantic.kb.Node;
-import ir.ac.itrc.qqa.semantic.reasoning.PlausibleTerm;
+import ir.ac.itrc.qqa.semantic.reasoning.PlausibleStatement;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -15,6 +16,8 @@ import java.util.ArrayList;
 import model.StoryModel;
 import sceneReasoner.TTSEngine;
 
+
+@SuppressWarnings("unused")
 public class UI {
 	
 
@@ -26,7 +29,7 @@ public class UI {
 	private String myKbFilePath = "kb/injuredPigeon6.txt";
 	//private String myKbFilePath = "kb/injuredPigeon_simple.txt";
 	//private String myKbFilePath = "kb/injuredPigeon_SS.txt";
-	private String verbCapacitiesPath = "kb/verbCapacities.txt";
+	private String verbCapacitiesPath = "kb/verbSemanticCapacities.txt";
 	private TTSEngine tts;
 	
 	public UI(){		
@@ -135,8 +138,27 @@ public class UI {
 		}
 		return inputs;
 	}
+	
+	private void testKB(){
+		Node arg = tts._TTSKb.addConcept("پسر#n2 (1)");
+		Node desNode =  tts._TTSKb.addConcept("مواجه شدن#v");
+//		PlausibleStatement desc = (PlausibleStatement)desNode; 
+//		desc.relationType = tts._TTSKb.addConcept("دیدن#v5 (1)");
+		Node ref = tts._TTSKb.addConcept("حیوان#n1");
+		
+//		Node nafar = tts._TTSKb.addConcept("نفر#n (1)");
+//		ArrayList<PlausibleStatement> ans1 = nafar.findOutRelations(KnowledgeBase.HPR_ANY);
+//		
+//		Node hes = tts._TTSKb.addConcept("حس#n (1)");
+//		ArrayList<PlausibleStatement> ans2 = hes.findInRelations(KnowledgeBase.HPR_ANY);
+//		Node des = ans.get(0);
+//		Node ref = ans.get(0).referent;
+//				
+		tts.checkSemanticReasoner1(arg, desNode, ref);
+//		
+//		tts.checkSemanticReasoner2(psm.getDynamic_objects().get(0)._node);	
+	}
 
-	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		System.out.println("بسم الله الرحمن الرحیم و توکلت علی الله");
 		
@@ -145,17 +167,7 @@ public class UI {
 
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ الحمدلله");
 		
-		Node arg = ui.tts._TTSKb.addConcept("دیدن#v5");
-		Node desNode =  ui.tts._TTSKb.addConcept("*دیدن#v5 (1) (1)");
-		PlausibleTerm desc = (PlausibleTerm)desNode; 
-		desc.relationType = ui.tts._TTSKb.addConcept("دیدن#v5 (1)");
-		
-		Node ref = ui.tts._TTSKb.addConcept("کبوتر#n1 (1)");
-				
-		ui.tts.checkSemanticReasoner1(arg, desc, ref);
-		
-		//ui.tts.checkSemanticReasoner1();
-		//ui.tts.checkSemanticReasoner2(psm.getDynamic_objects().get(0)._node);	
+		ui.testKB();
 	}
 }
 
