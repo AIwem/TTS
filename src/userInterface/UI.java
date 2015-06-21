@@ -24,9 +24,9 @@ public class UI {
 	private String inputStoryFilePath = "inputStory/inputStrory8.txt";
 //	private String inputStoryFilePath = "inputStory/inputStrory2-1.txt";
 //	private String inputStoryFilePath = "inputStory/inputStrory3.txt";
-	private String mainKbFilePath = "kb/farsnet--23.txt";
+	private String mainKbFilePath = "kb/farsnet--24.txt";
 //	private String mainKbFilePath = "kb/farsnet.txt";
-	private String myKbFilePath = "kb/injuredPigeon6.txt";
+	private String myKbFilePath = "kb/injuredPigeon8.txt";
 	//private String myKbFilePath = "kb/injuredPigeon_simple.txt";
 	//private String myKbFilePath = "kb/injuredPigeon_SS.txt";
 	private String verbCapacitiesPath = "kb/verbSemanticCapacities.txt";
@@ -140,11 +140,14 @@ public class UI {
 	}
 	
 	private void testKB(){
+		
+		//query: f˸حس§n-14738(s˸پسر#n2 [1])={?}
+		
 		Node arg = tts._TTSKb.addConcept("پسر#n2 [1]");
-		Node desNode =  tts._TTSKb.addConcept("مواجه شدن#v");
+		Node desNode =  tts._TTSKb.addConcept("حس§n-14738");
 //		PlausibleStatement desc = (PlausibleStatement)desNode; 
 //		desc.relationType = tts._TTSKb.addConcept("دیدن#v5 [1]");
-		Node ref = tts._TTSKb.addConcept("حیوان#n1");
+		Node ref = null; //tts._TTSKb.addConcept("حیوان#n1");
 		
 //		Node nafar = tts._TTSKb.addConcept("نفر#n [1]");
 //		ArrayList<PlausibleStatement> ans1 = nafar.findOutRelations(KnowledgeBase.HPR_ANY);

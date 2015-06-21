@@ -1,0 +1,38 @@
+# Injured bird knowledge base export file
+# Knowledge base is composed of triples separated with a TAB, then certainty parameters follow.
+# Relation for relations start with a star (*). They come immediately after the original relation.
+# Concept names (constituents of triples) are unique. The may start with a letter + unicode character \02F8 '?'; please notice though very similar to a normal colon sign but it is not!)
+# The letter determines the source of the concept (if any).
+# For TTS system these sources are supported
+# 	f? Farsnet
+# 	w? Wordnet
+# 	s? TTS
+# All comment lines in this file start with a nubmber sign '#'
+# ------------------------------------------------------------------------------------------
+1	s˸انسان#n	f˸مشابه	f˸نفر§n-13075
+2	f˸خویش§n-13365	f˸ISA	f˸نفر§n-13075
+3	s˸چشم افتادن#v	f˸مشابه	f˸به چشم دیدن§v-8072
+4	f˸به چشم دیدن§v-8072	f˸ISA	s˸مواجه شدن#v
+5	f˸شنیدن§v-7802	f˸ISA	s˸مواجه شدن#v
+6	f˸رویت کردن§v-8581	f˸ISA	s˸مواجه شدن#v
+#این رابطه اضافی است و از نوع چارجوبی است و نه بیان وقایع، بعدا باید در تعریف رول استفاده شود در بخش شرط رول.
+7	f˸حیوان#n1	s˸وضعیت سلامتی#a	s˸سلامتی حیوان#a
+8	f˸سالم#a3	f˸ISA	s˸سلامتی حیوان#a
+9	f˸زخمی#a1	f˸ISA	s˸سلامتی حیوان#a
+10	f˸مرده#a1	f˸ISA	s˸سلامتی حیوان#a
+#Imp format:	des0(arg0)={ref0}	IMP	des1(arg1)={ref1}
+#101	f˸حیوان#n1	s˸وضعیت سلامتی#a	f˸زخمی#a1
+#101	s˸مواجه شدن#v(f˸نفر§n-13075)={f˸حیوان#n1}	IMP	f˸حس§n-14738(f˸نفر§n-13075)={کلافه§a-118}
+101	s˸وضعیت سنی#a(پسر#n2 [1])={خردسال#a1 [1]}	IMP	s˸مواجه شدن#v(f˸نفر§n-13075)={f˸حیوان#n1}
+102	s˸مواجه شدن#v(f˸نفر§n-13075)={f˸حیوان#n1}	IMP	f˸حس§n-14738(f˸نفر§n-13075)={کلافه§a-118}
+#این رابطه اضافی است و از نوع چارجوبی است و نه بیان وقایع، بعدا باید در تعریف رول استفاده شود در بخش شرط رول.
+11	s˸انسان#n	s˸وضعیت سنی#a	s˸گروه سنی#a
+12	f˸خردسال§a-928	f˸ISA	s˸گروه سنی#a	
+13	f˸جوان§a-82	f˸ISA	s˸گروه سنی#a
+14	f˸سالمند§a-17323	f˸ISA	s˸گروه سنی#a
+15	f˸فوری§r-15249	f˸ISA	f˸فاصله زمانی§n-12691
+16	f˸سپس§r-21500	f˸ISA	f˸فاصله زمانی§n-12691
+17	s˸محمد#n	f˸ISA	f˸نفر§n-13075
+18	s˸سعید#n	f˸ISA	f˸نفر§n-13075
+19	f˸یک‌باره#r1	f˸ISA	f˸فاصله زمانی§n-12691
+20	f˸بابا نوئل#n1	f˸ISA	f˸نفر§n-13075
