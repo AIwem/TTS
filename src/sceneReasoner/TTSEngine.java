@@ -74,7 +74,7 @@ public class TTSEngine {
 		this.verbCapacitiesPath = verbCapacitiesPath;
 		
 		this._TTSKb = new KnowledgeBase();
-		this._re = new SemanticReasoner(_TTSKb, ExecutionMode.DEBUG);
+		this._re = new SemanticReasoner(_TTSKb, ExecutionMode.RELEASE);
 		_re.setMaxReasoningDepth(15);
 		_re.setMaximumAnswers(1);
 		

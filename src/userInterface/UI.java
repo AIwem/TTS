@@ -141,13 +141,28 @@ public class UI {
 	
 	private void testKB(){
 		
+		//query: مواجه شدن#v(f˸نفر§n-13075)={f˸حیوان#n1} ?				
+		Node arg = tts._TTSKb.addConcept("نفر§n-13075");
+		Node desNode =  tts._TTSKb.addConcept("مواجه شدن#v");
+		Node ref = tts._TTSKb.addConcept("حیوان#n1");
+		
+		tts.checkSemanticReasoner1(arg, desNode, ref);
+		
+		//query: مواجه شدن#v(f˸پسر#n2 [1])={f˸حیوان#n1} ?				
+		arg = tts._TTSKb.addConcept("پسر#n2 [1]");
+		desNode =  tts._TTSKb.addConcept("مواجه شدن#v");
+		ref = tts._TTSKb.addConcept("حیوان#n1");
+		
+		tts.checkSemanticReasoner1(arg, desNode, ref);
+		
+		//rule: s˸مواجه شدن#v(f˸نفر§n-13075)={f˸حیوان#n1}	IMP	f˸حس§n-14738(f˸نفر§n-13075)={کلافه§a-118}
 		//query: f˸حس§n-14738(s˸پسر#n2 [1])={?}
 		
-		Node arg = tts._TTSKb.addConcept("پسر#n2 [1]");
-		Node desNode =  tts._TTSKb.addConcept("حس§n-14738");
+		arg = tts._TTSKb.addConcept("پسر#n2 [1]");
+		desNode =  tts._TTSKb.addConcept("حس§n-14738");
 //		PlausibleStatement desc = (PlausibleStatement)desNode; 
 //		desc.relationType = tts._TTSKb.addConcept("دیدن#v5 [1]");
-		Node ref = null; //tts._TTSKb.addConcept("حیوان#n1");
+		ref = null; //tts._TTSKb.addConcept("حیوان#n1");
 		
 //		Node nafar = tts._TTSKb.addConcept("نفر#n [1]");
 //		ArrayList<PlausibleStatement> ans1 = nafar.findOutRelations(KnowledgeBase.HPR_ANY);
