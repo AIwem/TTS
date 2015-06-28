@@ -794,8 +794,8 @@ public class SentenceModel {
 		if(verb == null)
 			return null;
 		
-		if(!Common.isEmpty(verb.getCapacities()))
-			for(Node cap:verb.getCapacities())
+		if(!Common.isEmpty(verb.getSemantic_capacities()))
+			for(Node cap:verb.getSemantic_capacities())
 				necessarySemArg.add(MainSemanticTag.fromString(cap.getName()));
 			
 		return necessarySemArg; 

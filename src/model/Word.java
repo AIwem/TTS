@@ -96,10 +96,15 @@ public class Word {
 	
 	/**
 	 *  
-	 * capacities of this Word, it can be verb, noun, adjective or ...
+	 * semantic capacities of this Word, it can be verb, noun, adjective or ...
 	 */
-	private ArrayList<Node> capacities = null;
+	private ArrayList<Node> semantic_capacities = null;
 	
+	/**
+	 *  
+	 * visual capacities of this Word, it can be verb, noun, adjective or ...
+	 */
+	private ArrayList<Node> visual_capacities = null;
 	
 	/**
 	 * This constructor gets an input string in the format 
@@ -219,10 +224,16 @@ public class Word {
 				cpWord.mozaf_elaih.add(moz.makeDeepCopy(copy_sentence, copy_phrase));
 		}
 		
-		if(!Common.isEmpty(capacities)){
-			cpWord.capacities = new ArrayList<Node>();		
-			for(Node cap:capacities)
-				cpWord.capacities.add(cap.makeCopy(cap.getName()));
+		if(!Common.isEmpty(semantic_capacities)){
+			cpWord.semantic_capacities = new ArrayList<Node>();		
+			for(Node cap:semantic_capacities)
+				cpWord.semantic_capacities.add(cap.makeCopy(cap.getName()));
+		}
+		
+		if(!Common.isEmpty(visual_capacities)){
+			cpWord.visual_capacities = new ArrayList<Node>();		
+			for(Node cap:visual_capacities)
+				cpWord.visual_capacities.add(cap.makeCopy(cap.getName()));
 		}
 		
 		return cpWord;
@@ -367,31 +378,58 @@ public class Word {
 		this._wsd = wsd;
 	}
 	
-	public void setCapacities(ArrayList<Node> capacities) {
-		this.capacities = capacities;
+	public void setSemantic_capacities(ArrayList<Node> semantic_capacities) {
+		this.semantic_capacities = semantic_capacities;
 	}
 	
-	public void addCapacity(Node capacity){
-		if(capacity == null)
-			return;
-		
-		if(capacities == null)
-			capacities = new ArrayList<Node>();
-		
-		if(!capacities.contains(capacity))
-			capacities.add(capacity);
+	public void setVisual_capacities(ArrayList<Node> visual_capacities) {
+		this.visual_capacities = visual_capacities;
 	}
 	
-	public void addCapacities(ArrayList<Node> capacities){
-		if(Common.isEmpty(capacities))
+	public void addSemantic_capacity(Node semantic_capacity){
+		if(semantic_capacity == null)
 			return;
 		
-		if(this.capacities == null)
-			capacities = new ArrayList<Node>();
+		if(semantic_capacities == null)
+			semantic_capacities = new ArrayList<Node>();
 		
-		for(Node cap:capacities)
-			addCapacity(cap);
+		if(!semantic_capacities.contains(semantic_capacity))
+			semantic_capacities.add(semantic_capacity);
 	}
+	
+	public void addVisual_capacity(Node visual_capacity){
+		if(visual_capacity == null)
+			return;
+		
+		if(visual_capacities == null)
+			visual_capacities = new ArrayList<Node>();
+		
+		if(!visual_capacities.contains(visual_capacity))
+			visual_capacities.add(visual_capacity);
+	}
+		
+	public void addSemantic_capacities(ArrayList<Node> semantic_capacities){
+		if(Common.isEmpty(semantic_capacities))
+			return;
+		
+		if(this.semantic_capacities == null)
+			this.semantic_capacities = new ArrayList<Node>();
+		
+		for(Node cap:semantic_capacities)
+			addSemantic_capacity(cap);
+	}
+	
+	public void addVisual_capacities(ArrayList<Node> visual_capacities){
+		if(Common.isEmpty(visual_capacities))
+			return;
+		
+		if(this.visual_capacities == null)
+			this.visual_capacities = new ArrayList<Node>();
+		
+		for(Node cap:visual_capacities)
+			addVisual_capacity(cap);
+	}
+	
 	
 	public void setAdjectives(ArrayList<Word> adjectives) {
 		this.adjectives = adjectives;
@@ -403,21 +441,35 @@ public class Word {
 
 	//-------------------- getter part --------------------------
 	
-	public ArrayList<Node> getCapacities() {
-		return capacities;
+	public ArrayList<Node> getSemantic_capacities() {
+		return semantic_capacities;
 	}
 	
-	public Node getCapacity(String capacity_name) {		
-		if(capacity_name == null || capacity_name.equals(""))
+	public ArrayList<Node> getVisual_capacities() {
+		return visual_capacities;
+	}
+	
+	public Node getSemantic_capacity(String semantic_capacity_name) {		
+		if(semantic_capacity_name == null || semantic_capacity_name.equals(""))
 			return null; 
 			
-		if(!Common.isEmpty(capacities))
-			for(Node cap:capacities)
-				if(capacity_name.equals(cap.getName()))
+		if(!Common.isEmpty(semantic_capacities))
+			for(Node cap:semantic_capacities)
+				if(semantic_capacity_name.equals(cap.getName()))
 					return cap;
 		return null;
 	}
 	
+	public Node getVisual_capacity(String visual_capacity_name) {		
+		if(visual_capacity_name == null || visual_capacity_name.equals(""))
+			return null; 
+			
+		if(!Common.isEmpty(visual_capacities))
+			for(Node cap:visual_capacities)
+				if(visual_capacity_name.equals(cap.getName()))
+					return cap;
+		return null;
+	}
 	
 	//public String toString() {
  	public String getStr() {
@@ -701,9 +753,14 @@ public class Word {
 				moz.mergeWith(relMoz);
 			}
 		
-		if(Common.isEmpty(capacities)){
-			if(!Common.isEmpty(newWord.capacities))
-				capacities = newWord.capacities;
+		if(Common.isEmpty(semantic_capacities)){
+			if(!Common.isEmpty(newWord.semantic_capacities))
+				semantic_capacities = newWord.semantic_capacities;
+		}
+		
+		if(Common.isEmpty(visual_capacities)){
+			if(!Common.isEmpty(newWord.visual_capacities))
+				visual_capacities = newWord.visual_capacities;
 		}
 	}	
 	

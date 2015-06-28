@@ -29,7 +29,8 @@ public class UI {
 	private String myKbFilePath = "kb/injuredPigeon8.txt";
 	//private String myKbFilePath = "kb/injuredPigeon_simple.txt";
 	//private String myKbFilePath = "kb/injuredPigeon_SS.txt";
-	private String verbCapacitiesPath = "kb/verbSemanticCapacities.txt";
+	private String verbSemanticCapacitiesPath = "kb/verbSemanticCapacities.txt";
+	private String verbVisualCapacitiesPath = "kb/verbVisualCapacities.txt";
 	private TTSEngine tts;
 	
 	public UI(){		
@@ -65,7 +66,7 @@ public class UI {
 			
 			if(line.equals("«داستان جدید»")){				
 				storyModel = new StoryModel("stroy" + ++story_num);
-				tts = new TTSEngine(mainKbFilePath, myKbFilePath, verbCapacitiesPath);
+				tts = new TTSEngine(mainKbFilePath, myKbFilePath, verbSemanticCapacitiesPath, verbVisualCapacitiesPath);
 				continue;
 			}
 			else if(line.equals("«صحنه جدید»")){
@@ -154,6 +155,14 @@ public class UI {
 		ref = tts._TTSKb.addConcept("حیوان#n1");
 		
 		tts.checkSemanticReasoner1(arg, desNode, ref);
+		
+		//query: ISA(f˸پسر#n2 [1])={f˸نفر§n-13075} ?				
+		arg = tts._TTSKb.addConcept("پسر#n2 [1]");
+		desNode = KnowledgeBase.HPR_ISA;
+		ref = tts._TTSKb.addConcept("نفر§n-13075");
+		
+		tts.checkSemanticReasoner1(arg, desNode, ref);
+		
 		
 		//rule: s˸مواجه شدن#v(f˸نفر§n-13075)={f˸حیوان#n1}	IMP	f˸حس§n-14738(f˸نفر§n-13075)={کلافه§a-118}
 		//query: f˸حس§n-14738(s˸پسر#n2 [1])={?}

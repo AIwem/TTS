@@ -1,4 +1,4 @@
-# Verb capacities and Semantic Arguments knowledge base export file
+# Verb Semantic Arguments knowledge base export file
 # Knowledge base is composed of triples separated with a TAB, then certainty parameters follow.
 # Relation for relations start with a star (*). They come immediately after the original relation.
 # Concept names (constituents of triples) are unique. The may start with a letter + unicode character \02F8 '?'; please notice though very similar to a normal colon sign but it is not!)

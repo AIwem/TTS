@@ -49,6 +49,8 @@ public class Preprocessor {
 		
 //	private ArrayList<PlausibleStatement> default_contexts = null;
 	private String mainSemanticArgumet_name = "MainSemArg";
+	private String visualCapacity_name = "VC";
+	private String default_verb_name = "verb#v";
 	private String zamir_enekasi = "خود#n3";
 	private String fake_word_name = "fake_Word";
 	
@@ -278,7 +280,11 @@ public class Preprocessor {
 			
 			//loading verb SemanticArguments.
 			ArrayList<Node> semArgs = loadVerbSemanticCapacities(sentence);
-			verb.setCapacities(semArgs);
+			verb.setSemantic_capacities(semArgs);
+			
+			//loading verb VisualCapacities.
+			ArrayList<Node> visualCaps = loadVerbVisualCapacities(sentence);
+			verb.setVisual_capacities(visualCaps);
 			
 			ArrayList<SentenceModel> nested_sents = sentence.get_nested_sentences();
 			
@@ -288,7 +294,10 @@ public class Preprocessor {
 					
 					if(vb != null){
 						ArrayList<Node> semArgsNest = loadVerbSemanticCapacities(nest);
-						vb.setCapacities(semArgsNest);
+						vb.setSemantic_capacities(semArgsNest);
+						
+						ArrayList<Node> visCapsNest = loadVerbVisualCapacities(nest);
+						vb.setVisual_capacities(visCapsNest);
 					}
 				}
 			}		
@@ -1338,15 +1347,20 @@ public class Preprocessor {
 		return verbRelations;
 	}
 	
+	/**
+	 * loads verb semantic arguments from Knowledge base. 
+	 * @param sentence guaranteed not to be null!
+	 * @return
+	 */
 	private  ArrayList<Node>  loadVerbSemanticCapacities(SentenceModel sentence) {
-		Word verbPart = sentence.getVerb();
-		if(verbPart == null)
+		Word verb = sentence.getVerb();
+		if(verb == null)
 			return null;
 		
-		Node pure_verb = _ttsEngine.getPureNode(verbPart._wsd);
+		Node pure_verb = _ttsEngine.getPureNode(verb._wsd);
 		
-		if(verbPart == null || verbPart._wsd == null || pure_verb == null){
-			MyError.error("verb or its wsd or its pure version should not be null!" + verbPart);
+		if(verb == null || verb._wsd == null || pure_verb == null){
+			MyError.error("verb or its wsd or its pure version should not be null!" + verb);
 			return null;
 		}
 		
@@ -1370,8 +1384,60 @@ public class Preprocessor {
 		return semArgs;		
 	}
 	
-	public void loadVisualCapacities(SentenceModel sentenceModel, SceneModel primarySceneModel) {
-		// TODO Auto-generated method stub		
+	/**
+	 * loads verb visual capacities from Knowledge base.
+	 * 
+	 * @param sentence guaranteed not to be null! 
+	 * @return
+	 */
+	private ArrayList<Node> loadVerbVisualCapacities(SentenceModel sentence) {
+		Word verb = sentence.getVerb();
+		
+		if(verb == null)
+			return null;
+		
+		Node pure_verb = _ttsEngine.getPureNode(verb._wsd);
+		
+		if(verb == null || verb._wsd == null || pure_verb == null){
+			MyError.error("verb or its wsd or its pure version should not be null!" + verb);
+			return null;
+		}
+		
+		Node verb_synSet = pure_verb.getSynSet();
+						
+		if(verb_synSet == null){
+			MyError.error("this verb '" + pure_verb + "' has no SynSet!");
+			return null;
+		}
+		
+		Node visualCapNode = _kb.addConcept(visualCapacity_name, false);
+		
+		ArrayList<PlausibleAnswer> visualCapsAnswers = _ttsEngine.writeAnswersTo(visualCapNode, verb_synSet, null);	
+		
+		ArrayList<Node> visCaps = new ArrayList<Node>();			
+		
+		if(!Common.isEmpty(visualCapsAnswers))
+			for(PlausibleAnswer cap:visualCapsAnswers)
+				if(cap != null && cap.answer != null)
+					visCaps.add(cap.answer);
+		
+		Node default_verb = _kb.addConcept(default_verb_name, false);
+		
+		if(default_verb == null){
+			MyError.error("the dafault verb should not be null!");
+			return visCaps;
+		}
+		
+		visualCapsAnswers = null;
+		
+		visualCapsAnswers = _ttsEngine.writeAnswersTo(visualCapNode, default_verb, null);
+		
+		if(!Common.isEmpty(visualCapsAnswers))
+			for(PlausibleAnswer cap:visualCapsAnswers)
+				if(cap != null && cap.answer != null)
+					visCaps.add(cap.answer);
+		
+		return visCaps;
 	}
 
 	

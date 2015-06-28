@@ -3,6 +3,8 @@ package sceneReasoner;
 import java.util.ArrayList;
 
 import sceneElement.Location;
+import sceneElement.Role;
+import sceneElement.RoleAction;
 import sceneElement.Time;
 import model.MainSemanticTag;
 import model.SceneModel;
@@ -15,6 +17,7 @@ import ir.ac.itrc.qqa.semantic.kb.Node;
 import ir.ac.itrc.qqa.semantic.reasoning.PlausibleAnswer;
 import ir.ac.itrc.qqa.semantic.reasoning.SemanticReasoner;
 import ir.ac.itrc.qqa.semantic.util.Common;
+import ir.ac.itrc.qqa.semantic.util.MyError;
 
 
 /**
@@ -531,10 +534,81 @@ public class SceneReasoner {
 		return true;
 	}
 
-
-	public void enrichSceneModel(StoryModel storyModel) {
-	
+	/**
+	 * 
+	 * @param storyModel guaranteed not to be null!
+	 */
+	public void enrichStoryModel(StoryModel storyModel) {
+		ArrayList<SceneModel> story_scenes = storyModel.getScenes();
 		
+		if(!Common.isEmpty(story_scenes))
+			for(SceneModel scene:story_scenes)
+				if(scene != null)
+					enrichSceneModel(storyModel, scene);
 	}
+	
 
+	/**
+	 * 
+	 * @param storyModel guaranteed not to be null!
+	 * @param sceneModel guaranteed not to be null!
+	 */
+	private void enrichSceneModel(StoryModel storyModel, SceneModel sceneModel){
+
+		//-------------- phase 1 of enrichment: enriching Roles: --------------
+		ArrayList<Role> scene_roles = sceneModel.getRoles();
+		if(!Common.isEmpty(scene_roles))
+			for(Role role:scene_roles)
+				if(role != null)
+					enrichRole(storyModel, sceneModel, role);
+				
+		//-------------- phase 2 of enrichment: enriching DynamicObjects: -----
+		
+		//-------------- phase 3 of enrichment: enriching StaticObejcts: ------
+		
+		//-------------- phase 4 of enrichment: enriching Location: -----------
+		
+		//-------------- phase 5 of enrichment: enriching Time: ---------------
+		
+		//-------------- phase 6 of enrichment: enriching Roles: --------------
+		
+		//-------------- phase 7 of enrichment: enriching SceneEmotions: ------
+		
+		//-------------- phase 8 of enrichment: enriching SceneGoals: ---------				
+
+	}
+	
+
+	/**
+	 * 
+	 * @param storyModel guaranteed not to be null!
+	 * @param sceneModel guaranteed not to be null!
+	 * @param role guaranteed not to be null!
+	 */
+
+	private void enrichRole(StoryModel stroyModel, SceneModel sceneModel, Role role){
+		ArrayList<RoleAction> role_actions = role.getRole_actions();
+		
+		if(!Common.isEmpty(role_actions)){
+			for(RoleAction action:role_actions){	
+				
+				Node role_node = role._node;
+				Node action_node = action._node;				
+				
+				if(role_node == null || action_node == null){
+					MyError.error("Node of Role '"+ role +"' nor RoleAction '" + action + "' should not be null!");
+					continue;
+				}
+				
+				/*
+				 * role_word = scene.getWord(role_node);
+				 * action_word = scene.getWord(action_node);
+				 *   
+				 * for(action_word.visual_capacities)
+				 * 	query()
+				 * 
+				 */
+			}				
+		}
+	}
 }

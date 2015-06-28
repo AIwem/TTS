@@ -43,14 +43,15 @@ public class TTSEngine {
 	
 	private String mainKbFilePath;
 	private String myKbFilePath;
-	private String verbCapacitiesPath;
+	private String verbSemanticCapacitiesPath;
+	private String verbVisualCapacitiesPath;
 	
 	private Preprocessor _pp;
 	private SceneReasoner _sr;
 	
-	Node mozaf_root;	
-	Node adjective_root;
-	Node verb_root;
+//	Node mozaf_root;	
+//	Node adjective_root;
+//	Node verb_root;
 	
 	/**
 	 * this map holds the Node object seen yet in this TTSEngine. 
@@ -68,10 +69,11 @@ public class TTSEngine {
 	private Hashtable<String, ScenePart> seen_sceneParts = new Hashtable<String, ScenePart>();
 	
 	
-	public TTSEngine(String mainKbFilePath, String myKbFilePath, String verbCapacitiesPath){
+	public TTSEngine(String mainKbFilePath, String myKbFilePath, String verbSemanticCapacitiesPath, String verbVisualCapacitiesPath){
 		this.mainKbFilePath = mainKbFilePath;
 		this.myKbFilePath = myKbFilePath;
-		this.verbCapacitiesPath = verbCapacitiesPath;
+		this.verbSemanticCapacitiesPath = verbSemanticCapacitiesPath;
+		this.verbVisualCapacitiesPath = verbVisualCapacitiesPath;
 		
 		this._TTSKb = new KnowledgeBase();
 		this._re = new SemanticReasoner(_TTSKb, ExecutionMode.RELEASE);
@@ -83,9 +85,9 @@ public class TTSEngine {
 		_pp = new Preprocessor(_TTSKb, _re, this);
 		_sr = new SceneReasoner(_TTSKb, _re, this);
 		
-		mozaf_root = _TTSKb.addConcept("mozaf#n");
-		adjective_root = _TTSKb.addConcept("adjective#a");
-		verb_root = _TTSKb.addConcept("verb#v");
+//		mozaf_root = _TTSKb.addConcept("mozaf#n");
+//		adjective_root = _TTSKb.addConcept("adjective#a");
+//		verb_root = _TTSKb.addConcept("verb#v");
 	}
 	
 	/**
@@ -134,8 +136,9 @@ public class TTSEngine {
 			if(!Common.isEmpty(nested_sents))
 				for(SentenceModel nest:nested_sents)
 					_pp.preprocessScene(nest, primarySceneModel, storyModel);
-														
-			_pp.loadVisualCapacities(sentence, primarySceneModel);						
+				
+			//moved in preporecessSentence just like loadVerbSemanticCapacities
+			//_pp.loadVerbVisualCapacities(sentence);						
 		}
 				
 		if(isLastScene){//the last scene of story
@@ -146,7 +149,7 @@ public class TTSEngine {
 			_sr.postprocessTime(storyModel);
 			
 			//-------------- enriching primarySceneModels of different scenes previously added to storyModel ----------------
-			_sr.enrichSceneModel(storyModel);
+			_sr.enrichStoryModel(storyModel);
 						
 			for(SceneModel scene:storyModel.getScenes())
 				writer.println("\nprimarySceneModel\n" + scene);
@@ -237,7 +240,8 @@ public class TTSEngine {
 		Long start = System.currentTimeMillis();
 		
 		loaded = _TTSKb.importKb(mainKbFilePath);
-		loaded = _TTSKb.importKb(verbCapacitiesPath);
+		loaded = _TTSKb.importKb(verbSemanticCapacitiesPath);
+		loaded = _TTSKb.importKb(verbVisualCapacitiesPath);
 		loaded = _TTSKb.importKb(myKbFilePath);	
 				
 		Long end = System.currentTimeMillis();

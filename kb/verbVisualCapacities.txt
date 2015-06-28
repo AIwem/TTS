@@ -1,44 +1,50 @@
-﻿ARG0	f˸ISA	SRL
-ARG1	f˸ISA	SRL
-ARG2	f˸ISA	SRL
-ARG3	f˸ISA	SRL
-ARG4	f˸ISA	SRL
-ARG5	f˸ISA	SRL
-
-SPEED	f˸ISA	VC
-DIRECTION	f˸ISA	VC
-FROM	f˸ISA	VC
-TO	f˸ISA	VC
-LOCATION	f˸ISA	VC
-TIME	f˸ISA	VC
-EMOTION	f˸ISA	VC
-MOOD	f˸ISA	VC
-
-SPEED	value	f˸شتاب§n-11230
-DIRECTION	value	f˸جانب§n-10268
-FROM	value	مکان#r???
-TO	value	مکان#r???
-LOCATION	value	مکان#r???
-TIME	value	زمان#r???
-EMOTION	value	f˸حس§n-14738
-MOOD	value	f˸وضعیت§n-12745
-
-verb#v	f˸ISA	f˸کلمه§n-13058
-verb#v	VC	LOCATION
-verb#v	VC	TIME
-verb#v	VC	EMOTION
-verb#v	VC	MOOD
-
-f˸دویدن§v-8577	SRL	ARG0
-f˸دویدن§v-8577	SRL	FROM
-FROM	f˸ISA	ARG3
-f˸دویدن§v-8577	SRL	TO
-TO	f˸ISA	ARG4
-
-f˸دویدن§v-8577	VC	DIRECTION
-f˸دویدن§v-8577	VC	SPEED
-f˸دویدن§v-8577	VC	FROM
-f˸دویدن§v-8577	VC	TO
-
-adjective#a	f˸ISA	f˸کلمه§n-13058
-mozaf#a	f˸ISA	f˸کلمه§n-13058
+# Verb Visual Capacities knowledge base export file
+# Knowledge base is composed of triples separated with a TAB, then certainty parameters follow.
+# Relation for relations start with a star (*). They come immediately after the original relation.
+# Concept names (constituents of triples) are unique. The may start with a letter + unicode character \02F8 '?'; please notice though very similar to a normal colon sign but it is not!)
+# The letter determines the source of the concept (if any).
+# For TTS system these sources are supported
+# 	f? Farsnet
+# 	w? Wordnet
+# 	s? TTS
+# All comment lines in this file start with a nubmber sign '#'
+# ------------------------------------------------------------------------------------------
+0	SPEED	f˸ISA	VC
+1	DIRECTION	f˸ISA	VC
+2	FROM	f˸ISA	VC
+3	TO	f˸ISA	VC
+4	LOCATION	f˸ISA	VC
+5	TIME	f˸ISA	VC
+6	EMOTION	f˸ISA	VC
+7	MOOD	f˸ISA	VC
+#
+#SPEED	value	f˸شتاب§n-11230
+#DIRECTION	value	f˸جانب§n-10268
+#FROM	value	مکان#r???
+#TO	value	مکان#r???
+#LOCATION	value	مکان#r???
+#TIME	value	زمان#r???
+#EMOTION	value	f˸حس§n-14738
+#MOOD	value	f˸وضعیت§n-12745
+#
+#verb#v	f˸ISA	f˸کلمه§n-13058
+#
+10	verb#v	VC	LOCATION
+11	verb#v	VC	TIME
+12	verb#v	VC	EMOTION
+13	verb#v	VC	MOOD
+#
+#f˸دویدن§v-8577	SRL	ARG0
+#f˸دویدن§v-8577	SRL	FROM
+#FROM	f˸ISA	ARG3
+#f˸دویدن§v-8577	SRL	TO
+#TO	f˸ISA	ARG4
+#
+20	f˸دویدن§v-8577	VC	DIRECTION
+21	f˸دویدن§v-8577	VC	SPEED
+22	f˸دویدن§v-8577	VC	FROM
+23	f˸دویدن§v-8577	VC	TO
+#24	f˸رویت کردن§v-8581	VC	ff
+#
+#adjective#a	f˸ISA	f˸کلمه§n-13058
+#mozaf#a	f˸ISA	f˸کلمه§n-13058
