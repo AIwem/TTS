@@ -33,7 +33,8 @@ public class SceneReasoner {
 	//private KnowledgeBase _kb;	
 	//private SemanticReasoner _re;
 	private TTSEngine _ttsEngine = null;
-		
+	
+	private String default_verb_name = "verb#v";
 	
 	public SceneReasoner(KnowledgeBase kb, SemanticReasoner re, TTSEngine ttsEngine){
 		//this._kb = kb;
@@ -586,7 +587,22 @@ public class SceneReasoner {
 	 * @param role guaranteed not to be null!
 	 */
 
+	@SuppressWarnings("unused")
 	private void enrichRole(StoryModel stroyModel, SceneModel sceneModel, Role role){
+		
+		edu.stanford.nlp.ling.Word default_verb = new edu.stanford.nlp.ling.Word();
+
+		Word def_verb = new Word(default_verb_name, null);
+		
+		/*
+		 * instantiate a default verb with EMOTION, MOOD, LOCATION, TIME capacities and enrich this first
+		 * 
+		 * enrich each RoleAction with its own visualCapacities
+		 *  
+		 * in postProcess phase of enrichment integrate these information together enshallah!
+		 */
+		
+		
 		ArrayList<RoleAction> role_actions = role.getRole_actions();
 		
 		if(!Common.isEmpty(role_actions)){
@@ -600,8 +616,55 @@ public class SceneReasoner {
 					continue;
 				}
 				
+				Word action_word = sceneModel.getWord(action_node);
+				
+				if(action_word != null){
+					
+					ArrayList<Node> visual_capacities = action_word.getVisual_capacities();
+					
+					if(!Common.isEmpty(visual_capacities)){
+						
+						print("\n#################### ");
+						print(action_word + " visual capacities are: " + visual_capacities);
+						
+						for(Node capacity:visual_capacities){
+							
+							// generate a query for each of this Role's actions to enrich it. 
+							ArrayList<PlausibleAnswer> answers = _ttsEngine.inferFromKB(capacity, role_node, null);
+							
+							print("Answers: " + answers.size());
+						
+							int count = 0;
+							for (PlausibleAnswer answer: answers)
+							{
+								System.out.println("\n\n" + ++count + ". " + answer.toString() + ">>>>>>>>>>>>>>>>>>");
+								
+								ArrayList<String> justifications = answer.GetTechnicalJustifications();
+								
+								int countJustification = 0;
+								for (String justification: justifications)
+								{
+									System.out.println("-------" + ++countJustification + "--------");
+									System.out.println(justification);
+									
+									//It means that this action was effective in inferring this answer.
+									if(justification.contains(action_node.getName())){
+										System.out.println("\n" + action_node.getName() + "------- was effective in this inference.");	
+									}
+									//It means that this action was not effective in inferring this answer.
+									else{
+										System.out.println("\n" + action_node.getName() + "------- was notttttt effective in this inference.");
+									}								
+								}
+							}
+							
+							
+						}						
+						print("\n#################### ");
+					}
+				}
+				
 				/*
-				 * role_word = scene.getWord(role_node);
 				 * action_word = scene.getWord(action_node);
 				 *   
 				 * for(action_word.visual_capacities)

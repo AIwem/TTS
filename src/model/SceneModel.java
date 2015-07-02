@@ -281,6 +281,23 @@ public class SceneModel {
 		return null;
 	}
 	
+	public Word getWord(Node word_node) {
+		ArrayList<SentenceModel> sents = getSentences();
+		
+		Word desired_word = null;
+		
+		if(!Common.isEmpty(sents)){
+			for(SentenceModel sent:sents){
+				desired_word = sent.getWord(word_node);
+				
+				if(desired_word != null)
+					return desired_word;
+			}
+		}
+		return null;
+	}
+
+	
 	/**
 	 * @param sceneElement
 	 * @return the SceneElement (Role, DynamicObject, StaticObject, ...) which this SceneModel has based on Word._wsd

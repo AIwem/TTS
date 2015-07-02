@@ -15,8 +15,8 @@
 3	TO	f˸ISA	VC
 4	LOCATION	f˸ISA	VC
 5	TIME	f˸ISA	VC
-6	EMOTION	f˸ISA	VC
-7	MOOD	f˸ISA	VC
+6	f˸حس§n-14738	f˸ISA	VC
+7	f˸وضعیت§n-12745	f˸ISA	VC
 #
 #SPEED	value	f˸شتاب§n-11230
 #DIRECTION	value	f˸جانب§n-10268
@@ -29,16 +29,10 @@
 #
 #verb#v	f˸ISA	f˸کلمه§n-13058
 #
-10	verb#v	VC	LOCATION
-11	verb#v	VC	TIME
-12	verb#v	VC	EMOTION
-13	verb#v	VC	MOOD
-#
-#f˸دویدن§v-8577	SRL	ARG0
-#f˸دویدن§v-8577	SRL	FROM
-#FROM	f˸ISA	ARG3
-#f˸دویدن§v-8577	SRL	TO
-#TO	f˸ISA	ARG4
+#10	verb#v	VC	LOCATION
+#11	verb#v	VC	TIME
+12	verb#v	VC	f˸حس§n-14738
+13	verb#v	VC	f˸وضعیت§n-12745
 #
 20	f˸دویدن§v-8577	VC	DIRECTION
 21	f˸دویدن§v-8577	VC	SPEED

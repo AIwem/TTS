@@ -147,21 +147,21 @@ public class UI {
 		Node desNode =  tts._TTSKb.addConcept("مواجه شدن#v");
 		Node ref = tts._TTSKb.addConcept("حیوان#n1");
 		
-		tts.checkSemanticReasoner1(arg, desNode, ref);
+//		tts.checkSemanticReasoner1(arg, desNode, ref);
 		
 		//query: مواجه شدن#v(f˸پسر#n2 [1])={f˸حیوان#n1} ?				
 		arg = tts._TTSKb.addConcept("پسر#n2 [1]");
 		desNode =  tts._TTSKb.addConcept("مواجه شدن#v");
 		ref = tts._TTSKb.addConcept("حیوان#n1");
 		
-		tts.checkSemanticReasoner1(arg, desNode, ref);
+//		tts.checkSemanticReasoner1(arg, desNode, ref);
 		
 		//query: ISA(f˸پسر#n2 [1])={f˸نفر§n-13075} ?				
 		arg = tts._TTSKb.addConcept("پسر#n2 [1]");
 		desNode = KnowledgeBase.HPR_ISA;
 		ref = tts._TTSKb.addConcept("نفر§n-13075");
 		
-		tts.checkSemanticReasoner1(arg, desNode, ref);
+//		tts.checkSemanticReasoner1(arg, desNode, ref);
 		
 		
 		//rule: s˸مواجه شدن#v(f˸نفر§n-13075)={f˸حیوان#n1}	IMP	f˸حس§n-14738(f˸نفر§n-13075)={کلافه§a-118}
@@ -194,7 +194,7 @@ public class UI {
 
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ الحمدلله");
 		
-		ui.testKB();
+//		ui.testKB();
 	}
 }
 

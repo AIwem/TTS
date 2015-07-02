@@ -233,6 +233,52 @@ public class TTSEngine {
 		print("\tTime: " + _re.reasoningTime / 100 + " ms");
 //		print("\tThroughput: " + (_re.totalCalls / _re.reasoningTime) * 1000 + " inference/s");
 	}
+
+	public ArrayList<PlausibleAnswer> inferFromKB(Node descriptor, Node argument, Node referent){
+		PlausibleQuestion pq = new PlausibleQuestion();
+		pq.argument = argument;		
+		pq.referent = referent;
+		pq.descriptor = descriptor;
+		
+		print("\nQuestion: " + pq.argument + " -->" + pq.descriptor + " --> " + pq.referent);
+		
+		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);		
+
+		return answers;		
+	}
+	
+	public ArrayList<PlausibleAnswer> writeAnswersTo(Node descriptor, Node argument, Node referent){
+		PlausibleQuestion pq = new PlausibleQuestion();
+		pq.argument = argument;		
+		pq.referent = referent;
+		pq.descriptor = descriptor;
+		
+		print("\nQuestion: " + pq.argument + " -->" + pq.descriptor + " --> " + pq.referent);
+		
+		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);		
+		
+		print("Answers: " + answers.size());
+		
+		int count = 0;
+		for (PlausibleAnswer answer: answers)
+		{
+			System.out.println(++count + ". " + answer.toString());
+			
+//			ArrayList<String> justifications = answer.GetTechnicalJustifications();
+//			
+//			int countJustification = 0;
+//			for (String justification: justifications)
+//			{
+//				System.out.println("-------" + ++countJustification + "--------");
+//				System.out.println(justification);
+//			}
+		}
+		print("\tInferences: " + _re.totalCalls);
+		print("\tTime: " + _re.reasoningTime / 100 + " ms");
+//		print("\tThroughput: " + (_re.totalCalls / (_re.reasoningTime*1000)) * 1000 + " inference/s");
+		return answers;
+		
+	}
 	
 	public int loadKb()	
 	{
@@ -789,65 +835,6 @@ public class TTSEngine {
 		print(node + " is NOT Time \n");
 		return false;
 	}
-
-	public ArrayList<PlausibleAnswer> writeAnswersTo(Node descriptor, Node argument, Node referent){
-		PlausibleQuestion pq = new PlausibleQuestion();
-		pq.argument = argument;		
-		pq.referent = referent;
-		pq.descriptor = descriptor;
-		
-		print("\nQuestion: " + pq.argument + " -->" + pq.descriptor + " --> " + pq.referent);
-		
-		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);		
-		
-		print("Answers: " + answers.size());
-		
-		int count = 0;
-		for (PlausibleAnswer answer: answers)
-		{
-			System.out.println(++count + ". " + answer.toString());
-			
-//			ArrayList<String> justifications = answer.GetTechnicalJustifications();
-//			
-//			int countJustification = 0;
-//			for (String justification: justifications)
-//			{
-//				System.out.println("-------" + ++countJustification + "--------");
-//				System.out.println(justification);
-//			}
-		}
-		print("\tInferences: " + _re.totalCalls);
-		print("\tTime: " + _re.reasoningTime / 100 + " ms");
-//		print("\tThroughput: " + (_re.totalCalls / (_re.reasoningTime*1000)) * 1000 + " inference/s");
-		return answers;
-		
-	}
-//	
-//	public enum ScenePart {
-//		ROLE,
-//		
-//		SCENE_OBJECT,
-//		DYNAMIC_OBJECT,
-//		STATIC_OBJECT,
-//		
-//		LOCATION,
-//		
-//		TIME,
-//		
-//		ACTION,
-//		OBJECT_ACTION,
-//		ROLE_ACTION,
-//		
-//		EMOTION,
-//		ROLE_EMOTION,
-//		SCENE_EMOTION,
-//		
-//		GOAL,
-//		ROLE_GOAL,
-//		SCENE_GOAL,	
-//		
-//		UNKNOWN
-//	}
 	
 	/**
 	 * recognizing that which scenePart has the node: 
