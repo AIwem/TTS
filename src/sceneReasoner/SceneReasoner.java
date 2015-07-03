@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import sceneElement.Location;
 import sceneElement.Role;
 import sceneElement.RoleAction;
+import sceneElement.RoleEmotion;
 import sceneElement.Time;
 import model.MainSemanticTag;
 import model.SceneModel;
@@ -30,14 +31,15 @@ import ir.ac.itrc.qqa.semantic.util.MyError;
  */
 public class SceneReasoner {	
 	
-	//private KnowledgeBase _kb;	
+	private KnowledgeBase _kb;	
 	//private SemanticReasoner _re;
 	private TTSEngine _ttsEngine = null;
 	
-	private String default_verb_name = "verb#v";
+	private String general_visual_capacity_emotion = "f˸حس§n-14738";	
+	private String general_visual_capacity_mood = "f˸وضعیت§n-12745";
 	
 	public SceneReasoner(KnowledgeBase kb, SemanticReasoner re, TTSEngine ttsEngine){
-		//this._kb = kb;
+		this._kb = kb;
 		//this._re = re;
 		this._ttsEngine = ttsEngine;
 	}
@@ -587,12 +589,58 @@ public class SceneReasoner {
 	 * @param role guaranteed not to be null!
 	 */
 
-	@SuppressWarnings("unused")
 	private void enrichRole(StoryModel stroyModel, SceneModel sceneModel, Role role){
 		
-		edu.stanford.nlp.ling.Word default_verb = new edu.stanford.nlp.ling.Word();
-
-		Word def_verb = new Word(default_verb_name, null);
+		print("\n#################### enrich Role #################### ");
+		
+		Node emotion = _kb.addConcept(general_visual_capacity_emotion, false);
+		
+		// generate a query for emotion visual capacity of this Role to enrich it. 
+		ArrayList<PlausibleAnswer> answers = _ttsEngine.inferFromKB(emotion, role._node, null);
+		
+		print("Answers: " + answers.size());
+	
+		int count = 0;
+		for (PlausibleAnswer answer: answers)
+		{
+			System.out.println("\n" + ++count + ". " + answer.toString() + ">>>>>>>>>>>>>>>>>>");
+			
+			ArrayList<String> justifications = answer.GetTechnicalJustifications();
+			
+			int countJustification = 0;
+			for (String justification: justifications)
+			{
+				System.out.println("-------" + ++countJustification + "--------");
+				System.out.println(justification);
+				
+				//It means that this action was effective in inferring this answer.
+				
+				ArrayList<RoleAction> role_actions = role.getRole_actions();
+				
+				if(!Common.isEmpty(role_actions)){
+					for(RoleAction action:role_actions){
+						
+						Node action_node = action._node;
+						
+						if(justification.contains(action_node.getName())){
+							System.out.println("\n" + action_node.getName() + "------- was effective in this inference.");
+							role.addRole_emotion(new RoleEmotion(sceneModel, answer.answer.getName(), answer.answer));
+						}
+						//It means that this action was not effective in inferring this answer.
+						else
+							System.out.println("\n" + action_node.getName() + "------- was notttttt effective in this inference.");
+						
+					}
+				}
+			}
+		}	
+		
+		
+		//-------------
+		
+		
+//		Word def_verb = new Word(null, null, -1, default_verb_name, POS.V, DependencyRelationType.ROOT, -1, null, null);
+//		Word adjWord = new Word(sentence, null, -1, referent.getName(),POS.ADJ, DependencyRelationType.NPOSTMOD, mainPart._number, null, referent);
 		
 		/*
 		 * instantiate a default verb with EMOTION, MOOD, LOCATION, TIME capacities and enrich this first
@@ -624,17 +672,17 @@ public class SceneReasoner {
 					
 					if(!Common.isEmpty(visual_capacities)){
 						
-						print("\n#################### ");
+						
 						print(action_word + " visual capacities are: " + visual_capacities);
 						
 						for(Node capacity:visual_capacities){
 							
 							// generate a query for each of this Role's actions to enrich it. 
-							ArrayList<PlausibleAnswer> answers = _ttsEngine.inferFromKB(capacity, role_node, null);
+							ArrayList<PlausibleAnswer> answers2 = _ttsEngine.inferFromKB(capacity, role_node, null);
 							
 							print("Answers: " + answers.size());
 						
-							int count = 0;
+							int count2 = 0;
 							for (PlausibleAnswer answer: answers)
 							{
 								System.out.println("\n\n" + ++count + ". " + answer.toString() + ">>>>>>>>>>>>>>>>>>");
@@ -656,12 +704,9 @@ public class SceneReasoner {
 										System.out.println("\n" + action_node.getName() + "------- was notttttt effective in this inference.");
 									}								
 								}
-							}
-							
-							
+							}							
 						}						
-						print("\n#################### ");
-					}
+					}					
 				}
 				
 				/*
@@ -673,5 +718,7 @@ public class SceneReasoner {
 				 */
 			}				
 		}
+		
+		print("\n#################### end of enrich Role ############# ");
 	}
 }

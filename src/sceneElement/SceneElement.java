@@ -188,6 +188,25 @@ public class SceneElement {
 	}
 	
 	/**
+	 * creates a RoleMood and calls addRole_mood for this Role.
+	 *TODO: check why private or public ?!
+	 * @param name
+	 * @param node
+	 * @return
+	 */
+	public RoleEmotion addRoleEmotionToRole(String name, Node node){		
+		try{
+			Role role = (Role)this;
+			RoleEmotion rEmo = new RoleEmotion(this._scene, name, node);
+			return role.addRole_emotion(rEmo);
+		}
+		catch(Exception e){			
+			print("" + e);
+			return null;
+		}
+	}
+	
+	/**
 	 * creates a SceneObject and calls setCurrent_state for this SceneObject. 
 	 * 
 	 * @param name
