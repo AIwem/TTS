@@ -24,8 +24,8 @@ public class UI {
 	private String inputStoryFilePath = "inputStory/inputStrory8.txt";
 //	private String inputStoryFilePath = "inputStory/inputStrory2-1.txt";
 //	private String inputStoryFilePath = "inputStory/inputStrory3.txt";
-	private String mainKbFilePath = "kb/farsnet--24.txt";
-//	private String mainKbFilePath = "kb/farsnet.txt";
+//	private String mainKbFilePath = "kb/farsnet--24.txt";
+	private String mainKbFilePath = "kb/farsnet.txt";
 	private String myKbFilePath = "kb/injuredPigeon8.txt";
 	//private String myKbFilePath = "kb/injuredPigeon_simple.txt";
 	//private String myKbFilePath = "kb/injuredPigeon_SS.txt";
@@ -142,6 +142,8 @@ public class UI {
 	
 	private void testKB(){
 		
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~ testKB() ~~~~~~~~~~~~~~~~~~~~~");
+		
 		//query: مواجه شدن#v(f˸نفر§n-13075)={f˸حیوان#n1} ?				
 		Node arg = tts._TTSKb.addConcept("نفر§n-13075");
 		Node desNode =  tts._TTSKb.addConcept("مواجه شدن#v");
@@ -154,7 +156,7 @@ public class UI {
 		desNode =  tts._TTSKb.addConcept("مواجه شدن#v");
 		ref = tts._TTSKb.addConcept("حیوان#n1");
 		
-//		tts.checkSemanticReasoner1(arg, desNode, ref);
+		tts.checkSemanticReasoner1(arg, desNode, ref);
 		
 		//query: ISA(f˸پسر#n2 [1])={f˸نفر§n-13075} ?				
 		arg = tts._TTSKb.addConcept("پسر#n2 [1]");
@@ -173,19 +175,61 @@ public class UI {
 //		desc.relationType = tts._TTSKb.addConcept("دیدن#v5 [1]");
 		ref = null; //tts._TTSKb.addConcept("حیوان#n1");
 		
-//		Node nafar = tts._TTSKb.addConcept("نفر#n [1]");
-//		ArrayList<PlausibleStatement> ans1 = nafar.findOutRelations(KnowledgeBase.HPR_ANY);
-//		
-//		Node hes = tts._TTSKb.addConcept("حس#n [1]");
-//		ArrayList<PlausibleStatement> ans2 = hes.findInRelations(KnowledgeBase.HPR_ANY);
-//		Node des = ans.get(0);
-//		Node ref = ans.get(0).referent;
-//				
 		tts.checkSemanticReasoner1(arg, desNode, ref);
-//		
-//		tts.checkSemanticReasoner2(psm.getDynamic_objects().get(0)._node);	
+		
+		System.out.println("~~~~~~~~~~~~~~~~~~ end of testKB() ~~~~~~~~~~~~~~~~~~~~~");
 	}
 
+	private void testKb2() {
+
+
+	     System.out.println(" ------------ TESTING IMP ------------ ");
+	    
+
+	     // adding the required statements
+
+	     // 1: stating that 'the boy is a person'
+
+	     Node ourBoy = tts._TTSKb.addConcept("پسر داستان ما");
+
+	     Node person = tts._TTSKb.addConcept("نفر§n-13075");
+
+	     tts._TTSKb.addRelation(ourBoy, person, KnowledgeBase.HPR_ISA);
+
+	    
+
+	     //2: stating that a pigeon is an animal
+
+	     Node ourPigeon = tts._TTSKb.addConcept("کفتر داستان ما");
+
+	     Node animal = tts._TTSKb.addConcept("حیوان#n1");
+
+	     tts._TTSKb.addRelation(ourPigeon, animal, KnowledgeBase.HPR_ISA);
+
+	    
+
+	     //3: stating that our boy encountered the pigeon in our story
+
+//	     Node encounters =  tts._TTSKb.addConcept("مواجه شدن#v");
+//	     Node encounters =  tts._TTSKb.addConcept("دیدن#v5");	
+	     Node encounters =  tts._TTSKb.addConcept("دیدن#v5 [1]");
+
+	     tts._TTSKb.addRelation(ourBoy, ourPigeon, encounters);
+
+	    
+
+	     //4: asking what was the boy's emotion
+
+	     Node sense =  tts._TTSKb.addConcept("حس§n-14738");
+
+	    
+	     tts.checkSemanticReasoner1(ourBoy, sense, null);
+
+	     
+	     System.out.println(" ------------ END OF TESTING IMP ------ ");
+	     
+	}
+	
 	public static void main(String[] args) {
 		System.out.println("بسم الله الرحمن الرحیم و توکلت علی الله ");
 		
@@ -194,7 +238,9 @@ public class UI {
 
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ الحمدلله");
 		
-//		ui.testKB();
+		ui.testKB();
+		
+		ui.testKb2();
 	}
 }
 

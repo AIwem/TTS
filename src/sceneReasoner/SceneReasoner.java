@@ -560,10 +560,10 @@ public class SceneReasoner {
 
 		//-------------- phase 1 of enrichment: enriching Roles: --------------
 		ArrayList<Role> scene_roles = sceneModel.getRoles();
-		if(!Common.isEmpty(scene_roles))
-			for(Role role:scene_roles)
-				if(role != null)
-					enrichRole(storyModel, sceneModel, role);
+//		if(!Common.isEmpty(scene_roles))
+//			for(Role role:scene_roles)
+//				if(role != null)
+//					enrichRole(storyModel, sceneModel, role);
 				
 		//-------------- phase 2 of enrichment: enriching DynamicObjects: -----
 		
