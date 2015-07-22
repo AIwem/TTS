@@ -560,10 +560,10 @@ public class SceneReasoner {
 
 		//-------------- phase 1 of enrichment: enriching Roles: --------------
 		ArrayList<Role> scene_roles = sceneModel.getRoles();
-//		if(!Common.isEmpty(scene_roles))
-//			for(Role role:scene_roles)
-//				if(role != null)
-//					enrichRole(storyModel, sceneModel, role);
+		if(!Common.isEmpty(scene_roles))
+			for(Role role:scene_roles)
+				if(role != null)
+					enrichRole(storyModel, sceneModel, role);
 				
 		//-------------- phase 2 of enrichment: enriching DynamicObjects: -----
 		
@@ -589,6 +589,7 @@ public class SceneReasoner {
 	 * @param role guaranteed not to be null!
 	 */
 
+	
 	private void enrichRole(StoryModel stroyModel, SceneModel sceneModel, Role role){
 		
 		print("\n#################### enrich Role #################### ");
@@ -612,30 +613,34 @@ public class SceneReasoner {
 			{
 				System.out.println("-------" + ++countJustification + "--------");
 				System.out.println(justification);
-				
-				//It means that this action was effective in inferring this answer.
-				
+							
 				ArrayList<RoleAction> role_actions = role.getRole_actions();
 				
 				if(!Common.isEmpty(role_actions)){
+					
 					for(RoleAction action:role_actions){
 						
 						Node action_node = action._node;
-						
+			
+						//It means that this action was effective in inferring this answer.
 						if(justification.contains(action_node.getName())){
+							
 							System.out.println("\n" + action_node.getName() + "------- was effective in this inference.");
-							role.addRole_emotion(new RoleEmotion(sceneModel, answer.answer.getName(), answer.answer));
+							
+							RoleEmotion rolEmo = new RoleEmotion(sceneModel, answer.answer.getName(), answer.answer);
+							
+							role.addRole_emotion(rolEmo);
+							
+							action.setEmotion_in_action(rolEmo);
 						}
 						//It means that this action was not effective in inferring this answer.
 						else
 							System.out.println("\n" + action_node.getName() + "------- was notttttt effective in this inference.");
 						
-					}
+					}					
 				}
 			}
 		}	
-		
-		
 		//-------------
 		
 		
@@ -643,20 +648,21 @@ public class SceneReasoner {
 //		Word adjWord = new Word(sentence, null, -1, referent.getName(),POS.ADJ, DependencyRelationType.NPOSTMOD, mainPart._number, null, referent);
 		
 		/*
+		 * in barname avaz shod!
 		 * instantiate a default verb with EMOTION, MOOD, LOCATION, TIME capacities and enrich this first
 		 * 
 		 * enrich each RoleAction with its own visualCapacities
 		 *  
 		 * in postProcess phase of enrichment integrate these information together enshallah!
-		 */
-		
+		 */		
 		
 		ArrayList<RoleAction> role_actions = role.getRole_actions();
 		
 		if(!Common.isEmpty(role_actions)){
+			
 			for(RoleAction action:role_actions){	
 				
-				Node role_node = role._node;
+				Node role_node = role._node;		
 				Node action_node = action._node;				
 				
 				if(role_node == null || action_node == null){
@@ -671,14 +677,14 @@ public class SceneReasoner {
 					ArrayList<Node> visual_capacities = action_word.getVisual_capacities();
 					
 					if(!Common.isEmpty(visual_capacities)){
-						
-						
+									
 						print(action_word + " visual capacities are: " + visual_capacities);
 						
 						for(Node capacity:visual_capacities){
 							
-							// generate a query for each of this Role's actions to enrich it. 
-							ArrayList<PlausibleAnswer> answers2 = _ttsEngine.inferFromKB(capacity, role_node, null);
+							// generate a query for each of this Role's actions to enrich it.
+							//TODO: create the correct query: (capacity, action, null) ???!!!
+							ArrayList<PlausibleAnswer> answers2 = _ttsEngine.inferFromKB(capacity, action_node, null);
 							
 							print("Answers: " + answers.size());
 						

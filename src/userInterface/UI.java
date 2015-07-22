@@ -142,7 +142,7 @@ public class UI {
 	
 	private void testKB(){
 		
-		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~ testKB() ~~~~~~~~~~~~~~~~~~~~~");
+		System.out.println(" ------------ TESTING IMP1 ------------ ");
 		
 		//query: مواجه شدن#v(f˸نفر§n-13075)={f˸حیوان#n1} ?				
 		Node arg = tts._TTSKb.addConcept("نفر§n-13075");
@@ -156,7 +156,7 @@ public class UI {
 		desNode =  tts._TTSKb.addConcept("مواجه شدن#v");
 		ref = tts._TTSKb.addConcept("حیوان#n1");
 		
-		tts.checkSemanticReasoner1(arg, desNode, ref);
+//		tts.checkSemanticReasoner1(arg, desNode, ref);
 		
 		//query: ISA(f˸پسر#n2 [1])={f˸نفر§n-13075} ?				
 		arg = tts._TTSKb.addConcept("پسر#n2 [1]");
@@ -177,7 +177,7 @@ public class UI {
 		
 		tts.checkSemanticReasoner1(arg, desNode, ref);
 		
-		System.out.println("~~~~~~~~~~~~~~~~~~ end of testKB() ~~~~~~~~~~~~~~~~~~~~~");
+		System.out.println(" ------------ END OF TESTING IMP1 ------ ");
 	}
 
 	private void testKb2() {
@@ -226,9 +226,70 @@ public class UI {
 	     tts.checkSemanticReasoner1(ourBoy, sense, null);
 
 	     
-	     System.out.println(" ------------ END OF TESTING IMP ------ ");
+	     System.out.println(" ------------ END OF TESTING IMP2 ------ ");
 	     
 	}
+
+	private void testKb3() {
+		
+		/*
+		 *	پسر#n2 [1] ISA پور§n-12058
+		 *	کبوتر#n1 [1] ISA کبوتر§n-24403
+		 *	دیدن#v5 [1] ISA رویت کردن§v-8581
+		 *	پسر#n2 [1] دیدن#v5 [1] کبوتر#n1 [1] 
+		 */
+
+	     System.out.println(" ------------ TESTING IMP3 ------------ ");
+	    
+
+	     // adding the required statements
+
+	     // 1: stating that 'the boy is a person'
+
+	     Node ourBoy = tts._TTSKb.addConcept("پسر#n2 [1]",false);
+
+	     Node person = tts._TTSKb.addConcept("پور§n-12058",false);
+
+	     tts._TTSKb.addRelation(ourBoy, person, KnowledgeBase.HPR_ISA);
+
+	    
+
+	     //2: stating that a pigeon is an animal
+
+	     Node ourPigeon = tts._TTSKb.addConcept("کبوتر#n1 [1]",false);
+
+	     Node animal = tts._TTSKb.addConcept("کبوتر§n-24403",false);
+
+	     tts._TTSKb.addRelation(ourPigeon, animal, KnowledgeBase.HPR_ISA);
+
+	    
+
+	     //3: stating that our boy encountered the pigeon in our story
+
+//	     Node encounters =  tts._TTSKb.addConcept("مواجه شدن#v");
+//	     Node encounters =  tts._TTSKb.addConcept("دیدن#v5");	
+	     Node ourEncounters =  tts._TTSKb.addConcept("دیدن#v5 [1]",false);
+	     
+	     Node encounters =  tts._TTSKb.addConcept("رویت کردن§v-8581",false);
+	     
+	     tts._TTSKb.addRelation(ourEncounters, encounters, KnowledgeBase.HPR_ISA);
+	     
+	     tts._TTSKb.addRelation(ourBoy, ourPigeon, ourEncounters);
+
+	    
+
+	     //4: asking what was the boy's emotion
+
+	     Node sense =  tts._TTSKb.addConcept("حس§n-14738");
+
+	    
+	     tts.checkSemanticReasoner1(ourBoy, sense, null);
+
+	     
+	     System.out.println(" ------------ END OF TESTING IMP3 ------ ");
+	     
+	}
+		
 	
 	public static void main(String[] args) {
 		System.out.println("بسم الله الرحمن الرحیم و توکلت علی الله ");
@@ -238,9 +299,11 @@ public class UI {
 
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ الحمدلله");
 		
-		ui.testKB();
+//		ui.testKB();
 		
-		ui.testKb2();
+//		ui.testKb2();
+		
+//		ui.testKb3();
 	}
 }
 

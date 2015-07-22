@@ -76,8 +76,8 @@ public class TTSEngine {
 		this.verbVisualCapacitiesPath = verbVisualCapacitiesPath;
 		
 		this._TTSKb = new KnowledgeBase();
-		this._re = new SemanticReasoner(_TTSKb, ExecutionMode.RELEASE);
-		_re.setMaxReasoningDepth(20);
+		this._re = new SemanticReasoner(_TTSKb, ExecutionMode.DEBUG);
+		_re.setMaxReasoningDepth(17);
 		_re.setMaximumAnswers(1);
 		
 		loadKb();
