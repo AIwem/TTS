@@ -597,7 +597,7 @@ public class SceneReasoner {
 		Node emotion = _kb.addConcept(general_visual_capacity_emotion, false);
 		
 		// generate a query for emotion visual capacity of this Role to enrich it. 
-		ArrayList<PlausibleAnswer> answers = _ttsEngine.inferFromKB(emotion, role._node, null);
+		ArrayList<PlausibleAnswer> answers = _ttsEngine.inferRuleFromKB(emotion, role._node, null);
 		
 		print("Answers: " + answers.size());
 	
@@ -655,7 +655,7 @@ public class SceneReasoner {
 		 *  
 		 * in postProcess phase of enrichment integrate these information together enshallah!
 		 */		
-		
+	/* TODO: comment for speeding up!	
 		ArrayList<RoleAction> role_actions = role.getRole_actions();
 		
 		if(!Common.isEmpty(role_actions)){
@@ -715,16 +715,16 @@ public class SceneReasoner {
 					}					
 				}
 				
-				/*
-				 * action_word = scene.getWord(action_node);
-				 *   
-				 * for(action_word.visual_capacities)
-				 * 	query()
-				 * 
-				 */
+				
+//				 action_word = scene.getWord(action_node);
+//				    
+//				  for(action_word.visual_capacities)
+//				  	query()
+//				  
+				 
 			}				
 		}
-		
+*/
 		print("\n#################### end of enrich Role ############# ");
 	}
 }

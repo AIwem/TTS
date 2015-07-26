@@ -77,7 +77,7 @@ public class TTSEngine {
 		
 		this._TTSKb = new KnowledgeBase();
 		this._re = new SemanticReasoner(_TTSKb, ExecutionMode.DEBUG);
-		_re.setMaxReasoningDepth(17);
+		_re.setMaxReasoningDepth(15);
 		_re.setMaximumAnswers(1);
 		
 		loadKb();
@@ -174,7 +174,7 @@ public class TTSEngine {
 		
 		System.out.print(pq.toString() + " ... ");
 		
-		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
+		ArrayList<PlausibleAnswer> answers = _re.answerQuestionByRule(pq);
 		
 		System.out.println("done");
 		
@@ -234,7 +234,7 @@ public class TTSEngine {
 //		print("\tThroughput: " + (_re.totalCalls / _re.reasoningTime) * 1000 + " inference/s");
 	}
 
-	public ArrayList<PlausibleAnswer> inferFromKB(Node descriptor, Node argument, Node referent){
+	public ArrayList<PlausibleAnswer> inferRuleFromKB(Node descriptor, Node argument, Node referent){
 		PlausibleQuestion pq = new PlausibleQuestion();
 		pq.argument = argument;		
 		pq.referent = referent;
@@ -242,7 +242,7 @@ public class TTSEngine {
 		
 		print("\nQuestion: " + pq.argument + " -->" + pq.descriptor + " --> " + pq.referent);
 		
-		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);		
+		ArrayList<PlausibleAnswer> answers = _re.answerQuestionByRule(pq);		
 
 		return answers;		
 	}
@@ -255,9 +255,12 @@ public class TTSEngine {
 		
 		print("\nQuestion: " + pq.argument + " -->" + pq.descriptor + " --> " + pq.referent);
 		
-		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);		
-		
+		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
+				
 		print("Answers: " + answers.size());
+		
+		print("\tInferences: " + _re.totalCalls);
+		print("\tTime: " + _re.reasoningTime / 100 + " ms");
 		
 		int count = 0;
 		for (PlausibleAnswer answer: answers)

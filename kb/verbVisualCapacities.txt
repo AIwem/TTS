@@ -38,7 +38,7 @@
 21	f˸دویدن§v-8577	VC	SPEED
 22	f˸دویدن§v-8577	VC	FROM
 23	f˸دویدن§v-8577	VC	TO
-#24	f˸رویت کردن§v-8581	VC	ff
+24	f˸رویت کردن§v-8581	VC	ff
 #
 #adjective#a	f˸ISA	f˸کلمه§n-13058
 #mozaf#a	f˸ISA	f˸کلمه§n-13058

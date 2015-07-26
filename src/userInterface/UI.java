@@ -156,7 +156,7 @@ public class UI {
 		desNode =  tts._TTSKb.addConcept("مواجه شدن#v");
 		ref = tts._TTSKb.addConcept("حیوان#n1");
 		
-//		tts.checkSemanticReasoner1(arg, desNode, ref);
+		tts.checkSemanticReasoner1(arg, desNode, ref);
 		
 		//query: ISA(f˸پسر#n2 [1])={f˸نفر§n-13075} ?				
 		arg = tts._TTSKb.addConcept("پسر#n2 [1]");
@@ -181,6 +181,31 @@ public class UI {
 	}
 
 	private void testKb2() {
+		
+		System.out.println(" ------------ TESTING IMP ------------ ");
+		
+		// adding the required statements
+		// 1: stating that 'the boy is a person'
+		Node ourBoy = tts._TTSKb.addConcept("پسر داستان ما");
+		Node person = tts._TTSKb.addConcept("نفر§n-13075");
+		tts._TTSKb.addRelation(ourBoy, person, KnowledgeBase.HPR_ISA);
+		
+		//2: stating that a pigeon is an animal
+		Node ourPigeon = tts._TTSKb.addConcept("کفتر داستان ما");
+		Node animal = tts._TTSKb.addConcept("حیوان#n1"); 
+		tts._TTSKb.addRelation(ourPigeon, animal, KnowledgeBase.HPR_ISA);
+		
+		//3: stating that our boy encountered the pigeon in our story
+		Node encounters =  tts._TTSKb.addConcept("مواجه شدن#v");
+		tts._TTSKb.addRelation(ourBoy, ourPigeon, encounters);
+		
+		//4: asking what was the boy's emotion
+		Node sense =  tts._TTSKb.addConcept("حس§n-14738");
+		
+		tts.checkSemanticReasoner1(ourBoy, sense, null);
+	}
+
+	private void testKb2_2() {
 
 
 	     System.out.println(" ------------ TESTING IMP ------------ ");
