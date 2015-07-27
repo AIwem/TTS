@@ -590,6 +590,7 @@ public class SceneReasoner {
 	 */
 
 	
+	@SuppressWarnings("unused")
 	private void enrichRole(StoryModel stroyModel, SceneModel sceneModel, Role role){
 		
 		print("\n#################### enrich Role #################### ");
@@ -597,7 +598,7 @@ public class SceneReasoner {
 		Node emotion = _kb.addConcept(general_visual_capacity_emotion, false);
 		
 		// generate a query for emotion visual capacity of this Role to enrich it. 
-		ArrayList<PlausibleAnswer> answers = _ttsEngine.inferRuleFromKB(emotion, role._node, null);
+		ArrayList<PlausibleAnswer> answers = new ArrayList<PlausibleAnswer>();//_ttsEngine.inferRuleFromKB(emotion, role._node, null);
 		
 		print("Answers: " + answers.size());
 	

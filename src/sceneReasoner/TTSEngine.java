@@ -174,7 +174,7 @@ public class TTSEngine {
 		
 		System.out.print(pq.toString() + " ... ");
 		
-		ArrayList<PlausibleAnswer> answers = _re.answerQuestionByRule(pq);
+		ArrayList<PlausibleAnswer> answers = _re.answerQuestion(pq);
 		
 		System.out.println("done");
 		
