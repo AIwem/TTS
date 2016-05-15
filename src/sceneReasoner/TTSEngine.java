@@ -77,7 +77,7 @@ public class TTSEngine {
 		
 		this._TTSKb = new KnowledgeBase();
 		this._re = new SemanticReasoner(_TTSKb, ExecutionMode.DEBUG);
-		_re.setMaxReasoningDepth(17);
+		_re.setMaxReasoningDepth(12);
 		_re.setMaximumAnswers(1);
 		
 		loadKb();

@@ -1,0 +1,13 @@
+
+primarySceneModel
+roles= [
+	[پسر#n2 [1]= پسرک role_actions=  [دیدن#v5 [1]=  دید] role_goals=    [] role_emotions= [] role_moods=    [خردسال#a1 [1]=  خردسال#a1 [1]]]]
+dynamic_objs= [کبوتر#n1 [1]=  کبوتر object_actions=  [] object_states=  [یک#n1 [1]=  یک, زخمی#a1 [1]=  زخمی]]
+static_objs= 
+location= [راه#n9 [1]=  راه]
+alternativeLocations= [[راه#n9 [1]=  راه], [خانه#n10 [1]=  خانه]]
+time= [امروز#n1 [1]=  امروز]
+alternativeTimes= [[امروز#n1 [1]=  امروز]]
+scene_goals= []
+scene_emotions= []]
+
