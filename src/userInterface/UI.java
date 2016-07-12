@@ -324,7 +324,7 @@ public class UI {
 
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ الحمدلله");
 		
-		ui.testKB();
+//		ui.testKB();
 		
 //		ui.testKb2();
 		

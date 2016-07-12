@@ -6,6 +6,7 @@ import sceneElement.Location;
 import sceneElement.Role;
 import sceneElement.RoleAction;
 import sceneElement.RoleEmotion;
+import sceneElement.RoleMood;
 import sceneElement.Time;
 import model.MainSemanticTag;
 import model.SceneModel;
@@ -36,7 +37,7 @@ public class SceneReasoner {
 	private TTSEngine _ttsEngine = null;
 	
 	private String general_visual_capacity_emotion = "f˸حس§n-14738";	
-	private String general_visual_capacity_mood = "f˸وضعیت§n-12745";
+	private String general_visual_capacity_state = "f˸وضعیت§n-12745";
 	
 	public SceneReasoner(KnowledgeBase kb, SemanticReasoner re, TTSEngine ttsEngine){
 		this._kb = kb;
@@ -580,25 +581,23 @@ public class SceneReasoner {
 		//-------------- phase 8 of enrichment: enriching SceneGoals: ---------				
 
 	}
-	
 
 	/**
-	 * 
-	 * @param storyModel guaranteed not to be null!
 	 * @param sceneModel guaranteed not to be null!
 	 * @param role guaranteed not to be null!
 	 */
-
-	
-	@SuppressWarnings("unused")
-	private void enrichRole(StoryModel stroyModel, SceneModel sceneModel, Role role){
-		
-		print("\n#################### enrich Role #################### ");
+	private void inferEmotion(SceneModel sceneModel, Role role){
+				
+		print("\n==================== infer emotion ==================");
 		
 		Node emotion = _kb.addConcept(general_visual_capacity_emotion, false);
 		
+		//-------------inferring emotion --------------------------------
+		
+		//TODO: comment for speeding up!!!
 		// generate a query for emotion visual capacity of this Role to enrich it. 
-		ArrayList<PlausibleAnswer> answers = new ArrayList<PlausibleAnswer>();//_ttsEngine.inferRuleFromKB(emotion, role._node, null);
+		ArrayList<PlausibleAnswer> answers = _ttsEngine.inferRuleFromKB(emotion, role._node, null);
+//		ArrayList<PlausibleAnswer> answers = new ArrayList<PlausibleAnswer>();
 		
 		print("Answers: " + answers.size());
 	
@@ -610,53 +609,151 @@ public class SceneReasoner {
 			ArrayList<String> justifications = answer.GetTechnicalJustifications();
 			
 			int countJustification = 0;
-			for (String justification: justifications)
-			{
-				System.out.println("-------" + ++countJustification + "--------");
-				System.out.println(justification);
-							
-				ArrayList<RoleAction> role_actions = role.getRole_actions();
-				
-				if(!Common.isEmpty(role_actions)){
-					
-					for(RoleAction action:role_actions){
-						
-						Node action_node = action._node;
+			for (String justification: justifications)			
+				System.out.println("-------" + ++countJustification + "--------\n" + justification);
+										
+		}
+		
+		count = 0;
+		for (PlausibleAnswer answer: answers)
+		{
+			System.out.println("\n" + ++count + ". " + answer.toString() + ">>>>>>>>>>>>>>>>>>");
 			
+			ArrayList<String> justifications = answer.GetTechnicalJustifications();
+			
+			ArrayList<RoleAction> role_actions = role.getRole_actions();
+			
+			if(!Common.isEmpty(role_actions)){
+				
+				for(RoleAction action:role_actions){
+					
+					Node action_node = action._node;
+					
+					boolean wasEffective = false;
+					
+					int countJustification = 0;
+					for (String justification: justifications)
+					{
 						//It means that this action was effective in inferring this answer.
 						if(justification.contains(action_node.getName())){
 							
-							System.out.println("\n" + action_node.getName() + "------- was effective in this inference.");
+							System.out.println("\n" + action_node.getName() + "------- was effective in infering:" + answer.toString() + " justification: " + countJustification);
 							
 							RoleEmotion rolEmo = new RoleEmotion(sceneModel, answer.answer.getName(), answer.answer);
 							
 							role.addRole_emotion(rolEmo);
 							
 							action.setEmotion_in_action(rolEmo);
-						}
-						//It means that this action was not effective in inferring this answer.
-						else
-							System.out.println("\n" + action_node.getName() + "------- was notttttt effective in this inference.");
-						
-					}					
+							
+							wasEffective = true;
+							
+							break;
+						}						
+					}
+					//It means that this action was not effective in inferring this answer.
+					if(!wasEffective)
+						System.out.println("\n" + action_node.getName() + "------- was notttttt effective in  infering:" + answer.toString() + " justification: " + countJustification);
 				}
 			}
-		}	
-		//-------------
+		}
+				
+		print("\n==================== end of infer emotion ===========");
+	}
+
+	
+	/**
+	 * @param sceneModel guaranteed not to be null!
+	 * @param role guaranteed not to be null!
+	 */
+	private void inferState(SceneModel sceneModel, Role role){
+				
+		print("\n==================== infer state ====================");
 		
+		Node state = _kb.addConcept(general_visual_capacity_state, false);
 		
-//		Word def_verb = new Word(null, null, -1, default_verb_name, POS.V, DependencyRelationType.ROOT, -1, null, null);
-//		Word adjWord = new Word(sentence, null, -1, referent.getName(),POS.ADJ, DependencyRelationType.NPOSTMOD, mainPart._number, null, referent);
+		//-------------inferring state --------------------------------
 		
-		/*
-		 * in barname avaz shod!
-		 * instantiate a default verb with EMOTION, MOOD, LOCATION, TIME capacities and enrich this first
-		 * 
-		 * enrich each RoleAction with its own visualCapacities
-		 *  
-		 * in postProcess phase of enrichment integrate these information together enshallah!
-		 */		
-	/* TODO: comment for speeding up!	
+		//TODO: comment for speeding up!!!
+		// generate a query for state visual capacity of this Role to enrich it. 
+		ArrayList<PlausibleAnswer> answers = _ttsEngine.inferRuleFromKB(state, role._node, null);
+//		ArrayList<PlausibleAnswer> answers = new ArrayList<PlausibleAnswer>();
+		
+		print("Answers: " + answers.size());
+	
+		int count = 0;
+		for (PlausibleAnswer answer: answers)
+		{
+			System.out.println("\n" + ++count + ". " + answer.toString() + ">>>>>>>>>>>>>>>>>>");
+			
+			ArrayList<String> justifications = answer.GetTechnicalJustifications();
+			
+			int countJustification = 0;
+			for (String justification: justifications)			
+				System.out.println("-------" + ++countJustification + "--------\n" + justification);
+										
+		}
+		
+		count = 0;
+		for (PlausibleAnswer answer: answers)
+		{
+			System.out.println("\n" + ++count + ". " + answer.toString() + ">>>>>>>>>>>>>>>>>>");
+			
+			ArrayList<String> justifications = answer.GetTechnicalJustifications();
+			
+			ArrayList<RoleAction> role_actions = role.getRole_actions();
+			
+			if(!Common.isEmpty(role_actions)){
+				
+				for(RoleAction action:role_actions){
+					
+					Node action_node = action._node;
+					
+					boolean wasEffective = false;
+					
+					int countJustification = 0;
+					for (String justification: justifications)
+					{
+						//It means that this action was effective in inferring this answer.
+						if(justification.contains(action_node.getName())){
+							
+							System.out.println("\n" + action_node.getName() + "------- was effective in infering:" + answer.toString() + " justification: " + countJustification);
+							
+							RoleMood rolstat = new RoleMood(sceneModel, answer.answer.getName(), answer.answer);
+							
+							role.addRole_mood(rolstat);
+							
+							action.setMood_in_action(rolstat);
+							
+							wasEffective = true;
+							
+							break;
+						}						
+					}
+					//It means that this action was not effective in inferring this answer.
+					if(!wasEffective)
+						System.out.println("\n" + action_node.getName() + "------- was notttttt effective in infering:" + answer.toString() + " justification: " + countJustification);
+				}
+			}
+		}
+		print("\n==================== end of infer state =============");
+	}
+
+	/**
+	 * 
+	 * @param storyModel guaranteed not to be null!
+	 * @param sceneModel guaranteed not to be null!
+	 * @param role guaranteed not to be null!
+	 */	
+	private void enrichRole(StoryModel stroyModel, SceneModel sceneModel, Role role){
+		
+		print("\n#################### enrich Role ####################");
+		
+		inferEmotion(sceneModel, role);
+	
+		inferState(sceneModel, role);
+		
+		//-------------enriching visual capacities ----------------------
+			
 		ArrayList<RoleAction> role_actions = role.getRole_actions();
 		
 		if(!Common.isEmpty(role_actions)){
@@ -685,47 +782,28 @@ public class SceneReasoner {
 							
 							// generate a query for each of this Role's actions to enrich it.
 							//TODO: create the correct query: (capacity, action, null) ???!!!
-							ArrayList<PlausibleAnswer> answers2 = _ttsEngine.inferFromKB(capacity, action_node, null);
-							
+//							ArrayList<PlausibleAnswer> answers = _ttsEngine.inferRuleFromKB(capacity, action_node, null);
+							ArrayList<PlausibleAnswer> answers = new ArrayList<PlausibleAnswer>();
 							print("Answers: " + answers.size());
 						
-							int count2 = 0;
+							int count = 0;
 							for (PlausibleAnswer answer: answers)
 							{
-								System.out.println("\n\n" + ++count + ". " + answer.toString() + ">>>>>>>>>>>>>>>>>>");
+								System.out.println("\n" + ++count + ". " + answer.toString() + ">>>>>>>>>>>>>>>>>>");
 								
 								ArrayList<String> justifications = answer.GetTechnicalJustifications();
 								
 								int countJustification = 0;
-								for (String justification: justifications)
-								{
-									System.out.println("-------" + ++countJustification + "--------");
-									System.out.println(justification);
-									
-									//It means that this action was effective in inferring this answer.
-									if(justification.contains(action_node.getName())){
-										System.out.println("\n" + action_node.getName() + "------- was effective in this inference.");	
-									}
-									//It means that this action was not effective in inferring this answer.
-									else{
-										System.out.println("\n" + action_node.getName() + "------- was notttttt effective in this inference.");
-									}								
-								}
-							}							
-						}						
-					}					
-				}
-				
-				
-//				 action_word = scene.getWord(action_node);
-//				    
-//				  for(action_word.visual_capacities)
-//				  	query()
-//				  
+								for (String justification: justifications)			
+									System.out.println("-------" + ++countJustification + "--------\n" + justification);
+															
+							}
 				 
-			}				
+						}				
+					}
+				}	
+			}
 		}
-*/
 		print("\n#################### end of enrich Role ############# ");
 	}
 }
