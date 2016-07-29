@@ -77,7 +77,7 @@ public class TTSEngine {
 		
 		this._TTSKb = new KnowledgeBase();
 		this._re = new SemanticReasoner(_TTSKb, ExecutionMode.DEBUG);
-		_re.setMaxReasoningDepth(12);
+		_re.setMaxReasoningDepth(17);
 		_re.setMaximumAnswers(1);
 		
 		loadKb();
@@ -234,6 +234,13 @@ public class TTSEngine {
 //		print("\tThroughput: " + (_re.totalCalls / _re.reasoningTime) * 1000 + " inference/s");
 	}
 
+	/**
+	 * 
+	 * @param descriptor
+	 * @param argument
+	 * @param referent
+	 * @return list of answers, not null
+	 */
 	public ArrayList<PlausibleAnswer> inferRuleFromKB(Node descriptor, Node argument, Node referent){
 		PlausibleQuestion pq = new PlausibleQuestion();
 		pq.argument = argument;		
@@ -242,7 +249,12 @@ public class TTSEngine {
 		
 		print("\nQuestion: " + pq.argument + " -->" + pq.descriptor + " --> " + pq.referent);
 		
-		ArrayList<PlausibleAnswer> answers = _re.answerQuestionByRule(pq);		
+		ArrayList<PlausibleAnswer> answers = _re.answerQuestionByRule(pq);	
+		
+		if (answers == null)
+		{
+			answers = new ArrayList<PlausibleAnswer>();
+		}
 
 		return answers;		
 	}
@@ -916,6 +928,8 @@ public class TTSEngine {
 			return ScenePart.STATIC_OBJECT;
 		if(pureNode.getName().equals("روی#n5"))
 			return ScenePart.LOCATION;
+		if(pureNode.getName().equals("خانه#n10"))
+			return ScenePart.LOCATION;		
 		//---------------------------------------			
 		
 		if(pureNode == null || pos == null || semanticTag == null)
@@ -968,6 +982,10 @@ public class TTSEngine {
 	 * @return the ScenePart of pureNode, otherwise ScenePart.UNKNOWN not null.
 	 */
 	private ScenePart getGeneralScenePart(Node pureNode) {
+		
+		//TODO: I must remove these lines!-------	
+		if(pureNode.getName().equals("خانه#n10"))
+			return ScenePart.LOCATION;	
 		
 		if(isDynamicObject(pureNode))
 			return ScenePart.DYNAMIC_OBJECT;

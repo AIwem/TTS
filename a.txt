@@ -1,0 +1,37 @@
+f3c358a HEAD@{0}: checkout: moving from 28b92dd3112b2fb0498492206962e4837fcf6160 to dev
+28b92dd HEAD@{1}: commit: testing another rule :(
+4e12ce6 HEAD@{2}: commit: بسم الله الرحمن الرحیم و توکلت علی الله
+0125b22 HEAD@{3}: checkout: moving from dev to 0125b2268f8518a38a14cb7ca068cd88a9eae277
+f3c358a HEAD@{4}: checkout: moving from 3277c297cdaf6723acd4304518fa2b6c45f1050f to dev
+3277c29 HEAD@{5}: checkout: moving from dev to 3277c297cdaf6723acd4304518fa2b6c45f1050f
+f3c358a HEAD@{6}: commit: بسم الله الرحمن الرحیم
+0125b22 HEAD@{7}: merge branch 'dev' of https://github.com/hasheminamin/TTS.git: Fast-forward
+456acd0 HEAD@{8}: commit: testing InferFromRule
+3277c29 HEAD@{9}: merge branch 'dev' of https://github.com/hasheminamin/TTS.git: Fast-forward
+4194f61 HEAD@{10}: commit: test
+155ac22 HEAD@{11}: commit: enrichRole
+11c667b HEAD@{12}: commit: in the middel of inference
+46d7a23 HEAD@{13}: merge branch 'dev' of https://github.com/hasheminamin/TTS.git: Fast-forward
+c129249 HEAD@{14}: commit: testing applying rule in line 102 without rule in line 101 in injuredPigeon8.txt KB.
+6a25606 HEAD@{15}: merge branch 'dev' of https://github.com/hasheminamin/TTS.git: Fast-forward
+6557fdb HEAD@{16}: commit: in the middle of testing reasoning!
+627636b HEAD@{17}: commit: instance naming changed successfully alhamdolelaah :)
+7c6470a HEAD@{18}: commit: before changeing instance naming pattern from  ... (index) to ... [index]
+c919f88 HEAD@{19}: commit: in the middle of testing reasoning 
+28addda HEAD@{20}: commit: preprocessor
+3a406aa HEAD@{21}: checkout: moving from testCXTime to dev
+8a2ae5f HEAD@{22}: checkout: moving from dev to testCXTime
+3a406aa HEAD@{23}: commit: little correction in  getSceneElem hasSceneElem
+39dd6bb HEAD@{24}: merge branch 'dev' of https://github.com/hasheminamin/TTS.git: Fast-forward
+bf3f48a HEAD@{25}: commit: multi sentence in a sentence is completed!
+d87a6b3 HEAD@{26}: commit: change in defineVerbRelation adding get_mosnad after get_object
+1531381 HEAD@{27}: commit: little correction in allocate_wsd
+018df6f HEAD@{28}: commit: before starting processes of multiple sentences
+fddfe3b HEAD@{29}: commit: phase 2 compeleted alhamdolelah :)
+0569d34 HEAD@{30}: commit: adding temp to gitignore
+a90ae17 HEAD@{31}: commit: الحمدلله داستان ۲ و۳ هم تست شد بیشتر مشکل در اصلاح اشکالات تحلیل نحوی بود که جمله به جمله اصلاح شد :)
+b1ea8d0 HEAD@{32}: commit: defineVerbRelation --> checked! الحمدلله
+019c17b HEAD@{33}: merge branch 'dev' of https://github.com/hasheminamin/TTS.git: Fast-forward
+43a39f5 HEAD@{34}: merge branch 'dev' of https://github.com/hasheminamin/TTS.git: Fast-forward
+e98aa88 HEAD@{35}: merge branch 'dev' of https://github.com/hasheminamin/TTS.git: Fast-forward
+16dd043 HEAD@{36}: 

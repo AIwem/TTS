@@ -26,7 +26,7 @@ public class UI {
 //	private String inputStoryFilePath = "inputStory/inputStrory3.txt";
 //	private String mainKbFilePath = "kb/farsnet--24.txt";
 	private String mainKbFilePath = "kb/farsnet.txt";
-	private String myKbFilePath = "kb/injuredPigeon8.txt";
+	private String myKbFilePath = "kb/injuredPigeon9.txt";
 	//private String myKbFilePath = "kb/injuredPigeon_simple.txt";
 	//private String myKbFilePath = "kb/injuredPigeon_SS.txt";
 	private String verbSemanticCapacitiesPath = "kb/verbSemanticCapacities.txt";
@@ -315,21 +315,6 @@ public class UI {
 	     
 	}
 		
-	private void testKb4() {
-		
-		System.out.println(" ------------ TESTING IMP4 ------------- ");
-		Node arg =  tts._TTSKb.addConcept("پسر");
-		Node ref =  tts._TTSKb.addConcept("حیوان");
-		Node des =  tts._TTSKb.addConcept("مواجه شدن");
-	
-	   
-	    tts.checkSemanticReasoner1(arg, des, ref);
-	
-	    
-	    System.out.println(" ------------ END OF TESTING IMP4 ------ ");    
-}
-	
-	
 	
 	public static void main(String[] args) {
 		System.out.println("بسم الله الرحمن الرحیم و توکلت علی الله ");
@@ -339,13 +324,11 @@ public class UI {
 
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ الحمدلله");
 		
-		ui.testKB();
+//		ui.testKB();
 		
 //		ui.testKb2();
 		
 //		ui.testKb3();
-		
-//		ui.testKb4();
 	}
 }
 

@@ -15,7 +15,7 @@ name:بزرگ			SEM:-				WSD:بزرگ#a1			num:4
 name:توی_Phrase		SEM:-				WSD:3_adjective#a_4	num:
 
 name:بچه‌ها			SEM:Arg0_AGENT		WSD:بچه#n6			num:6
-
+	
 name:در				SEM:ArgM_LOC		WSD:روی#n5			num:7
 name:تختخواب‌های		SEM:-				WSD:تخت#n1			num:8
 name:کوچکشان		SEM:-				WSD:کوچک#a1			num:9
@@ -89,7 +89,7 @@ ame:نوک‌پنجه			SEM:-				WSD:نوک#n1		num:10
 name:پایش			SEM:-				WSD:پا#n3		num:11
 name:روی_Phrase 	SEM:-				WSD:9_mozaf#n_11	num:
 
-name:ایستاده		SEM:-				WSD:ایستادن#v4	num:12
+name:ایستاده		SEM:-				WSD:ایستادن#v4	num:12v
 
 #------------------------------------------------------
 sentence:نوک بینی اش را به شیشه سرد پنجره چسبانده بود.

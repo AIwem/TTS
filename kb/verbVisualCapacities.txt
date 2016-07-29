@@ -9,14 +9,14 @@
 # 	s? TTS
 # All comment lines in this file start with a nubmber sign '#'
 # ------------------------------------------------------------------------------------------
-0	SPEED	f˸ISA	VC
-1	DIRECTION	f˸ISA	VC
-2	FROM	f˸ISA	VC
-3	TO	f˸ISA	VC
-4	LOCATION	f˸ISA	VC
-5	TIME	f˸ISA	VC
-6	f˸حس§n-14738	f˸ISA	VC
-7	f˸وضعیت§n-12745	f˸ISA	VC
+#0	SPEED	f˸ISA	VC
+#1	DIRECTION	f˸ISA	VC
+#2	FROM	f˸ISA	VC
+#3	TO	f˸ISA	VC
+#4	LOCATION	f˸ISA	VC
+#5	TIME	f˸ISA	VC
+#6	f˸حس§n-14738	f˸ISA	VC
+#7	f˸وضعیت§n-12745	f˸ISA	VC
 #
 #SPEED	value	f˸شتاب§n-11230
 #DIRECTION	value	f˸جانب§n-10268
@@ -29,16 +29,18 @@
 #
 #verb#v	f˸ISA	f˸کلمه§n-13058
 #
-#10	verb#v	VC	LOCATION
-#11	verb#v	VC	TIME
-12	verb#v	VC	f˸حس§n-14738
-13	verb#v	VC	f˸وضعیت§n-12745
+#12	verb#v	VC	f˸حس§n-14738
+#13	verb#v	VC	f˸وضعیت§n-12745
+10	verb#v	VC	LOCATION
+11	verb#v	VC	TIME
 #
 20	f˸دویدن§v-8577	VC	DIRECTION
 21	f˸دویدن§v-8577	VC	SPEED
 22	f˸دویدن§v-8577	VC	FROM
 23	f˸دویدن§v-8577	VC	TO
 24	f˸رویت کردن§v-8581	VC	ff
+25	f˸صاحب شدن§v-8016	VC	fff
+26	f˸آغاز کردن§v-22017	VC	ffff
 #
 #adjective#a	f˸ISA	f˸کلمه§n-13058
 #mozaf#a	f˸ISA	f˸کلمه§n-13058
