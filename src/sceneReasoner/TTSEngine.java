@@ -149,7 +149,7 @@ public class TTSEngine {
 			_sr.postprocessTime(storyModel);
 			
 			//-------------- enriching primarySceneModels of different scenes previously added to storyModel ----------------
-			_sr.enrichStoryModel(storyModel);
+//			_sr.enrichStoryModel(storyModel);
 						
 			for(SceneModel scene:storyModel.getScenes())
 				writer.println("\nprimarySceneModel\n" + scene);

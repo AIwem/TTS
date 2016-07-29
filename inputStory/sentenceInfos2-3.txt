@@ -39,14 +39,14 @@ sentence:معلم از سعید، دوست محمد پرسید که او کجا�
 name:معلم		SEM:ARG0_AGENT		WSD:معلم#n1		num:1
 
 name:از			SEM:-				WSD:-			num:2
-name:سعید		SEM:ARG1_THEME		WSD:سعید#n		num:3
+name:سعید		SEM:ARG2_OBJ2		WSD:سعید#n		num:3
 
 name:دوست		SEM:-				WSD:-			num:4
 name:محمد		SEM:-				WSD:محمد#n		num:5
 
 name:پرسید		SEM:-				WSD:پرسیدن#v1	num:6
 
-name:که			SEM:ARG2_OBJ2		WSD:-			num:7
+name:که			SEM:ARG1_THEME		WSD:-			num:7
 
 #------------
 

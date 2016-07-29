@@ -1,6 +1,7 @@
 
 primarySceneModel
 roles= [
+<<<<<<< Updated upstream
 	[پسر#n2 [1]= پسرک role_actions=  [دیدن#v5 [1]=  دید, برداشتن#v1 [1]=  برداشت, شروع کردن#v1 [1]=  کرد, دویدن#v1 [1]=  دویدن] role_goals=    [] role_emotions= [کلافه§a-118=  کلافه§a-118] role_moods=    [خردسال#a1 [1]=  خردسال#a1 [1]]]]
 dynamic_objs= [کبوتر#n1 [1]=  کبوتر object_actions=  [] object_states=  [یک#n1 [1]=  یک, زخمی#a1 [1]=  زخمی]]
 static_objs= 
@@ -34,6 +35,40 @@ static_objs= [تیر#n4 [1]=  تیروکمان object_states=  [شکستن#v4 [1
 location= [اتاق#n2 [1]=  اتاقش]
 alternativeLocations= []
 time= [امروز#n1 [1]=  امروز]
+=======
+	[بچه#n6 [1]= بچه‌ها role_actions=  [به خواب رفتن#v1 [1]=  رفته‌بودند] role_goals=    [] role_emotions= [] role_moods=    []]]
+dynamic_objs= [صدا#n2 [1]=  صدای object_actions=  [] object_states=  [بلند#a2 [1]=  بلند, زنگ#n3 [1]=  زنگ‌ها]]
+static_objs= [شب#n3 [1]=  شب object_states=  [کریسمس#n1 [1]=  کریسمس]]
+location= [خانه#n10 [1]=  خانه]
+alternativeLocations= [[خانه#n10 [1]=  خانه]]
+time= [یک‌باره#r1 [1]=  مرتبه]
+alternativeTimes= [[یک‌باره#r1 [1]=  مرتبه]]
+scene_goals= []
+scene_emotions= []]
+
+
+primarySceneModel
+roles= [
+	[دختر#n3 [1]= دختری role_actions=  [پریدن#v6 [1]=  پرید, رفتن#v7 [1]=  رفت, ایستادن#v4 [1]=  ایستاده, چسباندن#v3 [1]=  چسبانده‌بود, نگاه کردن#v2 [1]=  میکرد] role_goals=    [] role_emotions= [] role_moods=    [صورت#n3 [1]=  صورت]]]
+dynamic_objs= 
+static_objs= [پا#n3 [1]=  پای object_states=  [برهنه#a1 [1]=  برهنه]][تخت#n1 [1]=  تخت object_states=  []][نوک#n1 [1]=  نوک‌پنجه object_states=  [بینی#n1 [1]=  بینی]][شیشه#n3 [1]=  شیشه object_states=  [سرد#a2 [1]=  سرد, پنجره#n1 [1]=  پنجره]][چشم#n2 [1]=  چشم object_states=  [درشت#a1 [1]=  درشتش]]
+location= [روی#n5 [1]=  ازروی]
+alternativeLocations= [[روی#n5 [1]=  ازروی], [سمت#n6 [1]=  سمت], [پنجره#n1 [1]=  پنجره], [بیرون#n2 [1]=  بیرون]]
+time= [یک‌باره#r1 [1]=  مرتبه]
+alternativeTimes= []
+scene_goals= []
+scene_emotions= []]
+
+
+primarySceneModel
+roles= [
+	[بابا نوئل#n1 [1]= بابانویل role_actions=  [رسیدن#v8 [1]=  رسید] role_goals=    [] role_emotions= [] role_moods=    [سوار#n1 [1]=  سوار]]]
+dynamic_objs= [گوزن#n1 [1]=  گوزن object_actions=  [کشیدن#v1 [1]=  میکشیدند] object_states=  []]
+static_objs= [سورتمه#n1 [1]=  سورتمه object_states=  [دراز#a3 [1]=  درازی]]
+location= [راه#n9 [1]=  راه]
+alternativeLocations= [[راه#n9 [1]=  راه]]
+time= [یک‌باره#r1 [1]=  مرتبه]
+>>>>>>> Stashed changes
 alternativeTimes= []
 scene_goals= []
 scene_emotions= []]

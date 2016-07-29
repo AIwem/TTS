@@ -102,14 +102,14 @@ sentence:דÚבד ַׂ ׃Úםֿ¡ ֿז׃Ê דֽדֿ ׁ׃םֿ ˜ו ַז ˜ַּ׃Ê¿
 name:דÚבד		SEM:ARG0_AGENT		WSD:דÚבד#n1		num:1
 
 name:ַׂ			SEM:-				WSD:-			num:2
-name:׃Úםֿ		SEM:ARG1_THEME		WSD:׃Úםֿ#n		num:3
+name:׃Úםֿ		SEM:ARG2_OBJ2		WSD:׃Úםֿ#n		num:3
 
 name:ֿז׃Ê		SEM:-				WSD:-			num:4
 name:דֽדֿ		SEM:-				WSD:דֽדֿ#n		num:5
 
 name:ׁ׃םֿ		SEM:-				WSD:ׁ׃םֿה#v1	num:6
 
-name:˜ו			SEM:ARG2_OBJ2		WSD:-			num:7
+name:˜ו			SEM:ARG1_THEME		WSD:-			num:7
 
 #------------
 name:ַז			SEM:ARG1_PATIENT	WSD:דֽדֿ#n		num:8
