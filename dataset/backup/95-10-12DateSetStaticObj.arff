@@ -1,0 +1,62 @@
+%besme llahe rahmane rahim va tavakalto ala llah
+@relation StaticObj
+
+@attribute POS {V, ADJ, N, ADR, ADV, CONJ, NUM, POSTP, PR, PSUS, SUBR, PREP, PUNC, LATIN, ARAB, UNKNOWN}
+@attribute synTag {NE, APP, NCL, AJUCL, PARCL, TAM, NPRT, NPP, VPRT, COMPP, NPOSTMOD, NPREMOD, PUNC, SBJ, NVE, ENC, ADVRB, NADV, ADJADV, PRD, ACL, AVCL, VCL, AJPP, ADVPP, ADVC, NEZ, ADVEZ, PROG, MOS, MOZ, OBJ, OBJ2, VPP, MESU, AJCONJ, PCONJ, NCONJ, VCONJ, AVCONJ, POSDEP, PREDEP, APOSTMOD, APREMOD, ROOT}
+@attribute semTag {ARG0_AGENT, ARG0_CAUSER, ARG0_EXPERIENCER, ARG0_INITIATOR, ARG1_PATIENT, ARG1_THEME, ARG2_EXTEND, ARG2_OBJ2, ARG2_BENEFICIARY, ARG2_INSTRUMENT, ARG2_ATTRIBUTE, ARG2_GOAL_ENDSTATE, ARG3_SOURCE_STARTPOINT, ARG3_BENEFICIARY, ARG3_INSTRUMENT, ARG4_ATTRIBUTE, ARG4_ENDPOINT, ARG5, ArgM_COM, ArgM_LOC, ArgM_DIR,  ArgM_GOL, ArgM_MNR, ArgM_TMP, ArgM_EXT, ArgM_REC, ArgM_PRP, ArgM_CAU, ArgM_DIS, ArgM_MOD, ArgM_NEG, ArgM_ADV, ArgM_CND, ArgM_INS,NULL}	
+@attribute wsd {‰›—ßn-13075,„”»»ßn-13036,Ã«‰Ê—ßn-12239,Ã«‰_œ«—ßn-10393,”«Œ «—ßn-12875,„Êﬁ⁄Ì ßn-13554,Ã«ßn-12733,‘Ì¡ßn-12703,çÌ“ßn-10392,„«œÂßn-14032,„‘Œ’Âßn-12756,Œ’Ê’Ì _—Ê«‰Ìßn-12725,Ê«Õœ_“„«‰ßn-12631,œÊ—Â_“„«‰Ìßn-12603,›«’·Â_“„«‰Ìßn-12691,«‰œ«“Âßn-12768,—Œœ«œßn-13136,—«»ÿÂßn-13628,ê—ÊÂßn-12753,ê—ÊÂßn-13239,NULL}
+@attribute depended {YES, NO}
+@attribute class {staticObj, not_staticObj}
+
+@data
+%sentence:Å”—ò «„—Ê“ œ— —«Â Œ«‰Â Ìò ò»Ê — “Œ„Ì —« œÌœ.
+%
+N,SBJ,ARG0_EXPERIENCER,‰›—ßn-13075,NO,not_staticObj
+UNKNOWN,ADVRB,ArgM_TMP, Ê«Õœ_“„«‰ßn-12631,NO,not_staticObj
+N,ADVRB,ArgM_DIR, ‘Ì¡ßn-12703,NO,staticObj
+N,MOZ,NULL,Ã«ßn-12733,YES,staticObj
+NUM,NPREMOD,NULL, «‰œ«“Âßn-12768,YES,not_staticObj
+N,OBJ,ARG1_THEME, Ã«‰Ê—ßn-12239,NO,not_staticObj
+ADJ,NPOSTMOD,NULL, „‘Œ’Âßn-12756,YES,not_staticObj
+V,ROOT,NULL,—Œœ«œßn-13136,NO,not_staticObj
+%sentence:»·«›«’·Â ò»Ê — —« »—œ«‘ .
+%
+UNKNOWN,ADVRB, ArgM_TMP, ›«’·Â_“„«‰Ìßn-12691,NO, not_staticObj
+N,OBJ,ARG1_THEME, Ã«‰Ê—ßn-12239,NO, not_staticObj
+V,ROOT, NULL,—Œœ«œßn-13136,NO, not_staticObj
+%sentence:‘—Ê⁄ »Â œÊÌœ‰ »Â ”„  Œ«‰Â ò—œ.
+%
+N,NVE,NULL,NULL,NO, not_staticObj
+N,NPP, ARG1_THEME, —Œœ«œßn-13136,YES, not_staticObj
+N,NPP,ArgM_DIR,„Êﬁ⁄Ì ßn-13554,YES, not_staticObj
+N,MOZ,NULL, Ã«ßn-12733,YES, staticObj
+V,ROOT,NULL, —Œœ«œßn-13136,NO, not_staticObj
+%sentence:Ê«—œ Œ«‰Â ‘œ.
+%
+PREP,NVE,NULL,NULL,NO, not_staticObj
+N,POSDEP, ARG4_ENDPOINT, Ã«ßn-12733,YES, staticObj
+V,ROOT,NULL, —Œœ«œßn-13136,NO, not_staticObj
+%sentence:ò»Ê — —« »Â „«œ— ŒÊœ œ«œ.
+%
+N,OBJ, ARG1_THEME, Ã«‰Ê—ßn-12239,NO, not_staticObj
+N,VPP, ARG2_OBJ2, ‰›—ßn-13075,NO, not_staticObj
+PR,MOZ,NULL, ‰›—ßn-13075,YES, not_staticObj
+V,ROOT,NULL, —Œœ«œßn-13136,NO, not_staticObj
+%sentence:”Å” »Â ÿ—› « «ﬁ‘ œÊÌœ.
+%
+CONJ,VCONJ, ArgM_TMP, ›«’·Â_“„«‰Ìßn-12691,NO, not_staticObj
+N,VPP, ArgM_DIR, „Êﬁ⁄Ì ßn-13554,NO, not_staticObj
+N,MOZ,NULL, ”«Œ «—ßn-12875,YES, not_staticObj
+V,ROOT,NULL, —Œœ«œßn-13136,NO, not_staticObj
+%sentence: Ì—Êò„«‰ ŒÊœ —« »—œ«‘ .
+%
+N,OBJ,ARG1_THEME, ‘Ì¡ßn-12703,NO, staticObj
+PR,MOZ, NULL, ‰›—ßn-13075,YES, not_staticObj
+V,ROOT,NULL, —Œœ«œßn-13136,NO, not_staticObj
+%sentence:‘ò” .
+%
+V,ROOT, NULL, —Œœ«œßn-13136,NO, not_staticObj
+%sentence:œÊ— «‰œ«Œ .
+%
+N,NVE, NULL,NULL,YES, not_staticObj
+V,ROOT, NULL, —Œœ«œßn-13136,NO, not_staticObj

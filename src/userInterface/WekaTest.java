@@ -65,7 +65,23 @@ public class WekaTest {
 		WekaTest wt = new WekaTest();
 		
 		
-		BufferedReader datafile = readDataFile("dataset/trainingDate.arff");
+//		BufferedReader datafile = readDataFile("dataset/95-10-06DatasetStaticObj.arff");//stroy1
+//		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetStaticObj.arff");//story 1&2
+//		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetStaticObj.arff");//story1&2&3
+//		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetStaticObjState.arff");//story1&2&3
+//		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetRole.arff");//story1&2&3
+//		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetRoleAction.arff");//story1&2&3
+		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetRoleState.arff");//story1&2&3
+//		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetRoleIntent.arff");//story1&2&3
+//		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetDynamicObj.arff");//story1&2&3
+//		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetDynamicObjAction.arff");//story1&2&3
+//		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetDynamicObjState.arff");//story1&2&3
+//		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetLocation.arff");//story1&2&3
+//		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetTime.arff");//story1&2&3
+//		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetSceneGoal.arff");//story1&2&3
+//		
+		
+		
  
 		Instances data = new Instances(datafile);
 		data.setClassIndex(data.numAttributes() - 1);

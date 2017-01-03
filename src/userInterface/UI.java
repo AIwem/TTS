@@ -320,8 +320,8 @@ public class UI {
 		System.out.println("بسم الله الرحمن الرحیم و توکلت علی الله ");
 		
 		UI ui = new UI();
-		weka.gui.GUIChooser.main(args);
-		//StoryModel sm = ui.TTS();		
+//		weka.gui.GUIChooser.main(args);
+		StoryModel sm = ui.TTS();		
 
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ الحمدلله");
 		

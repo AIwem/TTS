@@ -4,14 +4,14 @@ name:معلم		SEM:ARG0_AGENT		WSD:معلم#n1		num:1
 
 name:وارد		SEM:-				WSD:-			num:2
 
-name:کلاس		SEM:Arg4_ENDPOINT	WSD:اتاق#n2		num:3
+name:کلاس		SEM:ARG4_ENDPOINT	WSD:اتاق#n2		num:3
 
 name:شد			SEM:-				WSD:وارد شدن#v2	num:4
 
 #------------------------------------------------------
 sentence:محمد امروز در کلاس نبود.
 
-name:محمد		SEM:Arg1_PATIENT	WSD:محمد#n		num:1
+name:محمد		SEM:ARGg1_PATIENT	WSD:محمد#n		num:1
 
 name:امروز		SEM:ArgM_TMP		WSD:امروز#n1	num:2
 
