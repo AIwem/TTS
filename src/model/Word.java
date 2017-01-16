@@ -119,7 +119,7 @@ public class Word {
 				
 		String[] parts = wStr.split("(\t)+");
 		
-		if(parts.length != 10){			
+		if(parts != null && parts.length != 10){			
 			MyError.error("Bad sentence information format " + wStr + " parts-num " + parts.length);
 			return;
 		}
@@ -503,16 +503,50 @@ public class Word {
  			rs += "\t";
  			if(_wordName != null) rs += "" + _wordName; 
  			else rs += "-";
- 			rs += "\t";
+ 			
+ 			int len = rs.length();
+ 			if(len < 6)
+ 				rs += "\t\t\t";
+ 			else
+ 				rs += "\t\t"; 			
+ 			 			
  			if(_gPOS != null) rs += "" + _gPOS;
- 			else rs += "-";
- 			rs += "\t";
+ 			else rs += "NULL";
+ 			
+ 			if(_gPOS.toString().length() < 3)
+ 				rs += "\t\t\t\t";
+ 			else
+ 				rs += "\t\t\t";
+ 			
  			if(_syntaxTag != null) rs += "" + _syntaxTag;
- 			else rs += "-";
- 			rs += "\t" + _srcOfSynTag_number;
+ 			else rs += "NULL"; 			
+ 			
+ 			len = rs.length();
+ 			if(len < 22)
+ 				rs += "\t\t\t";
+ 			else
+ 				rs += "\t\t";
+ 			
+ 			rs+=  _srcOfSynTag_number;
  			rs += "\n";
  			return rs;
  	}
+ 	 
+ 	 public String getStr4dataSet(int verbNum) {	 		
+			String rs = "";
+			if(_gPOS != null) rs += "" + _gPOS + ", ";
+			else rs += "NULL, ";
+			
+			if(_syntaxTag != null) rs += "" + _syntaxTag + ", ";
+			else rs += "NULL, ";
+			
+			if(_srcOfSynTag_number == 0 || _srcOfSynTag_number == verbNum)
+				rs += "NO";
+			else rs += "YES";			
+			
+			return rs;
+	}
+	 
  	 
  	public ArrayList<Word> getAdjectives() {
 		return adjectives;

@@ -1,0 +1,311 @@
+%sentence:شب کریسمس بود.
+%
+1	شب			N				MOS				3
+2	کریسمس		N				MOZ				1
+3	بود			V				ROOT			0
+4	.			PUNC			PUNC			3
+
+----------
+1	شب			N				MOS				3
+2	کریسمس		N				MOZ				1
+
+4	.			PUNC			PUNC			3
+
+3	بود			V				ROOT			0
+
+
+%sentence:توی یک خانه بزرگ، بچه ها در تخت خواب های کوچکشان به خواب رفته بودند.
+%
+1	توی			PREP			ADVRB			12
+2	یک			NUM				NPREMOD			3
+3	خانه		N				POSDEP			1
+4	بزرگ		ADJ				NPOSTMOD		3
+5	،			PUNC			PUNC			4
+6	بچه‌ها		N				SBJ				12
+7	در			PREP			ADVRB			12
+8	تختخواب‌های	N				POSDEP			7
+9	کوچکشان		ADJ				NPOSTMOD		8
+10	به			PREP			VPP				12
+11	خواب		N				POSDEP			10
+12	رفته‌بودند	V				ROOT			0
+
+----------
+1	توی			PREP			ADVRB			12
+3	خانه		N				POSDEP			1
+2	یک			NUM				NPREMOD			3
+4	بزرگ		ADJ				NPOSTMOD		3
+5	،			PUNC			PUNC			4
+
+6	بچه‌ها		N				SBJ				12
+
+7	در			PREP			ADVRB			12
+8	تختخواب‌های	N				POSDEP			7
+9	کوچکشان		ADJ				NPOSTMOD		8
+
+10	به			PREP			VPP				12
+11	خواب		N				POSDEP			10
+
+12	رفته‌بودند	V				ROOT			0
+
+
+%sentence:یک مرتبه صدای بلند زنگ‌ها به گوش رسید.
+%
+1	یک			NUM				NPREMOD			2
+2	مرتبه		N				ADVRB			8
+3	صدای		N				SBJ				8
+4	بلند		ADJ				NPOSTMOD		3
+5	زنگ‌ها		N				MOZ				3
+6	به			PREP			VPP				8
+7	گوش			N				POSDEP			6
+8	رسید		V				ROOT			0
+9	.			PUNC			PUNC			8
+
+----------
+2	مرتبه		N				ADVRB			8
+1	یک			NUM			NPREMOD				2
+
+3	صدای		N				SBJ				8
+4	بلند		ADJ			NPOSTMOD			3
+5	زنگ‌ها		N				MOZ				3
+
+6	به			PREP			VPP				8
+7	گوش			N				POSDEP			6
+
+9	.			PUNC			PUNC			8
+
+8	رسید		V				ROOT			0
+
+
+%sentence:دختری با یک جفت پای برهنه از روی تخت بیرون پرید.
+%
+1	دختری		N				SBJ				11
+2	با			PREP			ADVRB			11
+3	یک			NUM				NPREMOD			4
+
+%4	جفت			N				POSDEP			2 --------> before correction
+4	جفت			N				MESU			5
+
+%5	پای			N				SBJ				11--------> before correction
+5	پای			N				POSDEP			2
+
+6	برهنه		ADJ				NPOSTMOD		5
+
+%7	ازروی		N				MOZ				5 --------> before correction
+7	از			PREP			VPP				11
+8	روی			N				POSDEP			7
+
+%8	تخت			N				MOZ				7 --------> before correction
+8	تخت			N				MOZ				8
+
+%9	بیرون		N				ADVC			11--------> before correction
+10	بیرون		N				ADVC			11
+
+%10	پر			ADJ			MOS					11--------> before correction
+%11	ید			V				ROOT			0 --------> before correction
+11	پرید		V				ROOT			0
+
+12	.			PUNC			PUNC			11
+
+----------
+1	دختری		N				SBJ				11
+
+2	با			PREP			ADVRB			11
+3	یک			NUM				NPREMOD			4
+%4	جفت			N				POSDEP			2 --------> before correction
+4	جفت			N				MESU			5
+%5	پای			N				SBJ				11--------> before correction
+5	پای			N				POSDEP			2
+6	برهنه		ADJ				NPOSTMOD		5
+
+%7	ازروی		N				MOZ				5 --------> before correction
+7	از			PREP			VPP				11
+8	روی			N				POSDEP			7
+
+%8	تخت			N				MOZ				7 --------> before correction
+8	تخت			N				MOZ				8
+
+%9	بیرون		N				ADVC			11--------> before correction
+10	بیرون		N				ADVC			11
+
+12	.			PUNC			PUNC			11
+
+%10	پر			ADJ			MOS					11--------> before correction
+%11	ید			V				ROOT			0 --------> before correction
+11	پرید		V				ROOT			0
+
+
+%sentence:به سمت پنجره رفت.
+%
+1	به			PREP			VPP				4
+2	سمت			N				POSDEP			1
+3	پنجره		N				MOZ				2
+4	رفت			V				ROOT			0
+5	.			PUNC			PUNC			4
+
+----------
+1	به			PREP			VPP				4
+2	سمت			N				POSDEP			1
+3	پنجره		N				MOZ				2
+
+5	.			PUNC			PUNC			4
+
+4	رفت			V				ROOT			0
+
+
+%sentence:با یک صورت کوچولو، با موهای فرفری روی نوک پنجه پایش ایستاده.
+%
+1	با			PREP			ADVRB			13
+2	یک			NUM				NPREMOD			3
+3	صورت		N				POSDEP			1
+4	کوچولو		ADJ				NPOSTMOD		3
+5	،			PUNC			PUNC			4
+6	با			PREP			ADVRB			13
+7	موهای		N				POSDEP			6
+8	فرفری		ADJ				NPOSTMOD		7
+
+%9	روی			PREP			NPP				11--------> before correction
+9	روی			PREP			VPP				13
+
+%10	نوک‌پنجه		N				POSDEP			9 --------> before correction
+10	نوک			N				POSDEP			9
+11	‌پنجه		N				MOZ				10
+
+%11	پایش		N				NVE				12--------> before correction
+12	پایش		N				MOZ				11
+
+%12	ایستاده		V				ROOT			0--------> before correction
+13	ایستاده		V				ROOT			0
+14	.			PUNC			PUNC			13
+
+----------
+1	با			PREP			ADVRB			13
+3	صورت		N				POSDEP			1
+2	یک			NUM				NPREMOD			3
+4	کوچولو		ADJ				NPOSTMOD		3
+5	،			PUNC			PUNC			4
+
+6	با			PREP			ADVRB			13
+7	موهای		N				POSDEP			6
+8	فرفری		ADJ				NPOSTMOD		7
+
+%9	روی			PREP			NPP				11--------> before correction
+9	روی			PREP			VPP				13
+%10	نوک‌پنجه		N				POSDEP			9 --------> before correction
+10	نوک			N				POSDEP			9
+11	‌پنجه		N				MOZ				10
+%11	پایش		N				NVE				12--------> before correction
+12	پایش		N				MOZ				11
+
+14	.			PUNC			PUNC			13
+
+%12	ایستاده		V				ROOT			0--------> before correction
+13	ایستاده		V				ROOT			0
+
+
+%sentence:نوک بینی اش را به شیشه سرد پنجره چسبانده بود.
+%
+1	نوک			N				SBJ			9
+2	بینی		N				MOZ			1
+3	اش			PR				PREDEP			4
+4	را			POSTP			OBJ			9
+5	به			PREP			VPP			9
+6	شیشه		N				POSDEP			5
+7	سرد			ADJ			NPOSTMOD		6
+8	پنجره		N				NVE			9
+9	چسبانده‌بود		V				ROOT		0
+
+----------
+1	نوک			N				SBJ			9
+2	بینی		N				MOZ			1
+
+4	را			POSTP			OBJ			9
+3	اش			PR				PREDEP			4
+
+5	به			PREP			VPP			9
+6	شیشه		N				POSDEP			5
+7	سرد			ADJ			NPOSTMOD		6
+
+8	پنجره		N				NVE			9
+
+9	چسبانده‌بود		V				ROOT		0
+
+
+%sentence:با دو چشم درشتش بیرون را نگاه میکرد.
+%
+1	با			PREP			ADVRB			8
+2	دو			NUM			NPREMOD			3
+3	چشم			N				POSDEP			1
+4	درشتش		ADJ			NPOSTMOD		3
+5	بیرون		N				PREDEP			6
+6	را			POSTP			OBJ			8
+7	نگاه		N				NVE			8
+8	میکرد		V				ROOT			0
+9	.			PUNC			PUNC			8
+
+----------
+1	با			PREP			ADVRB			8
+3	چشم			N				POSDEP			1
+2	دو			NUM			NPREMOD			3
+4	درشتش		ADJ			NPOSTMOD		3
+
+6	را			POSTP			OBJ			8
+5	بیرون		N				PREDEP			6
+
+7	نگاه		N				NVE			8
+
+9	.			PUNC			PUNC			8
+
+8	میکرد		V				ROOT			0
+
+
+%sentence:بابا نوئل سوار بر سورتمه درازی از راه رسید.
+%
+1	بابانویل		N				SBJ			8
+2	سوار		N				SBJ			8
+3	بر			PREP			NPP			2
+4	سورتمه		N				POSDEP			3
+5	درازی		ADJ			NPOSTMOD		4
+6	از			PREP			VPP			8
+7	راه			N				POSDEP			6
+8	رسید		V				ROOT			0
+9	.			PUNC			PUNC			8
+
+----------
+1	بابانویل		N				SBJ			8
+
+2	سوار		N				SBJ			8
+3	بر			PREP			NPP			2
+4	سورتمه		N				POSDEP			3
+5	درازی		ADJ			NPOSTMOD		4
+
+6	از			PREP			VPP			8
+7	راه			N				POSDEP			6
+
+9	.			PUNC			PUNC			8
+
+8	رسید		V				ROOT			0
+
+
+%sentence:چند تا گوزن آن را میکشیدند.
+%
+1	چند			PREP			ADVRB			6
+2	تا			SUBR			POSDEP			1
+3	گوزن		N				PREDEP			5
+4	آن			PR				MOZ			3
+5	را			POSTP			OBJ			6
+6	میکشیدند		V				ROOT			0
+7	.			PUNC			PUNC			6
+
+----------
+1	چند			PREP			ADVRB			6
+2	تا			SUBR			POSDEP			1
+
+5	را			POSTP			OBJ			6
+3	گوزن		N				PREDEP			5
+4	آن			PR				MOZ			3
+
+7	.			PUNC			PUNC			6
+
+6	میکشیدند		V				ROOT			0
+
+

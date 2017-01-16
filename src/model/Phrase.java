@@ -44,8 +44,10 @@ public class Phrase {
 	 * @param newWord the newWord to be added to this Phrase _words.
 	 */
 	public void add_word(Word newWord) {
-		if(_words == null)
+		if(_words == null){
 			_words = new ArrayList<Word>();
+			size = 0;
+		}
 		
 		if(!_words.contains(newWord)){
 			_words.add(newWord);
@@ -85,10 +87,16 @@ public class Phrase {
 	
 	@Override
 	public String toString() {
-		String str = "Phrase with head: " + _headWord + " \n";
+		String str = "";//Phrase with head: " + _headWord + ", size: " + size + "\n";
 		for(Word w:_words)
-			str += w + "  ";
-		str += " size: " + size;
+			str += w.getStr2();	
+		return str;
+	}
+	
+	public String toString2() {
+		String str = "Phrase with head: " + _headWord + ", size: " + size + "\n";
+		for(Word w:_words)
+			str += w.getStr2() + "\n";	
 		return str;
 	}
 	

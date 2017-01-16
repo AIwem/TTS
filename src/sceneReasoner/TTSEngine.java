@@ -76,11 +76,11 @@ public class TTSEngine {
 		this.verbVisualCapacitiesPath = verbVisualCapacitiesPath;
 		
 		this._TTSKb = new KnowledgeBase();
-		this._re = new SemanticReasoner(_TTSKb, ExecutionMode.DEBUG);
+		this._re = new SemanticReasoner(_TTSKb, ExecutionMode.RELEASE);
 		_re.setMaxReasoningDepth(17);
 		_re.setMaximumAnswers(1);
 		
-		loadKb();
+//		loadKb();
 		
 		_pp = new Preprocessor(_TTSKb, _re, this);
 		_sr = new SceneReasoner(_TTSKb, _re, this);
@@ -103,57 +103,61 @@ public class TTSEngine {
 	 * @param writer 
 	 * @return 
 	 */
-	public void TextToScene(ArrayList<String> scene_inputNL, StoryModel storyModel, boolean isLastScene, PrintWriter writer){
+	public void TextToScene(ArrayList<String> scene_inputNL, StoryModel storyModel, boolean isLastScene, PrintWriter writer, PrintWriter writer2 ){
 		
 		if(scene_inputNL == null || scene_inputNL.size() == 0 || storyModel == null)
 			MyError.exit("bad input lines!");			
 		
 					
-		if(!isKbInitialized)
-			loadKb();
+//		if(!isKbInitialized)
+//			loadKb();
 		
-		SceneModel primarySceneModel = new SceneModel(storyModel);
-		storyModel.addScene(primarySceneModel);
+//		SceneModel primarySceneModel = new SceneModel(storyModel);
+//		storyModel.addScene(primarySceneModel);
 				
 		for(String NLsentence:scene_inputNL){
 			
 			print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NSentence: " + NLsentence);
 			
-			SentenceModel sentence = _pp.preprocessSentence(NLsentence);	
+			SentenceModel sentence = _pp.sentenceSyntaxAnalysis(NLsentence);	
 			
 			if(sentence == null){
 				MyError.error(" the " + NLsentence + " couldn't get preprocessed!");
 				continue;
 			}
+			
+//			writer.println("%sentence:" + sentence.getNLSentence() + "\n%\n" + sentence.getDataSetStr() + "\n");
+			
+			writer2.println("%sentence:" + sentence.getNLSentence() + "\n%\n" + sentence.getOrdinalDetailedStr() + "\n----------\n" +sentence.getDetailedStr());
 									
-			primarySceneModel.addSentence(sentence);
-			sentence.setScene(primarySceneModel);
-			
-			_pp.preprocessScene(sentence, primarySceneModel, storyModel);
-			
-			ArrayList<SentenceModel> nested_sents = sentence.get_nested_sentences();
-			
-			if(!Common.isEmpty(nested_sents))
-				for(SentenceModel nest:nested_sents)
-					_pp.preprocessScene(nest, primarySceneModel, storyModel);
-				
-			//moved in preporecessSentence just like loadVerbSemanticCapacities
-			//_pp.loadVerbVisualCapacities(sentence);						
+//			primarySceneModel.addSentence(sentence);
+//			sentence.setScene(primarySceneModel);
+//			
+//			_pp.preprocessScene(sentence, primarySceneModel, storyModel);
+//			
+//			ArrayList<SentenceModel> nested_sents = sentence.get_nested_sentences();
+//			
+//			if(!Common.isEmpty(nested_sents))
+//				for(SentenceModel nest:nested_sents)
+//					_pp.preprocessScene(nest, primarySceneModel, storyModel);
+//				
+//			//moved in preporecessSentence just like loadVerbSemanticCapacities
+//			//_pp.loadVerbVisualCapacities(sentence);						
 		}
-				
-		if(isLastScene){//the last scene of story
-			
-			//-------------- postprocessing Location and Time of different scenes previously added to storyModel ------------
-			_sr.postprocessLocation(storyModel);
-			
-			_sr.postprocessTime(storyModel);
-			
-			//-------------- enriching primarySceneModels of different scenes previously added to storyModel ----------------
-//			_sr.enrichStoryModel(storyModel);
-						
-			for(SceneModel scene:storyModel.getScenes())
-				writer.println("\nprimarySceneModel\n" + scene);
-		}
+//				
+//		if(isLastScene){//the last scene of story
+//			
+//			//-------------- postprocessing Location and Time of different scenes previously added to storyModel ------------
+//			_sr.postprocessLocation(storyModel);
+//			
+//			_sr.postprocessTime(storyModel);
+//			
+//			//-------------- enriching primarySceneModels of different scenes previously added to storyModel ----------------
+////			_sr.enrichStoryModel(storyModel);
+//						
+//			for(SceneModel scene:storyModel.getScenes())
+//				writer.println("\nprimarySceneModel\n" + scene);
+//		}
 	
 	}
 		

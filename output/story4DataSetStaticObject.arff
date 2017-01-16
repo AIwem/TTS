@@ -1,0 +1,46 @@
+%sentence:روزی بود.
+%
+1, روزی, N, ARG2_GOAL_ENDSTATE, روز#n8, دوره زمانی§n-12603, MOS, 2, not_staticObj
+2, بود, V, NULL, بودن#v3, رخداد§n-13136, ROOT, 0, not_staticObj
+%sentence:روزگاري بود.
+%
+1, روزگاری, N, ARG2_GOAL_ENDSTATE, روزگار#n3, دوره زمانی§n-12603, MOS, 2, not_staticObj
+2, بود, V, NULL, بودن#v3, رخداد§n-13136, ROOT, 0, not_staticObj
+%sentence:يک کودک سياه پوست فقير بود، که چند برادر و خواهر کوچکتر داشت.
+%
+1, یک, NUM, NULL, یک#n1, اندازه§n-12768, NPREMOD, 2, not_staticObj
+2, کودک, N, ARG2_GOAL_ENDSTATE, کودک#n1, نفر§n-13075, MOS, 5, not_staticObj
+2, کودک, N, ARG1_THEME, کودک#n1, نفر§n-13075, MOS, 5, not_staticObj
+3, سیاه‌پوست, ADJ, NULL, سیاه پوست#a1, مشخصه§n-12756, NPOSTMOD, 2, not_staticObj
+4, فقیر, ADJ, NULL, فقیر#a1, مشخصه§n-12756, NPOSTMOD, 2, not_staticObj
+5, بود, V, NULL, بودن#v3, رخداد§n-13136, ROOT, 0, not_staticObj
+8, چند, PREP, NULL, NULL, NULL, NPREMOD, 9, not_staticObj
+9, برادر, N, ARG2_OBJ2, برادر#n2, نفر§n-13075, OBJ, 13, not_staticObj
+10, و, CONJ, NULL, NULL, NULL, NCONJ, 9, not_staticObj
+11, خواهر, N, NULL, خواهر#n2, نفر§n-13075, POSDEP, 10, not_staticObj
+12, کوچکتر, ADJ, NULL, کوچک#a2, مشخصه§n-12756, NPOSTMOD, 9, not_staticObj
+13, داشت, V, NULL, داشتن#v2, رخداد§n-13136, VCL, 5, not_staticObj
+%sentence:اين  کودک که بزرگتر از همه بچه‌ها بود، روزها ميرفت کنار دريا ماهي ميگرفت.
+%
+1, این, PREP, NULL, NULL, NULL, NPREMOD, 2, not_staticObj
+2, کودک, N, ARG1_THEME, کودک#n1, نفر§n-13075, SBJ, 14, not_staticObj
+2, کودک, N, ARG0_AGENT, کودک#n1, نفر§n-13075, SBJ, 14, not_staticObj
+2, کودک, N, ARG0_AGENT, کودک#n1, نفر§n-13075, SBJ, 14, not_staticObj
+4, بزرگتر, ADJ, ARG2_GOAL_ENDSTATE , بزرگ#a2, مشخصه§n-12756, MOS, 8, not_staticObj
+6, همه, PREP, NULL, NULL, NULL, COMPPP, 4, not_staticObj
+7, بچه‌ها, N, NULL, بچه#n6, نفر§n-13075, MOZ, 6, not_staticObj
+8, بود, V, NULL, بودن#v6, رخداد§n-13136, NCL, 2, not_staticObj
+10, روزها, N, ArgM_TMP, روز#n6, دوره زمانی§n-12603, ADVRB, 14, not_staticObj
+11, میرفت, N, NULL, رفتن#v7, رخداد§n-13136, NVE, 14, not_staticObj
+12, کناردریا, N, ARG4_ENDPOINT, دریا#n1,  جا§n-12733, ADVRB, 14, not_staticObj
+13, ماهی, N, ARG1_PATIENT, ماهی#n2, جانور§n-12239, OBJ, 14, not_staticObj
+14, میگرفت, V, NULL, گرفتن#v1, رخداد§n-13136, ROOT, 0, not_staticObj
+%sentence:با این کار خود زندگی خانواده را اداره میکرد.
+%
+2, این, PREP, NULL, NULL, NULL, NPREMOD, 3, not_staticObj
+3, کار, N, ARG2_OBJ2, کار#n5, رخداد§n-13136, ADVRB, 9, not_staticObj
+4, خود, PR, ARG0_AGENT, خود#n3, نفر§n-13075, MOZ, 3, not_staticObj
+5, زندگی, N, ARG1_PATIENT, زندگی#n2, شیء§n-12703, OBJ, 9, not_staticObj
+6, خانواده, N, NULL, خانواده#n3, خانواده#n3, MOZ, 5, not_staticObj
+8, اداره, N, NULL, اداره#n2, رخداد§n-13136, NVE, 9, not_staticObj
+9, میکرد, V, NULL, اداره کردن#v1, رخداد§n-13136, ROOT, 0, not_staticObj

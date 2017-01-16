@@ -216,12 +216,66 @@ public class Preprocessor {
 	private void print(String s){
 		System.out.println(s);
 	}
+	
+	/**
+	 * preprocessSentence first finds preprocessed information of this sentence from its related file.
+	 * then convert this information to SentenceModel object 
+	 * @param NLsentence sentence in natural language.
+	 * @return
+	 */
+	public SentenceModel sentenceSyntaxAnalysis(String NLsentence) {
+		
+		String parsedSen = persianTool.parser(NLsentence);
+		
+		String[] word_strs = parsedSen.split("\n");
+		
+		SentenceModel sentence = new SentenceModel(NLsentence, word_strs);
+
+		print("^^^^^^^^^^^^^^^^^");		
+		
+		return sentence;
+		
+	}
 		
 	/**
 	 * preprocessSentence first finds preprocessed information of this sentence from its related file.
 	 * then convert this information to SentenceModel object 
 	 * @param NLsentence sentence in natural language.
-	 * @param senPartStrs contains informations of parts of this sentence.
+	 * @return
+	 */
+	public SentenceModel addingSentenceSemanticAnalysis(String NLsentence, SentenceModel sentence) {
+		
+		//this array has information of all parts of this sentence.
+		ArrayList<String> extraWordInfos = findSentenceInfos(NLsentence);
+		
+		if(extraWordInfos == null)
+			return null;
+		
+		for(int i = 0; i < extraWordInfos.size(); i++){
+			
+			String currentWordInfo = extraWordInfos.get(i);
+			
+			Word currentWord = completeWordInfo(currentWordInfo, sentence);
+			
+			if(currentWord == null){
+				MyError.error("The word with \"" + currentWordInfo + "\" couldn't be completed!" );
+				continue;
+				//return sentence;
+			}
+			
+			if(currentWord._number < 0 && currentWord._wordName != null && currentWord._wordName.equals(fake_word_name))
+				print("^^^^^^^^^^^^^^^^^^^^^^^^^^^ in fake_word");
+			
+		}
+		
+		return sentence;
+		
+	}
+	
+	/**
+	 * preprocessSentence first finds preprocessed information of this sentence from its related file.
+	 * then convert this information to SentenceModel object 
+	 * @param NLsentence sentence in natural language.
 	 * @return
 	 */
 	public SentenceModel preprocessSentence(String NLsentence) {
@@ -257,57 +311,59 @@ public class Preprocessor {
 				print("^^^^^^^^^^^^^^^^^^^^^^^^^^^ in fake_word");
 			
 			//setting _wsd of currentPart to the proper Node of KB.			
-			if(currentWord.isVerb())
-				//isnewNode parameter is true, because every verb is new a one!
-				allocate_wsd(sentence ,currentWord, true);
-			else
-				allocate_wsd(sentence, currentWord, false);
-			
-			if(currentWord._wsd == null)
-				print(currentWord._wsd_name + " couldn't get allocated for word: " + currentWord);
+//			if(currentWord.isVerb())
+//				//isnewNode parameter is true, because every verb is new a one!
+//				allocate_wsd(sentence ,currentWord, true);
+//			else
+//				allocate_wsd(sentence, currentWord, false);
+//			
+//			if(currentWord._wsd == null)
+//				print(currentWord._wsd_name + " couldn't get allocated for word: " + currentWord);
 //				MyError.error(currentWord._wsd_name + " couldn't get allocated!");			
 		}
 
 		//adding verb relation to KB.
 		//delayed to preprocessScene after preparing nullSemanticTags
 		/*ArrayList<PlausibleStatement> verbRelations = */ //defineVerbRelation(sentence);
-						
-		Word verb = sentence.getVerb();
-		
-		if(verb != null){
-			
-			sentence.make_nested_sentences();
-			
-			//loading verb SemanticArguments.
-			ArrayList<Node> semArgs = loadVerbSemanticCapacities(sentence);
-			verb.setSemantic_capacities(semArgs);
-			
-			//loading verb VisualCapacities.
-			ArrayList<Node> visualCaps = loadVerbVisualCapacities(sentence);
-			verb.setVisual_capacities(visualCaps);
-			
-			ArrayList<SentenceModel> nested_sents = sentence.get_nested_sentences();
-			
-			if(!Common.isEmpty(nested_sents)){
-				for(SentenceModel nest:nested_sents){
-					Word vb = nest.getVerb();
-					
-					if(vb != null){
-						ArrayList<Node> semArgsNest = loadVerbSemanticCapacities(nest);
-						vb.setSemantic_capacities(semArgsNest);
-						
-						ArrayList<Node> visCapsNest = loadVerbVisualCapacities(nest);
-						vb.setVisual_capacities(visCapsNest);
-					}
-				}
-			}		
-		}
-		else
-			MyError.error("this sentnce has no verb! " + sentence);
+//						
+//		Word verb = sentence.getVerb();
+//		
+//		if(verb != null){
+//			
+//			sentence.make_nested_sentences();
+//			
+//			//loading verb SemanticArguments.
+//			ArrayList<Node> semArgs = loadVerbSemanticCapacities(sentence);
+//			verb.setSemantic_capacities(semArgs);
+//			
+//			//loading verb VisualCapacities.
+//			ArrayList<Node> visualCaps = loadVerbVisualCapacities(sentence);
+//			verb.setVisual_capacities(visualCaps);
+//			
+//			ArrayList<SentenceModel> nested_sents = sentence.get_nested_sentences();
+//			
+//			if(!Common.isEmpty(nested_sents)){
+//				for(SentenceModel nest:nested_sents){
+//					Word vb = nest.getVerb();
+//					
+//					if(vb != null){
+//						ArrayList<Node> semArgsNest = loadVerbSemanticCapacities(nest);
+//						vb.setSemantic_capacities(semArgsNest);
+//						
+//						ArrayList<Node> visCapsNest = loadVerbVisualCapacities(nest);
+//						vb.setVisual_capacities(visCapsNest);
+//					}
+//				}
+//			}		
+//		}
+//		else
+//			MyError.error("this sentnce has no verb! " + sentence);
 	
 		return sentence;
 		
 	}
+	
+	
 
 	/**
 	 * preprocessScene preprocesses input sentenceModel and converts it to the primarySceneModel.    

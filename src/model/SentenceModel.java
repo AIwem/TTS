@@ -74,7 +74,7 @@ public class SentenceModel {
 			this._words.add(wd);
 		}
 		
-		//------------------ correct Parser Error --------------
+		/*------------------ correct Parser Error --------------
 		
 			//------------------ story 1: injured pigeon --------------
 		
@@ -164,7 +164,7 @@ public class SentenceModel {
 		}
 		
 		//------------------ end of correct Parser Error --------------
-		
+		*/
 		arrangeWords();
 	}	
 
@@ -1072,7 +1072,20 @@ public class SentenceModel {
 			this.addPhrase(ph);
 			
 			print(""+ ph);
-		}		
+		}
+
+		//------------ generate verb phrase in this sentence ------------
+		
+		ArrayList<Word> phraseWords = new ArrayList<Word>();
+		
+		phraseWords.add(verb);
+		
+		Phrase verb_ph = new Phrase(verb, phraseWords);
+		
+		this.addPhrase(verb_ph);
+		
+		print(""+ verb_ph);		
+			
 	}
 	
 	public void make_nested_sentences(){
@@ -1168,9 +1181,52 @@ public class SentenceModel {
 		return empty;
 	}
 	
-	@Override
+	@Override	
 	public String toString() {
 		return NLSentence;
+	}
+	
+	public String getDataSetStr() {
+		String dataSetRecord = "";
+	
+		if(_words == null)
+			return "";
+	
+		int verbNum = 0;
+		
+		Word verb = getVerb();
+		if(verb != null)
+			verbNum = verb._number;
+		else
+			verbNum = 0;
+		
+		for(Word w:_words)
+			dataSetRecord += w.getStr4dataSet(verbNum) + "\n";
+		return dataSetRecord;
+	}
+	
+	public String getOrdinalDetailedStr() {
+		String dataSetRecord = "";
+	
+		if(_words == null)
+			return "";
+	
+		for(Word w:_words)
+			dataSetRecord += w.getStr2();
+		
+		return dataSetRecord;
+	}
+	
+	public String getDetailedStr() {
+		String phraseRecord = "";
+	
+		if(_phrases == null)
+			return phraseRecord;	
+		
+		for(Phrase ph:_phrases)
+			phraseRecord += ph.toString() + "\n";
+			
+		return phraseRecord;
 	}
 	
 	private void print(String s){
