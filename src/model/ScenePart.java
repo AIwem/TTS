@@ -12,7 +12,7 @@ public enum ScenePart {
 	TIME,
 	
 	ACTION,
-	OBJECT_ACTION,
+	DYNAMIC_OBJECT_ACTION,
 	ROLE_ACTION,
 	
 	EMOTION,
@@ -20,11 +20,22 @@ public enum ScenePart {
 	SCENE_EMOTION,
 	
 	GOAL,
-	ROLE_GOAL,
+	ROLE_INTENT,
 	SCENE_GOAL,	
 	
-	ROAL_MOOD,
-	OBJECT_STATE,
+	ROLE_STATE,
+	STATIC_OBJECT_STATE,
+	DYNAMIC_OBJECT_STATE,	
 		
-	UNKNOWN
+	UNKNOWN;
+	
+	public static ScenePart fromString(String classTag){
+		if (classTag != null){
+			
+			for (ScenePart sp : ScenePart.values()) 
+				if (classTag.equalsIgnoreCase(sp.name())) 
+					return sp;
+		}
+       return UNKNOWN;
+	}
 }

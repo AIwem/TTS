@@ -236,7 +236,7 @@ public class Preprocessor {
 		return sentence;
 		
 	}
-		
+	
 	/**
 	 * preprocessSentence first finds preprocessed information of this sentence from its related file.
 	 * then convert this information to SentenceModel object 

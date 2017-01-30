@@ -31,6 +31,11 @@ public class Word {
 	public Phrase _phrase;
 	
 	/**
+	 * dose this word belongs to a phrase or it is independent. 
+	 */
+	public boolean _isDepended = false;
+	
+	/**
 	 * number of this Word object in sentence.
 	 */
 	public int _number = -1;
@@ -81,6 +86,16 @@ public class Word {
 	 * the String name of Word_Sense_Disambiguation of this Word object. 
 	 */
 	public String _wsd_name;
+	
+	/**
+	 * the String name of super Node of Word_Sense_Disambiguation of this Word object. 
+	 */
+	public String _wsd_superNode_name;
+	
+	/**
+	 * the class tag of this word, it is multi-class. 
+	 */
+	public ScenePart _multiClassTag; 
 	
 	/**
 	 *  
@@ -142,6 +157,47 @@ public class Word {
 		//discarding parts[4], [8] and [9]
 		
 		print(getStr2());
+	}
+	
+	/**
+	 * 
+	 * @param wStr format:1	روزی	N	MOS	ARG2_GOAL_ENDSTATE	روز#n8	دوره زمانی§n-12603	2	NO	
+	 * @param sentence
+	 * @param isFull is data for this word full or not?
+	 */
+	public Word(String wStr, SentenceModel sentence, boolean isFull) {
+//		print(wStr);
+		
+		if(!isFull)
+			MyError.exit("data analysis of this word must be full!");
+				
+		String[] parts = wStr.split("(\t)+");
+		
+		if(parts != null && parts.length != 9){			
+			MyError.error("Bad sentence information format " + wStr + " parts-num " + parts.length);
+			return;
+		}
+		this._senteceModel = sentence;
+		
+		this.set_number(parts[0].trim());
+		
+		this._wordName = parts[1].trim();
+		
+		this.set_gPOS(parts[2]);
+		
+		this.set_syntaxTag(parts[3]);
+		
+		this.set_semanticTag(parts[4]);
+		
+		this.set_wsd_name(parts[5]);
+		
+		this.set_wsd_superNode_name(parts[6]);
+		
+		this.set_srcOfSynTag_number(parts[7]);
+				
+		this.set_multiClassTag(parts[8]);
+		
+//		print(getStr2());
 	}
 	
 	/**
@@ -350,8 +406,8 @@ public class Word {
 		if(synTag != null && !synTag.equals("") && !synTag.equals("-"))
 			this._syntaxTag = DependencyRelationType.fromString(synTag);
 		
-		if(_syntaxTag == null)
-			MyError.error("bad syntaxTag name " + synTag);	
+//		if(_syntaxTag == null)
+//			MyError.error("bad syntaxTag name " + synTag);	
 	}	
 	
 	public void set_srcOfSynTag_number(String srcOfSynTagNum) {
@@ -364,14 +420,24 @@ public class Word {
 	public void set_semanticTag(String semTag) {
 		if(semTag != null && !semTag.equals("") && !semTag.equals("-"))
 			_semanticTag = SemanticTag.fromString(semTag);
-		
-		if(_semanticTag == null)
-			MyError.error("bad semantcTag name " + semTag + " for " + this._wordName);	
+//		
+//		if(_semanticTag == null)
+//			MyError.error("bad semantcTag name " + semTag + " for " + this._wordName);	
 	}
 	
 	public void set_wsd_name(String wsd_name) {
 		if(wsd_name != null && !wsd_name.equals("") && !wsd_name.equals("-"))
 			this._wsd_name = wsd_name;
+	}
+	
+	public void set_wsd_superNode_name(String wsd_superNode_name) {
+		if(_wsd_superNode_name != null && !wsd_superNode_name.equals("") && !wsd_superNode_name.equals("-"))
+			this._wsd_name = wsd_superNode_name;
+	}
+	
+	public void set_multiClassTag(String multiClassTag) {
+		if(multiClassTag != null && !multiClassTag.equals("") && !multiClassTag.equals("-"))			
+			this._multiClassTag = ScenePart.fromString(multiClassTag);
 	}
 	
 	public void set_wsd(Node wsd) {
@@ -531,8 +597,70 @@ public class Word {
  			rs += "\n";
  			return rs;
  	}
+ 	
+ 	public String getFullStr() {
+	 		String rs = "" + _number;		
+			rs += "\t";
+			if(_wordName != null) rs += "" + _wordName; 
+			else rs += "-";
+			
+			int len = rs.length();
+			if(len < 6)
+				rs += "\t\t\t";
+			else
+				rs += "\t\t"; 			
+			 			
+			if(_gPOS != null) rs += "" + _gPOS;
+			else rs += "NULL";
+			
+			if(_gPOS.toString().length() < 3)
+				rs += "\t\t\t\t";
+			else
+				rs += "\t\t\t";
+			
+			if(_syntaxTag != null) rs += "" + _syntaxTag;
+			else rs += "NULL"; 			
+			
+			len = rs.length();
+			if(len < 22)
+				rs += "\t\t\t";
+			else
+				rs += "\t\t";
+			
+			if(_semanticTag != null) rs += "" + _semanticTag;
+			else rs += "NULL"; 			
+			
+			len = rs.length();
+			if(len < 52)
+				rs += "\t\t\t";
+			else
+				rs += "\t\t";
+			
+			if(_wsd_name != null) rs += "" + _wsd_name;
+			else rs += "NULL"; 			
+			
+			len = rs.length();
+			if(len < 72)
+				rs += "\t\t\t";
+			else
+				rs += "\t\t";
+			
+			if(_wsd_superNode_name != null) rs += "" + _wsd_superNode_name;
+			else rs += "NULL"; 			
+			
+			len = rs.length();
+			if(len < 92)
+				rs += "\t\t\t";
+			else
+				rs += "\t\t";
+			
+			rs+=  _srcOfSynTag_number;
+			rs += "\n";
+			return rs;
+	}
+	
  	 
- 	 public String getStr4dataSet(int verbNum) {	 		
+ 	public String getStr4DataSet(int verbNum) {	 		
 			String rs = "";
 			if(_gPOS != null) rs += "" + _gPOS + ", ";
 			else rs += "NULL, ";
@@ -540,13 +668,23 @@ public class Word {
 			if(_syntaxTag != null) rs += "" + _syntaxTag + ", ";
 			else rs += "NULL, ";
 			
+			if(_semanticTag != null) rs += "" + _semanticTag + ", ";
+			else rs += "NULL, ";
+			
+			if(_wsd_superNode_name != null) rs += "" + _wsd_superNode_name + ", ";
+			else rs += "NULL, ";
+			
 			if(_srcOfSynTag_number == 0 || _srcOfSynTag_number == verbNum)
 				rs += "NO";
-			else rs += "YES";			
+			else rs += "YES";
+			
+			rs += ", ---";
+			if(_multiClassTag != null) rs += "" + _multiClassTag.toString().toLowerCase();
+			else rs += "_";
 			
 			return rs;
 	}
-	 
+
  	 
  	public ArrayList<Word> getAdjectives() {
 		return adjectives;

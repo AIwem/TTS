@@ -20,7 +20,15 @@ public class Phrase {
 	
 	public Phrase(Word headWord, ArrayList<Word> words){
 		this.set_headWord(headWord);
+		
+		if(headWord != null)
+			headWord._isDepended = false;
+		
 		this.set_words(words);
+		
+		if(words != null && words.size() > 1)
+			for(Word wrd:words)
+				wrd._isDepended = true;
 	}
 	
 	//-------------------- setter part --------------------------

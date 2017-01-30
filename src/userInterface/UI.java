@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 import org.apache.tika.parser.ParseContext;
 
+import model.SentenceModel;
 import model.StoryModel;
 import sceneReasoner.TTSEngine;
 
@@ -30,6 +31,7 @@ public class UI {
 //	private String inputStoryFilePath = "inputStory/inputStrory3.txt";
 	private String inputStoryFilePath = "inputStory/inputStory4.txt";
 	private String inputDataSetFilePath = "inputStory/story4DataSetToformat.txt";
+	private String inputDataSetHeaderFilePath = "inputStory/dataSetHeader.txt";
 //	private String mainKbFilePath = "kb/farsnet--24.txt";
 	private String mainKbFilePath = "kb/farsnet.txt";
 	private String myKbFilePath = "kb/injuredPigeon9.txt";
@@ -97,218 +99,269 @@ public class UI {
 	 	return storyModel;
 	}
 
-	
+//	public void makeFullDataset(){
+//		
+//		ArrayList<ArrayList<String>> inputs = importInputDataSetInfo(inputDataSetFilePath);
+//
+//		PrintWriter writer = null;
+//		
+//		try {
+//			writer = new PrintWriter("output\\sentencePhrases.txt", "UTF-8");
+//		
+//			tts = new TTSEngine(mainKbFilePath, myKbFilePath, verbSemanticCapacitiesPath, verbVisualCapacitiesPath);
+//			
+//			for(ArrayList<String> sentenceInfo:inputs)
+//				writer.println(tts.generateFullRecordAnalysis(sentenceInfo));
+//	
+//			writer.close();
+//			
+//		} catch (FileNotFoundException | UnsupportedEncodingException e) {
+//			e.printStackTrace();
+//		}
+//	}
+//	
 	public void reformatDataset(){
-			
-		ArrayList<String> inputs = new ArrayList<>();
 		
-		BufferedReader stream = null;
-		PrintWriter writer1 = null;
-		PrintWriter writer2 = null;
-		PrintWriter writer3 = null;
-		PrintWriter writer4 = null;
-		PrintWriter writer5 = null;
-		PrintWriter writer6 = null;
-		PrintWriter writer7 = null;
-		PrintWriter writer8 = null;
-		PrintWriter writer9 = null;
-		PrintWriter writer10 = null;
-		PrintWriter writer11 = null;
-		PrintWriter writer12 = null;
-		PrintWriter writer13 = null;
-		PrintWriter writer14 = null;
+		BufferedReader stream4header = null;
+		PrintWriter writer1 = null;PrintWriter writer2 = null;PrintWriter writer3 = null;
+		PrintWriter writer4 = null;PrintWriter writer5 = null;PrintWriter writer6 = null;
+		PrintWriter writer7 = null;PrintWriter writer8 = null;PrintWriter writer9 = null;
+		PrintWriter writer10 = null;PrintWriter writer11 = null;PrintWriter writer12 = null;
+		PrintWriter writer13 = null;PrintWriter writer14 = null;
 		
 		try
 		{
-			stream = new BufferedReader(new InputStreamReader(new FileInputStream(inputDataSetFilePath), "utf-8"));
+			stream4header = new BufferedReader(new InputStreamReader(new FileInputStream(inputDataSetHeaderFilePath), "utf-8"));
 			writer1 = new PrintWriter("output\\story4DataSetRole.arff", "UTF-8");
-			writer2 = new PrintWriter("output\\story4DataSetRoleAction.arff", "UTF-8");
-			writer3 = new PrintWriter("output\\story4DataSetRoleState.arff", "UTF-8");
-			writer4 = new PrintWriter("output\\story4DataSetRoleEmotion.arff", "UTF-8");
-			writer5 = new PrintWriter("output\\story4DataSetRoleIntent.arff", "UTF-8");
+			writer2 = new PrintWriter("output\\story4DataSetrole_action.arff", "UTF-8");
+			writer3 = new PrintWriter("output\\story4DataSetrole_state.arff", "UTF-8");
+			writer4 = new PrintWriter("output\\story4DataSetrole_emotion.arff", "UTF-8");
+			writer5 = new PrintWriter("output\\story4DataSetrole_intent.arff", "UTF-8");
 			writer6 = new PrintWriter("output\\story4DataSetDyanmicObject.arff", "UTF-8");
-			writer7 = new PrintWriter("output\\story4DataSetDynamicObjAction.arff", "UTF-8");
-			writer8 = new PrintWriter("output\\story4DataSetDynamicObjState.arff", "UTF-8");
-			writer9 = new PrintWriter("output\\story4DataSetStaticObject.arff", "UTF-8");
-			writer10 = new PrintWriter("output\\story4DataSetStaticObjState.arff", "UTF-8");
+			writer7 = new PrintWriter("output\\story4DataSetdynamic_object_action.arff", "UTF-8");
+			writer8 = new PrintWriter("output\\story4DataSetdynamic_object_state.arff", "UTF-8");
+			writer9 = new PrintWriter("output\\story4DataSetstatic_objectect.arff", "UTF-8");
+			writer10 = new PrintWriter("output\\story4DataSetstatic_object_state.arff", "UTF-8");
 			writer11 = new PrintWriter("output\\story4DataSetLocation.arff", "UTF-8");
 			writer12 = new PrintWriter("output\\story4DataSetTime.arff", "UTF-8");
-			writer13 = new PrintWriter("output\\story4DataSetSceneGoal.arff", "UTF-8");
-			writer14 = new PrintWriter("output\\story4DataSetSceneEmotion.arff", "UTF-8");
-		
-		
-			String line = "";
+			writer13 = new PrintWriter("output\\story4DataSetscene_goal.arff", "UTF-8");
+			writer14 = new PrintWriter("output\\story4DataSetscene_emotion.arff", "UTF-8");
 			
-			while (line != null)
-			{				
-				line = stream.readLine();
+			
+			String header = "";
+			
+			while(header != null){
 				
-				if (line == null)
+				header = stream4header.readLine();
+				
+				if (header == null)
 					break;
 				
-				line = line.trim();				
+				header = header.trim();
 							
-				if (line.startsWith("#") || line.startsWith("%")){ // comment lines
-					writer1.println(line);writer2.println(line);writer3.println(line);
-					writer4.println(line);writer5.println(line);writer6.println(line);
-					writer7.println(line);writer8.println(line);writer9.println(line);
-					writer10.println(line);writer11.println(line);writer12.println(line);
-					writer13.println(line);writer14.println(line);
-					continue;
-				}
-							
-				//	1	روزی		N			ARG2_GOAL_ENDSTATE		روز#n8			دوره زمانی§n-12603			MOS			2		NO
-				String[] parts = line.split("(\t)+");
+				writer1.println(header);writer2.println(header);writer3.println(header);
+				writer4.println(header);writer5.println(header);writer6.println(header);
+				writer7.println(header);writer8.println(header);writer9.println(header);
+				writer10.println(header);writer11.println(header);writer12.println(header);
+				writer13.println(header);writer14.println(header);		
+				
+			}
 			
-				if(parts != null && parts.length != 9){
-					MyError.error("Bad dataset format \n" + line + "\n parts-num " + parts.length);
-					continue;
+			ArrayList<ArrayList<String>> inputs = importInputDataSetInfo(inputDataSetFilePath);
+				
+			for(ArrayList<String> sentenceInfos:inputs){
+//				writer.println(tts.generateFullRecordAnalysis(sentenceInfo));
+				
+				//-----
+				if(sentenceInfos == null || sentenceInfos.size() < 3)
+					MyError.exit("bad input lines!");			
+				
+				String sentRecord = "";
+				String NLSentence = sentenceInfos.get(0);
+				sentRecord += NLSentence + "\n";		
+				sentRecord += sentenceInfos.get(1);
+				sentenceInfos.remove(0);
+				sentenceInfos.remove(0);
+				
+				print(sentRecord);
+				print("------------");
+				
+				writer1.println(sentRecord);writer2.println(sentRecord);writer3.println(sentRecord);
+				writer4.println(sentRecord);writer5.println(sentRecord);writer6.println(sentRecord);
+				writer7.println(sentRecord);writer8.println(sentRecord);writer9.println(sentRecord);
+				writer10.println(sentRecord);writer11.println(sentRecord);writer12.println(sentRecord);
+				writer13.println(sentRecord);writer14.println(sentRecord);
+				
+				
+				String[] sentenceElem = new String[sentenceInfos.size()];				
+				for(int i = 0; i < sentenceElem.length; i++)
+					sentenceElem[i] = sentenceInfos.get(i);
+					
+				SentenceModel sentence = new SentenceModel(NLSentence, sentenceElem, true);	
+									
+				ArrayList<String> sentRecords = sentence.getDataSetStr();
+				
+				for(String wordRecord:sentRecords){
+					
+					boolean hasClassTag = wordRecord.contains("---");
+					
+					if(hasClassTag){
+				
+						String sharedRecord = wordRecord.substring(0, wordRecord.indexOf("---"));
+						
+						String record = sharedRecord;
+						print(sharedRecord);
+						print("------------");
+						
+						String classTag = wordRecord.substring(wordRecord.indexOf("---") + 3);
+					
+						print("classTag: " + classTag);
+						print("************");
+						
+										
+																			
+						String record1 = new String(record);String record2 = new String(record);String record3 = new String(record);
+						String record4 = new String(record);String record5 = new String(record);String record6 = new String(record);
+						String record7 = new String(record);String record8 = new String(record);String record9 = new String(record);
+						String record10 = new String(record);String record11 = new String(record);String record12 = new String(record);
+						String record13 = new String(record);String record14 = new String(record);
+										
+						switch(classTag){
+							case "unknown":{
+								record1 += "not_role";
+								record2 += "not_role_action";record3 += "not_role_state";record4 += "not_role_emotion";
+								record5 += "not_role_intent";record6 += "not_dynamic_object";record7 += "not_dynamic_object_action";
+								record8 += "not_dynamic_object_state";record9 += "not_static_object";record10 += "not_static_object_state";
+								record11 += "not_location";record12 += "not_time";record13 += "not_scene_goal";
+								record14 += "not_scene_emotion";break;
+							}
+							case "role":{
+								record1 += " role";
+								record2 += "not_role_action";record3 += "not_role_state";record4 += "not_role_emotion";
+								record5 += "not_role_intent";record6 += "not_dynamic_object";record7 += "not_dynamic_object_action";
+								record8 += "not_dynamic_object_state";record9 += "not_static_object";record10 += "not_static_object_state";
+								record11 += "not_location";record12 += "not_time";record13 += "not_scene_goal";
+								record14 += "not_scene_emotion";break;
+							}
+							case "role_action":{
+								record2 += " role_action";
+								record1 += "not_role";record3 += "not_role_state";record4 += "not_role_emotion";
+								record5 += "not_role_intent";record6 += "not_dynamic_object";record7 += "not_dynamic_object_action";
+								record8 += "not_dynamic_object_state";record9 += "not_static_object";record10 += "not_static_object_state";
+								record11 += "not_location";record12 += "not_time";record13 += "not_scene_goal";
+								record14 += "not_scene_emotion";break;
+							}
+							case "role_state":{
+								record3 += " role_state";
+								record2 += "not_role_action";record1 += "not_role";record4 += "not_role_emotion";
+								record5 += "not_role_intent";record6 += "not_dynamic_object";record7 += "not_dynamic_object_action";
+								record8 += "not_dynamic_object_state";record9 += "not_static_object";record10 += "not_static_object_state";
+								record11 += "not_location";record12 += "not_time";record13 += "not_scene_goal";
+								record14 += "not_scene_emotion";break;
+							}
+							case "role_emotion":{
+								record4 += " role_emotion";
+								record2 += "not_role_action";record3 += "not_role_state";record1 += "not_role";
+								record5 += "not_role_intent";record6 += "not_dynamic_object";record7 += "not_dynamic_object_action";
+								record8 += "not_dynamic_object_state";record9 += "not_static_object";record10 += "not_static_object_state";
+								record11 += "not_location";record12 += "not_time";record13 += "not_scene_goal";
+								record14 += "not_scene_emotion";break;
+							}
+							case "role_intent":{
+								record5 += " roleIntet";
+								record2 += "not_role_action";record3 += "not_role_state";record4 += "not_role_emotion";
+								record1 += "not_role";record6 += "not_dynamic_object";record7 += "not_dynamic_object_action";
+								record8 += "not_dynamic_object_state";record9 += "not_static_object";record10 += "not_static_object_state";
+								record11 += "not_location";record12 += "not_time";record13 += "not_scene_goal";
+								record14 += "not_scene_emotion";break;
+							}
+							case "dynamic_object":{
+								record6 += " dynamic_object";
+								record2 += "not_role_action";record3 += "not_role_state";record4 += "not_role_emotion";
+								record5 += "not_role_intent";record1 += "not_role";record7 += "not_dynamic_object_action";
+								record8 += "not_dynamic_object_state";record9 += "not_static_object";record10 += "not_static_object_state";
+								record11 += "not_location";record12 += "not_time";record13 += "not_scene_goal";
+								record14 += "not_scene_emotion";break;
+							}
+							case "dynamic_object_action":{
+								record7 += " dynamic_object_action";
+								record2 += "not_role_action";record3 += "not_role_state";record4 += "not_role_emotion";
+								record5 += "not_role_intent";record6 += "not_dynamic_object";record1 += "not_role";
+								record8 += "not_dynamic_object_state";record9 += "not_static_object";record10 += "not_static_object_state";
+								record11 += "not_location";record12 += "not_time";record13 += "not_scene_goal";
+								record14 += "not_scene_emotion";break;
+							}
+							case "dynamic_object_state":{
+								record8 += " dynamic_object_state";
+								record2 += "not_role_action";record3 += "not_role_state";record4 += "not_role_emotion";
+								record5 += "not_role_intent";record6 += "not_dynamic_object";record7 += "not_dynamic_object_action";
+								record1 += "not_role";record9 += "not_static_object";record10 += "not_static_object_state";
+								record11 += "not_location";record12 += "not_time";record13 += "not_scene_goal";
+								record14 += "not_scene_emotion";break;
+							}
+							case "static_object":{
+								record9 += " static_object";
+								record2 += "not_role_action";record3 += "not_role_state";record4 += "not_role_emotion";
+								record5 += "not_role_intent";record6 += "not_dynamic_object";record7 += "not_dynamic_object_action";
+								record8 += "not_dynamic_object_state";record1 += "not_role";record10 += "not_static_object_state";
+								record11 += "not_location";record12 += "not_time";record13 += "not_scene_goal";
+								record14 += "not_scene_emotion";break;
+							}
+							case "static_object_state":{
+								record10 += " static_object_state";
+								record2 += "not_role_action";record3 += "not_role_state";record4 += "not_role_emotion";
+								record5 += "not_role_intent";record6 += "not_dynamic_object";record7 += "not_dynamic_object_action";
+								record8 += "not_dynamic_object_state";record9 += "not_static_object";record1 += "not_role";
+								record11 += "not_location";record12 += "not_time";record13 += "not_scene_goal";
+								record14 += "not_scene_emotion";break;
+							}
+							case "location":{
+								record11 += " location";
+								record2 += "not_role_action";record3 += "not_role_state";record4 += "not_role_emotion";
+								record5 += "not_role_intent";record6 += "not_dynamic_object";record7 += "not_dynamic_object_action";
+								record8 += "not_dynamic_object_state";record9 += "not_static_object";record10 += "not_static_object_state";
+								record1 += "not_role";record12 += "not_time";record13 += "not_scene_goal";
+								record14 += "not_scene_emotion";break;
+							}
+							case "time":{
+								record12 += " time";
+								record2 += "not_role_action";record3 += "not_role_state";record4 += "not_role_emotion";
+								record5 += "not_role_intent";record6 += "not_dynamic_object";record7 += "not_dynamic_object_action";
+								record8 += "not_dynamic_object_state";record9 += "not_static_object";record10 += "not_static_object_state";
+								record11 += "not_location";record1 += "not_role";record13 += "not_scene_goal";
+								record14 += "not_scene_emotion";break;
+							}						
+							case "scene_goal":{
+								record13 += " scene_goal";
+								record2 += "not_role_action";record3 += "not_role_state";record4 += "not_role_emotion";
+								record5 += "not_role_intent";record6 += "not_dynamic_object";record7 += "not_dynamic_object_action";
+								record8 += "not_dynamic_object_state";record9 += "not_static_object";record10 += "not_static_object_state";
+								record11 += "not_location";record12 += "not_time";record1 += "not_role";
+								record14 += "not_scene_emotion";break;
+							}
+							case "scene_emotion":{
+								record14 += " scene_emotion";
+								record2 += "not_role_action";record3 += "not_role_state";record4 += "not_role_emotion";
+								record5 += "not_role_intent";record6 += "not_dynamic_object";record7 += "not_dynamic_object_action";
+								record8 += "not_dynamic_object_state";record9 += "not_static_object";record10 += "not_static_object_state";
+								record11 += "not_location";record12 += "not_time";record13 += "not_scene_goal";
+								record1 += "not_role";break;
+							}
+							default:{
+								MyError.error(classTag +  " there isn't in none of cases.");
+								continue;
+							}		
+						}
+									
+						writer1.println(record1);writer2.println(record2);writer3.println(record3);
+						writer4.println(record4);writer5.println(record5);writer6.println(record6);
+						writer7.println(record7);writer8.println(record8);writer9.println(record9);
+						writer10.println(record10);writer11.println(record11);writer12.println(record12);
+						writer13.println(record13);writer14.println(record14);
+					}
+					else
+						MyError.error("No class tah found in " + wordRecord);					
 				}
-				String record = "";
-				for(int i = 0; i < parts.length - 1; i++)
-					record += parts[i] + ", ";
-				
-				String record1 = new String(record);String record2 = new String(record);String record3 = new String(record);
-				String record4 = new String(record);String record5 = new String(record);String record6 = new String(record);
-				String record7 = new String(record);String record8 = new String(record);String record9 = new String(record);
-				String record10 = new String(record);String record11 = new String(record);String record12 = new String(record);
-				String record13 = new String(record);String record14 = new String(record);
-			
-				
-				switch(parts[parts.length-1]){
-					case "NO":{
-						record1 += "not_role";
-						record2 += "not_roleAction";record3 += "not_roleState";record4 += "not_roleEmotion";
-						record5 += "not_roleIntent";record6 += "not_dynamicObj";record7 += "not_dynamicObjAction";
-						record8 += "not_dynamicObjState";record9 += "not_staticObj";record10 += "not_staticObjState";
-						record11 += "not_location";record12 += "not_time";record13 += "not_sceneGoal";
-						record14 += "not_sceneEmotion";break;
-					}
-					case "role":{
-						record1 += " role";
-						record2 += "not_roleAction";record3 += "not_roleState";record4 += "not_roleEmotion";
-						record5 += "not_roleIntent";record6 += "not_dynamicObj";record7 += "not_dynamicObjAction";
-						record8 += "not_dynamicObjState";record9 += "not_staticObj";record10 += "not_staticObjState";
-						record11 += "not_location";record12 += "not_time";record13 += "not_sceneGoal";
-						record14 += "not_sceneEmotion";break;
-					}
-					case "roleAction":{
-						record2 += " roleAction";
-						record1 += "not_role";record3 += "not_roleState";record4 += "not_roleEmotion";
-						record5 += "not_roleIntent";record6 += "not_dynamicObj";record7 += "not_dynamicObjAction";
-						record8 += "not_dynamicObjState";record9 += "not_staticObj";record10 += "not_staticObjState";
-						record11 += "not_location";record12 += "not_time";record13 += "not_sceneGoal";
-						record14 += "not_sceneEmotion";break;
-					}
-					case "roleState":{
-						record3 += " roleState";
-						record2 += "not_roleAction";record1 += "not_role";record4 += "not_roleEmotion";
-						record5 += "not_roleIntent";record6 += "not_dynamicObj";record7 += "not_dynamicObjAction";
-						record8 += "not_dynamicObjState";record9 += "not_staticObj";record10 += "not_staticObjState";
-						record11 += "not_location";record12 += "not_time";record13 += "not_sceneGoal";
-						record14 += "not_sceneEmotion";break;
-					}
-					case "roleEmotion":{
-						record4 += " roleEmotion";
-						record2 += "not_roleAction";record3 += "not_roleState";record1 += "not_role";
-						record5 += "not_roleIntent";record6 += "not_dynamicObj";record7 += "not_dynamicObjAction";
-						record8 += "not_dynamicObjState";record9 += "not_staticObj";record10 += "not_staticObjState";
-						record11 += "not_location";record12 += "not_time";record13 += "not_sceneGoal";
-						record14 += "not_sceneEmotion";break;
-					}
-					case "roleIntent":{
-						record5 += " roleIntet";
-						record2 += "not_roleAction";record3 += "not_roleState";record4 += "not_roleEmotion";
-						record1 += "not_role";record6 += "not_dynamicObj";record7 += "not_dynamicObjAction";
-						record8 += "not_dynamicObjState";record9 += "not_staticObj";record10 += "not_staticObjState";
-						record11 += "not_location";record12 += "not_time";record13 += "not_sceneGoal";
-						record14 += "not_sceneEmotion";break;
-					}
-					case "dynamicObj":{
-						record6 += " dynamicObj";
-						record2 += "not_roleAction";record3 += "not_roleState";record4 += "not_roleEmotion";
-						record5 += "not_roleIntent";record1 += "not_role";record7 += "not_dynamicObjAction";
-						record8 += "not_dynamicObjState";record9 += "not_staticObj";record10 += "not_staticObjState";
-						record11 += "not_location";record12 += "not_time";record13 += "not_sceneGoal";
-						record14 += "not_sceneEmotion";break;
-					}
-					case "dynamicObjAction":{
-						record7 += " dynamicObjAction";
-						record2 += "not_roleAction";record3 += "not_roleState";record4 += "not_roleEmotion";
-						record5 += "not_roleIntent";record6 += "not_dynamicObj";record1 += "not_role";
-						record8 += "not_dynamicObjState";record9 += "not_staticObj";record10 += "not_staticObjState";
-						record11 += "not_location";record12 += "not_time";record13 += "not_sceneGoal";
-						record14 += "not_sceneEmotion";break;
-					}
-					case "dynamicObjState":{
-						record8 += " dynamicObjState";
-						record2 += "not_roleAction";record3 += "not_roleState";record4 += "not_roleEmotion";
-						record5 += "not_roleIntent";record6 += "not_dynamicObj";record7 += "not_dynamicObjAction";
-						record1 += "not_role";record9 += "not_staticObj";record10 += "not_staticObjState";
-						record11 += "not_location";record12 += "not_time";record13 += "not_sceneGoal";
-						record14 += "not_sceneEmotion";break;
-					}
-					case "staticObj":{
-						record9 += " staticObj";
-						record2 += "not_roleAction";record3 += "not_roleState";record4 += "not_roleEmotion";
-						record5 += "not_roleIntent";record6 += "not_dynamicObj";record7 += "not_dynamicObjAction";
-						record8 += "not_dynamicObjState";record1 += "not_role";record10 += "not_staticObjState";
-						record11 += "not_location";record12 += "not_time";record13 += "not_sceneGoal";
-						record14 += "not_sceneEmotion";break;
-					}
-					case "staticObjState":{
-						record10 += " staticObj";
-						record2 += "not_roleAction";record3 += "not_roleState";record4 += "not_roleEmotion";
-						record5 += "not_roleIntent";record6 += "not_dynamicObj";record7 += "not_dynamicObjAction";
-						record8 += "not_dynamicObjState";record9 += "not_staticObj";record1 += "not_role";
-						record11 += "not_location";record12 += "not_time";record13 += "not_sceneGoal";
-						record14 += "not_sceneEmotion";break;
-					}
-					case "location":{
-						record11 += " location";
-						record2 += "not_roleAction";record3 += "not_roleState";record4 += "not_roleEmotion";
-						record5 += "not_roleIntent";record6 += "not_dynamicObj";record7 += "not_dynamicObjAction";
-						record8 += "not_dynamicObjState";record9 += "not_staticObj";record10 += "not_staticObjState";
-						record1 += "not_role";record12 += "not_time";record13 += "not_sceneGoal";
-						record14 += "not_sceneEmotion";break;
-					}
-					case "time":{
-						record12 += " time";
-						record2 += "not_roleAction";record3 += "not_roleState";record4 += "not_roleEmotion";
-						record5 += "not_roleIntent";record6 += "not_dynamicObj";record7 += "not_dynamicObjAction";
-						record8 += "not_dynamicObjState";record9 += "not_staticObj";record10 += "not_staticObjState";
-						record11 += "not_location";record1 += "not_role";record13 += "not_sceneGoal";
-						record14 += "not_sceneEmotion";break;
-					}
-					case "sceneEmotion":{
-						record13 += " sceneEmotion";
-						record2 += "not_roleAction";record3 += "not_roleState";record4 += "not_roleEmotion";
-						record5 += "not_roleIntent";record6 += "not_dynamicObj";record7 += "not_dynamicObjAction";
-						record8 += "not_dynamicObjState";record9 += "not_staticObj";record10 += "not_staticObjState";
-						record11 += "not_location";record12 += "not_time";record1 += "not_role";
-						record14 += "not_sceneEmotion";break;
-					}
-					case "sceneGoal":{
-						record14 += " sceneGoal";
-						record2 += "not_roleAction";record3 += "not_roleState";record4 += "not_roleEmotion";
-						record5 += "not_roleIntent";record6 += "not_dynamicObj";record7 += "not_dynamicObjAction";
-						record8 += "not_dynamicObjState";record9 += "not_staticObj";record10 += "not_staticObjState";
-						record11 += "not_location";record12 += "not_time";record13 += "not_sceneGoal";
-						record1 += "not_role";break;
-					}
-					default:{
-						MyError.error(parts[parts.length-1] +  " there isn't in none of cases.");
-						continue;
-					}
-				
-				}
-								
-				writer1.println(record1);writer2.println(record2);writer3.println(record3);
-				writer4.println(record4);writer5.println(record5);writer6.println(record6);
-				writer7.println(record7);writer8.println(record8);writer9.println(record9);
-				writer10.println(record10);writer11.println(record11);writer12.println(record12);
-				writer13.println(record13);writer14.println(record14);
-		
 			}
 			writer1.close();writer2.close();writer3.close();
 			writer4.close();writer5.close();writer6.close();
@@ -316,7 +369,6 @@ public class UI {
 			writer10.close();writer11.close();writer12.close();
 			writer13.close();writer14.close();
 			
-			stream.close();
 		}
 		catch (IOException e) {
 
@@ -325,6 +377,8 @@ public class UI {
 		 	
 	}
 
+
+	
 	
 	public ArrayList<String> importInputTexts(String filename)
 	{
@@ -377,6 +431,89 @@ public class UI {
 		}
 		return inputs;
 	}
+	
+	/**
+	 * returns lines of input dataSet for each sentence in an ArrayList<String>.
+	 * first two lines of each sentence are in the format %sentence:روزی بود. 
+	 * sample:
+	 * %sentence:روزی بود.
+	 * %
+	 * 1	روزی		N		MOS			ARG2_GOAL_ENDSTATE		روز#n8		دوره زمانی§n-12603		2		NO
+	 * 2	بود		V		ROOT		NULL					بودن#v3		رخداد§n-13136			0		NO 
+	 * @param filename file name of input dataSet.
+	 * @return
+	 */
+	public ArrayList<ArrayList<String>> importInputDataSetInfo(String filename)
+	{
+		ArrayList<ArrayList<String>> inputs = new ArrayList<ArrayList<String>>();
+		
+		BufferedReader stream = null;
+		
+		try
+		{
+			stream = new BufferedReader(new InputStreamReader(new FileInputStream(filename), "utf-8"));
+		}
+		catch(Exception e)
+		{
+			print("Error opening `" + filename + "` for reading input natural language texts!");
+			e.printStackTrace();
+		}
+		
+		String line = "";
+		ArrayList<String> sentenceInfos = new ArrayList<String>();
+		
+		while (line != null)
+		{
+			try
+			{
+				if(sentenceInfos != null && sentenceInfos.size() > 2)
+					sentenceInfos = new ArrayList<String>();
+				
+				if(line != null && line.startsWith("%"))
+					sentenceInfos.add(line);
+				
+				
+				line = stream.readLine();
+				
+				if (line == null)
+					break;
+				
+				line = line.trim();
+				
+				while(!line.startsWith("%")){					
+					
+					sentenceInfos.add(line);
+					
+					line = stream.readLine();
+					
+					if (line == null)
+						break;
+					
+					line = line.trim();				
+				}
+				if(sentenceInfos.size() > 2){
+					inputs.add(sentenceInfos);				
+//					sentenceInfos = new ArrayList<String>();
+				}
+											
+			}
+			catch (IOException e)
+			{
+				e.printStackTrace();
+			}
+		}
+	
+		try
+		{
+			stream.close();
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+		return inputs;
+	}
+
 	
 	private void testKB(){
 		
@@ -560,11 +697,15 @@ public class UI {
 		UI ui = new UI();
 
 //		StoryModel sm = ui.makeSyntaxDataset();
+//		ui.manualReformatDataset();
 		ui.reformatDataset();
+		//TODO: correct relation name in all of generating dataSet
+		//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ الحمدلله");
 		
 	}
 }
+
 
 

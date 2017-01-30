@@ -1,0 +1,119 @@
+%besme llahe rahmane rahim va tavakalto ala llah
+@relation RoleAction
+
+@attribute POS {V, ADJ, N, ADR, ADV, CONJ, NUM, POSTP, PR, PSUS, SUBR, PREP, PUNC, LATIN, ARAB, UNKNOWN}
+@attribute synTag {NE, APP, NCL, AJUCL, PARCL, TAM, NPRT, NPP, VPRT, COMPP, NPOSTMOD, NPREMOD, PUNC, SBJ, NVE, ENC, ADVRB, NADV, ADJADV, PRD, ACL, AVCL, VCL, AJPP, ADVPP, ADVC, NEZ, ADVEZ, PROG, MOS, MOZ, OBJ, OBJ2, VPP, MESU, AJCONJ, PCONJ, NCONJ, VCONJ, AVCONJ, POSDEP, PREDEP, APOSTMOD, APREMOD, ROOT}
+@attribute semTag {ARG0_AGENT, ARG0_CAUSER, ARG0_EXPERIENCER, ARG0_INITIATOR, ARG1_PATIENT, ARG1_THEME, ARG2_EXTEND, ARG2_OBJ2, ARG2_BENEFICIARY, ARG2_INSTRUMENT, ARG2_ATTRIBUTE, ARG2_GOAL_ENDSTATE, ARG3_SOURCE_STARTPOINT, ARG3_BENEFICIARY, ARG3_INSTRUMENT, ARG3_ATTRIBUTE, ARG4_ENDPOINT, ARG5, ArgM_COM, ArgM_LOC, ArgM_DIR,  ArgM_GOL, ArgM_MNR, ArgM_TMP, ArgM_EXT, ArgM_REC, ArgM_PRP, ArgM_CAU, ArgM_DIS, ArgM_MOD, ArgM_NEG, ArgM_ADV, ArgM_CND, ArgM_INS, NULL}
+@attribute wsd {نفر§n-13075,مسبب§n-13036, جانور§n-12239,جان_دار§n-10393, ساختار§n-12875, موقعيت§n-13554, جا§n-12733, شيء§n-12703, چيز§n-10392, ماده§n-14032, مشخصه§n-12756, خصوصيت_رواني§n-12725, واحد_زمان§n-12631, دوره_زماني§n-12603, فاصله_زماني§n-12691, اندازه§n-12768, رخداد§n-13136, رابطه§n-13628, گروه§n-12753, گروه§n-13239, خبر§n-12766, NULL}
+@attribute depended {YES, NO}
+@attribute class {roleAction, not_roleAction}
+
+@data
+%sentence:روزی بود.
+%
+N, MOS, ARG2_GOAL_ENDSTATE, NULL, NO, not_role_state
+%sentence:روزی بود.
+%
+N, MOS, ARG2_GOAL_ENDSTATE, NULL, NO, V, ROOT, NULL, NULL, NO, not_role_state
+%sentence:روزگاري بود.
+%
+N, MOS, ARG2_GOAL_ENDSTATE, NULL, NO, not_role_state
+%sentence:روزگاري بود.
+%
+N, MOS, ARG2_GOAL_ENDSTATE, NULL, NO, V, ROOT, NULL, NULL, NO, not_role_state
+%sentence:يک کودک سياه پوست فقير بود، که چند برادر و خواهر کوچکتر داشت.
+%
+NUM, NPREMOD, NULL, NULL, YES, not_role_state
+%sentence:يک کودک سياه پوست فقير بود، که چند برادر و خواهر کوچکتر داشت.
+%
+NUM, NPREMOD, NULL, NULL, YES, N, MOS, ARG2_GOAL_ENDSTATE, NULL, NO, not_role_state
+%sentence:يک کودک سياه پوست فقير بود، که چند برادر و خواهر کوچکتر داشت.
+%
+NUM, NPREMOD, NULL, NULL, YES, N, MOS, ARG2_GOAL_ENDSTATE, NULL, NO, N, MOS, ARG1_THEME, NULL, NO, not_role_state
+%sentence:يک کودک سياه پوست فقير بود، که چند برادر و خواهر کوچکتر داشت.
+%
+NUM, NPREMOD, NULL, NULL, YES, N, MOS, ARG2_GOAL_ENDSTATE, NULL, NO, N, MOS, ARG1_THEME, NULL, NO, ADJ, NPOSTMOD, NULL, NULL, YES, not_role_state
+%sentence:يک کودک سياه پوست فقير بود، که چند برادر و خواهر کوچکتر داشت.
+%
+NUM, NPREMOD, NULL, NULL, YES, N, MOS, ARG2_GOAL_ENDSTATE, NULL, NO, N, MOS, ARG1_THEME, NULL, NO, ADJ, NPOSTMOD, NULL, NULL, YES, ADJ, NPOSTMOD, NULL, NULL, YES, not_role_state
+%sentence:يک کودک سياه پوست فقير بود، که چند برادر و خواهر کوچکتر داشت.
+%
+NUM, NPREMOD, NULL, NULL, YES, N, MOS, ARG2_GOAL_ENDSTATE, NULL, NO, N, MOS, ARG1_THEME, NULL, NO, ADJ, NPOSTMOD, NULL, NULL, YES, ADJ, NPOSTMOD, NULL, NULL, YES, V, ROOT, NULL, NULL, NO, not_role_state
+%sentence:يک کودک سياه پوست فقير بود، که چند برادر و خواهر کوچکتر داشت.
+%
+NUM, NPREMOD, NULL, NULL, YES, N, MOS, ARG2_GOAL_ENDSTATE, NULL, NO, N, MOS, ARG1_THEME, NULL, NO, ADJ, NPOSTMOD, NULL, NULL, YES, ADJ, NPOSTMOD, NULL, NULL, YES, V, ROOT, NULL, NULL, NO, PREP, NPREMOD, NULL, NULL, YES, not_role_state
+%sentence:يک کودک سياه پوست فقير بود، که چند برادر و خواهر کوچکتر داشت.
+%
+NUM, NPREMOD, NULL, NULL, YES, N, MOS, ARG2_GOAL_ENDSTATE, NULL, NO, N, MOS, ARG1_THEME, NULL, NO, ADJ, NPOSTMOD, NULL, NULL, YES, ADJ, NPOSTMOD, NULL, NULL, YES, V, ROOT, NULL, NULL, NO, PREP, NPREMOD, NULL, NULL, YES, N, OBJ, ARG2_OBJ2, NULL, YES, not_role_state
+%sentence:يک کودک سياه پوست فقير بود، که چند برادر و خواهر کوچکتر داشت.
+%
+NUM, NPREMOD, NULL, NULL, YES, N, MOS, ARG2_GOAL_ENDSTATE, NULL, NO, N, MOS, ARG1_THEME, NULL, NO, ADJ, NPOSTMOD, NULL, NULL, YES, ADJ, NPOSTMOD, NULL, NULL, YES, V, ROOT, NULL, NULL, NO, PREP, NPREMOD, NULL, NULL, YES, N, OBJ, ARG2_OBJ2, NULL, YES, CONJ, NCONJ, NULL, NULL, YES, not_role_state
+%sentence:يک کودک سياه پوست فقير بود، که چند برادر و خواهر کوچکتر داشت.
+%
+NUM, NPREMOD, NULL, NULL, YES, N, MOS, ARG2_GOAL_ENDSTATE, NULL, NO, N, MOS, ARG1_THEME, NULL, NO, ADJ, NPOSTMOD, NULL, NULL, YES, ADJ, NPOSTMOD, NULL, NULL, YES, V, ROOT, NULL, NULL, NO, PREP, NPREMOD, NULL, NULL, YES, N, OBJ, ARG2_OBJ2, NULL, YES, CONJ, NCONJ, NULL, NULL, YES, N, POSDEP, NULL, NULL, YES, not_role_state
+%sentence:يک کودک سياه پوست فقير بود، که چند برادر و خواهر کوچکتر داشت.
+%
+NUM, NPREMOD, NULL, NULL, YES, N, MOS, ARG2_GOAL_ENDSTATE, NULL, NO, N, MOS, ARG1_THEME, NULL, NO, ADJ, NPOSTMOD, NULL, NULL, YES, ADJ, NPOSTMOD, NULL, NULL, YES, V, ROOT, NULL, NULL, NO, PREP, NPREMOD, NULL, NULL, YES, N, OBJ, ARG2_OBJ2, NULL, YES, CONJ, NCONJ, NULL, NULL, YES, N, POSDEP, NULL, NULL, YES, ADJ, NPOSTMOD, NULL, NULL, YES, not_role_state
+%sentence:يک کودک سياه پوست فقير بود، که چند برادر و خواهر کوچکتر داشت.
+%
+NUM, NPREMOD, NULL, NULL, YES, N, MOS, ARG2_GOAL_ENDSTATE, NULL, NO, N, MOS, ARG1_THEME, NULL, NO, ADJ, NPOSTMOD, NULL, NULL, YES, ADJ, NPOSTMOD, NULL, NULL, YES, V, ROOT, NULL, NULL, NO, PREP, NPREMOD, NULL, NULL, YES, N, OBJ, ARG2_OBJ2, NULL, YES, CONJ, NCONJ, NULL, NULL, YES, N, POSDEP, NULL, NULL, YES, ADJ, NPOSTMOD, NULL, NULL, YES, V, VCL, NULL, NULL, NO, not_role_state
+%sentence:اين  کودک که بزرگتر از همه بچه‌ها بود، روزها ميرفت کنار دريا ماهي ميگرفت.
+%
+PREP, NPREMOD, NULL, NULL, YES, not_role_state
+%sentence:اين  کودک که بزرگتر از همه بچه‌ها بود، روزها ميرفت کنار دريا ماهي ميگرفت.
+%
+PREP, NPREMOD, NULL, NULL, YES, N, SBJ, ARG1_THEME, NULL, NO, not_role_state
+%sentence:اين  کودک که بزرگتر از همه بچه‌ها بود، روزها ميرفت کنار دريا ماهي ميگرفت.
+%
+PREP, NPREMOD, NULL, NULL, YES, N, SBJ, ARG1_THEME, NULL, NO, N, SBJ, ARG0_AGENT, NULL, NO, not_role_state
+%sentence:اين  کودک که بزرگتر از همه بچه‌ها بود، روزها ميرفت کنار دريا ماهي ميگرفت.
+%
+PREP, NPREMOD, NULL, NULL, YES, N, SBJ, ARG1_THEME, NULL, NO, N, SBJ, ARG0_AGENT, NULL, NO, N, SBJ, ARG0_AGENT, NULL, NO, not_role_state
+%sentence:اين  کودک که بزرگتر از همه بچه‌ها بود، روزها ميرفت کنار دريا ماهي ميگرفت.
+%
+PREP, NPREMOD, NULL, NULL, YES, N, SBJ, ARG1_THEME, NULL, NO, N, SBJ, ARG0_AGENT, NULL, NO, N, SBJ, ARG0_AGENT, NULL, NO, ADJ, MOS, NULL, NULL, YES, not_role_state
+%sentence:اين  کودک که بزرگتر از همه بچه‌ها بود، روزها ميرفت کنار دريا ماهي ميگرفت.
+%
+PREP, NPREMOD, NULL, NULL, YES, N, SBJ, ARG1_THEME, NULL, NO, N, SBJ, ARG0_AGENT, NULL, NO, N, SBJ, ARG0_AGENT, NULL, NO, ADJ, MOS, NULL, NULL, YES, PREP, COMPPP, NULL, NULL, YES, not_role_state
+%sentence:اين  کودک که بزرگتر از همه بچه‌ها بود، روزها ميرفت کنار دريا ماهي ميگرفت.
+%
+PREP, NPREMOD, NULL, NULL, YES, N, SBJ, ARG1_THEME, NULL, NO, N, SBJ, ARG0_AGENT, NULL, NO, N, SBJ, ARG0_AGENT, NULL, NO, ADJ, MOS, NULL, NULL, YES, PREP, COMPPP, NULL, NULL, YES, N, MOZ, NULL, NULL, YES, not_role_state
+%sentence:اين  کودک که بزرگتر از همه بچه‌ها بود، روزها ميرفت کنار دريا ماهي ميگرفت.
+%
+PREP, NPREMOD, NULL, NULL, YES, N, SBJ, ARG1_THEME, NULL, NO, N, SBJ, ARG0_AGENT, NULL, NO, N, SBJ, ARG0_AGENT, NULL, NO, ADJ, MOS, NULL, NULL, YES, PREP, COMPPP, NULL, NULL, YES, N, MOZ, NULL, NULL, YES, V, NCL, NULL, NULL, YES, not_role_state
+%sentence:اين  کودک که بزرگتر از همه بچه‌ها بود، روزها ميرفت کنار دريا ماهي ميگرفت.
+%
+PREP, NPREMOD, NULL, NULL, YES, N, SBJ, ARG1_THEME, NULL, NO, N, SBJ, ARG0_AGENT, NULL, NO, N, SBJ, ARG0_AGENT, NULL, NO, ADJ, MOS, NULL, NULL, YES, PREP, COMPPP, NULL, NULL, YES, N, MOZ, NULL, NULL, YES, V, NCL, NULL, NULL, YES, N, ADVRB, TMP, NULL, NO, not_role_state
+%sentence:اين  کودک که بزرگتر از همه بچه‌ها بود، روزها ميرفت کنار دريا ماهي ميگرفت.
+%
+PREP, NPREMOD, NULL, NULL, YES, N, SBJ, ARG1_THEME, NULL, NO, N, SBJ, ARG0_AGENT, NULL, NO, N, SBJ, ARG0_AGENT, NULL, NO, ADJ, MOS, NULL, NULL, YES, PREP, COMPPP, NULL, NULL, YES, N, MOZ, NULL, NULL, YES, V, NCL, NULL, NULL, YES, N, ADVRB, TMP, NULL, NO, N, NVE, NULL, NULL, NO, not_role_state
+%sentence:اين  کودک که بزرگتر از همه بچه‌ها بود، روزها ميرفت کنار دريا ماهي ميگرفت.
+%
+PREP, NPREMOD, NULL, NULL, YES, N, SBJ, ARG1_THEME, NULL, NO, N, SBJ, ARG0_AGENT, NULL, NO, N, SBJ, ARG0_AGENT, NULL, NO, ADJ, MOS, NULL, NULL, YES, PREP, COMPPP, NULL, NULL, YES, N, MOZ, NULL, NULL, YES, V, NCL, NULL, NULL, YES, N, ADVRB, TMP, NULL, NO, N, NVE, NULL, NULL, NO, N, ADVRB, ARG4_ENDPOINT, NULL, NO, not_role_state
+%sentence:اين  کودک که بزرگتر از همه بچه‌ها بود، روزها ميرفت کنار دريا ماهي ميگرفت.
+%
+PREP, NPREMOD, NULL, NULL, YES, N, SBJ, ARG1_THEME, NULL, NO, N, SBJ, ARG0_AGENT, NULL, NO, N, SBJ, ARG0_AGENT, NULL, NO, ADJ, MOS, NULL, NULL, YES, PREP, COMPPP, NULL, NULL, YES, N, MOZ, NULL, NULL, YES, V, NCL, NULL, NULL, YES, N, ADVRB, TMP, NULL, NO, N, NVE, NULL, NULL, NO, N, ADVRB, ARG4_ENDPOINT, NULL, NO, N, OBJ, ARG1_PATIENT, NULL, NO, not_role_state
+%sentence:اين  کودک که بزرگتر از همه بچه‌ها بود، روزها ميرفت کنار دريا ماهي ميگرفت.
+%
+PREP, NPREMOD, NULL, NULL, YES, N, SBJ, ARG1_THEME, NULL, NO, N, SBJ, ARG0_AGENT, NULL, NO, N, SBJ, ARG0_AGENT, NULL, NO, ADJ, MOS, NULL, NULL, YES, PREP, COMPPP, NULL, NULL, YES, N, MOZ, NULL, NULL, YES, V, NCL, NULL, NULL, YES, N, ADVRB, TMP, NULL, NO, N, NVE, NULL, NULL, NO, N, ADVRB, ARG4_ENDPOINT, NULL, NO, N, OBJ, ARG1_PATIENT, NULL, NO, V, ROOT, NULL, NULL, NO, not_role_state
+%sentence:با این کار خود زندگی خانواده را اداره میکرد.
+%
+PREP, NPREMOD, NULL, NULL, YES, not_role_state
+%sentence:با این کار خود زندگی خانواده را اداره میکرد.
+%
+PREP, NPREMOD, NULL, NULL, YES, N, ADVRB, ARG2_OBJ2, NULL, NO, not_role_state
+%sentence:با این کار خود زندگی خانواده را اداره میکرد.
+%
+PREP, NPREMOD, NULL, NULL, YES, N, ADVRB, ARG2_OBJ2, NULL, NO, PR, MOZ, ARG0_AGENT, NULL, YES, not_role_state
+%sentence:با این کار خود زندگی خانواده را اداره میکرد.
+%
+PREP, NPREMOD, NULL, NULL, YES, N, ADVRB, ARG2_OBJ2, NULL, NO, PR, MOZ, ARG0_AGENT, NULL, YES, N, OBJ, ARG1_PATIENT, NULL, NO, not_role_state
+%sentence:با این کار خود زندگی خانواده را اداره میکرد.
+%
+PREP, NPREMOD, NULL, NULL, YES, N, ADVRB, ARG2_OBJ2, NULL, NO, PR, MOZ, ARG0_AGENT, NULL, YES, N, OBJ, ARG1_PATIENT, NULL, NO, N, MOZ, NULL, NULL, YES, not_role_state
+%sentence:با این کار خود زندگی خانواده را اداره میکرد.
+%
+PREP, NPREMOD, NULL, NULL, YES, N, ADVRB, ARG2_OBJ2, NULL, NO, PR, MOZ, ARG0_AGENT, NULL, YES, N, OBJ, ARG1_PATIENT, NULL, NO, N, MOZ, NULL, NULL, YES, N, NVE, NULL, NULL, NO, not_role_state
+%sentence:با این کار خود زندگی خانواده را اداره میکرد.
+%
+PREP, NPREMOD, NULL, NULL, YES, N, ADVRB, ARG2_OBJ2, NULL, NO, PR, MOZ, ARG0_AGENT, NULL, YES, N, OBJ, ARG1_PATIENT, NULL, NO, N, MOZ, NULL, NULL, YES, N, NVE, NULL, NULL, NO, V, ROOT, NULL, NULL, NO, not_role_state

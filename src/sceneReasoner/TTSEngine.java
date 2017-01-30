@@ -160,6 +160,33 @@ public class TTSEngine {
 //		}
 	
 	}
+	
+	public String generateFullRecordAnalysis(ArrayList<String> sentenceInfos){
+		
+		if(sentenceInfos == null || sentenceInfos.size() < 3)
+			MyError.exit("bad input lines!");			
+		
+		String record = "";
+		String NLSentence = sentenceInfos.get(0);
+		record += NLSentence + "\n";		
+		record += sentenceInfos.get(1)  + "\n";
+		sentenceInfos.remove(0);
+		sentenceInfos.remove(0);
+		
+		String[] sentenceElem = new String[sentenceInfos.size()];
+		for(int i = 0; i < sentenceElem.length; i++)
+			sentenceElem[i] = sentenceInfos.get(i);
+			
+		SentenceModel sentence = new SentenceModel(NLSentence, sentenceElem, true);	
+			
+			
+		record += sentence.getDataSetStr();
+		print(record);
+		print("------------");
+		return record;
+
+	}
+	
 		
 	public void checkSemanticReasoner1(Node argument, Node descriptor, Node referent)	{
 		

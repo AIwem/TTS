@@ -168,6 +168,28 @@ public class SentenceModel {
 		arrangeWords();
 	}	
 
+	/**
+	 * input parameter words contains full String definition of each word of this SentenceModel.
+	 * @param NLsentence sentence in Natural Language.
+	 * @param words full String definition of each word of this SentenceModel.
+	 * @param isDataFull is data analysis of each word full or not?
+	 */
+	public SentenceModel(String NLsentence, String[] words, boolean isDataFull){
+		this.NLSentence = NLsentence;
+		
+		if(_words == null)
+			_words = new ArrayList<Word>();
+		if(!isDataFull)
+			MyError.exit("data analysis of each word must be full!");
+		
+		for(String wStr:words){
+			Word wd = new Word(wStr, this, isDataFull);
+			this._words.add(wd);
+		}
+		arrangeWords();	
+		
+	}
+	
 	//-------------------- setter part --------------------------
 	/**
 	 * @param scene the scene to set
@@ -1034,11 +1056,11 @@ public class SentenceModel {
 		for(Word ph_w:fromThis){
 			
 			if(ph_w.isAdjective()){
-				System.out.println("\nfirst here in makePhrase!");
+//				System.out.println("\nfirst here in makePhrase!");
 				phraseHead.addAdjective(ph_w);
 			}
 			else if(ph_w.isMozaf_elaih()){
-				System.out.println("\nfirst here in makePhrase!");
+//				System.out.println("\nfirst here in makePhrase!");
 				phraseHead.addMozaf_elaih(ph_w);
 			}
 			
@@ -1071,7 +1093,7 @@ public class SentenceModel {
 			
 			this.addPhrase(ph);
 			
-			print(""+ ph);
+//			print(""+ ph);
 		}
 
 		//------------ generate verb phrase in this sentence ------------
@@ -1186,11 +1208,11 @@ public class SentenceModel {
 		return NLSentence;
 	}
 	
-	public String getDataSetStr() {
-		String dataSetRecord = "";
+	public ArrayList<String> getDataSetStr() {
+		ArrayList<String> dataSetRecord = new ArrayList<String>();
 	
 		if(_words == null)
-			return "";
+			return dataSetRecord;
 	
 		int verbNum = 0;
 		
@@ -1199,9 +1221,10 @@ public class SentenceModel {
 			verbNum = verb._number;
 		else
 			verbNum = 0;
+				
+		for(Word wrd:_words)			
+			dataSetRecord.add(wrd.getStr4DataSet(verbNum));
 		
-		for(Word w:_words)
-			dataSetRecord += w.getStr4dataSet(verbNum) + "\n";
 		return dataSetRecord;
 	}
 	

@@ -9,7 +9,7 @@ public class RoleGoal extends Goal {
 
 	public RoleGoal(SceneModel scene, String name, Node node) {
 		super(scene, name, node);
-		this.scenePart = ScenePart.ROLE_GOAL;
+		this.scenePart = ScenePart.ROLE_INTENT;
 	}
 
 }

@@ -11,8 +11,8 @@
 1	یک			NUM			NPREMOD		NULL					یک#n1			اندازه§n-12768				2		NO
 2	کودک		N			MOS			ARG2_GOAL_ENDSTATE		کودک#n1			نفر§n-13075					5		role
 2	کودک		N			MOS			ARG1_THEME				کودک#n1			نفر§n-13075					5		role
-3	سیاه‌پوست	ADJ			NPOSTMOD	NULL					سیاه پوست#a1	مشخصه§n-12756				2		role_state
-4	فقیر		ADJ			NPOSTMOD	NULL					فقیر#a1			مشخصه§n-12756				2		role_state
+3	سیاه‌پوست	ADJ			NPOSTMOD	NULL					سیاه پوست#a1	مشخصه§n-12756				2		roleState
+4	فقیر		ADJ			NPOSTMOD	NULL					فقیر#a1			مشخصه§n-12756				2		roleState
 5	بود			V			ROOT		NULL					بودن#v3			رخداد§n-13136				0		NO
 8	چند			PREP		NPREMOD		NULL					NULL			NULL						9		NO
 9	برادر		N			OBJ			ARG2_OBJ2				برادر#n2		نفر§n-13075					13		NO
@@ -26,15 +26,15 @@
 2	کودک		N			SBJ			ARG1_THEME				کودک#n1			نفر§n-13075					14		role
 2	کودک		N			SBJ			ARG0_AGENT				کودک#n1			نفر§n-13075					14		role
 2	کودک		N			SBJ			ARG0_AGENT				کودک#n1			نفر§n-13075					14		role
-4	بزرگتر		ADJ			MOS			ARG2_GOAL_ENDSTATE 		بزرگ#a2			مشخصه§n-12756				8		role_state
+4	بزرگتر		ADJ			MOS			ARG2_GOAL_ENDSTATE 		بزرگ#a2			مشخصه§n-12756				8		roleState
 6	همه			PREP		COMPPP		NULL					NULL			NULL						4		NO
 7	بچه‌ها		N			MOZ			NULL					بچه#n6			نفر§n-13075					6		NO
 8	بود			V			NCL			NULL					بودن#v6			رخداد§n-13136				2		NO
 10	روزها		N			ADVRB		ArgM_TMP				روز#n6			دوره زمانی§n-12603			14		time
-11	میرفت		N			NVE			NULL					رفتن#v7			رخداد§n-13136				14		role_action
+11	میرفت		N			NVE			NULL					رفتن#v7			رخداد§n-13136				14		roleAction
 12	کناردریا	N			ADVRB		ARG4_ENDPOINT			دریا#n1			 جا§n-12733					14		location
-13	ماهی		N			OBJ			ARG1_PATIENT			ماهی#n2			جانور§n-12239				14		dynamic_object
-14	میگرفت		V			ROOT		NULL					گرفتن#v1		رخداد§n-13136				0		role_action
+13	ماهی		N			OBJ			ARG1_PATIENT			ماهی#n2			جانور§n-12239				14		dynamicObj
+14	میگرفت		V			ROOT		NULL					گرفتن#v1		رخداد§n-13136				0		roleAction
 %sentence:با این کار خود زندگی خانواده را اداره میکرد.
 %
 2	این			PREP		NPREMOD		NULL				NULL				NULL						3		NO
@@ -43,4 +43,4 @@
 5	زندگی		N			OBJ			ARG1_PATIENT		زندگی#n2			شیء§n-12703					9		NO
 6	خانواده		N			MOZ			NULL				خانواده#n3			خانواده#n3					5		NO
 8	اداره		N			NVE			NULL				اداره#n2			رخداد§n-13136				9		NO
-9	میکرد		V			ROOT		NULL				اداره کردن#v1		رخداد§n-13136				0		role_action
+9	میکرد		V			ROOT		NULL				اداره کردن#v1		رخداد§n-13136				0		roleAction

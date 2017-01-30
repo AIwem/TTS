@@ -11,47 +11,47 @@
 @data
 %sentence:روزی بود.
 %
-N, MOS, ARG2_GOAL_ENDSTATE, NULL, NO, not_role
-V, ROOT, NULL, NULL, NO, not_role
+N, MOS, ARG2_GOAL_ENDSTATE, NULL, NO, not_role_action
+V, ROOT, NULL, NULL, NO, not_role_action
 %sentence:روزگاري بود.
 %
-N, MOS, ARG2_GOAL_ENDSTATE, NULL, NO, not_role
-V, ROOT, NULL, NULL, NO, not_role
+N, MOS, ARG2_GOAL_ENDSTATE, NULL, NO, not_role_action
+V, ROOT, NULL, NULL, NO, not_role_action
 %sentence:يک کودک سياه پوست فقير بود، که چند برادر و خواهر کوچکتر داشت.
 %
-NUM, NPREMOD, NULL, NULL, YES, not_role
-N, MOS, ARG2_GOAL_ENDSTATE, NULL, NO,  role
-N, MOS, ARG1_THEME, NULL, NO,  role
-ADJ, NPOSTMOD, NULL, NULL, YES, not_role
-ADJ, NPOSTMOD, NULL, NULL, YES, not_role
-V, ROOT, NULL, NULL, NO, not_role
-PREP, NPREMOD, NULL, NULL, YES, not_role
-N, OBJ, ARG2_OBJ2, NULL, YES, not_role
-CONJ, NCONJ, NULL, NULL, YES, not_role
-N, POSDEP, NULL, NULL, YES, not_role
-ADJ, NPOSTMOD, NULL, NULL, YES, not_role
-V, VCL, NULL, NULL, NO, not_role
+NUM, NPREMOD, NULL, NULL, YES, not_role_action
+N, MOS, ARG2_GOAL_ENDSTATE, NULL, NO, not_role_action
+N, MOS, ARG1_THEME, NULL, NO, not_role_action
+ADJ, NPOSTMOD, NULL, NULL, YES, not_role_action
+ADJ, NPOSTMOD, NULL, NULL, YES, not_role_action
+V, ROOT, NULL, NULL, NO, not_role_action
+PREP, NPREMOD, NULL, NULL, YES, not_role_action
+N, OBJ, ARG2_OBJ2, NULL, YES, not_role_action
+CONJ, NCONJ, NULL, NULL, YES, not_role_action
+N, POSDEP, NULL, NULL, YES, not_role_action
+ADJ, NPOSTMOD, NULL, NULL, YES, not_role_action
+V, VCL, NULL, NULL, NO, not_role_action
 %sentence:اين  کودک که بزرگتر از همه بچه‌ها بود، روزها ميرفت کنار دريا ماهي ميگرفت.
 %
-PREP, NPREMOD, NULL, NULL, YES, not_role
-N, SBJ, ARG1_THEME, NULL, NO,  role
-N, SBJ, ARG0_AGENT, NULL, NO,  role
-N, SBJ, ARG0_AGENT, NULL, NO,  role
-ADJ, MOS, NULL, NULL, YES, not_role
-PREP, COMPPP, NULL, NULL, YES, not_role
-N, MOZ, NULL, NULL, YES, not_role
-V, NCL, NULL, NULL, YES, not_role
-N, ADVRB, TMP, NULL, NO, not_role
-N, NVE, NULL, NULL, NO, not_role
-N, ADVRB, ARG4_ENDPOINT, NULL, NO, not_role
-N, OBJ, ARG1_PATIENT, NULL, NO, not_role
-V, ROOT, NULL, NULL, NO, not_role
+PREP, NPREMOD, NULL, NULL, YES, not_role_action
+N, SBJ, ARG1_THEME, NULL, NO, not_role_action
+N, SBJ, ARG0_AGENT, NULL, NO, not_role_action
+N, SBJ, ARG0_AGENT, NULL, NO, not_role_action
+ADJ, MOS, NULL, NULL, YES, not_role_action
+PREP, COMPPP, NULL, NULL, YES, not_role_action
+N, MOZ, NULL, NULL, YES, not_role_action
+V, NCL, NULL, NULL, YES, not_role_action
+N, ADVRB, TMP, NULL, NO, not_role_action
+N, NVE, NULL, NULL, NO,  role_action
+N, ADVRB, ARG4_ENDPOINT, NULL, NO, not_role_action
+N, OBJ, ARG1_PATIENT, NULL, NO, not_role_action
+V, ROOT, NULL, NULL, NO,  role_action
 %sentence:با این کار خود زندگی خانواده را اداره میکرد.
 %
-PREP, NPREMOD, NULL, NULL, YES, not_role
-N, ADVRB, ARG2_OBJ2, NULL, NO, not_role
-PR, MOZ, ARG0_AGENT, NULL, YES, not_role
-N, OBJ, ARG1_PATIENT, NULL, NO, not_role
-N, MOZ, NULL, NULL, YES, not_role
-N, NVE, NULL, NULL, NO, not_role
-V, ROOT, NULL, NULL, NO, not_role
+PREP, NPREMOD, NULL, NULL, YES, not_role_action
+N, ADVRB, ARG2_OBJ2, NULL, NO, not_role_action
+PR, MOZ, ARG0_AGENT, NULL, YES, not_role_action
+N, OBJ, ARG1_PATIENT, NULL, NO, not_role_action
+N, MOZ, NULL, NULL, YES, not_role_action
+N, NVE, NULL, NULL, NO, not_role_action
+V, ROOT, NULL, NULL, NO,  role_action
