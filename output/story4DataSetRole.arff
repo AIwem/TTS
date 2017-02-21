@@ -4,7 +4,7 @@
 @attribute POS {V, ADJ, N, ADR, ADV, CONJ, NUM, POSTP, PR, PSUS, SUBR, PREP, PUNC, LATIN, ARAB, UNKNOWN}
 @attribute synTag {NE, APP, NCL, AJUCL, PARCL, TAM, NPRT, NPP, VPRT, COMPP, NPOSTMOD, NPREMOD, PUNC, SBJ, NVE, ENC, ADVRB, NADV, ADJADV, PRD, ACL, AVCL, VCL, AJPP, ADVPP, ADVC, NEZ, ADVEZ, PROG, MOS, MOZ, OBJ, OBJ2, VPP, MESU, AJCONJ, PCONJ, NCONJ, VCONJ, AVCONJ, POSDEP, PREDEP, APOSTMOD, APREMOD, ROOT}
 @attribute semTag {ARG0_AGENT, ARG0_CAUSER, ARG0_EXPERIENCER, ARG0_INITIATOR, ARG1_PATIENT, ARG1_THEME, ARG2_EXTEND, ARG2_OBJ2, ARG2_BENEFICIARY, ARG2_INSTRUMENT, ARG2_ATTRIBUTE, ARG2_GOAL_ENDSTATE, ARG3_SOURCE_STARTPOINT, ARG3_BENEFICIARY, ARG3_INSTRUMENT, ARG3_ATTRIBUTE, ARG4_ENDPOINT, ARG5, ArgM_COM, ArgM_LOC, ArgM_DIR,  ArgM_GOL, ArgM_MNR, ArgM_TMP, ArgM_EXT, ArgM_REC, ArgM_PRP, ArgM_CAU, ArgM_DIS, ArgM_MOD, ArgM_NEG, ArgM_ADV, ArgM_CND, ArgM_INS, NULL}
-@attribute wsd {نفر§n-13075,مسبب§n-13036, جانور§n-12239,جان_دار§n-10393, ساختار§n-12875, موقعيت§n-13554, جا§n-12733, شيء§n-12703, چيز§n-10392, ماده§n-14032, مشخصه§n-12756, خصوصيت_رواني§n-12725, واحد_زمان§n-12631, دوره_زماني§n-12603, فاصله_زماني§n-12691, اندازه§n-12768, رخداد§n-13136, رابطه§n-13628, گروه§n-12753, گروه§n-13239, خبر§n-12766, NULL}
+@attribute wsd {نفر§n-13075,مسبب§n-13036, جانور§n-12239,جان_دار§n-10393, ساختار§n-12875, موقعيت§n-13554, جا§n-12733, شيء§n-12703, چيز§n-10392, ماده§n-14032, مشخصه§n-12756, خصوصيت_رواني§n-12725, واحد_زمان§n-12631, دوره_زماني§n-12603, فاصله_زماني§n-12691, اندازه§n-12768,  رخداد§n-13136, رابطه§n-13628, گروه§n-12753, گروه§n-13239, خبر§n-12766, NULL}
 @attribute depended {YES, NO}
 @attribute class {roleAction, not_roleAction}
 

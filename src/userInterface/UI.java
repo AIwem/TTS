@@ -30,7 +30,8 @@ public class UI {
 //	private String inputStoryFilePath = "inputStory/inputStrory2-1.txt";
 //	private String inputStoryFilePath = "inputStory/inputStrory3.txt";
 	private String inputStoryFilePath = "inputStory/inputStory4.txt";
-	private String inputDataSetFilePath = "inputStory/story4DataSetToformat.txt";
+	private String inputSRLDataSetFilePath = "inputStory/story4DataSetToformat.txt";
+	private String inputDataSetFilePath = "inputStory/srl-stories.conll";
 	private String inputDataSetHeaderFilePath = "inputStory/dataSetHeader.txt";
 //	private String mainKbFilePath = "kb/farsnet--24.txt";
 	private String mainKbFilePath = "kb/farsnet.txt";
@@ -99,6 +100,52 @@ public class UI {
 	 	return storyModel;
 	}
 
+	/**
+	 * clear SRLDataset from unwanted columns, and generate dataSet ready to be added WSD by human.
+	 * srl format sample:
+	 * 15	من	من	من	PR	PR	person=1|number=SING|senID=126_035	person=1|number=SING|senID=126_035	14	14	POSDEP	POSDEP	_	_	_	_	_	_	_
+	 * 
+	 * output format:
+	 * 15	من		PR		POSDEP		14		_	_	_	_	_	_	_ 
+	 * @return
+	 */
+	public void clearSRLDataset(){
+		
+		try {
+			
+			PrintWriter writer = new PrintWriter("output\\cleanedSRLDataSet.arff", "UTF-8");
+
+			ArrayList<String> inputs = importInputTexts(inputDataSetFilePath);
+				
+			for(String record:inputs){
+				
+				String toWrtite = "";
+				
+				String[] parts = record.split("(\t)+");
+				
+				//discarding parts[2], [3], [5], [6], [7], [9], and [11]
+				if(parts.length > 11){
+					toWrtite += parts[0] + "\t";				
+					toWrtite += parts[1] + "\t";
+					toWrtite += parts[4] + "\t";
+					toWrtite += parts[10] + "\t";
+					toWrtite += parts[8] + "\t";
+				}
+				for(int i = 12; i < parts.length; i++)
+					toWrtite +=  parts[i] + "\t";
+								
+				writer.println(toWrtite);				
+			}							
+			writer.close();
+			
+		} catch (FileNotFoundException | UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		 	
+	}
+
+		
 //	public void makeFullDataset(){
 //		
 //		ArrayList<ArrayList<String>> inputs = importInputDataSetInfo(inputDataSetFilePath);
@@ -119,7 +166,10 @@ public class UI {
 //			e.printStackTrace();
 //		}
 //	}
-//	
+
+	/**
+	 * reformat full human made dataSet file to the final format.
+	 */
 	public void reformatDataset(){
 		
 		BufferedReader stream4header = null;
@@ -514,7 +564,6 @@ public class UI {
 		return inputs;
 	}
 
-	
 	private void testKB(){
 		
 		System.out.println(" ------------ TESTING IMP1 ------------ ");
@@ -696,9 +745,11 @@ public class UI {
 		
 		UI ui = new UI();
 
+		ui.clearSRLDataset();
+		
 //		StoryModel sm = ui.makeSyntaxDataset();
 //		ui.manualReformatDataset();
-		ui.reformatDataset();
+//		ui.reformatDataset();
 		//TODO: correct relation name in all of generating dataSet
 		//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
@@ -706,6 +757,7 @@ public class UI {
 		
 	}
 }
+
 
 
 
