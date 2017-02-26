@@ -1,0 +1,52 @@
+1	حضرت		N		SBJ			6	null			null				role			_	_			_		_		_	
+2	یوسف		N		MOZ			1	یوسف§n-23957	نفر§n-13075			role			_	_			_		_		_	
+3	یکی‌از		ADJ		NPREMOD		4	null			null				no				_	_			_		_		_	
+4	پیامبران	N		MOS			6	رسول§n-15053	نفر§n-13075			role			_	_			_		_		_	
+5	الهی		ADJ		NPOSTMOD	4	ربانی§a-2083	مشخصه§n-12756		role_state		_	_			_		_		_	
+6	است			V		ROOT		0	بودن§v-9328		رخداد§n-13136		no				Y	بودن.15		Arg1	_		_	
+7	که			SUBR	NCL			4	null			null				no				_	_			_		_		_	
+8	نام			N		SBJ			15	نام§n-13061		مفهوم کلی§n-12726	no				_	_			_		_		_	
+9	مبارک		ADJ		NPOSTMOD	8	همایون§a-1636	مشخصه§n-12756		no				_	_			_		_		_	
+10	ش			PR		MOZ			8	null			null				no				_	_			_		_		_	
+11	27			NUM		NPREMOD		12	null			null				no				_	_			_		_		_	
+12	بار			N		ADVRB		15	دست§n-13141		دوره زمانی§n-12603	no				_	_			_		_		_	
+13	در			PREP	VPP			15	null			null				no				_	_			_		_		_	
+14	قرآن		N		POSDEP		13	مصحف§n-10198	شیء§n-12703			static_object	_	_			_		_		_	
+15	آمده‌است		V		PREDEP		16	رسیدن§v-8616	رخداد§n-13136		no				Y	آمدن.31		_		Arg3	_	
+16	و			CONJ	VCONJ		23	null			null				no				_	_			_		_		_	
+17	یک			NUM		NPREMOD		18	یک§n-14494		اندازه§n-12768		no				_	_			_		_		_	
+18	سوره		N		SBJ			23	سوره§n-20384	مفهوم کلی§n-12726	no				_	_			_		_		_	
+19	نیز			ADV		ADVRB		23	مضافاً§r-16715	null				no				_	_			_		_		_	
+20	به			PREP	MOS			23	null			null				no				_	_			_		_		_	
+21	نام			N		POSDEP		20	نام§n-13061		مفهوم کلی§n-12726	no				_	_			_		_		_	
+22	ایشان		PR		MOZ			21	null			null				no				_	_			_		_		_	
+23	می‌باشد		V		PRD			7	بودن§v-9328		رخداد§n-13136		no				Y	بودن.15		_		_		Arg1	
+----------------
+1	حضرت		N		SBJ			20	null			null				role		_	_	_	_	_	_	
+2	موسی		N		MOZ			1	موسی§n-23927	نفر§n-13075			role		_	_	_	_	_	_	
+3	(			PUNC	PUNC		4	null			null				no			_	_	_	_	_	_	
+4	ع			ARAB	POSDEP		2	null			null				no			_	_	_	_	_	_	
+5	)			PUNC	PUNC		4	null			null				no			_	_	_	_	_	_	
+6	زمانی		N		ADVRB		20	زمان§n-12679	اندازه§n-12768		no			_	_	_	_	_	_	
+7	كه			SUBR	NCL			6	null			null				no			_	_	_	_	_	_	
+8	می‌خواست		V		PRD			7	خواستن§v-9670	رخداد§n-13136		no			Y	خواستن.360	Arg1	_	_	_	
+9	با			PREP	ADVRB		14	null			null				no			_	_	_	_	_	_	
+10	بنی‌اسرائیل	N		POSDEP		9	null			null				role			_	_	_	_	_	_	
+11	از			PREP	AJPP		13	null			null				no			_	_	_	_	_	_	
+12	مصر			N		POSDEP		11	مصر§n-20196		مفهوم کلی§n-12726	location	_	_	_	_	_	_	
+13	خارج		ADJ		MOS			14	برون§n-11860	جا§n-12733			no			_	_	_	_	_	_	
+14	شود			V		VCL			8	گردیدن§v-9382	رخداد§n-13136		role_action	Y	کردن.25	_	ArgM-COM	_	_	
+15	جنازه		N		PREDEP		17	جنازه§n-20405	شیء§n-12703			static_object	_	_	_	_	_	_	
+16	یوسف		N		MOZ			15	یوسف§n-23957	نفر§n-13075			no			_	_	_	_	_	_	
+17	را			POSTP	OBJ			20	null			null				no			_	_	_	_	_	_	
+18	همراه		N		ADVRB		20	همگام§a-1669	مشخصه§n-12756		no			_	_	_	_	_	_	
+19	خود			PR		MOZ			18	خود§n-13459		نفر§n-13075			role		_	_	_	_	_	_	
+20	برده		V		PREDEP		21	بردن§v-7660		رخداد§n-13136		role_action	Y	بردن.208	_	_	Arg0	_	
+21	و			CONJ	VCONJ		25	null			null				no			_	_	_	_	_	_	
+22	در			PREP	VPP			25	null			null				no			_	_	_	_	_	_	
+23	فلسطین		N		POSDEP		22	null			null				location	_	_	_	_	_	_	
+24	دفن			N		NVE			25	خاکسپاری§n-11616	رخداد§n-13136	no			_	_	_	_	_	_	
+25	نمودند		V		ROOT		0	به خاک سپردن§v-9614	رخداد§n-13136	role_action	Y	دفن‌کردن.67	_	_	_	Arg0	
+26	.			PUNC	PUNC		25	null			null				no			_	_	_	_	_	_	
+
+

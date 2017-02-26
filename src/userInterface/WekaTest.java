@@ -3,14 +3,18 @@ package userInterface;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.util.ArrayList;
+
 import weka.classifiers.Classifier;
 import weka.classifiers.Evaluation;
 import weka.classifiers.evaluation.NominalPrediction;
+import weka.classifiers.evaluation.Prediction;
 import weka.classifiers.rules.DecisionTable;
 import weka.classifiers.rules.PART;
 import weka.classifiers.trees.DecisionStump;
 import weka.classifiers.trees.J48;
 import weka.core.FastVector;
+import weka.core.Instance;
 import weka.core.Instances;
 import weka.gui.*;
  
@@ -32,15 +36,14 @@ public class WekaTest {
  
 		model.buildClassifier(trainingSet);
 		evaluation.evaluateModel(model, testingSet);
- 
-		return evaluation;
+ 		return evaluation;
 	}
  
-	public static double calculateAccuracy(FastVector predictions) {
+	public static double calculateAccuracy(ArrayList<Prediction> predictions) {
 		double correct = 0;
  
 		for (int i = 0; i < predictions.size(); i++) {
-			NominalPrediction np = (NominalPrediction) predictions.elementAt(i);
+			NominalPrediction np = (NominalPrediction) predictions.get(i);
 			if (np.predicted() == np.actual()) {
 				correct++;
 			}
@@ -62,9 +65,6 @@ public class WekaTest {
  
 	public static void main(String[] args) throws Exception {		
 		
-		WekaTest wt = new WekaTest();
-		
-		
 //		BufferedReader datafile = readDataFile("dataset/95-10-06DatasetStaticObj.arff");//stroy1
 //		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetStaticObj.arff");//story 1&2
 //		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetStaticObj.arff");//story1&2&3
@@ -79,13 +79,16 @@ public class WekaTest {
 //		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetLocation.arff");//story1&2&3
 //		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetTime.arff");//story1&2&3
 //		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetSceneGoal.arff");//story1&2&3
-//		
 		
-		
+		BufferedReader dataTestfile = readDataFile("dataset/95-10-13DateSetRoleState-test.arff");//story1&2&3
  
 		Instances data = new Instances(datafile);
 		data.setClassIndex(data.numAttributes() - 1);
  
+		Instances testData = new Instances(dataTestfile);
+		testData.setClassIndex(testData.numAttributes() - 1);
+
+		
 		// Do 10-split cross validation
 		Instances[][] split = crossValidationSplit(data, 10);
  
@@ -105,16 +108,16 @@ public class WekaTest {
 		for (int j = 0; j < models.length; j++) {
  
 			// Collect every group of predictions for current model in a FastVector
-			FastVector predictions = new FastVector();
+			ArrayList<Prediction> predictions = new ArrayList<Prediction>();
  
 			// For each training-testing split pair, train and test the classifier
 			for (int i = 0; i < trainingSplits.length; i++) {
 				Evaluation validation = classify(models[j], trainingSplits[i], testingSplits[i]);
  
-				predictions.appendElements(validation.predictions());
+				predictions.addAll(validation.predictions());
  
 				// Uncomment to see the summary for each training-testing pair.
-				//System.out.println(models[j].toString());
+//				System.out.println(models[j].toString());
 			}
  
 			// Calculate overall accuracy of current classifier on all splits
@@ -124,9 +127,24 @@ public class WekaTest {
 			// but nice-looking way.
 			System.out.println("Accuracy of " + models[j].getClass().getSimpleName() + ": "
 					+ String.format("%.2f%%", accuracy)
-					+ "\n---------------------------------");	
+					+ "\n---------------------------------");			
+		}
+		
+		ArrayList<Prediction> testPpred = new ArrayList<Prediction>();
+		
+		for (int j = 0; j < models.length; j++) {
+						
+			Evaluation testEval = classify(models[j], data, testData);
 			
-		}		
+			testPpred.addAll(testEval.predictions());
+			
+			System.out.println(testEval.predictions() + "\n");
+			
+			System.out.println("Test accu " + models[j].getClass().getSimpleName() + ": "
+					+ String.format("%.2f%%", calculateAccuracy(testPpred))
+					+ "\n---------------------------------");
+		}
  
+		
 	}
 }
