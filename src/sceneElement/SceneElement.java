@@ -175,11 +175,11 @@ public class SceneElement {
 	 * @param node
 	 * @return
 	 */
-	private RoleMood addRoleMoodToRole(String name, Node node){		
+	private RoleState addRoleMoodToRole(String name, Node node){		
 		try{
 			Role role = (Role)this;
-			RoleMood rm = new RoleMood(this._scene, name, node);
-			return role.addRole_mood(rm);
+			RoleState rm = new RoleState(this._scene, name, node);
+			return role.addRole_state(rm);
 		}
 		catch(Exception e){			
 			print("" + e);

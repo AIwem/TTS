@@ -29,9 +29,10 @@ public class UI {
 //	private String inputStoryFilePath = "inputStory/inputStrory8.txt";
 //	private String inputStoryFilePath = "inputStory/inputStrory2-1.txt";
 //	private String inputStoryFilePath = "inputStory/inputStrory3.txt";
-	private String inputStoryFilePath = "inputStory/inputStory4.txt";
-	private String inputSRLDataSetFilePath = "inputStory/story4DataSetToformat.txt";
-	private String inputDataSetFilePath = "inputStory/srl-stories.conll";
+//	private String inputStoryFilePath = "inputStory/inputStory4.txt";
+//	private String inputSRLDataSetFilePath = "inputStory/story4DataSetToformat.txt";
+//	private String inputDataSetFilePath = "inputStory/srl-stories.conll";
+	private String inputDataSetFilePath = "inputStory/sampleManualInputDataSetToformat.arff";
 	private String inputDataSetHeaderFilePath = "inputStory/dataSetHeader.txt";
 //	private String mainKbFilePath = "kb/farsnet--24.txt";
 	private String mainKbFilePath = "kb/farsnet.txt";
@@ -53,52 +54,52 @@ public class UI {
 	 * main cycle of reading input sentences from user input file, and giving sentence to TTSEngine,
 	 * and showing its output to the user.
 	 */
-	public StoryModel makeSyntaxDataset(){
-		
-		//It must read sentence from user input.
-		//temporarily it reads all input story from file instead of getting from user!
-		ArrayList<String> inputs = importInputTexts(inputStoryFilePath);
-
-		ArrayList<String> current_scene_lines = new ArrayList<String>();
-		
-		int story_num = 0;		
-		StoryModel storyModel = new StoryModel("story"+story_num);		
-		
-		PrintWriter writer = null;
-		PrintWriter writer2 = null;
-		try {
-//			writer = new PrintWriter("output\\sceneOutput.txt", "UTF-8");
-			writer = null;//new PrintWriter("output\\sentenceSyntax.txt", "UTF-8");
-			writer2 = new PrintWriter("output\\sentencePhrases.txt", "UTF-8");
-		} catch (FileNotFoundException | UnsupportedEncodingException e) {
-			e.printStackTrace();
-		}
-		
-		for(String line:inputs){
-			
-			if(line.equals("«داستان جدید»")){				
-				storyModel = new StoryModel("stroy" + ++story_num);
-				tts = new TTSEngine(mainKbFilePath, myKbFilePath, verbSemanticCapacitiesPath, verbVisualCapacitiesPath);
-				continue;
-			}
-			else if(line.equals("«صحنه جدید»")){
-				
-				//Then give the sentences of a scene to TTSEngine to enrich. 
-			 	tts.TextToScene(current_scene_lines, storyModel, false, writer, writer2);		 	
-				
-				current_scene_lines = new ArrayList<String>();
-				continue;
-			}			
-			current_scene_lines.add(line);			
-		}
-		//sentences of the last scene will be sent to TTSEngine to enrich. 
-	 	tts.TextToScene(current_scene_lines, storyModel, true, writer, writer2);
-
-//		writer.close();
-		writer2.close();
-			
-	 	return storyModel;
-	}
+//	public StoryModel makeSyntaxDataset(){
+//		
+//		//It must read sentence from user input.
+//		//temporarily it reads all input story from file instead of getting from user!
+//		ArrayList<String> inputs = importInputTexts(inputStoryFilePath);
+//
+//		ArrayList<String> current_scene_lines = new ArrayList<String>();
+//		
+//		int story_num = 0;		
+//		StoryModel storyModel = new StoryModel("story"+story_num);		
+//		
+//		PrintWriter writer = null;
+//		PrintWriter writer2 = null;
+//		try {
+////			writer = new PrintWriter("output\\sceneOutput.txt", "UTF-8");
+//			writer = null;//new PrintWriter("output\\sentenceSyntax.txt", "UTF-8");
+//			writer2 = new PrintWriter("output\\sentencePhrases.txt", "UTF-8");
+//		} catch (FileNotFoundException | UnsupportedEncodingException e) {
+//			e.printStackTrace();
+//		}
+//		
+//		for(String line:inputs){
+//			
+//			if(line.equals("«داستان جدید»")){				
+//				storyModel = new StoryModel("stroy" + ++story_num);
+//				tts = new TTSEngine(mainKbFilePath, myKbFilePath, verbSemanticCapacitiesPath, verbVisualCapacitiesPath);
+//				continue;
+//			}
+//			else if(line.equals("«صحنه جدید»")){
+//				
+//				//Then give the sentences of a scene to TTSEngine to enrich. 
+//			 	tts.TextToScene(current_scene_lines, storyModel, false, writer, writer2);		 	
+//				
+//				current_scene_lines = new ArrayList<String>();
+//				continue;
+//			}			
+//			current_scene_lines.add(line);			
+//		}
+//		//sentences of the last scene will be sent to TTSEngine to enrich. 
+//	 	tts.TextToScene(current_scene_lines, storyModel, true, writer, writer2);
+//
+////		writer.close();
+//		writer2.close();
+//			
+//	 	return storyModel;
+//	}
 
 	/**
 	 * clear SRLDataset from unwanted columns, and generate dataSet ready to be added WSD by human.
@@ -182,20 +183,20 @@ public class UI {
 		try
 		{
 			stream4header = new BufferedReader(new InputStreamReader(new FileInputStream(inputDataSetHeaderFilePath), "utf-8"));
-			writer1 = new PrintWriter("output\\story4DataSetRole.arff", "UTF-8");
-			writer2 = new PrintWriter("output\\story4DataSetrole_action.arff", "UTF-8");
-			writer3 = new PrintWriter("output\\story4DataSetrole_state.arff", "UTF-8");
-			writer4 = new PrintWriter("output\\story4DataSetrole_emotion.arff", "UTF-8");
-			writer5 = new PrintWriter("output\\story4DataSetrole_intent.arff", "UTF-8");
-			writer6 = new PrintWriter("output\\story4DataSetDyanmicObject.arff", "UTF-8");
-			writer7 = new PrintWriter("output\\story4DataSetdynamic_object_action.arff", "UTF-8");
-			writer8 = new PrintWriter("output\\story4DataSetdynamic_object_state.arff", "UTF-8");
-			writer9 = new PrintWriter("output\\story4DataSetstatic_objectect.arff", "UTF-8");
-			writer10 = new PrintWriter("output\\story4DataSetstatic_object_state.arff", "UTF-8");
-			writer11 = new PrintWriter("output\\story4DataSetLocation.arff", "UTF-8");
-			writer12 = new PrintWriter("output\\story4DataSetTime.arff", "UTF-8");
-			writer13 = new PrintWriter("output\\story4DataSetscene_goal.arff", "UTF-8");
-			writer14 = new PrintWriter("output\\story4DataSetscene_emotion.arff", "UTF-8");
+			writer1 = new PrintWriter("output\\95-12-15sampleDataSetRole.arff", "UTF-8");
+			writer2 = new PrintWriter("output\\95-12-15sampleDataSetrole_action.arff", "UTF-8");
+			writer3 = new PrintWriter("output\\95-12-15sampleDataSetrole_state.arff", "UTF-8");
+			writer4 = new PrintWriter("output\\95-12-15sampleDataSetrole_emotion.arff", "UTF-8");
+			writer5 = new PrintWriter("output\\95-12-15sampleDataSetrole_intent.arff", "UTF-8");
+			writer6 = new PrintWriter("output\\95-12-15sampleDataSetDyanmicObject.arff", "UTF-8");
+			writer7 = new PrintWriter("output\\95-12-15sampleDataSetdynamic_object_action.arff", "UTF-8");
+			writer8 = new PrintWriter("output\\95-12-15sampleDataSetdynamic_object_state.arff", "UTF-8");
+			writer9 = new PrintWriter("output\\95-12-15sampleDataSetstatic_objectect.arff", "UTF-8");
+			writer10 = new PrintWriter("output\\95-12-15sampleDataSetstatic_object_state.arff", "UTF-8");
+			writer11 = new PrintWriter("output\\95-12-15sampleDataSetLocation.arff", "UTF-8");
+			writer12 = new PrintWriter("output\\95-12-15sampleDataSetTime.arff", "UTF-8");
+			writer13 = new PrintWriter("output\\95-12-15sampleDataSetscene_goal.arff", "UTF-8");
+			writer14 = new PrintWriter("output\\95-12-15sampleDataSetscene_emotion.arff", "UTF-8");
 			
 			
 			String header = "";
@@ -488,8 +489,8 @@ public class UI {
 	 * sample:
 	 * %sentence:روزی بود.
 	 * %
-	 * 1	روزی		N		MOS			ARG2_GOAL_ENDSTATE		روز#n8		دوره زمانی§n-12603		2		NO
-	 * 2	بود		V		ROOT		NULL					بودن#v3		رخداد§n-13136			0		NO 
+	 * 2	یوسف		N		MOZ		1	یوسف§n-23957	نفر§n-13075		role		_	_	_		_		_	
+	 *  
 	 * @param filename file name of input dataSet.
 	 * @return
 	 */
@@ -745,11 +746,13 @@ public class UI {
 		
 		UI ui = new UI();
 
-		ui.clearSRLDataset();
+//		ui.clearSRLDataset();
 		
 //		StoryModel sm = ui.makeSyntaxDataset();
 //		ui.manualReformatDataset();
-//		ui.reformatDataset();
+		
+		ui.reformatDataset();
+		
 		//TODO: correct relation name in all of generating dataSet
 		//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 

@@ -20,16 +20,16 @@ public class Role extends SceneElement{
 		
 	private ArrayList<RoleAction> role_actions = new ArrayList<RoleAction>();
 	
-	private ArrayList<RoleGoal> role_goals = new ArrayList<RoleGoal>();
+	private ArrayList<RoleIntent> role_intents = new ArrayList<RoleIntent>();
 
 	private ArrayList<RoleEmotion> role_emotions = new ArrayList<RoleEmotion>();
 	
-	private ArrayList<RoleMood> role_moods = new ArrayList<RoleMood>();
+	private ArrayList<RoleState> role_states = new ArrayList<RoleState>();
 
 	public Role(SceneModel scene, String name, Node node) {
 		super(scene, name, ScenePart.ROLE, node);
 		this.role_actions = new ArrayList<RoleAction>();
-		this.role_goals = new ArrayList<RoleGoal>();
+		this.role_intents = new ArrayList<RoleIntent>();
 		this.role_emotions = new ArrayList<RoleEmotion>();
 	}
 	
@@ -63,35 +63,35 @@ public class Role extends SceneElement{
 		return role_emotions;
 	}
 
-	private RoleGoal getRole_goal(Node node) {
+	private RoleIntent getRole_intent(Node node) {
 		if(node == null)
 			return null;
 		
-		if(!Common.isEmpty(role_goals))
-			for(RoleGoal rg:role_goals)
+		if(!Common.isEmpty(role_intents))
+			for(RoleIntent rg:role_intents)
 				if(rg._node.equalsRelaxed(node))
 					return rg;
 		return null;
 	}
 	
-	public ArrayList<RoleGoal> getRole_goals() {		
-		return role_goals;
+	public ArrayList<RoleIntent> getRole_intents() {		
+		return role_intents;
 	}
 	
-	private RoleMood getRole_mood(Node node) {
+	private RoleState getRole_state(Node node) {
 		if(node == null)
 			return null;
 		
-		if(!Common.isEmpty(role_moods))
-			for(RoleMood rm:role_moods)
+		if(!Common.isEmpty(role_states))
+			for(RoleState rm:role_states)
 				if(rm._node.equalsRelaxed(node))
 					return rm;
 		return null;
 	}
 
 	
-	public ArrayList<RoleMood> getRole_moods(){
-		return this.role_moods;
+	public ArrayList<RoleState> getRole_states(){
+		return this.role_states;
 	}
 		
 	public boolean hasRole_action(RoleAction role_action){
@@ -110,17 +110,17 @@ public class Role extends SceneElement{
 		return false;
 	}
 	
-	public boolean hasRole_goals(RoleGoal role_goal){
-		if(this.role_goals != null)
-			for(RoleGoal rg:role_goals)
-				if(rg.equals(role_goal))
+	public boolean hasRole_intents(RoleIntent role_intent){
+		if(this.role_intents != null)
+			for(RoleIntent rg:role_intents)
+				if(rg.equals(role_intent))
 					return true;
 		return false;
 	}	
 	
-	public boolean hasRole_mood(RoleMood role_mode){
-		if(this.role_moods != null)
-			for(RoleMood rm:role_moods)
+	public boolean hasRole_state(RoleState role_mode){
+		if(this.role_states != null)
+			for(RoleState rm:role_states)
 				if(rm.equals(role_mode))
 					return true;
 		return false;
@@ -186,24 +186,24 @@ public class Role extends SceneElement{
 	 * adds role_goal as RoleGoal to this Role or 
 	 * merges it with the existing equivalent RoleGoal of this Role.
 	 * 
-	 * @param role_goal
+	 * @param role_intent
 	 * @return
 	 */
-	public RoleGoal addRole_goal(RoleGoal role_goal) {
-		if(role_goal != null){
-			if(this.role_goals == null)
-				this.role_goals = new ArrayList<RoleGoal>();
+	public RoleIntent addRole_intent(RoleIntent role_intent) {
+		if(role_intent != null){
+			if(this.role_intents == null)
+				this.role_intents = new ArrayList<RoleIntent>();
 			
-			if(!hasRole_goals(role_goal)){
-				this.role_goals.add(role_goal);
-				System.out.println("RoleGoal " + role_goal + " added to " + this._name);
-				return role_goal;
+			if(!hasRole_intents(role_intent)){
+				this.role_intents.add(role_intent);
+				System.out.println("RoleGoal " + role_intent + " added to " + this._name);
+				return role_intent;
 			}
 			else{
-				System.out.println(this._name + " role has had " + role_goal + " before!");
-				RoleGoal exist = getRole_goal(role_goal._node);
+				System.out.println(this._name + " role has had " + role_intent + " before!");
+				RoleIntent exist = getRole_intent(role_intent._node);
 				if(exist != null)
-					exist.mergeWith(role_goal);
+					exist.mergeWith(role_intent);
 				return exist;
 			}
 		}
@@ -214,24 +214,24 @@ public class Role extends SceneElement{
 	 * adds role_mood as RoleMood to this Role or 
 	 * merges it with the existing equivalent RoleMood of this Role.
 	 * 
-	 * @param role_mood to be added to this Role.
+	 * @param role_state to be added to this Role.
 	 * @return the added RoleMood.
 	 */
-	public RoleMood addRole_mood(RoleMood role_mood){
-		if(role_mood != null){
-			if(this.role_moods == null)
-				this.role_moods = new ArrayList<RoleMood>();
+	public RoleState addRole_state(RoleState role_state){
+		if(role_state != null){
+			if(this.role_states == null)
+				this.role_states = new ArrayList<RoleState>();
 			
-			if(!hasRole_mood(role_mood)){
-				this.role_moods.add(role_mood);
-				System.out.println("RoleMood " + role_mood + " added to " + this._name);
-				return role_mood;
+			if(!hasRole_state(role_state)){
+				this.role_states.add(role_state);
+				System.out.println("RoleMood " + role_state + " added to " + this._name);
+				return role_state;
 			}
 			else{
-				System.out.println(this._name + " role has had " + role_mood + " before!");
-				RoleMood exist = getRole_mood(role_mood._node);
+				System.out.println(this._name + " role has had " + role_state + " before!");
+				RoleState exist = getRole_state(role_state._node);
 				if(exist != null)
-					exist.mergeWith(role_mood);
+					exist.mergeWith(role_state);
 				return exist;
 			}
 		}
@@ -244,9 +244,9 @@ public class Role extends SceneElement{
 	public String toString() {
 		return  "[" + _node + "= " + _name + 
 				" role_actions=  " + role_actions + 
-				" role_goals=    " + role_goals + 
+				" role_goals=    " + role_intents + 
 				" role_emotions= " + role_emotions + 
-				" role_moods=    " + role_moods + "]";
+				" role_moods=    " + role_states + "]";
 	}
 	
 	/**
@@ -261,14 +261,14 @@ public class Role extends SceneElement{
 		for(RoleAction ra:role.getRole_actions())
 			this.addRole_action(ra);
 				
-		for(RoleGoal rg:role.getRole_goals())
-			this.addRole_goal(rg);
+		for(RoleIntent rg:role.getRole_intents())
+			this.addRole_intent(rg);
 
 		for(RoleEmotion re:role.getRole_emotions())
 			this.addRole_emotion(re);	
 		
-		for(RoleMood rm:role.getRole_moods())
-			this.addRole_mood(rm);
+		for(RoleState rm:role.getRole_states())
+			this.addRole_state(rm);
 	}
 
 }

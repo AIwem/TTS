@@ -6,7 +6,7 @@ import sceneElement.Location;
 import sceneElement.Role;
 import sceneElement.RoleAction;
 import sceneElement.RoleEmotion;
-import sceneElement.RoleMood;
+import sceneElement.RoleState;
 import sceneElement.Time;
 import model.MainSemanticTag;
 import model.SceneModel;
@@ -718,9 +718,9 @@ public class SceneReasoner {
 							
 							System.out.println("\n" + action_node.getName() + "------- was effective in infering:" + answer.toString() + " justification: " + countJustification);
 							
-							RoleMood rolstat = new RoleMood(sceneModel, answer.answer.getName(), answer.answer);
+							RoleState rolstat = new RoleState(sceneModel, answer.answer.getName(), answer.answer);
 							
-							role.addRole_mood(rolstat);
+							role.addRole_state(rolstat);
 							
 							action.setMood_in_action(rolstat);
 							
