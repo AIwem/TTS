@@ -169,52 +169,10 @@ V, ROOT, NULL, —Œœ«œßn-13136, NO, not_roleState
 N, VPP, ARG4_ENDPOINT, „Êﬁ⁄Ì ßn-13554, NO, not_roleState
 N, MOZ, NULL, ”«Œ «—ßn-12875, YES, not_roleState
 V, ROOT,NULL, —Œœ«œßn-13136, NO, not_roleState
-%sentence:»« Ìò ’Ê—  òÊçÊ·Ê° »« „ÊÂ«Ì ›—›—Ì —ÊÌ ‰Êò Å‰ÃÂ Å«Ì‘ «Ì” «œÂ.
-%
-NUM, NPREMOD, NULL, «‰œ«“Âßn-12768,YES, not_roleState
-N, ADVRB, ArgM_MNR, —«»ÿÂßn-13628, NO, roleState
-ADJ, NPOSTMOD, NULL, „‘Œ’Âßn-12756, YES, not_roleState
-N, ADVRB, ArgM_MNR, ‘Ì¡ßn-12703, NO, roleState
-ADJ, NPOSTMOD, NULL, „‘Œ’Âßn-12756, YES, not_roleState
-PREP, ADVRB, ARG2_OBJ2, Ã«ßn-12733, NO, not_roleState
-N, MOZ, NULL, ‘Ì¡ßn-12703, YES, not_roleState
-N, MOZ, NULL, —«»ÿÂßn-13628, YES, roleState
-V, ROOT, NULL,  —Œœ«œßn-13136, NO, not_roleState
-%sentence:‰Êò »Ì‰Ì «‘ —« »Â ‘Ì‘Â ”—œ Å‰Ã—Â ç”»«‰œÂ »Êœ.
-%
-N, OBJ, ARG1_PATIENT, ‘Ì¡ßn-12703, NO, not_roleState
-N, MOZ, NULL, —«»ÿÂßn-13628, YES, roleState
-PR, MOZ, NULL, ‰›—ßn-13075, YES, not_roleState
-N, VPP, ARG2_OBJ2 , „«œÂßn-14032, NO, not_roleState
-ADJ, NPOSTMOD, NULL, „‘Œ’Âßn-12756, YES, not_roleState
-N, MOZ, NULL, ”«Œ «—ßn-12875, YES, not_roleState
-V, ROOT, NULL,  —Œœ«œßn-13136, NO, not_roleState
-%sentence:»« œÊ ç‘„ œ—‘ ‘ »Ì—Ê‰ —« ‰ê«Â „Ìò—œ.
-%
-NUM, NPREMOD, NULL, «‰œ«“Âßn-12768, YES, not_roleState
-N, ADVRB, ARG2_INSTRUMENT, —«»ÿÂßn-13628, NO, roleState
-ADJ, NPOSTMOD, NULL, „‘Œ’Âßn-12756,YES, not_roleState
-N, OBJ, ARG1_THEME, Ã«ßn-12733, NO, not_roleState
-N, NVE, NULL, „‘Œ’Âßn-12756, NO, not_roleState
-V, ROOT, NULL, —Œœ«œßn-13136, NO, not_roleState
-%sentence:»«»« ‰Ê∆· ”Ê«— »— ”Ê— „Â œ—«“Ì «“ —«Â —”Ìœ.
-%
-N, SBJ, ARG0_AGENT, „‘Œ’Âßn-12756, NO, not_roleState
-N, ADVRB, ArgM_MNR, ‰›—ßn-13075, NO, roleState
-PREP, NPP, NULL, NULL, YES, not_roleState
-N, POSDEP, ARG2_INSTRUMENT, ‘Ì¡ßn-12703, YES, not_roleState
-ADJ, NPOSTMOD, NULL, „‘Œ’Âßn-12756, YES, not_roleState
-N, VPP, ARG3_SOURCE_STARTPOINT, ‘Ì¡ßn-12703, NO, not_roleState
-V, ROOT, NULL, —Œœ«œßn-13136, NO, not_roleState
-%sentence:ç‰œ  « êÊ“‰ ¬‰ —« „Ìò‘Ìœ‰œ.
-%
-PREP, NPREMOD, NULL, NULL, YES, not_roleState
-SUBR, MESU, NULL, NULL, YES, not_roleState
-N, SBJ, ARG0_AGENT, Ã«‰Ê—ßn-12239, NO, not_roleState
-PR, OBJ, ARG1_THEME , ‘Ì¡ßn-12703,NO, not_roleState
-V, ROOT, NULL, —Œœ«œßn-13136, NO, not_roleState
 %---------------------------------------------
 %216-61sentence-11header=144  vaghti kamel
+%171-11-50=110
+%trainset: roleState: 6 not_roleState: 104
 %Accuracy of J48: 93.06%
 %---------------------------------
 %Accuracy of PART: 93.06%

@@ -53,3 +53,7 @@ SUBR, MESU, NULL, NULL, YES, not_roleState
 N, SBJ, ARG0_AGENT, Ã«‰Ê—ßn-12239, NO, not_roleState
 PR, OBJ, ARG1_THEME , ‘Ì¡ßn-12703,NO, not_roleState
 V, ROOT, NULL, —Œœ«œßn-13136, NO, not_roleState
+%55-11-10=34 test
+%144-34=110 train 
+%test set: roleState: 6 not_roleState: 28
+%trainset: roleState: 6 not_roleState: 104

@@ -1,0 +1,64 @@
+************************************************************************************
+%55-11-10=34 test
+%144-34=110 train 
+%test set: roleState: 6 not_roleState: 28
+%trainset: roleState: 6 not_roleState: 104
+
+/* with separate train(110) and test(34) set (test set not used) and crossValidation
+Accuracy of J48: 94.55%
+---------------------------------
+Accuracy of PART: 94.55%
+---------------------------------
+Accuracy of DecisionTable: 92.73%
+---------------------------------
+Accuracy of DecisionStump: 92.73%
+---------------------------------
+
+sample confusion matrix for J48 and PART and Decision table and Decision Stump
+=== Confusion Matrix ===
+
+a  b   <-- classified as
+0  1 |  a = roleState
+0 10 |  b = not_roleState
+
+one case in each of Decision table and Decision Stump
+=== Confusion Matrix ===
+
+a b   <-- classified as
+0 0 | a = roleState
+2 9 | b = not_roleState
+************************************************************************************
+/* with separate train(110) and test(34) set and withoutCrossValidation
+Accuracy of J48: 82.35%
+---------------------------------
+Accuracy of PART: 82.35%
+---------------------------------
+Accuracy of DecisionTable: 73.53%
+---------------------------------
+Accuracy of DecisionStump: 94.12%
+---------------------------------
+
+sample Confusion Matrix for J48 and PART
+=== Confusion Matrix ===
+
+a  b   <-- classified as
+0  6 |  a = roleState
+0 28 |  b = not_roleState
+
+sample Confusion Matrix for Decision Table		 
+=== Confusion Matrix ===
+
+a  b   <-- classified as
+5  1 |  a = roleState
+8 20 |  b = not_roleState
+
+sample Confusion Matrix for Decision Stump		  
+=== Confusion Matrix ===
+
+a  b   <-- classified as
+4  2 |  a = roleState
+0 28 |  b = not_roleState
+*/
+************************************************************************************
+************************************************************************************
+************************************************************************************
