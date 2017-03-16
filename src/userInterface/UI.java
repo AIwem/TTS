@@ -220,36 +220,23 @@ public class UI {
 			
 			ArrayList<ArrayList<String>> inputs = importInputDataSetInfo(inputDataSetFilePath);
 				
-			for(ArrayList<String> sentenceInfos:inputs){
+			//each oneSentence is an ArrayList containing the whole elements of one sentence.
+			for(ArrayList<String> oneSentence:inputs){
 //				writer.println(tts.generateFullRecordAnalysis(sentenceInfo));
 				
 				//-----
-				if(sentenceInfos == null || sentenceInfos.size() < 3)
+				if(oneSentence == null)
 					MyError.exit("bad input lines!");			
 				
-				String sentRecord = "";
-				String NLSentence = sentenceInfos.get(0);
-				sentRecord += NLSentence + "\n";		
-				sentRecord += sentenceInfos.get(1);
-				sentenceInfos.remove(0);
-				sentenceInfos.remove(0);
+				String[] sentenceElem = new String[oneSentence.size()];
 				
-				print(sentRecord);
-				print("------------");
+				for(int i = 0; i < sentenceElem.length; i++)				 
+					sentenceElem[i] = oneSentence.get(i);
 				
-				writer1.println(sentRecord);writer2.println(sentRecord);writer3.println(sentRecord);
-				writer4.println(sentRecord);writer5.println(sentRecord);writer6.println(sentRecord);
-				writer7.println(sentRecord);writer8.println(sentRecord);writer9.println(sentRecord);
-				writer10.println(sentRecord);writer11.println(sentRecord);writer12.println(sentRecord);
-				writer13.println(sentRecord);writer14.println(sentRecord);
-				
-				
-				String[] sentenceElem = new String[sentenceInfos.size()];				
-				for(int i = 0; i < sentenceElem.length; i++)
-					sentenceElem[i] = sentenceInfos.get(i);
-					
-				SentenceModel sentence = new SentenceModel(NLSentence, sentenceElem, true);	
+				SentenceModel sentence = new SentenceModel("", sentenceElem, true);	
 									
+				//corrected up to here **********************
+				
 				ArrayList<String> sentRecords = sentence.getDataSetStr();
 				
 				for(String wordRecord:sentRecords){
@@ -485,10 +472,8 @@ public class UI {
 	
 	/**
 	 * returns lines of input dataSet for each sentence in an ArrayList<String>.
-	 * first two lines of each sentence are in the format %sentence:روزی بود. 
+	 * sentences are separated with a blank line. 
 	 * sample:
-	 * %sentence:روزی بود.
-	 * %
 	 * 2	یوسف		N		MOZ		1	یوسف§n-23957	نفر§n-13075		role		_	_	_		_		_	
 	 *  
 	 * @param filename file name of input dataSet.
@@ -503,59 +488,31 @@ public class UI {
 		try
 		{
 			stream = new BufferedReader(new InputStreamReader(new FileInputStream(filename), "utf-8"));
-		}
-		catch(Exception e)
-		{
-			print("Error opening `" + filename + "` for reading input natural language texts!");
-			e.printStackTrace();
-		}
-		
-		String line = "";
-		ArrayList<String> sentenceInfos = new ArrayList<String>();
-		
-		while (line != null)
-		{
-			try
+				
+			String line = "";
+			ArrayList<String> oneSentence = new ArrayList<String>();
+			
+			while (line != null)
 			{
-				if(sentenceInfos != null && sentenceInfos.size() > 2)
-					sentenceInfos = new ArrayList<String>();
-				
-				if(line != null && line.startsWith("%"))
-					sentenceInfos.add(line);
-				
-				
 				line = stream.readLine();
 				
-				if (line == null)
+				if(line != null)
+					line = line.trim();
+				else
 					break;
 				
-				line = line.trim();
+				//sign of new sentence
+				if(line.length() == 0){
+					inputs.add(oneSentence);
+					oneSentence = new ArrayList<String>();
+					continue;
+				}
 				
-				while(!line.startsWith("%")){					
-					
-					sentenceInfos.add(line);
-					
-					line = stream.readLine();
-					
-					if (line == null)
-						break;
-					
-					line = line.trim();				
-				}
-				if(sentenceInfos.size() > 2){
-					inputs.add(sentenceInfos);				
-//					sentenceInfos = new ArrayList<String>();
-				}
-											
+				if(!line.startsWith("%"))
+					oneSentence.add(line);															
+			
 			}
-			catch (IOException e)
-			{
-				e.printStackTrace();
-			}
-		}
-	
-		try
-		{
+			
 			stream.close();
 		}
 		catch (IOException e)

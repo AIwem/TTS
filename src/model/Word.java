@@ -70,6 +70,11 @@ public class Word {
 	 * the number of the source Word of this Word's _syntaxTag
 	 */
 	public int _srcOfSynTag_number = -1;	
+
+	/**
+	 * this Word Semantic-Role-Label in the simple format (without sub parts).
+	 */
+	public SimpleSemanticTag _simpleSemanticTag = null;
 	
 	/**
 	 * this Word Semantic-Role-Label.
@@ -161,7 +166,10 @@ public class Word {
 	
 	/**
 	 * 
-	 * @param wStr format:1	روزی	N	MOS	ARG2_GOAL_ENDSTATE	روز#n8	دوره زمانی§n-12603	2	NO	
+	 * @param wStr 
+	 * sample format:
+	 * 2	یوسف		N		MOZ		1	یوسف§n-23957	نفر§n-13075		role	_	_		_		_	_
+	 * 8	می‌خواست	V		PRD		7	خواستن§v-9670	رخداد§n-13136		no		Y	خواستن.360	Arg1	_	_	_		
 	 * @param sentence
 	 * @param isFull is data for this word full or not?
 	 */
@@ -173,10 +181,6 @@ public class Word {
 				
 		String[] parts = wStr.split("(\t)+");
 		
-		if(parts != null && parts.length != 9){			
-			MyError.error("Bad sentence information format " + wStr + " parts-num " + parts.length);
-			return;
-		}
 		this._senteceModel = sentence;
 		
 		this.set_number(parts[0].trim());
@@ -187,16 +191,18 @@ public class Word {
 		
 		this.set_syntaxTag(parts[3]);
 		
-		this.set_semanticTag(parts[4]);
+		this.set_srcOfSynTag_number(parts[4]);
 		
 		this.set_wsd_name(parts[5]);
 		
 		this.set_wsd_superNode_name(parts[6]);
-		
-		this.set_srcOfSynTag_number(parts[7]);
 				
-		this.set_multiClassTag(parts[8]);
+		this.set_multiClassTag(parts[7]);		
 		
+		for(int i = 8; i < parts.length; i++)
+			if(parts[i] != null && parts[i].matches("-"))
+				this.set_simpleSemanticTag(parts[i]);				
+				
 //		print(getStr2());
 	}
 	
@@ -423,6 +429,11 @@ public class Word {
 //		
 //		if(_semanticTag == null)
 //			MyError.error("bad semantcTag name " + semTag + " for " + this._wordName);	
+	}
+	
+	public void set_simpleSemanticTag(String semTagName) {
+		if(semTagName != null && !semTagName.equals("") && !semTagName.equals("-"))
+			_simpleSemanticTag = SimpleSemanticTag.fromString(semTagName);
 	}
 	
 	public void set_wsd_name(String wsd_name) {

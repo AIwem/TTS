@@ -186,8 +186,8 @@ public class SentenceModel {
 			Word wd = new Word(wStr, this, isDataFull);
 			this._words.add(wd);
 		}
-		arrangeWords();	
-		
+		makeNLSentence();
+		arrangeWords();			
 	}
 	
 	//-------------------- setter part --------------------------
@@ -228,6 +228,17 @@ public class SentenceModel {
 	
 	
 	//-------------------- setter part --------------------------
+	
+	private void makeNLSentence(){
+		if(!Common.isEmpty(_words)){
+			String naturalLanguageSentnce = "";
+			for(Word wrd:_words){
+				naturalLanguageSentnce += wrd._wordName + " ";
+			}
+			if(this.NLSentence == null || this.NLSentence == "")
+				this.NLSentence = naturalLanguageSentnce;
+		}
+	}
 	
 	public boolean hasArg0(){
 		ArrayList<MainSemanticTag> existingMainArgs = this.getExistingMainSematicArgs();
