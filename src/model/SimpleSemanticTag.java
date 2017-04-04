@@ -90,8 +90,8 @@ public enum SimpleSemanticTag {
 	public static SimpleSemanticTag fromString(String semanticTagName){
 		if (semanticTagName != null){
 			
-			if(semanticTagName.startsWith("ArgM_"))
-				semanticTagName = semanticTagName.substring("ArgM_".length());
+			if(semanticTagName.startsWith("ArgM-"))
+				semanticTagName = semanticTagName.substring("ArgM-".length());
 			
 			for (SimpleSemanticTag st : SimpleSemanticTag.values()) 
 				if (semanticTagName.equalsIgnoreCase(st.name())) 

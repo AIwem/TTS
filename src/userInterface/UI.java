@@ -18,7 +18,6 @@ import java.util.ArrayList;
 import org.apache.tika.parser.ParseContext;
 
 import model.SentenceModel;
-import model.StoryModel;
 import sceneReasoner.TTSEngine;
 
 
@@ -33,6 +32,7 @@ public class UI {
 //	private String inputSRLDataSetFilePath = "inputStory/story4DataSetToformat.txt";
 //	private String inputDataSetFilePath = "inputStory/srl-stories.conll";
 	private String inputDataSetFilePath = "inputStory/sampleManualInputDataSetToformat.arff";
+	private String rawDataSetFilePath = "inputStory/cleanedSRLDataSet.arff";
 	private String inputDataSetHeaderFilePath = "inputStory/dataSetHeader.txt";
 //	private String mainKbFilePath = "kb/farsnet--24.txt";
 	private String mainKbFilePath = "kb/farsnet.txt";
@@ -145,6 +145,56 @@ public class UI {
 		}
 		 	
 	}
+			
+	public void removeJunkWords(){
+		
+		try {
+			
+			PrintWriter writer = new PrintWriter("output\\cleanedSRLDataSet.arff", "UTF-8");
+		
+			ArrayList<ArrayList<String>> inputs = importInputDataSetInfo(rawDataSetFilePath);
+			
+			//each oneSentence is an ArrayList containing the whole elements of one sentence.
+			for(ArrayList<String> oneSentence:inputs){
+			
+				if(oneSentence == null)
+					MyError.exit("bad input lines!");			
+				
+				String[] sentenceElem = new String[oneSentence.size()];
+				
+				for(int i = 0; i < sentenceElem.length; i++)				 
+					sentenceElem[i] = oneSentence.get(i);
+				
+				SentenceModel sentence = new SentenceModel("", sentenceElem, false);
+				
+				print(">>>>>>>>>>>>>>> before edit junk");
+				print(sentence.getOrdinalDetailedStr());
+				
+				sentence.editJunkWords();	
+				
+				print(">>>>>>>>>>>>>>> after edit junk");
+				print(sentence.getOrdinalDetailedStr() + "\n\n");
+				
+				String toWrite = "";
+				ArrayList<String> wrdRecs = sentence.getManualDataSetStr();
+				if(!Common.isEmpty(wrdRecs))
+					for(String rec:wrdRecs)
+						writer.println(rec);
+				
+				//sign of new sentence
+				writer.println();						
+			}																			
+						
+			writer.close();
+			
+		} 
+		catch (FileNotFoundException | UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+				
+	}
 
 		
 //	public void makeFullDataset(){
@@ -233,10 +283,12 @@ public class UI {
 				for(int i = 0; i < sentenceElem.length; i++)				 
 					sentenceElem[i] = oneSentence.get(i);
 				
-				SentenceModel sentence = new SentenceModel("", sentenceElem, true);	
+				SentenceModel sentence = new SentenceModel("", sentenceElem, true);
+				
+				print(sentence.getOrdinalDetailedStr());
 									
 				//corrected up to here **********************
-				
+		/*		
 				ArrayList<String> sentRecords = sentence.getDataSetStr();
 				
 				for(String wordRecord:sentRecords){
@@ -400,6 +452,8 @@ public class UI {
 					else
 						MyError.error("No class tah found in " + wordRecord);					
 				}
+				
+				*/
 			}
 			writer1.close();writer2.close();writer3.close();
 			writer4.close();writer5.close();writer6.close();
@@ -704,11 +758,10 @@ public class UI {
 		UI ui = new UI();
 
 //		ui.clearSRLDataset();
+			
+		ui.removeJunkWords();		
 		
-//		StoryModel sm = ui.makeSyntaxDataset();
-//		ui.manualReformatDataset();
-		
-		ui.reformatDataset();
+//		ui.reformatDataset();
 		
 		//TODO: correct relation name in all of generating dataSet
 		//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&

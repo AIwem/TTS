@@ -179,9 +179,7 @@ public class SentenceModel {
 		
 		if(_words == null)
 			_words = new ArrayList<Word>();
-		if(!isDataFull)
-			MyError.exit("data analysis of each word must be full!");
-		
+				
 		for(String wStr:words){
 			Word wd = new Word(wStr, this, isDataFull);
 			this._words.add(wd);
@@ -1120,6 +1118,36 @@ public class SentenceModel {
 		print(""+ verb_ph);		
 			
 	}
+	/**
+	 * transfers _syntaxTag, _srcOfSynTag_number, and _simpleSemanticTag 
+	 * from junk words to the word that is depended to this junk word.
+	 * example: from "از" in "از راه رسید" to "راه".  
+	 */
+	public void editJunkWords(){
+		if(Common.isEmpty(_words))
+			return;
+		
+		for(Word wrd:_words){
+			if(wrd.isJunk()){
+				
+				print("\n junk:" + wrd + "\n");
+				
+				DependencyRelationType junkSyn_tag = wrd._syntaxTag;
+				int junkSrcNum = wrd._srcOfSynTag_number;
+				SimpleSemanticTag junkSimSem_tag = wrd._simpleSemanticTag;
+				
+				ArrayList<Word> dependedWrds = getWordsWithSourceNumber(wrd._number);
+				
+				if(!Common.isEmpty(dependedWrds)){
+					for(Word dep:dependedWrds){
+						dep._syntaxTag = junkSyn_tag;
+						dep._srcOfSynTag_number = junkSrcNum;
+						dep._simpleSemanticTag = junkSimSem_tag;
+					}
+				}
+			}
+		}
+	}
 	
 	public void make_nested_sentences(){
 		
@@ -1219,6 +1247,18 @@ public class SentenceModel {
 		return NLSentence;
 	}
 	
+	public ArrayList<String> getManualDataSetStr(){
+		ArrayList<String> dataSetRecord = new ArrayList<String>();
+		
+		if(_words == null)
+			return dataSetRecord;
+	
+		for(Word wrd:_words)			
+			dataSetRecord.add(wrd.getStr4ManualDataSet());
+		
+		return dataSetRecord;		
+	}
+	
 	public ArrayList<String> getDataSetStr() {
 		ArrayList<String> dataSetRecord = new ArrayList<String>();
 	
@@ -1246,7 +1286,7 @@ public class SentenceModel {
 			return "";
 	
 		for(Word w:_words)
-			dataSetRecord += w.getStr2();
+			dataSetRecord += w.getFullStr();
 		
 		return dataSetRecord;
 	}

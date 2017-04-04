@@ -4,6 +4,8 @@ package model;
 
 import java.util.ArrayList;
 
+import org.omg.CORBA._PolicyStub;
+
 import ir.ac.itrc.qqa.semantic.enums.DependencyRelationType;
 import ir.ac.itrc.qqa.semantic.kb.Node;
 import ir.ac.itrc.qqa.semantic.util.Common;
@@ -102,6 +104,8 @@ public class Word {
 	 */
 	public ScenePart _multiClassTag; 
 	
+	public String _dataSetRecord;
+	
 	/**
 	 *  
 	 * The adjectives of this Word. 
@@ -167,42 +171,71 @@ public class Word {
 	/**
 	 * 
 	 * @param wStr 
-	 * sample format:
-	 * 2	یوسف		N		MOZ		1	یوسف§n-23957	نفر§n-13075		role	_	_		_		_	_
-	 * 8	می‌خواست	V		PRD		7	خواستن§v-9670	رخداد§n-13136		no		Y	خواستن.360	Arg1	_	_	_		
 	 * @param sentence
 	 * @param isFull is data for this word full or not?
 	 */
 	public Word(String wStr, SentenceModel sentence, boolean isFull) {
 //		print(wStr);
 		
-		if(!isFull)
-			MyError.exit("data analysis of this word must be full!");
+		if(isFull){// it is full record of a word
+			//sample format:
+			//2	یوسف		N		MOZ		1	یوسف§n-23957	نفر§n-13075		role	_	_		_		_	_
+			//8	می‌خواست	V		PRD		7	خواستن§v-9670	رخداد§n-13136		no		Y	خواستن.360	Arg1	_	_	_		
+			 
+			this._dataSetRecord = wStr;
+			
+			String[] parts = wStr.split("(\t)+");
+			
+			if(parts.length > 7){
+		
+				this._senteceModel = sentence;
 				
-		String[] parts = wStr.split("(\t)+");
-		
-		this._senteceModel = sentence;
-		
-		this.set_number(parts[0].trim());
-		
-		this._wordName = parts[1].trim();
-		
-		this.set_gPOS(parts[2]);
-		
-		this.set_syntaxTag(parts[3]);
-		
-		this.set_srcOfSynTag_number(parts[4]);
-		
-		this.set_wsd_name(parts[5]);
-		
-		this.set_wsd_superNode_name(parts[6]);
+				this.set_number(parts[0].trim());
 				
-		this.set_multiClassTag(parts[7]);		
-		
-		for(int i = 8; i < parts.length; i++)
-			if(parts[i] != null && parts[i].matches("-"))
-				this.set_simpleSemanticTag(parts[i]);				
+				this._wordName = parts[1].trim();
 				
+				this.set_gPOS(parts[2]);
+				
+				this.set_syntaxTag(parts[3]);
+				
+				this.set_srcOfSynTag_number(parts[4]);
+				
+				this.set_wsd_name(parts[5]);
+				
+				this.set_wsd_superNode_name(parts[6]);
+						
+				this.set_multiClassTag(parts[7]);
+			}
+			
+			for(int i = 8; i < parts.length; i++)
+				if(parts[i] != null && parts[i].matches("-"))
+					this.set_simpleSemanticTag(parts[i]);				
+		}
+		else{//it lacks some elements of information such as wsd_name, wsd_superNode_name, multiClassTag.
+			//sample format: 7	کوچکتر	ADJ	MOS	8	_	_	Arg2	
+		
+			String[] parts = wStr.split("(\t)+");
+			
+			if(parts.length > 4){
+				
+				this._senteceModel = sentence;
+								
+				this.set_number(parts[0].trim());
+				
+				this._wordName = parts[1].trim();
+				
+				this.set_gPOS(parts[2]);
+				
+				this.set_syntaxTag(parts[3]);
+				
+				this.set_srcOfSynTag_number(parts[4]);
+			}		
+			
+			for(int i = 5; i < parts.length; i++)
+				if(parts[i] != null && parts[i].matches("-"))
+					this.set_simpleSemanticTag(parts[i]);			
+		
+		}
 //		print(getStr2());
 	}
 	
@@ -376,6 +409,25 @@ public class Word {
 		return false;
 	}
 	
+	public boolean isJunk(){
+		if(_wordName == null)
+			return false;
+		
+		_wordName = _wordName.trim();
+		
+		//TODO: complete list of stop words.
+		String[] junks = {"و", "به", "از", "با", "را", "در", "تا"};
+		for(String junk:junks)
+			if(_wordName.equalsIgnoreCase(junk))
+				return true;
+		
+		POS[] junkPOS = {POS.PUNC, POS.CONJ, POS.NUM}; 
+		for(POS junk:junkPOS)
+			if(_gPOS == junk)
+				return true;
+		return false;
+	}
+	
 	public boolean isInfinitive() {
 		//TODO: correct this Word!
 		if(_wordName.contains("دویدن"))
@@ -391,8 +443,12 @@ public class Word {
 	public void set_number(String number) {
 		if(number == null || number.equals("") || number.equals("-"))
 			this._number = -1;
-		else
-			this._number = Integer.parseInt(number);
+		else{
+			print("-" +number+ "-");
+			int num = Integer.parseInt(number);
+			
+			this._number = num;
+		}
 	}
 	
 	public void set_gPOS(String gPos) {
@@ -617,60 +673,73 @@ public class Word {
 			
 			int len = rs.length();
 			if(len < 6)
-				rs += "\t\t\t";
+				rs += "\t\t";
 			else
-				rs += "\t\t"; 			
+				rs += "\t"; 			
 			 			
 			if(_gPOS != null) rs += "" + _gPOS;
 			else rs += "NULL";
 			
 			if(_gPOS.toString().length() < 3)
-				rs += "\t\t\t\t";
+				rs += "\t\t";
 			else
-				rs += "\t\t\t";
+				rs += "\t";
 			
 			if(_syntaxTag != null) rs += "" + _syntaxTag;
 			else rs += "NULL"; 			
 			
 			len = rs.length();
 			if(len < 22)
-				rs += "\t\t\t";
-			else
 				rs += "\t\t";
+			else
+				rs += "\t";
 			
 			if(_semanticTag != null) rs += "" + _semanticTag;
 			else rs += "NULL"; 			
 			
 			len = rs.length();
 			if(len < 52)
-				rs += "\t\t\t";
-			else
 				rs += "\t\t";
+			else
+				rs += "\t";
 			
 			if(_wsd_name != null) rs += "" + _wsd_name;
 			else rs += "NULL"; 			
 			
 			len = rs.length();
 			if(len < 72)
-				rs += "\t\t\t";
-			else
 				rs += "\t\t";
+			else
+				rs += "\t";
 			
 			if(_wsd_superNode_name != null) rs += "" + _wsd_superNode_name;
 			else rs += "NULL"; 			
 			
 			len = rs.length();
 			if(len < 92)
-				rs += "\t\t\t";
-			else
 				rs += "\t\t";
+			else
+				rs += "\t";
+			
+			if(_multiClassTag != null) rs += "" + _multiClassTag;
+			else rs += "NULL"; 			
+			
+			len = rs.length();
+			if(len < 112)
+				rs += "\t\t";
+			else
+				rs += "\t";
 			
 			rs+=  _srcOfSynTag_number;
 			rs += "\n";
 			return rs;
 	}
-	
- 	 
+	/**
+	 * sample format:
+	 * N,SBJ,ARG0_EXPERIENCER,نفر§n-13075,NO,not_role_state
+	 * @param verbNum
+	 * @return
+	 */
  	public String getStr4DataSet(int verbNum) {	 		
 			String rs = "";
 			if(_gPOS != null) rs += "" + _gPOS + ", ";
@@ -689,9 +758,40 @@ public class Word {
 				rs += "NO";
 			else rs += "YES";
 			
-			rs += ", ---";
+			rs += ", --- ";
 			if(_multiClassTag != null) rs += "" + _multiClassTag.toString().toLowerCase();
 			else rs += "_";
+			
+			return rs;
+	}
+ 	
+ 	/**
+ 	 * sample format: 
+ 	 * 9	شخصیتی	N	MOS	11	_	_	_	Arg2	_		
+ 	 * @return
+ 	 */
+ 	public String getStr4ManualDataSet() {	 	
+ 		
+ 			//TODO: correct this based on _dataSetRecord
+					
+			String rs = _number + "\t";			
+			
+			if(_wordName != null) rs += _wordName;
+			else rs += "-";			
+			rs += "\t";
+			
+			if(_gPOS != null) rs += _gPOS;
+			else rs += "UNKNOWN";
+			rs += "\t";
+			
+			if(_syntaxTag != null) rs += _syntaxTag;
+			else rs += "NULL";
+			rs += "\t";
+			
+			rs += _srcOfSynTag_number + "\t";
+						
+			if(_semanticTag != null) rs += _semanticTag;
+			else rs += "NULL";
 			
 			return rs;
 	}
