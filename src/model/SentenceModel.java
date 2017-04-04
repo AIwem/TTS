@@ -1121,7 +1121,9 @@ public class SentenceModel {
 	/**
 	 * transfers _syntaxTag, _srcOfSynTag_number, and _simpleSemanticTag 
 	 * from junk words to the word that is depended to this junk word.
-	 * example: from "از" in "از راه رسید" to "راه".  
+	 * example: from "از" in "از میان آنها" to "میان".  
+	 * 7	از	PREP	ADVRB	17	_	_	_	ArgM-ADV
+	 * 8	میان	N	POSDEP	7	_	_	_	_
 	 */
 	public void editJunkWords(){
 		if(Common.isEmpty(_words))
@@ -1135,11 +1137,24 @@ public class SentenceModel {
 				DependencyRelationType junkSyn_tag = wrd._syntaxTag;
 				int junkSrcNum = wrd._srcOfSynTag_number;
 				SimpleSemanticTag junkSimSem_tag = wrd._simpleSemanticTag;
+				String junkDataSetRcrd = wrd._dataSetRecord;
 				
 				ArrayList<Word> dependedWrds = getWordsWithSourceNumber(wrd._number);
 				
 				if(!Common.isEmpty(dependedWrds)){
 					for(Word dep:dependedWrds){
+						
+						if(dep._dataSetRecord != null){
+							
+							int depStartIndex = dep._dataSetRecord.indexOf("" + dep._srcOfSynTag_number);
+							int junkStartIndex = junkDataSetRcrd.indexOf("" + junkSrcNum);
+							
+							if(depStartIndex != -1 && junkStartIndex != -1){
+							
+								String newDataSetRecord = dep._dataSetRecord.substring(0, depStartIndex) + junkDataSetRcrd.substring(junkStartIndex,junkDataSetRcrd.length());
+								dep._dataSetRecord = newDataSetRecord;			
+							}
+						}
 						dep._syntaxTag = junkSyn_tag;
 						dep._srcOfSynTag_number = junkSrcNum;
 						dep._simpleSemanticTag = junkSimSem_tag;

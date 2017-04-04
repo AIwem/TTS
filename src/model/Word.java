@@ -773,7 +773,13 @@ public class Word {
  	public String getStr4ManualDataSet() {	 	
  		
  			//TODO: correct this based on _dataSetRecord
-					
+ 		
+ 			String[] oldRecord = _dataSetRecord.split("[\t]+");
+ 			
+ 			if(oldRecord.length < 6)
+ 				MyError.exit("bad format in old dataSet record: " + _dataSetRecord);
+ 			
+						
 			String rs = _number + "\t";			
 			
 			if(_wordName != null) rs += _wordName;
@@ -788,11 +794,13 @@ public class Word {
 			else rs += "NULL";
 			rs += "\t";
 			
-			rs += _srcOfSynTag_number + "\t";
-						
-			if(_semanticTag != null) rs += _semanticTag;
-			else rs += "NULL";
-			
+			if(_dataSetRecord != null){
+				int srcIndx = _dataSetRecord.indexOf(_srcOfSynTag_number);
+				
+				if(srcIndx != -1){
+					rs += _dataSetRecord.substring(srcIndx, _dataSetRecord.length());
+				}			
+			}
 			return rs;
 	}
 
