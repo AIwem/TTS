@@ -1,0 +1,6719 @@
+1	او	PR	SBJ	5	_	_	Arg0	_
+2	مجموعا	ADV	ADVRB	5	_	_	ArgM-ADV	_
+4	برادر	N	OBJ	5	_	_	Arg1	_
+5	داشت	V	VCONJ	17	Y	داشتن.39	_	_
+9	آن‌ها	PR	MOZ	8	_	_	_	_
+10	فقط	ADV	ADVRB	17	_	_	_	ArgM-ADV2
+11	بنیامین	N	SBJ	17	_	_	_	Arg1
+12	برادر	N	MOS	17	_	_	_	Arg2
+13	پدری	ADJ	NPOSTMOD	12	_	_	_	_
+15	مادری	ADJ	AJCONJ	13	
+17	بود	V	ROOT	0	Y	بودن.15	_	_
+
+1	یوسف	N	SBJ	8	_	_	Arg1
+4	برادران	N	AJPP	7	
+6	بنیامین	N	POSDEP	5	_	_	_
+7	کوچکتر	ADJ	MOS	8	_	_	Arg2
+8	بود	V	ROOT	0	Y	بودن.15	_
+
+1	او	PR	SBJ	6	_	_	Arg0
+2	حدود	PREP	ADVC	6	_	_	Arg2
+4	سال	N	POSDEP	2	_	_	_
+5	زندگی	N	NVE	6	_	_	_
+6	کرد	V	ROOT	0	Y	زندگی‌کردن.40	_
+
+1	یوسف	N	SBJ	5	_	_	Arg0	Arg0
+3	سال	N	ADVC	5	_	_	Arg1	_
+4	بیشتر	ADV	ADVRB	5	_	_	ArgM-EXT	_
+5	نداشت	V	ROOT	0	Y	داشتن.39	_	_
+8	شب	N	ADVRB	11	_	_	_	ArgM-TMP
+10	رویایی	N	OBJ	11	_	_	_	Arg1
+11	دید	V	PRD	6	Y	دیدن.47	_	_
+
+1	صبح	N	ADVRB	4	_	_	ArgM-TMP	_	_	_
+2	نزد	PREP	VPP	4	_	_	Arg4	_	_	_
+3	پدر	N	POSDEP	2	_	_	_	_	_	_
+4	آمده	V	VCONJ	6	Y	آمدن.44	_	_	_	_
+6	گفت	V	ROOT	0	Y	گفتن.35	_	_	_	_
+8	عالم	N	ADVRB	10	
+9	خواب	N	MOZ	8	_	_	_	_	_	_
+10	دیدم	V	VCL	6	Y	دیدن.47	_	_	_	_
+11	که	SUBR	VCL	10	_	_	_	_	Arg1	_
+13	ستاره	N	SBJ	21	_	_	_	_	_	Arg0
+15	خورشید	N	NCONJ	13	
+17	ماه	N	NCONJ	15	
+18	دربرابر	PREP	NPP	20	_	_	_	_	_	Arg3
+19	م	PR	POSDEP	18	_	_	_	_	_	_
+20	سجده	N	NVE	21	_	_	_	_	_	_
+21	می‌کنند	V	PRD	11	Y	سجده‌کردن.41	_	_	_	_
+
+1	حضرت	N	SBJ	10	_	_	Arg0	Arg0	_
+2	یعقوب	N	MOZ	1	_	_	_	_	_
+4	تعبیر	N	OBJ	7	
+5	خواب	N	MOZ	4	_	_	_	_	_
+7	می‌دانست	V	PRD	3	Y	دانستن.97	_	_	_
+10	خواست	V	ROOT	0	Y	خواستن.51	_	_	_
+12	راز	N	OBJ	19	
+15	برای	PREP	ADVRB	19	_	_	_	_	ArgM-GOL
+16	برادران	N	POSDEP	15	_	_	_	_	_
+17	ش	PR	MOZ	16	_	_	_	_	_
+18	آشکار	ADJ	MOS	19	_	_	_	_	Arg2
+19	نکند	V	VCL	10	Y	کردن.25	_	_	_
+
+1	سپس	SUBR	ROOT	0	_	_	ArgM-ADV	_	_
+2	برای	PREP	ADVRB	5	_	_	ArgM-GOL	_	_
+3	ش	PR	POSDEP	2	_	_	_	_	_
+4	روشن	ADJ	MOS	5	_	_	Arg2	_	_
+5	ساخت	V	PRD	1	Y	ساختن.498	_	_	_
+6	که	SUBR	VCL	5	_	_	Arg1	_	_
+8	آینده	N	ADVRB	11	
+9	شخصیتی	N	MOS	11	_	_	_	Arg2	_
+10	برجسته	ADJ	NPOSTMOD	9	_	_	_	_	_
+11	خواهدشد	V	PRD	6	Y	کردن.25	_	_	_
+13	همه	N	SBJ	18	_	_	_	_	Arg0
+14	فرمان	N	OBJ	18	
+15	ش	PR	MOZ	14	_	_	_	_	_
+17	گردن	N	NVE	18	_	_	_	_	_
+18	می‌نهند	V	PRD	12	Y	گردن‌نهادن.227	_	_	_
+
+2	خداوند	N	SBJ	7	_	_	Arg0	Arg0
+6	پیامبری	N	VPP	7	
+7	برمی‌گزیند	V	VCONJ	14	Y	بر‌گزیدن.229	_	_
+9	تعبیر	N	OBJ	14	
+10	خواب	N	MOZ	9	_	_	_	_
+14	می‌آموزد	V	ROOT	0	Y	آموختن.230	_	_
+
+1	همچنین	ADV	ADVRB	9	_	_	ArgM-ADV	_
+2	خواب	N	SBJ	9	_	_	Arg1	_
+3	دیدن	N	MOZ	2	_	_	_	_
+4	یوسف	N	MOZ	3	_	_	_	_
+6	الهامات	N	NCONJ	2	
+8	موجب	N	MOS	9	_	_	Arg2	_
+9	شد	V	ROOT	0	Y	کردن.25	_	_
+11	یعقوب	N	SBJ	20	_	_	_	Arg0
+12	امتیاز	N	OBJ	20	_	_	_	Arg1
+14	عظمت	N	NCONJ	12	
+15	خاصی	ADJ	NPOSTMOD	12	_	_	_	_
+17	چهره	N	NPP	19	
+18	یوسف	N	MOZ	17	_	_	_	_
+19	مشاهده	N	NVE	20	_	_	_	_
+20	کند	V	PRD	10	Y	مشاهده‌کردن.231	_	_
+
+2	می‌دانست	V	ROOT	0	Y	دانستن.97	_	_
+3	که	SUBR	VCL	2	_	_	Arg1	_
+4	آینده	N	OBJ	6	_	_	_	Arg1
+5	درخشانی	ADJ	NPOSTMOD	4	_	_	_	_
+6	دارد	V	PRD	3	Y	داشتن.39	_	_
+
+1	برادران	N	SBJ	5	_	_	Arg0
+3	پیشنهاد	N	OBJ	5	
+5	پذیرفتند	V	ROOT	0	Y	پذیرفتن.88	_
+
+2	یکی‌از	ADJ	NPREMOD	3	_	_	_	_	_	_
+3	روزها	N	ADVRB	7	
+4	نزد	PREP	VPP	7	_	_	Arg4	_	_	_
+5	پدر	N	POSDEP	4	_	_	_	_	_	_
+7	آمدند	V	VCONJ	11	Y	آمدن.44	_	_	_	_
+10	پدر	N	VPP	11	
+11	خواستند	V	VCONJ	26	Y	خواستن.51	_	_	_	_
+13	یوسف	N	OBJ	19	
+15	همراه	N	ADVRB	19	_	_	_	_	ArgM-COM	_
+18	صحرا	N	VPP	19	
+19	ببرند	V	VCL	11	Y	بردن.208	_	_	_	_
+21	یعقوب	N	SBJ	26	_	_	_	_	_	Arg0
+23	آن‌ها	PR	NPP	24	
+24	پاسخ	N	NVE	26	_	_	_	_	_	_
+25	مثبت	ADJ	NPOSTMOD	24	_	_	_	_	_	_
+26	نمی‌داد	V	ROOT	0	Y	پاسخ‌دادن.175	_	_	_	_
+
+1	بعداز	PREP	ADVRB	18	_	_	_	_	ArgM-TMP	_	_	_	_
+4	احساس	N	NVE	5	_	_	_	_	_	_	_	_	_
+5	کردند	V	PRD	3	Y	احساس‌کردن.60	_	_	_	_	_	_	_
+6	پدر	N	SBJ	14	_	_	_	Arg0	_	_	_	_	_
+8	یوسف	N	OBJ	14	
+11	آن‌ها	PR	VPP	14	
+12	دور	ADV	ADVRB	14	_	_	_	Arg2	_	_	_	_	_
+13	نگه	N	NVE	14	_	_	_	_	_	_	_	_	_
+14	می‌دارد	V	VCL	5	Y	نگه‌داشتن.831	_	_	_	_	_	_	_
+18	گفتند	V	ROOT	0	Y	گفتن.35	_	_	_	_	_	_	_
+19	چرا	ADV_INTG	ADVRB	25	_	_	_	_	_	ArgM-CAU	_	_	_
+20	درمورد	PREP	ADVRB	25	_	_	_	_	_	ArgM-ADV	_	_	_
+21	یوسف	N	POSDEP	20	_	_	_	_	_	_	_	_	_
+24	اطمینان	N	NVE	25	_	_	_	_	_	_	_	_	_
+25	نمی‌کنی	V	VCL	18	Y	اطمینان‌کردن.244	_	_	_	_	_	_	_
+27	او	PR	OBJ	31	31	_	_	_	_	_	_	Arg1	_	_
+30	دشت	N	VPP	31	
+31	ببریم	V	AJUCL	25	Y	بردن.208	_	_	_	_	_	_	_
+35	بازی	N	NVE	36	_	_	_	_	_	_	_	_	_
+36	کند	V	VCONJ	40	Y	بازی‌کردن.246	_	_	_	_	_	_	_
+39	شادمانی	N	VPP	40	
+40	بپردازد	V	AJUCL	31	Y	پرداختن.72	_	_	_	_	_	_	_
+
+1	اگر	SUBR	AJUCL	9	_	_	_	ArgM-CND
+2	گرگ	N	SBJ	5	_	_	Arg0	_
+5	بخورد	V	PRD	1	Y	خوردن.83	_	_
+6	ما	PR	SBJ	9	_	_	_	Arg1
+8	زیانکاران	N	MOS	9	
+9	خواهیم‌بود	V	ROOT	0	Y	بودن.15	_	_
+
+1	وقتی	N	ADVRB	11	_	_	_	ArgM-TMP	_	_
+3	آن‌ها	PR	SBJ	7	_	_	Arg0	_	_	Arg0
+5	یعقوب	N	NPP	6	
+6	فاصله	N	NVE	7	_	_	_	_	_	_
+7	گرفتند	V	PRD	2	Y	فاصله‌گرفتن.504	_	_	_	_
+8	کینه‌های	N	SBJ	11	_	_	_	Arg1	_	_
+10	آشکار	ADJ	MOS	11	_	_	_	Arg2	_	_
+11	شد	V	VCONJ	16	Y	کردن.25	_	_	_	_
+13	حسادت	N	SBJ	16	_	_	_	_	Arg1	_
+15	ظاهر	N	MOS	16	_	_	_	_	Arg2	_
+16	گشت	V	VCONJ	20	Y	کردن.25	_	_	_	_
+19	انتقام‌جویی	N	VPP	20	
+20	پرداختند	V	ROOT	0	Y	پرداختن.72	_	_	_	_
+
+1	وی	PR	SBJ	5	_	_	Arg0
+2	دربرابر	PREP	ADVRB	5	_	_	ArgM-ADV
+3	آزار	N	POSDEP	2	_	_	_
+4	آن‌ها	PR	MOZ	3	_	_	_
+5	نمی‌توانست	V	ROOT	0	_	_	_
+6	کاری	N	NVE	7	_	_	_
+7	بکند	V	VCL	5	Y	کردن.857	_
+
+1	یوسف	N	SBJ	8	_	_	Arg0
+4	چاه	N	MOZ	3	_	_	_
+6	خدا	N	NPP	7	
+7	توکل	N	NVE	8	_	_	_
+8	کرد	V	ROOT	0	Y	توکل‌کردن.506	_
+
+1	برادران	N	SBJ	14	_	_	Arg0	Arg0	Arg0	_
+2	پیراهن	N	OBJ	14	
+3	یوسف	N	MOZ	2	_	_	_	_	_	_
+7	خون	N	AJPP	9	
+8	بزغاله	N	MOZ	7	_	_	_	_	_	_
+9	آلوده	ADJ	MOS	10	_	_	Arg2	_	_	_
+10	کرده‌بودند	V	PRD	5	Y	کردن.25	_	_	_	_
+12	نزد	PREP	VPP	14	_	_	_	Arg3	_	_
+13	پدر	N	POSDEP	12	_	_	_	_	_	_
+14	آورده	V	VCONJ	16	Y	آوردن.452	_	_	_	_
+16	گفتند	V	ROOT	0	Y	گفتن.35	_	_	_	_
+17	که	SUBR	VCL	16	_	_	_	_	Arg1	_
+18	گرگ	N	SBJ	23	_	_	_	_	_	Arg0
+21	طعمه	N	MOS	23	_	_	_	_	_	Arg2
+23	ساخت	V	PRD	17	Y	ساختن.498	_	_	_	_
+
+1	یوسف	N	SBJ	11	_	_	Arg1	_	_	_
+4	روز	N	ADVRB	11	_	_	ArgM-TMP	_	_	_
+7	شب	N	NCONJ	4	
+9	درمیان	PREP	MOS	11	_	_	Arg2	_	_	_
+10	چاه	N	POSDEP	9	_	_	_	_	_	_
+11	بود	V	ROOT	0	Y	بودن.15	_	_	_	_
+15	کاروانی	N	SBJ	38	_	_	_	Arg0	_	Arg0
+18	مدین	N	VPP	21	
+20	مصر	N	VPP	21	
+21	می‌رفتند	V	PRD	16	Y	رفتن.17	_	_	_	_
+22	برای	PREP	ADVRB	38	_	_	_	_	_	ArgM-CAU
+23	رفع	N	POSDEP	22	_	_	_	_	_	_
+24	خستگی	N	MOZ	23	_	_	_	_	_	_
+28	آب	N	NPP	26	
+30	کنار	N	ADVRB	38	_	_	_	_	_	Arg4
+32	چاهی	N	MOZ	30	_	_	_	_	_	_
+34	یوسف	N	SBJ	37	_	_	_	_	Arg1	_
+37	بود	V	PRD	33	Y	بودن.15	_	_	_	_
+38	آمدند	V	PRD	14	Y	آمدن.44	_	_	_	_
+
+2	آن‌ها	PR	SBJ	11	_	_	Arg0	Arg0
+3	به‌جای	PREP	ADVRB	11	_	_	ArgM-ADV	_
+4	آب	N	POSDEP	3	_	_	_	_
+6	چشم	N	NVE	11	_	_	_	_
+9	پسری	N	VPP	11	
+10	ماه‌چهره	ADJ	NPOSTMOD	9	_	_	_	_
+11	افتاد	V	VCONJ	14	Y	چشم‌افتادن.510	_	_
+13	خوشحال	ADJ	MOS	14	_	_	_	Arg2
+14	شدند	V	ROOT	0	Y	کردن.25	_	_
+
+5	مصر	N	ADVRB	9	
+7	بهایی	N	VPP	9	
+8	اندک	ADJ	NPOSTMOD	7	_	_	_
+9	فروختند	V	ROOT	0	Y	فروختن.353	_
+
+1	کسی	N	SBJ	9	_	_	Arg0	Arg1
+3	یوسف	N	OBJ	5	
+5	خرید	V	PRD	2	Y	خریدن.162	_	_
+6	وزیر	N	MOS	9	_	_	_	Arg2
+7	پادشاه	N	MOZ	6	_	_	_	_
+8	مصر	N	MOZ	7	_	_	_	_
+9	بود	V	ROOT	0	Y	بودن.15	_	_
+
+1	عزیز	N	SBJ	11	_	_	Arg1	Arg0
+2	مصر	N	MOZ	1	_	_	_	_
+4	همسر	N	NCONJ	1	
+5	ش	PR	MOZ	4	_	_	_	_
+7	نعمت	N	AJPP	10	
+9	فرزند	N	MOZ	8	_	_	_	_
+10	محروم	ADJ	MOS	11	_	_	Arg2	_
+11	بودند	V	VCONJ	20	Y	بودن.15	_	_
+15	دلیل	N	ADVRB	20	
+16	یوسف	N	OBJ	20	
+18	به‌خوبی	ADV	ADVRB	20	_	_	_	ArgM-MNR
+19	تربیت	N	MOS	20	_	_	_	Arg2
+20	کردند	V	ROOT	0	Y	کردن.25	_	_
+
+2	هنگامی	N	ADVRB	18	_	_	ArgM-TMP	_
+4	یوسف	N	SBJ	8	_	_	Arg0	_
+6	سن	N	VPP	8	
+7	بلوغ	N	MOZ	6	_	_	_	_
+8	رسید	V	PRD	3	Y	رسیدن.846	_	_
+10	زلیخا	N	SBJ	18	_	_	_	Arg1
+11	به‌خاطر	PREP	ADVRB	18	_	_	_	ArgM-CAU
+12	زیبایی	N	POSDEP	11	_	_	_	_
+14	عاشق	ADJ	MOS	18	_	_	_	Arg2
+16	دلداده	ADJ	AJCONJ	14	
+18	شد	V	ROOT	0	Y	کردن.25	_	_
+
+3	یکی‌از	ADJ	NPREMOD	4	_	_	_	_	_	_
+4	روزها	N	ADVRB	11	
+5	یوسف	N	OBJ	11	
+8	خانه	N	ADVRB	11	
+10	تنها	ADV	ADVRB	11	_	_	ArgM-MNR	_	_	_
+11	یافت	V	VCONJ	15	Y	یافتن.848	_	_	_	_
+15	گفت	V	ROOT	0	Y	گفتن.35	_	_	_	_
+16	که	SUBR	VCL	15	_	_	_	Arg1	_	_
+17	بیا	V	PRD	16	Y	آمدن.44	_	_	_	_
+18	که	SUBR	AJUCL	17	_	_	_	_	ArgM-CAU	_
+23	آماده	ADJ	MOS	24	_	_	_	_	_	Arg2
+24	کرده‌ام	V	PRD	18	Y	کردن.25	_	_	_	_
+
+6	پشت	N	ADVRB	14	
+7	درب	N	MOZ	6	_	_	_	_
+10	زلیخا	N	SBJ	14	_	_	Arg0	_
+11	پیراهن	N	OBJ	14	
+12	یوسف	N	MOZ	11	_	_	_	_
+14	کشید	V	ROOT	0	Y	کشیدن.512	_	_
+17	امر	N	SBJ	23	_	_	_	Arg0
+18	باعث	N	NVE	23	_	_	_	_
+19	پاره	ADJ	PREDEP	20	_	_	_	_
+20	شدن	N	MOZ	18	_	_	_	Arg1
+21	پیراهن	N	MOZ	20	_	_	_	_
+22	یوسف	N	MOZ	21	_	_	_	_
+23	شد	V	PRD	15	Y	باعث‌شدن.296	_	_
+
+6	همسر	N	SBJ	11	_	_	Arg0	Arg0
+7	زلیخا	N	MOZ	6	_	_	_	_
+8	نیز	ADV	ADVRB	11	_	_	ArgM-ADV	_
+11	رسید	V	VCONJ	18	Y	رسیدن.501	_	_
+13	قضیه	N	OBJ	18	
+17	مشاهده	N	NVE	18	_	_	_	_
+18	نمود	V	ROOT	0	Y	مشاهده‌کردن.231	_	_
+
+1	وقتی	N	ADVRB	9	_	_	ArgM-TMP	_	_
+2	عزیز	N	SBJ	8	_	_	Arg0	Arg0	_
+3	مصر	N	MOZ	2	_	_	_	_	_
+5	پیراهن	N	VPP	8	
+6	یوسف	N	MOZ	5	_	_	_	_	_
+7	نظر	N	NVE	8	_	_	_	_	_
+8	افکند	V	NCL	1	Y	نظر‌افکندن.854	_	_	_
+9	دید	V	ROOT	0	Y	دیدن.47	_	_	_
+10	که	SUBR	VCL	9	_	_	_	Arg1	_
+11	پیراهن	N	SBJ	15	_	_	_	_	Arg1
+13	پشت	N	ADVRB	15	
+14	پاره	ADJ	MOS	15	_	_	_	_	Arg2
+15	شده‌است	V	PRD	10	Y	کردن.25	_	_	_
+
+3	لحظه	N	ADVRB	9	
+4	او	PR	SBJ	9	_	_	Arg0	Arg0	_
+7	همسر	N	NPP	5	
+8	ش	PR	MOZ	7	_	_	_	_	_
+9	نمود	V	VCONJ	13	Y	رو‌کردن.548	_	_	_
+13	گفت	V	ROOT	0	Y	گفتن.35	_	_	_
+14	که	SUBR	VCL	13	_	_	_	Arg1	_
+16	تهمت	N	SBJ	23	_	_	_	_	Arg1
+18	افترا	N	NCONJ	16	
+20	مکر	N	MOS	23	
+21	زنانه	ADJ	NPOSTMOD	20	_	_	_	_	_
+23	ست	V	PRD	14	Y	بودن.15	_	_	_
+
+1	زلیخا	N	SBJ	3	_	_	Arg0	Arg0	Arg0
+2	نقشه‌ای	N	NVE	3	_	_	_	_	_
+3	کشید	V	ROOT	0	Y	نقشه‌کشیدن.42	_	_	_
+4	که	SUBR	VCL	3	_	_	Arg3	_	_
+5	زنان	N	OBJ	11	
+6	اشراف‌زاده	ADJ	NPOSTMOD	5	_	_	_	_	_
+9	قصر	N	NPP	10	
+10	دعوت	N	NVE	11	_	_	_	_	_
+11	کند	V	PRD	4	Y	دعوت‌کردن.352	_	_	_
+13	یوسف	N	OBJ	18	
+16	آن‌ها	PR	VPP	18	
+18	دهد	V	AJUCL	11	Y	نشان‌دادن.128	_	_	_
+
+1	او	PR	SBJ	9	_	_	Arg0	Arg0
+2	برای	PREP	ADVRB	9	_	_	ArgM-CAU	_
+3	اجرای	N	POSDEP	2	_	_	_	_
+4	نقشه	N	MOZ	3	_	_	_	_
+6	مهمانی	N	OBJ	9	_	_	Arg1	_
+7	بزرگی	ADJ	NPOSTMOD	6	_	_	_	_
+8	ترتیب	N	NVE	9	_	_	_	_
+9	داد	V	VCONJ	22	Y	ترتیب‌دادن.553	_	_
+12	زنان	N	OBJ	22	
+13	اشرافی	ADJ	NPOSTMOD	12	_	_	_	_
+15	متمکن	ADJ	AJCONJ	13	
+16	شهر	N	MOZ	12	_	_	_	_
+19	قصر	N	NPP	21	
+21	دعوت	N	NVE	22	_	_	_	_
+22	نمود	V	ROOT	0	Y	دعوت‌کردن.352	_	_
+
+1	سپس	SUBR	ROOT	0	_	_	ArgM-ADV	_
+3	کنیزان	N	NPP	5	
+5	دستور	N	NVE	6	_	_	_	_
+6	داد	V	PRD	1	Y	دستور‌دادن.104	_	_
+9	مهمان‌ها	N	NPP	10	
+10	پذیرایی	N	NVE	11	_	_	_	_
+11	کنند	V	VCL	6	Y	پذیرایی‌کردن.555	_	_
+
+1	ازجمله	PREP	MOS	5	_	_	Arg2
+2	پذیرایی‌کنندگان	N	POSDEP	1	_	_	_
+4	یوسف	N	SBJ	5	_	_	Arg1
+5	بود	V	ROOT	0	Y	بودن.15	_
+
+1	زلیخا	N	SBJ	10	_	_	Arg0	_
+3	دست	N	VPP	10	
+7	مهمانان	N	POSDEP	5	
+9	چاقویی	N	OBJ	10	_	_	Arg1	_
+10	داد	V	ROOT	0	Y	دادن.110	_	_
+12	پرتقال‌ها	N	OBJ	15	
+14	پوست	N	NVE	15	_	_	_	_
+15	بگیرند	V	AJUCL	10	Y	پوست‌گرفتن.558	_	_
+
+2	آن‌ها	PR	SBJ	12	_	_	Arg1	Arg0
+4	مشاهده	N	ADVRB	12	
+5	یوسف	N	MOZ	4	_	_	_	_
+7	جمال	N	NCONJ	5	
+9	زیبایی	N	NCONJ	7	
+11	حیرت‌زده	ADJ	MOS	12	_	_	Arg2	_
+12	‌شده	V	VCONJ	17	Y	کردن.25	_	_
+14	دستان	N	OBJ	17	
+17	بریدند	V	ROOT	0	Y	بریدن.563	_	_
+
+2	بدین	PREP	ADVRB	7	_	_	ArgM-MNR
+3	گونه	N	POSDEP	2	_	_	_
+4	توسط	PREP	ADVRB	7	_	_	ArgM-ADV
+5	زلیخا	N	POSDEP	4	_	_	_
+6	رسوا	ADJ	MOS	7	_	_	Arg2
+7	شدند	V	ROOT	0	Y	کردن.25	_
+
+2	خداوند	N	SBJ	7	_	_	Arg0
+3	دعای	N	OBJ	7	
+6	مستجاب	ADJ	MOS	7	_	_	Arg2
+7	نمود	V	ROOT	0	Y	کردن.25	_
+
+2	وجودی	N	ADVRB	32	
+4	یوسف	N	SBJ	9	_	_	Arg1	_	_
+7	ماجرا	N	ADVRB	9	
+8	بی‌گناه	ADJ	TAM	9	_	_	Arg2	_	_
+9	شناخته‌شد	V	PRD	3	Y	شناختن.389	_	_	_
+11	زلیخا	N	SBJ	32	_	_	_	Arg0	Arg0
+13	خاندان	N	NCONJ	11	
+14	ش	PR	MOZ	13	_	_	_	_	_
+15	برای	PREP	ADVRB	32	_	_	_	_	ArgM-CAU
+19	لکه	N	OBJ	25	
+20	ننگ	N	MOZ	19	_	_	_	_	_
+24	محو	ADJ	MOS	25	_	_	_	Arg2	_
+25	کنند	V	PRD	17	Y	کردن.25	_	_	_
+26	دستور	N	OBJ	32	
+27	زندانی	ADJ	PREDEP	28	_	_	_	_	_
+29	یوسف	N	MOZ	28	_	_	_	_	_
+31	صادر	ADJ	NVE	32	_	_	_	_	_
+32	نمودند	V	ROOT	0	Y	صادر‌کردن.292	_	_	_
+
+2	بعداز	PREP	ADVRB	9	_	_	ArgM-TMP
+3	مدتی	N	POSDEP	2	_	_	_
+7	زندان	N	ADVRB	9	
+8	خوابی	N	OBJ	9	_	_	Arg1
+9	دیدند	V	PRD	1	Y	دیدن.47	_
+
+1	تعبیر	N	SBJ	6	_	_	Arg1	_	_
+2	خواب	N	MOZ	1	_	_	_	_	_
+3	آن‌ها	PR	MOZ	2	_	_	_	_	_
+4	بدین	PREP	MOS	6	_	_	Arg2	_	_
+5	شکل	N	POSDEP	4	_	_	_	_	_
+6	بود	V	ROOT	0	Y	بودن.15	_	_	_
+8	یکی‌از	ADJ	NPREMOD	9	_	_	_	_	_
+9	آن‌ها	PR	SBJ	13	_	_	_	Arg1	_
+11	زندان	N	AJPP	12	
+12	آزاد	ADJ	MOS	13	_	_	_	Arg2	_
+13	می‌شد	V	VCONJ	19	Y	کردن.25	_	_	_
+15	دیگری	PR	SBJ	19	_	_	_	_	Arg1
+18	مجازات	N	MOZ	17	_	_	_	_	_
+19	آویخته‌می‌شد	V	PRD	7	Y	به‌دار‌آویختن.570	_	_	_
+
+1	یوسف	N	SBJ	11	_	_	_	Arg0	_
+3	کسی	N	VPP	11	11	_	_	_	Arg3	_
+6	آینده	N	ADVRB	10	
+8	زندان	N	AJPP	9	
+9	آزاد	ADJ	MOS	10	_	_	Arg2	_	_
+10	می‌شد	V	PRD	4	Y	کردن.25	_	_	_
+11	گفت	V	ROOT	0	Y	گفتن.35	_	_	_
+12	که	SUBR	VCL	11	_	_	_	Arg1	_
+13	سفارش	N	NVE	18	_	_	_	_	_
+14	م	PR	OBJ	18	
+17	پادشاه	N	NPP	13	
+18	بکن	V	PRD	12	Y	سفارش‌کردن.50	_	_	_
+
+3	شبی	N	ADVRB	10	
+5	شب‌ها	N	NPP	3	
+6	پادشاه	N	SBJ	10	_	_	Arg0	_
+7	وقت	N	MOZ	6	_	_	_	_
+8	مصر	N	MOZ	7	_	_	_	_
+9	خوابی	N	OBJ	10	_	_	Arg1	_
+10	دید	V	ROOT	0	Y	دیدن.47	_	_
+14	آشفته	ADJ	MOS	15	_	_	_	Arg2
+15	ساخت	V	PRD	11	Y	ساختن.498	_	_
+
+4	جوانی	N	SBJ	18	_	_	Arg1	Arg0	Arg0	_	_
+6	مدتی	N	ADVRB	12	_	_	ArgM-TMP	_	_	_	_
+9	زندان	N	ADVRB	12	
+10	نزد	PREP	MOS	12	_	_	Arg2	_	_	_	_
+11	یوسف	N	POSDEP	10	_	_	_	_	_	_	_
+12	بود	V	PRD	5	Y	بودن.15	_	_	_	_	_
+13	قضیه	N	OBJ	18	
+14	یوسف	N	MOZ	13	_	_	_	_	_	_	_
+17	یاد	N	VPRT	18	
+18	آورد	V	VCONJ	22	Y	به‌یاد‌آوردن.574	_	_	_	_	_
+21	پادشاه	N	VPP	22	
+22	گفت	V	ROOT	0	Y	گفتن.35	_	_	_	_	_
+23	من	PR	SBJ	27	_	_	_	_	_	Arg0	_
+24	کسی	N	OBJ	27	27	_	_	_	_	_	Arg1	_
+26	سراغ	N	NVE	27	_	_	_	_	_	_	_
+27	دارم	V	VCL	22	Y	سراغ‌داشتن.575	_	_	_	_	_
+29	می‌تواند	V	PRD	28	_	_	_	_	_	_	_
+30	خواب	N	OBJ	34	
+33	تعبیر	N	NVE	34	_	_	_	_	_	_	_
+34	نماید	V	VCL	29	Y	تعبیر‌کردن.494	_	_	_	_	_
+
+1	جوان	N	SBJ	4	_	_	Arg0	Arg0
+2	نزد	PREP	VPP	4	_	_	Arg4	_
+3	پادشاه	N	POSDEP	2	_	_	_	_
+4	رفت	V	VCONJ	13	Y	رفتن.17	_	_
+6	تعبیر	N	OBJ	13	
+7	خواب	N	MOZ	6	_	_	_	_
+8	یوسف	N	MOZ	7	_	_	_	_
+12	عرضه	N	NVE	13	_	_	_	_
+13	نمود	V	ROOT	0	Y	عرضه‌کردن.583	_	_
+
+1	پادشاه	N	SBJ	4	_	_	Arg0	Arg0	Arg0	_
+3	فکر	N	VPP	4	
+4	فرورفت	V	VCONJ	12	Y	فرو‌رفتن.632	_	_	_	_
+7	درایت	N	NPP	11	
+9	هوش	N	NCONJ	7	
+10	یوسف	N	MOZ	7	_	_	_	_	_	_
+11	پی	N	NVE	12	_	_	_	_	_	_
+12	برد	V	VCONJ	15	Y	پی‌بردن.48	_	_	_	_
+14	دستور	N	NVE	15	_	_	_	_	_	_
+15	داد	V	ROOT	0	Y	دستور‌دادن.104	_	_	_	_
+16	که	SUBR	VCL	15	_	_	_	_	Arg1	_
+20	قصر	N	NPP	21	
+21	دعوت	N	NVE	22	_	_	_	_	_	_
+22	نمایند	V	PRD	16	Y	دعوت‌کردن.352	_	_	_	_
+
+2	یوسف	N	SBJ	5	_	_	Arg0	_	_	_
+4	جواب	N	ADVRB	5	
+5	گفت	V	ROOT	0	Y	گفتن.35	_	_	_	_
+7	من	PR	SBJ	11	_	_	_	Arg0	_	_
+9	زندان	N	NPP	10	
+11	نمی‌روم	V	VCL	5	Y	بیرون‌رفتن.587	_	_	_	_
+13	م	PR	OBJ	22	
+16	تهمت‌هایی	N	AJPP	21	
+20	زده‌اند	V	PRD	17	Y	تهمت‌زدن.134	_	_	_	_
+21	مبرا	ADJ	MOS	22	_	_	_	_	_	Arg2
+22	نمایند	V	AJUCL	11	Y	کردن.25	_	_	_	_
+
+2	پادشاه	N	SBJ	4	_	_	Arg1	Arg0
+3	چنین	PR	MOS	4	_	_	Arg2	_
+4	کرد	V	VCONJ	10	Y	کردن.25	_	_
+6	تمامی	ADJ	NPREMOD	7	_	_	_	_
+7	زنان	N	OBJ	10	
+9	احضار	N	NVE	10	_	_	_	_
+10	کرد	V	ROOT	0	Y	احضار‌کردن.572	_	_
+
+1	آن‌ها	PR	SBJ	3	_	_	Arg0	_
+2	اقرار	N	NVE	3	_	_	_	_
+3	کردند	V	ROOT	0	Y	اقرار‌کردن.604	_	_
+4	که	SUBR	VCL	3	_	_	Arg3	_
+5	ما	PR	SBJ	12	_	_	_	Arg0
+7	بدی	N	OBJ	12	_	_	_	Arg1
+9	لغزشی	N	NCONJ	7	
+12	ندیدیم	V	PRD	4	Y	دیدن.47	_	_
+
+2	زلیخا	N	SBJ	8	_	_	Arg0
+3	نیز	ADV	ADVRB	8	_	_	ArgM-ADV
+5	جرم	N	NPP	7	
+7	اقرار	N	NVE	8	_	_	_
+8	نمود	V	ROOT	0	Y	اقرار‌کردن.604	_
+
+1	پادشاه	N	SBJ	9	_	_	Arg0	Arg0	_
+4	پاکدامنی	N	NPP	6	
+5	یوسف	N	MOZ	4	_	_	_	_	_
+6	پی	N	NVE	7	_	_	_	_	_
+7	برد	V	PRD	2	Y	پی‌بردن.48	_	_	_
+8	دستور	N	NVE	9	_	_	_	_	_
+9	داد	V	ROOT	0	Y	دستور‌دادن.104	_	_	_
+11	یوسف	N	OBJ	17	
+14	احترام	N	ADVRB	17	
+15	به‌نزد	PREP	VPP	17	_	_	_	_	Arg4
+16	ش	PR	POSDEP	15	_	_	_	_	_
+17	بیاورند	V	VCL	9	Y	آوردن.452	_	_	_
+
+1	یعقوب	N	SBJ	10	_	_	Arg1
+3	فرزندان	N	NCONJ	1	
+4	ش	PR	MOZ	3	_	_	_
+5	نیز	ADV	ADVRB	10	_	_	ArgM-ADV
+7	زمره	N	MOS	10	
+9	افراد	N	MOZ	7	_	_	_
+10	بودند	V	ROOT	0	Y	بودن.15	_
+
+1	برای	PREP	ADVRB	7	_	_	ArgM-GOL	_	_
+3	یعقوب	N	SBJ	7	_	_	Arg0	_	_
+5	فرزندان	N	VPP	7	
+7	خواست	V	ROOT	0	Y	خواستن.51	_	_	_
+8	که	SUBR	VCL	7	_	_	Arg1	_	_
+10	مصر	N	VPP	11	
+11	بروند	V	VCONJ	17	Y	رفتن.17	_	_	_
+13	مایحتاج	N	OBJ	17	
+16	تهیه	N	NVE	17	_	_	_	_	_
+17	نمایند	V	PRD	8	Y	تهیه‌کردن.614	_	_	_
+
+1	آن‌ها	PR	SBJ	8	_	_	Arg1
+2	برای	PREP	ADVRB	8	_	_	ArgM-PRP
+3	تهیه	N	POSDEP	2	_	_	_
+4	مایحتاج	N	MOZ	3	_	_	_
+6	روانه	ADJ	MOS	8	_	_	Arg2
+7	مصر	N	NEZ	6	_	_	_
+8	شدند	V	ROOT	0	Y	کردن.25	_
+
+1	یوسف	N	SBJ	12	_	_	Arg0	Arg0	_
+4	محل	N	NPP	6	
+5	توزیع	N	MOZ	4	_	_	_	_	_
+6	حضور	N	NVE	7	_	_	_	_	_
+7	داشت	V	PRD	2	Y	حضور‌داشتن.552	_	_	_
+9	برادران	N	OBJ	12	
+12	شناخت	V	ROOT	0	Y	شناختن.64	_	_	_
+14	حالی	N	ADVRB	12	
+16	آن‌ها	PR	SBJ	19	_	_	_	_	Arg0
+17	یوسف	N	OBJ	19	
+19	نشناختند	V	PRD	15	Y	شناختن.64	_	_	_
+
+1	یوسف	N	SBJ	10	_	_	Arg0	_
+4	آن‌ها	PR	MOZ	3	_	_	_	_
+7	خاندان	N	VPP	10	
+9	سوال	N	NVE	10	_	_	_	_
+10	کرد	V	ROOT	0	Y	سوال‌کردن.304	_	_
+11	که	SUBR	VCL	10	_	_	Arg4	_
+12	آن‌ها	PR	SBJ	14	_	_	_	Arg0
+13	جواب	N	NVE	14	_	_	_	_
+14	دادند	V	PRD	11	Y	جواب‌دادن.849	_	_
+
+1	آن‌ها	PR	SBJ	3	_	_	Arg0	Arg0
+2	سوگند	N	NVE	3	_	_	_	_
+3	خوردند	V	ROOT	0	Y	سوگند‌یاد‌کردن.151	_	_
+4	که	SUBR	VCL	3	_	_	Arg3	_
+5	بنیامین	N	OBJ	10	
+7	سالم	ADV	ADVRB	10	_	_	_	ArgM-MNR
+8	نزد	PREP	VPP	10	_	_	_	Arg4
+9	پدر	N	POSDEP	8	_	_	_	_
+10	بیاورند	V	PRD	4	Y	آوردن.452	_	_
+
+1	برادران	N	SBJ	8	_	_	Arg0	Arg0	Arg0
+2	بعداز	PREP	ADVRB	8	_	_	ArgM-TMP	_	_
+5	مجددا	ADV	ADVRB	8	_	_	ArgM-ADV	_	_
+7	مصر	N	VPP	8	
+8	رسیدند	V	VCONJ	12	Y	رسیدن.501	_	_	_
+10	نزد	PREP	VPP	12	_	_	_	Arg4	_
+11	یوسف	N	POSDEP	10	_	_	_	_	_
+12	رفته	V	VCONJ	20	Y	رفتن.17	_	_	_
+14	برادر	N	OBJ	20	
+19	معرفی	N	NVE	20	_	_	_	_	_
+20	نمودند	V	ROOT	0	Y	معرفی‌کردن.115	_	_	_
+
+1	یوسف	N	SBJ	6	_	_	Arg0	Arg0	Arg0	Arg0
+2	به‌خوبی	ADV	ADVRB	6	_	_	ArgM-MNR	_	_	_
+4	آن‌ها	PR	NPP	5	
+5	پذیرایی	N	NVE	6	_	_	_	_	_	_
+6	نمود	V	VCONJ	18	Y	پذیرایی‌کردن.555	_	_	_	_
+9	گوشه‌ای	N	ADVRB	18	
+11	دور	N	ADVRB	18	
+13	چشم	N	NPP	11	
+14	برادران	N	MOZ	13	_	_	_	_	_	_
+16	بنیامین	N	VPP	18	
+17	خلوت	N	NVE	18	_	_	_	_	_	_
+18	نمود	V	VCONJ	25	Y	خلوت‌کردن.625	_	_	_	_
+24	معرفی	N	NVE	25	_	_	_	_	_	_
+25	نمود	V	VCONJ	36	Y	معرفی‌کردن.115	_	_	_	_
+27	داستان	N	OBJ	36	
+30	برادران	N	NCONJ	28	
+31	ش	PR	MOZ	30	_	_	_	_	_	_
+33	برای	PREP	VPP	36	_	_	_	_	_	Arg3
+34	ش	PR	POSDEP	33	_	_	_	_	_	_
+35	تعریف	N	NVE	36	_	_	_	_	_	_
+36	نمود	V	ROOT	0	Y	تعریف‌کردن.855	_	_	_	_
+
+1	یوسف	N	SBJ	21	_	_	Arg0	Arg0
+2	برای	PREP	ADVRB	21	_	_	_	ArgM-CAU
+5	پدر	N	OBJ	12	
+6	ش	PR	MOZ	5	_	_	_	_
+8	نیز	ADV	ADVRB	12	_	_	ArgM-ADV	_
+9	به‌نزد	PREP	NPP	11	_	_	Arg3	_
+11	دعوت	N	NVE	12	_	_	_	_
+12	کند	V	PRD	4	Y	دعوت‌کردن.352	_	_
+14	توسل	N	ADVRB	21	
+16	حیله‌ای	N	NPP	14	
+18	کار	N	OBJ	21	
+20	عملی	ADJ	MOS	21	_	_	_	Arg2
+21	نمود	V	ROOT	0	Y	کردن.25	_	_
+
+1	او	PR	SBJ	12	_	_	Arg0	Arg0
+2	به‌عمد	ADV	ADVRB	12	_	_	ArgM-ADV	_
+3	یکی‌از	ADJ	NPREMOD	4	_	_	_	_
+4	اجناس	N	OBJ	12	
+5	قیمتی	ADJ	NPOSTMOD	4	_	_	_	_
+6	قصر	N	MOZ	4	_	_	_	_
+10	بنیامین	N	MOZ	9	_	_	_	_
+11	قرار	N	NVE	12	_	_	_	_
+12	داد	V	VCONJ	20	Y	قرار‌دادن.557	_	_
+14	ماموران	N	OBJ	20	
+16	به‌دنبال	PREP	VPP	20	_	_	_	Arg3
+17	جستجوی	N	POSDEP	16	_	_	_	_
+18	جنس	N	MOZ	17	_	_	_	_
+19	گم‌شده	ADJ	NPOSTMOD	18	_	_	_	_
+20	فرستاد	V	ROOT	0	Y	فرستادن.341	_	_
+
+1	ماموران	N	SBJ	15	_	_	_	Arg0
+2	بعداز	PREP	ADVRB	15	_	_	_	ArgM-TMP
+5	باری	N	MOZ	4	_	_	Arg1	_
+7	متعلق	ADJ	MOS	10	_	_	Arg2	_
+9	بنیامین	N	AJPP	7	
+10	بود	V	PRD	6	Y	بودن.15	_	_
+11	جنس	N	OBJ	15	
+15	یافتند	V	ROOT	0	Y	یافتن.848	_	_
+
+1	بدین‌ترتیب	ADV	ADVRB	11	_	_	ArgM-DIS
+2	بنابه	PREP	ADVRB	11	_	_	ArgM-ADV
+3	رسم	N	POSDEP	2	_	_	_
+6	بنیامین	N	SBJ	11	_	_	Arg0
+7	به‌عنوان	PREP	NPP	6	_	_	_
+8	گروگان	N	POSDEP	7	_	_	_
+9	نزد	PREP	VPP	11	_	_	Arg3
+10	یوسف	N	POSDEP	9	_	_	_
+11	ماند	V	ROOT	0	Y	ماندن.571	_
+
+3	دل	N	NPP	5	
+4	ش	PR	MOZ	3	_	_	_	_
+5	الهام	N	NVE	6	_	_	_	_
+6	شده‌بود	V	ROOT	0	Y	الهام‌کردن.590	_	_
+7	که	SUBR	VCL	6	_	_	Arg1	_
+8	فرزندان	N	SBJ	11	_	_	_	Arg1
+9	ش	PR	MOZ	8	_	_	_	_
+10	زنده‌	ADJ	MOS	11	_	_	_	Arg2
+11	اند	V	PRD	7	Y	بودن.15	_	_
+
+2	آن‌ها	PR	SBJ	4	_	_	Arg0
+3	چنین	PR	OBJ	4	_	_	Arg1
+4	کردند	V	ROOT	0	Y	کردن.857	_
+
+1	آن‌ها	PR	SBJ	5	_	_	Arg0	Arg0	_	_	_
+3	دربار	N	VPP	5	
+4	یوسف	N	MOZ	3	_	_	_	_	_	_	_
+5	رفته	V	VCONJ	12	Y	رفتن.17	_	_	_	_	_
+7	به‌نزد	PREP	ADVRB	12	_	_	_	ArgM-LOC	_	_	_
+8	ش	PR	POSDEP	7	_	_	_	_	_	_	_
+9	ناله	N	NVE	12	_	_	_	_	_	_	_
+11	التماس	N	NCONJ	9	
+12	نمودند	V	ROOT	0	Y	ناله‌کردن.466	_	_	_	_	_
+16	دل	N	SBJ	21	_	_	_	_	Arg0	_	_
+17	یوسف	N	MOZ	16	_	_	_	_	_	_	_
+20	آن‌ها	PR	MOZ	19	_	_	_	_	_	_	_
+21	سوخت	V	VCONJ	24	Y	سوختن.642	_	_	_	_	_
+23	تصمیم	N	NVE	24	_	_	_	_	_	_	_
+24	گرفت	V	PRD	15	Y	تصمیم‌گرفتن.68	_	_	_	_	_
+25	که	SUBR	VCL	24	_	_	_	_	_	Arg3	_
+29	آن‌ها	PR	NPP	30	
+30	معرفی	N	NVE	31	_	_	_	_	_	_	_
+31	کند	V	PRD	25	Y	معرفی‌کردن.115	_	_	_	_	_
+
+1	برادران	N	SBJ	9	_	_	Arg0	Arg0	_
+2	یوسف	N	MOZ	1	_	_	_	_	_
+4	شنیدن	N	ADVRB	9	
+6	سخنان	N	MOZ	4	_	_	_	_	_
+8	فکر	N	VPP	9	
+9	فرورفته	V	VCONJ	14	Y	فرو‌رفتن.632	_	_	_
+13	شک	N	NVE	14	_	_	_	_	_
+14	کردند	V	ROOT	0	Y	شک‌کردن.644	_	_	_
+16	آیا	ADV_INTG	ADVRB	19	_	_	_	_	ArgM-ADV
+17	او	PR	SBJ	19	_	_	_	_	Arg1
+18	یوسف	N	MOS	19	_	_	_	_	Arg2
+19	نیست	V	PRD	15	Y	بودن.15	_	_	_
+
+2	سوال	N	OBJ	6	
+6	پرسیدند	V	ROOT	0	Y	پرسیدن.124	_	_
+8	آیا	ADV_INTG	ADVRB	11	_	_	_	ArgM-ADV
+9	تو	PR	SBJ	11	_	_	_	Arg1
+10	یوسف	N	MOS	11	_	_	_	Arg2
+11	ی	V	PRD	7	Y	بودن.15	_	_
+
+1	یوسف	N	SBJ	6	_	_	Arg0	Arg0	_
+2	باصداقت	ADV	ADVRB	6	_	_	ArgM-MNR	_	_
+3	جواب	N	NVE	6	_	_	_	_	_
+6	داد	V	VCONJ	10	Y	جواب‌دادن.849	_	_	_
+9	آن‌ها	PR	VPP	10	
+10	گفت	V	ROOT	0	Y	گفتن.35	_	_	_
+11	که	SUBR	VCL	10	_	_	_	Arg1	_
+12	خداوند	N	SBJ	23	_	_	_	_	Arg0
+14	لطف	N	ADVRB	23	
+16	کرم	N	NCONJ	14	
+21	خطرها	N	VPP	23	
+22	حفظ	N	NVE	23	_	_	_	_	_
+23	نمود	V	PRD	11	Y	حفظ‌کردن.511	_	_	_
+
+1	این	PR	SBJ	3	_	_	Arg1	_	_
+2	پاداشی	N	MOS	3	_	_	Arg2	Arg1	_
+3	بود	V	ROOT	0	Y	بودن.15	_	_	_
+5	ناحیه	N	NPP	2	
+6	خدا	N	MOZ	5	_	_	_	_	_
+8	به‌خاطر	PREP	ADVRB	18	_	_	_	ArgM-CAU	_
+9	تقوا	N	POSDEP	8	_	_	_	_	_
+11	صبر	N	NCONJ	9	
+13	شکیبایی	N	NCONJ	11	
+17	مرحمت	N	NVE	18	_	_	_	_	_
+18	فرمود	V	PRD	7	Y	مرحمت‌کردن.371	_	_	_
+19	که	SUBR	AJUCL	18	_	_	_	ArgM-CAU2	_
+20	خداوند	N	SBJ	25	_	_	_	_	Arg0
+21	پاداش	N	OBJ	25	
+22	نیکوکاران	N	MOZ	21	_	_	_	_	_
+24	ضایع	ADJ	MOS	25	_	_	_	_	Arg2
+25	نمی‌کند	V	PRD	19	Y	کردن.25	_	_	_
+
+1	برادران	N	SBJ	9	_	_	Arg0
+2	به‌خاطر	PREP	ADVRB	9	_	_	ArgM-CAU
+3	کارهای	N	POSDEP	2	_	_	_
+7	طلب	N	NVE	9	_	_	_
+8	بخشش	N	MOZ	7	_	_	Arg1
+9	کردند	V	ROOT	0	Y	طلب‌کردن.217	_
+
+2	یوسف	N	SBJ	7	_	_	Arg0
+5	آن‌ها	PR	MOZ	4	_	_	_
+6	دعا	N	NVE	7	_	_	_
+7	کرد	V	ROOT	0	Y	دعا‌کردن.182	_
+
+1	پس‌از	PREP	ADVRB	11	_	_	ArgM-TMP	_	_	_	_
+3	صحبت‌ها	N	POSDEP	1	_	_	_	_	_	_	_
+5	یوسف	N	SBJ	11	_	_	Arg0	Arg0	Arg0	_	_
+6	سراغ	N	NVE	11	_	_	_	_	_	_	_
+7	پدر	N	MOZ	6	_	_	_	_	_	_	_
+10	آن‌ها	PR	VPP	11	
+11	گرفت	V	VCONJ	16	Y	سراغ‌گرفتن.648	_	_	_	_	_
+13	پیراهنی	N	SBJ	16	_	_	_	Arg1	_	_	_
+15	آن‌ها	PR	VPP	16	
+16	داد	V	VCONJ	18	Y	دادن.110	_	_	_	_	_
+18	گفت	V	ROOT	0	Y	گفتن.35	_	_	_	_	_
+19	که	SUBR	VCL	18	_	_	_	_	Arg1	_	_
+22	بر	PREP	VPP	25	_	_	_	_	_	Arg3	_
+23	دیدگان	N	POSDEP	22	_	_	_	_	_	_	_
+24	پدر	N	MOZ	23	_	_	_	_	_	_	_
+25	بیفکنید	V	VCONJ	31	Y	افکندن.168	_	_	_	_	_
+29	به‌نزد	PREP	VPP	31	_	_	_	_	_	_	Arg4
+31	بیاورید	V	PRD	19	Y	آوردن.452	_	_	_	_	_
+
+1	یعقوب	N	SBJ	11	_	_	Arg1
+3	فرزندان	N	NCONJ	1	
+5	آماده	ADJ	MOS	11	_	_	Arg2
+6	حرکت	N	NEZ	5	_	_	_
+8	کنعان	N	NPP	6	
+9	به‌سوی	PREP	NPP	6	_	_	_
+10	مصر	N	POSDEP	9	_	_	_
+11	شدند	V	ROOT	0	Y	کردن.25	_
+
+1	او	PR	SBJ	11	_	_	Arg0	Arg0
+3	کمال	N	ADVRB	11	
+4	عزت	N	MOZ	3	_	_	_	_
+6	پدر	N	NPP	10	
+8	دودمان	N	NCONJ	6	
+9	ش	PR	MOZ	6	_	_	_	_
+10	استقبال	N	NVE	11	_	_	_	_
+11	نمود	V	VCONJ	18	Y	استقبال‌کردن.654	_	_
+13	همگی	PR	OBJ	18	
+16	قصر	N	VPP	18	
+18	برد	V	ROOT	0	Y	بردن.208	_	_
+
+1	آن‌ها	PR	SBJ	10	_	_	Arg0
+2	پس‌از	PREP	ADVRB	10	_	_	ArgM-TMP
+3	حضور	N	POSDEP	2	_	_	_
+5	قصر	N	NPP	3	
+6	دربرابر	PREP	ADVRB	10	_	_	ArgM-LOC
+7	ش	PR	POSDEP	6	_	_	_
+9	سجده	N	VPP	10	
+10	افتادند	V	ROOT	0	Y	افتادن.780	_
+
+4	یوسف	N	SBJ	13	_	_	Arg0	Arg0	Arg0	Arg0	_	_
+6	یاد	N	VPRT	13	
+7	خوابی	N	MOZ	6	_	_	Arg1	Arg1	_	_	_	_
+10	دوران	N	ADVRB	12	
+11	کودکی	N	MOZ	10	_	_	_	_	_	_	_	_
+12	دیده‌بود	V	PRD	8	Y	دیدن.47	_	_	_	_	_	_
+13	افتاد	V	VCONJ	18	Y	به‌یاد‌افتادن.62	_	_	_	_	_	_
+17	پدر	N	NPP	15	
+18	کرد	V	VCONJ	20	Y	رو‌کردن.548	_	_	_	_	_	_
+20	گفت‌	V	ROOT	0	Y	گفتن.35	_	_	_	_	_	_
+23	پدر	N	POSDEP	22	_	_	_	_	_	_	_	_
+24	این	PR	SBJ	29	_	_	_	_	_	_	Arg1	_
+25	تعبیر	N	MOS	29	_	_	_	_	_	_	Arg2	_
+26	خواب	N	MOZ	25	_	_	_	_	_	_	_	_
+29	است	V	VCL	20	Y	بودن.15	_	_	_	_	_	_
+31	خداوند	N	SBJ	35	_	_	_	_	_	_	_	Arg0
+34	محقق	ADJ	MOS	35	_	_	_	_	_	_	_	Arg2
+35	نمود	V	PRD	30	Y	کردن.25	_	_	_	_	_	_
+
+1	یوسف	N	SBJ	4	_	_	Arg0	_
+2	آن‌چنان	ADJ	NPREMOD	3	_	_	_	_
+3	محبوبیتی	N	OBJ	4	_	_	Arg1	_
+4	داشت	V	ROOT	0	Y	داشتن.39	_	_
+5	که	SUBR	AJUCL	4	_	_	ArgM-ADV	_
+6	سر	PREP	NPP	10	_	_	_	_
+7	جنازه	N	POSDEP	6	_	_	_	_
+9	نیز	ADV	ADVRB	11	_	_	_	ArgM-ADV
+10	دعوا	N	MOS	11	_	_	_	Arg2
+11	بود	V	PRD	5	Y	بودن.15	_	_
+
+1	درنتیجه	SUBR	ROOT	0	_	_	ArgM-DIS	_	_
+2	تصمیم	N	NVE	3	_	_	_	_	_
+3	گرفتند	V	PRD	1	Y	تصمیم‌گرفتن.68	_	_	_
+8	نیل	N	VPP	10	
+9	دفن	N	NVE	10	_	_	_	_	_
+10	کنند	V	VCL	3	Y	دفن‌کردن.67	_	_	_
+12	همگان	PR	SBJ	18	_	_	_	_	Arg1
+14	برکت	N	AJPP	17	
+16	ش	PR	MOZ	15	_	_	_	_	_
+17	بهره‌مند	ADJ	MOS	18	_	_	_	_	Arg2
+18	شوند	V	AJUCL	10	Y	کردن.25	_	_	_
+
+1	حضرت	N	SBJ	6	_	_	Arg1	_	_
+2	هود	N	MOZ	1	_	_	_	_	_
+3	یكی‌از	ADJ	NPREMOD	4	_	_	_	_	_
+4	انبیای	N	MOS	6	_	_	Arg2	_	_
+5	الهی	ADJ	NPOSTMOD	4	_	_	_	_	_
+6	است	V	ROOT	0	Y	بودن.15	_	_	_
+8	نام	N	SBJ	14	_	_	_	Arg1	_
+9	مبارک	ADJ	NPOSTMOD	8	_	_	_	_	_
+10	ش	PR	MOZ	8	_	_	_	_	_
+11	ده‌بار	ADV	ADVRB	14	_	_	_	ArgM-EXT	_
+13	قرآن	N	VPP	14	
+14	آمده	V	VCONJ	22	Y	آمدن.31	_	_	_
+17	سوره	N	SBJ	22	_	_	_	_	Arg1
+18	نیز	ADV	ADVRB	22	_	_	_	_	ArgM-ADV
+22	می‌باشد	V	PRD	7	Y	بودن.15	_	_	_
+
+1	هود	N	SBJ	6	_	_	Arg1	Arg1
+3	نوادگان	N	MOS	6	
+4	حضرت	N	MOZ	3	_	_	_	_
+5	نوح	N	MOZ	4	_	_	_	_
+6	بوده	V	VCONJ	13	Y	بودن.15	_	_
+10	واسطه	N	ADVRB	13	
+13	می‌رسد	V	ROOT	0	Y	رسیدن.69	_	_
+
+1	محل	N	SBJ	17	_	_	Arg1
+2	سکونت	N	MOZ	1	_	_	_
+4	قوم	N	MOZ	2	_	_	_
+6	احقاف	N	MOS	17	
+9	یمن	N	POSDEP	8	_	_	_
+11	عمان	N	NCONJ	9	
+14	جنوب	N	POSDEP	11	
+15	عربستان	N	MOZ	14	_	_	_
+17	است	V	ROOT	0	Y	بودن.15	_
+
+1	آن‌ها	PR	SBJ	6	_	_	Arg1
+2	مردمی	N	MOS	6	_	_	Arg2
+3	قوی	ADJ	NPOSTMOD	2	_	_	_
+5	تنومند	ADJ	AJCONJ	3	
+6	بودند	V	ROOT	0	Y	بودن.15	_
+
+1	هم‌چنین	ADV	ADVRB	7	_	_	ArgM-ADV
+2	صاحب	ADJ	MOS	7	_	_	Arg2
+3	شهرهای	N	NEZ	2	_	_	_
+6	خرم	ADJ	AJCONJ	4	
+7	بودند	V	ROOT	0	Y	بودن.15	_
+
+1	آن‌ها	PR	SBJ	10	_	_	Arg1
+2	قومی	N	MOS	10	_	_	Arg2
+3	طغیانگر	ADJ	NPOSTMOD	2	_	_	_
+5	شهوت‌پرست	ADJ	AJCONJ	3	_	_	_
+7	گمراه	ADJ	AJCONJ	5	_	_	_
+9	لجوج	ADJ	AJCONJ	7	
+10	بودند	V	ROOT	0	Y	بودن.15	_
+
+1	آن‌ها	PR	SBJ	3	_	_	Arg1	Arg0	Arg1
+2	حاضر	ADJ	MOS	3	_	_	Arg2	_	_
+3	نبودند	V	ROOT	0	Y	بودن.15	_	_	_
+4	دست	N	NVE	9	_	_	_	_	_
+6	کارهای	N	VPP	9	
+7	خلاف	ADJ	NPOSTMOD	6	_	_	_	_	_
+9	بردارند	V	VCONJ	14	Y	دست‌برداشتن.521	_	_	_
+11	دربرابر	PREP	AJPP	13	_	_	_	_	_
+13	تسلیم	ADJ	MOS	14	_	_	_	_	Arg2
+14	شوند	V	ACL	2	Y	کردن.25	_	_	_
+
+1	هود	N	SBJ	10	_	_	Arg0	_	_
+2	قوم	N	OBJ	10	
+6	پرستش	N	NPP	9	
+7	خدای	N	MOZ	6	_	_	_	_	_
+8	یگانه	ADJ	NPOSTMOD	7	_	_	_	_	_
+9	دعوت	N	NVE	10	_	_	_	_	_
+10	می‌کرد	V	VCONJ	16	Y	دعوت‌کردن.352	_	_	_
+12	آن‌ها	PR	SBJ	16	_	_	_	Arg0	Arg0
+13	دعوت	N	OBJ	16	
+14	ش	PR	MOZ	13	_	_	_	_	_
+16	نمی‌پذیرفتند	V	VCONJ	22	Y	پذیرفتن.88	_	_	_
+20	نسبت	N	NVE	22	_	_	_	_	_
+21	دروغ	N	MOZ	20	_	_	_	_	Arg1
+22	می‌دادند	V	ROOT	0	Y	نسبت‌دادن.70	_	_	_
+
+2	قوم	N	SBJ	10	_	_	Arg0	Arg1
+4	خدا	N	OBJ	10	
+6	به‌خاطر	PREP	VPP	10	_	_	Arg3	_
+7	نعمتهای	N	POSDEP	6	_	_	_	_
+8	ش	PR	MOZ	7	_	_	_	_
+9	سپاس	N	NVE	10	_	_	_	_
+10	نمی‌گفتند	V	VCONJ	17	Y	سپاس‌گفتن.71	_	_
+12	غرق	ADJ	MOS	17	_	_	_	Arg2
+14	غرور	N	AJPP	12	
+16	شهوت	N	NCONJ	14	
+17	بودند	V	ROOT	0	Y	بودن.15	_	_
+
+1	هود	N	SBJ	6	_	_	Arg0	_
+2	بسیار	ADV	ADVRB	6	_	_	ArgM-EXT	_
+3	آن‌ها	PR	OBJ	6	
+5	نصیحت	N	NVE	6	_	_	_	_
+6	می‌کرد	V	VCONJ	14	Y	نصیحت‌کردن.202	_	_
+8	اقدامات	N	SBJ	14	_	_	_	Arg0
+9	هود	N	MOZ	8	_	_	_	_
+11	تاثیری	N	NVE	14	_	_	_	_
+12	بر	PREP	NPP	11	_	_	_	Arg3
+13	آن‌ها	PR	POSDEP	12	_	_	_	_
+14	نگذاشت	V	ROOT	0	Y	تأثیر‌گذاشتن.127	_	_
+
+1	این	PR	SBJ	4	_	_	Arg1	_
+2	فقط	ADV	ADVRB	4	_	_	ArgM-ADV	_
+3	هشداری	N	MOS	4	_	_	Arg2	_
+4	بود	V	ROOT	0	Y	بودن.15	_	_
+5	مبنی‌بر	PREP	NPP	3	_	_	_	_
+8	عذاب	N	SBJ	10	_	_	_	Arg1
+9	نزدیک	ADJ	MOS	10	_	_	_	Arg2
+10	است	V	PRD	7	Y	بودن.15	_	_
+
+1	هود	N	SBJ	6	_	_	Arg0	Arg0	_	_
+4	فرصت	N	NPP	5	
+6	کرد	V	VCONJ	11	Y	استفاده‌کردن.278	_	_	_	_
+8	مجددا	ADV	ADVRB	11	_	_	_	ArgM-EXT	_	_
+10	آن‌ها	PR	VPP	11	
+11	خواست	V	ROOT	0	Y	خواستن.51	_	_	_	_
+12	که	SUBR	VCL	11	_	_	_	Arg1	_	_
+13	توبه	N	NVE	14	_	_	_	_	_	_
+14	کرده	V	VCONJ	19	Y	توبه‌کردن.544	_	_	_	_
+17	خدا	N	NPP	18	
+18	ایمان	N	NVE	19	_	_	_	_	_	_
+19	بیاورند	V	PRD	12	Y	ایمان‌آوردن.38	_	_	_	_
+
+1	گروهی	N	SBJ	6	_	_	Arg0	Arg0
+4	به‌نزد	PREP	VPP	6	_	_	Arg4	_
+5	هود	N	POSDEP	4	_	_	_	_
+6	رفته	V	VCONJ	12	Y	رفتن.17	_	_
+10	طلب	N	NVE	12	_	_	_	_
+11	دعا	N	MOZ	10	_	_	_	Arg1
+12	کردند	V	ROOT	0	Y	طلب‌کردن.217	_	_
+
+1	مجددا	ADV	ADVRB	6	_	_	ArgM-EXT	_
+2	باران	N	SBJ	6	_	_	Arg1	_
+4	آن‌ها	PR	POSDEP	3	_	_	_	_
+5	نازل	ADJ	MOS	6	_	_	Arg2	_
+6	شد	V	VCONJ	14	Y	کردن.25	_	_
+8	سرسبزی	N	SBJ	14	_	_	_	Arg0
+10	خرمی	N	NCONJ	8	
+12	سرزمین	N	VPP	14	
+14	بازگشت	V	ROOT	0	Y	باز‌گشتن.363	_	_
+
+1	اما	SUBR	ROOT	0	_	_	ArgM-DIS	_	_
+2	آن‌ها	PR	SBJ	8	_	_	Arg0	_	_
+3	همچنان	ADV	ADVRB	8	_	_	ArgM-ADV	_	_
+5	کفر	N	VPP	8	
+7	ادامه	N	NVE	8	_	_	_	_	_
+8	دادند	V	PRD	1	Y	ادامه‌دادن.527	_	_	_
+10	طوری	N	ADVRB	8	_	_	ArgM-ADV2	_	_
+14	اراده	N	SBJ	19	_	_	_	Arg1	_
+15	خدا	N	MOZ	14	_	_	_	_	_
+16	بر	PREP	VPP	19	_	_	_	Arg2	_
+18	قرار	N	NVE	19	_	_	_	_	_
+19	گرفت	V	PRD	11	Y	قرار‌گرفتن.866	_	_	_
+21	عذاب	N	OBJ	26	
+24	آن‌ها	PR	POSDEP	23	_	_	_	_	_
+25	نازل	ADJ	MOS	26	_	_	_	_	Arg2
+26	نماید	V	PRD	20	Y	کردن.25	_	_	_
+
+1	خداوند	N	SBJ	9	_	_	Arg0	_	_	_	_	_
+2	متعال	ADJ	NPOSTMOD	1	_	_	_	_	_	_	_	_
+3	باد	N	OBJ	9	_	_	Arg1	Arg1	Arg1	Arg0	_	_
+5	شدیدی	ADJ	NPOSTMOD	3	_	_	_	_	_	_	_	_
+7	آن‌ها	PR	POSDEP	6	_	_	_	_	_	_	_	_
+8	نازل	ADJ	MOS	9	_	_	Arg2	_	_	_	_	_
+9	کرد	V	ROOT	0	Y	کردن.25	_	_	_	_	_	_
+14	شب	N	MOZ	12	_	_	_	_	_	_	_	_
+18	بر	PREP	VPP	20	_	_	_	Arg3	_	_	_	_
+19	آن‌ها	PR	POSDEP	18	_	_	_	_	_	_	_	_
+20	وزید	V	VCONJ	28	Y	وزیدن.549	_	_	_	_	_	_
+22	یکایک	ADJ	NPREMOD	23	_	_	_	_	_	_	_	_
+23	آن‌ها	PR	OBJ	28	
+25	نیست	ADJ	MOS	28	_	_	_	_	Arg2	_	_	_
+27	نابود	ADJ	AJCONJ	25	
+28	نمود	V	VCONJ	34	Y	کردن.25	_	_	_	_	_	_
+30	بدن‌های	N	OBJ	34	
+33	قطعه‌قطعه	ADJ	MOS	34	_	_	_	_	_	Arg2	_	_
+34	نمود	V	PRD	10	Y	کردن.25	_	_	_	_	_	_
+35	به‌طوری	PREP	ADVRB	34	_	_	_	_	_	ArgM-MNR	_	_
+37	حتی	ADV	ADVRB	42	_	_	_	_	_	_	ArgM-ADV2	_
+38	یکی‌از	ADJ	NPREMOD	39	_	_	_	_	_	_	_	_
+39	آن‌ها	PR	SBJ	42	_	_	_	_	_	_	Arg1	_
+40	نیز	ADV	ADVRB	42	_	_	_	_	_	_	ArgM-ADV	_
+41	زنده	ADJ	MOS	42	_	_	_	_	_	_	Arg2	_
+42	نماندند	V	VCONJ	53	Y	ماندن.369	_	_	_	_	_	_
+44	فقط	ADV	ADVRB	53	_	_	_	_	_	_	_	ArgM-ADV
+45	هود	N	SBJ	53	_	_	_	_	_	_	_	Arg1
+47	اطرافیان	N	NCONJ	45	
+48	ش	PR	MOZ	47	_	_	_	_	_	_	_	_
+51	عذاب	N	NPP	52	
+52	نجات	N	NVE	53	_	_	_	_	_	_	_	_
+53	یافتند	V	PRD	36	Y	نجات‌یافتن.45	_	_	_	_	_	_
+
+1	آن‌ها	PR	SBJ	12	_	_	Arg0	Arg0
+2	بعداز	PREP	ADVRB	12	_	_	ArgM-TMP	_
+3	پایان	N	POSDEP	2	_	_	_	_
+4	عذاب	N	MOZ	3	_	_	_	_
+6	نابودی	N	NCONJ	4	
+7	کافرین	N	MOZ	6	_	_	_	_
+9	سرزمین	N	NPP	11	
+10	حضرموت	N	MOZ	9	_	_	_	_
+11	کوچ	N	NVE	12	_	_	_	_
+12	کرده	V	VCONJ	20	Y	کوچ‌کردن.184	_	_
+15	آخر	ADJ	NPREMOD	16	_	_	_	_
+16	عمر	N	ADVRB	20	
+19	زندگی	N	NVE	20	_	_	_	_
+20	نمودند	V	ROOT	0	Y	زندگی‌کردن.40	_	_
+
+1	وقتی	N	ADVRB	21	_	_	_	ArgM-TMP	_	_
+2	حضرت	N	SBJ	16	_	_	Arg0	_	_	_
+3	ابراهیم	N	MOZ	2	_	_	_	_	_	_
+5	سرزمین	N	ADVRB	16	
+6	بابل	N	MOZ	5	_	_	_	_	_	_
+8	عراق	N	POSDEP	6	_	_	_	_	_	_
+14	یکتاپرستی	N	NPP	15	
+15	دعوت	N	NVE	16	_	_	_	_	_	_
+16	نمود	V	NCL	1	Y	دعوت‌کردن.352	_	_	_	_
+18	لوط	N	SBJ	21	_	_	_	Arg1	Arg0	Arg1
+19	نخستین	ADJ	NPREMOD	20	_	_	_	_	_	_
+20	مردی	N	MOS	21	_	_	_	Arg2	_	_
+21	بود	V	ROOT	0	Y	بودن.15	_	_	_	_
+25	شرایط	N	ADVRB	30	
+26	سخت	ADJ	NPOSTMOD	25	_	_	_	_	_	_
+29	ایمان	N	NVE	30	_	_	_	_	_	_
+30	آورد	V	VCONJ	36	Y	ایمان‌آوردن.38	_	_	_	_
+32	همواره	ADV	ADVRB	36	_	_	_	_	_	ArgM-ADV
+36	بود	V	PRD	22	Y	بودن.15	_	_	_	_
+
+1	سپس	SUBR	ROOT	0	_	_	ArgM-DIS	_
+3	سرزمین	N	VPP	9	
+4	سدوم	N	MOZ	3	_	_	_	_
+7	اردن	N	POSDEP	4	
+9	آمد	V	PRD	1	Y	آمدن.44	_	_
+10	زیرا	SUBR	AJUCL	9	_	_	ArgM-CAU	_
+11	مردم	N	SBJ	23	_	_	_	Arg1
+13	منطقه	N	MOZ	11	_	_	_	_
+14	غرق	ADJ	MOS	23	_	_	_	Arg2
+16	انحراف	N	AJPP	14	
+18	فساد	N	NCONJ	16	
+20	مخصوصا	ADV	PREDEP	21	_	_	_	_
+21	انحراف	N	NCONJ	18	
+22	جنسی	ADJ	NPOSTMOD	21	_	_	_	_
+23	بودند	V	PRD	10	Y	بودن.15	_	_
+
+1	او	PR	SBJ	8	_	_	Arg0	Arg0	Arg0	Arg0
+2	درمیان	PREP	VPP	8	_	_	Arg3	_	_	_
+3	قوم	N	POSDEP	2	_	_	_	_	_	_
+4	ش	PR	MOZ	3	_	_	_	_	_	_
+6	سال	N	ADVC	8	_	_	Arg2	_	_	_
+7	زندگی	N	NVE	8	_	_	_	_	_	_
+8	کرد	V	VCONJ	15	Y	زندگی‌کردن.40	_	_	_	_
+10	آن‌ها	PR	OBJ	15	
+12	به‌سوی	PREP	NPP	14	_	_	_	Arg3	_	_
+13	خدا	N	POSDEP	12	_	_	_	_	_	_
+14	دعوت	N	NVE	15	_	_	_	_	_	_
+15	نمود	V	VCONJ	22	Y	دعوت‌کردن.352	_	_	_	_
+18	عذاب	N	VPP	22	
+19	الهی	ADJ	NPOSTMOD	18	_	_	_	_	_	_
+21	حذر	N	POSDEP	20	_	_	_	_	_	_
+22	نمود	V	VCONJ	29	Y	بر‌حذر‌داشتن.518	_	_	_	_
+24	کمتر	ADV	ADVRB	29	_	_	_	_	_	ArgM-EXT
+27	کوردلان	N	NPP	28	
+28	اثر	N	NVE	29	_	_	_	_	_	_
+29	گذاشت	V	ROOT	0	Y	اثر‌گذاشتن.516	_	_	_	_
+
+1	لوط	N	SBJ	8	_	_	Arg0	Arg0	Arg0	_	_
+2	قوم	N	OBJ	8	
+6	خدا	N	NPP	7	
+7	دعوت	N	NVE	8	_	_	_	_	_	_	_
+8	کرد	V	VCONJ	17	Y	دعوت‌کردن.352	_	_	_	_	_
+10	آن‌ها	PR	OBJ	17	
+13	عذاب	N	VPP	17	
+16	حذر	N	POSDEP	15	_	_	_	_	_	_	_
+17	داشت	V	VCONJ	19	Y	بر‌حذر‌داشتن.518	_	_	_	_	_
+19	گفت	V	ROOT	0	Y	گفتن.35	_	_	_	_	_
+20	من	PR	SBJ	25	_	_	_	_	_	Arg1	Arg1
+21	فرستاده	N	MOS	25	_	_	_	_	_	Arg2	_
+22	خدا	N	MOZ	21	_	_	_	_	_	_	_
+23	به‌سوی	PREP	NPP	21	_	_	_	_	_	_	_
+25	هستم	V	VCONJ	32	Y	بودن.15	_	_	_	_	_
+27	امین	ADJ	MOS	32	_	_	_	_	_	_	Arg2
+29	تبلیغ	N	AJPP	27	
+30	رسالت	N	MOZ	29	_	_	_	_	_	_	_
+32	یم	V	VCL	19	Y	بودن.15	_	_	_	_	_
+
+1	درست	ADJ	MOS	2	_	_	Arg2	_	_	_	_
+2	نیست	V	ROOT	0	Y	بودن.15	_	_	_	_	_
+3	که	SUBR	VCL	2	_	_	Arg1	_	_	_	_
+4	شما	PR	SBJ	12	_	_	_	Arg0	Arg0	Arg0	Arg0
+5	طبیعت	N	OBJ	12	
+7	سرشت	N	NCONJ	5	
+11	تباهی	N	VPRT	12	
+12	کشانده	V	VCONJ	19	Y	به‌تباهی‌کشاندن.519	_	_	_	_	_
+15	نظام	N	NPP	18	
+16	طبیعی	ADJ	NPOSTMOD	15	_	_	_	_	_	_	_
+17	زندگی	N	MOZ	15	_	_	_	_	_	_	_
+18	مخالفت	N	NVE	19	_	_	_	_	_	_	_
+19	ورزیده	V	VCONJ	26	Y	مخالفت‌ورزیدن.520	_	_	_	_	_
+22	مردان	N	ADVRB	26	
+23	عمل	N	OBJ	26	_	_	_	_	_	Arg1	_
+24	ناروا	ADJ	NPOSTMOD	23	_	_	_	_	_	_	_
+26	دهید	V	VCONJ	32	Y	انجام‌دادن.158	_	_	_	_	_
+29	زنان	N	VPP	32	
+31	دست	N	NVE	32	_	_	_	_	_	_	_
+32	بردارید	V	PRD	3	Y	دست‌برداشتن.521	_	_	_	_	_
+
+1	ثمره	N	SBJ	6	_	_	Arg1	_
+3	ازدواج	N	MOZ	1	_	_	_	_
+5	دختر	N	MOS	6	_	_	Arg2	_
+6	بود	V	VCONJ	16	Y	بودن.15	_	_
+9	برنامه	N	SBJ	16	_	_	_	Arg0
+10	لوط	N	MOZ	9	_	_	_	_
+12	تاثیری	N	NVE	16	_	_	_	_
+13	درمیان	PREP	NPP	12	_	_	_	Arg3
+14	قوم	N	POSDEP	13	_	_	_	_
+15	ش	PR	MOZ	14	_	_	_	_
+16	نگذاشت	V	ROOT	0	Y	اثر‌گذاشتن.516	_	_
+
+1	هم‌چنین	ADV	ADVRB	8	_	_	ArgM-ADV	_	_
+3	انظار	N	ADVRB	8	
+4	عمومی	ADJ	NPOSTMOD	3	_	_	_	_	_
+6	یکدیگر	PR	VPP	8	
+7	لواط	N	NVE	8	_	_	_	_	_
+8	می‌کردند	V	VCONJ	20	Y	لواط‌کردن.534	_	_	_
+9	حتی	ADV	ADVRB	20	_	_	_	_	ArgM-ADV2
+11	کسانی	N	VPP	20	20	_	_	_	_	Arg3
+14	دیار	N	NPP	16	
+16	عبور	N	NVE	17	_	_	_	_	_
+17	می‌کردند	V	PRD	12	Y	عبور‌کردن.535	_	_	_
+18	نیز	ADV	ADVRB	20	_	_	_	_	ArgM-ADV
+19	رحم	N	NVE	20	_	_	_	_	_
+20	نمی‌کردند	V	ROOT	0	Y	رحم‌کردن.505	_	_	_
+
+2	تن	N	SBJ	11	_	_	Arg0	Arg0
+4	ملائکه	N	NPP	2	
+5	برای	PREP	ADVRB	11	_	_	ArgM-GOL	_
+6	عذاب	N	POSDEP	5	_	_	_	_
+7	قوم	N	MOZ	6	_	_	_	_
+8	لوط	N	MOZ	7	_	_	_	_
+10	زمین	N	VPP	11	
+11	آمدند	V	VCONJ	15	Y	آمدن.44	_	_
+13	به‌سراغ	PREP	VPP	15	_	_	_	Arg4
+14	لوط	N	POSDEP	13	_	_	_	_
+15	رفتند	V	ROOT	0	Y	رفتن.17	_	_
+
+1	لوط	N	SBJ	9	_	_	Arg1
+4	موقع	N	ADVRB	9	
+5	مشغول	ADJ	MOS	9	_	_	Arg2
+6	آب‌یاری	N	NEZ	5	_	_	_
+7	زراعت	N	MOZ	6	_	_	_
+8	ش	PR	MOZ	7	_	_	_
+9	بود	V	ROOT	0	Y	بودن.15	_
+
+1	آن‌ها	PR	SBJ	2	_	_	Arg0	_	_	_
+2	گفتند	V	ROOT	0	Y	گفتن.35	_	_	_	_
+3	ما	PR	SBJ	5	_	_	_	Arg1	Arg1	Arg1
+4	مسافر	N	MOS	5	_	_	_	Arg2	_	_
+5	یم	V	VCONJ	9	Y	بودن.15	_	_	_	_
+7	امشب	ADV	ADVRB	9	_	_	_	_	ArgM-TMP	_
+8	مایل	ADJ	MOS	9	_	_	_	_	Arg2	_
+9	یم	V	VCL	2	Y	بودن.15	_	_	_	_
+10	مهمان	N	MOS	12	_	_	_	_	_	Arg2
+12	باشیم	V	ACL	8	Y	بودن.15	_	_	_	_
+
+1	لوط	N	SBJ	13	_	_	Arg1	Arg0
+2	باتوجه‌به	PREP	ADVRB	13	_	_	ArgM-ADV	_
+3	انحراف	N	POSDEP	2	_	_	_	_
+4	قوم	N	MOZ	3	_	_	_	_
+5	منحرف	ADJ	NPOSTMOD	4	_	_	_	_
+7	زشت‌کار	ADJ	AJCONJ	5	
+8	ش	PR	MOZ	4	_	_	_	_
+9	تحت	PREP	VPP	13	_	_	Arg3	_
+10	فشار	N	POSDEP	9	_	_	_	_
+11	روحی	ADJ	NPOSTMOD	10	_	_	_	_
+12	قرار	N	NVE	13	_	_	_	_
+13	گرفت	V	VCONJ	23	Y	قرار‌گرفتن.314	_	_
+15	آن‌ها	PR	OBJ	23	
+18	برخورد	N	AJPP	22	
+19	زشت	ADJ	NPOSTMOD	18	_	_	_	_
+20	قوم	N	MOZ	18	_	_	_	_
+22	آگاه	ADJ	MOS	23	_	_	_	Arg2
+23	کرد	V	ROOT	0	Y	کردن.25	_	_
+
+2	مهمان‌ها	N	SBJ	6	_	_	Arg1
+3	وارد	ADJ	MOS	6	_	_	Arg2
+4	خانه	N	NEZ	3	_	_	_
+5	لوط	N	MOZ	4	_	_	_
+6	شدند	V	ROOT	0	Y	کردن.25	_
+
+1	لوط	N	SBJ	5	_	_	Arg0	_
+3	همسر	N	VPP	5	
+4	ش	PR	MOZ	3	_	_	_	_
+5	خواست	V	ROOT	0	Y	خواستن.51	_	_
+6	که	SUBR	VCL	5	_	_	Arg1	_
+7	ورود	N	OBJ	15	
+8	مهمان‌ها	N	MOZ	7	_	_	_	_
+11	قوم	N	ADVPP	13	
+12	ش	PR	MOZ	11	_	_	_	_
+13	مخفی	ADV	ADVC	15	_	_	_	Arg2
+15	دارد	V	PRD	6	Y	نگه‌داشتن.831	_	_
+
+2	او	PR	SBJ	10	_	_	Arg1	Arg0	Arg0
+4	هم‌کیش	ADJ	MOS	6	_	_	Arg2	_	_
+5	دشمنان	N	NEZ	4	_	_	_	_	_
+6	بود	V	PRD	3	Y	بودن.15	_	_	_
+8	پشت‌بام	N	VPP	10	
+9	خانه	N	MOZ	8	_	_	_	_	_
+10	رفت	V	VCONJ	19	Y	رفتن.17	_	_	_
+13	روشن	ADJ	PREDEP	14	_	_	_	_	_
+15	آتش	N	MOZ	14	_	_	_	_	_
+16	اوباشان	N	OBJ	19	
+18	خبر	N	NVE	19	_	_	_	_	_
+19	کرد	V	ROOT	0	Y	خبر‌کردن.539	_	_	_
+
+1	لوط	N	SBJ	5	_	_	Arg0	_
+3	آن‌ها	PR	NPP	4	
+4	التماس	N	NVE	5	_	_	_	_
+5	کرد	V	ROOT	0	Y	التماس‌کردن.545	_	_
+6	که	SUBR	VCL	5	_	_	Arg1	_
+7	دست	N	NVE	13	_	_	_	_
+11	کثیف	ADJ	NPOSTMOD	10	_	_	_	_
+13	بردارید	V	PRD	6	Y	دست‌برداشتن.521	_	_
+
+2	قوم	N	SBJ	6	_	_	Arg0
+3	ش	PR	MOZ	2	_	_	_
+6	نرفتند	V	ROOT	0	Y	زیر‌بار‌رفتن.546	_
+
+1	لوط	N	SBJ	7	_	_	Arg0	Arg0	_
+3	صحبت	N	OBJ	6	
+4	آن‌ها	PR	MOZ	3	_	_	_	_	_
+6	شنید	V	PRD	2	Y	شنیدن.454	_	_	_
+7	خواست	V	ROOT	0	Y	خواستن.51	_	_	_
+8	که	SUBR	VCL	7	_	_	_	Arg1	_
+9	آنان	PR	SBJ	14	_	_	_	_	Arg0
+13	معرفی	N	NVE	14	_	_	_	_	_
+14	نمایند	V	PRD	8	Y	معرفی‌کردن.115	_	_	_
+
+1	آن‌ها	PR	SBJ	7	_	_	Arg0
+2	حقیقت	N	OBJ	7	
+7	گفتند	V	ROOT	0	Y	گفتن.35	_
+
+1	لوط	N	SBJ	6	_	_	Arg0
+2	علت	N	OBJ	6	
+3	حضور	N	MOZ	2	_	_	_
+6	پرسید	V	ROOT	0	Y	پرسیدن.124	_
+
+2	جبرییل	N	SBJ	3	_	_	Arg0	_
+3	گفت	V	ROOT	0	Y	گفتن.35	_	_
+5	ما	PR	SBJ	10	_	_	_	Arg0
+6	برای	PREP	ADVRB	10	_	_	_	ArgM-GOL
+7	هلاکت	N	POSDEP	6	_	_	_	_
+8	قوم	N	MOZ	7	_	_	_	_
+10	آمده‌ایم	V	VCL	3	Y	آمدن.44	_	_
+
+1	چیزی	N	SBJ	2	_	_	Arg1	_	_
+2	نگذشت	V	ROOT	0	Y	گذشتن.43	_	_	_
+4	قوم	N	SBJ	9	_	_	_	Arg0	Arg1
+5	لوط	N	MOZ	4	_	_	_	_	_
+6	درب	N	OBJ	9	
+7	خانه	N	MOZ	6	_	_	_	_	_
+9	شکسته	V	VCONJ	13	Y	شکستن.551	_	_	_
+11	وارد	ADJ	MOS	13	_	_	_	_	Arg2
+12	منزل	N	NEZ	11	_	_	_	_	_
+13	شدند	V	PRD	3	Y	کردن.25	_	_	_
+
+1	سپس	SUBR	ROOT	0	_	_	ArgM-DIS	_	_	_
+2	فرشتگان	N	SBJ	5	_	_	Arg0	_	_	_
+4	لوط	N	VPP	5	
+5	گفتند	V	PRD	1	Y	گفتن.35	_	_	_	_
+6	که	SUBR	VCL	5	_	_	Arg1	_	_	_
+7	شبانه	ADV	ADVRB	15	_	_	_	ArgM-TMP	_	_
+9	خانواده	N	ADVRB	15	
+10	ات	PR	MOZ	9	_	_	_	_	_	_
+13	شهر	N	AJPP	14	
+14	دور	ADJ	MOS	15	_	_	_	Arg2	_	_
+15	شو	V	VCONJ	22	Y	کردن.25	_	_	_	_
+17	زن	N	OBJ	22	
+22	نبر	V	PRD	6	Y	بردن.208	_	_	_	_
+23	که	SUBR	AJUCL	22	_	_	_	_	ArgM-CAU	_
+24	او	PR	SBJ	27	_	_	_	_	_	Arg1
+26	هلاک	ADJ	MOS	27	_	_	_	_	_	Arg2
+27	شود	V	VCL	25	Y	کردن.25	_	_	_	_
+
+1	نام	N	SBJ	9	_	_	Arg1	_	_
+2	مبارک	ADJ	NPOSTMOD	1	_	_	_	_	_
+3	حضرت	N	MOZ	1	_	_	_	_	_
+4	یونس	N	MOZ	3	_	_	_	_	_
+5	4بار	ADV	ADVRB	9	_	_	ArgM-EXT	_	_
+7	قرآن	N	VPP	9	
+8	ذکر	N	NVE	9	_	_	_	_	_
+9	شده	V	VCONJ	22	Y	ذکر‌کردن.144	_	_	_
+14	نیز	ADV	ADVRB	22	_	_	_	ArgM-ADV	_
+15	بدون	PREP	ADVRB	22	_	_	_	ArgM-MNR	_
+16	اشاره	N	POSDEP	15	_	_	_	_	_
+19	ش	PR	MOZ	18	_	_	_	_	_
+20	مطالبی	N	SBJ	22	_	_	_	Arg1	_
+21	ذکر	N	NVE	22	_	_	_	_	_
+22	شده	V	VCONJ	32	Y	ذکر‌کردن.144	_	_	_
+24	نیز	ADV	ADVRB	32	_	_	_	_	ArgM-ADV
+26	سوره	N	SBJ	32	_	_	_	_	Arg1
+28	قرآن	N	NPP	26	
+30	اسم	N	MOS	32	
+32	می‌باشد	V	ROOT	0	Y	بودن.15	_	_	_
+
+1	یونس	N	SBJ	8	_	_	Arg1	Arg0
+3	ع	ARAB	POSDEP	1	_	_	_	_
+6	پیامبران	N	MOS	8	
+7	بنی‌اسراییل	N	MOZ	6	_	_	_	_
+8	است	V	ROOT	0	Y	بودن.15	_	_
+10	بعداز	PREP	ADVRB	13	_	_	_	ArgM-TMP
+11	سلیمان	N	POSDEP	10	_	_	_	_
+12	ظهور	N	NVE	13	_	_	_	_
+13	کرد	V	PRD	9	Y	ظهور‌کردن.74	_	_
+
+1	ایشان	PR	SBJ	18	_	_	Arg0	_
+2	به‌خاطر	PREP	ADVRB	18	_	_	_	ArgM-CAU
+6	شکم	N	VPP	9	
+7	ماهی	N	MOZ	6	_	_	_	_
+8	قرار	N	NVE	9	_	_	_	_
+9	گرفت	V	PRD	4	Y	قرار‌گرفتن.78	_	_
+11	لقب	N	VPP	18	
+12	ذوالنون	N	MOZ	11	_	_	_	_
+14	صاحب	N	APP	12	_	_	_	_
+15	الحوت	ARAB	MOZ	14	_	_	_	_
+17	یاد	N	NVE	18	_	_	_	_
+18	شده‌است	V	ROOT	0	Y	یاد‌کردن.497	_	_
+
+1	قبر	N	SBJ	12	_	_	Arg1
+4	نزدیکی	N	VPP	12	
+5	کوفه	N	MOZ	4	_	_	_
+9	رود	N	MOZ	8	_	_	_
+10	فرات	N	MOZ	9	_	_	_
+11	قرار	N	NVE	12	_	_	_
+12	دارد	V	ROOT	0	Y	قرار‌داشتن.87	_
+
+1	شهر	N	SBJ	16	_	_	_	_	_
+2	نینوا	N	MOZ	1	_	_	Arg1	_	Arg1
+4	منطقه	N	NPP	2	
+5	موصل	N	MOZ	4	_	_	_	_	_
+8	عراق	N	POSDEP	5	
+11	پایتخت	N	TAM	16	_	_	Arg2	_	_
+12	دولت	N	MOZ	11	_	_	_	_	_
+13	عاشوریان	N	MOZ	12	_	_	_	_	_
+15	شمار	N	VPRT	16	
+16	می‌رفت	V	VCONJ	37	Y	به‌شمار‌رفتن.561	_	_	_
+18	نینوا	N	SBJ	29	_	_	_	Arg1	_
+21	دوران	N	ADVRB	29	
+23	غنی‌ترین	ADJ	NPREMOD	26	_	_	_	_	_
+25	بزرگترین	ADJ	AJCONJ	23	
+26	شهرهای	N	AJPP	28	
+27	مشرق‌زمین	N	MOZ	26	_	_	_	_	_
+28	محسوب	ADJ	MOS	29	_	_	_	Arg2	_
+29	می‌شد	V	POSDEP	2	Y	کردن.25	_	_	_
+32	دارای	ADJ	MOS	37	_	_	_	_	Arg2
+33	جمعیتی	N	NEZ	32	_	_	_	_	_
+34	بیش‌از	ADJ	NPREMOD	36	
+36	نفر	N	POSDEP	33	_	_	_	_	_
+37	بود	V	ROOT	0	Y	بودن.15	_	_	_
+
+1	خداوند	N	SBJ	7	_	_	Arg0
+2	حضرت	N	OBJ	7	
+3	یونس	N	MOZ	2	_	_	_
+5	به‌سوی	PREP	VPP	7	_	_	Arg3
+7	فرستاد	V	ROOT	0	Y	فرستادن.341	_
+
+1	او	PR	SBJ	12	_	_	Arg0	_
+2	آن‌ها	PR	OBJ	12	
+6	راست	ADJ	NPOSTMOD	5	_	_	_	_
+8	پرستش	N	NCONJ	5	
+9	خدای	N	MOZ	8	_	_	_	_
+10	یکتا	ADJ	NPOSTMOD	9	_	_	_	_
+11	دعوت	N	NVE	12	_	_	_	_
+12	می‌نمود	V	VCONJ	19	Y	دعوت‌کردن.352	_	_
+14	آن‌ها	PR	SBJ	19	_	_	_	Arg0
+15	بر	PREP	NPP	18	_	_	_	Arg3
+16	کفر	N	POSDEP	15	_	_	_	_
+18	اصرار	N	NVE	19	_	_	_	_
+19	می‌ورزیدند	V	ROOT	0	Y	اصرار‌کردن.566	_	_
+
+1	بعداز	PREP	ADVRB	11	_	_	ArgM-TMP	_	_	_
+3	سال	N	MESU	4	_	_	_	_	_	_
+4	دعوت	N	POSDEP	1	_	_	_	_	_	_
+6	جز	PREP	SBJ	11	_	_	Arg0	_	_	_
+8	نفر	N	POSDEP	6	_	_	_	_	_	_
+11	نگرویدند	V	ROOT	0	Y	گرویدن.214	_	_	_	_
+13	یکی‌از	ADJ	APREMOD	14	_	_	_	_	_	_
+16	دوست	N	MOS	20	_	_	_	Arg2	_	_
+17	قدیمی	ADJ	NPOSTMOD	16	_	_	_	_	_	_
+18	ش	PR	MOZ	16	_	_	_	_	_	_
+19	روبیل	N	APP	16	_	_	_	_	Arg1	_
+20	بود	V	VCONJ	34	Y	بودن.15	_	_	_	_
+23	دانشمندان	N	MOS	24	
+24	بود	V	PRD	21	Y	بودن.15	_	_	_	_
+26	دیگری	PR	SBJ	34	_	_	_	_	_	Arg1
+27	عابد	N	TAM	34	_	_	_	_	_	Arg2
+29	زاهدی	N	NCONJ	27	
+32	تنوخا	N	MOZ	31	_	_	_	_	_	_
+34	داشت	V	PRD	12	Y	نام‌داشتن.176	_	_	_	_
+
+1	هنگامی	N	ADVRB	8	_	_	_	ArgM-TMP	_
+3	زحمات	N	SBJ	6	_	_	Arg1	_	_
+4	یونس	N	MOZ	3	_	_	_	_	_
+5	بی‌نتیجه	ADV	ADVC	6	_	_	Arg2	_	_
+6	ماند	V	PRD	2	Y	ماندن.369	_	_	_
+7	تصمیم	N	NVE	8	_	_	_	_	_
+8	گرفت	V	ROOT	0	Y	تصمیم‌گرفتن.68	_	_	_
+11	ش	PR	MOZ	10	_	_	_	_	_
+13	نفرین	N	NVE	14	_	_	_	_	_
+14	کند	V	VCL	8	Y	نفرین‌کردن.76	_	_	_
+
+1	روبیل	N	SBJ	4	_	_	Arg0	_	_
+4	گفت	V	ROOT	0	Y	گفتن.35	_	_	_
+5	که	SUBR	VCL	4	_	_	Arg1	_	_
+7	کار	N	OBJ	9	
+9	نکن	V	PRD	5	Y	کردن.297	_	_	_
+10	زیراکه	SUBR	AJUCL	9	_	_	_	ArgM-CAU	_
+11	خداوند	N	SBJ	15	_	_	_	_	Arg0
+12	هلاکت	N	OBJ	15	
+13	آن‌ها	PR	MOZ	12	_	_	_	_	_
+15	نمی‌پسندد	V	PRD	10	Y	پسندیدن.569	_	_	_
+
+1	درنتیجه	SUBR	ROOT	0	_	_	ArgM-DIS
+2	یونس	N	SBJ	7	_	_	Arg0
+3	قوم	N	OBJ	7	
+4	ش	N	MOZ	3	_	_	_
+6	نفرین	N	NVE	7	_	_	_
+7	کرد	V	PRD	1	Y	نفرین‌کردن.76	_
+
+1	روبیل	N	SBJ	4	_	_	_	Arg0	_	_
+2	به‌نزد	PREP	VPP	4	_	_	Arg4	_	_	_
+4	رفت	V	VCONJ	8	Y	رفتن.17	_	_	_	_
+8	خواست	V	ROOT	0	Y	خواستن.51	_	_	_	_
+11	درگاه	N	NPP	13	
+12	الهی	ADJ	NPOSTMOD	11	_	_	_	_	_	_
+13	استغاثه	N	NVE	14	_	_	_	_	_	_
+14	کنند	V	VCONJ	17	Y	استغاثه‌کردن.573	_	_	_	_
+16	توبه	N	NVE	17	_	_	_	_	_	_
+17	نمایند	V	VCL	8	Y	توبه‌کردن.544	_	_	_	_
+
+1	بعداز	PREP	ADVRB	10	_	_	ArgM-TMP	_	_
+3	وقت	N	POSDEP	1	_	_	_	_	_
+4	یونس	N	SBJ	10	_	_	Arg0	Arg0	_
+5	جهت	N	ADVRB	10	_	_	ArgM-PRP	_	_
+6	مشاهده	N	MOZ	5	_	_	_	_	_
+7	عذاب	N	MOZ	6	_	_	_	_	_
+8	وارد	ADJ	MOS	10	_	_	Arg2	_	_
+9	شهر	N	NEZ	8	_	_	_	_	_
+10	شد	V	VCONJ	12	Y	کردن.25	_	_	_
+12	دید	V	ROOT	0	Y	دیدن.47	_	_	_
+13	که	SUBR	VCL	12	_	_	_	Arg1	_
+14	اتفاق	N	NVE	16	_	_	_	_	_
+15	خاصی	ADJ	NPOSTMOD	14	_	_	_	_	_
+16	نیفتاده	V	PRD	13	Y	اتفاق‌افتادن.221	_	_	_
+
+1	وقتی	N	ADVRB	23	_	_	_	_	ArgM-TMP
+2	قضیه	N	OBJ	7	
+5	یکی‌از	ADJ	NPREMOD	6	_	_	_	_	_
+6	اهالی	N	VPP	7	
+7	پرسید	V	NCL	1	Y	پرسیدن.124	_	_	_
+8	مرد	N	SBJ	23	_	_	_	Arg0	Arg0
+12	نمی‌شناخت	V	PRD	9	Y	شناختن.64	_	_	_
+13	ماجرای	N	OBJ	23	
+14	نفرین	N	MOZ	13	_	_	_	_	_
+15	یونس	N	MOZ	14	_	_	_	_	_
+17	توبه	N	NCONJ	14	
+20	برای	PREP	VPP	23	_	_	_	_	Arg4
+21	ش	PR	POSDEP	20	_	_	_	_	_
+22	توضیح	N	NVE	23	_	_	_	_	_
+23	داد	V	ROOT	0	Y	توضیح‌دادن.146	_	_	_
+
+1	یونس	N	SBJ	7	_	_	Arg1	Arg0	Arg0	Arg0
+3	شنیدن	N	ADVRB	7	
+5	خبر	N	MOZ	3	_	_	_	_	_	_
+6	خشمگین	ADJ	MOS	7	_	_	Arg2	_	_	_
+7	شد	V	VCONJ	16	Y	کردن.25	_	_	_	_
+9	بدون	PREP	ADVRB	16	_	_	_	ArgM-NEG	_	_
+10	اذن	N	POSDEP	9	_	_	_	_	_	_
+11	پروردگار	N	MOZ	10	_	_	_	_	_	_
+12	ش	PR	MOZ	11	_	_	_	_	_	_
+13	شهر	N	OBJ	16	
+15	ترک	N	NVE	16	_	_	_	_	_	_
+16	کرد	V	VCONJ	18	Y	ترک‌کردن.431	_	_	_	_
+18	رفت	V	ROOT	0	Y	رفتن.17	_	_	_	_
+22	دریایی	N	MOZ	21	_	_	_	_	_	_
+23	رسید	V	AJUCL	18	Y	رسیدن.501	_	_	_	_
+
+1	سوار	ADJ	MOS	4	_	_	Arg2	_
+3	کشتی	N	NEZ	1	_	_	_	Arg1
+4	شد	V	ROOT	0	Y	کردن.25	_	_
+6	پر‌از	ADJ	NPREMOD	7	_	_	_	_
+7	بار	N	MOS	10	_	_	_	Arg2
+9	مسافر	N	NCONJ	7	
+10	بود	V	PRD	5	Y	بودن.15	_	_
+
+1	کشتی	N	SBJ	4	_	_	Arg1	_	_	_
+2	در‌میانه	PREP	MOS	4	_	_	Arg2	_	_	_
+4	بود	V	ROOT	0	Y	بودن.15	_	_	_	_
+5	که	SUBR	AJUCL	4	_	_	ArgM-TMP	_	_	_
+6	ناگهان	ADV	ADVRB	12	_	_	_	ArgM-ADV	_	_
+7	ماهی	N	SBJ	12	_	_	_	Arg0	Arg0	Arg0
+8	بزرگی	ADJ	NPOSTMOD	7	_	_	_	_	_	_
+9	جلوی	PREP	OBJ	12	
+10	ش	PR	POSDEP	9	_	_	_	_	_	_
+12	گرفت	V	VCONJ	18	Y	گرفتن.582	_	_	_	_
+14	دهان	N	OBJ	18	
+17	باز	ADJ	MOS	18	_	_	_	_	Arg2	_
+18	کرد	V	VCONJ	22	Y	کردن.25	_	_	_	_
+20	طلب	N	NVE	22	_	_	_	_	_	_
+21	غذا	N	MOZ	20	_	_	_	_	_	Arg1
+22	نمود	V	PRD	5	Y	طلب‌کردن.217	_	_	_	_
+
+2	بار	N	ADVRB	7	_	_	ArgM-TMP	_	_	_
+3	قرعه	N	SBJ	7	_	_	Arg1	_	_	_
+6	یونس	N	MOZ	5	_	_	_	_	_	_
+7	درآمد	V	ROOT	0	Y	در‌آمدن.868	_	_	_	_
+8	درنتیجه	SUBR	AJUCL	7	_	_	ArgM-CAU	_	_	ArgM-DIS
+13	دریا	N	MOZ	12	_	_	_	_	_	_
+14	انداخته	V	VCONJ	21	Y	انداختن.240	_	_	_	_
+16	ماهی	N	SBJ	21	_	_	_	_	Arg0	Arg0
+17	نیز	ADV	ADVRB	21	_	_	_	_	ArgM-ADV	_
+18	فوری	ADV	ADVRB	21	_	_	_	_	ArgM-TMP	_
+21	بلعید	V	VCONJ	26	Y	بلعیدن.479	_	_	_	_
+24	اعماق	N	VPP	26	
+25	آب	N	MOZ	24	_	_	_	_	_	_
+26	بازگشت	V	PRD	8	Y	باز‌گشتن.363	_	_	_	_
+
+1	خداوند	N	SBJ	5	_	_	Arg0	_
+3	ماهی	N	NPP	4	
+4	الهام	N	NVE	5	_	_	_	_
+5	نمود	V	ROOT	0	Y	الهام‌کردن.590	_	_
+9	آسیبی	N	NVE	10	_	_	_	_
+10	نرساند	V	VCL	5	Y	آسیب‌رساندن.860	_	_
+
+1	یونس	N	SBJ	14	_	_	Arg0	Arg0	Arg1
+3	روزی	N	ADVRB	14	_	_	ArgM-EXT	_	_
+7	شکم	N	MOZ	6	_	_	_	_	_
+8	ماهی	N	MOZ	7	_	_	_	_	_
+10	اطاعت	N	VPP	14	
+12	پرستش	N	NCONJ	10	
+13	خداوند	N	MOZ	10	_	_	_	_	_
+14	پرداخت	V	VCONJ	20	Y	پرداختن.72	_	_	_
+17	عظمت	N	NPP	19	
+18	ش	PR	MOZ	17	_	_	_	_	_
+19	اعتراف	N	NVE	20	_	_	_	_	_
+20	کرد	V	VCONJ	25	Y	اعتراف‌کردن.591	_	_	_
+22	متوجه	ADJ	MOS	25	_	_	_	_	Arg2
+23	اشتباه	N	NEZ	22	_	_	_	_	_
+25	شد	V	ROOT	0	Y	کردن.25	_	_	_
+
+1	خداوند	N	SBJ	7	_	_	Arg0	Arg0	_	_	_
+2	نیز	ADV	ADVRB	7	_	_	ArgM-ADV	_	_	_	_
+3	توبه	N	OBJ	7	
+6	قبول	ADJ	NVE	7	_	_	_	_	_	_	_
+7	نمود	V	VCONJ	12	Y	قبول‌کردن.592	_	_	_	_	_
+10	ماهی	N	VPP	12	12	_	_	_	Arg3	_	_	_
+11	الهام	N	NVE	12	_	_	_	_	_	_	_
+12	کرد	V	ROOT	0	Y	الهام‌کردن.590	_	_	_	_	_
+17	ساحل	N	VPP	18	
+18	ببرد	V	VCONJ	21	Y	بردن.208	_	_	_	_	_
+20	رها	ADJ	MOS	21	_	_	_	_	_	Arg2	_
+21	سازد	V	VCL	12	Y	کردن.25	_	_	_	_	_
+22	پس	SUBR	AJUCL	21	_	_	_	_	_	ArgM-DIS	_
+23	ماهی	N	SBJ	26	_	_	_	_	_	_	Arg0
+24	نیز	ADV	ADVRB	26	_	_	_	_	_	_	ArgM-ADV
+25	چنان	PR	OBJ	26	_	_	_	_	_	_	Arg1
+26	کرد	V	PRD	22	Y	کردن.857	_	_	_	_	_
+
+1	یونس	N	SBJ	11	_	_	Arg1	Arg0
+3	حالی	N	ADVRB	11	
+6	بیمار	ADJ	AJCONJ	4	
+8	شکم	N	ADVRB	11	
+9	ماهی	N	MOZ	8	_	_	_	_
+10	خارج	ADJ	MOS	11	_	_	Arg2	_
+11	شد	V	VCONJ	27	Y	کردن.25	_	_
+15	ساحل	N	MOZ	14	_	_	_	_
+17	سایه	N	NPP	26	
+18	گیاه	N	MOZ	17	_	_	_	_
+19	کدوبنی	N	MOZ	18	_	_	_	_
+21	گیاهی	N	POSDEP	19	_	_	_	_
+23	قسم	N	NPP	21	
+24	کدو	N	MOZ	23	_	_	_	_
+26	تکیه	N	NVE	27	_	_	_	_
+27	زد	V	ROOT	0	Y	تکیه‌زدن.248	_	_
+
+1	او	PR	SBJ	5	_	_	Arg0	Arg0
+2	همواره	ADV	ADVRB	5	_	_	ArgM-ADV	_
+3	ذکر	N	OBJ	5	_	_	Arg1	_
+4	خدا	N	MOZ	3	_	_	_	_
+5	می‌گفت	V	ROOT	0	Y	گفتن.35	_	_
+7	سلامتی	N	OBJ	10	
+10	بازیافت	V	AJUCL	5	Y	باز‌یافتن.593	_	_
+
+4	یونس	N	SBJ	8	_	_	Arg1	Arg0
+5	متوجه	ADJ	MOS	8	_	_	Arg2	_
+6	خطای	N	NEZ	5	_	_	_	_
+8	شد	V	VCONJ	17	Y	کردن.25	_	_
+11	درگاه	N	NPP	13	
+12	الهی	ADJ	NPOSTMOD	11	_	_	_	_
+13	تقاضای	N	NVE	17	_	_	_	_
+14	عفو	N	MOZ	13	_	_	_	Arg1
+16	بخشش	N	NCONJ	14	
+17	نمود	V	ROOT	0	Y	تقاضا‌کردن.448	_	_
+
+1	سپس	SUBR	ROOT	0	_	_	ArgM-DIS
+3	سمت	N	NPP	5	
+4	نینوا	N	MOZ	3	_	_	_
+5	حرکت	N	NVE	6	_	_	_
+6	کرد	V	PRD	1	Y	حرکت‌کردن.186	_
+
+2	گوسفندی	N	SBJ	5	_	_	Arg0	Arg0	_
+4	زبان	N	VPRT	5	
+5	آمد	V	VCONJ	8	Y	به‌زبان‌آمدن.601	_	_	_
+7	گواهی	N	NVE	8	_	_	_	_	_
+8	داد	V	ROOT	0	Y	گواهی‌دادن.600	_	_	_
+9	که	SUBR	VCL	8	_	_	_	Arg1	_
+11	مرد	N	SBJ	13	_	_	_	_	Arg1
+12	یونس	N	MOS	13	_	_	_	_	Arg2
+13	است	V	PRD	9	Y	بودن.15	_	_	_
+
+1	چوپان	N	SBJ	3	_	_	Arg1	_
+2	متقاعد	ADJ	MOS	3	_	_	Arg2	_
+3	شد	V	ROOT	0	Y	کردن.25	_	_
+6	مرد	N	SBJ	8	_	_	_	Arg1
+7	یونس	N	MOS	8	_	_	_	Arg2
+8	است	V	PRD	4	Y	بودن.15	_	_
+
+1	سریع	ADV	ADVRB	4	_	_	ArgM-MNR	_
+2	وارد	ADJ	MOS	4	_	_	Arg2	_
+3	شهر	N	NEZ	2	_	_	_	_
+4	شد	V	VCONJ	12	Y	کردن.25	_	_
+6	خبر	N	OBJ	12	
+7	آمدن	N	MOZ	6	_	_	_	_
+8	ش	PR	MOZ	7	_	_	_	_
+12	داد	V	ROOT	0	Y	دادن.110	_	_
+
+1	مردم	N	SBJ	13	_	_	Arg0	Arg0	Arg0	Arg0
+3	هرگز	ADV	ADVRB	8	_	_	ArgM-NEG	_	_	_
+5	خبری	N	MOZ	4	_	_	_	_	_	_
+7	باور	N	NVE	8	_	_	_	_	_	_
+8	نمی‌کردند	V	PRD	2	Y	باور‌کردن.599	_	_	_	_
+10	چوپان	N	OBJ	13	
+12	دستگیر	ADJ	NVE	13	_	_	_	_	_	_
+13	کرده	V	VCONJ	16	Y	دستگیر‌کردن.862	_	_	_	_
+15	تصمیم	N	NVE	16	_	_	_	_	_	_
+16	گرفتند	V	ROOT	0	Y	تصمیم‌گرفتن.68	_	_	_	_
+20	بزنند	V	VCL	16	Y	زدن.876	_	_	_	_
+
+2	چوپان	N	SBJ	5	_	_	Arg0	_
+4	آن‌ها	PR	VPP	5	
+5	گفت	V	ROOT	0	Y	گفتن.35	_	_
+6	که	SUBR	VCL	5	_	_	Arg1	_
+7	من	PR	SBJ	13	_	_	_	Arg0
+9	صدق	N	POSDEP	8	_	_	_	_
+10	گفتار	N	MOZ	9	_	_	_	_
+11	م	PR	MOZ	10	_	_	_	_
+12	شاهد	N	OBJ	13	_	_	_	Arg1
+13	دارم	V	PRD	6	Y	داشتن.39	_	_
+
+1	سپس	SUBR	ROOT	0	_	_	ArgM-DIS	_
+3	گوسفند	N	SBJ	6	_	_	Arg0	_
+4	مجددا	ADV	ADVRB	6	_	_	ArgM-ADV	_
+5	شهادت	N	NVE	6	_	_	_	_
+6	داد	V	PRD	1	Y	شهادت‌دادن.129	_	_
+7	که	SUBR	VCL	6	_	_	Arg3	_
+8	چوپان	N	SBJ	10	_	_	_	Arg0
+9	راست	N	NVE	10	_	_	_	_
+10	می‌گوید	V	PRD	7	Y	راست‌گفتن.747	_	_
+
+1	مردم	N	SBJ	8	_	_	Arg0	Arg0	Arg0	Arg1
+2	پس‌از	PREP	ADVRB	8	_	_	ArgM-TMP	_	_	_
+4	ماجرا	N	POSDEP	2	_	_	_	_	_	_
+6	استقبال	N	VPP	8	
+7	یونس	N	MOZ	6	_	_	_	_	_	_
+8	رفته	V	VCONJ	16	Y	رفتن.17	_	_	_	_
+13	احترام	N	ADVRB	16	
+14	وارد	ADJ	MOS	16	_	_	_	Arg2	_	_
+15	شهر	N	NEZ	14	_	_	_	_	_	_
+16	کردند	V	VCONJ	21	Y	کردن.25	_	_	_	_
+20	ایمان	N	NVE	21	_	_	_	_	_	_
+21	آورده	V	VCONJ	29	Y	ایمان‌آوردن.38	_	_	_	_
+23	سال‌ها	N	ADVRB	29	_	_	_	_	_	ArgM-EXT
+24	تحت	PREP	MOS	29	_	_	_	_	_	Arg2
+25	رهبری	N	POSDEP	24	_	_	_	_	_	_
+27	راهنمایی‌های	N	NCONJ	25	
+29	بودند	V	ROOT	0	Y	بودن.15	_	_	_	_
+
+1	خداوند	N	SBJ	8	_	_	Arg0	_
+2	آدم	N	OBJ	8	
+4	بدون	PREP	ADVRB	8	_	_	ArgM-NEG	_
+5	پدر	N	POSDEP	4	_	_	_	_
+7	مادر	N	NCONJ	5	
+8	آفرید	V	ROOT	0	Y	آفریدن.187	_	_
+10	دلیلی	N	MOS	11	_	_	_	Arg2
+11	باشد	V	AJUCL	8	Y	بودن.15	_	_
+13	قدرت	N	POSDEP	12	_	_	_	_
+14	الهی	ADJ	NPOSTMOD	13	_	_	_	_
+
+1	هنگامی	N	ADVRB	23	_	_	_	_	_	ArgM-TMP
+3	خداوند	N	SBJ	5	_	_	Arg0	_	Arg0	_
+4	اراده	N	NVE	5	_	_	_	_	_	_
+5	کرد	V	PRD	2	Y	اراده‌کردن.80	_	_	_	_
+8	زمین	N	ADVRB	17	
+9	خلیفه	N	OBJ	17	_	_	_	Arg1	Arg1	_
+11	نماینده‌ای	N	NCONJ	9	
+13	حاکم	N	MOS	15	_	_	_	Arg2	_	_
+14	زمین	N	MOZ	13	_	_	_	_	_	_
+15	باشد	V	PRD	12	Y	بودن.15	_	_	_	_
+16	قرار	N	NVE	17	_	_	_	_	_	_
+17	دهد	V	VCL	5	Y	قرار‌دادن.309	_	_	_	_
+18	فرشتگان	N	SBJ	23	_	_	_	_	_	Arg1
+21	خبر	N	AJPP	22	
+22	شگفت‌زده	ADJ	MOS	23	_	_	_	_	_	Arg2
+23	شدند	V	ROOT	0	Y	کردن.25	_	_	_	_
+
+1	آن‌ها	PR	SBJ	9	_	_	Arg0
+5	جانشینی	N	AJPP	8	
+7	زمین	N	NPP	5	
+8	سزاوارتر	ADJ	TAM	9	_	_	Arg2
+9	می‌پنداشتند	V	ROOT	0	Y	پنداشتن.830	_
+
+2	خداوند	N	SBJ	12	_	_	_	Arg0	_	_
+4	اسرار	N	ADVRB	12	12	_	_	_	ArgM-INS	_	_
+5	غیبی	ADJ	NPOSTMOD	4	_	_	_	_	_	_
+9	پوشیده	ADJ	MOS	10	_	_	Arg2	_	_	_
+10	‌بود	V	PRD	6	Y	بودن.15	_	_	_	_
+11	پاسخ	N	NVE	12	_	_	_	_	_	_
+12	داد	V	ROOT	0	Y	پاسخ‌دادن.175	_	_	_	_
+14	خداوند	N	SBJ	17	_	_	_	_	Arg0	_
+17	می‌داند	V	VCL	12	Y	دانستن.97	_	_	_	_
+19	آنان	PR	SBJ	23	_	_	_	_	_	Arg0
+22	آگاهی	N	NVE	23	_	_	_	_	_	_
+23	ندارند	V	PRD	18	Y	آگاهی‌داشتن.865	_	_	_	_
+
+1	پس‌از	PREP	ADVRB	12	_	_	ArgM-TMP	_	_
+2	آفرینش	N	POSDEP	1	_	_	_	_	_
+3	آدم	N	MOZ	2	_	_	_	Arg0	Arg0
+5	ع	ARAB	POSDEP	3	_	_	_	_	_
+7	خداوند	N	SBJ	12	_	_	Arg0	_	_
+8	اسما	N	OBJ	12	
+12	آموخت	V	ROOT	0	Y	آموختن.230	_	_	_
+15	زمین	N	ADVRB	17	
+16	توان	N	OBJ	17	_	_	_	Arg1	_
+17	یافته	V	VCONJ	22	Y	یافتن.576	_	_	_
+21	بهره‌مند	ADJ	MOS	22	_	_	_	_	Arg2
+22	گردد	V	AJUCL	12	Y	کردن.25	_	_	_
+
+1	انسان	N	SBJ	6	_	_	Arg1	_	_	_	_	_	_
+3	آغاز	N	ADVRB	6	
+5	خاک	N	MOS	6	_	_	Arg2	Arg1	Arg1	Arg1	Arg1	Arg1	Arg1
+6	بوده‌است	V	ROOT	0	Y	بودن.15	_	_	_	_	_	_	_
+8	سپس	SUBR	AJUCL	6	_	_	_	ArgM-DIS	_	_	_	_	_
+10	آب	N	AJPP	11	
+11	آمیخته	ADJ	MOS	12	_	_	_	Arg2	_	_	_	_	_
+12	‌شده‌است	V	VCONJ	16	Y	کردن.25	_	_	_	_	_	_	_
+14	به‌صورت	PREP	VPP	16	_	_	_	_	Arg3	_	_	_	_
+15	گل	N	POSDEP	14	_	_	_	_	_	_	_	_	_
+16	درآمده‌است	V	VCONJ	27	Y	در‌آمدن.472	_	_	_	_	_	_	_
+19	بعد	ADV	ADVRB	27	_	_	_	_	_	ArgM-ADV	_	_	_
+21	گل	N	NPP	26	
+22	بدبو	ADJ	NPOSTMOD	21	_	_	_	_	_	_	_	_	_
+24	لجن	N	APP	21	_	_	_	_	_	_	_	_	_
+26	تبدیل	N	NVE	27	_	_	_	_	_	_	_	_	_
+27	شده	V	PRD	8	Y	تبدیل‌کردن.138	_	_	_	_	_	_	_
+29	سپس	SUBR	AJUCL	27	_	_	_	_	_	_	ArgM-DIS	_	_
+30	حالت	N	OBJ	32	_	_	_	_	_	_	Arg2	_	_
+31	چسبندگی	N	MOZ	30	_	_	_	_	_	_	_	_	_
+32	پیداکرده	V	VCONJ	42	Y	پیدا‌کردن.824	_	_	_	_	_	_	_
+36	حالت	N	VPP	38	
+37	خشکیده	ADJ	NPOSTMOD	36	_	_	_	_	_	_	_	_	_
+38	درآمده	V	VCONJ	42	Y	در‌آمدن.472	_	_	_	_	_	_	_
+40	همچون	PREP	MOS	42	_	_	_	_	_	_	_	_	Arg2
+41	سفال	N	POSDEP	40	_	_	_	_	_	_	_	_	_
+42	گردیده‌است	V	PRD	29	Y	کردن.25	_	_	_	_	_	_	_
+
+1	مرحله	N	SBJ	6	_	_	Arg1	_
+2	تکاملی	ADJ	NPOSTMOD	1	_	_	_	_
+3	بشر	N	MOZ	1	_	_	_	_
+6	است	V	ROOT	0	Y	بودن.15	_	_
+8	روح	N	SBJ	15	_	_	_	Arg0
+9	انسانی	ADJ	NPOSTMOD	8	_	_	_	_
+10	ازجانب	PREP	VPP	15	_	_	_	ArgM-ADV
+11	خدا	N	POSDEP	10	_	_	_	_
+14	دمیده	N	NVE	15	_	_	_	_
+15	گردد	V	PRD	7	Y	دمیدن.372	_	_
+
+1	خداوند	N	SBJ	5	_	_	Arg0	_	_	_	_
+3	فرشتگان	N	NPP	4	4	_	_	Arg3	_	_	_	_
+4	فرمان	N	NVE	5	_	_	_	_	_	_	_
+5	داد	V	SBJ	22	Y	فرمان‌دادن.300	_	_	_	_	_
+6	که	SUBR	VCL	5	_	_	Arg1	_	_	_	_
+7	به‌عنوان	PREP	ADVRB	20	_	_	_	ArgM-ADV	_	_	_
+8	تکریم	N	POSDEP	7	_	_	_	_	_	_	_
+10	تجلیل	N	NCONJ	8	
+12	مقام	N	NPP	8	
+13	آدم	N	MOZ	12	_	_	_	_	_	_	_
+15	ع	ARAB	POSDEP	13	_	_	_	_	_	_	_
+19	سجده	N	NVE	20	_	_	_	_	_	_	_
+20	کنند	V	PRD	6	Y	سجده‌کردن.41	_	_	_	_	_
+23	خدا	N	VPP	29	29	_	_	_	_	_	_	_
+25	سجده	N	OBJ	29	_	_	_	_	_	Arg1	_
+26	شکر	N	MOZ	25	_	_	_	_	_	_	_
+28	‌جا	ADJ	VPRT	29	
+29	آورند	V	MOS	22	Y	به‌جا‌آوردن.586	_	_	_	_	_
+30	که	SUBR	AJUCL	29	_	_	_	_	_	ArgM-PRP	_
+32	موجود	N	OBJ	35	
+33	ممتازی	ADJ	NPOSTMOD	32	_	_	_	_	_	_	_
+35	آفریده‌است	V	PRD	30	Y	آفریدن.187	_	_	_	_	_
+
+1	خداوند	N	SBJ	5	_	_	Arg0	Arg0	_	_	_	_
+3	فرشتگان	N	VPP	5	
+4	خطاب	N	NVE	5	_	_	_	_	_	_	_	_
+5	نمود	V	VCONJ	7	Y	خطاب‌کردن.820	_	_	_	_	_	_
+7	فرمود	V	ROOT	0	Y	فرمودن.95	_	_	_	_	_	_
+9	من	PR	SBJ	13	_	_	_	_	Arg0	Arg0	Arg0	_
+10	بشری	N	OBJ	13	_	_	_	_	Arg1	_	_	_
+12	گل	N	ADVRB	13	
+13	می‌آفرینم	V	VCL	7	Y	آفریدن.187	_	_	_	_	_	_
+15	هنگامی	N	ADVRB	31	_	_	_	_	_	_	ArgM-TMP	_
+19	موزون	ADJ	MOS	20	_	_	_	_	_	Arg2	_	_
+20	نمودم	V	VCONJ	27	Y	کردن.25	_	_	_	_	_	_
+23	روح	N	ADVRB	27	
+27	دمیدم	V	PRD	16	Y	دمیدن.372	_	_	_	_	_	_
+28	بر	PREP	NPP	30	_	_	_	_	_	_	_	Arg3
+30	سجده	N	NVE	31	_	_	_	_	_	_	_	_
+31	کنید	V	VCL	13	Y	سجده‌کردن.41	_	_	_	_	_	_
+
+1	بنابراین	SUBR	ROOT	0	_	_	ArgM-DIS	_
+2	سجده	N	SBJ	8	_	_	Arg1	_
+3	فرشتگان	N	MOZ	2	_	_	_	_
+4	به‌خاطر	PREP	MOS	8	_	_	Arg2	_
+6	روح	N	POSDEP	4	_	_	_	_
+7	ویژه‌ای	ADJ	NPOSTMOD	6	_	_	_	_
+8	بود	V	PRD	1	Y	بودن.15	_	_
+10	خداوند	N	SBJ	14	_	_	_	Arg0
+12	کالبد	N	VPP	14	
+13	بشر	N	MOZ	12	_	_	_	_
+14	دمید	V	PRD	9	Y	دمیدن.372	_	_
+
+3	روحی	N	SBJ	8	_	_	Arg0	_
+6	آدم	N	VPP	8	8	_	_	Arg3	_
+7	لیاقت	N	OBJ	8	_	_	Arg1	_
+8	داد	V	ROOT	0	Y	دادن.110	_	_
+10	نماینده	N	MOS	14	_	_	_	Arg2
+11	خدا	N	MOZ	10	_	_	_	_
+12	برروی	PREP	NPP	10	_	_	_	_
+13	زمین	N	POSDEP	12	_	_	_	_
+14	شود	V	AJUCL	8	Y	کردن.25	_	_
+
+1	جسم	N	SBJ	15	_	_	Arg0	_
+4	‌حکم	N	ADVRB	15	
+5	مادی	ADJ	PREDEP	6	_	_	_	_
+7	ش	PR	MOZ	6	_	_	_	_
+13	منفی	ADJ	NPOSTMOD	12	_	_	_	_
+14	دعوت	N	NVE	15	_	_	_	_
+15	می‌کرد	V	VCONJ	29	Y	دعوت‌کردن.352	_	_
+17	روح	N	SBJ	29	_	_	_	Arg0
+20	‌حکم	N	ADVRB	29	
+21	ملکوتی	ADJ	PREDEP	22	_	_	_	_
+23	ش	PR	MOZ	22	_	_	_	_
+28	مثبت	ADJ	NPOSTMOD	27	_	_	_	_
+29	فرامی‌خواند	V	ROOT	0	Y	فرا‌خواندن.319	_	_
+
+1	فرشتگان	N	SBJ	12	_	_	Arg0	Arg0	Arg0
+2	جنبه‌های	N	OBJ	12	
+3	مثبت	ADJ	NPOSTMOD	2	_	_	_	_	_
+4	آدم	N	MOZ	2	_	_	_	_	_
+6	ع	ARAB	POSDEP	4	_	_	_	_	_
+9	براساس	PREP	ADVRB	12	_	_	ArgM-ADV	_	_
+10	فرمان	N	POSDEP	9	_	_	_	_	_
+11	خدا	N	MOZ	10	_	_	_	_	_
+12	دیدند	V	VCONJ	19	Y	دیدن.47	_	_	_
+14	بدون	PREP	ADVRB	19	_	_	_	ArgM-NEG	_
+15	چون‌وچرا	N	POSDEP	14	_	_	_	_	_
+16	آدم	N	NPP	18	
+18	سجده	N	NVE	19	_	_	_	_	_
+19	کردند	V	SBJ	21	Y	سجده‌کردن.41	_	_	_
+22	درحقیقت	N	ADVRB	31	_	_	_	_	ArgM-ADV
+23	خدا	N	NPP	30	
+26	راستای	N	ADVRB	31	
+27	تجلیل	N	MOZ	26	_	_	_	_	_
+29	آدم	N	NPP	27	
+30	سجده	N	NVE	31	_	_	_	_	_
+31	نمودند	V	MOS	21	Y	سجده‌کردن.41	_	_	_
+
+1	خداوند	N	SBJ	3	_	_	Arg0	Arg0	Arg0
+2	اراده	N	NVE	3	_	_	_	_	_
+3	کرده‌بود	V	ROOT	0	Y	اراده‌کردن.80	_	_	_
+5	فرزندانی	N	OBJ	9	_	_	_	Arg1	_
+7	آدم	N	VPP	9	
+8	عطا	N	NVE	9	_	_	_	_	_
+9	کند	V	VCONJ	17	Y	عطا‌کردن.420	_	_	_
+12	نسل	N	OBJ	17	
+17	آورد	V	VCL	3	Y	به‌وجود‌آوردن.617	_	_	_
+
+1	مشیت	N	SBJ	5	_	_	Arg1	_	_	_
+3	چنین	N	ADVRB	5	_	_	Arg2	_	_	_
+4	قرار	N	NVE	5	_	_	_	_	_	_
+5	گرفت	V	ROOT	0	Y	قرار‌گرفتن.866	_	_	_	_
+7	حضرت	N	SBJ	10	_	_	_	Arg0	Arg0	Arg1
+8	آدم	N	MOZ	7	_	_	_	_	_	_
+9	همسری	N	OBJ	10	_	_	_	Arg1	_	_
+10	داشته‌باشد	V	PRD	6	Y	داشتن.39	_	_	_	_
+14	ازدواج	N	NVE	15	_	_	_	_	_	_
+15	نموده	V	VCONJ	21	Y	ازدواج‌کردن.131	_	_	_	_
+19	دارای	ADJ	MOS	21	_	_	_	_	_	Arg2
+20	فرزند	N	NEZ	19	_	_	_	_	_	_
+21	گردد	V	AJUCL	10	Y	کردن.25	_	_	_	_
+
+1	خداوند	N	SBJ	11	_	_	Arg0
+2	حوا	N	OBJ	11	
+5	زیادی	ADJ	NPREMOD	6	_	_	_
+6	گل	N	VPP	11	
+7	آدم	N	MOZ	6	_	_	_
+9	ع	ARAB	POSDEP	7	_	_	_
+11	آفرید	V	ROOT	0	Y	آفریدن.187	_
+
+1	بنابراین	SUBR	ROOT	0	_	_	ArgM-DIS
+2	حوا	N	SBJ	9	_	_	Arg1
+3	بعداز	PREP	ADVRB	9	_	_	ArgM-TMP
+4	آفرینش	N	POSDEP	3	_	_	_
+5	آدم	N	MOZ	4	_	_	_
+7	ع	ARAB	POSDEP	5	_	_	_
+9	آفریده‌شده‌است	V	PRD	1	Y	آفریدن.187	_
+
+2	شیطان	N	SBJ	5	_	_	Arg0	Arg0	Arg0
+3	به‌سراغ	PREP	VPP	5	_	_	Arg4	_	_
+5	آمد	V	VCONJ	10	Y	آمدن.44	_	_	_
+7	آن‌ها	PR	OBJ	10	
+9	وسوسه	N	NVE	10	_	_	_	_	_
+10	کرد	V	VCONJ	20	Y	وسوسه‌کردن.81	_	_	_
+12	آن‌ها	PR	OBJ	20	
+15	فریبکاری	N	ADVRB	20	
+17	مقام	N	VPP	20	
+19	فرود	N	NVE	20	_	_	_	_	_
+20	آورد	V	ROOT	0	Y	فرود‌آوردن.485	_	_	_
+
+1	سپس	SUBR	ROOT	0	_	_	ArgM-DIS
+2	لباس‌های	N	SBJ	9	_	_	Arg1
+3	کرامت	N	MOZ	2	_	_	_
+5	احترام	N	NCONJ	3	
+7	اندام	N	ADVRB	9	
+9	فروریخت	V	PRD	1	Y	فرو‌ریختن.250	_
+
+2	آدم	N	SBJ	10	_	_	Arg0	Arg0
+4	حوا	N	NCONJ	2	
+5	سریع	ADV	ADVRB	10	_	_	ArgM-ADV	_
+7	اشتباه	N	NPP	9	
+9	پی	N	NVE	10	_	_	_	_
+10	بردند	V	VCONJ	13	Y	پی‌بردن.48	_	_
+12	توبه	N	NVE	13	_	_	_	_
+13	کردند	V	ROOT	0	Y	توبه‌کردن.544	_	_
+
+2	خداوند	N	SBJ	10	_	_	Arg0	Arg0	_	_	_
+3	آن‌ها	PR	OBJ	10	
+6	بهشت	N	VPP	10	
+8	زمین	N	VPP	10	
+9	فرود	N	NVE	10	_	_	_	_	_	_	_
+10	آورد	V	VCONJ	15	Y	فرود‌آوردن.485	_	_	_	_	_
+12	آن‌ها	PR	OBJ	15	15	_	_	_	Arg1	_	_	_
+14	آگاه	ADJ	MOS	15	_	_	_	Arg2	_	_	_
+15	ساخت	V	ROOT	0	Y	ساختن.498	_	_	_	_	_
+19	زمین	N	NPP	20	
+20	اقامت	N	NVE	21	_	_	_	_	_	_	_
+21	کنند	V	VCONJ	26	Y	اقامت‌کردن.628	_	_	_	_	_
+25	آباد	ADJ	MOS	26	_	_	_	_	_	Arg2	_
+26	سازند	V	VCONJ	35	Y	ساختن.498	_	_	_	_	_
+29	پایان	N	ADVRB	35	
+30	عمر	N	MOZ	29	_	_	_	_	_	_	_
+34	بهره‌مند	ADJ	MOS	35	_	_	_	_	_	_	Arg2
+35	شوند	V	VCL	17	Y	کردن.25	_	_	_	_	_
+
+1	آدم	N	SBJ	14	_	_	Arg1	Arg0
+3	حوا	N	NCONJ	1	
+4	وقتی	N	ADVRB	14	_	_	_	ArgM-TMP
+6	بهشت	N	NPP	8	
+7	دنیا	N	MOZ	6	_	_	_	_
+8	اخراج	N	NVE	9	_	_	_	_
+9	شدند	V	NCL	4	Y	اخراج‌کردن.500	_	_
+11	سرزمین	N	VPP	14	
+12	مکه	N	MOZ	11	_	_	_	_
+13	فرود	N	NVE	14	_	_	_	_
+14	آمدند	V	ROOT	0	Y	فرود‌آمدن.101	_	_
+
+1	حضرت	N	SBJ	10	_	_	Arg0	_	_	_	_	_
+2	آدم	N	MOZ	1	_	_	_	_	_	_	_	_
+3	بر	PREP	VPP	10	_	_	Arg4	_	_	_	_	_
+4	کوه	N	POSDEP	3	_	_	_	_	_	_	_	_
+5	صفا	N	MOZ	4	_	_	_	_	_	_	_	_
+8	کعبه	N	MOZ	7	_	_	_	_	_	_	_	_
+9	هبوط	N	NVE	10	_	_	_	_	_	_	_	_
+10	کرد	V	VCONJ	45	Y	هبوط‌کردن.192	_	_	_	_	_	_
+11	ازاین‌رو	SUBR	AJUCL	10	_	_	_	ArgM-DIS	_	_	_	_
+14	کوه	N	TAM	16	_	_	_	Arg2	_	_	_	_
+15	صفا	N	MOZ	14	_	_	_	_	_	_	_	_
+16	گویند	V	PRD	11	Y	گفتن.298	_	_	_	_	_	_
+18	آدم	N	SBJ	28	_	_	_	_	Arg1	_	_	_
+19	صفی	N	MOZ	18	_	_	_	_	_	_	_	_
+20	..ا	N	MOZ	19	_	_	_	_	_	_	_	_
+22	برگزیده	N	APP	19	_	_	_	_	_	_	_	_
+23	خدا	N	MOZ	22	_	_	_	_	_	_	_	_
+27	وارد	ADJ	MOS	28	_	_	_	_	Arg2	_	_	_
+28	شد	V	PRD	17	Y	کردن.25	_	_	_	_	_	_
+30	حضرت	N	SBJ	45	_	_	_	_	_	_	Arg0	Arg0
+31	حوا	N	MOZ	30	_	_	_	_	_	_	_	_
+32	بر	PREP	VPP	45	_	_	_	_	_	_	Arg4	_
+33	بالای	N	POSDEP	32	_	_	_	_	_	_	_	_
+34	کوه	N	MOZ	33	_	_	_	_	_	_	_	_
+35	مروه	N	MOZ	34	_	_	_	_	_	_	_	_
+38	زن	N	MOS	37	_	_	_	_	_	_	_	_
+40	منظور	N	SBJ	42	_	_	_	_	_	Arg1	_	_
+41	حوا	N	MOS	42	_	_	_	_	_	Arg2	_	_
+42	است	V	PRD	39	Y	بودن.15	_	_	_	_	_	_
+44	فرود	N	NVE	45	_	_	_	_	_	_	_	_
+45	آمد	V	VCONJ	50	Y	فرود‌آمدن.101	_	_	_	_	_	_
+49	سکونت	N	NVE	50	_	_	_	_	_	_	_	_
+50	نمود	V	ROOT	0	Y	سکونت‌کردن.629	_	_	_	_	_	_
+
+1	آدم	N	SBJ	6	_	_	Arg0	Arg0	Arg0
+3	شبانه‌روز	N	ADVRB	6	_	_	ArgM-EXT	_	_
+5	سجده	N	VPP	6	
+6	پرداخت	V	VCONJ	12	Y	پرداختن.72	_	_	_
+9	فراق	N	VPP	12	
+10	بهشت	N	MOZ	9	_	_	_	_	_
+11	گریه	N	NVE	12	_	_	_	_	_
+12	کرد	V	VCONJ	18	Y	گریه‌کردن.194	_	_	_
+15	گناه	N	NPP	17	
+17	اقرار	N	NVE	18	_	_	_	_	_
+18	نمود	V	ROOT	0	Y	اقرار‌کردن.604	_	_	_
+
+2	فرمان	N	ADVRB	6	
+3	خداوند	N	MOZ	2	_	_	_	_
+4	آدم	N	SBJ	6	_	_	Arg0	Arg0
+5	مامور	ADJ	MOS	6	_	_	Arg2	_
+6	گشت	V	ROOT	0	Y	کردن.25	_	_
+8	میراث	N	OBJ	23	
+9	نبوت	N	MOZ	8	_	_	_	_
+11	گنجینه	N	NCONJ	9	
+12	دانش	N	MOZ	11	_	_	_	_
+13	الهی	ADJ	NPOSTMOD	12	_	_	_	_
+16	نزد	PREP	VPP	23	_	_	_	Arg3
+17	فرزند	N	POSDEP	16	_	_	_	_
+18	کوچک	ADJ	NPOSTMOD	17	_	_	_	_
+19	ش	PR	MOZ	17	_	_	_	_
+20	هابیل	N	APP	17	_	_	_	_
+22	ودیعه	N	VPRT	23	
+23	نهد	V	AJUCL	6	Y	به‌ودیعه‌نهادن.641	_	_
+
+1	آدم	N	SBJ	6	_	_	Arg0	_	Arg0
+3	بستر	N	VPP	6	
+4	رحلت	N	MOZ	3	_	_	_	_	_
+5	قرار	N	NVE	6	_	_	_	_	_
+6	گرفت	V	VCONJ	25	Y	قرار‌گرفتن.78	_	_	_
+9	حالی	N	ADVRB	25	
+10	‌که	SUBR	NCL	9	_	_	_	_	_
+11	زبان	N	SBJ	21	_	_	_	Arg1	_
+12	ش	PR	MOZ	11	_	_	_	_	_
+14	یکتایی	N	AJPP	20	
+15	خداوند	N	MOZ	14	_	_	_	_	_
+17	شکر	N	NCONJ	14	
+19	سپاس	N	NCONJ	17	
+20	مشغول	ADJ	MOS	21	_	_	_	Arg2	_
+21	بود	V	PRD	10	Y	بودن.15	_	_	_
+23	رحمت	N	VPP	25	
+25	پیوست	V	ROOT	0	Y	پیوستن.661	_	_	_
+
+1	شیث	N	SBJ	6	_	_	Arg0	Arg0	Arg0	Arg0	Arg0	Arg0	Arg0
+2	پدر	N	OBJ	6	6	_	_	Arg1	Arg1	_	_	_	_	_
+3	ش	PR	MOZ	2	_	_	_	_	_	_	_	_	_
+5	غسل	N	NVE	6	_	_	_	_	_	_	_	_	_
+6	داد	V	VCONJ	9	Y	غسل‌دادن.657	_	_	_	_	_	_	_
+8	کفن	N	NVE	9	_	_	_	_	_	_	_	_	_
+9	کرد	V	VCONJ	14	Y	کفن‌کردن.659	_	_	_	_	_	_	_
+11	بر	PREP	ADVRB	14	_	_	_	_	ArgM-GOL	_	_	_	_
+13	نماز	N	NVE	14	_	_	_	_	_	_	_	_	_
+14	خواند	V	VCONJ	17	Y	نماز‌خواندن.407	_	_	_	_	_	_	_
+16	دفن	N	NVE	17	_	_	_	_	_	_	_	_	_
+17	کرد	V	VCONJ	21	Y	دفن‌کردن.67	_	_	_	_	_	_	_
+19	به‌جای	PREP	VPP	21	_	_	_	_	_	_	Arg3	_	_
+20	پدر	N	POSDEP	19	_	_	_	_	_	_	_	_	_
+21	نشست	V	VCONJ	29	Y	نشستن.660	_	_	_	_	_	_	_
+23	آیین	N	OBJ	29	
+24	پدر	N	MOZ	23	_	_	_	_	_	_	_	_	_
+25	ش	PR	MOZ	24	_	_	_	_	_	_	_	_	_
+29	آموخت	V	VCONJ	42	Y	آموختن.230	_	_	_	_	_	_	_
+31	نیز	ADV	ADVRB	42	_	_	_	_	_	_	_	_	ArgM-ADV
+33	وصایا	N	OBJ	42	
+36	پسر	N	AJPP	41	
+37	ش	PR	MOZ	36	_	_	_	_	_	_	_	_	_
+39	شیبان	N	APP	36	_	_	_	_	_	_	_	_	_
+41	منتقل	ADJ	MOS	42	_	_	_	_	_	_	_	_	Arg2
+42	کرد	V	ROOT	0	Y	کردن.25	_	_	_	_	_	_	_
+
+1	حضرت	N	SBJ	7	_	_	Arg1	_	_
+2	نوح	N	MOZ	1	_	_	_	_	_
+3	یکی‌از	ADJ	NPREMOD	4	_	_	_	_	_
+4	پیامبران	N	MOS	7	_	_	Arg2	_	_
+5	عظیم‌الشان	ADJ	NPOSTMOD	4	_	_	_	_	_
+6	الهی	ADJ	NPOSTMOD	4	_	_	_	_	_
+7	است	V	ROOT	0	Y	بودن.15	_	_	_
+9	نام	N	SBJ	16	_	_	_	Arg1	_
+10	مبارک	ADJ	NPOSTMOD	9	_	_	_	_	_
+11	ش	PR	MOZ	9	_	_	_	_	_
+12	43بار	ADV	ADVRB	16	_	_	_	ArgM-EXT	_
+14	قرآن	N	VPP	16	
+15	مجید	ADJ	NPOSTMOD	14	_	_	_	_	_
+16	آمده‌است	V	VCONJ	23	Y	آمدن.31	_	_	_
+18	نیز	ADV	ADVRB	23	_	_	_	_	ArgM-ADV
+19	سوره‌ای	N	SBJ	23	_	_	_	_	Arg1
+23	می‌باشد	V	PRD	8	Y	بودن.15	_	_	_
+
+1	او	PR	SBJ	5	_	_	Arg1	_	Arg1
+2	اولین	ADJ	NPREMOD	3	_	_	_	_	_
+3	پیامبر	N	MOS	5	_	_	Arg2	Arg1	_
+4	اولوالعزم	ADJ	NPOSTMOD	3	_	_	_	_	_
+5	است	V	ROOT	0	Y	بودن.15	_	_	_
+7	دارای	ADJ	MOS	12	_	_	_	Arg2	_
+8	شریعت	N	NEZ	7	_	_	_	_	_
+10	کتاب	N	NCONJ	8	
+11	مستقل	ADJ	NPOSTMOD	8	_	_	_	_	_
+12	بوده	V	VCONJ	19	Y	بودن.15	_	_	_
+14	نیز	ADV	ADVRB	19	_	_	_	_	ArgM-ADV
+15	اولین	ADJ	NPREMOD	16	_	_	_	_	_
+16	پیامبر	N	MOS	19	_	_	_	_	Arg2
+17	بعداز	PREP	ADVRB	19	_	_	_	_	ArgM-TMP
+18	ادریس	N	POSDEP	17	_	_	_	_	_
+19	می‌باشد	V	PRD	6	Y	بودن.15	_	_	_
+
+1	مرکز	N	SBJ	12	_	_	Arg1
+2	بعثت	N	MOZ	1	_	_	_
+4	دعوت	N	NCONJ	2	
+7	شامات	N	MOS	12	
+9	فلسطین	N	NCONJ	7	
+11	عراق	N	NCONJ	9	
+12	بوده‌است	V	ROOT	0	Y	بودن.15	_
+
+1	مردم	N	SBJ	13	_	_	Arg1
+2	عصر	N	MOZ	1	_	_	_
+3	ش	PR	MOZ	2	_	_	_
+4	غرق	ADJ	MOS	13	_	_	Arg2
+6	بت‌پرستی	N	AJPP	4	
+8	خرافات	N	NCONJ	6	_	_	_
+10	فساد	N	NCONJ	8	_	_	_
+12	بیهوده‌گرایی	N	NCONJ	10	
+13	بودند	V	ROOT	0	Y	بودن.15	_
+
+1	آن‌ها	PR	SBJ	8	_	_	_	Arg1	Arg1	_
+2	به‌قدری	ADV	ADVRB	8	_	_	ArgM-EXT	_	_	_
+4	عقیده	N	NPP	7	
+5	آلوده	ADJ	NPOSTMOD	4	_	_	_	_	_	_
+7	ایستادگی	N	NVE	8	_	_	_	_	_	_
+8	داشتند	V	ROOT	0	Y	ایستادگی‌داشتن.609	_	_	_	_
+10	حاضر	ADJ	MOS	11	_	_	_	Arg2	_	_
+11	بودند	V	PRD	9	Y	بودن.15	_	_	_	_
+12	بمیرند	V	VCONJ	19	Y	مردن.608	_	_	_	_
+15	عقیده	N	VPP	19	
+16	سخیف	ADJ	NPOSTMOD	15	_	_	_	_	_	_
+18	دست	N	NVE	19	_	_	_	_	_	_
+19	بر‌ندارند	V	VCL	11	Y	دست‌برداشتن.521	_	_	_	_
+
+1	حضرت	N	SBJ	30	_	_	Arg0	Arg0	Arg0
+2	نوح	N	MOZ	1	_	_	_	_	_
+4	ع	ARAB	POSDEP	2	_	_	_	_	_
+7	بیانی	N	ADVRB	30	
+8	روشن	ADJ	NPOSTMOD	7	_	_	_	_	_
+10	روان	ADJ	AJCONJ	8	
+12	گفتاری	N	NCONJ	7	
+13	منطقی	ADJ	NPOSTMOD	12	_	_	_	_	_
+15	دلنشین	ADJ	AJCONJ	13	
+18	سخنانی	N	NCONJ	12	
+19	مهرانگیز	ADJ	NPOSTMOD	18	_	_	_	_	_
+21	شیوا	ADJ	AJCONJ	19	
+23	قوم	N	OBJ	30	
+26	به‌سوی	PREP	NPP	29	_	_	Arg3	_	_
+27	خدای	N	POSDEP	26	_	_	_	_	_
+28	یکتا	ADJ	NPOSTMOD	27	_	_	_	_	_
+29	دعوت	N	NVE	30	_	_	_	_	_
+30	می‌کرد	V	VCONJ	36	Y	دعوت‌کردن.352	_	_	_
+33	دریافت	N	VPP	36	
+34	پاداش	N	MOZ	33	_	_	_	_	_
+35	الهی	ADJ	NPOSTMOD	34	_	_	_	_	_
+36	فرا‌می‌خواند	V	VCONJ	43	Y	فرا‌خواندن.319	_	_	_
+39	عذاب	N	VPP	43	
+40	الهی	ADJ	NPOSTMOD	39	_	_	_	_	_
+42	حذر	N	POSDEP	41	_	_	_	_	_
+43	می‌داشت	V	ROOT	0	Y	بر‌حذر‌داشتن.518	_	_	_
+
+2	همچون	PREP	ADVRB	8	_	_	ArgM-MNR	_	_
+3	طبیبی	N	POSDEP	2	_	_	_	_	_
+4	دل‌سوز	ADJ	NPOSTMOD	3	_	_	_	_	_
+6	بالین	N	VPP	8	
+7	آن‌ها	PR	MOZ	6	_	_	_	_	_
+8	رفت	V	VCONJ	20	Y	رفتن.17	_	_	_
+11	پستی	N	OBJ	20	
+13	آثار	N	NCONJ	11	
+14	زشت	ADJ	NPOSTMOD	13	_	_	_	_	_
+15	بت‌پرستی	N	MOZ	13	_	_	_	_	_
+17	برای	PREP	ADVRB	20	_	_	_	Arg3	_
+18	آن‌ها	PR	POSDEP	17	_	_	_	_	_
+19	شرح	N	NVE	20	_	_	_	_	_
+20	داد	V	VCONJ	30	Y	شرح‌دادن.315	_	_	_
+22	خطر	N	OBJ	30	
+23	سخت	ADJ	NPOSTMOD	22	_	_	_	_	_
+25	بیماری	N	MOZ	22	_	_	_	_	_
+28	آن‌ها	PR	NPP	29	
+29	گوشزد	N	NVE	30	_	_	_	_	_
+30	کرد	V	ROOT	0	Y	گوشزد‌کردن.621	_	_	_
+
+1	آن‌ها	PR	SBJ	6	_	_	Arg0	Arg0
+2	دست	N	OBJ	6	
+3	فرزندان	N	MOZ	2	_	_	_	Arg1
+6	گرفته	V	VCONJ	10	Y	گرفتن.867	_	_
+8	به‌نزد	PREP	VPP	10	_	_	_	Arg4
+9	نوح	N	POSDEP	8	_	_	_	_
+10	می‌بردند	V	ROOT	0	Y	بردن.208	_	_
+
+1	نوح	N	SBJ	21	_	_	_	Arg0
+3	ع	ARAB	POSDEP	1	_	_	_	_
+5	برای	PREP	ADVRB	21	_	_	_	ArgM-PRP
+8	دعوت	N	SBJ	14	_	_	Arg0	_
+9	ش	PR	MOZ	8	_	_	_	_
+12	سنگدلان	N	NPP	13	
+13	نفوذ	N	NVE	14	_	_	_	_
+14	کند	V	PRD	7	Y	نفوذ‌کردن.627	_	_
+17	برنامه	N	OBJ	21	
+20	دنبال	N	NVE	21	_	_	_	_
+21	کرد	V	ROOT	0	Y	دنبال‌کردن.199	_	_
+
+1	گاه	ADV	ADVRB	9	_	_	ArgM-TMP	_	_
+2	آن‌ها	PR	OBJ	9	
+4	به‌طور	PREP	ADVRB	9	_	_	ArgM-MNR	_	_
+5	مخفیانه	ADJ	POSDEP	4	_	_	_	_	_
+7	محرمانه	ADJ	AJCONJ	5	
+8	دعوت	N	NVE	9	_	_	_	_	_
+9	می‌کرد	V	VCONJ	17	Y	دعوت‌کردن.352	_	_	_
+12	گاه	ADV	ADVRB	17	_	_	_	ArgM-TMP	_
+13	دعوت	N	OBJ	17	_	_	_	Arg1	_
+14	علنی	ADJ	NPOSTMOD	13	_	_	_	_	_
+16	آشکار	ADJ	AJCONJ	14	
+17	داشت	V	VCONJ	30	Y	داشتن.39	_	_	_
+20	مواقعی	N	ADVRB	30	_	_	_	_	ArgM-TMP
+21	نیز	ADV	ADVRB	30	_	_	_	_	ArgM-ADV
+23	روش	PR	NPP	29	
+24	آمیختن	N	MOZ	23	_	_	_	_	_
+25	دعوت	N	MOZ	24	_	_	_	_	_
+26	آشکار	ADJ	NPOSTMOD	25	_	_	_	_	_
+28	نهان	ADJ	AJCONJ	26	
+30	می‌کرد	V	ROOT	0	Y	استفاده‌کردن.278	_	_	_
+
+1	حضرت	N	SBJ	21	_	_	Arg1
+2	نوح	N	MOZ	1	_	_	_
+4	ع	ARAB	POSDEP	2	_	_	_
+6	همچنان	ADV	ADVRB	21	_	_	ArgM-ADV
+7	شب	N	ADVRB	21	_	_	ArgM-TMP
+11	فکر	N	MOS	21	
+12	رستگاری	N	MOZ	11	_	_	_
+14	نجات	N	NCONJ	12	
+17	چنگال	N	NPP	14	
+18	جهل	N	MOZ	17	_	_	_
+20	بت‌پرستی	N	NCONJ	18	
+21	بود	V	ROOT	0	Y	بودن.15	_
+
+1	بنابراین	SUBR	ROOT	0	_	_	_	ArgM-DIS
+3	کارهایی	N	AJPP	8	8	_	_	_	_
+5	بت‌پرستان	N	SBJ	7	_	_	Arg0	_
+7	می‌دهند	V	PRD	4	Y	انجام‌دادن.158	_	_
+8	غمگین	ADJ	MOS	9	_	_	_	Arg2
+9	مباش	V	PRD	1	Y	بودن.15	_	_
+
+4	بود	V	ROOT	0	Y	بودن.15	_	_
+6	خداوند	N	SBJ	17	_	_	_	Arg0
+7	دستور	N	OBJ	17	
+8	ساختن	N	MOZ	7	_	_	_	_
+9	کشتی	N	MOZ	8	_	_	_	_
+12	حضرت	N	VPP	17	
+13	نوح	N	MOZ	12	_	_	_	_
+15	ع	ARAB	POSDEP	13	_	_	_	_
+17	داد	V	PRD	5	Y	دادن.110	_	_
+
+1	حضرت	N	SBJ	24	_	_	Arg0	_
+2	نوح	N	MOZ	1	_	_	_	_
+4	ع	ARAB	POSDEP	2	_	_	_	_
+6	نیز	ADV	ADVRB	24	_	_	ArgM-ADV2	_
+7	مطابق	ADV	ADVRB	24	_	_	ArgM-ADV	_
+8	فرمان	N	ADVEZ	7	_	_	_	_
+9	خدا	N	MOZ	8	_	_	_	_
+11	قوم	N	OBJ	24	
+15	عذاب	N	ADVRB	24	
+16	سخت	ADJ	NPOSTMOD	15	_	_	_	_
+17	الهی	ADJ	NPOSTMOD	15	_	_	_	_
+19	بلای	N	NCONJ	15	
+20	عظیم	ADJ	NPOSTMOD	19	_	_	_	_
+21	طوفان	N	MOZ	15	_	_	_	_
+23	حذر	N	POSDEP	22	_	_	_	_
+24	می‌داشت	V	VCONJ	31	Y	بر‌حذر‌داشتن.518	_	_
+27	آن‌ها	PR	SBJ	31	_	_	_	Arg0
+29	لجاجت	N	VPP	31	
+31	می‌افزودند	V	ROOT	0	Y	افزودن.418	_	_
+
+1	چون	SUBR	ROOT	0	_	_	ArgM-DIS	_	_
+3	طول	N	ADVRB	11	
+6	جز	PREP	ADVRB	11	_	_	ArgM-ADV	_	_
+7	اندکی	N	POSDEP	6	_	_	_	_	_
+10	ایمان	N	NVE	11	_	_	_	_	_
+11	نیاوردند	V	VCONJ	18	Y	ایمان‌آوردن.38	_	_	_
+16	دیوانگی	N	NPP	17	
+17	متهم	N	NVE	18	_	_	_	_	_
+18	می‌نمودند	V	VCONJ	23	Y	متهم‌کردن.652	_	_	_
+20	مانع	ADJ	MOS	23	_	_	_	_	Arg2
+21	تبلیغ	N	NEZ	20	_	_	_	_	_
+23	می‌شدند	V	PRD	1	Y	کردن.25	_	_	_
+
+1	گاهی	ADV	ADVRB	5	_	_	ArgM-TMP	_	_	_	_
+2	آنقدر	ADV	ADVRB	5	_	_	ArgM-EXT	_	_	_	_
+3	او	PR	OBJ	5	5	_	_	Arg1	_	_	_	_
+5	می‌زدند	V	ROOT	0	Y	زدن.876	_	_	_	_	_
+7	بی‌هوش	ADV	ADVRB	10	_	_	_	ArgM-MNR	_	_	_
+8	روی	PREP	VPP	10	_	_	_	Arg3	_	_	_
+9	زمین	N	POSDEP	8	_	_	_	_	_	_	_
+10	می‌افتاد	V	VCONJ	17	Y	افتادن.658	_	_	_	_	_
+12	وقتی	N	ADVRB	17	_	_	_	_	_	ArgM-TMP	_
+14	هوش	PR	VPRT	15	
+15	می‌آمد	V	NCL	12	Y	به‌هوش‌آمدن.656	_	_	_	_	_
+16	غسل	N	NVE	17	_	_	_	_	_	_	_
+17	می‌کرد	V	VCONJ	24	Y	غسل‌کردن.653	_	_	_	_	_
+19	کار	N	OBJ	24	
+22	دوباره	ADV	ADVRB	24	_	_	_	_	_	_	ArgM-EXT
+23	شروع	N	NVE	24	_	_	_	_	_	_	_
+24	می‌کرد	V	PRD	6	Y	شروع‌کردن.145	_	_	_	_	_
+
+1	برای	PREP	ADVRB	8	_	_	ArgM-CAU
+3	دستور	N	OBJ	8	
+4	ساختن	N	MOZ	3	_	_	_
+5	کشتی	N	MOZ	4	_	_	_
+7	صادر	N	NVE	8	_	_	_
+8	نمود	V	ROOT	0	Y	صادر‌کردن.292	_
+
+2	قوم	N	SBJ	18	_	_	_	_	Arg0	Arg0
+3	نوح	N	MOZ	2	_	_	_	_	_	_
+7	نوح	N	SBJ	11	_	_	Arg0	Arg0	_	_
+8	آن‌ها	PR	OBJ	11	
+10	رها	ADJ	MOS	11	_	_	Arg2	_	_	_
+11	کرده	V	VCONJ	16	Y	کردن.25	_	_	_	_
+14	نجاری	N	VPP	16	
+16	آورده‌بود	V	PRD	6	Y	روی‌آوردن.426	_	_	_	_
+17	تعجب	N	NVE	18	_	_	_	_	_	_
+18	کرده	V	VCONJ	23	Y	تعجب‌کردن.663	_	_	_	_
+22	مسخره	N	NVE	23	_	_	_	_	_	_
+23	می‌کردند	V	ROOT	0	Y	مسخره‌کردن.30	_	_	_	_
+
+1	آن‌وقت	ADV	ADVRB	6	_	_	ArgM-TMP
+2	ما	PR	SBJ	6	_	_	Arg0
+5	مسخره	N	NVE	6	_	_	_
+6	خواهیم‌کرد	V	ROOT	0	Y	مسخره‌کردن.30	_
+
+1	پس‌از	PREP	ADVRB	14	_	_	ArgM-TMP	_	_
+2	پایان	N	POSDEP	1	_	_	_	_	_
+4	ساختمان	N	MOZ	3	_	_	_	_	_
+5	کشتی	N	MOZ	4	_	_	_	_	_
+7	خداوند	N	SBJ	14	_	_	Arg0	_	_
+8	بر	PREP	NPP	13	_	_	Arg3	_	_
+9	نوح	N	POSDEP	8	_	_	_	_	_
+11	ع	ARAB	POSDEP	9	_	_	_	_	_
+13	وحی	N	NVE	14	_	_	_	_	_
+14	کرد	V	ROOT	0	Y	وحی‌کردن.218	_	_	_
+15	که	SUBR	VCL	14	_	_	Arg1	_	_
+17	زبان	N	ADVRB	20	
+18	سریانی	ADJ	NPOSTMOD	17	_	_	_	_	_
+20	کن	V	PRD	15	Y	اعلام‌کردن.473	_	_	_
+23	حیوانات	N	SBJ	27	_	_	_	_	Arg0
+24	جهان	N	MOZ	23	_	_	_	_	_
+25	نزد	PREP	VPP	27	_	_	_	_	Arg4
+27	آیند	V	AJUCL	20	Y	آمدن.44	_	_	_
+
+1	نوح	N	SBJ	4	_	_	Arg0	_
+3	جهانی	ADJ	NPOSTMOD	2	_	_	_	_
+4	کرد	V	VCONJ	9	Y	اعلام‌کردن.473	_	_
+7	حیوانات	N	SBJ	9	_	_	_	Arg1
+8	حاضر	ADJ	MOS	9	_	_	_	Arg2
+9	شدند	V	ROOT	0	Y	کردن.25	_	_
+
+1	نوح	N	SBJ	16	_	_	Arg0	Arg0
+3	ع	ARAB	POSDEP	1	_	_	_	_
+8	حیوانات	N	NPP	10	
+10	جفت	N	OBJ	16	_	_	Arg1	Arg1
+12	نر	ADJ	POSDEP	10	_	_	_	_
+14	ماده	ADJ	AJCONJ	12	
+16	گرفت	V	VCONJ	21	Y	گرفتن.872	_	_
+19	کشتی	N	NPP	20	
+21	داد	V	ROOT	0	Y	جای‌دادن.664	_	_
+
+1	او	PR	SBJ	26	_	_	_	Arg0
+3	دستور	N	ADVRB	26	
+4	خداوند	N	MOZ	3	_	_	_	_
+5	کلیه	ADJ	NPREMOD	6	_	_	_	_
+6	اعضای	N	OBJ	26	
+7	خانواده	N	MOZ	6	_	_	_	_
+10	نزدیکان	N	NCONJ	6	
+12	مومنین	N	NCONJ	10	
+14	به‌جز	PREP	NPP	6	_	_	_	_
+15	همسر	N	POSDEP	14	_	_	_	_
+17	پسر	N	NCONJ	15	
+18	ش	PR	MOZ	15	_	_	_	_
+19	کنعان	N	APP	17	_	_	_	_
+22	کافران	N	MOS	23	
+23	بودند	V	PRD	20	Y	بودن.15	_	_
+24	وارد	ADJ	MOS	26	_	_	_	Arg2
+25	کشتی	N	NEZ	24	_	_	_	_
+26	نمود	V	ROOT	0	Y	کردن.25	_	_
+
+1	نوح	N	SBJ	5	_	_	Arg0	Arg0	_	_
+2	به‌سراغ	PREP	VPP	5	_	_	Arg4	_	_	_
+3	پسر	N	POSDEP	2	_	_	_	_	_	_
+5	آمد	V	VCONJ	9	Y	آمدن.44	_	_	_	_
+8	او	PR	VPP	9	9	_	_	_	Arg3	_	_
+9	خواست	V	ROOT	0	Y	خواستن.51	_	_	_	_
+10	که	SUBR	VCL	9	_	_	_	Arg1	_	_
+11	ایمان	N	NVE	12	_	_	_	_	_	_
+12	آورده	V	VCONJ	17	Y	ایمان‌آوردن.38	_	_	_	_
+15	کشتی	N	POSDEP	14	_	_	_	_	_	_
+16	سوار	ADJ	MOS	17	_	_	_	_	_	Arg2
+17	شود	V	PRD	10	Y	کردن.25	_	_	_	_
+
+2	او	PR	SBJ	6	_	_	Arg0	Arg0	Arg0	_
+3	دعوت	N	OBJ	6	
+4	پدر	N	MOZ	3	_	_	_	_	_	_
+6	نپذیرفت	V	VCONJ	12	Y	پذیرفتن.88	_	_	_	_
+8	بر	PREP	NPP	11	_	_	_	Arg3	_	_
+9	کفر	N	POSDEP	8	_	_	_	_	_	_
+11	اصرار	N	NVE	12	_	_	_	_	_	_
+12	نمود	V	VCONJ	16	Y	اصرار‌کردن.566	_	_	_	_
+15	پدر	N	VPP	16	
+16	گفت	V	ROOT	0	Y	گفتن.35	_	_	_	_
+18	من	PR	SBJ	24	_	_	_	_	_	Arg0
+19	برای	PREP	ADVRB	24	_	_	_	_	_	ArgM-PRP
+20	نجات	N	POSDEP	19	_	_	_	_	_	_
+23	بلندی‌ها	N	VPP	24	
+24	خواهم‌رفت	V	VCL	16	Y	رفتن.17	_	_	_	_
+
+1	پس	SUBR	ROOT	0	_	_	_	ArgM-DIS
+7	آگاه	ADJ	MOS	8	_	_	Arg2	_
+8	نیستی	V	PRD	4	Y	بودن.15	_	_
+11	نخواه	V	PRD	1	Y	خواستن.51	_	_
+
+1	آب	N	SBJ	5	_	_	Arg0	Arg1	Arg1	_
+3	زمین	N	NPP	4	
+4	جوشیدن	N	NVE	5	_	_	_	_	_	_
+5	گرفت	V	VCONJ	11	Y	جوشیدن‌گرفتن.694	_	_	_	_
+8	آب	N	NPP	10	
+9	آسمان	N	MOZ	8	_	_	_	_	_	_
+10	پیوند	N	NVE	11	_	_	_	_	_	_
+11	خورد	V	VCONJ	19	Y	پیوند‌خوردن.679	_	_	_	_
+14	کافران	N	OBJ	19	
+17	کام	N	VPP	19	
+19	فروبرد	V	VCONJ	22	Y	فرو‌بردن.677	_	_	_	_
+21	نابود	ADJ	MOS	22	_	_	_	_	_	Arg2
+22	کرد	V	ROOT	0	Y	کردن.25	_	_	_	_
+
+1	پس‌از	PREP	ADVRB	14	_	_	ArgM-TMP	_	_
+2	هلاکت	N	POSDEP	1	_	_	_	_	_
+3	تمامی	ADJ	NPREMOD	4	_	_	_	_	_
+4	کافران	N	MOZ	2	_	_	_	_	_
+6	دستور	N	ADVRB	14	
+7	خداوند	N	MOZ	6	_	_	_	_	_
+9	زمین	N	SBJ	14	_	_	Arg1	_	_
+10	آبها	N	OBJ	14	
+14	فروبرد	V	VCONJ	21	Y	فرو‌بردن.677	_	_	_
+16	کشتی	N	SBJ	21	_	_	_	Arg0	_
+18	کوه	N	VPP	21	
+19	جودی	N	MOZ	18	_	_	_	_	_
+20	پهلو	N	NVE	21	_	_	_	_	_
+21	گرفت	V	ROOT	0	Y	پهلو‌گرفتن.681	_	_	_
+24	طبق	N	ADVRB	33	_	_	_	_	ArgM-ADV
+25	برخی‌از	ADJ	NPREMOD	26	_	_	_	_	_
+26	روایات	N	MOZ	24	_	_	_	_	_
+28	کشتی	N	SBJ	33	_	_	_	_	Arg0
+30	سرزمین	N	VPP	33	
+31	موصل	N	MOZ	30	_	_	_	_	_
+32	فرود	N	NVE	33	_	_	_	_	_
+33	آمد	V	VCL	21	Y	فرود‌آمدن.101	_	_	_
+
+2	نوح	N	SBJ	15	_	_	Arg1	Arg0	Arg0
+4	همراهان	N	NCONJ	2	
+6	حدود	PREP	MOS	9	_	_	Arg2	_	_
+8	نفر	N	POSDEP	6	_	_	_	_	_
+9	بودند	V	PRD	5	Y	بودن.15	_	_	_
+12	کوه	N	MOZ	11	_	_	_	_	_
+13	جودی	N	MOZ	12	_	_	_	_	_
+14	خانه‌هایی	N	OBJ	15	_	_	_	Arg1	_
+15	ساخته	V	VCONJ	21	Y	ساختن.137	_	_	_
+18	زندگی	N	VPP	21	
+20	ادامه	N	NVE	21	_	_	_	_	_
+21	دادند	V	ROOT	0	Y	ادامه‌دادن.527	_	_	_
+
+2	اواخر	N	ADVRB	8	
+3	عمر	N	MOZ	2	_	_	_	_	_
+4	جبرییل	N	SBJ	8	_	_	Arg1	_	_
+7	نازل	ADJ	MOS	8	_	_	Arg2	_	_
+8	شد	V	VCONJ	13	Y	کردن.25	_	_	_
+13	کرد	V	ROOT	0	Y	اعلام‌کردن.473	_	_	_
+14	که	SUBR	VCL	13	_	_	_	Arg1	_
+15	مدت	N	SBJ	22	_	_	_	_	Arg1
+16	نبوت	N	MOZ	15	_	_	_	_	_
+18	عمر	N	NCONJ	16	
+21	سر	N	VPRT	22	
+22	آمده‌است	V	PRD	14	Y	به‌سر‌آمدن.683	_	_	_
+
+3	اسم	N	OBJ	14	
+4	اکبر	N	MOZ	3	_	_	_	_	_
+6	علم	N	NCONJ	4	
+7	نبوت	N	MOZ	6	_	_	_	_	_
+10	پسر	N	AJPP	13	
+12	سام	N	APP	10	_	_	_	_	_
+13	واگذار	ADJ	MOS	14	_	_	Arg2	_	_
+14	نمایی	V	VCL	2	Y	کردن.25	_	_	_
+15	و‌سپس	SUBR	AJUCL	14	_	_	ArgM-ADV	_	_
+17	حضرت	N	SBJ	19	_	_	_	Arg0	Arg0
+18	چنین	PR	OBJ	19	_	_	_	Arg1	_
+19	کرد	V	VCONJ	28	Y	کردن.857	_	_	_
+21	پس‌از	PREP	ADVRB	28	_	_	_	_	ArgM-TMP
+22	وصایای	N	POSDEP	21	_	_	_	_	_
+24	دعوت	N	OBJ	28	
+27	لبیک	N	NVE	28	_	_	_	_	_
+28	گفت	V	PRD	15	Y	لبیک‌گفتن.685	_	_	_
+
+1	او	PR	SBJ	8	_	_	Arg0	Arg0
+2	هرگز	ADV	ADVRB	8	_	_	ArgM-NEG	_
+3	دل	N	NVE	8	_	_	_	_
+6	دنیای	N	NPP	3	
+7	فانی	ADJ	NPOSTMOD	6	_	_	_	_
+8	نبسته‌بود	V	VCONJ	14	Y	دل‌بستن.164	_	_
+12	چون	PREP	TAM	14	_	_	_	Arg2
+13	مسافری	N	POSDEP	12	_	_	_	_
+14	می‌دید	V	ROOT	0	Y	دیدن.302	_	_
+
+1	اکنون	ADV	ADVRB	10	_	_	ArgM-TMP
+2	ماموریت	N	OBJ	10	
+5	درمورد	PREP	NPP	2	_	_	_
+6	قبض	N	POSDEP	5	_	_	_
+7	روح	N	MOZ	6	_	_	_
+10	بده	V	ROOT	0	Y	انجام‌دادن.158	_
+
+1	عزراییل	N	SBJ	7	_	_	Arg0
+2	نیز	ADV	ADVRB	7	_	_	ArgM-ADV
+3	روح	N	OBJ	7	
+6	قبض	N	NVE	7	_	_	_
+7	کرد	V	ROOT	0	Y	قبض‌کردن.689	_
+
+1	ایشان	PR	SBJ	5	_	_	Arg1	_	Arg0
+2	دومین	ADJ	NPREMOD	3	_	_	_	_	_
+3	پیامبر	N	MOS	5	_	_	Arg2	Arg1	_
+4	اولوالعزم	ADJ	NPOSTMOD	3	_	_	_	_	_
+5	می‌باشد	V	ROOT	0	Y	بودن.15	_	_	_
+7	دارای	ADJ	MOS	12	_	_	_	Arg2	_
+8	کتاب	N	NEZ	7	_	_	_	_	_
+10	شریعت	N	NCONJ	8	
+11	مستقل	ADJ	NPOSTMOD	8	_	_	_	_	_
+12	بوده	V	VCONJ	16	Y	بودن.15	_	_	_
+14	دعوت	N	OBJ	16	_	_	_	_	Arg1
+15	جهانی	ADJ	NPOSTMOD	14	_	_	_	_	_
+16	داشته‌است	V	PRD	6	Y	داشتن.39	_	_	_
+
+1	مادر	N	SBJ	11	_	_	Arg1
+2	ابراهیم	N	MOZ	1	_	_	_
+4	نونا	N	TAM	11	_	_	Arg2
+8	بونا	N	NCONJ	4	
+11	داشت	V	ROOT	0	Y	نام‌داشتن.176	_
+
+1	ولادت	N	SBJ	6	_	_	Arg1
+2	ش	PR	MOZ	1	_	_	_
+5	نمرود	N	MOZ	4	_	_	_
+6	بود	V	ROOT	0	Y	بودن.15	_
+
+1	زندگی	N	SBJ	11	_	_	Arg1	_
+2	درخشان	ADJ	NPOSTMOD	1	_	_	_	_
+3	ابراهیم	N	MOZ	1	_	_	_	_
+5	ع	ARAB	POSDEP	3	_	_	_	_
+9	دوره	N	AJPP	10	10	_	_	_	_
+10	خلاصه	ADJ	MOS	11	_	_	Arg2	_
+11	می‌شود	V	ROOT	0	Y	کردن.25	_	_
+13	عبارت	N	MOS	14	_	_	_	Arg2
+14	ند	V	PRD	12	Y	بودن.15	_	_
+17	مقام	N	NPP	13	
+18	بندگی	N	MOZ	17	_	_	_	_
+20	پیامبری	N	NCONJ	18	_	_	_	_
+22	رسالت	N	NCONJ	20	_	_	_	_
+24	خلیل	N	NCONJ	22	_	_	_	_
+25	خدا	N	MOZ	24	_	_	_	_
+27	دوست	N	APP	24	_	_	_	_
+28	خالص	ADJ	NPOSTMOD	27	_	_	_	_
+31	امامت	N	NCONJ	24	
+
+1	بابل	N	SBJ	11	_	_	Arg1
+3	غرق	ADJ	MOS	11	_	_	Arg2
+5	بت‌پرستی	N	AJPP	3	
+7	انحرافات	N	NCONJ	5	_	_	_
+10	فساد	N	NCONJ	7	
+11	بود	V	ROOT	0	Y	بودن.15	_
+
+1	او	PR	SBJ	8	_	_	Arg0	Arg0
+2	بی‌درنگ	ADV	ADVRB	8	_	_	ArgM-MNR	_
+6	محضر	N	VPP	8	
+7	نمرود	N	MOZ	6	_	_	_	_
+8	رسانید	V	VCONJ	16	Y	رساندن.670	_	_
+11	موضوع	N	OBJ	16	
+14	نمرود	N	NPP	15	
+15	گزارش	N	NVE	16	_	_	_	_
+16	داد	V	ROOT	0	Y	گزارش‌دادن.671	_	_
+
+3	وقت	N	ADVRB	9	
+4	همزمان	ADV	ADVRB	9	_	_	ArgM-TMP	_	_
+5	نمرود	N	SBJ	9	_	_	Arg0	_	_
+7	عالم	N	ADVRB	9	
+8	خواب	N	MOZ	7	_	_	_	_	_
+9	دید	V	ROOT	0	Y	دیدن.47	_	_	_
+10	که	SUBR	VCL	9	_	_	Arg1	_	_
+11	ستاره‌ای	N	SBJ	14	_	_	_	Arg1	_
+13	آسمان	N	VPP	14	
+14	درخشید	V	VCONJ	25	Y	درخشیدن.672	_	_	_
+16	نور	N	SBJ	25	_	_	_	_	Arg1
+19	نور	N	POSDEP	18	_	_	_	_	_
+20	خورشید	N	MOZ	19	_	_	_	_	_
+22	ماه	N	NCONJ	20	
+24	چیره	ADJ	MOS	25	_	_	_	_	Arg2
+25	گردید	V	PRD	10	Y	کردن.25	_	_	_
+
+1	آن‌ها	PR	SBJ	2	_	_	Arg0	_	_	_
+2	گفتند	V	ROOT	0	Y	گفتن.35	_	_	_	_
+4	تعبیر	N	SBJ	8	_	_	_	Arg1	_	_
+6	خواب	N	MOZ	4	_	_	_	_	_	_
+7	این	PR	MOS	8	_	_	_	Arg2	_	_
+8	است	V	VCL	2	Y	بودن.15	_	_	_	_
+12	به‌زودی	ADV	ADVRB	16	_	_	_	_	ArgM-TMP	_
+13	کودکی	N	SBJ	16	_	_	_	_	Arg1	_
+15	دنیا	N	VPRT	16	
+16	می‌آید	V	PRD	9	Y	به‌دنیا‌آمدن.36	_	_	_	_
+18	سرنگونی	N	SBJ	27	_	_	_	_	_	Arg1
+21	رژیم	N	NCONJ	18	
+24	دست	N	VPP	27	
+27	می‌شود	V	PRD	17	Y	انجام‌دادن.158	_	_	_	_
+
+1	نمرود	N	SBJ	12	_	_	Arg0	Arg0	_	_	_
+2	برای	PREP	ADVRB	12	_	_	_	ArgM-PRP	_	_	_
+6	جلوی	PREP	OBJ	10	
+8	تولد	N	POSDEP	6	_	_	_	_	_	_	_
+10	بگیرد	V	VCL	5	Y	گرفتن.582	_	_	_	_	_
+11	دستور	N	NVE	12	_	_	_	_	_	_	_
+12	داد	V	ROOT	0	Y	دستور‌دادن.104	_	_	_	_	_
+13	که	SUBR	VCL	12	_	_	_	Arg1	_	_	_
+14	زنان	N	OBJ	21	
+16	مردان	N	NCONJ	14	
+20	جدا	ADJ	MOS	21	_	_	_	_	Arg2	_	_
+21	کنند	V	VCONJ	31	Y	کردن.25	_	_	_	_	_
+23	اگر	SUBR	AJUCL	31	_	_	_	_	_	_	ArgM-CND
+24	فرزند	N	SBJ	28	_	_	_	_	_	Arg1	_
+25	پسری	N	MOZ	24	_	_	_	_	_	_	_
+27	دنیا	N	VPRT	28	
+28	آمد	V	PRD	23	Y	به‌دنیا‌آمدن.36	_	_	_	_	_
+31	بکشند	V	PRD	13	Y	کشتن.102	_	_	_	_	_
+
+1	مادر	N	SBJ	11	_	_	Arg1	_
+2	ابراهیم	N	MOZ	1	_	_	_	_
+3	نیز	ADV	ADVRB	11	_	_	ArgM-ADV	_
+4	بارها	ADV	ADVRB	11	_	_	ArgM-EXT	_
+5	توسط	PREP	ADVRB	11	_	_	ArgM-INS	_
+6	ماماها	N	POSDEP	5	_	_	_	_
+8	قابله‌های	N	NCONJ	6	
+9	نمرودی	ADJ	NPOSTMOD	6	_	_	_	_
+10	آزمایش	N	NVE	11	_	_	_	_
+11	شد	V	VCONJ	19	Y	آزمایش‌کردن.674	_	_
+13	کسی	N	SBJ	19	_	_	_	Arg1
+15	باردار	ADJ	PREDEP	16	_	_	_	_
+18	آگاه	ADJ	MOS	19	_	_	_	Arg2
+19	‌نشد	V	ROOT	0	Y	کردن.25	_	_
+
+1	خداوند	N	SBJ	9	_	_	Arg0	_
+6	چشم	N	AJPP	8	
+7	دشمنان	N	MOZ	6	_	_	_	_
+8	پنهان	ADJ	MOS	9	_	_	Arg2	_
+9	داشت	V	ROOT	0	Y	داشتن.477	_	_
+11	نوزاد	N	SBJ	17	_	_	_	Arg1
+13	خارج	N	ADVRB	17	
+15	شهر	N	NPP	13	
+16	متولد	ADJ	MOS	17	_	_	_	Arg2
+17	شد	V	AJUCL	9	Y	کردن.25	_	_
+
+1	ابراهیم	N	SBJ	14	_	_	Arg0	_	_
+3	دیدن	N	ADVRB	14	
+4	ماه	N	MOZ	3	_	_	_	_	_
+6	ستارگان	N	NCONJ	4	
+9	اجرام	N	MOZ	8	_	_	_	_	_
+12	نکته	N	VPP	14	
+13	پی	N	NVE	14	_	_	_	_	_
+14	برد	V	ROOT	0	Y	پی‌بردن.48	_	_	_
+17	اینها	PR	SBJ	19	_	_	_	Arg0	Arg1
+18	آفریدگاری	N	OBJ	19	_	_	_	Arg1	_
+19	دارد	V	VCONJ	23	Y	داشتن.39	_	_	_
+21	بیهوده	ADV	ADVRB	23	_	_	_	_	ArgM-MNR
+22	خلق	N	NVE	23	_	_	_	_	_
+23	نشده‌است	V	PRD	15	Y	خلق‌کردن.444	_	_	_
+
+1	بدین‌وسیله	ADV	ADVRB	8	_	_	ArgM-DIS
+2	توحید	N	OBJ	8	
+7	ترسیم	N	NVE	8	_	_	_
+8	کرد	V	ROOT	0	Y	ترسیم‌کردن.678	_
+
+1	آزر	N	SBJ	4	_	_	Arg1	_
+2	عموی	N	MOS	4	_	_	Arg2	_
+3	ابراهیم	N	MOZ	2	_	_	_	_
+4	بود	V	VCONJ	10	Y	بودن.15	_	_
+6	ابراهیم	N	SBJ	10	_	_	_	Arg0
+9	پدر	N	TAM	10	_	_	_	Arg2
+10	می‌نامید	V	ROOT	0	Y	نامیدن.155	_	_
+
+1	آزر	N	SBJ	8	_	_	Arg0	Arg0
+5	سنگسار	N	NE	6	_	_	_	_
+7	تهدید	N	NVE	8	_	_	_	_
+8	کرد	V	VCONJ	12	Y	تهدید‌کردن.177	_	_
+12	راند	V	ROOT	0	Y	راندن.442	_	_
+
+1	ابراهیم	N	SBJ	5	_	_	Arg1	Arg0
+3	تهدیدهای	N	VPP	5	
+4	آزر	N	MOZ	3	_	_	_	_
+5	نترسید	V	VCONJ	11	Y	ترسیدن.211	_	_
+8	دعوت	N	NPP	10	
+10	ادامه	N	NVE	11	_	_	_	_
+11	داد	V	ROOT	0	Y	ادامه‌دادن.527	_	_
+
+1	نمرود	N	SBJ	4	_	_	Arg0	_
+3	ابراهیم	N	VPP	4	
+4	گفت	V	ROOT	0	Y	گفتن.35	_	_
+5	که	SUBR	VCL	4	_	_	Arg1	_
+6	خدای	N	SBJ	9	_	_	_	Arg1
+8	کی	PR_INTG	MOS	9	_	_	_	Arg2
+9	ست	V	PRD	5	Y	بودن.15	_	_
+
+1	نمرود	N	SBJ	6	_	_	Arg0	Arg0	Arg0
+5	کار	N	MOZ	3	_	_	_	_	_
+6	بازماند	V	VCONJ	12	Y	باز‌ماندن.686	_	_	_
+8	موقتا	ADV	ADVRB	12	_	_	_	ArgM-TMP	_
+11	رها	ADJ	MOS	12	_	_	_	Arg2	_
+12	کرد	V	ROOT	0	Y	کردن.25	_	_	_
+15	فرصت	N	ADVRB	20	
+16	مناسب	ADJ	NPOSTMOD	15	_	_	_	_	_
+19	انتقام	N	NVE	20	_	_	_	_	_
+20	بگیرد	V	AJUCL	12	Y	انتقام‌گرفتن.687	_	_	_
+
+1	ابراهیم	N	SBJ	14	_	_	Arg0	Arg0
+3	راههای	N	ADVRB	14	
+5	اقدام	N	NVE	14	_	_	_	_
+7	دعوت	N	NPP	5	
+8	نمرود	N	MOZ	7	_	_	_	_
+13	توحید	N	NPP	7	
+14	می‌نمود	V	VCONJ	18	Y	اقدام‌کردن.502	_	_
+17	نتیجه‌ای	N	NVE	18	_	_	_	Arg1
+18	نمی‌گرفت	V	ROOT	0	Y	نتیجه‌گرفتن.873	_	_
+
+1	وقتی	N	ADVRB	15	_	_	_	ArgM-TMP	_	_	_	_
+2	‌که	SUBR	NCL	1	_	_	_	_	_	_	_	_
+3	شهر	N	SBJ	9	_	_	Arg1	_	_	_	_	_
+8	خالی	ADJ	MOS	9	_	_	Arg2	_	_	_	_	_
+9	شد	V	PRD	2	Y	کردن.25	_	_	_	_	_	_
+10	او	PR	SBJ	15	_	_	_	Arg0	Arg0	_	Arg0	Arg0
+12	بت‌خانه	N	VPP	15	
+14	شهر	N	MOZ	12	_	_	_	_	_	_	_	_
+15	رفت	V	VCONJ	22	Y	رفتن.17	_	_	_	_	_	_
+18	تبر	N	ADVRB	22	
+20	جان	N	VPRT	22	
+21	بتها	N	MOZ	20	_	_	_	_	Arg1	_	_	_
+22	افتاد	V	VCONJ	28	Y	به‌جان‌افتادن.688	_	_	_	_	_	_
+25	آن‌ها	PR	OBJ	28	
+27	نابود	ADJ	MOS	28	_	_	_	_	_	Arg2	_	_
+28	کرد	V	VCONJ	43	Y	کردن.25	_	_	_	_	_	_
+29	به‌جز	PREP	NPP	25	_	_	_	_	_	_	_	_
+31	بت	N	POSDEP	29	_	_	_	_	_	_	_	_
+34	تبر	N	OBJ	39	
+37	دوش	N	VPP	39	
+39	گذاشت	V	PRD	33	Y	گذاشتن.225	_	_	_	_	_	_
+42	خانه	N	VPP	43	
+43	رفت	V	ROOT	0	Y	رفتن.17	_	_	_	_	_	_
+
+1	آن‌ها	PR	SBJ	6	_	_	Arg0	Arg0
+2	بی‌درنگ	ADV	ADVRB	6	_	_	ArgM-MNR	_
+3	به‌سمت	PREP	VPP	6	_	_	Arg4	_
+4	خانه	N	POSDEP	3	_	_	_	_
+5	ابراهیم	N	MOZ	4	_	_	_	_
+6	رفتند	V	VCONJ	13	Y	رفتن.17	_	_
+12	سوال	N	NVE	13	_	_	_	_
+13	کردند	V	ROOT	0	Y	سوال‌کردن.304	_	_
+
+2	ابراهیم	N	SBJ	7	_	_	Arg0	Arg0	_
+5	فرصت	N	NPP	6	
+7	کرد	V	VCONJ	11	Y	استفاده‌کردن.278	_	_	_
+10	آن‌ها	PR	VPP	11	
+11	گفت	V	ROOT	0	Y	گفتن.35	_	_	_
+12	که	SUBR	VCL	11	_	_	_	Arg1	_
+13	بتها	N	OBJ	18	
+15	بت	N	SBJ	18	_	_	_	_	Arg0
+17	نابود	ADJ	MOS	18	_	_	_	_	Arg2
+18	کرده	V	PRD	12	Y	کردن.25	_	_	_
+
+4	مردم	N	SBJ	13	_	_	Arg0	_	Arg1
+6	می‌دانستند	V	PRD	5	Y	دانستن.97	_	_	_
+7	بتها	N	SBJ	9	_	_	_	Arg0	_
+8	سخنی	N	OBJ	9	_	_	_	Arg1	_
+9	نمی‌گویند	V	VCL	6	Y	گفتن.35	_	_	_
+10	درمقابل	PREP	AJPP	12	_	_	_	_	_
+11	ابراهیم	N	POSDEP	10	_	_	_	_	_
+12	شرمنده‌	ADJ	MOS	13	_	_	_	_	Arg2
+13	شدند	V	ROOT	0	Y	کردن.25	_	_	_
+
+1	نمرود	N	SBJ	9	_	_	Arg0	Arg0	_	_	_
+2	پس‌از	PREP	ADVRB	9	_	_	ArgM-TMP	_	_	_	_
+4	ماجرا	N	POSDEP	2	_	_	_	_	_	_	_
+5	ابراهیم	N	OBJ	9	
+8	زندان	N	VPP	9	
+9	انداخت	V	VCONJ	14	Y	انداختن.819	_	_	_	_	_
+13	دستور	N	NVE	14	_	_	_	_	_	_	_
+14	داد	V	ROOT	0	Y	دستور‌دادن.104	_	_	_	_	_
+15	که	SUBR	VCL	14	_	_	_	Arg3	_	_	_
+16	هیزم	N	OBJ	20	
+19	فراهم	ADJ	MOS	20	_	_	_	_	Arg2	_	_
+20	کنند	V	PRD	15	Y	کردن.25	_	_	_	_	_
+22	ابراهیم	N	OBJ	26	
+26	بسوزانند	V	AJUCL	20	Y	سوزاندن.691	_	_	_	_	_
+28	درس	N	MOS	32	_	_	_	_	_	_	Arg2
+29	عبرتی	N	MOZ	28	_	_	_	_	_	_	_
+32	شود	V	AJUCL	20	Y	کردن.25	_	_	_	_	_
+
+4	دستور	N	SBJ	7	_	_	Arg1	_	_
+5	الهی	ADJ	NPOSTMOD	4	_	_	_	_	_
+6	صادر	ADJ	MOS	7	_	_	Arg2	_	_
+7	شد	V	ROOT	0	Y	کردن.25	_	_	_
+9	ای	ADR	VCONJ	14	_	_	_	ArgM-DIS	_
+10	آتش	N	POSDEP	9	_	_	_	_	_
+11	برای	PREP	ADVRB	14	_	_	_	ArgM-GOL	_
+12	ابراهیم	N	POSDEP	11	_	_	_	_	_
+13	سرد	ADJ	MOS	14	_	_	_	Arg2	_
+14	باش	V	VCONJ	22	Y	بودن.15	_	_	_
+16	بر	PREP	ADVRB	22	_	_	_	_	ArgM-GOL
+17	ابراهیم	N	POSDEP	16	_	_	_	_	_
+19	سالم	ADJ	MOS	22	_	_	_	_	Arg2
+21	گوارا	ADJ	AJCONJ	19	
+22	باش	V	NCL	4	Y	بودن.15	_	_	_
+
+1	خداوند	N	SBJ	10	_	_	Arg0	_	Arg0
+2	برای	PREP	ADVRB	10	_	_	ArgM-TMP	_	_
+3	آخرین	ADJ	NPREMOD	4	_	_	_	_	_
+5	حجت	N	OBJ	10	
+7	بر	PREP	ADVRB	10	_	_	ArgM-GOL	_	_
+9	تمام	ADJ	MOS	10	_	_	Arg2	_	_
+10	کرد	V	ROOT	0	Y	کردن.25	_	_	_
+13	اگر	SUBR	AJUCL	30	_	_	_	_	ArgM-CND
+14	باز	ADV	ADVRB	19	_	_	_	ArgM-ADV	_
+15	بر	PREP	VPP	19	_	_	_	Arg3	_
+16	خیره‌سری	N	POSDEP	15	_	_	_	_	_
+18	ادامه	N	NVE	19	_	_	_	_	_
+19	دهد	V	PRD	13	Y	ادامه‌دادن.527	_	_	_
+22	ناتوانترین	ADJ	NPREMOD	23	_	_	_	_	_
+23	موجودات	N	ADVRB	30	
+24	ش	PR	MOZ	23	_	_	_	_	_
+25	زندگی	N	OBJ	30	
+26	ننگین	ADJ	NPOSTMOD	25	_	_	_	_	_
+29	پایان	N	NVE	30	_	_	_	_	_
+30	بخشد	V	AJUCL	10	Y	پایان‌بخشیدن.697	_	_	_
+
+3	پادشاهی	N	SBJ	4	_	_	Arg1	Arg1
+4	بود	V	ROOT	0	Y	بودن.15	_	_
+6	بت‌پرست	N	MOS	7	_	_	_	Arg2
+7	بود	V	PRD	5	Y	بودن.15	_	_
+
+1	ابراهیم	N	SBJ	8	_	_	Arg1	Arg0	Arg0	_
+3	ترس	N	VPP	8	
+4	آزار	N	MOZ	3	_	_	_	_	_	_
+7	هراس	N	VPRT	8	
+8	افتاد	V	ROOT	0	Y	به‌هراس‌افتادن.708	_	_	_	_
+9	لذا	SUBR	AJUCL	8	_	_	_	ArgM-DIS	_	_
+10	پس‌از	PREP	ADVRB	16	_	_	_	ArgM-TMP	_	_
+11	مدتی	N	POSDEP	10	_	_	_	_	_	_
+14	نیز	ADV	ADVRB	16	_	_	_	ArgM-ADV	_	_
+15	کوچ	N	NVE	16	_	_	_	_	_	_
+16	نمود	V	VCONJ	20	Y	کوچ‌کردن.184	_	_	_	_
+19	جایی	N	VPP	20	
+20	رفت	V	PRD	9	Y	رفتن.17	_	_	_	_
+22	کسی	N	SBJ	25	_	_	_	_	_	Arg0
+25	نشناسد	V	PRD	21	Y	شناختن.64	_	_	_	_
+
+2	خبر	N	SBJ	8	_	_	Arg1	_
+3	ورود	N	MOZ	2	_	_	_	_
+6	مصر	N	VPP	8	
+7	پخش	N	NVE	8	_	_	_	_
+8	شد	V	VCONJ	16	Y	پخش‌کردن.550	_	_
+10	مردم	N	SBJ	16	_	_	_	Arg0
+12	اطراف	N	ADVRB	16	
+14	دیدن	N	VPP	16	
+16	شتافتند	V	ROOT	0	Y	شتافتن.453	_	_
+
+1	پادشاه	N	SBJ	7	_	_	Arg0	_	_	_
+2	علت	N	OBJ	7	
+3	آمدن	N	MOZ	2	_	_	_	_	_	_
+4	ش	PR	MOZ	3	_	_	_	_	_	_
+6	سوال	N	NVE	7	_	_	_	_	_	_
+7	کرد	V	ROOT	0	Y	سوال‌کردن.304	_	_	_	_
+8	و‌سپس	SUBR	AJUCL	7	_	_	_	ArgM-DIS	_	_
+9	ابراهیم	N	SBJ	10	_	_	_	Arg0	_	_
+10	گفت	V	PRD	8	Y	گفتن.35	_	_	_	_
+11	که	SUBR	VCL	10	_	_	_	Arg1	_	_
+12	خبر	N	OBJ	16	
+13	دادگری	N	MOZ	12	_	_	_	_	_	_
+16	شنیده‌ام	V	VCONJ	20	Y	شنیدن.454	_	_	_	_
+18	به‌سوی	PREP	VPP	20	_	_	_	_	_	Arg4
+20	آمده‌ام	V	PRD	11	Y	آمدن.44	_	_	_	_
+
+1	پادشاه	N	SBJ	2	_	_	Arg0	_	_
+2	گفت	V	ROOT	0	Y	گفتن.35	_	_	_
+3	که	SUBR	VCL	2	_	_	Arg1	_	_
+5	زن	N	SBJ	7	_	_	_	Arg1	Arg1
+6	کی	ADV_INTG	MOS	7	_	_	_	Arg2	_
+7	ست	V	PRD	3	Y	بودن.15	_	_	_
+10	همراه	N	MOS	12	
+12	ست	V	PRD	8	Y	بودن.15	_	_	_
+
+1	آن‌ها	PR	SBJ	9	_	_	Arg0	Arg0	_	_
+2	بعداز	PREP	ADVRB	9	_	_	ArgM-TMP	_	_	_
+4	واقعه	N	POSDEP	2	_	_	_	_	_	_
+5	مجددا	ADV	ADVRB	9	_	_	ArgM-ADV	_	_	_
+6	به‌سمت	PREP	NPP	8	_	_	Arg4	_	_	_
+7	شام	N	POSDEP	6	_	_	_	_	_	_
+8	حرکت	N	NVE	9	_	_	_	_	_	_
+9	کردند	V	VCONJ	13	Y	حرکت‌کردن.186	_	_	_	_
+12	فلسطین	N	VPP	13	
+13	رفته	V	ROOT	0	Y	رفتن.17	_	_	_	_
+15	ابراهیم	N	SBJ	22	_	_	_	_	Arg0	Arg0
+16	قسمت	N	OBJ	22	
+17	بالای	ADJ	NPREMOD	18	_	_	_	_	_	_
+20	برای	PREP	VPP	22	_	_	_	_	Arg3	_
+21	سکونت	N	POSDEP	20	_	_	_	_	_	_
+22	برگزید	V	VCONJ	37	Y	بر‌گزیدن.229	_	_	_	_
+25	لوط	N	OBJ	37	
+27	ع	ARAB	POSDEP	25	_	_	_	_	_	_
+31	قسمت	N	VPP	37	
+32	پایین	ADJ	NPOSTMOD	31	_	_	_	_	_	_
+34	فاصله	N	NPP	31	
+36	فرسخ	N	MOZ	34	_	_	_	_	_	_
+37	فرستاد	V	PRD	14	Y	فرستادن.341	_	_	_	_
+
+1	ابراهیم	N	SBJ	3	_	_	Arg0	_	Arg0
+2	نذر	N	NVE	3	_	_	_	_	_
+3	کرد	V	ROOT	0	Y	نذر‌کردن.725	_	_	_
+4	که	SUBR	VCL	3	_	_	Arg1	_	_
+5	اگر	SUBR	AJUCL	15	_	_	_	_	ArgM-CND
+6	صاحب	ADJ	MOS	9	_	_	_	Arg2	_
+7	فرزند	N	NEZ	6	_	_	_	_	_
+8	پسری	N	MOZ	7	_	_	_	_	_
+9	شود	V	PRD	5	Y	کردن.25	_	_	_
+12	برای	PREP	VPP	15	_	_	_	_	Arg3
+13	خدا	N	POSDEP	12	_	_	_	_	_
+14	قربانی	N	NVE	15	_	_	_	_	_
+15	نماید	V	PRD	4	Y	قربانی‌کردن.728	_	_	_
+
+1	چون	SUBR	AJUCL	13	_	_	_	ArgM-CAU	_
+2	مشکل	N	SBJ	5	_	_	Arg1	_	_
+4	ساره	N	MOS	5	
+5	بود	V	PRD	1	Y	بودن.15	_	_	_
+6	او	PR	SBJ	13	_	_	_	Arg0	_
+7	کنیز	N	OBJ	13	
+8	ش	PR	MOZ	7	_	_	_	_	_
+9	هاجر	N	APP	7	_	_	_	_	_
+12	ابراهیم	N	VPP	13	13	_	_	_	Arg3	_
+13	بخشید	V	ROOT	0	Y	بخشیدن.213	_	_	_
+17	بچه‌دار	ADJ	MOS	18	_	_	_	_	Arg2
+18	شود	V	AJUCL	13	Y	کردن.25	_	_	_
+
+1	هاجر	N	SBJ	6	_	_	Arg0	_
+3	ابراهیم	N	NCONJ	1	
+4	باهم	ADV	ADVRB	6	_	_	ArgM-COM	_
+5	ازدواج	N	NVE	6	_	_	_	_
+6	کردند	V	VCONJ	16	Y	ازدواج‌کردن.131	_	_
+8	ثمره	N	SBJ	16	_	_	_	Arg1
+10	ازدواج	N	MOZ	8	_	_	_	_
+11	فرزند	N	MOS	16	_	_	_	Arg2
+12	پسری	N	MOZ	11	_	_	_	_
+15	اسماعیل	N	MOZ	14	_	_	_	_
+16	شد	V	ROOT	0	Y	کردن.25	_	_
+
+1	ساره	N	SBJ	6	_	_	Arg1	_	Arg0	_
+2	نیز	ADV	ADVRB	6	_	_	ArgM-ADV	_	_	_
+3	سالها	N	ADVRB	6	_	_	ArgM-EXT	_	_	_
+5	انتظار	N	MOS	6	
+6	بود	V	VCONJ	27	Y	بودن.15	_	_	_	_
+8	خداوند	N	SBJ	12	_	_	_	Arg0	_	_
+11	فرزندی	N	OBJ	12	_	_	_	Arg1	_	_
+12	دهد	V	PRD	7	Y	دادن.110	_	_	_	_
+14	به‌خصوص	ADV	ADVRB	27	_	_	_	_	_	ArgM-ADV
+15	وقتی	N	ADVRB	27	_	_	_	_	_	ArgM-TMP
+17	اسماعیل	N	OBJ	19	
+19	می‌دید	V	PRD	16	Y	دیدن.47	_	_	_	_
+21	آرزوی	N	SBJ	27	_	_	_	_	_	Arg1
+22	ش	PR	MOZ	21	_	_	_	_	_	_
+25	فرزند	N	MOZ	24	_	_	_	_	_	_
+26	بیشتر	ADJ	MOS	27	_	_	_	_	_	Arg2
+27	می‌شد	V	ROOT	0	Y	کردن.25	_	_	_	_
+
+1	ساره	N	SBJ	4	_	_	Arg0	_	_	Arg1
+3	ابراهیم	N	VPP	4	4	_	_	Arg3	_	_	_
+4	خواست	V	ROOT	0	Y	خواستن.51	_	_	_	_
+5	دعا	N	NVE	6	_	_	_	_	_	_
+6	کند	V	VCONJ	12	Y	دعا‌کردن.182	_	_	_	_
+9	امدادهای	N	VPP	12	
+10	غیبی	ADJ	NPOSTMOD	9	_	_	_	_	_	_
+11	استمداد	N	OBJ	12	_	_	_	_	Arg1	_
+12	بطلبد	V	VCL	4	Y	طلبیدن.729	_	_	_	_
+15	دارای	ADJ	MOS	17	_	_	_	_	_	Arg2
+16	فرزند	N	NEZ	15	_	_	_	_	_	_
+17	گردد	V	AJUCL	12	Y	کردن.25	_	_	_	_
+
+1	سپس	SUBR	ROOT	0	_	_	ArgM-DIS	_	_	_
+2	فصل	N	SBJ	11	_	_	Arg1	_	_	_
+3	جدیدی	ADJ	NPOSTMOD	2	_	_	_	_	_	_
+5	زندگی	N	ADVRB	11	
+6	ابراهیم	N	MOZ	5	_	_	_	_	_	_
+8	ع	ARAB	POSDEP	6	_	_	_	_	_	_
+10	پدید	ADJ	NVE	11	_	_	_	_	_	_
+11	آمد	V	PRD	1	Y	پدید‌آمدن.733	_	_	_	_
+12	زیرا	SUBR	AJUCL	11	_	_	ArgM-CAU	_	_	_
+14	پاداشهای	N	SBJ	33	
+15	مخصوص	ADJ	NPOSTMOD	14	_	_	_	_	_	_
+16	الهی	ADJ	NPOSTMOD	14	_	_	_	_	_	_
+18	ابراهیم	N	NPP	14	
+20	ع	ARAB	POSDEP	18	_	_	_	_	_	_
+23	فرزند	N	MOS	33	_	_	_	Arg2	Arg1	Arg0
+24	صالح	ADJ	NPOSTMOD	23	_	_	_	_	_	_
+27	اسماعیل	N	MOZ	26	_	_	_	_	_	_
+29	اسحاق	N	NCONJ	27	
+31	ع	ARAB	POSDEP	27	_	_	_	_	_	_
+33	بود	V	PRD	12	Y	بودن.15	_	_	_	_
+36	عصای	N	MOS	39	_	_	_	_	Arg2	_
+37	پیری	N	MOZ	36	_	_	_	_	_	_
+39	گردند	V	VCONJ	45	Y	کردن.25	_	_	_	_
+44	ادامه	N	NVE	45	_	_	_	_	_	_
+45	دهند	V	AJUCL	33	Y	ادامه‌دادن.527	_	_	_	_
+
+1	کعبه	N	SBJ	4	_	_	Arg1	Arg1	Arg1
+2	نخستین	ADJ	NPREMOD	3	_	_	_	_	_
+3	بنایی	N	MOS	4	_	_	Arg2	_	_
+4	بود	V	ROOT	0	Y	بودن.15	_	_	_
+8	زمین	N	MOZ	7	_	_	_	_	_
+9	ساخته‌شد	V	PRD	5	Y	ساختن.137	_	_	_
+11	زمان	N	ADVRB	21	_	_	_	_	ArgM-TMP
+12	حضرت	N	MOZ	11	_	_	_	_	_
+13	آدم	N	MOZ	12	_	_	_	_	_
+15	ع	ARAB	POSDEP	13	_	_	_	_	_
+17	توسط	PREP	ADVRB	21	_	_	_	_	ArgM-INS
+20	درست	ADJ	NVE	21	_	_	_	_	_
+21	شده‌بود	V	PRD	10	Y	درست‌کردن.878	_	_	_
+
+1	ابراهیم	N	SBJ	4	_	_	Arg0	_	_	_
+3	خدا	N	VPP	4	
+4	خواست	V	ROOT	0	Y	خواستن.51	_	_	_	_
+5	که	SUBR	VCL	4	_	_	Arg1	_	_	_
+6	مکان	N	OBJ	12	
+7	کعبه	N	MOZ	6	_	_	_	_	_	_
+12	دهد	V	PRD	5	Y	نشان‌دادن.128	_	_	_	_
+13	سپس	SUBR	AJUCL	12	_	_	_	_	_	ArgM-DIS
+14	جبرییل	N	SBJ	19	_	_	_	_	Arg0	Arg0
+15	ازطرف	PREP	ADVRB	19	_	_	_	_	ArgM-ADV	_
+16	خدا	N	POSDEP	15	_	_	_	_	_	_
+18	زمین	N	VPP	19	
+19	آمد	V	VCONJ	27	Y	آمدن.44	_	_	_	_
+22	مکان	N	OBJ	27	
+24	کعبه	N	MOZ	22	_	_	_	_	_	_
+26	خط‌کشی	N	NVE	27	_	_	_	_	_	_
+27	کرد	V	PRD	13	Y	خط‌کشی‌کردن.735	_	_	_	_
+
+1	ابراهیم	N	SBJ	9	_	_	Arg0
+3	همراه	N	VPP	9	
+4	اسماییل	N	MOZ	3	_	_	_
+5	خانه	N	OBJ	9	
+6	کعبه	N	MOZ	5	_	_	_
+8	بنا	N	NVE	9	_	_	_
+9	کردند	V	ROOT	0	Y	بنا‌کردن.193	_
+
+1	ابراهیم	N	SBJ	9	_	_	Arg0	Arg0
+2	فرزند	N	OBJ	9	
+3	ش	PR	MOZ	2	_	_	_	_
+4	اسماعیل	N	APP	2	_	_	_	_
+7	مکه	N	AJPP	8	
+8	رها	ADJ	MOS	9	_	_	Arg2	_
+9	کرد	V	VCONJ	17	Y	کردن.25	_	_
+12	چند	N	ADVRB	17	_	_	_	ArgM-EXT
+13	مدتی	N	POSDEP	12	_	_	_	_
+15	دیدار	N	VPP	17	
+17	می‌رفت	V	ROOT	0	Y	رفتن.17	_	_
+
+2	یکی‌از	ADJ	NPREMOD	3	_	_	_	_	_
+3	دیدارها	N	ADVRB	7	
+4	ابراهیم	N	SBJ	7	_	_	Arg0	_	Arg0
+6	خواب	N	ADVRB	7	
+7	دید	V	ROOT	0	Y	دیدن.47	_	_	_
+8	که	SUBR	VCL	7	_	_	Arg1	_	_
+9	خداوند	N	SBJ	13	_	_	_	Arg0	_
+12	فرمان	N	NVE	13	_	_	_	_	_
+13	می‌دهد	V	PRD	8	Y	فرمان‌دادن.300	_	_	_
+15	فرزند	N	OBJ	19	
+16	ش	PR	MOZ	15	_	_	_	_	_
+18	ذبح	N	NVE	19	_	_	_	_	_
+19	کند	V	VCL	13	Y	ذبح‌کردن.703	_	_	_
+
+1	ابراهیم	N	SBJ	6	_	_	Arg0	Arg0	Arg0
+2	ماجرا	N	OBJ	6	
+5	اسماعیل	N	VPP	6	
+6	گفت	V	ROOT	0	Y	گفتن.35	_	_	_
+8	ایمان	N	OBJ	11	
+11	بیازماید	V	VCONJ	20	Y	آزمودن.737	_	_	_
+14	آرامش	N	ADVRB	20	
+15	دل	N	MOZ	14	_	_	_	_	_
+19	ذبح	N	NVE	20	_	_	_	_	_
+20	نماید	V	AJUCL	6	Y	ذبح‌کردن.703	_	_	_
+
+1	چون	SUBR	AJUCL	8	_	_	_	ArgM-DIS	_
+2	اسماعیل	N	SBJ	5	_	_	Arg0	_	_
+3	ابراز	N	NVE	5	_	_	_	_	_
+4	رضایت	N	MOZ	3	_	_	Arg1	_	_
+5	نمود	V	PRD	1	Y	ابراز‌کردن.739	_	_	_
+6	ابراهیم	N	SBJ	8	_	_	_	_	Arg0
+7	تصمیم	N	NVE	8	_	_	_	_	_
+8	گرفت	V	ROOT	0	Y	تصمیم‌گرفتن.68	_	_	_
+9	فرمان	N	OBJ	13	
+10	الهی	ADJ	NPOSTMOD	9	_	_	_	_	_
+12	اجرا	N	NVE	13	_	_	_	_	_
+13	نماید	V	VCL	8	Y	اجرا‌کردن.495	_	_	_
+
+1	کارد	N	OBJ	6	
+3	بر	PREP	VPP	6	_	_	Arg3	_
+4	گردن	N	POSDEP	3	_	_	_	_
+5	ش	PR	MOZ	4	_	_	_	_
+6	کشید	V	VCONJ	13	Y	کشیدن.740	_	_
+8	کارد	N	SBJ	13	_	_	_	Arg0
+10	فرمان	N	ADVRB	13	
+11	الهی	ADJ	NPOSTMOD	10	_	_	_	_
+13	نکرد	V	ROOT	0	Y	عمل‌کردن.370	_	_
+
+1	خداوند	N	SBJ	3	_	_	Arg0	_	_	_
+2	ندا	N	NVE	3	_	_	_	_	_	_
+3	داد	V	ROOT	0	Y	ندا‌دادن.741	_	_	_	_
+4	که‌	SUBR	VCL	3	_	_	Arg1	_	_	_
+5	ای	ADR	VCONJ	12	_	_	_	ArgM-DIS	_	_
+6	ابراهیم	N	POSDEP	5	_	_	_	_	_	_
+8	ذبح	N	NPP	11	
+9	فرزند	N	MOZ	8	_	_	_	_	_	_
+11	خودداری	N	NVE	12	_	_	_	_	_	_
+12	کن	V	PRD	4	Y	خودداری‌کردن.742	_	_	_	_
+13	زیرا	SUBR	AJUCL	12	_	_	_	ArgM-CAU	_	_
+14	هدف	N	SBJ	21	_	_	_	_	Arg1	_
+16	آزمایش	N	NPP	14	
+18	امتحان	N	NCONJ	16	
+20	حاصل	N	NVE	21	_	_	_	_	_	_
+21	گردید	V	VCONJ	28	Y	حاصل‌کردن.743	_	_	_	_
+23	تو	PR	SBJ	28	_	_	_	_	_	Arg1
+26	آزمایش	N	AJPP	27	
+27	پیروز	ADJ	MOS	28	_	_	_	_	_	Arg2
+28	شدی	V	PRD	13	Y	کردن.25	_	_	_	_
+
+1	اینک	ADV	ADVRB	5	_	_	ArgM-TMP	_
+3	گوسفند	N	OBJ	5	5	_	_	Arg1	_
+5	گرفته	V	VCONJ	11	Y	گرفتن.135	_	_
+7	به‌جای	PREP	ADVRB	11	_	_	_	ArgM-ADV
+8	فرزند	N	POSDEP	7	_	_	_	_
+10	ذبح	N	NVE	11	_	_	_	_
+11	کن	V	ROOT	0	Y	ذبح‌کردن.703	_	_
+
+1	حضرت	N	SBJ	10	_	_	Arg0	Arg0
+2	صالح	N	MOZ	1	_	_	_	_
+4	راههای	N	ADVRB	10	
+5	گوناگون	ADJ	NPOSTMOD	4	_	_	_	_
+7	ارشاد	N	VPP	10	
+8	قوم	N	MOZ	7	_	_	_	_
+9	ش	PR	MOZ	8	_	_	_	_
+10	می‌پرداخت	V	VCONJ	19	Y	پرداختن.72	_	_
+15	پرستش	N	NPP	18	
+16	خدای	N	MOZ	15	_	_	_	_
+17	یگانه	ADJ	NPOSTMOD	16	_	_	_	_
+18	دعوت	N	NVE	19	_	_	_	_
+19	می‌نمود	V	ROOT	0	Y	دعوت‌کردن.352	_	_
+
+1	یکی‌از	ADJ	NPREMOD	2	_	_	_
+2	عادات	N	SBJ	13	_	_	Arg1
+4	زیاده‌روی	N	MOS	13	_	_	Arg2
+6	خوردن	N	NPP	4	
+8	آشامیدن	N	NCONJ	6	
+10	ساختن	N	NCONJ	4	
+11	بناهای	N	MOZ	10	_	_	_
+12	مجلل	ADJ	NPOSTMOD	11	_	_	_
+13	بود	V	ROOT	0	Y	بودن.15	_
+
+1	صالح	N	SBJ	8	_	_	Arg0	Arg0
+6	کار	N	NPP	7	
+7	منع	N	NVE	8	_	_	_	_
+8	می‌کرد	V	VCONJ	13	Y	منع‌کردن.99	_	_
+11	ارشاد	N	VPP	13	
+13	می‌پرداخت	V	ROOT	0	Y	پرداختن.72	_	_
+
+1	آنها	PR	SBJ	4	_	_	Arg0	_	_
+3	صالح	N	VPP	4	4	_	_	Arg3	_	_
+4	خواستند	V	ROOT	0	Y	خواستن.51	_	_	_
+6	معجزه‌ای	N	OBJ	7	_	_	_	Arg1	Arg1
+7	بیاورد	V	VCL	4	Y	آوردن.526	_	_	_
+9	دلیلی	N	MOS	13	_	_	_	_	Arg2
+11	حقانیت	N	POSDEP	10	_	_	_	_	_
+12	ش	PR	MOZ	11	_	_	_	_	_
+13	باشد	V	AJUCL	7	Y	بودن.15	_	_	_
+
+1	ازاین‌رو	SUBR	ROOT	0	_	_	ArgM-DIS
+2	خداوند	N	SBJ	7	_	_	Arg0
+3	معجزه‌ای	N	OBJ	7	_	_	Arg1
+4	روشن	ADJ	NPOSTMOD	3	_	_	_
+5	برای	PREP	ADVRB	7	_	_	ArgM-GOL
+7	آورد	V	PRD	1	Y	آوردن.526	_
+
+1	حضرت	N	SBJ	21	_	_	Arg0	Arg1	Arg0
+2	صالح	N	MOZ	1	_	_	_	_	_
+4	برای	PREP	ADVRB	14	_	_	ArgM-PRP	_	_
+5	هدایت	N	POSDEP	4	_	_	_	_	_
+6	قوم	N	MOZ	5	_	_	_	_	_
+7	ش	PR	MOZ	6	_	_	_	_	_
+11	راه‌های	N	ADVRB	14	
+13	رهنمون	N	NVE	14	_	_	_	_	_
+14	می‌کرد	V	PRD	3	Y	رهنمون‌کردن.684	_	_	_
+15	عاقبت	ADV	ADVRB	21	_	_	_	ArgM-ADV	_
+17	ارشاد	N	AJPP	20	
+18	قوم	N	MOZ	17	_	_	_	_	_
+19	ش	PR	MOZ	18	_	_	_	_	_
+20	مایوس	ADJ	MOS	21	_	_	_	Arg2	_
+21	شد	V	VCONJ	22	Y	کردن.25	_	_	_
+22	و‌سپس	SUBR	ROOT	0	_	_	_	_	_
+25	پیشنهادی	N	NVE	26	_	_	_	_	_
+26	کرد	V	PRD	22	Y	پیشنهاد‌کردن.237	_	_	_
+
+1	قوم	N	SBJ	7	_	_	Arg0
+2	ثمود	N	MOZ	1	_	_	_
+4	پیشنهاد	N	OBJ	7	
+6	قبول	N	NVE	7	_	_	_
+7	کردند	V	ROOT	0	Y	قبول‌کردن.592	_
+
+1	حضرت	N	SBJ	7	_	_	Arg0	Arg0	_
+2	صالح	N	MOZ	1	_	_	_	_	_
+3	نیز	ADV	ADVRB	7	_	_	ArgM-ADV	_	_
+6	مکان	N	VPP	7	
+7	رفته	V	VCONJ	15	Y	رفتن.17	_	_	_
+9	درخواست	N	OBJ	15	
+13	بت	N	VPP	15	
+14	بزرگی	ADJ	NPOSTMOD	13	_	_	_	_	_
+15	گفت	V	VCONJ	23	Y	گفتن.35	_	_	_
+18	بت	N	SBJ	23	_	_	_	_	Arg0
+20	جوابی	N	NVE	23	_	_	_	_	_
+23	نداد	V	ROOT	0	Y	جواب‌دادن.849	_	_	_
+
+1	ساعات	N	SBJ	6	_	_	Arg1	_
+4	اینگونه	ADV	ADVC	6	_	_	Arg2	_
+5	سپری	N	NVE	6	_	_	_	_
+6	شد	V	ROOT	0	Y	سپری‌کردن.400	_	_
+7	و‌سپس	SUBR	VCL	6	_	_	_	_
+8	آبروی	N	SBJ	14	_	_	_	Arg1
+11	بتها	N	NCONJ	9	
+12	نزد	PREP	ADVRB	14	_	_	_	ArgM-ADV
+13	صالح	N	POSDEP	12	_	_	_	_
+14	رفت	V	PRD	7	Y	رفتن.699	_	_
+
+1	باز	ADV	ADVRB	13	_	_	ArgM-ADV2
+3	درخواست	N	ADVRB	13	
+5	ناقه	N	SBJ	13	_	_	Arg0
+8	لحظه	N	ADVRB	13	
+9	بچه‌ای	N	OBJ	13	
+12	دنیا	N	VPRT	13	
+13	آورد	V	ROOT	0	Y	به‌دنیا‌آوردن.709	_
+
+2	نفر	N	SBJ	17	_	_	Arg1	Arg0
+4	قوم	N	NPP	2	
+5	صالح	N	MOZ	4	_	_	_	_
+8	فساد	N	ADVRB	12	
+9	جلوتر	ADJ	MOS	12	_	_	Arg2	_
+11	بقیه	N	AJPP	9	
+12	بودند	V	PRD	6	Y	بودن.15	_	_
+13	تصمیم	N	NVE	17	_	_	_	_
+15	قتل	N	NPP	13	
+16	صالح	N	MOZ	15	_	_	_	_
+17	گرفتند	V	ROOT	0	Y	تصمیم‌گرفتن.68	_	_
+
+1	قوم	N	SBJ	7	_	_	Arg0
+2	تصمیم	N	NVE	7	_	_	_
+4	قتل	N	NPP	2	
+5	ناقه	N	MOZ	4	_	_	_
+6	صالح	N	MOZ	5	_	_	_
+7	گرفت	V	ROOT	0	Y	تصمیم‌گرفتن.68	_
+
+1	پس‌از	PREP	ADVRB	10	_	_	ArgM-TMP
+2	کشتن	N	POSDEP	1	_	_	_
+3	ناقه	N	MOZ	2	_	_	_
+4	گوشت	N	SBJ	10	_	_	Arg1
+6	نیز	ADV	ADVRB	10	_	_	ArgM-ADV
+7	میان	PREP	VPP	10	_	_	Arg3
+8	قوم	N	POSDEP	7	_	_	_
+9	تقسیم	N	NVE	10	_	_	_
+10	شد	V	ROOT	0	Y	تقسیم‌کردن.86	_
+
+1	صالح	N	SBJ	11	_	_	Arg0
+3	ع	ARAB	POSDEP	1	_	_	_
+5	پیام	N	OBJ	11	
+6	خداوند	N	MOZ	5	_	_	_
+10	ابلاغ	N	NVE	11	_	_	_
+11	کرد	V	ROOT	0	Y	ابلاغ‌کردن.723	_
+
+1	صبح	N	ADVRB	9	_	_	ArgM-TMP	_
+3	شب	N	MOZ	1	_	_	_	_
+4	نیز	ADV	ADVRB	9	_	_	ArgM-ADV	_
+5	خداوند	N	SBJ	9	_	_	Arg0	Arg0
+6	صاعقه‌ای	N	OBJ	9	_	_	Arg1	_
+7	بر	PREP	VPP	9	_	_	Arg3	_
+9	فرستاد	V	VCONJ	19	Y	فرستادن.341	_	_
+11	تار	N	OBJ	19	
+13	پود	N	NCONJ	11	
+16	نیست	ADJ	MOS	19	_	_	_	Arg2
+18	نابود	ADJ	AJCONJ	16	
+19	نمود	V	ROOT	0	Y	کردن.25	_	_
+
+1	همه	PR	SBJ	3	_	_	Arg1	_
+2	نابود	ADJ	MOS	3	_	_	Arg2	_
+3	شدند	V	ROOT	0	Y	کردن.25	_	_
+4	به‌جز	PREP	NPP	1	_	_	_	_
+5	صالح	N	POSDEP	4	_	_	_	Arg0
+7	افراد	N	NCONJ	5	
+8	باایمانی	ADJ	NPOSTMOD	7	_	_	_	_
+12	ایمان	N	NVE	13	_	_	_	_
+13	آورده‌بودند	V	PRD	9	Y	ایمان‌آوردن.38	_	_
+
+1	حضرت	N	SBJ	6	_	_	Arg1	_
+2	موسی	N	MOZ	1	_	_	_	_
+3	یکی‌از	ADJ	NPREMOD	4	_	_	_	_
+4	پیامبران	N	MOS	6	_	_	Arg2	_
+5	اولوالعزم	ADJ	NPOSTMOD	4	_	_	_	_
+6	است	V	ROOT	0	Y	بودن.15	_	_
+8	نام	N	SBJ	16	_	_	_	Arg1
+9	مبارک	ADJ	NPOSTMOD	8	_	_	_	_
+10	ش	PR	MOZ	8	_	_	_	_
+11	136بار	ADV	ADVRB	16	_	_	_	ArgM-EXT
+14	سوره	N	VPP	16	
+15	قرآن	N	MOZ	14	_	_	_	_
+16	آمده‌است	V	PRD	7	Y	آمدن.31	_	_
+
+1	ایشان	PR	SBJ	8	_	_	Arg0	Arg0	_
+3	سال	N	ADVRB	8	_	_	ArgM-TMP	_	_
+4	بعداز	PREP	NPP	3	_	_	_	_	_
+5	حضرت	N	POSDEP	4	_	_	_	_	_
+6	ابراهیم	N	MOZ	5	_	_	_	_	_
+7	ظهور	N	NVE	8	_	_	_	_	_
+8	کرد	V	VCONJ	14	Y	ظهور‌کردن.74	_	_	_
+10	لقب	N	OBJ	14	_	_	_	Arg1	_
+11	کلیم‌الله	ARAB	MOZ	10	_	_	_	_	_
+14	گرفت	V	ROOT	0	Y	گرفتن.135	_	_	_
+15	چون	SUBR	AJUCL	14	_	_	_	ArgM-CAU	_
+16	خداوند	N	SBJ	22	_	_	_	_	Arg0
+17	بدون	PREP	ADVRB	22	_	_	_	_	ArgM-NEG
+18	واسطه	N	POSDEP	17	_	_	_	_	_
+21	سخن	N	NVE	22	_	_	_	_	_
+22	گفت	V	PRD	15	Y	سخن‌گفتن.125	_	_	_
+
+1	داستان	N	OBJ	14	
+2	زندگی	N	MOZ	1	_	_	_
+3	پرفرازونشیب	ADJ	NPOSTMOD	2	_	_	_
+4	موسی	N	MOZ	2	_	_	_
+6	ع	ARAB	POSDEP	4	_	_	_
+9	می‌توان	V	ROOT	0	_	_	_
+12	دوره	N	AJPP	13	
+13	خلاصه	ADJ	MOS	14	_	_	Arg2
+14	کرد	V	VCL	9	Y	کردن.25	_
+
+1	حضرت	N	SBJ	13	_	_	Arg1
+2	موسی	N	MOZ	1	_	_	_
+5	سلطنت	N	MOZ	4	_	_	_
+6	رامسیس	N	MOZ	5	_	_	_
+8	رعمسیس	N	NCONJ	6	
+10	شهر	N	ADVRB	13	
+11	مصر	N	MOZ	10	_	_	_
+12	متولد	ADJ	MOS	13	_	_	Arg2
+13	شد	V	ROOT	0	Y	کردن.25	_
+
+2	کاخها	N	OBJ	8	
+4	خانه‌های	N	NCONJ	2	
+5	آن‌ها	PR	MOZ	2	_	_	_
+7	نابود	ADJ	MOS	8	_	_	_
+8	ساخت	V	VCONJ	18	Y	ساختن.498	_
+11	خانه‌های	N	NPP	17	
+12	سبطیان	N	MOZ	11	_	_	_
+14	قوم	N	APP	12	_	_	_
+15	موسی	N	MOZ	14	_	_	_
+17	آسیبی	N	OBJ	18	_	_	_
+18	نرساند	V	PRD	1	_	_	_
+
+1	فرعون	N	SBJ	10	_	_	Arg1	Arg1	Arg0	Arg0
+3	حالی	N	ADVRB	10	
+4	‌که	SUBR	NCL	3	_	_	_	_	_	_
+5	وحشت‌زده	ADJ	MOS	6	_	_	Arg2	_	_	_
+6	‌‌شده‌بود	V	PRD	4	Y	کردن.25	_	_	_	_
+8	خواب	N	AJPP	9	
+9	بیدار	ADJ	MOS	10	_	_	_	Arg2	_	_
+10	شد	V	VCONJ	14	Y	کردن.25	_	_	_	_
+13	غم	N	VPP	14	
+14	فرورفت	V	VCONJ	22	Y	فرو‌رفتن.632	_	_	_	_
+16	ساحران	N	OBJ	22	
+18	برای	PREP	ADVRB	22	_	_	_	_	_	ArgM-PRP
+19	تعبیر	N	POSDEP	18	_	_	_	_	_	_
+20	خواب	N	MOZ	19	_	_	_	_	_	_
+21	ش	PR	MOZ	20	_	_	_	_	_	_
+22	فراخواند	V	ROOT	0	Y	فرا‌خواندن.319	_	_	_	_
+
+1	آن‌ها	PR	SBJ	2	_	_	Arg0	_	_
+2	گفتند	V	ROOT	0	Y	گفتن.35	_	_	_
+3	پیری	N	SBJ	8	_	_	_	Arg1	Arg0
+5	بنی‌اسراییل	N	NPP	3	
+7	دنیا	N	VPRT	8	
+8	خواهدآمد	V	VCL	2	Y	به‌دنیا‌آمدن.36	_	_	_
+12	یاران	N	NCONJ	10	
+15	نابود	ADJ	MOS	16	_	_	_	_	Arg2
+16	خواهدکرد	V	PRD	9	Y	کردن.25	_	_	_
+
+1	رامسیس	N	SBJ	5	_	_	Arg0	_
+2	بعداز	PREP	ADVRB	5	_	_	ArgM-TMP	_
+3	مشورت	N	POSDEP	2	_	_	_	_
+4	دستور	N	NVE	5	_	_	_	_
+5	داد	V	ROOT	0	Y	دستور‌دادن.104	_	_
+8	همبستر	ADJ	PREDEP	9	_	_	_	_
+10	مردها	N	MOZ	9	_	_	_	_
+12	زن‌ها	N	NCONJ	10	
+13	جلوگیری	N	NVE	14	_	_	_	_
+14	شود	V	VCL	5	Y	جلوگیری‌کردن.775	_	_
+
+2	یوکابد	N	SBJ	11	_	_	Arg0	_	_
+3	همسر	N	APP	2	_	_	_	_	_
+4	عمران	N	MOZ	3	_	_	_	_	_
+6	نیمه	N	ADVRB	11	
+8	شب	N	MOZ	6	_	_	_	_	_
+9	نزد	PREP	VPP	11	_	_	Arg3	_	_
+10	شوهر	N	POSDEP	9	_	_	_	_	_
+11	آمده	V	VCONJ	16	Y	آمدن.44	_	_	_
+13	مخفیانه	ADV	ADVRB	16	_	_	_	ArgM-MNR	_
+14	باهم	ADV	ADVRB	16	_	_	_	ArgM-COM	_
+15	همبستر	ADJ	MOS	16	_	_	_	Arg2	_
+16	شدند	V	ROOT	0	Y	کردن.25	_	_	_
+18	منجر	ADJ	MOS	23	_	_	_	_	Arg2
+20	انعقاد	N	AJPP	18	
+21	نطفه	N	MOZ	20	_	_	_	_	_
+22	موسی	N	MOZ	21	_	_	_	_	_
+23	شد	V	PRD	17	Y	کردن.25	_	_	_
+
+1	دستور	N	SBJ	5	_	_	Arg1	_	_	_	_
+3	فرعون	N	MOZ	1	_	_	_	Arg0	_	_	_
+4	این	PR	MOS	5	_	_	Arg2	_	_	_	_
+5	بود	V	ROOT	0	Y	بودن.15	_	_	_	_	_
+7	قابله‌هایی	N	OBJ	8	_	_	_	Arg1	Arg1	_	_
+8	گمارده	V	VCONJ	13	Y	گماشتن.716	_	_	_	_	_
+10	مراقب	N	MOS	13	_	_	_	_	Arg2	_	_
+11	زایمان	N	MOZ	10	_	_	_	_	_	_	_
+12	زن‌ها	N	MOZ	11	_	_	_	_	_	_	_
+13	باشند	V	VCONJ	21	Y	بودن.15	_	_	_	_	_
+15	اگر	SUBR	AJUCL	21	_	_	_	_	_	_	ArgM-CND
+16	نوزاد	N	SBJ	18	_	_	_	_	_	Arg1	_
+17	پسر	N	MOS	18	_	_	_	_	_	Arg2	_
+18	بود	V	PRD	15	Y	بودن.15	_	_	_	_	_
+21	بکشند	V	PRD	6	Y	کشتن.102	_	_	_	_	_
+
+1	بعداز	PREP	ADVRB	12	_	_	_	ArgM-TMP
+2	خروج	N	POSDEP	1	_	_	_	_
+3	قابله	N	MOZ	2	_	_	_	_
+5	منزل	N	NPP	2	
+6	نگهبان‌ها	N	SBJ	12	_	_	Arg1	Arg1
+8	مشکوک	ADJ	MOS	9	_	_	Arg2	_
+9	شده‌بودند	V	PRD	7	Y	کردن.25	_	_
+10	وارد	ADJ	MOS	12	_	_	_	Arg2
+11	خانه	N	NEZ	10	_	_	_	_
+12	‌شدند	V	ROOT	0	Y	کردن.25	_	_
+
+1	خواهر	N	SBJ	4	_	_	Arg1	Arg0	_
+2	موسی	N	MOZ	1	_	_	_	_	_
+3	متوجه	ADJ	MOS	4	_	_	Arg2	_	_
+4	شده	V	VCONJ	10	Y	کردن.25	_	_	_
+6	گزارش	N	OBJ	10	
+9	مادر	N	VPP	10	
+10	داد	V	ROOT	0	Y	دادن.110	_	_	_
+12	مادر	N	SBJ	21	_	_	_	_	Arg0
+13	موسی	N	MOZ	12	_	_	_	_	_
+15	ترس	N	ADVRB	21	
+17	بچه	N	OBJ	21	
+19	داخل	PREP	VPP	21	_	_	_	_	Arg3
+20	تنور	N	POSDEP	19	_	_	_	_	_
+21	انداخت	V	PRD	11	Y	انداختن.240	_	_	_
+
+1	بعداز	PREP	ADVRB	5	_	_	ArgM-TMP	_
+2	رفتن	N	POSDEP	1	_	_	_	_
+3	مامورین	N	MOZ	2	_	_	_	_
+4	یوکابد	N	SBJ	5	_	_	Arg0	_
+5	دید	V	ROOT	0	Y	دیدن.47	_	_
+6	که	SUBR	VCL	5	_	_	Arg1	_
+7	کودک	N	SBJ	13	_	_	_	Arg1
+8	ش	PR	MOZ	7	_	_	_	_
+10	آتش	N	ADVRB	13	
+11	تنور	N	MOZ	10	_	_	_	_
+12	سالم	ADJ	MOS	13	_	_	_	Arg2
+13	مانده‌است	V	PRD	6	Y	ماندن.369	_	_
+
+1	نجار	N	SBJ	11	_	_	Arg0	Arg0	Arg0	_
+4	قضیه	N	NPP	5	
+5	بو	N	NVE	6	_	_	_	_	_	_
+6	برده‌بود	V	PRD	2	Y	بو‌بردن.791	_	_	_	_
+7	برای	PREP	ADVRB	11	_	_	_	ArgM-PRP	_	_
+9	جایزه	N	MOZ	8	_	_	_	_	_	_
+10	تصمیم	N	NVE	11	_	_	_	_	_	_
+11	گرفت	V	ROOT	0	Y	تصمیم‌گرفتن.68	_	_	_	_
+12	قضیه	N	OBJ	17	
+15	مامورین	N	NPP	16	
+16	گزارش	N	NVE	17	_	_	_	_	_	_
+17	دهد	V	VCONJ	25	Y	گزارش‌دادن.671	_	_	_	_
+20	اذن	N	ADVRB	25	
+21	خدا	N	MOZ	20	_	_	_	_	_	_
+22	زبان	N	SBJ	25	_	_	_	_	_	Arg1
+23	ش	PR	MOZ	22	_	_	_	_	_	_
+24	بند	N	NVE	25	_	_	_	_	_	_
+25	آمد	V	VCL	11	Y	بند‌آمدن.792	_	_	_	_
+
+2	باز	ADV	ADVRB	12	_	_	_	ArgM-ADV	_	_	_
+4	قصد	N	NVE	5	_	_	_	_	_	_	_
+5	کرد	V	PRD	3	Y	قصد‌کردن.793	_	_	_	_	_
+6	دوباره	ADV	ADVRB	12	_	_	_	ArgM-EXT	_	_	_
+8	سه‌باره	UNKNOWN	AVCONJ	6	
+12	افتاد	V	VCONJ	27	Y	افتادن.780	_	_	_	_	_
+14	مطمئن	ADJ	MOS	15	_	_	_	_	Arg2	_	_
+15	شد	V	PRD	13	Y	کردن.25	_	_	_	_	_
+17	مصلحتی	N	MOS	20	_	_	_	_	_	Arg2	_
+19	کار	N	NPP	17	
+20	است	V	PRD	16	Y	بودن.15	_	_	_	_	_
+21	برای	PREP	ADVRB	27	_	_	_	_	_	_	ArgM-PRP
+23	تصمیم	N	NVE	27	_	_	_	_	_	_	_
+25	ساخت	N	NPP	23	
+26	صندوق	N	MOZ	25	_	_	_	_	_	_	_
+27	گرفت	V	ROOT	0	Y	تصمیم‌گرفتن.68	_	_	_	_	_
+
+1	یوکابد	N	SBJ	9	_	_	Arg0	Arg0	_	_
+2	طبق	PREP	ADVRB	9	_	_	ArgM-ADV	_	_	_
+3	فرمان	N	POSDEP	2	_	_	_	_	_	_
+4	الهی	ADJ	NPOSTMOD	3	_	_	_	_	_	_
+5	موسی	N	OBJ	9	
+8	صندوق	N	VPP	9	
+9	گذاشت	V	VCONJ	16	Y	گذاشتن.225	_	_	_	_
+11	صبحگاهان	N	ADVRB	16	_	_	_	ArgM-TMP	_	_
+14	درون	PREP	VPP	16	_	_	_	Arg3	_	_
+15	نیل	N	POSDEP	14	_	_	_	_	_	_
+16	انداخت	V	ROOT	0	Y	انداختن.240	_	_	_	_
+18	آب	N	SBJ	24	_	_	_	_	Arg0	_
+19	به‌سرعت	ADV	ADVRB	24	_	_	_	_	ArgM-MNR	_
+20	صندوق	N	OBJ	24	
+24	برد	V	VCONJ	31	Y	بردن.208	_	_	_	_
+26	خداوند	N	SBJ	31	_	_	_	_	_	Arg0
+28	مادر	N	VPP	31	
+29	موسی	N	MOZ	28	_	_	_	_	_	_
+30	آرامش	N	NVE	31	_	_	_	_	_	_
+31	داد	V	PRD	17	Y	آرامش‌دادن.794	_	_	_	_
+
+1	رامسیس	N	APP	15	_	_	Arg1	_	_	_
+4	زن	N	ADVRB	13	
+5	ش	PR	MOZ	4	_	_	_	_	_	_
+6	آسیه	N	APP	4	_	_	_	_	_	_
+9	رود	N	MOZ	8	_	_	_	_	_	_
+10	نیل	N	MOZ	9	_	_	_	_	_	_
+11	مشغول	ADJ	MOS	13	_	_	Arg2	_	_	_
+12	تفریح	N	NEZ	11	_	_	_	_	_	_
+13	بودند	V	PRD	2	Y	بودن.15	_	_	_	_
+14	چشم	N	NVE	18	_	_	_	_	_	_
+17	صندوق	N	VPP	18	
+18	افتاد	V	VCONJ	21	Y	چشم‌افتادن.510	_	_	_	_
+20	دستور	N	NVE	21	_	_	_	_	_	_
+21	داد	V	ROOT	0	Y	دستور‌دادن.104	_	_	_	_
+23	صندوق	N	OBJ	27	
+26	آب	N	VPP	27	
+27	بگیرند	V	VCL	21	Y	گرفتن.135	_	_	_	_
+
+1	بعداز	PREP	ADVRB	10	_	_	ArgM-TMP	_	_
+3	صندوق	N	MOZ	2	_	_	_	_	_
+5	آب	N	NPP	2	
+6	فرعون	N	SBJ	10	_	_	Arg0	_	_
+7	درب	N	OBJ	10	
+10	گشود	V	VCONJ	14	Y	گشودن.540	_	_	_
+13	تعجب	N	ADVRB	14	
+14	دید	V	ROOT	0	Y	دیدن.47	_	_	_
+15	که	SUBR	VCL	14	_	_	_	Arg1	_
+16	نوزادی	N	SBJ	19	_	_	_	_	Arg0
+17	درون	N	ADVC	19	_	_	_	_	ArgM-LOC
+18	ش	PR	MOZ	17	_	_	_	_	_
+19	نهفته‌است	V	PRD	15	Y	پوشاندن.321	_	_	_
+
+1	هنگامی	N	ADVRB	12	_	_	_	ArgM-TMP	_	_	_	_	_	_
+3	نگاه	N	SBJ	7	_	_	Arg0	_	_	_	_	_	_	_
+4	آسیه	N	MOZ	3	_	_	_	_	_	_	_	_	_	_
+6	کودک	N	VPP	7	
+7	افتاد	V	PRD	2	Y	افتادن.780	_	_	_	_	_	_	_	_
+8	محبت	N	OBJ	12	
+9	ش	PR	MOZ	8	_	_	_	_	_	_	_	_	_	_
+11	جلب	N	NVE	12	_	_	_	_	_	_	_	_	_	_
+12	کرد	V	VCONJ	16	Y	جلب‌کردن.796	_	_	_	_	_	_	_	_
+14	فرعون	N	SBJ	16	_	_	_	_	Arg1	Arg0	_	Arg0	_	_
+15	عصبانی	ADJ	MOS	16	_	_	_	_	Arg2	_	_	_	_	_
+16	شد	V	VCONJ	18	Y	کردن.25	_	_	_	_	_	_	_	_
+18	گفت	V	VCONJ	30	Y	گفتن.35	_	_	_	_	_	_	_	_
+19	که	SUBR	VCL	18	_	_	_	_	_	Arg1	_	_	_	_
+20	چرا	ADV_INTG	ADVRB	23	_	_	_	_	_	_	ArgM-CAU	_	_	_
+21	او	PR	SBJ	23	_	_	_	_	_	_	Arg1	_	_	_
+22	کشته	ADJ	MOS	23	_	_	_	_	_	_	Arg2	_	_	_
+23	‌نشده‌است	V	PRD	19	Y	کردن.25	_	_	_	_	_	_	_	_
+25	دستور	N	OBJ	30	
+26	کشته‌شدن	N	MOZ	25	_	_	_	_	_	_	_	_	_	_
+29	صادر	ADJ	NVE	30	_	_	_	_	_	_	_	_	_	_
+30	کرد	V	VCONJ	36	Y	صادر‌کردن.292	_	_	_	_	_	_	_	_
+32	آسیه	N	SBJ	36	_	_	_	_	_	_	_	_	Arg1	_
+33	مانع	N	MOS	36	_	_	_	_	_	_	_	_	Arg2	_
+35	کار	N	MOZ	33	_	_	_	_	_	_	_	_	_	_
+36	شد	V	VCONJ	45	Y	کردن.25	_	_	_	_	_	_	_	_
+39	اصرار	N	ADVRB	45	
+43	فرزندی	N	ADVRB	45	
+44	قبول	N	NVE	45	_	_	_	_	_	_	_	_	_	_
+45	کردند	V	ROOT	0	Y	قبول‌کردن.592	_	_	_	_	_	_	_	_
+
+1	طولی	N	NVE	2	_	_	_	_
+2	نکشید	V	ROOT	0	Y	طول‌کشیدن.443	_	_
+3	که	SUBR	VCL	2	_	_	Arg1	_
+4	موسی	N	SBJ	6	_	_	_	Arg1
+5	گرسنه	ADJ	MOS	6	_	_	_	Arg2
+6	‌شد	V	PRD	3	Y	کردن.25	_	_
+
+3	حین	N	ADVRB	5	
+4	دختری	N	SBJ	5	_	_	Arg0	_	_	_
+5	گفت	V	ROOT	0	Y	گفتن.35	_	_	_	_
+6	که	SUBR	VCL	5	_	_	Arg1	_	_	_
+7	من	PR	SBJ	10	_	_	_	Arg0	_	_
+8	مادری	N	OBJ	10	10	_	_	_	Arg1	_	_
+10	می‌شناسم	V	PRD	6	Y	شناختن.64	_	_	_	_
+12	حاضر	ADJ	MOS	13	_	_	_	_	Arg2	_
+13	است	V	PRD	11	Y	بودن.15	_	_	_	_
+15	کودک	N	OBJ	18	
+17	شیر	N	NVE	18	_	_	_	_	_	_
+18	دهد	V	ACL	12	Y	شیر‌دادن.800	_	_	_	_
+
+1	مامورین	N	SBJ	7	_	_	Arg0	_
+2	مادر	N	OBJ	7	
+3	موسی	N	MOZ	2	_	_	_	_
+6	کاخ	N	VPP	7	
+7	بردند	V	ROOT	0	Y	بردن.208	_	_
+8	وسپس	SUBR	VCL	7	_	_	_	_
+9	موسی	N	SBJ	16	_	_	_	Arg0
+11	اشتیاق	N	ADVRB	16	
+12	مشغول	ADJ	MOS	16	_	_	_	Arg2
+13	خوردن	N	NEZ	12	_	_	_	_
+14	شیر	N	MOZ	13	_	_	_	_
+15	مادر	N	MOZ	14	_	_	_	_
+16	شد	V	PRD	8	Y	کردن.25	_	_
+
+1	بدین‌ترتیب	ADV	ADVRB	14	_	_	_	ArgM-ADV
+2	خدا	N	SBJ	14	_	_	_	Arg0
+4	وعده	N	NPP	13	13	_	_	_	Arg3
+7	برگرداندن	N	MOS	12	_	_	Arg2	_
+8	موسی	N	MOZ	7	_	_	_	_
+10	مادر	N	NPP	7	
+11	ش	PR	MOZ	10	_	_	_	_
+12	بود	V	PRD	6	Y	بودن.15	_	_
+14	کرد	V	ROOT	0	Y	عمل‌کردن.370	_	_
+
+1	زمانی	N	ADVRB	23	_	_	_	_	ArgM-TMP	_
+3	موسی	N	SBJ	9	_	_	Arg1	Arg1	Arg0	Arg1
+5	دوران	N	VPP	9	
+6	رشد	N	MOZ	5	_	_	_	_	_	_
+8	بلوغ	N	NCONJ	6	
+9	رسید	V	VCONJ	15	Y	رسیدن.90	_	_	_	_
+12	قدرت	N	AJPP	14	
+13	جسمانی	ADJ	NPOSTMOD	12	_	_	_	_	_	_
+14	برخوردار	ADJ	MOS	15	_	_	_	Arg2	_	_
+15	شد	V	PRD	2	Y	کردن.25	_	_	_	_
+17	یکی‌از	ADJ	NPREMOD	18	_	_	_	_	_	_
+18	روزها	N	ADVRB	23	
+19	کاخ	N	OBJ	23	
+20	فرعون	N	MOZ	19	_	_	_	_	_	_
+22	ترک	N	NVE	23	_	_	_	_	_	_
+23	کرد	V	VCONJ	27	Y	ترک‌کردن.431	_	_	_	_
+25	وارد	ADJ	MOS	27	_	_	_	_	_	Arg2
+26	شهر	N	NEZ	25	_	_	_	_	_	_
+27	شد	V	ROOT	0	Y	کردن.25	_	_	_	_
+
+1	موسی	N	SBJ	6	_	_	Arg1	Arg0	_
+4	حادثه	N	AJPP	5	
+5	ناراحت	ADJ	MOS	6	_	_	Arg2	_	_
+6	شد	V	VCONJ	9	Y	کردن.25	_	_	_
+8	توبه	N	NVE	9	_	_	_	_	_
+9	کرد	V	ROOT	0	Y	توبه‌کردن.544	_	_	_
+11	خدا	N	SBJ	15	_	_	_	_	Arg0
+12	توبه	N	OBJ	15	
+15	پذیرفت	V	PRD	10	Y	پذیرفتن.88	_	_	_
+
+1	ازطرف	PREP	ADVRB	8	_	_	ArgM-ADV2	_
+3	گزارش	N	SBJ	8	_	_	Arg0	_
+5	نیز	ADV	ADVRB	8	_	_	ArgM-ADV	_
+7	فرعون	N	VPP	8	
+8	رسیده	V	VCONJ	15	Y	رسیدن.501	_	_
+10	او	PR	SBJ	15	_	_	_	Arg0
+11	تصمیم	N	NVE	15	_	_	_	_
+13	قتل	N	NPP	11	
+14	موسی	N	MOZ	13	_	_	_	_
+15	گرفته‌بود	V	ROOT	0	Y	تصمیم‌گرفتن.68	_	_
+
+3	حین	N	ADVRB	17	
+4	یکی‌از	ADJ	NPREMOD	5	_	_	_	_
+5	مشاورین	N	SBJ	17	_	_	Arg1	Arg0
+6	فرعون	N	MOZ	5	_	_	_	_
+9	ظلم	N	AJPP	11	
+11	بیزار	ADJ	MOS	12	_	_	Arg2	_
+12	بود	V	PRD	7	Y	بودن.15	_	_
+13	قضیه	N	OBJ	17	
+16	موسی	N	VPP	17	
+17	گفت	V	ROOT	0	Y	گفتن.35	_	_
+
+1	موسی	N	SBJ	8	_	_	Arg1	Arg1
+4	سفر	N	ADVRB	8	
+6	زاد‌و‌توشه	N	AJPP	7	
+7	محروم	ADJ	MOS	8	_	_	Arg2	_
+8	بود	V	VCONJ	18	Y	بودن.15	_	_
+11	نعمت	N	AJPP	17	
+12	توکل	N	MOZ	11	_	_	_	_
+14	ایمان	N	NCONJ	12	
+16	خدا	N	NPP	12	
+17	بهره‌مند	ADJ	MOS	18	_	_	_	Arg2
+18	بود	V	ROOT	0	Y	بودن.15	_	_
+
+1	موسی	N	SBJ	6	_	_	Arg1	_
+3	روز	N	ADVRB	6	_	_	ArgM-TMP	_
+6	بود	V	VCONJ	19	Y	بودن.15	_	_
+8	پس‌از	PREP	ADVRB	19	_	_	_	ArgM-TMP
+12	رفتن	N	POSDEP	8	_	_	_	_
+16	گیاهان	N	NPP	14	
+18	مدین	N	VPP	19	
+19	رسید	V	ROOT	0	Y	رسیدن.501	_	_
+
+1	موسی	N	SBJ	7	_	_	Arg1	_	_
+2	پس‌از	PREP	ADVRB	7	_	_	ArgM-TMP	_	_
+3	صحبت	N	POSDEP	2	_	_	_	_	_
+5	آن‌ها	PR	NPP	3	
+6	متوجه	ADJ	MOS	7	_	_	Arg2	_	_
+7	‌شد	V	ROOT	0	Y	کردن.25	_	_	_
+9	آن‌ها	PR	SBJ	12	_	_	_	Arg0	Arg0
+10	پدر	N	OBJ	12	_	_	_	Arg1	_
+11	پیری	ADJ	NPOSTMOD	10	_	_	_	_	_
+12	دارند	V	VCONJ	17	Y	داشتن.39	_	_	_
+14	به‌جای	PREP	ADVRB	17	_	_	_	_	ArgM-ADV
+16	گوسفندچرانی	ADJ	MOS	17	_	_	_	_	Arg2
+17	می‌کنند	V	PRD	8	Y	کردن.25	_	_	_
+
+1	موسی	N	SBJ	7	_	_	_	Arg0	_
+2	دلوی	N	OBJ	7	
+4	پر	ADJ	MOS	7	_	_	Arg2	_	_
+6	آب	N	AJPP	4	
+7	نمود	V	VCONJ	13	Y	کردن.25	_	_	_
+9	گوسفندان	N	OBJ	13	
+10	آن‌ها	PR	MOZ	9	_	_	_	_	_
+12	سیراب	ADJ	MOS	13	_	_	_	Arg2	_
+13	نمود	V	ROOT	0	Y	کردن.25	_	_	_
+14	وسپس	SUBR	VCL	13	_	_	_	_	_
+15	برای	PREP	ADVRB	20	_	_	_	_	ArgM-PRP
+16	استراحت	N	POSDEP	15	_	_	_	_	_
+17	به‌زیر	PREP	VPP	20	_	_	_	_	Arg4
+18	سایه	N	POSDEP	17	_	_	_	_	_
+19	درختی	N	MOZ	18	_	_	_	_	_
+20	رفت	V	PRD	14	Y	رفتن.17	_	_	_
+
+1	دختران	N	SBJ	4	_	_	Arg0	Arg0
+2	به‌نزد	PREP	VPP	4	_	_	Arg4	_
+3	پدر	N	POSDEP	2	_	_	_	_
+4	رفته	V	VCONJ	9	Y	رفتن.17	_	_
+6	ماجرا	N	OBJ	9	
+8	تعریف	N	NVE	9	_	_	_	_
+9	نمودند	V	ROOT	0	Y	تعریف‌کردن.855	_	_
+
+1	پیرمرد	N	SBJ	7	_	_	Arg0	_
+2	دختر	N	OBJ	7	
+3	ش	PR	MOZ	2	_	_	_	_
+4	صفورا	N	APP	2	_	_	_	_
+6	مامور	ADJ	MOS	7	_	_	Arg2	_
+7	کرد	V	ROOT	0	Y	کردن.25	_	_
+9	موسی	N	OBJ	15	
+11	برای	PREP	ADVRB	15	_	_	_	ArgM-PRP
+12	قدردانی	N	POSDEP	11	_	_	_	_
+13	به‌نزد	PREP	VPP	15	_	_	_	Arg4
+14	ش	PR	POSDEP	13	_	_	_	_
+15	بیاورد	V	VCL	7	Y	آوردن.452	_	_
+
+1	موسی	N	SBJ	4	_	_	Arg0	Arg0
+2	دعوت	N	OBJ	4	
+4	پذیرفت	V	VCONJ	8	Y	پذیرفتن.88	_	_
+8	افتادند	V	ROOT	0	Y	به‌راه‌افتادن.805	_	_
+
+1	موسی	N	SBJ	14	_	_	Arg0
+3	ع	ARAB	POSDEP	1	_	_	_
+5	ماجرای	N	OBJ	14	
+8	برای	PREP	NPP	13	_	_	Arg3
+9	شعیب	N	POSDEP	8	_	_	_
+11	ع	ARAB	POSDEP	9	_	_	_
+13	تعریف	N	NVE	14	_	_	_
+14	کرد	V	ROOT	0	Y	تعریف‌کردن.855	_
+
+1	موسی	N	SBJ	5	_	_	Arg0	Arg0	Arg0
+2	درخواست	N	OBJ	5	
+3	شعیب	N	MOZ	2	_	_	_	_	_
+5	پذیرفت	V	VCONJ	10	Y	پذیرفتن.88	_	_	_
+8	صفورا	N	NPP	9	
+9	ازدواج	N	NVE	10	_	_	_	_	_
+10	نمود	V	VCONJ	18	Y	ازدواج‌کردن.131	_	_	_
+13	زندگی	N	NPP	17	
+16	مدین	N	NPP	13	
+17	ادامه	N	NVE	18	_	_	_	_	_
+18	داد	V	ROOT	0	Y	ادامه‌دادن.527	_	_	_
+
+1	او	PR	SBJ	13	_	_	Arg0	_	_
+2	پس‌از	PREP	ADVRB	13	_	_	ArgM-TMP2	_	_
+4	سال	N	MESU	5	_	_	_	_	_
+5	سکونت	N	POSDEP	2	_	_	_	_	_
+7	مدین	N	NPP	5	
+9	آخرین	ADJ	NPREMOD	10	_	_	_	_	_
+10	سال	N	ADVRB	13	
+12	شعیب	N	VPP	13	
+13	گفت	V	ROOT	0	Y	گفتن.35	_	_	_
+14	که	SUBR	VCL	13	_	_	Arg1	_	_
+15	می‌خواهم	V	PRD	14	Y	خواستن.51	_	_	_
+17	مصر	N	VPP	18	
+18	بازگردم	V	VCL	15	Y	باز‌گشتن.363	_	_	_
+
+1	شعیب	N	SBJ	7	_	_	Arg0	_	_	_
+5	اتاقی	N	NPP	6	
+6	راهنمایی	N	NVE	7	_	_	_	_	_	_
+7	کرد	V	ROOT	0	Y	راهنمایی‌کردن.811	_	_	_	_
+10	عصا	N	SBJ	16	_	_	_	Arg1	_	_
+12	پیامبران	N	NPP	10	
+16	بود	V	PRD	8	Y	بودن.15	_	_	_	_
+18	ناگهان	ADV	ADVRB	25	_	_	_	_	ArgM-ADV	_
+19	عصای	N	SBJ	25	_	_	_	_	Arg0	Arg0
+20	نوح	N	MOZ	19	_	_	_	_	_	_
+22	ابراهیم	N	NCONJ	20	
+23	به‌طرف	PREP	VPP	25	_	_	_	_	Arg4	_
+25	جهید	V	PRD	17	Y	جهیدن.812	_	_	_	_
+26	و‌سپس	SUBR	VCL	25	_	_	_	_	_	_
+28	دست	N	VPP	31	
+29	ش	PR	MOZ	28	_	_	_	_	_	_
+30	قرار	N	NVE	31	_	_	_	_	_	_
+31	گرفت	V	PRD	26	Y	قرار‌گرفتن.78	_	_	_	_
+
+1	شعیب	N	SBJ	4	_	_	Arg0	_	_
+4	گفت	V	ROOT	0	Y	گفتن.35	_	_	_
+5	که	SUBR	VCL	4	_	_	Arg1	_	_
+8	بگذارد	V	VCONJ	12	Y	گذاشتن.225	_	_	_
+10	عصای	N	OBJ	12	_	_	_	_	Arg1
+12	بردارد	V	PRD	5	Y	برداشتن.814	_	_	_
+
+1	شعیب	N	SBJ	4	_	_	Arg0	_	_
+3	موسی	N	VPP	4	
+4	گفت	V	ROOT	0	Y	گفتن.35	_	_	_
+7	بردار	V	VCL	4	Y	برداشتن.814	_	_	_
+9	خداوند	N	SBJ	15	_	_	_	_	Arg0
+14	اختصاص	N	NVE	15	_	_	_	_	_
+15	داده‌است	V	PRD	8	Y	اختصاص‌دادن.815	_	_	_
+
+1	پس‌از	PREP	PREDEP	8	_	_	ArgM-TMP	_
+3	ماجرا	N	POSDEP	1	_	_	_	_
+4	موسی	N	OBJ	8	8	_	_	Arg1	_
+5	اثاثیه	N	MOZ	4	_	_	_	_
+8	برداشت	V	ROOT	0	Y	برداشتن.814	_	_
+11	همراه	N	ADVRB	17	
+12	همسر	N	MOZ	11	_	_	_	_
+13	ش	PR	MOZ	12	_	_	_	_
+14	به‌طرف	PREP	NPP	16	_	_	_	Arg4
+15	مصر	N	POSDEP	14	_	_	_	_
+16	حرکت	N	NVE	17	_	_	_	_
+17	نمود	V	PRD	9	Y	حرکت‌کردن.186	_	_
+
+2	ندا	N	NVE	3	_	_	_	_
+3	آمد	V	PRD	1	Y	ندا‌دادن.741	_	_
+6	موسی	N	POSDEP	5	_	_	_	Arg0
+9	دست	N	ADVRB	12	
+10	راست	ADJ	NPOSTMOD	9	_	_	_	_
+11	چه	PR_INTG	OBJ	12	_	_	_	Arg1
+12	داری	V	VCL	3	Y	داشتن.39	_	_
+
+1	موسی	N	SBJ	2	_	_	Arg0	_	_	_	_
+2	گفت	V	ROOT	0	Y	گفتن.35	_	_	_	_	_
+4	عصای	N	MOS	6	_	_	_	Arg2	_	_	_
+6	است	V	VCL	2	Y	بودن.15	_	_	_	_	_
+8	بر	PREP	NPP	10	_	_	_	_	Arg3	_	_
+10	تکیه	N	NVE	11	_	_	_	_	_	_	_
+11	می‌زنم	V	VCONJ	19	Y	تکیه‌زدن.248	_	_	_	_	_
+13	برگ	N	OBJ	19	
+14	درختان	N	MOZ	13	_	_	_	_	_	_	_
+16	برای	PREP	ADVRB	19	_	_	_	_	_	Arg4	_
+17	گوسفندان	N	POSDEP	16	_	_	_	_	_	_	_
+18	م	PR	MOZ	17	_	_	_	_	_	_	_
+19	می‌ریزم	V	VCONJ	26	Y	ریختن.693	_	_	_	_	_
+21	کارهای	N	OBJ	26	
+24	نیز	ADV	ADVRB	26	_	_	_	_	_	_	ArgM-ADV
+26	می‌دهم	V	PRD	7	Y	انجام‌دادن.158	_	_	_	_	_
+
+1	بنابراین	SUBR	ROOT	0	_	_	ArgM-DIS	_
+3	دستور	N	ADVRB	11	
+4	خدا	N	MOZ	3	_	_	_	_
+8	نشانه	N	ADVRB	11	
+9	به‌نزد	PREP	VPP	11	_	_	Arg3	_
+10	فرعون	N	POSDEP	9	_	_	_	_
+11	شتافت	V	PRD	1	Y	شتافتن.453	_	_
+13	جواب	N	NVE	17	_	_	_	_
+14	سرکشی	N	OBJ	17	
+17	بدهد	V	VCL	11	Y	جواب‌دادن.460	_	_
+
+1	خداوند	N	SBJ	7	_	_	_	_
+3	خواسته‌های	N	OBJ	7	
+4	موسی	N	MOZ	3	_	_	_	_
+6	اجابت	N	NVE	7	_	_	_	_
+7	نمود	V	VCONJ	13	Y	اجابت‌کردن.541	_	_
+11	امید	N	NVE	13	_	_	_	_
+12	پیروزی	N	MOZ	11	_	_	_	_
+13	داد	V	ROOT	0	Y	امید‌دادن.828	_	_
+
+1	موسی	N	SBJ	4	_	_
+3	مصر	N	VPP	4	
+4	رسید	V	VCONJ	
+7	هارون	N	VPP	12	
+9	مادر	N	NCONJ	7	
+10	ش	PR	MOZ	9	_	_
+11	ملاقات	N	NVE	12	_	_
+12	نمود	V	ROOT	0	_	_
+13	وسپس	SUBR	VCL	12	_	_
+14	موسی	N	SBJ	23	_	_
+15	پیامبری	N	OBJ	23	
+19	برادر	N	NPP	22	
+21	بنی‌اسراییل	N	NCONJ	19	
+23	نمود	V	PRD	13	_	_
+24	و‌سپس	SUBR	VCL	23	_	_
+25	آن‌ها	PR	SBJ	30	_	_
+27	دعوت	N	OBJ	30	
+28	ش	PR	MOZ	27	_	_
+30	پذیرفتند	V	PRD	24	_	_
+
+1	خداوند	N	SBJ	5	_	_
+4	ابلاغ	N	NVE	5	_	_
+5	کرد	V	ROOT	0	_	_
+7	به‌سمت	PREP	VPP	9	_	_
+8	فرعون	N	POSDEP	7	_	_
+9	بشتابد	V	VCONJ	
+11	ضمنا	ADV	ADVRB	16	_	_
+14	به‌نرمی	ADV	ADVRB	15	_	_
+15	سخن	N	NVE	16	_	_
+16	بگوید	V	PRD	6	_	_
+19	طبع	N	OBJ	24	
+20	سرکش	ADJ	NPOSTMOD	19	_	_
+23	ملایم	ADJ	MOS	24	_	_
+24	سازد	V	VCL	
+
+1	آن‌ها	PR	SBJ	5	_	_
+3	خداوند	N	NPP	4	
+4	عرضه	N	NVE	5	_	_
+5	کردند	V	ROOT	0	_	_
+9	فرعون	N	VPP	10	
+10	می‌ترسیم	V	PRD	6	_	_
+
+1	موسی	N	SBJ	8	_	_
+3	هارون	N	NCONJ	1	
+4	دعوت	N	OBJ	8	
+7	لبیک	N	OBJ2	8	_	_
+8	گفته	V	VCONJ	
+10	به‌سراغ	PREP	VPP	12	_	_
+11	فرعون	N	POSDEP	10	_	_
+12	رفته	V	VCONJ	
+14	رسالت	N	OBJ	18	
+15	الهی	ADJ	NPOSTMOD	14	_	_
+17	ابلاغ	N	NVE	18	_	_
+18	نمودند	V	ROOT	0	_	_
+
+2	فرعون	N	SBJ	7	_	_
+6	مناقشه	N	VPP	7	
+7	پرداخت	V	VCONJ	
+11	درمورد	PREP	NPP	14	_	_
+12	خدای	N	POSDEP	11	_	_
+13	جهانیان	N	MOZ	12	_	_
+14	سوال	N	NVE	15	_	_
+15	نمود	V	ROOT	0	_	_
+
+1	موسی	N	SBJ	2	_	_
+2	گفت	V	ROOT	0	_	_
+4	خدای	N	SBJ	10	_	_
+5	جهانیان	N	MOZ	4	_	_
+6	خالق	N	MOS	10	_	_
+7	آسمان‌ها	N	MOZ	6	_	_
+9	زمین	N	NCONJ	7	
+10	است	V	VCONJ	19	_	_
+14	خدای	N	MOS	19	_	_
+17	پیشینیان	N	NCONJ	15	
+19	ست	V	VCL	2	_	_
+22	راز	N	OBJ	27	
+23	قدرت	N	MOZ	22	_	_
+24	ش	PR	MOZ	23	_	_
+26	درک	N	NVE	27	_	_
+27	کنید	V	PRD	21	_	_
+
+1	فرعون	N	SBJ	5	_	_
+3	اطرافیان	N	VPP	5	
+4	ش	PR	MOZ	3	_	_
+5	گفت	V	ROOT	0	_	_
+8	نمی‌شنوید	V	VCL	5	_	_
+10	می‌گوید	V	VCL	8	_	_
+
+2	موسی	N	NVE	5	_	_
+4	هارون	N	NCONJ	2	
+5	دیدند	V	NCL	1	_	_
+7	فرعون	N	SBJ	11	_	_
+8	سخن	N	OBJ	11	
+9	آن‌ها	PR	MOZ	8	_	_
+11	نمی‌پذیرد	V	PRD	6	_	_
+15	عذاب	N	NPP	17	
+16	الهی	ADJ	NPOSTMOD	15	_	_
+17	تهدید	N	NVE	18	_	_
+18	نمودند	V	ROOT	0	_	_
+
+1	بحث	N	SBJ	5	_	_
+4	ادامه	N	NVE	5	_	_
+5	داشت	V	ROOT	0	_	_
+9	فرعون	N	SBJ	11	_	_
+10	دستور	N	NVE	11	_	_
+11	داد	V	PRD	8	_	_
+13	برجی	N	OBJ	15	_	_
+14	بلند	ADJ	NPOSTMOD	13	_	_
+15	بسازند	V	VCL	
+21	خدای	N	NPP	23	
+22	موسی	N	MOZ	21	_	_
+23	خبری	N	OBJ	25	_	_
+24	کسب	N	NVE	25	_	_
+25	نماید	V	VCL	
+
+1	موسی	N	SBJ	10	_	_
+5	عصای	N	OBJ	10	
+9	زمین	N	VPP	10	
+10	انداخت	V	VCONJ	
+13	شکل	N	ADVC	17	
+14	ماری	N	MOZ	13	_	_
+16	ظاهر	N	NVE	17	_	_
+17	شد	V	PRD	11	_	_
+20	دست	N	OBJ	26	
+21	ش	PR	MOZ	20	_	_
+24	جیب	N	VPP	26	
+25	ش	PR	MOZ	24	_	_
+26	فروبرد	V	ROOT	0	_	_
+28	دست	N	SBJ	33	_	_
+29	ش	PR	MOZ	28	_	_
+30	نورانی	ADJ	MOS	33	_	_
+32	سفید	ADJ	AJCONJ	30	
+33	شد	V	PRD	27	_	_
+
+1	فرعون	N	SBJ	5	_	_
+3	اطرافیان	N	VPP	5	
+4	ش	PR	MOZ	3	_	_
+5	گفت	V	ROOT	0	_	_
+8	قصد	N	NVE	9	_	_
+9	دارد	V	PRD	6	_	_
+13	سحر	N	ADVRB	20	
+15	جادو	N	NCONJ	13	
+17	سرزمین	N	NPP	19	
+20	نماید	V	VCL	9	_	_
+
+1	آن‌ها	PR	SBJ	14	_	_
+2	پس‌از	PREP	ADVRB	14	_	_
+3	حضور	N	POSDEP	2	_	_
+5	قصر	N	NPP	3	
+8	فرعون	N	NPP	11	
+9	درصورت	PREP	ADVRB	14	_	_
+10	پیروزی	N	POSDEP	9	_	_
+11	تقاضای	N	NVE	14	_	_
+12	هدایای	N	MOZ	11	_	_
+13	فراوان	ADJ	NPOSTMOD	12	_	_
+14	نمودند	V	VCONJ	
+16	فرعون	N	SBJ	18	_	_
+18	پذیرفت	V	ROOT	0	_	_
+
+2	موعود	ADJ	NPOSTMOD	1	_	_
+3	فرارسید	V	VCONJ	
+5	جماعت	N	SBJ	10	_	_
+6	انبوهی	ADJ	NPOSTMOD	5	_	_
+8	محل	N	VPP	10	
+9	نمایش	N	MOZ	8	_	_
+10	آمدند	V	ROOT	0	_	_
+
+2	ابتدای	N	ADVRB	10	
+3	کار	N	MOZ	2	_	_
+4	ساحران	N	SBJ	10	_	_
+6	غرور	N	ADVRB	10	
+7	مخصوصی	ADJ	NPOSTMOD	6	_	_
+9	موسی	N	VPP	10	
+10	گفتند	V	ROOT	0	_	_
+14	شروع	N	NVE	15	_	_
+15	می‌کنی	V	VCONJ	
+18	شروع	N	NVE	19	_	_
+19	کنیم	V	VCL	10	_	_
+
+1	ساحران	N	SBJ	10	_	_
+2	طناب‌ها	N	OBJ	10	
+4	وسایل	N	NCONJ	2	
+5	جادوگری	N	MOZ	4	_	_
+9	زمین	N	VPP	10	
+10	انداختند	V	ROOT	0	_	_
+12	به‌صورت	PREP	VPP	15	_	_
+13	مارهای	N	POSDEP	12	_	_
+14	بزرگی	ADJ	NPOSTMOD	13	_	_
+15	درآمدند	V	VCONJ	
+17	صحنه	N	OBJ	22	
+18	وحشتناکی	ADJ	NPOSTMOD	17	_	_
+22	آوردند	V	PRD	11	_	_
+23	و‌سپس	SUBR	VCL	22	_	_
+24	قسم	N	OBJ	26	_	_
+25	یاد	N	NVE	26	_	_
+26	کردند	V	PRD	23	_	_
+29	پیروز	N	MOS	30	_	_
+30	یم	V	PRD	27	_	_
+
+2	فرعونیان	N	SBJ	6	_	_
+3	غرق	ADJ	MOS	6	_	_
+5	شادی	N	AJPP	3	
+6	بودند	V	ROOT	0	_	_
+
+4	موسی	N	MOZ	3	_	_
+6	تک‌وتنها	ADJ	MOS	7	_	_
+7	بود	V	VCONJ	
+10	هارون	N	SBJ	14	_	_
+13	ش	PR	PREDEP	14	
+14	بود	V	PRD	5	_	_
+15	ترس	N	SBJ	26	_	_
+16	خفیفی	ADJ	NPOSTMOD	15	_	_
+18	شکست	N	NPP	15	
+19	دربرابر	PREP	NPP	18	_	_
+20	طاغوت	N	POSDEP	19	_	_
+22	دل	N	ADVC	26	
+23	ش	PR	MOZ	22	_	_
+26	آمد	V	ROOT	0	_	_
+
+1	موسی	N	SBJ	5	_	_
+2	عصای	N	OBJ	5	
+5	انداخت	V	ROOT	0	_	_
+7	عصا	N	SBJ	12	_	_
+9	اژدهای	N	NPP	11	
+10	بزرگی	ADJ	NPOSTMOD	9	_	_
+11	تبدیل	N	NVE	12	_	_
+12	شد	V	VCONJ	
+15	جان	N	VPP	18	
+16	مارهای	N	MOZ	15	_	_
+17	مصنوعی	ADJ	NPOSTMOD	16	_	_
+18	افتاد	V	VCONJ	
+23	لحظه‌ای	N	ADVRB	25	
+24	کوتاه	ADJ	NPOSTMOD	23	_	_
+25	بلعید	V	PRD	6	_	_
+
+1	ساحران	N	SBJ	2	_	_
+2	فهمیدند	V	ROOT	0	_	_
+5	کار	N	SBJ	9	_	_
+6	ربطی	ADJ	NVE	9	_	_
+8	جادو	N	AJPP	6	
+9	ندارد	V	PRD	3	_	_
+11	ازاین‌رو	SUBR	VCL	9	_	_
+13	خاک	N	VPP	14	
+14	افتاده	V	VCONJ	
+17	موسی	N	NPP	21	
+19	خدای	N	NCONJ	17	
+20	ش	PR	MOZ	19	_	_
+21	ایمان	N	ENC	22	_	_
+22	آوردند	V	PRD	11	_	_
+
+1	فرعون	N	SBJ	8	_	_
+3	دیدن	N	ADVRB	8	
+5	منظره	N	MOZ	3	_	_
+7	عصبانی	ADJ	MOS	8	_	_
+8	شد	V	VCONJ	
+11	آن‌ها	PR	VPP	12	
+12	گفت	V	ROOT	0	_	_
+14	قبل‌از	PREP	ADVRB	24	_	_
+19	اذن	N	NVE	20	_	_
+20	دهم	V	PRD	16	_	_
+23	ایمان	N	NVE	24	_	_
+24	آوردید	V	VCL	12	_	_
+28	دست	N	OBJ	36	
+30	پاهای	N	NCONJ	28	
+33	برخلاف	PREP	ADVRB	36	_	_
+35	قطع	N	NVE	36	_	_
+36	می‌کنم	V	PRD	26	_	_
+
+2	ساحران	N	SBJ	5	_	_
+5	گفتند	V	ROOT	0	_	_
+9	موسی	N	PREDEP	13	
+11	خدای	N	NCONJ	9	
+12	ش	PR	MOZ	11	_	_
+13	ایمان	N	NVE	14	_	_
+14	آورده‌ایم	V	PRD	6	_	_
+
+1	پس‌از	PREP	ADVRB	16	_	_
+2	ماجرای	N	POSDEP	1	_	_
+3	پیروزی	N	MOZ	2	_	_
+4	موسی	N	MOZ	3	_	_
+6	جادوگران	N	POSDEP	5	_	_
+7	گروه‌های	N	SBJ	16	_	_
+8	زیادی	ADJ	NPOSTMOD	7	_	_
+10	بنی‌اسراییل	N	NPP	7	
+15	ایمان	N	NVE	16	_	_
+16	آوردند	V	ROOT	0	_	_
+
+1	اطرافیان	N	SBJ	10	_	_
+2	فرعون	N	MOZ	1	_	_
+5	به‌خاطر	PREP	ADVRB	10	_	_
+6	آزاد	ADJ	PREDEP	7	_	_
+7	گذاشتن	N	POSDEP	5	_	_
+8	موسی	N	MOZ	7	_	_
+9	سرزنش	N	NVE	10	_	_
+10	کردند	V	ROOT	0	_	_
+
+1	پیروان	N	SBJ	8	_	_
+2	موسی	N	MOZ	1	_	_
+3	شکایت	N	OBJ	8	
+4	فرعونیان	N	MOZ	3	_	_
+6	به‌نزد	PREP	VPP	8	_	_
+7	موسی	N	POSDEP	6	_	_
+8	بردند	V	ROOT	0	_	_
+
+1	موسی	N	SBJ	8	_	_
+3	فرعونیان	N	OBJ	8	
+5	به‌سوی	PREP	PREDEP	7	_	_
+6	خدا	N	POSDEP	5	_	_
+7	دعوت	N	NVE	8	_	_
+8	می‌کرد	V	VCONJ	
+11	پند	N	SBJ	17	_	_
+13	اندرز	N	NCONJ	11	
+14	ش	PR	OBJ	17	_	_
+16	سودی	N	OBJ	17	_	_
+17	نداشت	V	ROOT	0	_	_
+
+2	خداوند	N	SBJ	8	_	_
+4	دعای	N	OBJ	8	
+5	ش	PR	MOZ	4	_	_
+7	مستجاب	ADJ	MOS	8	_	_
+8	نمود	V	VCONJ	
+10	فرعون	N	OBJ	23	
+12	قوم	N	NCONJ	10	
+13	ش	PR	MOZ	12	_	_
+16	قحطی	N	NPP	22	
+18	خشکسالی	N	NCONJ	16	
+21	عذاب‌ها	N	NCONJ	18	
+22	کیفر	N	NVE	23	_	_
+23	داد	V	ROOT	0	_	_
+
+3	بلا	N	SBJ	8	_	_
+6	آن‌ها	PR	POSDEP	5	_	_
+7	سودی	N	OBJ	8	_	_
+8	نداشت	V	VCONJ	
+10	آن‌ها	PR	SBJ	17	_	_
+13	کارهای	N	NPP	16	
+14	قبلی	ADJ	NPOSTMOD	13	_	_
+16	ادامه	N	NVE	17	_	_
+17	دادند	V	ROOT	0	_	_
+
+2	آن‌ها	PR	SBJ	8	_	_
+5	سرکشی	N	NPP	7	
+7	ادامه	N	NVE	8	_	_
+8	دادند	V	VCONJ	
+12	بلاها	N	NPP	13	
+13	عبرت	N	NVE	14	_	_
+14	نگرفتند	V	ROOT	0	_	_
+
+1	موسی	N	SBJ	10	_	_
+3	پیروان	N	NCONJ	1	
+4	ش	PR	MOZ	3	_	_
+6	ظلم	N	ADVRB	10	
+7	فرعونیان	N	MOZ	6	_	_
+9	ستوه	N	VPRT	10	
+10	آمده‌بودند	V	VCONJ	
+13	فشار	N	MOS	16	
+15	سختی	N	NCONJ	13	
+16	بودند	V	ROOT	0	_	_
+20	وحی	N	NVE	21	_	_
+21	شد	V	PRD	19	_	_
+23	مصر	N	OBJ	26	
+25	ترک	N	NVE	26	_	_
+26	کنند	V	PRD	22	_	_
+
+1	آن‌ها	PR	SBJ	6	_	_
+2	شبانه	ADV	ADVRB	6	_	_
+3	به‌سمت	PREP	PREDEP	5	_	_
+4	فلسطین	N	POSDEP	3	_	_
+5	حرکت	N	NVE	6	_	_
+6	کردند	V	ROOT	0	_	_
+
+1	بنی‌اسراییل	N	SBJ	7	_	_
+4	دریایی	N	VPP	5	
+5	رسیدند	V	PRD	2	_	_
+6	متوقف	ADJ	MOS	7	_	_
+7	شدند	V	VCONJ	
+9	لشکر	N	SBJ	16	_	_
+10	فرعون	N	MOZ	9	_	_
+12	آن‌ها	PR	AJPP	13	
+13	نزدیک	ADJ	MOS	16	_	_
+15	نزدیکتر	ADJ	AJCONJ	13	
+16	می‌شد	V	VCONJ	
+19	امر	N	SBJ	26	_	_
+20	به‌شدت	ADV	ADVRB	26	_	_
+21	باعث	ADJ	MOS	26	_	_
+22	ترس	N	NEZ	21	_	_
+24	وحشت	N	NCONJ	22	
+25	بنی‌اسراییل	N	MOZ	22	_	_
+26	شده‌بود	V	ROOT	0	_	_
+
+3	حین	N	ADVRB	7	
+4	اطرافیان	N	SBJ	7	_	_
+6	موسی	N	VPP	7	
+7	گفتند	V	ROOT	0	_	_
+9	دشمن	N	SBJ	13	_	_
+11	پشت	N	MOS	13	
+12	سر	N	MOZ	11	_	_
+13	null	PSUS	VCONJ	18	
+15	دریا	N	SBJ	18	_	_
+17	جلو	N	MOS	18	
+18	است	V	VCONJ	
+21	توان	N	OBJ	26	
+22	مقابله	N	MOZ	21	_	_
+24	دشمن	N	NPP	22	
+26	نداریم	V	PRD	8	_	_
+
+1	موسی	N	SBJ	4	_	_
+3	آن‌ها	PR	VPP	4	
+4	گفت	V	ROOT	0	_	_
+6	خدا	N	SBJ	9	_	_
+9	ست	V	PRD	5	_	_
+12	نجات	N	MOZ	11	_	_
+17	خواهدداد	V	PRD	10	_	_
+
+3	بحران	N	MOS	5	
+5	بود	V	ROOT	0	_	_
+7	خداوند	N	SBJ	11	_	_
+9	موسی	N	NPP	10	
+10	وحی	N	NVE	11	_	_
+11	کرد	V	PRD	6	_	_
+13	موسی	N	POSDEP	12	_	_
+14	عصای	N	OBJ	19	
+18	دریا	N	VPP	19	
+19	بزن	V	VCL	11	_	_
+
+1	به‌محض	PREP	ADVRB	17	_	_
+4	آخرین	ADJ	NPREMOD	5	_	_
+5	نفر	N	SBJ	12	_	_
+7	یاران	N	NPP	5	
+8	موسی	N	MOZ	7	_	_
+10	دریا	N	AJPP	11	
+11	خارج	ADJ	MOS	12	_	_
+12	شد	V	PRD	3	_	_
+13	آب	N	SBJ	17	_	_
+14	دریا	N	MOZ	13	_	_
+17	رسید	V	ROOT	0	_	_
+19	تمامی	ADJ	NPREMOD	20	_	_
+20	فرعونیان	N	OBJ	24	
+23	هلاکت	N	VPRT	24	
+24	رساند	V	PRD	18	_	_
+
+1	فرعون	N	SBJ	5	_	_
+2	متوجه	ADJ	MOS	5	_	_
+3	اشتباهات	N	NEZ	2	_	_
+5	شد	V	VCONJ	
+8	خدا	N	NPP	9	
+9	طلب	N	NVE	11	_	_
+10	کمک	N	MOZ	9	_	_
+11	کرد	V	VCONJ	
+15	ایمان	N	NVE	16	_	_
+16	آورد	V	ROOT	0	_	_
+
+4	شده‌بود	V	VCONJ	
+6	امواج	N	SBJ	13	_	_
+7	سهمگین	ADJ	NPOSTMOD	6	_	_
+8	دریا	N	MOZ	6	_	_
+10	فرعون	N	OBJ	13	
+12	غرق	ADJ	MOS	13	_	_
+13	کرد	V	ROOT	0	_	_
+14	وسپس	SUBR	VCL	13	_	_
+15	کالبد	N	OBJ	23	
+16	بی‌جان	ADJ	NPOSTMOD	15	_	_
+21	دریا	N	MOZ	20	_	_
+22	پرتاب	N	NVE	23	_	_
+23	نمود	V	PRD	14	_	_
+26	مایه	N	MOS	30	_	_
+27	عبرت	N	MOZ	26	_	_
+29	آیندگان	N	POSDEP	28	_	_
+30	گردد	V	VCL	
+
+1	پس‌از	PREP	ADVRB	16	_	_
+4	موسی	N	SBJ	11	_	_
+6	یاران	N	NCONJ	4	
+7	ش	PR	MOZ	6	_	_
+9	دریا	N	NPP	10	
+10	عبور	N	NVE	11	_	_
+11	کرده	V	PRD	3	_	_
+12	به‌سمت	PREP	NPP	15	_	_
+13	بیت‌المقدس	N	POSDEP	12	_	_
+15	حرکت	N	MOS	16	
+16	بودند	V	ROOT	0	_	_
+17	قومی	N	OBJ	19	
+19	دیدند	V	VCL	16	_	_
+22	خضوع	N	ADVRB	26	
+23	مشغول	ADJ	MOS	26	_	_
+24	پرستیدن	N	NEZ	23	_	_
+25	بتها	N	MOZ	24	_	_
+26	بودند	V	PRD	20	_	_
+
+2	موسی	N	SBJ	6	_	_
+3	آن‌ها	PR	OBJ	6	
+5	سرزنش	N	NVE	6	_	_
+6	کرد	V	VCONJ	
+8	گفت	V	ROOT	0	_	_
+11	آن‌ها	PR	ADVEZ	10	_	_
+14	هلاکت	N	POSDEP	13	_	_
+15	نیست	V	PRD	9	_	_
+
+3	فرعون	N	SBJ	13	_	_
+5	پیروان	N	NCONJ	3	
+6	ش	PR	MOZ	5	_	_
+9	غرق	ADJ	PREDEP	10	_	_
+12	نیل	N	NPP	10	
+13	بودند	V	PRD	2	_	_
+14	موسی	N	SBJ	20	_	_
+15	درمیان	PREP	ADVRB	20	_	_
+16	قوم	N	POSDEP	15	_	_
+18	مشغول	ADJ	MOS	20	_	_
+19	سخنرانی	N	NEZ	18	_	_
+20	بود	V	ROOT	0	_	_
+24	نفر	N	SBJ	27	_	_
+27	پرسید	V	PRD	21	_	_
+31	می‌شناسی	V	VCL	27	_	_
+35	داناتر	ADJ	MOS	36	_	_
+36	باشد	V	PRD	32	_	_
+
+1	موسی	N	SBJ	2	_	_
+2	گفت	V	ROOT	0	_	_
+
+2	خداوند	N	SBJ	6	_	_
+5	وحی	N	NVE	6	_	_
+6	کرد	V	ROOT	0	_	_
+8	بنده‌ای	N	OBJ	18	
+11	محل	N	ADVRB	18	
+12	اتصال	N	MOZ	11	_	_
+14	دریای	N	MOZ	12	_	_
+15	مشرق	N	MOZ	14	_	_
+17	مغرب	N	NCONJ	15	
+18	دارم	V	VCL	6	_	_
+22	داناتر	ADJ	MOS	23	_	_
+23	است	V	PRD	19	_	_
+
+1	موسی	N	SBJ	2	_	_
+2	گفت	V	ROOT	0	_	_
+4	می‌توانم	V	VCL	2	_	_
+7	دریابم	V	VCL	4	_	_
+
+1	خداوند	N	SBJ	2	_	_
+2	فرمود	V	ROOT	0	_	_
+5	ماهی	N	OBJ	6	_	_
+6	بگیر	V	VCONJ	
+8	درمیان	PREP	VPP	11	_	_
+9	سبد	N	POSDEP	8	_	_
+11	بگذار	V	VCONJ	
+13	به‌سوی	PREP	VPP	17	_	_
+14	تنگه	N	POSDEP	13	_	_
+16	دریا	N	MOZ	14	_	_
+17	برو	V	VCL	2	_	_
+
+1	موسی	N	SBJ	5	_	_
+3	ماهی	N	OBJ	5	_	_
+4	تهیه	N	NVE	5	_	_
+5	کرد	V	VCONJ	
+8	همراه	N	ADVRB	14	
+9	دوست	N	MOZ	8	_	_
+10	ش	PR	MOZ	9	_	_
+11	یوشع‌ابن‌نون	N	SBJ	14	_	_
+12	رهسپار	N	MOS	14	_	_
+14	شد	V	ROOT	0	_	_
+
+6	مسیر	N	VPP	9	
+8	دریا	N	MOZ	6	_	_
+9	رسیدند	V	PRD	2	_	_
+10	مشغول	ADJ	MOS	12	_	_
+11	استراحت	N	NEZ	10	_	_
+12	شدند	V	ROOT	0	_	_
+
+1	پس‌از	PREP	ADVRB	12	_	_
+3	آن‌ها	PR	SBJ	8	_	_
+7	ادامه	N	NVE	8	_	_
+8	دادند	V	NCL	2	_	_
+9	موسی	N	SBJ	12	_	_
+10	احساس	N	NVE	12	_	_
+11	گرسنگی	N	MOZ	10	_	_
+12	نموده	V	VCONJ	
+15	دوست	N	VPP	17	
+16	ش	PR	MOZ	15	_	_
+17	خواست	V	ROOT	0	_	_
+18	غذایی	N	OBJ	23	
+21	خوردن	N	POSDEP	20	_	_
+22	آماده	ADJ	MOS	23	_	_
+23	کند	V	VCL	17	_	_
+
+3	لحظه	N	ADVRB	7	
+4	یوشع	N	SBJ	7	_	_
+6	موسی	N	VPP	7	
+7	گفت	V	ROOT	0	_	_
+12	صخره	N	MOZ	11	_	_
+13	مشغول	ADJ	MOS	15	_	_
+14	استراحت	N	NEZ	13	_	_
+15	بودیم	V	PRD	9	_	_
+16	ماهی	N	SBJ	18	_	_
+17	فرار	N	NVE	18	_	_
+18	کرد	V	VCL	7	_	_
+
+1	موسی	N	SBJ	5	_	_
+3	حقیقت	N	NPP	4	
+4	پی	N	NVE	5	_	_
+5	برد	V	ROOT	0	_	_
+7	آن‌ها	PR	SBJ	13	_	_
+9	محل	N	VPP	13	
+10	گم	ADJ	PREDEP	11	_	_
+12	ماهی	N	MOZ	11	_	_
+13	برگشتند	V	VCONJ	
+17	خضر	N	OBJ	19	
+19	یافتند	V	PRD	6	_	_
+
+1	موسی	N	SBJ	4	_	_
+3	خضر	N	VPP	4	
+4	خواست	V	ROOT	0	_	_
+6	همراه	N	MOS	8	_	_
+7	ش	PR	MOZ	6	_	_
+8	شود	V	VCL	
+11	علم	N	NPP	13	
+12	ش	PR	MOZ	11	_	_
+13	بهره	N	NVE	14	_	_
+14	برد	V	VCL	
+
+2	موسی	N	SBJ	11	_	_
+3	قول	N	NVE	11	_	_
+4	شکیبایی	N	OBJ	11	
+7	مخالفت	N	MOZ	6	_	_
+11	داد	V	ROOT	0	_	_
+12	و‌سپس	SUBR	VCL	11	_	_
+13	خضر	N	SBJ	28	_	_
+16	شرط	N	ADVRB	28	
+18	موسی	N	SBJ	22	_	_
+21	سوال	N	NVE	22	_	_
+22	نکند	V	PRD	17	_	_
+26	همراه	N	VPP	28	
+28	برد	V	PRD	12	_	_
+
+1	آن‌ها	PR	SBJ	4	_	_
+4	افتادند	V	ROOT	0	_	_
+7	مسیر	N	ADVRB	17	
+8	حضرت	N	SBJ	17	_	_
+9	خضر	N	MOZ	8	_	_
+11	ع	ARAB	POSDEP	9	_	_
+14	کشتی	N	OBJ	17	
+16	سوراخ	N	MOS	17	_	_
+17	کرد	V	VCONJ	21	_	_
+19	پسربچه‌ای	N	OBJ	21	
+21	کشت	V	VCONJ	
+23	دیوار	N	OBJ	27	
+24	روستایی	ADJ	NPOSTMOD	23	_	_
+26	تعمیر	N	NVE	27	_	_
+27	کرد	V	PRD	5	_	_
+29	حالی‌	N	ADVRB	27	
+31	روستاییان	N	SBJ	35	_	_
+33	آن‌ها	PR	NPP	34	
+34	احترام	N	OBJ	35	_	_
+35	نگذاشته‌بودند	V	PRD	30	_	_
+
+1	حضرت	N	SBJ	7	_	_
+2	موسی	N	MOZ	1	_	_
+4	تمامی	ADJ	NPREMOD	5	_	_
+5	کارها	N	ADVRB	7	
+6	تحمل	N	NVE	7	_	_
+7	نیاورد	V	VCONJ	
+10	خضر	N	VPP	11	
+11	می‌گفت	V	ROOT	0	_	_
+15	کار	N	OBJ	18	
+18	دادی	V	PRD	12	_	_
+
+1	خضر	N	SBJ	7	_	_
+2	پس‌از	PREP	ADVRB	7	_	_
+3	مرمت	N	POSDEP	2	_	_
+4	دیوار	N	MOZ	3	_	_
+6	موسی	N	VPP	7	
+7	گفت	V	ROOT	0	_	_
+10	نقطه	N	SBJ	16	_	_
+11	پایان	N	MOS	16	_	_
+12	همراهی	N	MOZ	11	_	_
+16	است	V	VCONJ	
+19	اسرار	N	OBJ	28	_	_
+20	کارهایی	N	MOZ	19	_	_
+22	تحمل	N	OBJ	25	
+23	ش	PR	MOZ	22	_	_
+25	نداشتی	V	PRD	21	_	_
+28	خواهم‌گفت	V	VCL	7	_	_
+
+1	موسی	N	SBJ	7	_	_
+4	اشتباه	N	NPP	6	
+6	پی	N	NVE	7	_	_
+7	برد	V	VCONJ	
+9	دانست	V	ROOT	0	_	_
+11	نمی‌تواند	V	PRD	10	_	_
+12	همراه	N	MOS	14	_	_
+13	خضر	N	MOZ	12	_	_
+14	باشد	V	VCL	11	_	_
+
+3	بود	V	ROOT	0	_	_
+5	خضر	N	SBJ	12	_	_
+6	اسرار	N	OBJ	12	
+7	کارهای	N	MOZ	6	_	_
+11	موسی	N	VPP	12	
+12	گفت	V	PRD	4	_	_
+
+1	خضر	N	SBJ	2	_	_
+2	گفت	V	ROOT	0	_	_
+4	کشتی	N	SBJ	9	_	_
+5	مال	N	MOZ	4	_	_
+6	گروهی	N	MOZ	5	_	_
+8	مستمندان	N	NPP	6	
+9	بود	V	VCL	2	_	_
+12	سرمایه	N	NEZ	11	_	_
+13	آن‌ها	PR	MOZ	12	_	_
+14	بود	V	PRD	10	_	_
+
+2	پسربچه	N	OBJ	49	
+5	آثار	N	OBJ	12	
+6	فساد	N	MOZ	5	_	_
+8	تباهی	N	NCONJ	6	
+12	دیدم	V	PRD	4	_	_
+14	پدر	N	OBJ	18	_	_
+16	مادر	N	NCONJ	14	
+17	مومنی	ADJ	NPOSTMOD	14	_	_
+18	داشت	V	NCL	2	_	_
+22	علاقه‌مند	ADJ	MOS	23	_	_
+23	بودند	V	PRD	19	_	_
+26	بود	V	PRD	24	_	_
+27	به‌خاطر	PREP	ADVRB	41	_	_
+29	علاقه	N	POSDEP	27	_	_
+30	فساد	N	SBJ	41	_	_
+32	تباهی	N	NCONJ	30	
+35	شایستگی	N	POSDEP	34	_	_
+36	پدر	N	MOZ	35	_	_
+38	مادر	N	NCONJ	36	
+39	ش	PR	MOZ	36	_	_
+40	غلبه	N	NVE	41	_	_
+41	کند	V	VCONJ	
+43	آن‌ها	PR	OBJ	47	
+46	کفر	N	VPP	47	
+47	وادارد	V	VCL	26	_	_
+49	کشتم	V	ROOT	0	_	_
+51	والدین	N	SBJ	57	_	_
+52	ش	PR	MOZ	51	_	_
+54	شرش	N	PREDEP	57	
+56	امان	N	PREDEP	57	
+57	بمانند	V	VCONJ	
+59	خداوند	N	SBJ	67	_	_
+60	درعوض	ADV	ADVRB	67	_	_
+61	ش	PR	ADVEZ	60	_	_
+63	آن‌ها	PR	VPP	67	
+64	فرزندی	N	OBJ	67	_	_
+65	نیکو	ADJ	NPOSTMOD	64	_	_
+66	عطا	N	NVE	67	_	_
+67	نماید	V	VCL	
+
+1	دیواری	N	SBJ	10	_	_
+3	ترمیم	N	NVE	4	_	_
+4	کردم	V	PRD	2	_	_
+5	مربوط	ADJ	MOS	10	_	_
+8	پسربچه	N	AJPP	5	
+9	یتیم	ADJ	NPOSTMOD	8	_	_
+10	بود	V	ROOT	0	_	_
+12	گنجی	N	SBJ	19	_	_
+13	متعلق	ADJ	MOS	19	_	_
+16	یتیمان	N	AJPP	13	
+17	در‌زیر	PREP	ADVRB	19	_	_
+18	دیوار	N	POSDEP	17	_	_
+19	بود	V	PRD	11	_	_
+21	پدر	N	SBJ	25	_	_
+23	فرد	N	MOS	25	_	_
+24	صالحی	ADJ	NPOSTMOD	23	_	_
+25	بود	V	PRD	20	_	_
+
+1	تمامی	ADJ	NPREMOD	3	_	_
+3	کارها	N	SBJ	6	_	_
+4	وحی	N	MOS	6	_	_
+5	الهی	ADJ	NPOSTMOD	4	_	_
+6	بود	V	ROOT	0	_	_
+10	آن‌ها	PR	POSDEP	9	_	_
+11	صبر	N	NVE	12	_	_
+12	نیاوردی	V	PRD	7	_	_
+
+1	بنی‌اسراییل	N	SBJ	12	_	_
+3	مسیر	N	ADVRB	12	
+5	به‌سمت	PREP	NPP	3	_	_
+6	بیت‌المقدس	N	POSDEP	5	_	_
+8	صحرای	N	VPP	12	
+9	خشک	ADJ	NPOSTMOD	8	_	_
+11	بی‌آب‌وعلفی	ADJ	AJCONJ	9	
+12	رسیدند	V	VCONJ	
+15	موسی	N	NPP	16	
+16	تقاضای	N	NVE	18	_	_
+17	آب	N	MOZ	16	_	_
+18	نمودند	V	ROOT	0	_	_
+21	دستور	N	PREDEP	29	
+22	خداوند	N	SBJ	29	_	_
+23	موسی	N	OBJ	29	
+24	عصای	N	MOZ	23	_	_
+28	زمین	N	PREDEP	29	
+29	زد	V	VCONJ	
+32	چشمه	N	SBJ	40	_	_
+35	تعداد	N	ADVRB	40	
+36	قبایل	N	MOZ	35	_	_
+37	بنی‌اسراییل	N	MOZ	36	_	_
+39	جوشیدن	N	NVE	40	_	_
+40	گرفت	V	PRD	19	_	_
+43	قبیله‌ای	N	SBJ	48	_	_
+44	آب	N	OBJ	48	
+45	مخصوص	ADJ	NPOSTMOD	44	_	_
+48	نوشید	V	PRD	41	_	_
+
+1	آن‌ها	PR	SBJ	9	_	_
+3	ادامه	N	ADVRB	9	
+4	مسیر	N	MOZ	3	_	_
+6	صحرای	N	VPP	9	
+7	شبه‌جزیره	N	MOZ	6	_	_
+8	سینا	N	MOZ	7	_	_
+9	رسیدند	V	VCONJ	
+12	فرط	N	ADVRB	17	
+13	گرما	N	MOZ	12	_	_
+15	موسی	N	NPP	16	
+16	شکایت	N	NVE	17	_	_
+17	نمودند	V	ROOT	0	_	_
+20	درخواست	N	ADVRB	27	
+21	موسی	N	MOZ	20	_	_
+22	خداوند	N	SBJ	27	_	_
+23	تکه‌ای	N	OBJ	27	_	_
+24	ابر	N	MOZ	23	_	_
+27	فرستاد	V	VCL	17	_	_
+
+2	ادامه	N	ADVRB	14	
+4	غذای	N	SBJ	7	_	_
+5	آن‌ها	PR	MOZ	4	_	_
+7	شده‌بود	V	PRD	3	_	_
+8	موسی	N	SBJ	14	_	_
+11	خداوند	N	NPP	12	
+12	درخواست	N	NVE	14	_	_
+13	غذا	N	MOZ	12	_	_
+14	کرد	V	ROOT	0	_	_
+16	خداوند	N	SBJ	22	_	_
+19	سلوی	ARAB	NCONJ	17	
+22	فرستاد	V	PRD	15	_	_
+
+1	خداوند	N	SBJ	5	_	_
+3	موسی	N	NPP	4	
+4	دستور	N	NVE	5	_	_
+5	داد	V	ROOT	0	_	_
+7	بنی‌اسراییل	N	OBJ	13	
+10	سرزمین	N	VPP	13	
+11	مقدس	ADJ	NPOSTMOD	10	_	_
+12	فلسطین	N	MOZ	10	_	_
+13	برده	V	VCONJ	
+15	ساکن	ADJ	MOS	16	_	_
+16	کند	V	VCL	
+
+1	موسی	N	SBJ	7	_	_
+2	قبل‌از	PREP	ADVRB	7	_	_
+3	رفتن	N	POSDEP	2	_	_
+5	نفر	N	OBJ	7	
+7	فرستاد	V	ROOT	0	_	_
+9	گزارشی	N	OBJ	12	_	_
+12	بیاورند	V	VCL	
+
+1	آن‌ها	PR	SBJ	6	_	_
+2	پس‌از	PREP	ADVRB	6	_	_
+3	بازگشت	N	POSDEP	2	_	_
+5	موسی	N	VPP	6	
+6	گفتند	V	ROOT	0	_	_
+8	آن‌ها	PR	SBJ	15	_	_
+9	افرادی	N	MOS	15	_	_
+10	بلندقامت	ADJ	NPOSTMOD	9	_	_
+12	نیرومند	ADJ	AJCONJ	10	
+14	سرکش	ADJ	AJCONJ	12	
+15	ند	V	PRD	7	_	_
+
+1	بنی‌اسراییل	N	SBJ	5	_	_
+4	سخنان	N	VPP	5	
+5	ترسیده	V	VCONJ	
+8	رفتن	N	NPP	11	
+10	شهر	N	NPP	8	
+11	ممانعت	N	NVE	12	_	_
+12	نمودند	V	ROOT	0	_	_
+17	نفر	N	SBJ	27	_	_
+19	مردان	N	NPP	17	
+20	باایمان	ADJ	NPOSTMOD	19	_	_
+21	قوم	N	OBJ	27	
+22	آن‌ها	PR	MOZ	21	_	_
+25	رفتن	N	NPP	26	
+26	تشویق	N	NVE	27	_	_
+27	نمودند	V	PRD	15	_	_
+
+1	آن‌ها	PR	SBJ	6	_	_
+2	درنهایت	ADV	ADVRB	6	_	_
+4	رفتن	N	NPP	5	
+5	خودداری	N	NVE	6	_	_
+6	نمودند	V	ROOT	0	_	_
+7	و‌سپس	SUBR	PREDEP	6	_	_
+8	خداوند	N	SBJ	21	_	_
+12	سال	N	ADVRB	21	
+13	آن‌ها	PR	OBJ	21	
+16	حبس	N	AJPP	20	
+18	صحرای	N	NPP	16	
+19	سینا	N	MOZ	18	_	_
+20	محکوم	ADJ	MOS	21	_	_
+21	نمود	V	VCONJ	
+23	بعداز	PREP	ADVRB	31	_	_
+26	خداوند	N	SBJ	31	_	_
+27	توبه	N	OBJ	31	
+28	آن‌ها	PR	MOZ	27	_	_
+30	قبول	ADJ	NVE	31	_	_
+31	نمود	V	PRD	7	_	_
+
+2	موسی	N	SBJ	9	_	_
+6	پیرو	N	MOS	9	_	_
+7	آیین	N	MOZ	6	_	_
+8	ابراهیم	N	MOZ	7	_	_
+9	بود	V	PRD	1	_	_
+11	خدا	N	NPP	12	
+12	درخواست	N	NVE	15	_	_
+13	کتاب	N	MOZ	12	_	_
+15	کرد	V	VCONJ	
+18	دستور	N	ADVRB	29	
+19	خدا	N	MOZ	18	_	_
+23	کوه	N	VPP	29	
+26	تهجد	N	POSDEP	25	_	_
+28	روزه‌داری	N	NCONJ	26	
+29	رفت	V	ROOT	0	_	_
+
+2	قبل‌از	PREP	ADVRB	13	_	_
+5	از‌نزد	PREP	VPP	9	_	_
+6	قوم	N	POSDEP	5	_	_
+7	ش	PR	MOZ	6	_	_
+8	خارج	ADJ	MOS	9	_	_
+9	شود	V	PRD	4	_	_
+11	آن‌ها	PR	NPP	12	
+12	سفارش	N	NVE	13	_	_
+13	کرد	V	ROOT	0	_	_
+20	عبادت	N	POSDEP	19	_	_
+21	می‌روم	V	VCONJ	
+23	برادر	N	OBJ	29	
+24	م	PR	MOZ	23	_	_
+25	هارون	N	APP	23	_	_
+27	نزد	PREP	VPP	29	_	_
+29	می‌گذارم	V	PRD	14	_	_
+
+1	بعداز	PREP	ADVRB	10	_	_
+4	عبادت	N	MOZ	3	_	_
+6	خداوند	N	SBJ	10	_	_
+9	دستور	N	NVE	10	_	_
+10	داد	V	ROOT	0	_	_
+18	بماند	V	VCL	
+
+1	گروه	N	SBJ	14	_	_
+3	نفری	N	MOZ	1	_	_
+6	همراه	N	ADVRB	11	
+7	موسی	N	MOZ	6	_	_
+9	کوه	N	VPP	11	
+11	رفته‌بودند	V	PRD	4	_	_
+13	موسی	N	VPP	14	
+14	گفتند	V	ROOT	0	_	_
+19	ایمان	N	NVE	20	_	_
+20	نمی‌آوریم	V	VCL	14	_	_
+24	خدا	N	OBJ	29	
+29	دهی	V	PRD	23	_	_
+
+1	موسی	N	SBJ	6	_	_
+4	موضوع	N	AJPP	5	
+5	ناراحت	ADJ	MOS	6	_	_
+6	شد	V	VCONJ	
+8	موعضه‌های	N	SBJ	14	_	_
+9	ش	PR	MOZ	8	_	_
+11	طبق	PREP	ADVRB	14	_	_
+12	معمول	ADJ	POSDEP	11	_	_
+13	بی‌اثر	ADJ	MOS	14	_	_
+14	بود	V	ROOT	0	_	_
+
+3	لحظه	N	ADVRB	7	
+4	صاعقه‌ای	N	SBJ	7	_	_
+6	کوه	N	POSDEP	5	_	_
+7	خورد	V	ROOT	0	_	_
+9	براثر	PREP	ADVRB	18	_	_
+10	صدا	N	POSDEP	9	_	_
+12	زلزله	N	NCONJ	10	
+13	وحشتناک	ADJ	NPOSTMOD	12	_	_
+17	هلاک	ADJ	MOS	18	_	_
+18	شدند	V	VCONJ	
+20	موسی	N	SBJ	22	_	_
+21	بی‌هوش	ADJ	MOS	22	_	_
+22	شد	V	PRD	8	_	_
+
+3	تجلی	N	MOS	8	_	_
+4	خدا	N	MOZ	3	_	_
+6	کوه	N	POSDEP	5	_	_
+8	بود	V	ROOT	0	_	_
+
+1	درنهایت	ADV	ADVRB	4	_	_
+2	هلاک‌شدگان	N	SBJ	4	_	_
+3	زنده	ADJ	MOS	4	_	_
+4	گشته	V	VCONJ	
+7	همراه	N	ADVRB	11	
+8	موسی	N	MOZ	7	_	_
+9	به‌طرف	PREP	VPP	11	_	_
+11	رفتند	V	ROOT	0	_	_
+
+2	غیبت	N	SBJ	11	_	_
+3	موسی	N	MOZ	2	_	_
+9	گفته‌بود	V	NCL	8	_	_
+10	طول	N	NVE	11	_	_
+11	کشیده‌بود	V	PRD	1	_	_
+12	سامری	N	SBJ	20	_	_
+15	غیبت	N	NPP	19	
+17	جهل	N	NCONJ	15	
+20	نمود	V	VCONJ	
+23	زروزیور	N	VPP	28	
+24	زنان	N	MOZ	23	_	_
+25	قالب	N	OBJ	28	
+26	گوساله‌ای	N	MOZ	25	_	_
+28	ریخت	V	VCONJ	
+30	جوری	N	ADVRB	32	_	_
+31	درست	ADJ	NVE	32	_	_
+32	کرد	V	ROOT	0	_	_
+35	وزیدن	N	ADVRB	41	
+36	باد	N	MOZ	35	_	_
+37	صدایی	N	SBJ	41	_	_
+39	گوساله	N	AJPP	40	
+40	خارج	ADJ	MOS	41	_	_
+41	می‌شد	V	PRD	33	_	_
+
+3	موسی	N	NPP	4	
+4	نسبت	N	NVE	6	_	_
+5	دروغ	ADJ	NPOSTMOD	4	_	_
+6	داد	V	VCONJ	
+8	گفت	V	PRD	1	_	_
+12	بازنمی‌گردد	V	PRD	9	_	_
+
+2	اکثر	N	OBJ	8	
+3	آن‌ها	PR	MOZ	2	_	_
+6	آیین	N	VPP	8	
+7	گوساله‌پرستی	N	MOZ	6	_	_
+8	درآورد	V	PRD	1	_	_
+
+1	موسی	N	SBJ	15	_	_
+3	ازطریق	PREP	ADVRB	10	_	_
+4	وحی	N	POSDEP	3	_	_
+7	قوم	N	MOZ	6	_	_
+8	ش	PR	MOZ	7	_	_
+9	پی	N	NVE	10	_	_
+10	برده‌بود	V	PRD	2	_	_
+12	ناراحتی	N	ADVRB	15	
+13	نزد	PREP	VPP	15	_	_
+15	آمد	V	VCONJ	
+20	مشاجره	N	VPP	21	
+21	پرداخت	V	ROOT	0	_	_
+
+4	موسی	N	SBJ	10	_	_
+6	برادر	N	NPP	9	
+7	ش	PR	MOZ	6	_	_
+8	هارون	N	APP	6	_	_
+9	گلاویز	N	NVE	10	_	_
+10	شد	V	VCONJ	
+14	سرزنش	N	NVE	15	_	_
+15	کرد	V	ROOT	0	_	_
+
+1	هارون	N	SBJ	4	_	_
+3	جواب	N	VPP	4	
+4	گفت	V	ROOT	0	_	_
+7	برادر	N	POSDEP	6	_	_
+10	پرهیز	N	POSDEP	9	_	_
+12	اختلاف	N	NPP	10	
+14	دودستگی	N	NCONJ	12	
+16	آن‌ها	PR	NPP	17	
+17	مبارزه	N	NVE	18	_	_
+18	نکردم	V	VCL	4	_	_
+21	م	PR	OBJ	24	
+23	بازخواست	N	NVE	24	_	_
+24	نکنی	V	VCL	
+
+4	موسی	N	SBJ	9	_	_
+5	سامری	N	OBJ	9	
+7	از‌نزد	PREP	VPP	9	_	_
+9	راند	V	VCONJ	
+11	به‌شدت	ADV	ADVRB	13	_	_
+12	سرزنش	N	NVE	13	_	_
+13	کرد	V	VCONJ	
+15	گفت	V	ROOT	0	_	_
+16	خداوند	N	SBJ	20	_	_
+17	طوری	N	ADVRB	20	_	_
+18	کیفر	N	NVE	20	_	_
+20	خواهدنمود	V	VCL	15	_	_
+26	نزدیک	ADJ	MOS	27	_	_
+27	شود	V	NCL	23	_	_
+28	پیوسته	ADV	ADVRB	31	_	_
+31	بگویی	V	PRD	21	_	_
+35	تماس	N	NVE	36	_	_
+36	نگیر	V	VCONJ	
+38	نزدیک	ADJ	MOS	39	_	_
+39	نشو	V	PRD	32	_	_
+
+2	موسی	N	SBJ	5	_	_
+3	گوساله	N	OBJ	5	
+5	سوزاند	V	VCONJ	
+10	دریا	N	VPP	11	
+11	افکند	V	PRD	1	_	_
+
+1	موسی	N	SBJ	7	_	_
+2	سامری	N	OBJ	7	
+5	جامعه	N	NPP	6	
+6	طرد	N	NVE	7	_	_
+7	کرد	V	VCONJ	
+9	قوم	N	OBJ	16	
+10	ش	PR	MOZ	9	_	_
+13	شر	N	NPP	15	
+15	نجات	N	NVE	16	_	_
+16	داد	V	ROOT	0	_	_
+
+3	موسی	N	SBJ	7	_	_
+5	کوه	N	VPP	7	
+7	بازگشت	V	VCONJ	
+9	تورات	N	OBJ	13	
+13	آورد	V	PRD	2	_	_
+15	قوم	N	VPP	17	
+16	ش	PR	MOZ	15	_	_
+17	گفت	V	ROOT	0	_	_
+18	کتابی	N	NVE	19	_	_
+19	آورده‌ام	V	VCL	17	_	_
+21	حاوی	ADJ	MOS	28	_	_
+22	دستورهای	N	NEZ	21	_	_
+23	دینی	ADJ	NPOSTMOD	22	_	_
+25	حلال	ADJ	AJCONJ	23	
+27	حرام	ADJ	AJCONJ	25	
+28	است	V	PRD	20	_	_
+30	دستوراتی	N	NCONJ	22	_	_
+32	خداوند	N	SBJ	39	_	_
+35	برنامه	N	TAM	39	_	_
+36	کار	N	MOZ	35	_	_
+38	قرار	N	NVE	39	_	_
+39	داده	V	PRD	31	_	_
+
+1	بنی‌اسراییل	N	SBJ	13	_	_
+7	دشوار	ADJ	TAM	8	_	_
+8	می‌دانستند	V	PRD	2	_	_
+11	سر	PREP	VPRT	13	_	_
+13	زدند	V	ROOT	0	_	_
+
+1	خداوند	N	SBJ	6	_	_
+3	فرشتگان	N	OBJ	6	
+5	مامور	N	NVE	6	_	_
+6	کرد	V	ROOT	0	_	_
+8	سنگ	N	OBJ	18	
+9	بزرگی	ADJ	NPOSTMOD	8	_	_
+11	کوه	N	NPP	8	
+14	بالای	PREP	TAM	18	_	_
+15	سر	N	POSDEP	14	_	_
+17	قرار	N	NVE	18	_	_
+18	دهد	V	VCL	
+
+1	حضرت	N	SBJ	14	_	_
+2	موسی	N	MOZ	1	_	_
+4	ع	ARAB	POSDEP	2	_	_
+6	شرط	N	OBJ	14	
+7	رفع	N	MOZ	6	_	_
+12	کتاب	N	POSDEP	10	
+13	قرار	N	NVE	14	_	_
+14	داد	V	ROOT	0	_	_
+
+1	قارون	N	SBJ	6	_	_
+2	پسرعمو	N	MOS	6	_	_
+4	پسرخاله	N	NCONJ	2	
+5	موسی	N	MOZ	4	_	_
+6	بود	V	VCONJ	
+8	اطلاعات	N	OBJ	12	_	_
+9	زیادی	ADJ	NPOSTMOD	8	_	_
+11	تورات	N	NPP	8	
+12	داشت	V	ROOT	0	_	_
+
+3	همراهان	N	MOS	5	
+4	فرعون	N	MOZ	3	_	_
+5	بود	V	VCONJ	
+7	بعداز	PREP	ADVRB	15	_	_
+8	نابودی	N	POSDEP	7	_	_
+9	فرعون	N	MOZ	8	_	_
+10	گنج	N	SBJ	15	_	_
+11	زیادی	ADJ	NPOSTMOD	10	_	_
+13	دست	N	VPP	15	
+14	ش	PR	MOZ	13	_	_
+15	مانده‌بود	V	ROOT	0	_	_
+
+3	فرمان	N	SBJ	11	_	_
+5	زکات	N	MOZ	4	_	_
+6	ازسوی	PREP	ADVRB	11	_	_
+7	خدا	N	POSDEP	6	_	_
+9	موسی	N	POSDEP	8	_	_
+10	صادر	ADJ	MOS	11	_	_
+11	شد	V	PRD	2	_	_
+12	موسی	N	SBJ	15	_	_
+13	نزد	PREP	VPP	15	_	_
+14	قارون	N	POSDEP	13	_	_
+15	رفته	V	VCONJ	
+19	درخواست	N	NVE	21	_	_
+20	زکات	N	MOZ	19	_	_
+21	کرد	V	ROOT	0	_	_
+
+2	قارون	N	OBJ	9	
+3	چهره	N	MOZ	2	_	_
+4	دیانت	N	MOZ	3	_	_
+5	ظاهری	ADJ	NPOSTMOD	4	_	_
+9	زد	V	VCONJ	
+12	مبارزه	N	VPP	22	
+14	موسی	N	NPP	12	
+16	تحریک	N	NCONJ	12	
+18	تهیج	N	NCONJ	16	
+22	پرداخت	V	VCONJ	
+25	آن‌ها	PR	VPP	26	
+26	گفت	V	ROOT	0	_	_
+28	موسی	N	SBJ	37	_	_
+29	قصد	N	OBJ	37	
+30	خوردن	N	MOZ	29	_	_
+31	مال	N	MOZ	30	_	_
+33	اموال	N	NCONJ	31	
+37	دارد	V	PRD	27	_	_
+41	مبارزه	N	VPP	44	
+44	بپردازیم	V	VCL	39	_	_
+
+3	قارون	N	SBJ	8	_	_
+4	نقشه‌ای	N	OBJ	8	_	_
+5	شیطانی	ADJ	NPOSTMOD	4	_	_
+7	موسی	N	POSDEP	6	_	_
+8	کشید	V	VCONJ	
+12	منافی	ADJ	NPREMOD	13	_	_
+13	عفت	N	MOZ	11	_	_
+14	بود	V	ROOT	0	_	_
+
+1	روزی	N	ADVRB	7	_	_
+2	قارون	N	SBJ	7	_	_
+6	جمع	N	NVE	7	_	_
+7	کرد	V	VCONJ	
+10	موسی	N	VPP	11	
+11	خواست	V	ROOT	0	_	_
+15	سخنرانی	N	NVE	16	_	_
+16	کند	V	VCL	
+
+1	موسی	N	NVE	2	_	_
+2	پذیرفت	V	VCONJ	
+4	شروع	N	NVE	8	_	_
+6	ارشاد	N	NPP	4	
+8	کرد	V	ROOT	0	_	_
+11	جمله	N	ADVRB	15	
+12	سخنان	N	SBJ	15	_	_
+13	ش	PR	MOZ	12	_	_
+15	بود	V	VCL	8	_	_
+19	زنا	N	NVE	20	_	_
+20	کرد	V	PRD	17	_	_
+23	ضربه	N	ADVRB	25	_	_
+24	شلاق	N	NVE	25	_	_
+25	بخورد	V	VCONJ	
+28	تهمت	N	NVE	30	_	_
+29	زنا	N	MOZ	28	_	_
+30	زد	V	PRD	27	_	_
+32	ضربه	N	ADVRB	34	_	_
+33	شلاق	N	NVE	34	_	_
+34	بخورد	V	VCL	21	_	_
+
+2	قارون	N	SBJ	4	_	_
+3	فریاد	N	NVE	4	_	_
+4	زد	V	ROOT	0	_	_
+7	زناکار	N	SBJ	9	_	_
+9	باشی	V	PRD	6	_	_
+
+1	قارون	N	SBJ	6	_	_
+2	نقشه	N	OBJ	6	
+5	عملی	ADJ	MOS	6	_	_
+6	کرد	V	VCONJ	
+8	زن	N	SBJ	14	_	_
+10	شهادت	N	POSDEP	9	_	_
+12	موسی	N	POSDEP	11	_	_
+13	وارد	ADJ	MOS	14	_	_
+14	شد	V	ROOT	0	_	_
+
+1	موسی	N	SBJ	4	_	_
+4	گفت	V	ROOT	0	_	_
+5	حقیقت	N	OBJ	8	
+7	فاش	ADJ	MOS	8	_	_
+8	کن	V	VCL	4	_	_
+10	زن	N	SBJ	13	_	_
+13	لرزید	V	VCONJ	
+16	ماجرا	N	OBJ	21	
+19	موسی	N	POSDEP	18	_	_
+20	تعریف	N	NVE	21	_	_
+21	نمود	V	PRD	9	_	_
+
+1	موسی	N	SBJ	4	_	_
+3	زمین	N	POSDEP	2	_	_
+4	افتاد	V	VCONJ	
+6	گریست	V	VCONJ	
+8	خدا	N	OBJ	19	
+13	آبروی	N	OBJ	17	
+14	ش	PR	MOZ	13	_	_
+16	حفظ	N	NVE	17	_	_
+17	کرده	V	PRD	12	_	_
+18	سجده	N	NVE	19	_	_
+19	کرد	V	ROOT	0	_	_
+
+1	خداوند	N	SBJ	6	_	_
+4	قارون	N	POSDEP	3	_	_
+5	غضب	N	NVE	6	_	_
+6	کرد	V	VCONJ	
+9	موسی	N	VPP	10	
+10	گفت	V	ROOT	0	_	_
+13	زمین	N	NPP	14	
+14	فرمان	N	NVE	15	_	_
+15	بده	V	VCL	10	_	_
+17	قارون	N	OBJ	24	
+19	خانه	N	NCONJ	17	
+24	فروبرد	V	VCL	
+25	و‌سپس	SUBR	VCL	24	_	_
+26	موسی	N	SBJ	28	_	_
+28	کرد	V	PRD	25	_	_
+
+1	زمین	N	SBJ	4	_	_
+2	دهان	N	OBJ	4	_	_
+4	کرد	V	VCONJ	
+6	قارون	N	OBJ	14	
+8	اموال	N	NCONJ	6	
+9	فراوان	ADJ	NPOSTMOD	8	_	_
+10	ش	PR	MOZ	8	_	_
+14	فروبرد	V	ROOT	0	_	_
+
+1	بلعم‌باعورا	N	SBJ	6	_	_
+3	عصر	N	NPP	5	
+4	موسی	N	MOZ	3	_	_
+5	زندگی	N	NVE	6	_	_
+6	می‌کرد	V	VCONJ	
+9	دانشمندان	N	MOS	14	
+11	علمای	N	NCONJ	9	
+12	مشهور	ADJ	NPOSTMOD	9	_	_
+13	بنی‌اسراییل	N	MOZ	9	_	_
+14	بود	V	VCONJ	
+17	جایی	N	VPP	18	
+18	رسیده‌بود	V	ROOT	0	_	_
+21	اسم	N	AJPP	24	
+22	اعظم	ADJ	NPOSTMOD	21	_	_
+23	الهی	ADJ	NPOSTMOD	21	_	_
+24	آگاه	ADJ	MOS	25	_	_
+25	شده	V	VCONJ	
+27	مستجاب‌الدعوه	N	MOS	28	_	_
+28	‌‌شده‌بود	V	PRD	19	_	_
+
+2	ابتدا	ADV	ADVRB	6	_	_
+4	مسیر	N	MOS	6	
+6	بود	V	VCONJ	
+8	براثر	PREP	ADVRB	17	_	_
+9	وعده	N	POSDEP	8	_	_
+11	وعیدهایی	N	NCONJ	9	
+16	منحرف	ADJ	MOS	17	_	_
+17	شده	V	VCONJ	
+19	تمامی	ADJ	NPREMOD	20	_	_
+20	کمالات	N	OBJ	25	
+24	دست	N	VPRT	25	
+25	داد	V	ROOT	0	_	_
+27	جایی	N	ADVRB	25	
+30	صف	N	VPP	36	
+31	گمراهان	N	MOZ	30	_	_
+33	پیروان	N	NCONJ	31	
+34	شیطان	N	MOZ	33	_	_
+35	قرار	N	NVE	36	_	_
+36	گرفت	V	PRD	28	_	_
+
+1	روزی	N	ADVRB	5	_	_
+2	دشمنان	N	SBJ	5	_	_
+5	خواستند	V	ROOT	0	_	_
+7	موسی	N	OBJ	10	
+9	نفرین	N	NVE	10	_	_
+10	نماید	V	VCL	
+
+1	بلعم	N	SBJ	8	_	_
+3	تمرد	N	OBJ	6	
+4	الاغ	N	MOZ	3	_	_
+6	دید	V	PRD	2	_	_
+7	خشمگین	ADJ	MOS	8	_	_
+8	شده	V	ROOT	0	_	_
+9	ضرباتی	N	OBJ	13	_	_
+12	وارد	ADJ	MOS	13	_	_
+13	کرد	V	VCL	8	_	_
+
+1	بلعم	N	SBJ	8	_	_
+3	شنیدن	N	ADVRB	8	
+5	حرف	N	MOZ	3	_	_
+7	عصبانی	ADJ	MOS	8	_	_
+8	شد	V	VCONJ	
+11	الاغ	N	OBJ	13	
+13	زد	V	ROOT	0	_	_
+17	کشت	V	VCL	
+21	الهی	ADJ	NPOSTMOD	20	_	_
+22	اسم	N	SBJ	26	_	_
+23	اعظم	ADJ	NPOSTMOD	22	_	_
+26	گرفته‌شد	V	PRD	18	_	_
+28	نقشه	N	SBJ	31	_	_
+29	دشمنان	N	MOZ	28	_	_
+30	خنثی	ADJ	MOS	31	_	_
+31	شد	V	PRD	27	_	_
+
+1	حضرت	N	SBJ	29	_	_
+2	موسی	N	MOZ	1	_	_
+4	ع	ARAB	POSDEP	2	_	_
+6	پس‌از	PREP	ADVRB	29	_	_
+9	ازجانب	PREP	ADVRB	12	_	_
+10	خدا	N	POSDEP	9	_	_
+11	مامور	N	MOS	12	_	_
+12	شد	V	PRD	8	_	_
+14	به‌جانب	PREP	VPP	17	_	_
+15	کوه	N	POSDEP	14	_	_
+17	برود	V	PRD	13	_	_
+21	سرزمینهای	N	OBJ	24	
+22	فلسطینیان	N	MOZ	21	_	_
+24	بنگرد	V	VCL	
+26	سن	N	ADVRB	29	
+27	240سالگی	N	MOZ	26	_	_
+28	وفات	N	NVE	29	_	_
+29	یافت	V	VCONJ	
+31	همانجا	PR	ADVRB	35	_	_
+34	خاک	N	VPP	35	
+35	سپرده‌شد	V	ROOT	0	_	_
+
+1	حضرت	N	SBJ	6	_	_	Arg1	_
+2	ایوب	N	MOZ	1	_	_	_	_
+4	انبیا	N	MOS	6	
+5	مشهور	ADJ	NPOSTMOD	4	_	_	_	_
+6	بوده	V	ROOT	0	Y	بودن.15	_	_
+8	نام	N	SBJ	16	_	_	_	Arg1
+9	مبارک	ADJ	NPOSTMOD	8	_	_	_	_
+10	ش	PR	MOZ	8	_	_	_	_
+11	4بار	ADV	ADVRB	16	_	_	_	ArgM-EXT
+14	سوره	N	VPP	16	
+15	قرآن	N	MOZ	14	_	_	_	_
+16	آمده‌است	V	PRD	7	Y	آمدن.31	_	_
+
+1	حضرت	N	SBJ	17	_	_	Arg0
+2	ایوب	N	MOZ	1	_	_	_
+4	علیه‌السلام	ARAB	POSDEP	2	_	_	_
+7	سرزمین	N	VPP	17	
+8	جابیه	N	MOZ	7	_	_	_
+10	یکی‌از	ADJ	NPREMOD	11	_	_	_
+11	نقاط	N	APP	8	_	_	_
+12	معروف	ADJ	NPOSTMOD	11	_	_	_
+13	شام	N	MOZ	11	_	_	_
+14	چشم	N	OBJ	17	_	_	Arg1
+16	جهان	N	NPP	14	
+17	گشود	V	ROOT	0	Y	گشودن.540	_
+
+1	او	PR	SBJ	10	_	_	Arg1	Arg0
+2	پس‌از	PREP	ADVRB	10	_	_	ArgM-TMP	_
+3	بلوغ	N	POSDEP	2	_	_	_	_
+5	ازطرف	PREP	ADVRB	10	_	_	ArgM-ADV	_
+6	خداوند	N	POSDEP	5	_	_	_	_
+8	پیامبری	N	AJPP	9	
+9	مبعوث	ADJ	MOS	10	_	_	Arg2	_
+10	گردید	V	ROOT	0	Y	کردن.25	_	_
+14	سرزمین	N	MOZ	12	_	_	_	_
+17	بت‌پرستی	N	VPP	24	
+19	فساد	N	NCONJ	17	
+20	به‌سوی	PREP	VPP	24	_	_	_	Arg4
+21	خداپرستی	N	POSDEP	20	_	_	_	_
+23	عدالت	N	NCONJ	21	
+24	بکشاند	V	AJUCL	10	Y	کشاندن.749	_	_
+
+1	حضرت	N	SBJ	6	_	_	Arg0
+2	ایوب	N	MOZ	1	_	_	_
+4	سال	N	ADVC	6	_	_	Arg2
+5	عمر	N	NVE	6	_	_	_
+6	کرد	V	ROOT	0	Y	عمر‌کردن.103	_
+
+1	وی	PR	SBJ	4	_	_	Arg1	_
+2	یکی‌از	ADJ	NPREMOD	3	_	_	_	_
+3	پیامبرانی	N	MOS	4	_	_	Arg2	_
+4	است	V	ROOT	0	Y	بودن.15	_	_
+6	قرآن	N	SBJ	13	_	_	_	Arg0
+7	نبوت	N	OBJ	13	
+9	پیامبری	N	NCONJ	7	
+12	بیان	N	NVE	13	_	_	_	_
+13	کرده‌است	V	PRD	5	Y	بیان‌کردن.140	_	_
+
+1	او	PR	SBJ	6	_	_	Arg1	Arg1
+2	فردی	N	MOS	6	_	_	Arg2	_
+3	مهربان	ADJ	NPOSTMOD	2	_	_	_	_
+5	باتقوا	ADJ	AJCONJ	3	
+6	بوده	V	VCONJ	11	Y	بودن.15	_	_
+9	مهمان‌نوازی	N	NPP	10	
+10	شهرت	N	NVE	11	_	_	_	_
+11	داشته‌است	V	ROOT	0	Y	شهرت‌داشتن.377	_	_
+
+1	ایشان	PR	SBJ	5	_	_	Arg1	Arg1
+2	دارای	ADJ	MOS	5	_	_	Arg2	_
+3	مال	N	NEZ	2	_	_	_	_
+4	فراوانی	ADJ	NPOSTMOD	3	_	_	_	_
+5	بوده	V	VCONJ	12	Y	بودن.15	_	_
+7	دارای	ADJ	MOS	12	_	_	_	Arg2
+8	خدمه	N	NEZ	7	_	_	_	_
+10	حشم	N	NCONJ	8	
+11	فراوانی	ADJ	NPOSTMOD	8	_	_	_	_
+12	بوده‌است	V	ROOT	0	Y	بودن.15	_	_
+
+1	اوقاتی	N	SBJ	4	_	_	Arg1	_	_	_	_
+3	او	PR	POSDEP	2	_	_	_	Arg0	Arg1	_	_
+4	گذشت	V	ROOT	0	Y	گذشتن.43	_	_	_	_	_
+7	اموال	N	OBJ	12	
+11	دست	N	VPRT	12	
+12	داد	V	VCONJ	20	Y	از‌دست‌دادن.750	_	_	_	_	_
+15	انواع	N	AJPP	19	
+16	بلایا	N	MOZ	15	_	_	_	_	_	_	_
+18	امراض	N	NCONJ	16	
+19	مبتلا	ADJ	MOS	20	_	_	_	_	Arg2	_	_
+20	گشت	V	VCONJ	35	Y	کردن.25	_	_	_	_	_
+22	جز	PREP	ADVRB	35	_	_	_	_	_	_	ArgM-ADV
+23	زبان	N	POSDEP	22	_	_	_	_	_	Arg1	_
+24	ش	PR	MOZ	23	_	_	_	_	_	_	_
+27	ذکر	N	AJPP	29	
+28	خدا	N	MOZ	27	_	_	_	_	_	_	_
+29	مشغول	ADJ	MOS	30	_	_	_	_	_	Arg2	_
+30	بود	V	PRD	25	Y	بودن.15	_	_	_	_	_
+31	عضو	N	SBJ	35	_	_	_	_	_	_	Arg1
+32	سالمی	ADJ	NPOSTMOD	31	_	_	_	_	_	_	_
+33	برای	PREP	VPP	35	_	_	_	_	_	_	Arg3
+34	ش	PR	POSDEP	33	_	_	_	_	_	_	_
+35	نماند	V	PRD	5	Y	باقی‌ماندن.433	_	_	_	_	_
+
+2	او	PR	SBJ	8	_	_	Arg0	Arg0
+4	تمامی	ADJ	APREMOD	5	_	_	_	_
+6	مراحل	N	ADVRB	8	
+7	صبر	N	NVE	8	_	_	_	_
+8	نمود	V	VCONJ	11	Y	صبر‌کردن.416	_	_
+10	ناله	N	NVE	11	_	_	_	_
+11	نکرد	V	ROOT	0	Y	ناله‌کردن.466	_	_
+
+1	بیماری	N	SBJ	5	_	_	Arg1	_
+3	آنقدر	ADV	ADVRB	5	_	_	ArgM-EXT	_
+4	طولانی	ADJ	MOS	5	_	_	Arg2	_
+5	شد	V	ROOT	0	Y	کردن.25	_	_
+7	هیچ‌	ADJ	NPREMOD	8	_	_	_	_
+8	کس	N	SBJ	13	_	_	_	Arg0
+12	رابطه	N	NVE	13	_	_	_	_
+13	نداشت	V	PRD	6	Y	رابطه‌داشتن.882	_	_
+
+3	گرفتاری‌ها	N	SBJ	11	_	_	Arg0	_
+5	صبر	N	OBJ	11	
+7	شکر	N	NCONJ	5	
+8	ایوب	N	MOZ	5	_	_	_	_
+10	زیادتر	ADJ	MOS	11	_	_	Arg2	_
+11	کردند	V	ROOT	0	Y	کردن.25	_	_
+13	آنجایی	N	ADVRB	11	
+15	صبر	N	SBJ	21	_	_	_	Arg1
+17	زبانزد	ADJ	MOS	21	_	_	_	Arg2
+18	خاص	ADJ	APOSTMOD	17	_	_	_	_
+20	عام	ADJ	AJCONJ	18	
+21	شد	V	PRD	14	Y	کردن.25	_	_
+
+2	وضع	N	SBJ	11	_	_	Arg1
+3	حضرت	N	MOZ	2	_	_	_
+4	ایوب	N	MOZ	3	_	_	_
+6	ع	ARAB	POSDEP	4	_	_	_
+9	سال	N	ADVC	11	_	_	Arg2
+10	ادامه	N	NVE	11	_	_	_
+11	داشت	V	ROOT	0	Y	ادامه‌داشتن.751	_
+
+1	وقتی‌	N	ADVRB	14	_	_	_	ArgM-TMP
+3	ایوب	N	SBJ	8	_	_	Arg1	Arg1
+4	متوجه	ADJ	MOS	8	_	_	Arg2	_
+5	دلیل	N	NEZ	4	_	_	_	_
+6	همسر	N	MOZ	5	_	_	_	_
+7	ش	PR	MOZ	6	_	_	_	_
+8	شد	V	PRD	2	Y	کردن.25	_	_
+10	قسم	N	AJPP	13	
+12	سخت	ADV	ADVRB	14	_	_	_	ArgM-MNR
+13	آشفته	ADJ	MOS	14	_	_	_	Arg2
+14	‌شد	V	ROOT	0	Y	کردن.25	_	_
+
+1	قرآن	N	SBJ	11	_	_	Arg0
+4	بهترین	ADJ	NPREMOD	5	_	_	_
+5	بنده	N	TAM	11	_	_	Arg2
+6	خدا	N	MOZ	5	_	_	_
+8	شکیبا	N	NCONJ	5	_	_	_
+10	خویشتن‌دار	N	NCONJ	8	
+11	می‌خواند	V	ROOT	0	Y	خواندن.133	_
+
+1	او	PR	SBJ	10	_	_	Arg1
+3	سال	N	ADVRB	10	_	_	ArgM-EXT
+4	به‌طور	PREP	ADVRB	10	_	_	ArgM-MNR
+7	رنج	N	MOS	10	
+9	عذاب	N	NCONJ	7	
+10	بود	V	ROOT	0	Y	بودن.15	_
+
+2	حضرت	N	SBJ	5	_	_	Arg0
+3	نیز	ADV	ADVRB	5	_	_	ArgM-ADV
+4	چنین	PR	OBJ	5	_	_	Arg1
+5	نمود	V	ROOT	0	Y	کردن.857	_
+
+2	دستور	N	ADVRB	8	
+3	خداوند	N	MOZ	2	_	_	_	_	_
+4	چشمه‌ای	N	SBJ	8	_	_	Arg1	_	_
+6	آب	N	VPP	8	
+7	سرد	ADJ	NPOSTMOD	6	_	_	_	_	_
+8	جوشید	V	ROOT	0	Y	جوشیدن.409	_	_	_
+11	فرمان	N	ADVRB	16	
+12	خداوند	N	MOZ	11	_	_	_	_	_
+15	آب	N	VPP	16	
+16	نوشید	V	VCONJ	24	Y	نوشیدن.757	_	_	_
+18	بدن	N	OBJ	24	
+23	شستشو	N	NVE	24	_	_	_	_	_
+24	داد	V	PRD	9	Y	شستشو‌دادن.758	_	_	_
+
+3	خداوند	N	MOZ	2	_	_	_	_	_	_
+4	جوانی	N	SBJ	7	_	_	Arg0	_	_	_
+7	برگشت	V	VCONJ	13	Y	برگشتن.825	_	_	_	_
+9	امراض	N	SBJ	13	_	_	_	Arg1	_	_
+10	ش	PR	MOZ	9	_	_	_	_	_	_
+13	رفت	V	ROOT	0	Y	از‌بین‌رفتن.178	_	_	_	_
+14	سپس	SUBR	AJUCL	13	_	_	_	_	_	ArgM-DIS
+16	چیزهایی	N	SBJ	27	_	_	_	_	Arg1	Arg0
+19	دست	N	VPRT	20	
+20	داده‌بود	V	PRD	17	Y	از‌دست‌دادن.750	_	_	_	_
+21	نیز	ADV	ADVRB	27	_	_	_	_	_	ArgM-ADV
+25	همسر	N	NCONJ	23	
+26	ش	PR	MOZ	25	_	_	_	_	_	_
+27	برگشت	V	PRD	14	Y	برگشتن.825	_	_	_	_
+
+1	حضرت	N	SBJ	6	_	_	Arg1	_
+2	الیاس	N	MOZ	1	_	_	_	_
+3	یکی‌از	ADJ	NPREMOD	4	_	_	_	_
+4	پیامبران	N	MOS	6	_	_	Arg2	_
+5	بنی‌اسراییل	N	MOZ	4	_	_	_	_
+6	است	V	ROOT	0	Y	بودن.15	_	_
+8	نام	N	SBJ	15	_	_	_	Arg1
+9	مبارک	ADJ	NPOSTMOD	8	_	_	_	_
+10	ش	PR	MOZ	8	_	_	_	_
+13	سوره	N	VPP	15	
+14	قرآن	N	MOZ	13	_	_	_	_
+15	آمده‌است	V	PRD	7	Y	آمدن.31	_	_
+
+1	او	PR	SBJ	7	_	_	Arg1
+3	نوادگان	N	MOS	7	
+4	هارون	N	MOZ	3	_	_	_
+5	برادر	N	APP	4	_	_	_
+6	موسی	N	MOZ	5	_	_	_
+7	است	V	ROOT	0	Y	بودن.15	_
+
+1	یوشع‌بن‌نون	N	SBJ	18	_	_	Arg1	Arg0
+2	هنگامی	N	ADVRB	18	_	_	_	ArgM-TMP
+4	بعداز	PREP	ADVRB	10	_	_	ArgM-TMP	_
+5	موسی	N	POSDEP	4	_	_	_	_
+7	سرزمین	N	POSDEP	6	_	_	_	_
+8	شام	N	MOZ	7	_	_	_	_
+9	مسلط	ADJ	MOS	10	_	_	Arg2	_
+10	شد	V	PRD	3	Y	کردن.25	_	_
+13	بین	PREP	VPP	18	_	_	_	Arg3
+14	طوایف	N	POSDEP	13	_	_	_	_
+15	سبطی‌های	N	MOZ	14	_	_	_	_
+16	دوازده‌گانه	ADJ	NPOSTMOD	15	_	_	_	_
+17	تقسیم	N	NVE	18	_	_	_	_
+18	نمود	V	ROOT	0	Y	تقسیم‌کردن.86	_	_
+
+1	یکی‌از	ADJ	NPREMOD	3	_	_	_	_
+3	گروهها	N	SBJ	14	_	_	_	Arg0
+5	الیاس	N	SBJ	9	_	_	Arg1	_
+9	بود	V	PRD	4	Y	بودن.15	_	_
+11	سرزمین	N	NPP	13	
+12	بعلبک	N	MOZ	11	_	_	_	_
+13	سکونت	N	NVE	14	_	_	_	_
+14	نمودند	V	ROOT	0	Y	سکونت‌کردن.629	_	_
+
+1	خداوند	N	SBJ	10	_	_	Arg0
+2	الیاس	N	OBJ	10	
+4	به‌عنوان	PREP	ADVRB	10	_	_	ArgM-ADV
+5	پیامبر	N	POSDEP	4	_	_	_
+6	برای	PREP	ADVRB	10	_	_	ArgM-GOL
+7	هدایت	N	POSDEP	6	_	_	_
+9	بعلبک	N	MOZ	8	_	_	_
+10	فرستاد	V	ROOT	0	Y	فرستادن.341	_
+
+1	مردم	N	SBJ	8	_	_	Arg0	Arg0
+3	دیار	N	MOZ	1	_	_	_	_
+4	سخن	N	OBJ	8	
+5	الیاس	N	MOZ	4	_	_	_	_
+7	تکذیب	N	NVE	8	_	_	_	_
+8	کردند	V	VCONJ	14	Y	تکذیب‌کردن.704	_	_
+11	دعوت	N	NPP	13	
+13	اطاعت	N	NVE	14	_	_	_	_
+14	ننمودند	V	ROOT	0	Y	اطاعت‌کردن.702	_	_
+
+1	بعلبک	N	SBJ	9	_	_	Arg0	_
+5	پادشاهی	N	OBJ	9	_	_	Arg1	Arg0
+8	لاجب	N	MOZ	7	_	_	_	_
+9	داشت	V	ROOT	0	Y	داشتن.39	_	_
+14	پرستش	N	NPP	16	
+15	بت	N	MOZ	14	_	_	_	_
+16	دعوت	N	NVE	17	_	_	_	_
+17	می‌نمود	V	PRD	10	Y	دعوت‌کردن.352	_	_
+
+1	او	PR	SBJ	4	_	_	Arg0	_
+2	منشی	N	OBJ	4	_	_	Arg1	Arg0
+3	باایمانی	ADJ	NPOSTMOD	2	_	_	_	_
+4	داشت	V	ROOT	0	Y	داشتن.39	_	_
+7	مومن	N	OBJ	14	
+10	حکم	N	NPP	13	
+11	اعدام	N	MOZ	10	_	_	_	_
+13	نجات	N	NVE	14	_	_	_	_
+14	داده‌بود	V	PRD	5	Y	نجات‌دادن.61	_	_
+
+1	او	PR	SBJ	6	_	_	Arg1	Arg0
+3	شاهان	N	AJPP	5	
+4	متعددی	ADJ	NPOSTMOD	3	_	_	_	_
+5	همبستر	ADJ	MOS	6	_	_	Arg2	_
+6	شده	V	VCONJ	12	Y	کردن.25	_	_
+10	فرزندان	N	OBJ	12	_	_	_	Arg1
+12	داشت	V	ROOT	0	Y	داشتن.39	_	_
+
+1	شاه	N	SBJ	4	_	_	Arg0	_	_
+2	همسایه‌ای	N	OBJ	4	_	_	Arg1	Arg0	Arg1
+3	صالح	ADJ	NPOSTMOD	2	_	_	_	_	_
+4	داشت	V	ROOT	0	Y	داشتن.39	_	_	_
+6	باغی	N	OBJ	11	_	_	_	Arg1	_
+9	قصر	N	MOZ	8	_	_	_	_	_
+10	ش	PR	MOZ	9	_	_	_	_	_
+11	داشت	V	VCONJ	16	Y	داشتن.39	_	_	_
+13	مورد	PREP	MOS	16	_	_	_	_	Arg2
+14	احترام	N	POSDEP	13	_	_	_	_	_
+15	شاه	N	MOZ	14	_	_	_	_	_
+16	بود	V	PRD	5	Y	بودن.15	_	_	_
+
+1	الیاس	N	SBJ	5	_	_	Arg0	_	_	Arg0
+2	خدا	N	OBJ	5	5	_	_	Arg1	_	_	_
+4	سوگند	N	NVE	5	_	_	_	_	_	_
+5	داد	V	ROOT	0	Y	سوگند‌دادن.715	_	_	_	_
+6	که	SUBR	VCL	5	_	_	Arg3	_	_	_
+7	شاه	N	OBJ	20	20	_	_	_	_	Arg1	_
+9	همسر	N	NCONJ	7	
+10	بدکار	ADJ	NPOSTMOD	9	_	_	_	_	_	_
+11	ش	PR	MOZ	9	_	_	_	_	_	_
+14	اگر	SUBR	AJUCL	20	_	_	_	_	ArgM-CND	_
+15	توبه	N	NVE	16	_	_	_	_	_	_
+16	نکردند	V	PRD	14	Y	توبه‌کردن.544	_	_	_	_
+19	هلاکت	N	VPRT	20	
+20	برساند	V	PRD	6	Y	به‌هلاکت‌رساندن.559	_	_	_	_
+22	وسپس	SUBR	AJUCL	20	_	_	_	_	_	ArgM-DIS
+25	هشدار	N	NVE	26	_	_	_	_	_	_
+26	داد	V	PRD	22	Y	هشدار‌دادن.640	_	_	_	_
+
+1	الیاس	N	SBJ	5	_	_	Arg0	Arg0
+3	دست	N	VPP	5	
+5	گریخت	V	VCONJ	12	Y	گریختن.717	_	_
+8	کوهها	N	VPP	12	
+10	غارها	N	NCONJ	8	
+11	پناه	N	NVE	12	_	_	_	_
+12	برد	V	ROOT	0	Y	پناه‌بردن.282	_	_
+
+1	حضرت	N	SBJ	10	_	_	Arg0
+2	الیاس	N	MOZ	1	_	_	_
+4	ع	ARAB	POSDEP	2	_	_	_
+7	سال	N	OBJ	10	_	_	Arg1
+8	بدین	PREP	ADVC	10	_	_	Arg2
+9	منوال	N	POSDEP	8	_	_	_
+10	گذراند	V	ROOT	0	Y	گذراندن.722	_
+
+4	پسر	N	SBJ	9	_	_	Arg1	_
+5	پادشاه	N	MOZ	4	_	_	_	_
+7	بیماری	N	AJPP	8	
+8	مبتلا	ADJ	MOS	9	_	_	Arg2	_
+9	شد	V	VCONJ	14	Y	کردن.25	_	_
+11	بیماری	N	SBJ	14	_	_	_	Arg1
+13	درمان	N	NVE	14	_	_	_	_
+14	نیافت	V	ROOT	0	Y	درمان‌یافتن.726	_	_
+
+1	تلاش	N	SBJ	11	_	_	Arg1
+2	شاه	N	MOZ	1	_	_	_
+4	توسل	N	NPP	1	
+6	بتها	N	NPP	4	
+8	نجات	N	POSDEP	7	_	_	_
+10	بی‌نتیجه	ADJ	MOS	11	_	_	Arg2
+11	ماند	V	ROOT	0	Y	ماندن.369	_
+
+1	وقتی‌	N	ADVRB	11	_	_	_	ArgM-TMP
+3	الیاس	N	SBJ	7	_	_	Arg0	Arg1
+4	صدای	N	OBJ	7	
+7	شنید	V	PRD	2	Y	شنیدن.454	_	_
+9	درمیان	PREP	MOS	11	_	_	_	Arg2
+10	غار	N	POSDEP	9	_	_	_	_
+11	بود	V	ROOT	0	Y	بودن.15	_	_
+
+1	شاه	N	SBJ	6	_	_	Arg1	_	_	_	_	_	_
+4	حادثه	N	AJPP	5	
+5	ناراحت	ADJ	MOS	6	_	_	Arg2	_	_	_	_	_	_
+6	شد	V	VCONJ	13	Y	کردن.25	_	_	_	_	_	_	_
+8	منشی	N	OBJ	13	
+9	باایمان	ADJ	NPOSTMOD	8	_	_	_	_	_	_	_	_	_
+12	مجبور	ADJ	MOS	13	_	_	_	Arg2	_	_	_	_	_
+13	کرد	V	ROOT	0	Y	کردن.25	_	_	_	_	_	_	_
+15	به‌سراغ	PREP	VPP	17	_	_	_	_	Arg4	_	_	_	_
+16	الیاس	N	POSDEP	15	_	_	_	_	_	_	_	_	_
+17	رفته	V	VCONJ	21	Y	رفتن.17	_	_	_	_	_	_	_
+21	بگوید	V	AJUCL	13	Y	گفتن.35	_	_	_	_	_	_	_
+23	اکنون	ADV	ADVRB	26	_	_	_	_	_	_	ArgM-TMP	_	_
+24	وقت	N	SBJ	26	_	_	_	_	_	_	Arg1	_	_
+25	توبه	N	MOZ	24	_	_	_	_	_	_	_	_	_
+26	فرارسیده	V	VCL	21	Y	فرا‌رسیدن.613	_	_	_	_	_	_	_
+28	نزد	PREP	VPP	30	_	_	_	_	_	_	_	Arg4	_
+30	بیا	V	VCL	26	Y	آمدن.44	_	_	_	_	_	_	_
+31	که	SUBR	AJUCL	30	_	_	_	_	_	_	_	ArgM-PRP	_
+32	نزد	PREP	VPP	34	_	_	_	_	_	_	_	_	Arg4
+33	شاه	N	POSDEP	32	_	_	_	_	_	_	_	_	_
+34	برویم	V	PRD	31	Y	رفتن.17	_	_	_	_	_	_	_
+
+2	او	PR	SBJ	5	_	_	Arg0	_	Arg0
+5	بپیوندد	V	VCONJ	17	Y	پیوستن.661	_	_	_
+10	آنچه	PR	NPP	16	16	_	_	_	_	Arg3
+12	مورد	PREP	MOS	15	_	_	_	Arg2	_
+13	خشنودی	N	POSDEP	12	_	_	_	_	_
+14	خداوند	N	MOZ	13	_	_	_	_	_
+15	است	V	PRD	11	Y	بودن.15	_	_	_
+16	فرمان	N	NVE	17	_	_	_	_	_
+17	دهد	V	ROOT	0	Y	فرمان‌دادن.300	_	_	_
+
+3	قوم	N	VPP	6	6	_	_	Arg3	_	_
+4	ش	PR	MOZ	3	_	_	_	_	_
+5	دستور	N	NVE	6	_	_	_	_	_
+6	دهد	V	ROOT	0	Y	دستور‌دادن.104	_	_	_
+7	که	SUBR	VCL	6	_	_	Arg1	_	_
+9	بت‌پرستی	N	VPP	11	
+10	دست	N	NVE	11	_	_	_	_	_
+11	بردارند	V	VCONJ	20	Y	دست‌برداشتن.521	_	_	_
+14	به‌سوی	PREP	NPP	19	_	_	_	_	_
+15	خدای	N	POSDEP	14	_	_	_	_	_
+16	یکتا	ADJ	NPOSTMOD	15	_	_	_	_	_
+18	بی‌همتا	ADJ	AJCONJ	16	
+19	جذب	N	MOS	20	_	_	_	_	Arg2
+20	گردند	V	PRD	7	Y	کردن.25	_	_	_
+
+1	زمانی	N	ADVRB	14	_	_	_	ArgM-TMP	_
+3	الیاس	N	SBJ	7	_	_	Arg0	Arg0	Arg0
+4	صدای	N	OBJ	7	
+7	شنید	V	PRD	2	Y	شنیدن.454	_	_	_
+9	اذن	N	ADVRB	14	
+10	خداوند	N	MOZ	9	_	_	_	_	_
+12	استقبال	N	VPP	14	
+13	ش	PR	MOZ	12	_	_	_	_	_
+14	رفت	V	ROOT	0	Y	رفتن.17	_	_	_
+18	احوال‌پرسی	N	NVE	19	_	_	_	_	_
+19	نماید	V	AJUCL	14	Y	احوال‌پرسی‌کردن.764	_	_	_
+
+1	من	PR	SBJ	8	_	_	Arg0	_	_
+2	بیماری	N	OBJ	8	
+3	پسر	N	MOZ	2	_	_	_	Arg1	_
+4	ش	PR	MOZ	3	_	_	_	_	_
+7	زیاد	ADJ	MOS	8	_	_	Arg2	_	_
+8	می‌کنم	V	ROOT	0	Y	کردن.25	_	_	_
+10	بمیرد	V	VCONJ	16	Y	مردن.608	_	_	_
+12	شاه	N	SBJ	16	_	_	_	_	Arg1
+14	مومن	N	AJPP	15	
+15	غافل	ADJ	MOS	16	_	_	_	_	Arg2
+16	شود	V	ACL	7	Y	کردن.25	_	_	_
+
+1	مرگ	N	SBJ	10	_	_	Arg0
+2	پسر	N	MOZ	1	_	_	_
+4	مدتی	N	ADVRB	10	
+5	شاه	N	OBJ	10	
+9	غافل	ADJ	MOS	10	_	_	Arg2
+10	کرد	V	ROOT	0	Y	کردن.25	_
+
+2	بعداز	PREP	ADVRB	8	_	_	ArgM-TMP	_
+3	مدتی	N	POSDEP	2	_	_	_	_
+4	طولانی	ADJ	NPOSTMOD	3	_	_	_	_
+6	منشی	N	VPP	8	
+8	گفت	V	ROOT	0	Y	گفتن.35	_	_
+9	که	SUBR	VCL	8	_	_	Arg1	_
+10	ماموریت	N	OBJ	15	
+13	چگونه	ADV_INTG	ADVRB	15	_	_	_	ArgM-MNR
+15	دادی	V	PRD	9	Y	انجام‌دادن.158	_	_
+
+1	سپس	SUBR	ROOT	0	_	_	_	_	ArgM-DIS
+2	الیاس	N	SBJ	7	_	_	Arg0	Arg0	Arg1
+3	مخفیانه	ADV	ADVRB	7	_	_	ArgM-MNR	_	_
+5	کوه	N	VPP	7	
+6	پایین	N	ADVC	7	_	_	Arg4	_	_
+7	آمد	V	VCONJ	14	Y	آمدن.44	_	_	_
+10	خانه	N	VPP	14	
+11	مادر	N	MOZ	10	_	_	_	_	_
+12	حضرت	N	MOZ	11	_	_	_	_	_
+13	یونس	N	MOZ	12	_	_	_	_	_
+14	رفت	V	VCONJ	21	Y	رفتن.17	_	_	_
+17	ماه	N	ADVRB	21	_	_	_	_	ArgM-EXT
+20	مخفی	ADJ	MOS	21	_	_	_	_	Arg2
+21	شد	V	PRD	1	Y	کردن.25	_	_	_
+
+2	پس‌از	PREP	ADVRB	7	_	_	ArgM-TMP
+4	مجددا	ADV	ADVRB	7	_	_	ArgM-ADV
+6	کوه	N	VPP	7	
+7	بازگشت	V	ROOT	0	Y	باز‌گشتن.363	_
+
+5	بود	V	ROOT	0	Y	بودن.15	_	_	_	_
+6	که	SUBR	VCL	5	_	_	Arg1	_	_	_
+7	خداوند	N	SBJ	10	_	_	_	Arg0	_	_
+10	گفت	V	PRD	6	Y	گفتن.35	_	_	_	_
+11	که	SUBR	VCL	10	_	_	_	Arg1	_	_
+13	درخواستی	N	OBJ	18	_	_	_	_	Arg1	Arg1
+16	می‌خواهی	V	NCL	13	Y	خواستن.51	_	_	_	_
+17	تقاضا	N	NVE	18	_	_	_	_	_	_
+18	کن	V	PRD	11	Y	تقاضا‌کردن.448	_	_	_	_
+
+1	الیاس	N	SBJ	6	_	_	Arg0
+3	خدا	N	NPP	4	
+4	تقاضای	N	NVE	6	_	_	_
+5	مرگ	N	MOZ	4	_	_	Arg1
+6	نمود	V	ROOT	0	Y	تقاضا‌کردن.448	_
+
+1	خداوند	N	SBJ	9	_	_	Arg0
+3	سال	N	ADVRB	9	_	_	ArgM-EXT
+4	قحطی	N	OBJ	9	
+7	بنی‌اسراییل	N	POSDEP	6	_	_	_
+8	مسلط	ADJ	MOS	9	_	_	Arg2
+9	نمود	V	ROOT	0	Y	کردن.25	_
+
+1	لذا	SUBR	ROOT	0	_	_	ArgM-DIS	_
+3	کمال	ADJ	NPREMOD	4	_	_	_	_
+4	شرمندگی	N	ADVRB	7	
+5	نزد	PREP	VPP	7	_	_	Arg4	_
+7	رفته	V	VCONJ	11	Y	رفتن.17	_	_
+9	تقاضای	N	NVE	11	_	_	_	_
+10	بخشش	N	MOZ	9	_	_	_	Arg1
+11	نمودند	V	PRD	1	Y	تقاضا‌کردن.448	_	_
+
+1	الیاس	N	SBJ	9	_	_	Arg1	_
+3	همراه	N	ADVRB	9	
+4	الیسع	N	MOZ	3	_	_	_	_
+5	جانشین	N	APP	4	_	_	_	_
+7	وارد	ADJ	MOS	9	_	_	Arg2	_
+8	بعلبک	N	NEZ	7	_	_	_	_
+9	شد	V	ROOT	0	Y	کردن.25	_	_
+10	وسپس	SUBR	AJUCL	9	_	_	ArgM-TMP	ArgM-ADV
+11	گفتگویی	N	SBJ	17	_	_	_	Arg1
+15	شاه	N	NCONJ	13	
+17	گرفت	V	PRD	10	Y	انجام‌گرفتن.763	_	_
+
+3	نهایت	N	ADVRB	7	
+4	شاه	N	SBJ	7	_	_	Arg0	_	_
+6	او	PR	VPP	7	7	_	_	Arg3	_	_
+7	خواست	V	ROOT	0	Y	خواستن.51	_	_	_
+9	دعا	N	NVE	10	_	_	_	_	_
+10	کند	V	VCL	7	Y	دعا‌کردن.182	_	_	_
+11	آب	N	SBJ	14	_	_	_	_	Arg0
+12	بار	N	ADVRB	14	_	_	_	_	ArgM-EXT
+14	برگردد	V	VCL	10	Y	بر‌گشتن.637	_	_	_
+
+1	الیاس	N	SBJ	3	_	_	Arg0	_	_
+2	دعا	N	NVE	3	_	_	_	_	_
+3	کرد	V	ROOT	0	Y	دعا‌کردن.182	_	_	_
+4	و‌سپس	SUBR	AJUCL	3	_	_	_	_	ArgM-DIS
+5	باران	N	SBJ	7	_	_	_	Arg1	_
+6	زیادی	ADJ	NPOSTMOD	5	_	_	_	_	_
+7	بارید	V	VCONJ	17	Y	باریدن.181	_	_	_
+9	سبزی	N	SBJ	17	_	_	_	_	Arg1
+11	خرمی	N	NCONJ	9	
+12	بار	N	ADVRB	17	_	_	_	_	ArgM-EXT
+16	حاکم	ADJ	MOS	17	_	_	_	_	Arg2
+17	شد	V	PRD	4	Y	کردن.25	_	_	_
+
+2	مردم	N	SBJ	10	_	_	Arg1	Arg0
+3	کم‌کم	ADV	ADVRB	10	_	_	ArgM-MNR	_
+4	براثر	PREP	ADVRB	10	_	_	ArgM-CAU	_
+5	وفور	ADJ	NPREMOD	6	_	_	_	_
+6	نعمت	N	POSDEP	4	_	_	_	_
+7	بار	N	ADVRB	10	_	_	ArgM-EXT	_
+9	گمراه‌	ADJ	MOS	10	_	_	Arg2	_
+10	شدند	V	VCONJ	15	Y	کردن.25	_	_
+13	الیاس	N	VPP	15	
+14	سرکشی	N	NVE	15	_	_	_	_
+15	نمودند	V	ROOT	0	Y	سرکشی‌کردن.761	_	_
+
+1	سرانجام	ADV	ADVRB	8	_	_	ArgM-ADV
+2	خداوند	N	SBJ	8	_	_	Arg0
+3	دشمنان	N	OBJ	8	
+7	مسلط	ADJ	MOS	8	_	_	Arg2
+8	نمود	V	ROOT	0	Y	کردن.25	_
+
+1	الیاس	N	SBJ	10	_	_	Arg0	Arg0
+2	پس‌از	PREP	ADVRB	10	_	_	ArgM-TMP	_
+4	ماجرا	N	POSDEP	2	_	_	_	_
+5	وصیتهای	N	NVE	10	_	_	_	_
+9	الیسع	N	NPP	5	
+10	نمود	V	VCONJ	15	Y	وصیت‌کردن.66	_	_
+13	آسمانها	N	VPP	15	
+14	عروج	N	NVE	15	_	_	_	_
+15	کرد	V	ROOT	0	Y	عروج‌کردن.759	_	_
+
+1	حضرت	N	SBJ	6	_	_	Arg1	_
+2	ادریس	N	MOZ	1	_	_	_	_
+3	یکی‌از	ADJ	NPREMOD	4	_	_	_	_
+4	پیامبران	N	MOS	6	_	_	Arg2	_
+5	الهی	ADJ	NPOSTMOD	4	_	_	_	_
+6	است	V	ROOT	0	Y	بودن.15	_	_
+8	نام	N	SBJ	14	_	_	_	Arg1
+9	ش	PR	MOZ	8	_	_	_	_
+10	دوبار	ADV	ADVRB	14	_	_	_	ArgM-EXT
+12	قرآن	N	VPP	14	
+13	کریم	ADJ	NPOSTMOD	12	_	_	_	_
+14	آمده‌است	V	PRD	7	Y	آمدن.31	_	_
+
+1	حضرت	N	SBJ	11	_	_	Arg1	_
+2	ادریس	N	MOZ	1	_	_	_	_
+5	واسطه	N	VPP	11	
+7	آدم	N	VPP	11	
+9	ع	ARAB	POSDEP	7	_	_	_	_
+11	میرسد	V	VCONJ	17	Y	رسیدن.69	_	_
+13	او	PR	SBJ	17	_	_	_	Arg0
+15	سال	N	ADVC	17	_	_	_	Arg2
+16	عمر	N	NVE	17	_	_	_	_
+17	کرد	V	ROOT	0	Y	عمر‌کردن.103	_	_
+
+2	صحیفه	N	SBJ	9	_	_	Arg1
+4	کتابهای	N	ADVRB	9	
+5	آسمانی	ADJ	NPOSTMOD	4	_	_	_
+8	نازل	ADJ	MOS	9	_	_	Arg2
+9	گردید	V	ROOT	0	Y	کردن.25	_
+
+1	او	PR	SBJ	8	_	_	Arg1	_	_	_
+2	بلندقامت	ADJ	MOS	8	_	_	Arg2	_	_	_
+4	تنومند	ADJ	AJCONJ	2	
+6	نخستین	ADJ	NPREMOD	7	_	_	_	_	_	_
+7	انسانی	N	AJCONJ	4	4	_	_	_	_	_	_
+8	بود	V	ROOT	0	Y	بودن.15	_	_	_	_
+11	قلم	N	VPP	13	
+12	خط	N	OBJ	13	_	_	_	Arg1	_	_
+13	نوشت	V	VCONJ	24	Y	نوشتن.301	_	_	_	_
+15	خداوند	N	SBJ	24	_	_	_	_	Arg0	_
+18	علم	N	OBJ	24	_	_	_	_	Arg1	Arg1
+19	نجوم	N	MOZ	18	_	_	_	_	_	_
+21	حساب	N	NCONJ	19	
+23	هییت	N	NCONJ	21	
+24	داد	V	PRD	9	Y	آموختن.230	_	_	_	_
+26	معجزه	N	MOS	28	_	_	_	_	_	Arg2
+28	ست	V	PRD	25	Y	بودن.15	_	_	_	_
+
+1	حضرت	N	SBJ	5	_	_	Arg1	Arg0	Arg0
+2	ادریس	N	MOZ	1	_	_	_	_	_
+3	اولین	ADJ	NPREMOD	4	_	_	_	_	_
+4	کسی	N	MOS	5	_	_	Arg2	_	_
+5	بود	V	ROOT	0	Y	بودن.15	_	_	_
+7	خیاطی	N	NVE	8	_	_	_	_	_
+8	کرد	V	VCONJ	11	Y	خیاطی‌کردن.769	_	_	_
+10	لباس	N	OBJ	11	_	_	_	_	Arg1
+11	دوخت	V	PRD	6	Y	دوختن.395	_	_	_
+
+3	ادریس	N	MOZ	2	_	_	_
+4	پادشاهی	N	SBJ	7	_	_	Arg0
+5	ستمگر	ADJ	NPOSTMOD	4	_	_	_
+6	زندگی	N	NVE	7	_	_	_
+7	می‌کرد	V	ROOT	0	Y	زندگی‌کردن.40	_
+
+1	روزی	N	ADVRB	9	_	_	ArgM-TMP	_	_	_
+2	پادشاه	N	SBJ	9	_	_	Arg0	_	_	_
+4	سرزمین	N	NPP	8	
+5	سبز	ADJ	NPOSTMOD	4	_	_	_	_	_	_
+7	خرمی	ADJ	AJCONJ	5	
+8	عبور	N	NVE	9	_	_	_	_	_	_
+9	کرد	V	ROOT	0	Y	عبور‌کردن.535	_	_	_	_
+11	متعلق	ADJ	MOS	15	_	_	_	Arg2	_	_
+13	شخص	N	AJPP	11	
+14	مومنی	ADJ	NPOSTMOD	13	_	_	_	_	_	_
+15	بود	V	PRD	10	Y	بودن.15	_	_	_	_
+17	پادشاه	N	SBJ	20	_	_	_	_	Arg0	_
+20	خواست	V	VCL	15	Y	خواستن.51	_	_	_	_
+21	که	SUBR	VCL	20	_	_	_	_	Arg1	_
+22	زمین	N	OBJ	27	
+26	واگذار	N	NVE	27	_	_	_	_	_	_
+27	کند	V	PRD	21	Y	واگذار‌کردن.770	_	_	_	_
+
+2	مرد	N	SBJ	3	_	_	Arg0	_
+3	گفت	V	ROOT	0	Y	گفتن.35	_	_
+4	که	SUBR	VCL	3	_	_	Arg1	_
+5	خانواده	N	SBJ	11	_	_	_	Arg1
+7	م	PR	MOZ	6	_	_	_	_
+10	محتاج‌تر	ADJ	MOS	11	_	_	_	Arg2
+11	است	V	PRD	4	Y	بودن.15	_	_
+
+2	خداوند	N	VPP	3	
+3	خواست	V	ROOT	0	Y	خواستن.51	_	_
+5	دیگر	ADV	ADVRB	10	_	_	_	ArgM-ADV
+6	باران	N	SBJ	10	_	_	_	Arg1
+9	دیار	N	ADVRB	10	
+10	نبارد	V	VCL	3	Y	باریدن.181	_	_
+11	مگر	PREP	ADVRB	10	_	_	_	ArgM-ADV2
+
+1	ازطرف	PREP	ADVRB	6	_	_	ArgM-ADV	_	_	_
+3	عذاب	N	SBJ	6	_	_	Arg1	_	_	_
+4	خداوند	N	MOZ	3	_	_	_	_	_	_
+5	نازل	ADJ	MOS	6	_	_	Arg2	_	_	_
+6	شد	V	ROOT	0	Y	کردن.25	_	_	_	_
+8	شهر	N	SBJ	10	_	_	_	Arg1	_	_
+9	ویران	ADJ	MOS	10	_	_	_	Arg2	_	_
+10	گشت	V	VCONJ	13	Y	کردن.25	_	_	_	_
+12	پادشاه	N	OBJ	13	_	_	_	_	Arg1	_
+13	کشته	V	VCONJ	19	Y	کشتن.102	_	_	_	_
+15	زن	N	SBJ	19	_	_	_	_	_	Arg1
+16	ش	PR	MOZ	15	_	_	_	_	_	_
+17	طعمه	N	MOS	19	_	_	_	_	_	Arg2
+18	سگها	N	MOZ	17	_	_	_	_	_	_
+19	گشت	V	VCL	6	Y	کردن.25	_	_	_	_
+
+1	مدت	N	SBJ	4	_	_	Arg1	_
+3	سال	N	MOZ	1	_	_	_	_
+4	گذشت	V	VCONJ	9	Y	گذشتن.43	_	_
+7	آسمان	N	ADVRB	9	
+8	بارانی	N	SBJ	9	_	_	_	Arg1
+9	نبارید	V	ROOT	0	Y	باریدن.181	_	_
+
+1	مردم	N	SBJ	11	_	_	Arg0	Arg0
+2	کم‌کم	ADV	ADVRB	11	_	_	ArgM-EXT	_
+3	دراثر	PREP	ADVRB	11	_	_	ArgM-CAU	_
+4	فقر	N	POSDEP	3	_	_	_	_
+6	گرسنگی	N	NCONJ	4	
+8	انابه	N	VPP	11	
+10	توبه	N	NCONJ	8	
+11	افتادند	V	VCONJ	17	Y	افتادن.780	_	_
+14	تضرع	N	VPP	17	
+16	دعا	N	NCONJ	14	
+17	پرداختند	V	ROOT	0	Y	پرداختن.72	_	_
+
+1	خداوند	N	SBJ	5	_	_	Arg0	_	_	_
+3	ادریس	N	NPP	4	
+4	وحی	N	NVE	5	_	_	_	_	_	_
+5	کرد	V	ROOT	0	Y	وحی‌کردن.218	_	_	_	_
+7	قومت	N	SBJ	9	_	_	_	Arg0	_	_
+8	توبه	N	NVE	9	_	_	_	_	_	_
+9	کرده‌اند	V	VCONJ	14	Y	توبه‌کردن.544	_	_	_	_
+11	من	PR	SBJ	14	_	_	_	_	Arg0	_
+14	گذشتم	V	PRD	6	Y	گذشتن.781	_	_	_	_
+15	تو	PR	SBJ	17	_	_	_	_	_	Arg0
+16	نیز	ADV	ADVRB	17	_	_	_	_	_	ArgM-ADV
+17	بگذر	V	VCL	14	Y	گذشتن.781	_	_	_	_
+
+2	ادریس	N	SBJ	5	_	_	Arg0
+5	نرفت	V	ROOT	0	Y	زیر‌بار‌رفتن.546	_
+
+1	درنتیجه	SUBR	ROOT	0	_	_	_	_
+2	خداوند	N	SBJ	7	_	_	Arg0	_
+3	روزی	N	OBJ	7	
+4	ش	PR	MOZ	3	_	_	_	_
+6	قطع	N	NVE	7	_	_	_	_
+7	کرد	V	PRD	1	Y	قطع‌کردن.209	_	_
+10	کار	N	SBJ	18	_	_	_	Arg1
+11	باعث	ADJ	MOS	18	_	_	_	Arg2
+12	ناراحتی	N	NEZ	11	_	_	_	_
+14	اعتراض	N	NCONJ	12	
+15	ادریس	N	MOZ	14	_	_	_	_
+17	خداوند	N	NPP	14	
+18	شد	V	PRD	8	Y	کردن.25	_	_
+
+1	ادریس	N	SBJ	9	_	_	Arg1	_
+3	گرسنگی	N	ADVRB	9	
+4	وارد	ADJ	MOS	9	_	_	Arg2	_
+5	شهر	N	NEZ	4	_	_	_	_
+7	منزل	N	NCONJ	5	
+8	پیرزنی	N	MOZ	7	_	_	_	_
+9	شد	V	ROOT	0	Y	کردن.25	_	_
+13	بوی	N	OBJ	16	_	_	_	Arg1
+14	نان	N	MOZ	13	_	_	_	_
+16	می‌رسید	V	PRD	10	Y	رسیدن.382	_	_
+
+2	پیرزن	N	VPP	6	
+3	درخواست	N	NVE	6	_	_	_
+4	قرص	N	MOZ	3	_	_	Arg1
+5	نانی	N	MOZ	4	_	_	_
+6	کرد	V	ROOT	0	Y	درخواست‌کردن.63	_
+
+2	پیرزن	N	SBJ	3	_	_	Arg0	_
+3	گفت	V	ROOT	0	Y	گفتن.35	_	_
+4	که	SUBR	VCL	3	_	_	Arg1	_
+5	نفرین	N	SBJ	11	_	_	_	Arg0
+6	ادریس	N	MOZ	5	_	_	_	_
+7	چیزی	N	OBJ	11	_	_	_	Arg1
+10	باقی	N	NVE	11	_	_	_	_
+11	نگذاشته‌است	V	PRD	4	Y	باقی‌گذاشتن.210	_	_
+
+2	ادریس	N	SBJ	9	_	_	Arg0	_
+4	اصرار	N	ADVRB	9	
+5	سهم	N	OBJ	9	
+6	فرزند	N	MOZ	5	_	_	_	_
+7	پیرزن	N	MOZ	6	_	_	_	_
+9	گرفت	V	ROOT	0	Y	گرفتن.135	_	_
+10	وسپس	SUBR	VCL	9	_	_	_	_
+11	فرزند	N	SBJ	20	_	_	_	Arg1
+13	مشاهده	N	ADVRB	20	
+15	کار	N	MOZ	13	_	_	_	_
+17	ترس	N	VPP	20	
+18	گرسنگی	N	MOZ	17	_	_	_	_
+19	جان	N	NVE	20	_	_	_	_
+20	داد	V	PRD	10	Y	جان‌دادن.784	_	_
+
+1	مرگ	N	SBJ	6	_	_	Arg0	_
+2	پسر	N	MOZ	1	_	_	_	_
+3	باعث	ADJ	NVE	6	_	_	_	_
+4	ناراحتی	N	NEZ	3	_	_	Arg1	_
+5	پیرزن	N	MOZ	4	_	_	_	_
+6	شد	V	VCONJ	14	Y	باعث‌شدن.296	_	_
+8	ادریس	N	SBJ	14	_	_	_	Arg0
+9	جان	N	OBJ	14	_	_	_	Arg1
+13	پسر	N	VPP	14	
+14	داد	V	ROOT	0	Y	دادن.110	_	_
+
+1	پس‌از	PREP	ADVRB	8	_	_	ArgM-TMP
+3	واقعه	N	POSDEP	1	_	_	_
+4	پیرزن	N	SBJ	8	_	_	Arg0
+6	ادریس	N	NPP	7	
+7	ایمان	N	NVE	8	_	_	_
+8	آورد	V	ROOT	0	Y	ایمان‌آوردن.38	_
+
+1	او	PR	SBJ	8	_	_	Arg0	_	_
+3	خبر	N	OBJ	8	
+8	داد	V	VCONJ	16	Y	دادن.110	_	_	_
+10	مردم	N	SBJ	16	_	_	_	Arg0	Arg0
+12	پادشاه	N	NCONJ	10	
+14	استقبال	N	VPP	16	
+16	رفته	V	VCONJ	21	Y	رفتن.17	_	_	_
+20	ایمان	N	NVE	21	_	_	_	_	_
+21	آوردند	V	ROOT	0	Y	ایمان‌آوردن.38	_	_	_
+
+2	دعای	N	ADVRB	9	
+3	ادریس	N	MOZ	2	_	_	_	_
+4	باران	N	SBJ	9	_	_	Arg1	_
+5	سیل‌آسایی	ADJ	NPOSTMOD	4	_	_	_	_
+8	نازل	ADJ	MOS	9	_	_	Arg2	_
+9	شد	V	VCONJ	16	Y	کردن.25	_	_
+14	قحطی	N	NPP	15	
+15	نجات	N	NVE	16	_	_	_	_
+16	داد	V	ROOT	0	Y	نجات‌دادن.61	_	_
+
+1	فرشته‌ای	N	SBJ	24	_	_	_	_	_	Arg0	Arg0
+3	خداوند	N	SBJ	9	_	_	Arg0	Arg0	Arg0	_	_
+4	بنابه	PREP	ADVRB	9	_	_	ArgM-CAU	_	_	_	_
+5	دلایلی	N	PREDEP	4	_	_	_	_	_	_	_
+8	غضب	N	NVE	9	_	_	_	_	_	_	_
+9	نموده	V	VCONJ	14	Y	غضب‌کردن.785	_	_	_	_	_
+11	بالهای	N	OBJ	14	
+12	ش	PR	MOZ	11	_	_	_	_	_	_	_
+14	کنده	V	VCONJ	24	Y	کندن.786	_	_	_	_	_
+19	جزیره‌ای	N	NPP	23	
+21	دریای	N	ADVRB	24	
+22	سرخ	N	MOZ	21	_	_	_	_	_	_	_
+23	تبعید	N	NVE	24	_	_	_	_	_	_	_
+24	نموده‌بود	V	ROOT	0	Y	تبعید‌کردن.884	_	_	_	_	_
+25	نزد	PREP	VPP	27	_	_	_	_	_	Arg4	_
+26	ادریس	N	PREDEP	25	_	_	_	_	_	_	_
+27	رفته	V	VCONJ	33	Y	رفتن.17	_	_	_	_	_
+31	درخواست	N	NVE	33	_	_	_	_	_	_	_
+32	شفاعت	N	OBJ	33	_	_	_	_	_	_	Arg1
+33	نمود	V	VCL	24	Y	درخواست‌کردن.63	_	_	_	_	_
+
+1	ادریس	N	SBJ	5	_	_	Arg0	_
+4	دعا	N	NVE	5	_	_	_	_
+5	کرد	V	ROOT	0	Y	دعا‌کردن.182	_	_
+7	خداوند	N	SBJ	11	_	_	_	Arg0
+8	فرشته	N	OBJ	11	
+10	عفو	N	NVE	11	_	_	_	_
+11	کرد	V	PRD	6	Y	عفو‌کردن.787	_	_
+
+1	فرشته	N	SBJ	6	_	_	Arg0	_
+3	عوض	N	ADVRB	6	
+5	ادریس	N	VPP	6	
+6	خواست	V	ROOT	0	Y	خواستن.51	_	_
+7	که	SUBR	VCL	6	_	_	Arg1	_
+10	حاجتی	N	OBJ	11	_	_	_	Arg1
+11	بخواهد	V	PRD	7	Y	خواستن.51	_	_
+
+2	ادریس	N	SBJ	4	_	_	Arg0	Arg0
+3	درخواست	N	NVE	4	_	_	_	_
+4	کرد	V	ROOT	0	Y	درخواست‌کردن.63	_	_
+5	که	SUBR	VCL	4	_	_	Arg1	_
+7	آسمان	N	NPP	9	
+9	پرواز	N	NVE	10	_	_	_	_
+10	کند	V	PRD	5	Y	پرواز‌کردن.788	_	_
+
+1	وقتی	N	ADVRB	6	_	_	ArgM-TMP	_	_
+2	ادریس	N	SBJ	6	_	_	Arg0	Arg0	_
+4	آسمان	N	VPP	6	
+6	رفت	V	VCONJ	9	Y	رفتن.17	_	_	_
+7	عزراییل	N	OBJ	9	9	_	_	_	Arg1	_
+9	دید	V	ROOT	0	Y	دیدن.47	_	_	_
+12	تعجب	N	ADVRB	16	
+16	می‌کند	V	PRD	10	Y	نگاه‌کردن.789	_	_	_
+
+1	آنگاه	ADV	ADVRB	8	_	_	ArgM-TMP
+5	همانجا	PR	ADVRB	8	
+6	قبض	N	NVE	8	_	_	_
+7	روح	N	MOZ	6	_	_	_
+8	نمود	V	ROOT	0	Y	قبض‌کردن.689	_
+
+1	یکی‌از	ADJ	NPREMOD	2	_	_	_	_
+2	پیامبران	N	MOS	8	_	_	Arg2	_
+3	حضرت	N	SBJ	8	_	_	Arg1	_
+4	زکریا	N	MOZ	3	_	_	_	_
+6	ع	ARAB	POSDEP	4	_	_	_	_
+8	است	V	ROOT	0	Y	بودن.15	_	_
+11	نام	N	SBJ	20	_	_	_	Arg1
+12	مبارک	ADJ	NPOSTMOD	11	_	_	_	_
+13	ش	PR	MOZ	11	_	_	_	_
+15	قرآن	N	VPP	20	
+16	7بار	ADV	ADVRB	20	_	_	_	ArgM-EXT
+19	سوره	N	VPP	20	
+20	آمده‌است	V	PRD	10	Y	آمدن.31	_	_
+
+1	زکریابن‌برخیا	N	SBJ	8	_	_	Arg1	_
+3	ع	ARAB	POSDEP	1	_	_	_	_
+6	پیامبران	N	MOS	8	
+7	بنی‌اسراییل	N	MOZ	6	_	_	_	_
+8	بود	V	ROOT	0	Y	بودن.15	_	_
+10	سلسله	N	SBJ	19	_	_	_	Arg1
+11	نسب	N	MOZ	10	_	_	_	_
+12	ش	PR	MOZ	11	_	_	_	_
+14	حضرت	N	VPRT	19	
+15	داود	N	MOZ	14	_	_	_	_
+17	ع	ARAB	POSDEP	15	_	_	_	_
+19	می‌رسد	V	PRD	9	Y	رسیدن.69	_	_
+
+1	زکریا	N	SBJ	8	_	_	Arg0
+3	ع	ARAB	POSDEP	1	_	_	_
+6	اشیاع	N	NPP	7	
+7	خواستگاری	N	NVE	8	_	_	_
+8	کرد	V	ROOT	0	Y	خواستگاری‌کردن.813	_
+
+2	عمران	N	SBJ	13	_	_	Arg1	Arg0
+4	یکی‌از	ADJ	NPREMOD	5	_	_	_	_
+5	راهبان	N	MOS	9	_	_	Arg2	_
+8	بنی‌اسراییل	N	NEZ	7	_	_	_	_
+9	بود	V	PRD	3	Y	بودن.15	_	_
+11	حنه	N	NPP	12	
+12	خواستگاری	N	NVE	13	_	_	_	_
+13	نمود	V	ROOT	0	Y	خواستگاری‌کردن.813	_	_
+
+1	سرانجام	ADV	ADVRB	13	_	_	_	ArgM-TMP
+2	اشیاع	N	SBJ	8	_	_	Arg1	_
+3	همسر	N	MOS	8	_	_	Arg2	_
+4	زکریا	N	MOZ	3	_	_	_	_
+6	ع	ARAB	POSDEP	4	_	_	_	_
+8	گردید	V	VCONJ	13	Y	کردن.25	_	_
+10	حنه	N	SBJ	13	_	_	_	Arg1
+11	همسر	N	MOS	13	_	_	_	Arg2
+12	عمران	N	MOZ	11	_	_	_	_
+13	شد	V	ROOT	0	Y	کردن.25	_	_
+
+1	سالها	N	SBJ	8	_	_	Arg1	_	_
+3	زندگی	N	POSDEP	1	
+4	عمران	N	MOZ	3	_	_	_	_	_
+6	همسر	N	NCONJ	4	
+7	ش	PR	MOZ	6	_	_	_	_	_
+8	گذشت	V	VCONJ	12	Y	گذشتن.43	_	_	_
+10	دارای	ADJ	MOS	12	_	_	_	Arg2	_
+11	فرزندی	N	NEZ	10	_	_	_	_	_
+12	نشدند	V	VCONJ	19	Y	کردن.25	_	_	_
+15	امر	N	SBJ	19	_	_	_	_	Arg0
+16	حنه	N	OBJ	19	
+18	رنج	N	NVE	19	_	_	_	_	_
+19	می‌داد	V	ROOT	0	Y	رنج‌دادن.816	_	_	_
+
+1	روزی	N	ADVRB	4	_	_	ArgM-TMP	_	_	_
+2	حنه	N	SBJ	4	_	_	Arg0	_	_	Arg0
+3	مشاهده	N	NVE	4	_	_	_	_	_	_
+4	کرد	V	ROOT	0	Y	مشاهده‌کردن.231	_	_	_	_
+5	که	SUBR	VCL	4	_	_	Arg1	_	_	_
+6	پرنده‌ای	N	SBJ	13	_	_	_	Arg0	_	_
+7	روی	PREP	ADVRB	13	_	_	_	ArgM-LOC	_	_
+8	درختی	N	POSDEP	7	_	_	_	_	_	_
+10	جوجه	N	VPP	13	
+12	غذا	N	OBJ	13	_	_	_	Arg1	_	_
+13	می‌دهد	V	PRD	5	Y	دادن.110	_	_	_	_
+16	امر	N	SBJ	23	_	_	_	_	Arg1	_
+17	باعث	ADJ	MOS	23	_	_	_	_	Arg2	_
+18	شعله‌ور	ADJ	PREDEP	19	_	_	_	_	_	_
+20	حس	N	MOZ	19	_	_	_	_	_	_
+21	مادری	N	MOZ	20	_	_	_	_	_	_
+22	ش	PR	MOZ	21	_	_	_	_	_	_
+23	شد	V	VCONJ	32	Y	کردن.25	_	_	_	_
+26	ته	ADJ	ADVRB	32	
+27	دل	N	NEZ	26	_	_	_	_	_	_
+29	خدا	N	NPP	30	
+30	تقاضای	N	NVE	32	_	_	_	_	_	_
+31	بچه	N	MOZ	30	_	_	_	_	_	Arg1
+32	نمود	V	PRD	14	Y	تقاضا‌کردن.448	_	_	_	_
+
+1	خداوند	N	SBJ	7	_	_	Arg0	_
+3	دعای	N	OBJ	7	
+6	مستجاب	ADJ	MOS	7	_	_	Arg2	_
+7	کرد	V	VCONJ	10	Y	کردن.25	_	_
+9	باردار	ADJ	MOS	10	_	_	_	Arg2
+10	شد	V	ROOT	0	Y	کردن.25	_	_
+
+3	اثنا	N	ADVRB	7	
+4	عمران	N	SBJ	7	_	_	Arg0	_	_	_
+6	دنیا	N	VPRT	7	
+7	رفت	V	VCONJ	11	Y	از‌دنیا‌رفتن.106	_	_	_	_
+9	حنه	N	SBJ	11	_	_	_	Arg1	Arg0	Arg0
+10	بیوه	ADJ	MOS	11	_	_	_	Arg2	_	_
+11	شد	V	VCONJ	14	Y	کردن.25	_	_	_	_
+13	نذر	N	NVE	14	_	_	_	_	_	_
+14	کرد	V	ROOT	0	Y	نذر‌کردن.725	_	_	_	_
+15	که	SUBR	VCL	14	_	_	_	_	Arg1	_
+16	بچه	N	OBJ	22	
+19	خادم	N	MOS	22	_	_	_	_	_	Arg2
+20	خانه	N	MOZ	19	_	_	_	_	_	_
+21	خدا	N	MOZ	20	_	_	_	_	_	_
+22	نماید	V	PRD	15	Y	کردن.25	_	_	_	_
+
+1	حنه	N	SBJ	5	_	_	Arg1	_
+2	منتظر	ADJ	MOS	5	_	_	Arg2	_
+3	فرزند	N	NEZ	2	_	_	_	_
+4	پسر	N	MOZ	3	_	_	_	_
+5	بود	V	VCONJ	13	Y	بودن.15	_	_
+7	خداوند	N	SBJ	13	_	_	_	Arg0
+10	دختری	N	OBJ	13	
+12	عطا	N	NVE	13	_	_	_	_
+13	کرد	V	ROOT	0	Y	عطا‌کردن.420	_	_
+
+2	خادمین	N	SBJ	8	_	_	Arg1	_
+3	خانه	N	MOZ	2	_	_	_	_
+4	خدا	N	MOZ	3	_	_	_	_
+5	ازمیان	PREP	NPP	7	_	_	_	_
+6	پسران	N	POSDEP	5	_	_	_	_
+7	انتخاب	N	MOS	8	_	_	Arg2	_
+8	می‌شدند	V	PRD	1	Y	کردن.25	_	_
+9	حنه	N	SBJ	11	_	_	_	Arg1
+10	نگران	ADJ	MOS	11	_	_	_	Arg2
+11	شد	V	ROOT	0	Y	کردن.25	_	_
+
+1	مادر	N	SBJ	9	_	_	Arg0	Arg0	Arg0
+2	ش	PR	MOZ	1	_	_	_	_	_
+3	بعداز	PREP	ADVRB	9	_	_	_	_	_
+4	تولد	N	POSDEP	3	_	_	_	_	_
+8	مریم	N	TAM	9	_	_	Arg2	_	_
+9	نهاد	V	VCONJ	15	Y	نامگذاری‌کردن.424	_	_	_
+14	بیت‌المقدس	N	VPP	15	
+15	برده	V	VCONJ	20	Y	بردن.208	_	_	_
+19	هدیه	N	NVE	20	_	_	_	_	_
+20	نمود	V	ROOT	0	Y	هدیه‌کردن.818	_	_	_
+
+1	سرانجام	ADV	ADVRB	9	_	_	ArgM-TMP	_	_
+2	برای	PREP	ADVRB	9	_	_	ArgM-GOL	_	_
+3	برعهده	N	POSDEP	2	_	_	_	_	_
+8	نهری	N	MOZ	7	_	_	_	_	_
+9	رفته	V	ROOT	0	Y	رفتن.17	_	_	_
+11	قرعه‌کشی	N	NVE	12	_	_	_	_	_
+12	نمایند	V	VCL	9	Y	قرعه‌کشی‌کردن.588	_	_	_
+14	زکریا	N	SBJ	18	_	_	_	_	Arg1
+15	نیز	ADV	ADVRB	18	_	_	_	_	ArgM-ADV
+16	جز	PREP	MOS	18	_	_	_	_	Arg2
+18	بود	V	PRD	13	Y	بودن.15	_	_	_
+
+1	آنها	PR	SBJ	7	_	_	Arg0	Arg0
+2	اسم	N	OBJ	7	
+6	چوبهایی	N	POSDEP	5	_	_	_	_
+7	نوشته	V	VCONJ	12	Y	نوشتن.301	_	_
+11	آب	N	MOZ	10	_	_	_	_
+12	انداختند	V	ROOT	0	Y	انداختن.240	_	_
+
+1	زکریا	N	SBJ	8	_	_	Arg0	_	_
+3	نگهبانی	N	VPP	8	
+5	مراقبت	N	NCONJ	3	
+7	مریم	N	NPP	5	
+8	پرداخت	V	ROOT	0	Y	پرداختن.72	_	_	_
+10	او	PR	SBJ	12	_	_	_	Arg1	_
+11	بزرگ	ADJ	MOS	12	_	_	_	Arg2	_
+12	شد	V	VCONJ	16	Y	کردن.25	_	_	_
+14	متولی	N	MOS	16	_	_	_	_	Arg2
+15	بیت‌المقدس	N	MOZ	14	_	_	_	_	_
+16	گردید	V	AJUCL	8	Y	کردن.25	_	_	_
+
+1	او	PR	SBJ	4	_	_	Arg0	Arg0	_
+2	روزها	N	ADVRB	4	_	_	ArgM-TMP	_	_
+3	روزه	N	NVE	4	_	_	_	_	_
+4	می‌گرفت	V	VCONJ	9	Y	روزه‌گرفتن.163	_	_	_
+6	شبها	N	ADVRB	9	_	_	_	ArgM-TMP	_
+8	عبادت	N	VPP	9	
+9	می‌پرداخت	V	VCONJ	20	Y	پرداختن.72	_	_	_
+12	بنی‌اسراییل	N	ADVRB	20	
+14	کس	N	SBJ	20	_	_	_	_	Arg1
+15	ازنظر	PREP	ADVRB	20	_	_	_	_	ArgM-ADV
+16	ایمان	N	POSDEP	15	_	_	_	_	_
+18	پای	N	VPP	20	
+20	نمی‌رسید	V	ROOT	0	Y	رسیدن.90	_	_	_
+
+2	وقت	N	ADVRB	15	_	_	_	ArgM-TMP	_
+3	زکریا	N	SBJ	7	_	_	Arg0	Arg0	_
+5	دیدار	N	VPP	7	
+7	می‌رفت	V	NCL	2	Y	رفتن.17	_	_	_
+8	غذاهای	N	OBJ	15	_	_	_	Arg1	_
+9	مخصوصی	ADJ	NPOSTMOD	8	_	_	_	_	_
+12	محراب	N	MOZ	11	_	_	_	_	_
+14	مشاهده	N	NVE	15	_	_	_	_	_
+15	می‌کرد	V	ROOT	0	Y	مشاهده‌کردن.231	_	_	_
+17	باعث	ADJ	MOS	20	_	_	_	_	Arg2
+18	شگفتی	N	NEZ	17	_	_	_	_	_
+19	ش	PR	MOZ	18	_	_	_	_	_
+20	می‌شد	V	PRD	16	Y	کردن.25	_	_	_
+
+1	سالها	N	SBJ	2	_	_	Arg1	_	_
+2	بود	V	ROOT	0	Y	بودن.15	_	_	_
+4	حضرت	N	SBJ	11	_	_	_	Arg1	_
+5	زکریا	N	MOZ	4	_	_	_	_	_
+7	همسر	N	NCONJ	5	
+8	ش	PR	MOZ	7	_	_	_	_	_
+9	اشیاع	N	APP	7	_	_	_	_	_
+10	عقیم	ADJ	MOS	11	_	_	_	Arg2	_
+11	بودند	V	VCONJ	19	Y	بودن.15	_	_	_
+13	اکنون	ADV	ADVRB	19	_	_	_	_	ArgM-TMP
+15	دوران	N	VPP	19	
+16	پیری	N	MOZ	15	_	_	_	_	_
+18	سر	N	VPRT	19	
+19	می‌بردند	V	PRD	3	Y	به‌سر‌بردن.833	_	_	_
+
+1	زکریا	N	SBJ	7	_	_	Arg0	Arg0
+2	بارها	ADV	ADVRB	7	_	_	ArgM-TMP	_
+4	خداوند	N	NPP	5	
+5	طلب	N	NVE	7	_	_	_	_
+6	فرزند	N	OBJ	7	_	_	Arg1	_
+7	کرده‌بود	V	ROOT	0	Y	طلبیدن.729	_	_
+9	بعداز	PREP	ADVRB	12	_	_	_	ArgM-TMP
+11	وارثی	N	OBJ	12	_	_	_	Arg1
+12	داشته‌باشد	V	VCL	7	Y	داشتن.39	_	_
+
+1	او	PR	SBJ	6	_	_	Arg1	_	_	_
+2	روزی	N	ADVRB	6	_	_	ArgM-TMP	_	_	_
+4	مریم	N	POSDEP	3	_	_	_	_	_	_
+5	وارد	ADJ	MOS	6	_	_	Arg2	_	_	_
+6	شد	V	ROOT	0	Y	کردن.25	_	_	_	_
+8	حالی	N	ADVRB	6	
+10	مریم	N	SBJ	14	_	_	_	Arg1	Arg0	_
+13	عبادت	N	MOZ	12	_	_	_	_	_	_
+14	بود	V	VCONJ	17	Y	بودن.15	_	_	_	_
+16	مشاهده	N	NVE	17	_	_	_	_	_	_
+17	کرد	V	PRD	9	Y	مشاهده‌کردن.231	_	_	_	_
+18	که	SUBR	VCL	17	_	_	_	_	Arg1	_
+19	میوه‌های	N	SBJ	26	_	_	_	_	_	Arg0
+20	تابستانی	ADJ	NPOSTMOD	19	_	_	_	_	_	_
+22	فصل	N	ADVRB	26	
+23	زمستان	N	MOZ	22	_	_	_	_	_	_
+24	برای	PREP	VPP	26	_	_	_	_	_	Arg4
+25	ش	PR	POSDEP	24	_	_	_	_	_	_
+26	آمده‌است	V	PRD	18	Y	آمدن.44	_	_	_	_
+
+1	لذا	SUBR	ROOT	0	_	_	_	_	_	_
+4	نتیجه	N	VPP	5	
+5	رسید	V	PRD	1	Y	رسیدن.90	_	_	_	_
+7	او	PR	SBJ	9	_	_	_	Arg1	_	_
+9	می‌تواند	V_MODL	PRD	6	_	_	_	_	_	_
+11	پیری	N	ADVRB	13	
+12	بچه‌دار	ADJ	MOS	13	_	_	_	Arg2	_	_
+13	شود	V	VCL	9	Y	کردن.25	_	_	_	_
+15	دست	N	SBJ	19	_	_	_	_	Arg1	_
+17	آسمان	N	ADVRB	18	
+18	بلند	ADJ	MOS	19	_	_	_	_	Arg2	_
+19	کرد	V	VCONJ	28	Y	کردن.25	_	_	_	_
+25	خدا	N	NPP	26	
+26	درخواست	N	NVE	28	_	_	_	_	_	_
+27	فرزند	N	MOZ	26	_	_	_	_	_	Arg1
+28	نمود	V	PRD	14	Y	درخواست‌کردن.63	_	_	_	_
+
+1	او	PR	SBJ	9	_	_	Arg1
+3	شنیدن	N	ADVRB	9	
+5	خبر	N	MOZ	3	_	_	_
+7	شادی	N	AJPP	8	
+8	بی‌هوش	ADJ	MOS	9	_	_	Arg2
+9	شد	V	ROOT	0	Y	کردن.25	_
+
+1	او	PR	SBJ	3	_	_	Arg0	Arg1	Arg0	_	_	_	_
+2	باور	N	NVE	3	_	_	_	_	_	_	_	_	_
+3	نمی‌کرد	V	ROOT	0	Y	باور‌کردن.599	_	_	_	_	_	_	_
+7	سن	N	ADVRB	9	
+8	بچه‌دار	ADJ	MOS	9	_	_	_	Arg2	_	_	_	_	_
+9	شود	V	VCONJ	15	Y	کردن.25	_	_	_	_	_	_	_
+12	خدا	N	NPP	13	
+13	تقاضای	N	NVE	15	_	_	_	_	_	_	_	_	_
+14	نشانه	N	MOZ	13	_	_	_	_	Arg1	_	_	_	_
+15	کرد	V	VCONJ	21	Y	تقاضا‌کردن.448	_	_	_	_	_	_	_
+17	خداوند	N	SBJ	21	_	_	_	_	_	Arg0	_	_	_
+20	وحی	N	NVE	21	_	_	_	_	_	_	_	_	_
+21	کرد	V	PRD	4	Y	وحی‌کردن.218	_	_	_	_	_	_	_
+22	که	SUBR	VCL	21	_	_	_	_	_	Arg1	_	_	_
+23	نشانه	N	SBJ	28	_	_	_	_	_	_	Arg1	_	_
+24	بچه‌دار	ADJ	NE	25	_	_	_	_	_	_	_	_	_
+27	این	PR	MOS	28	_	_	_	_	_	_	Arg2	_	_
+28	است	V	PRD	22	Y	بودن.15	_	_	_	_	_	_	_
+33	زبان	N	SBJ	37	_	_	_	_	_	_	_	Arg1	_
+36	کار	N	VPP	37	
+37	خواهدافتاد	V	VCONJ	46	Y	از‌کار‌افتادن.835	_	_	_	_	_	_	_
+39	تو	PR	SBJ	46	_	_	_	_	_	_	_	_	Arg0
+40	برای	PREP	VPP	46	_	_	_	_	_	_	_	_	ArgM-CAU
+42	نعمت	N	POSDEP	40	_	_	_	_	_	_	_	_	_
+43	خدا	N	OBJ	46	
+45	شکر	N	MOS	46	_	_	_	_	_	_	_	_	Arg2
+46	کن	V	PRD	29	Y	کردن.25	_	_	_	_	_	_	_
+
+1	او	PR	SBJ	5	_	_	Arg0	_	_	_
+2	بعداز	PREP	ADVRB	5	_	_	ArgM-TMP	_	_	_
+4	متوجه	ADJ	MOS	5	_	_	Arg2	_	_	_
+5	شد	V	ROOT	0	Y	کردن.25	_	_	_	_
+6	که	SUBR	VCL	5	_	_	Arg1	_	_	_
+7	زبان	N	SBJ	11	_	_	_	Arg1	Arg1	_
+8	ش	PR	MOZ	7	_	_	_	_	_	_
+10	کار	N	VPP	11	
+11	افتاده	V	VCONJ	18	Y	از‌کار‌افتادن.835	_	_	_	_
+13	فقط	ADV	ADVRB	18	_	_	_	_	ArgM-ADV	_
+16	عبادت	N	MOZ	15	_	_	_	_	_	_
+17	باز	ADJ	MOS	18	_	_	_	_	Arg2	_
+18	می‌شود	V	PRD	6	Y	کردن.25	_	_	_	_
+19	او	PR	SBJ	34	_	_	_	_	_	Arg0
+25	اشاره	N	ADVRB	34	
+26	لبها	N	MOZ	25	_	_	_	_	_	_
+28	تکان	N	NCONJ	26	
+30	سر	N	MOZ	29	_	_	_	_	_	_
+33	سخن	N	NVE	34	_	_	_	_	_	_
+34	گفت	V	VCL	18	Y	سخن‌گفتن.125	_	_	_	_
+
+3	مریم	N	SBJ	10	_	_	Arg1	_	_	_
+5	اذن	N	ADVRB	10	
+6	خدا	N	MOZ	5	_	_	_	_	_	_
+7	بدون	PREP	ADVRB	10	_	_	ArgM-MNR	_	_	_
+8	شوهر	N	POSDEP	7	_	_	_	_	_	_
+9	حامله	ADJ	MOS	10	_	_	Arg2	_	_	_
+10	شد	V	PRD	2	Y	کردن.25	_	_	_	_
+11	شیطان	N	SBJ	15	_	_	_	Arg0	Arg0	_
+14	بنی‌اسراییل	N	MOZ	13	_	_	_	_	_	_
+15	رفت	V	VCONJ	20	Y	رفتن.17	_	_	_	_
+19	القا	N	NVE	20	_	_	_	_	_	_
+20	کرد	V	ROOT	0	Y	القا‌کردن.836	_	_	_	_
+21	که	SUBR	VCL	20	_	_	_	_	Arg1	_
+22	حامله	ADJ	PREDEP	23	_	_	_	_	_	_
+23	شدن	N	SBJ	27	_	_	_	_	_	Arg1
+25	کار	N	MOS	27	_	_	_	_	_	Arg2
+26	زکریا	N	MOZ	25	_	_	_	_	_	_
+27	بوده‌است	V	PRD	21	Y	بودن.15	_	_	_	_
+
+1	مردم	N	SBJ	4	_	_	Arg0	Arg0	_	_
+4	شوریدند	V	VCONJ	10	Y	شوریدن.837	_	_	_	_
+6	قصد	N	NVE	10	_	_	_	_	_	_
+7	کشتن	N	OBJ	10	
+10	داشتند	V	ROOT	0	Y	قصد‌داشتن.515	_	_	_	_
+12	زکریا	N	SBJ	14	_	_	_	_	Arg0	Arg0
+13	فرار	N	NVE	14	_	_	_	_	_	_
+14	کرده	V	VCONJ	18	Y	فرار‌کردن.838	_	_	_	_
+17	بیابان	N	VPP	18	
+18	رفت	V	PRD	11	Y	رفتن.17	_	_	_	_
+
+1	درختی	N	SBJ	6	_	_	Arg0	_	_
+5	حضور	N	VPP	6	
+6	طلبید	V	VCONJ	12	Y	طلبیدن.283	_	_	_
+8	زکریا	N	SBJ	12	_	_	_	Arg1	_
+9	وارد	PREP	MOS	12	_	_	_	Arg2	_
+10	شکاف	N	POSDEP	9	_	_	_	_	_
+11	درخت	N	MOZ	10	_	_	_	_	_
+12	شد	V	VCONJ	18	Y	کردن.25	_	_	_
+14	درخت	N	SBJ	18	_	_	_	_	Arg0
+15	شکاف	N	OBJ	18	
+18	فروبست	V	ROOT	0	Y	فرو‌بستن.839	_	_	_
+
+2	شیطان	N	SBJ	11	_	_	Arg0	_	Arg0	_	_	_	_
+3	گوشه‌ای	N	OBJ	11	
+5	لباس	N	NPP	3	
+6	ش	PR	MOZ	5	_	_	_	_	_	_	_	_	_
+9	درخت	N	ADVRB	11	
+10	بیرون	N	ADVC	11	_	_	Arg3	_	_	_	_	_	_
+11	گذاشت	V	VCONJ	22	Y	گذاشتن.225	_	_	_	_	_	_	_
+14	گروهی	N	VPP	22	
+19	جستجوی	N	MOS	21	
+21	بودند	V	PRD	17	Y	بودن.15	_	_	_	_	_	_	_
+22	گفت	V	ROOT	0	Y	گفتن.35	_	_	_	_	_	_	_
+23	که	SUBR	VCL	22	_	_	_	_	Arg1	_	_	_	_
+24	زکریا	N	SBJ	26	_	_	_	_	_	Arg0	Arg1	_	_
+25	جادو	N	NVE	26	_	_	_	_	_	_	_	_	_
+26	کرده	V	VCONJ	31	Y	جادو‌کردن.840	_	_	_	_	_	_	_
+28	داخل	PREP	AJPP	30	_	_	_	_	_	_	_	_	_
+29	درختی	N	POSDEP	28	_	_	_	_	_	_	_	_	_
+30	پنهان	ADJ	MOS	31	_	_	_	_	_	_	Arg2	_	_
+31	شده‌است	V	VCONJ	41	Y	کردن.25	_	_	_	_	_	_	_
+33	نشانه	N	SBJ	41	_	_	_	_	_	_	_	Arg1	_
+35	نیز	ADV	ADVRB	41	_	_	_	_	_	_	_	ArgM-ADV	_
+37	قسمت	N	MOS	41	_	_	_	_	_	_	_	Arg2	Arg0
+39	لباس	N	NPP	37	
+40	ش	PR	MOZ	39	_	_	_	_	_	_	_	_	_
+41	است	V	PRD	23	Y	بودن.15	_	_	_	_	_	_	_
+44	درخت	N	VPP	46	
+45	بیرون‌	ADJ	NPOSTMOD	44	_	_	_	_	_	_	_	_	_
+46	آمده‌است	V	PRD	42	Y	آمدن.44	_	_	_	_	_	_	_
+
+3	دستور	N	ADVRB	8	
+4	شیطان	N	MOZ	3	_	_	_	_	_
+5	مردم	N	SBJ	8	_	_	Arg0	Arg0	Arg0
+6	اره‌ای	N	OBJ	8	
+8	آورده	V	VCONJ	18	Y	آوردن.452	_	_	_
+10	درخت	N	OBJ	18	
+13	همراه	N	ADVRB	18	
+14	زکریا	N	MOZ	13	_	_	_	_	_
+17	نیم	N	MOS	18	
+18	کرده	V	VCONJ	24	Y	کردن.25	_	_	_
+23	شهادت	N	VPRT	24	
+24	رساندند	V	PRD	1	Y	به‌شهادت‌رساندن.841	_	_	_
+

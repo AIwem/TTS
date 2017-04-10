@@ -32,7 +32,12 @@ public class UI {
 //	private String inputSRLDataSetFilePath = "inputStory/story4DataSetToformat.txt";
 //	private String inputDataSetFilePath = "inputStory/srl-stories.conll";
 	private String inputDataSetFilePath = "inputStory/sampleManualInputDataSetToformat.arff";
+	private String persianStopWordFilePath = "inputStory/persianStopWrods.txt";
+	//sentences with no semantic tags were deleted.
 	private String rawDataSetFilePath = "inputStory/cleanedSRLDataSet.arff";
+	//all sentences from CSRI
+//	private String rawDataSetFilePath = "inputStory/cleanedSRLDataSet - Copy.arff";
+	private String cleanedWrongSemanticDataSetFilePath = "output/cleanedWrongSemSRLDataSet.arff";
 	private String inputDataSetHeaderFilePath = "inputStory/dataSetHeader.txt";
 //	private String mainKbFilePath = "kb/farsnet--24.txt";
 	private String mainKbFilePath = "kb/farsnet.txt";
@@ -42,6 +47,8 @@ public class UI {
 	private String verbSemanticCapacitiesPath = "kb/verbSemanticCapacities.txt";
 	private String verbVisualCapacitiesPath = "kb/verbVisualCapacities.txt";
 	private TTSEngine tts;
+	
+	
 	
 	public UI(){		
 		//tts = new TTSEngine(mainKbFilePath, myKbFilePath);
@@ -145,14 +152,73 @@ public class UI {
 		}
 		 	
 	}
-			
-	public void removeJunkWords(){
-		
+	/**
+	 * checks semantic tags of sentence to be correct.
+	 * some sentences incorrectly have semantic tags in verbs instead of nouns depended to verbs.
+	 * sample of incorrect: 
+	 * 19	آمد	V	ROOT	0	Y	به‌دنیا‌آمدن.36	_	Arg1	
+	 * 25	نمودند	V	ROOT	0	Y	دفن‌کردن.67	_	_	_	Arg0	 
+	 */
+	public void checkSemanticTags(){
 		try {
-			
-			PrintWriter writer = new PrintWriter("output\\cleanedSRLDataSet.arff", "UTF-8");
+			PrintWriter writer = new PrintWriter("output\\cleanedWrongSemSRLDataSet.arff", "UTF-8");
+		
+			PrintWriter wrongSemWriter = new PrintWriter("output\\wrongSems.arff", "UTF-8");
 		
 			ArrayList<ArrayList<String>> inputs = importInputDataSetInfo(rawDataSetFilePath);
+			
+			//each oneSentence is an ArrayList containing the whole elements of one sentence.
+			for(ArrayList<String> oneSentence:inputs){
+				
+				if(oneSentence == null)
+					MyError.exit("bad input lines!");			
+				
+				String[] sentenceElem = new String[oneSentence.size()];
+				
+				for(int i = 0; i < sentenceElem.length; i++)				 
+					sentenceElem[i] = oneSentence.get(i);
+				
+				SentenceModel sentence = new SentenceModel("", sentenceElem, false);
+											
+				if(sentence.hasWrongSemanticTags(wrongSemWriter))				
+					continue;//this sentence semantic tags are incorrect so ignore it!					
+								
+				String toWrite = "";
+				ArrayList<String> wrdRecs = sentence.getManualDataSetStr();
+				if(!Common.isEmpty(wrdRecs))
+					for(String rec:wrdRecs)
+						writer.println(rec);
+			
+				//sign of new sentence
+				writer.println();						
+			}
+			writer.close();			
+			wrongSemWriter.close();
+	
+
+		} catch (FileNotFoundException | UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+	}
+			
+	/**
+	 * removes junk words from dataSet and transfer their
+	 * _syntaxTag, _srcOfSynTag_number, _simpleSemanticTag, and _dataSetRecord 
+	 * from junk words to the word that is depended to this junk word. 
+	 */
+	public void removeJunkWords(){
+		
+		try {			
+			PrintWriter writer = new PrintWriter("output\\cleanedJunkSRLDataSet.arff", "UTF-8");
+			PrintWriter junksWriter = new PrintWriter("output\\junks.arff", "UTF-8");
+			PrintWriter junkDepsWriter = new PrintWriter("output\\junkDeps.arff", "UTF-8");
+			PrintWriter stopWordWriter = new PrintWriter("output\\deletedStopWords.arff", "UTF-8");			
+			
+			ArrayList<String> stopWords = importInputTexts(persianStopWordFilePath);
+			
+			//output\\cleanedWrongSemSRLDataSet.arff writed by method:checkSemanticTags();
+			ArrayList<ArrayList<String>> inputs = importInputDataSetInfo(cleanedWrongSemanticDataSetFilePath);
 			
 			//each oneSentence is an ArrayList containing the whole elements of one sentence.
 			for(ArrayList<String> oneSentence:inputs){
@@ -166,11 +232,11 @@ public class UI {
 					sentenceElem[i] = oneSentence.get(i);
 				
 				SentenceModel sentence = new SentenceModel("", sentenceElem, false);
-				
+			
 				print(">>>>>>>>>>>>>>> before edit junk");
 				print(sentence.getOrdinalDetailedStr());
 				
-				sentence.editJunkWords();	
+				sentence.editJunkWords(stopWords, stopWordWriter, junksWriter, junkDepsWriter);	
 				
 				print(">>>>>>>>>>>>>>> after edit junk");
 				print(sentence.getOrdinalDetailedStr() + "\n\n");
@@ -183,17 +249,17 @@ public class UI {
 				
 				//sign of new sentence
 				writer.println();						
-			}																			
-						
+			}																		
+			
 			writer.close();
+			junksWriter.close();
+			stopWordWriter.close();
 			
 		} 
 		catch (FileNotFoundException | UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-
-				
+		}				
 	}
 
 		
@@ -758,7 +824,9 @@ public class UI {
 		UI ui = new UI();
 
 //		ui.clearSRLDataset();
-			
+		
+		ui.checkSemanticTags();
+		
 		ui.removeJunkWords();		
 		
 //		ui.reformatDataset();

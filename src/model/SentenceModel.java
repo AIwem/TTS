@@ -5,6 +5,7 @@ import ir.ac.itrc.qqa.semantic.kb.Node;
 import ir.ac.itrc.qqa.semantic.util.Common;
 import ir.ac.itrc.qqa.semantic.util.MyError;
 
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class SentenceModel {
@@ -1118,50 +1119,130 @@ public class SentenceModel {
 		print(""+ verb_ph);		
 			
 	}
+	
 	/**
-	 * transfers _syntaxTag, _srcOfSynTag_number, and _simpleSemanticTag 
+	 * checks semantic tags of sentence to be correct.
+	 * some sentences incorrectly have semantic tags in verbs instead of nouns depended to verbs.
+	 * sample of incorrect: 
+	 * 19	آمد	V	ROOT	0	Y	به‌دنیا‌آمدن.36	_	Arg1	
+	 * 25	نمودند	V	ROOT	0	Y	دفن‌کردن.67	_	_	_	Arg0
+	 * */
+	public boolean hasWrongSemanticTags(PrintWriter wrongSemWriter) {
+
+		if(Common.isEmpty(_words))
+			return true;
+		
+		for(Word wrd:_words)
+			if(wrd._gPOS == POS.V && wrd._dataSetRecord != null && wrd._dataSetRecord.toLowerCase().contains("arg")){
+				wrongSemWriter.println(wrd._dataSetRecord);
+				return true;
+			}
+		return false;
+	}
+		
+	/**
+	 * transfers _syntaxTag, _srcOfSynTag_number, _simpleSemanticTag, and _dataSetRecord 
 	 * from junk words to the word that is depended to this junk word.
 	 * example: from "از" in "از میان آنها" to "میان".  
 	 * 7	از	PREP	ADVRB	17	_	_	_	ArgM-ADV
 	 * 8	میان	N	POSDEP	7	_	_	_	_
+	 * @param stopWords 
+	 * @param junksWriter 
+	 * @param junkDepsWriter 
 	 */
-	public void editJunkWords(){
+	public void editJunkWords(ArrayList<String> stopWords, PrintWriter stopWordtWriter, PrintWriter junksWriter, PrintWriter junkDepsWriter){
+		
 		if(Common.isEmpty(_words))
 			return;
 		
+		ArrayList<Word> toBeRemoved = new ArrayList<Word>();
+		
 		for(Word wrd:_words){
+			
 			if(wrd.isJunk()){
 				
-				print("\n junk:" + wrd + "\n");
-				
+				toBeRemoved.add(wrd);
+				junksWriter.println(wrd._dataSetRecord);
+								
 				DependencyRelationType junkSyn_tag = wrd._syntaxTag;
 				int junkSrcNum = wrd._srcOfSynTag_number;
-				SimpleSemanticTag junkSimSem_tag = wrd._simpleSemanticTag;
+				SimpleSemanticTag junkSimpleSem_tag = wrd._simpleSemanticTag;
 				String junkDataSetRcrd = wrd._dataSetRecord;
 				
 				ArrayList<Word> dependedWrds = getWordsWithSourceNumber(wrd._number);
 				
 				if(!Common.isEmpty(dependedWrds)){
+
 					for(Word dep:dependedWrds){
 						
 						if(dep._dataSetRecord != null){
 							
-							int depStartIndex = dep._dataSetRecord.indexOf("" + dep._srcOfSynTag_number);
-							int junkStartIndex = junkDataSetRcrd.indexOf("" + junkSrcNum);
+							String newDataSetRecord = dep._number + "\t" + dep._wordName + "\t" + dep._gPOS + "\t" + junkSyn_tag + "\t";
 							
-							if(depStartIndex != -1 && junkStartIndex != -1){
-							
-								String newDataSetRecord = dep._dataSetRecord.substring(0, depStartIndex) + junkDataSetRcrd.substring(junkStartIndex,junkDataSetRcrd.length());
-								dep._dataSetRecord = newDataSetRecord;			
+							if(dep._gPOS == POS.V){//5	داشت	V	PREDEP	6	Y	داشتن.39	_	_
+								
+								int depStartIndex = dep._dataSetRecord.indexOf("" + dep._srcOfSynTag_number);
+								
+								if(depStartIndex != -1){
+								
+									int Yindex = dep._dataSetRecord.indexOf("Y", depStartIndex);
+									if(Yindex != -1){
+										newDataSetRecord += junkSrcNum + "\t";
+										newDataSetRecord += dep._dataSetRecord.substring(Yindex, dep._dataSetRecord.length());
+									}
+								}
+								dep._dataSetRecord = newDataSetRecord;
+								dep._syntaxTag = junkSyn_tag;
+								dep._srcOfSynTag_number = junkSrcNum;
+//								dep._simpleSemanticTag = junkSimpleSem_tag;
+								continue;
 							}
+							
+							newDataSetRecord += junkSrcNum + "\t";
+							
+							junkDepsWriter.println(dep._dataSetRecord + "\t\t\t" + wrd);
+							
+							//27	او	PR	PREDEP	28	_	_	_	_	_	_	_	_	Arg0
+							if(dep._dataSetRecord.toLowerCase().contains("arg")){
+								
+								
+								
+								int junkStartIndex = junkDataSetRcrd.indexOf("" + junkSrcNum);
+								
+								if(junkStartIndex != -1)
+									newDataSetRecord += junkDataSetRcrd.substring(junkStartIndex,junkDataSetRcrd.length());
+							}
+							dep._dataSetRecord = newDataSetRecord;
 						}
+						else
+							MyError.exit("word " + dep + " dataSetRecord must not be null !!!");
+						
 						dep._syntaxTag = junkSyn_tag;
 						dep._srcOfSynTag_number = junkSrcNum;
-						dep._simpleSemanticTag = junkSimSem_tag;
+						dep._simpleSemanticTag = junkSimpleSem_tag;
 					}
-				}
+				}				
 			}
+			else if(stopWords.contains(wrd._wordName))
+				if(wrd._gPOS != POS.V)
+					if(wrd._dataSetRecord != null){
+						if(!wrd._dataSetRecord.toLowerCase().contains("arg")){
+							toBeRemoved.add(wrd);
+							stopWordtWriter.println(wrd._dataSetRecord);						
+						}
+					}
+					else
+						MyError.exit("word " + wrd + " dataSetRecord must not be null !!!");					
+					
+			
 		}
+		for(Word jk:toBeRemoved)
+			_words.remove(jk);
+		
+		stopWordtWriter.println();
+		junksWriter.println();
+		junkDepsWriter.println();	
+			
 	}
 	
 	public void make_nested_sentences(){
@@ -1268,7 +1349,7 @@ public class SentenceModel {
 		if(_words == null)
 			return dataSetRecord;
 	
-		for(Word wrd:_words)			
+		for(Word wrd:_words)
 			dataSetRecord.add(wrd.getStr4ManualDataSet());
 		
 		return dataSetRecord;		
@@ -1302,7 +1383,7 @@ public class SentenceModel {
 	
 		for(Word w:_words)
 			dataSetRecord += w.getFullStr();
-		
+					
 		return dataSetRecord;
 	}
 	
@@ -1321,6 +1402,8 @@ public class SentenceModel {
 	private void print(String s){
 		System.out.println(s);
 	}
+
+	
 
 	
 

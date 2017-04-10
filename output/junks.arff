@@ -1,0 +1,3384 @@
+3	11	NUM	NPREMOD	4	_	_	_	_
+6	و	CONJ	VCONJ	17	_	_	_	_
+7	از	PREP	ADVRB	17	_	_	_	ArgM-ADV
+14	و	CONJ	AJCONJ	13	_	_	_	_
+18	.	PUNC	PUNC	17	_	_	_	_
+
+2	از	PREP	AJPP	7	_	_	_
+9	.	PUNC	PUNC	8	_	_	_
+
+3	110	NUM	NPREMOD	4	_	_	_
+7	.	PUNC	PUNC	6	_	_	_
+
+2	9	NUM	NPREMOD	3	_	_	_	_
+7	یک	NUM	NPREMOD	8	_	_	_	_
+9	،	PUNC	PUNC	8	_	_	_	_
+12	.	PUNC	PUNC	5	_	_	_	_
+
+5	و	CONJ	VCONJ	6	_	_	_	_	_	_
+7	در	PREP	ADVRB	10	_	_	_	_	ArgM-LOC	_
+12	11	NUM	NPREMOD	13	_	_	_	_	_	_
+14	و	CONJ	NCONJ	13	_	_	_	_	_	_
+16	و	CONJ	NCONJ	15	_	_	_	_	_	_
+22	.	PUNC	PUNC	6	_	_	_	_	_	_
+
+6	را	POSTP	OBJ	7	_	_	Arg1	_	_
+8	از	PREP	VPP	10	_	_	_	Arg3	_
+11	تا	SUBR	VCL	10	_	_	_	Arg1	_
+14	را	POSTP	OBJ	19	_	_	_	_	Arg1
+
+7	در	PREP	ADVRB	11	_	_	_	ArgM-TMP	_
+16	را	POSTP	OBJ	18	_	_	_	_	Arg3
+
+1	و	CONJ	VCONJ	7	_	_	_	_
+4	را	POSTP	OBJ	7	_	_	Arg1	_
+5	به	PREP	VPP	7	_	_	Arg3	_
+8	و	CONJ	VCONJ	14	_	_	_	_
+11	را	POSTP	OBJ	14	_	_	_	Arg1
+12	به	PREP	VPP	14	_	_	_	Arg3
+15	.	PUNC	PUNC	14	_	_	_	_
+
+5	و	CONJ	NCONJ	2	_	_	_	_
+13	و	CONJ	NCONJ	12	_	_	_	_
+16	در	PREP	NPP	19	_	_	_	ArgM-LOC
+
+1	و	CONJ	VCONJ	2	_	_	_	_
+7	،	PUNC	PUNC	6	_	_	_	_
+
+4	را	POSTP	OBJ	5	_	_	Arg1
+6	.	PUNC	PUNC	5	_	_	_
+
+1	در	PREP	ADVRB	7	_	_	ArgM-TMP	_	_	_
+8	و	CONJ	VCONJ	11	_	_	_	_	_	_
+9	از	PREP	VPP	11	_	_	_	Arg3	_	_
+12	تا	SUBR	VCL	11	_	_	_	Arg1	_	_
+14	را	POSTP	OBJ	19	_	_	_	_	Arg1	_
+17	به	PREP	VPP	19	_	_	_	_	Arg4	_
+20	ولی	CONJ	VCONJ	26	_	_	_	_	_	_
+22	به	PREP	NPP	24	_	_	_	_	_	Arg3
+27	.	PUNC	PUNC	26	_	_	_	_	_	_
+
+7	،	PUNC	PUNC	6	_	_	_	_	_	_	_	_	_
+9	را	POSTP	OBJ	14	_	_	_	Arg1	_	_	_	_	_
+10	از	PREP	VPP	14	_	_	_	Arg3	_	_	_	_	_
+15	،	PUNC	PUNC	14	_	_	_	_	_	_	_	_	_
+16	به	PREP	VPP	18	_	_	_	_	Arg3	_	_	_	_
+22	به	PREP	NPP	24	_	_	_	_	_	Arg3	_	_	_
+26	تا	SUBR	AJUCL	25	_	_	_	_	_	ArgM-CAU2	_	_	_
+28	را	POSTP	OBJ	31	_	_	_	_	_	_	Arg1	_	_
+29	به	PREP	VPP	31	_	_	_	_	_	_	Arg4	_	_
+32	تا	SUBR	AJUCL	31	_	_	_	_	_	_	ArgM-CAU	_	_
+33	در	PREP	ADVRB	36	_	_	_	_	_	_	_	ArgM-LOC	_
+37	و	CONJ	VCONJ	40	_	_	_	_	_	_	_	_	_
+38	به	PREP	VPP	40	_	_	_	_	_	_	_	_	Arg3
+41	؟	PUNC	PUNC	18	_	_	_	_	_	_	_	_	_
+
+4	را	POSTP	OBJ	5	_	_	Arg1	_
+7	از	PREP	MOS	9	_	_	_	Arg2
+10	.	PUNC	PUNC	9	_	_	_	_
+
+4	از	PREP	NPP	6	_	_	Arg3	_	_	_
+12	و	CONJ	VCONJ	16	_	_	_	_	_	_
+17	و	CONJ	VCONJ	20	_	_	_	_	_	_
+18	به	PREP	VPP	20	_	_	_	_	_	Arg3
+21	.	PUNC	PUNC	20	_	_	_	_	_	_
+
+8	،	PUNC	PUNC	5	_	_	_
+
+2	در	PREP	ADVRB	8	_	_	ArgM-LOC
+5	به	PREP	NPP	7	_	_	Arg3
+9	،	PUNC	PUNC	8	_	_	_
+
+4	را	POSTP	OBJ	14	_	_	Arg1	Arg1	_	_
+6	به	PREP	AJPP	9	_	_	_	_	_	_
+11	،	PUNC	PUNC	10	_	_	_	_	_	_
+15	و	CONJ	VCONJ	16	_	_	_	_	_	_
+20	را	POSTP	OBJ	23	_	_	_	_	_	Arg1
+24	.	PUNC	PUNC	16	_	_	_	_	_	_
+
+2	[	PUNC	PUNC	4	_	_	_	_	_	_
+3	سه	NUM	NPREMOD	4	_	_	_	_	_	_
+5	و	CONJ	NCONJ	4	_	_	_	_	_	_
+6	سه	NUM	NPREMOD	7	_	_	_	_	_	_
+8	]	PUNC	PUNC	4	_	_	_	_	_	_
+12	تا	PREP	ADVRB	11	_	_	_	_	_	_
+17	از	PREP	VPP	21	_	_	_	Arg3	_	_
+19	به	PREP	VPP	21	_	_	_	Arg4	_	_
+25	و	CONJ	NCONJ	23	_	_	_	_	_	_
+27	از	PREP	NPP	26	_	_	_	_	_	_
+29	،	PUNC	PUNC	28	_	_	_	_	_	_
+35	در	PREP	MOS	37	_	_	_	_	Arg2	_
+
+1	اما	CONJ	VCONJ	11	_	_	_	_
+5	،	PUNC	PUNC	4	_	_	_	_
+8	به	PREP	VPP	11	_	_	Arg3	_
+12	و	CONJ	VCONJ	14	_	_	_	_
+
+1	و	CONJ	VCONJ	9	_	_	_
+3	را	POSTP	OBJ	9	_	_	Arg1
+4	در	PREP	ADVRB	9	_	_	ArgM-LOC
+6	به	PREP	VPP	9	_	_	Arg2
+10	.	PUNC	PUNC	9	_	_	_
+
+4	را	POSTP	OBJ	5	_	_	Arg1	_
+10	.	PUNC	PUNC	9	_	_	_	_
+
+3	و	CONJ	NCONJ	1	_	_	_	_
+6	از	PREP	AJPP	10	_	_	_	_
+12	و	CONJ	VCONJ	20	_	_	_	_
+13	به	PREP	ADVRB	20	_	_	_	ArgM-CAU
+17	را	POSTP	OBJ	20	_	_	_	Arg1
+
+1	اما	CONJ	VCONJ	18	_	_	_	ArgM-ADV
+5	به	PREP	VPP	8	_	_	Arg3	_
+9	،	PUNC	PUNC	8	_	_	_	_
+13	،	PUNC	PUNC	12	_	_	_	_
+15	و	CONJ	AJCONJ	14	_	_	_	_
+
+1	و	CONJ	VCONJ	11	_	_	_	_	_	_
+2	در	PREP	ADVRB	11	_	_	ArgM-TMP	_	_	_
+6	را	POSTP	OBJ	11	_	_	Arg1	_	_	_
+7	در	PREP	ADVRB	11	_	_	Arg3	_	_	_
+12	و	CONJ	VCONJ	15	_	_	_	_	_	_
+13	به	PREP	VPP	15	_	_	_	Arg3	_	_
+20	را	POSTP	OBJ	24	_	_	_	_	_	Arg1
+25	.	PUNC	PUNC	15	_	_	_	_	_	_
+
+1	در	PREP	ADVRB	14	_	_	ArgM-TMP	_
+4	و	CONJ	ADVRB	14	
+5	در	PREP	ADVRB	14	
+8	آخر	NUM	NPOSTMOD	7	_	_	_	_
+9	،	PUNC	NPOSTMOD	7	
+13	را	POSTP	OBJ	14	_	_	Arg1	_
+
+1	و	CONJ	VCONJ	11	_	_	_	_
+2	در	PREP	ADVRB	11	_	_	ArgM-TMP	_
+5	،	PUNC	PUNC	4	_	_	_	_
+9	از	PREP	ADVRB	11	_	_	ArgM-LOC	_
+12	و	CONJ	VCONJ	18	_	_	_	_
+15	دو	NUM	NPOSTMOD	13	_	_	_	_
+16	را	POSTP	OBJ	18	_	_	_	Arg1
+19	.	PUNC	PUNC	18	_	_	_	_
+
+4	به	PREP	VPP	8	_	_	Arg3	_	_
+12	از	PREP	ADVRB	15	_	_	_	_	ArgM-MNR
+16	.	PUNC	PUNC	9	_	_	_	_	_
+
+1	در	PREP	ADVRB	9	_	_	ArgM-TMP	_	_
+6	به	PREP	NPP	5	_	_	Arg3	_	_
+10	و	CONJ	VCONJ	13	_	_	_	_	_
+11	به	PREP	VPP	13	_	_	_	Arg3	_
+17	و	CONJ	NCONJ	16	_	_	_	_	_
+19	از	PREP	MOS	23	_	_	_	_	Arg2
+24	.	PUNC	PUNC	13	_	_	_	_	_
+
+7	را	POSTP	OBJ	11	_	_	_	Arg1	_
+8	به	PREP	NPP	10	_	_	_	Arg3	_
+12	تا	SUBR	AJUCL	11	_	_	_	ArgM-CAU	_
+14	را	POSTP	OBJ	18	_	_	_	_	Arg1
+15	به	PREP	VPP	18	_	_	_	_	Arg3
+19	.	PUNC	PUNC	3	_	_	_	_	_
+
+10	و	CONJ	VCONJ	22	_	_	_	_
+14	و	CONJ	AJCONJ	13	_	_	_	_
+17	را	POSTP	OBJ	22	_	_	_	Arg1
+18	به	PREP	NPP	21	_	_	_	Arg3
+23	.	PUNC	PUNC	22	_	_	_	_
+
+2	به	PREP	NPP	5	_	_	Arg3	_
+7	تا	SUBR	VCL	6	_	_	Arg1	_
+8	از	PREP	NPP	10	_	_	_	Arg3
+
+3	،	PUNC	PUNC	2	_	_	_
+6	.	PUNC	PUNC	5	_	_	_
+
+2	به	PREP	VPP	10	_	_	Arg3	_
+6	از	PREP	POSDEP	5	_	_	_	_
+11	تا	SUBR	AJUCL	10	_	_	ArgM-CAU	_
+13	را	POSTP	OBJ	15	_	_	_	Arg1
+
+1	اما	CONJ	VCONJ	12	_	_	_	_
+3	با	PREP	ADVRB	12	_	_	ArgM-ADV	_
+6	و	CONJ	NCONJ	5	_	_	_	_
+8	و	CONJ	NCONJ	7	_	_	_	_
+13	و	CONJ	VCONJ	17	_	_	_	_
+16	را	POSTP	OBJ	17	_	_	_	Arg1
+
+1	و	CONJ	VCONJ	7	_	_	_
+
+1	و	CONJ	VCONJ	7	_	_	_
+5	را	POSTP	OBJ	7	_	_	Arg1
+8	.	PUNC	PUNC	7	_	_	_
+
+1	با	PREP	ADVRB	32	_	_	_	_	_
+5	در	PREP	ADVRB	9	_	_	ArgM-ADV	_	_
+10	اما	CONJ	VCONJ	32	_	_	_	_	_
+12	و	CONJ	NCONJ	11	_	_	_	_	_
+21	را	POSTP	OBJ	25	_	_	_	Arg1	_
+22	از	PREP	PREDEP	24	_	_	_	_	_
+30	را	POSTP	OBJ	32	_	_	_	_	Arg1
+33	.	PUNC	PUNC	32	_	_	_	_	_
+
+5	دو	NUM	SBJ	9	_	_	Arg0
+6	در	PREP	ADVRB	9	_	_	ArgM-LOC
+10	،	PUNC	PUNC	9	_	_	_
+
+10	از	PREP	AJPP	12	_	_	_	_	_
+14	و	CONJ	VCONJ	19	_	_	_	_	_
+16	به	PREP	VPRT	19	_	_	_	_	_
+20	.	PUNC	PUNC	6	_	_	_	_	_
+
+2	به	PREP	VPP	11	_	_	_	Arg3	_
+5	در	PREP	ADVRB	10	_	_	ArgM-TMP	_	_
+7	از	PREP	AJPP	9	_	_	_	_	_
+15	را	POSTP	OBJ	18	_	_	_	_	Arg3
+16	به	PREP	NPP	13	_	_	_	_	Arg4
+
+1	و	CONJ	VCONJ	10	_	_	_	_
+2	در	PREP	ADVRB	10	_	_	ArgM-TMP	_
+4	از	PREP	NPP	3	_	_	_	_
+13	را	POSTP	OBJ	15	_	_	_	Arg1
+
+1	در	PREP	ADVRB	18	_	_	_	ArgM-TMP	_	_	_
+7	را	EMPH	POSDEP	6	_	_	_	_	_	_	_
+8	در	PREP	ADVRB	12	_	_	ArgM-LOC	_	_	_	_
+15	را	POSTP	OBJ	18	_	_	_	Arg1	_	_	_
+16	به	PREP	VPRT	18	_	_	_	_	_	_	_
+19	و	CONJ	VCONJ	22	_	_	_	_	_	_	_
+20	به	PREP	VPP	22	_	_	_	_	Arg3	_	_
+25	را	POSTP	OBJ	27	_	_	_	_	_	Arg1	_
+32	را	POSTP	OBJ	34	_	_	_	_	_	_	Arg1
+35	.	PUNC	PUNC	22	_	_	_	_	_	_	_
+
+5	و	CONJ	VCONJ	13	_	_	_	_
+9	را	POSTP	OBJ	13	_	_	_	Arg1
+10	به	PREP	NPP	12	_	_	_	Arg3
+14	.	PUNC	PUNC	13	_	_	_	_
+
+2	در	PREP	VPP	4	_	_	Arg3	_	_	_
+5	و	CONJ	VCONJ	12	_	_	_	_	_	_
+6	به	PREP	NPP	11	_	_	_	Arg3	_	_
+8	و	CONJ	NCONJ	7	_	_	_	_	_	_
+13	و	CONJ	VCONJ	15	_	_	_	_	_	_
+18	را	POSTP	OBJ	22	_	_	_	_	_	Arg1
+19	به	PREP	NPP	21	_	_	_	_	_	Arg3
+23	،	PUNC	PUNC	15	_	_	_	_	_	_
+
+1	اما	CONJ	VCONJ	5	_	_	ArgM-DIS	_	_	_
+3	در	PREP	ADVRB	5	_	_	ArgM-LOC	_	_	_
+6	:	PUNC	PUNC	5	_	_	_	_	_	_
+8	از	PREP	NPP	10	_	_	_	Arg3	_	_
+12	تا	SUBR	AJUCL	11	_	_	_	ArgM-CAU	_	_
+14	را	POSTP	OBJ	22	_	_	_	_	_	Arg1
+15	از	PREP	AJPP	21	_	_	_	_	_	_
+18	به	PREP	VPP	20	_	_	_	_	Arg3	_
+23	.	PUNC	PUNC	5	_	_	_	_	_	_
+
+1	و	CONJ	VCONJ	4	_	_	_	_
+5	و	CONJ	VCONJ	10	_	_	_	_
+8	را	POSTP	OBJ	10	_	_	_	Arg1
+11	،	PUNC	PUNC	10	_	_	_	_
+
+8	و	CONJ	NCONJ	7	_	_	_	_
+10	در	PREP	NPP	7	_	_	_	_
+
+1	و	CONJ	VCONJ	8	_	_	_
+4	به	PREP	NPP	7	_	_	Arg3
+9	.	PUNC	PUNC	8	_	_	_
+
+3	به	PREP	NPP	6	_	_	Arg3	_	_
+10	تا	SUBR	VCL	9	_	_	_	Arg3	_
+12	را	POSTP	OBJ	17	_	_	_	_	Arg1
+13	با	PREP	ADVRB	17	_	_	_	_	ArgM-MNR
+18	.	PUNC	PUNC	9	_	_	_	_	_
+
+2	و	CONJ	NCONJ	1	_	_	_
+6	در	PREP	MOS	10	_	_	Arg2
+11	.	PUNC	PUNC	10	_	_	_
+
+4	از	PREP	VPP	7	_	_	Arg3	_	_
+9	به	PREP	VPP	11	_	_	_	Arg4	_
+12	و	CONJ	VCONJ	17	_	_	_	_	_
+15	را	POSTP	OBJ	17	_	_	_	_	Arg1
+18	.	PUNC	PUNC	7	_	_	_	_	_
+
+9	،	PUNC	PUNC	8	_	_	_
+
+3	در	PREP	NPP	6	_	_	Arg3	_	_
+8	،	PUNC	PUNC	7	_	_	_	_	_
+11	را	POSTP	OBJ	12	_	_	_	Arg1	_
+13	در	PREP	ADVRB	12	_	_	_	ArgM-CAU	_
+18	را	POSTP	OBJ	19	_	_	_	_	Arg1
+
+2	از	PREP	VPP	10	_	_	Arg3	_
+5	و	CONJ	VPP	10	
+6	از	PREP	VPP	10	
+15	.	PUNC	PUNC	10	_	_	_	_
+
+6	را	POSTP	OBJ	10	_	_	_	Arg1
+11	.	PUNC	PUNC	3	_	_	_	_
+
+6	به	PREP	VPP	8	_	_	Arg4	_	_
+9	و	CONJ	VCONJ	12	_	_	_	_	_
+13	و	CONJ	VCONJ	20	_	_	_	_	_
+16	را	POSTP	OBJ	20	_	_	_	_	Arg1
+17	به	PREP	NPP	19	_	_	_	_	Arg3
+21	.	PUNC	PUNC	20	_	_	_	_	_
+
+3	از	PREP	NPP	5	_	_	Arg3	_	_	_
+7	و	CONJ	VCONJ	18	_	_	_	_	_	_
+8	در	PREP	ADVRB	18	_	_	_	ArgM-LOC	_	_
+10	به	PREP	ADVRB	18	_	_	_	ArgM-MNR	_	_
+12	از	PREP	NPP	11	_	_	_	_	_	_
+15	با	PREP	VPP	18	_	_	_	Arg3	_	_
+19	و	CONJ	VCONJ	25	_	_	_	_	_	_
+21	را	POSTP	OBJ	25	_	_	_	_	Arg1	_
+22	به	PREP	NPP	24	_	_	_	_	Arg3	_
+26	و	CONJ	VCONJ	36	_	_	_	_	_	_
+29	و	CONJ	NCONJ	28	_	_	_	_	_	_
+32	را	POSTP	OBJ	36	_	_	_	_	_	Arg1
+37	.	PUNC	PUNC	36	_	_	_	_	_	_
+
+7	را	POSTP	OBJ	12	_	_	Arg1	_
+13	با	PREP	ADVRB	21	_	_	_	ArgM-MNR
+15	به	PREP	NPP	14	_	_	_	_
+19	را	POSTP	OBJ	21	_	_	_	Arg1
+22	.	PUNC	PUNC	21	_	_	_	_
+
+7	را	POSTP	OBJ	12	_	_	Arg1	_
+8	در	PREP	VPP	12	_	_	Arg3	_
+13	و	CONJ	VCONJ	20	_	_	_	_
+15	را	POSTP	OBJ	20	_	_	_	Arg1
+21	.	PUNC	PUNC	20	_	_	_	_
+
+8	به	PREP	AJPP	7	_	_	_	_
+12	را	POSTP	OBJ	15	_	_	_	Arg1
+13	در	PREP	VPP	15	_	_	_	ArgM-LOC
+16	،	PUNC	PUNC	15	_	_	_	_
+
+12	.	PUNC	PUNC	11	_	_	_
+
+2	به	PREP	NPP	5	_	_	Arg3	_
+12	.	PUNC	PUNC	6	_	_	_	_
+
+1	و	CONJ	VCONJ	4	_	_	_
+5	.	PUNC	PUNC	4	_	_	_
+
+2	به	PREP	VPP	5	_	_	Arg4	_	_	_	_
+6	و	CONJ	VCONJ	12	_	_	_	_	_	_	_
+10	و	CONJ	NCONJ	9	_	_	_	_	_	_	_
+13	تا	PREP	ADVRB	12	_	_	_	ArgM-TMP	_	_	_
+18	به	PREP	VPP	21	_	_	_	_	Arg3	_	_
+22	و	CONJ	VCONJ	24	_	_	_	_	_	_	_
+27	را	POSTP	OBJ	31	_	_	_	_	_	_	Arg1
+28	به	PREP	NPP	30	_	_	_	_	_	_	Arg3
+32	.	PUNC	PUNC	12	_	_	_	_	_	_	_
+
+3	با	PREP	ADVRB	9	_	_	ArgM-ADV	_	_
+7	در	PREP	VPP	9	_	_	Arg3	_	_
+10	و	CONJ	VCONJ	14	_	_	_	_	_
+11	به	PREP	NPP	13	_	_	_	Arg3	_
+20	?	PUNC	PUNC	14	_	_	_	_	_
+
+3	را	POSTP	OBJ	6	_	_	Arg1	_
+4	از	PREP	VPP	6	_	_	Arg3	_
+12	?	PUNC	PUNC	6	_	_	_	_
+
+5	را	EMPH	POSDEP	4	_	_	_	_	_
+7	و	CONJ	VCONJ	10	_	_	_	_	_
+8	به	PREP	VPP	10	_	_	_	Arg3	_
+13	با	PREP	ADVRB	23	_	_	_	_	ArgM-ADV
+15	و	CONJ	NCONJ	14	_	_	_	_	_
+19	را	POSTP	OBJ	23	_	_	_	_	Arg1
+20	از	PREP	VPP	23	_	_	_	_	Arg3
+24	.	PUNC	PUNC	10	_	_	_	_	_
+
+4	از	PREP	NPP	2	_	_	_	_	_
+10	و	CONJ	NCONJ	9	_	_	_	_	_
+12	و	CONJ	NCONJ	11	_	_	_	_	_
+15	به	PREP	VPP	18	_	_	_	Arg3	_
+23	را	POSTP	OBJ	25	_	_	_	_	Arg1
+26	.	PUNC	PUNC	3	_	_	_	_	_
+
+5	از	PREP	NPP	7	_	_	Arg3
+
+1	و	CONJ	VCONJ	7	_	_	_
+3	در	PREP	VPP	7	_	_	Arg3
+8	.	PUNC	PUNC	7	_	_	_
+
+4	،	PUNC	PUNC	3	_	_	_	_	_	_	_
+8	را	EMPH	POSDEP	7	_	_	_	_	_	_	_
+9	از	PREP	VPP	11	_	_	Arg3	_	_	_	_
+12	و	CONJ	VCONJ	16	_	_	_	_	_	_	_
+14	به	PREP	VPP	16	_	_	_	Arg3	Arg3	_	_
+17	و	CONJ	VCONJ	18	_	_	_	_	_	_	_
+21	را	POSTP	OBJ	25	_	_	_	_	_	Arg1	_
+26	و	CONJ	VCONJ	31	_	_	_	_	_	_	_
+28	را	POSTP	OBJ	31	_	_	_	_	_	_	Arg1
+32	.	PUNC	PUNC	18	_	_	_	_	_	_	_
+
+2	و	CONJ	NCONJ	1	_	_	_
+4	،	PUNC	PUNC	3	_	_	_
+7	از	PREP	NPP	6	_	_	_
+12	.	PUNC	PUNC	11	_	_	_
+
+2	با	PREP	ADVRB	11	_	_	ArgM-MNR	_
+5	از	PREP	NPP	10	_	_	Arg3	_
+7	و	CONJ	NCONJ	6	_	_	_	_
+12	و	CONJ	VCONJ	18	_	_	_	_
+14	را	POSTP	OBJ	18	_	_	_	Arg1
+15	به	PREP	VPP	18	_	_	_	Arg4
+19	،	PUNC	PUNC	18	_	_	_	_
+
+4	در	PREP	NPP	3	_	_	_
+8	به	PREP	VPP	10	_	_	Arg3
+11	.	PUNC	PUNC	10	_	_	_
+
+1	در	PREP	ADVRB	13	_	_	_	ArgM-TMP	_	_	_	_
+5	به	PREP	VPRT	13	_	_	_	_	_	_	_	_
+9	در	PREP	ADVRB	12	_	_	ArgM-TMP	_	_	_	_	_
+14	و	CONJ	VCONJ	18	_	_	_	_	_	_	_	_
+16	به	PREP	NPP	15	_	_	_	_	Arg3	_	_	_
+19	و	CONJ	VCONJ	20	_	_	_	_	_	_	_	_
+21	:	PUNC	PUNC	20	_	_	_	_	_	_	_	_
+33	را	POSTP	OBJ	35	_	_	_	_	_	_	_	Arg1
+36	.	PUNC	PUNC	20	_	_	_	_	_	_	_	_
+
+12	.	PUNC	PUNC	4	_	_	_	_
+
+4	تا	SUBR	VCL	3	_	_	Arg3	_	_
+6	را	POSTP	OBJ	10	_	_	_	Arg1	_
+7	در	PREP	VPP	10	_	_	_	Arg3	_
+11	تا	SUBR	AJUCL	10	_	_	_	ArgM-CAU	_
+13	از	PREP	AJPP	17	_	_	_	_	_
+19	.	PUNC	PUNC	3	_	_	_	_	_
+
+12	در	PREP	VPP	14	_	_	_	Arg3	_
+15	و	CONJ	VCONJ	22	_	_	_	_	_
+16	یک	NUM	NPREMOD	17	_	_	_	_	_
+19	به	PREP	MOS	22	_	_	_	_	Arg2
+23	.	PUNC	PUNC	6	_	_	_	_	_
+
+2	از	PREP	MOS	6	_	_	Arg2	_
+7	و	CONJ	VCONJ	13	_	_	_	_
+8	با	PREP	ADVRB	13	_	_	_	ArgM-MNR
+9	هفت	NUM	NPREMOD	10	_	_	_	_
+11	به	PREP	VPP	13	_	_	_	Arg3
+14	.	PUNC	PUNC	13	_	_	_	_
+
+5	در	PREP	MOS	17	_	_	Arg2
+7	(	PUNC	PUNC	8	_	_	_
+10	و	CONJ	NCONJ	9	_	_	_
+12	،	PUNC	PUNC	11	_	_	_
+13	در	PREP	POSDEP	11	_	_	_
+16	)	PUNC	PUNC	8	_	_	_
+18	.	PUNC	PUNC	17	_	_	_
+
+4	و	CONJ	AJCONJ	3	_	_	_
+7	.	PUNC	PUNC	6	_	_	_
+
+5	و	CONJ	AJCONJ	4	_	_	_
+8	.	PUNC	PUNC	7	_	_	_
+
+4	،	PUNC	PUNC	3	_	_	_
+6	،	PUNC	PUNC	5	_	_	_
+8	و	CONJ	AJCONJ	7	_	_	_
+11	.	PUNC	PUNC	10	_	_	_
+
+5	از	PREP	VPP	9	_	_	_	Arg3	_
+10	و	CONJ	VCONJ	14	_	_	_	_	_
+15	.	PUNC	PUNC	3	_	_	_	_	_
+
+4	را	POSTP	OBJ	10	_	_	Arg1	_	_
+5	به	PREP	NPP	9	_	_	Arg3	_	_
+11	ولی	CONJ	VCONJ	16	_	_	_	_	_
+15	را	POSTP	OBJ	16	_	_	_	Arg1	_
+17	و	CONJ	VCONJ	22	_	_	_	_	_
+18	به	PREP	NPP	20	_	_	_	_	Arg3
+23	.	PUNC	PUNC	22	_	_	_	_	_
+
+3	،	PUNC	PUNC	2	_	_	_	_
+5	را	POSTP	OBJ	10	_	_	Arg1	_
+11	و	CONJ	VCONJ	17	_	_	_	_
+13	در	PREP	AJPP	12	_	_	_	_
+15	و	CONJ	NCONJ	14	_	_	_	_
+18	.	PUNC	PUNC	17	_	_	_	_
+
+4	را	POSTP	OBJ	6	_	_	Arg1	_
+7	اما	CONJ	VCONJ	14	_	_	_	_
+15	.	PUNC	PUNC	14	_	_	_	_
+
+11	.	PUNC	PUNC	4	_	_	_	_
+
+2	از	PREP	NPP	5	_	_	Arg3	_	_	_
+7	و	CONJ	VCONJ	11	_	_	_	_	_	_
+9	از	PREP	VPP	11	_	_	_	Arg3	_	_
+15	و	CONJ	VCONJ	19	_	_	_	_	_	_
+16	به	PREP	NPP	18	_	_	_	_	_	Arg3
+20	.	PUNC	PUNC	11	_	_	_	_	_	_
+
+2	از	PREP	NPP	1	_	_	_	_
+7	و	CONJ	VCONJ	12	_	_	_	_
+8	از	PREP	NPP	10	_	_	_	Arg3
+13	.	PUNC	PUNC	12	_	_	_	_
+
+7	و	CONJ	VCONJ	14	_	_	_	_
+9	و	CONJ	NCONJ	8	_	_	_	_
+11	به	PREP	VPP	14	_	_	_	Arg3
+
+4	به	PREP	VPP	8	_	_	Arg3	_	_
+9	،	PUNC	PUNC	8	_	_	_	_	_
+22	را	POSTP	OBJ	26	_	_	_	_	Arg1
+27	.	PUNC	PUNC	8	_	_	_	_	_
+
+11	به	PREP	ADVRB	20	_	_	_	ArgM-EXT	_	_	_	_
+13	هفت	NUM	NPREMOD	14	_	_	_	_	_	_	_	_
+15	و	CONJ	NCONJ	14	_	_	_	_	_	_	_	_
+16	هشت	NUM	NPREMOD	17	_	_	_	_	_	_	_	_
+21	و	CONJ	VCONJ	28	_	_	_	_	_	_	_	_
+24	را	POSTP	OBJ	28	_	_	_	_	Arg1	_	_	_
+26	و	CONJ	AJCONJ	25	_	_	_	_	_	_	_	_
+29	و	CONJ	VCONJ	34	_	_	_	_	_	_	_	_
+32	را	POSTP	OBJ	34	_	_	_	_	_	Arg1	_	_
+43	و	CONJ	VCONJ	53	_	_	_	_	_	_	_	_
+46	و	CONJ	NCONJ	45	_	_	_	_	_	_	_	_
+49	از	PREP	NPP	52	_	_	_	_	_	_	_	Arg3
+54	.	PUNC	PUNC	9	_	_	_	_	_	_	_	_
+
+5	و	CONJ	NCONJ	4	_	_	_	_
+8	به	PREP	NPP	11	_	_	Arg4	_
+13	و	CONJ	VCONJ	20	_	_	_	_
+14	تا	PREP	ADVRB	20	_	_	_	ArgM-TMP
+17	در	PREP	NPP	19	_	_	_	Arg3
+21	.	PUNC	PUNC	20	_	_	_	_
+
+4	در	PREP	ADVRB	16	_	_	ArgM-LOC	_	_	_
+7	(	PUNC	PUNC	8	_	_	_	_	_	_
+10	)	PUNC	PUNC	8	_	_	_	_	_	_
+12	را	POSTP	OBJ	16	_	_	Arg1	_	_	_
+13	به	PREP	NPP	15	_	_	Arg3	_	_	_
+17	،	PUNC	PUNC	16	_	_	_	_	_	_
+23	در	PREP	ADVRB	30	_	_	_	_	ArgM-ADV	_
+27	به	PREP	NPP	29	_	_	_	_	Arg3	_
+31	و	CONJ	VCONJ	36	_	_	_	_	_	_
+33	در	PREP	MOS	36	_	_	_	_	_	Arg2
+
+2	به	PREP	VPP	9	_	_	Arg4	_
+5	(	PUNC	PUNC	6	_	_	_	_
+6	در	PREP	POSDEP	4	_	_	_	_
+8	)	PUNC	POSDEP	4	
+15	در	PREP	AJPP	14	_	_	_	_
+17	و	CONJ	NCONJ	16	_	_	_	_
+19	و	CONJ	NCONJ	18	_	_	_	_
+24	.	PUNC	PUNC	9	_	_	_	_
+
+5	30	NUM	NPREMOD	6	_	_	_	_	_	_
+9	و	CONJ	VCONJ	15	_	_	_	_	_	_
+11	را	POSTP	OBJ	15	_	_	_	Arg1	Arg1	_
+16	و	CONJ	VCONJ	22	_	_	_	_	_	_
+17	از	PREP	VPP	22	_	_	_	_	Arg3	_
+23	اما	CONJ	VCONJ	29	_	_	_	_	_	ArgM-DIS
+25	در	PREP	NPP	28	_	_	_	_	_	Arg3
+30	.	PUNC	PUNC	29	_	_	_	_	_	_
+
+4	را	POSTP	OBJ	8	_	_	Arg1	_	_	_	_
+5	به	PREP	NPP	7	_	_	Arg3	_	_	_	_
+9	و	CONJ	VCONJ	17	_	_	_	_	_	_	_
+11	را	POSTP	OBJ	17	_	_	_	Arg1	_	_	_
+12	از	PREP	VPP	17	_	_	_	Arg3	_	_	_
+18	و	CONJ	VCONJ	19	_	_	_	_	_	_	_
+26	و	CONJ	VCONJ	32	_	_	_	_	_	_	_
+28	در	PREP	AJPP	27	_	_	_	_	_	_	_
+33	.	PUNC	PUNC	19	_	_	_	_	_	_	_
+
+6	و	CONJ	NCONJ	5	_	_	_	_	_	_	_
+9	را	POSTP	OBJ	12	_	_	_	Arg1	_	_	_
+10	به	PREP	VPRT	12	_	_	_	_	_	_	_
+13	و	CONJ	VCONJ	19	_	_	_	_	_	_	_
+14	با	PREP	NPP	18	_	_	_	_	Arg3	_	_
+20	و	CONJ	VCONJ	26	_	_	_	_	_	_	_
+21	با	PREP	ADVRB	26	_	_	_	_	_	ArgM-COM	_
+27	و	CONJ	VCONJ	32	_	_	_	_	_	_	_
+28	از	PREP	VPP	32	_	_	_	_	_	_	Arg3
+33	.	PUNC	PUNC	2	_	_	_	_	_	_	_
+
+7	ولی	CONJ	VCONJ	16	_	_	_	ArgM-DIS
+17	.	PUNC	PUNC	16	_	_	_	_
+
+2	در	PREP	ADVRB	8	_	_	ArgM-LOC	_	_
+5	با	PREP	VPP	8	_	_	Arg3	_	_
+10	به	PREP	VPP	20	_	_	_	_	Arg3
+13	از	PREP	NPP	16	_	_	_	Arg3	_
+21	.	PUNC	PUNC	20	_	_	_	_	_
+
+3	از	PREP	NPP	2	_	_	_	_
+9	به	PREP	VPP	11	_	_	Arg4	_
+12	و	CONJ	VCONJ	15	_	_	_	_
+16	.	PUNC	PUNC	15	_	_	_	_
+
+2	در	PREP	ADVRB	9	_	_	ArgM-TMP
+10	.	PUNC	PUNC	9	_	_	_
+
+6	و	CONJ	VCONJ	9	_	_	_	_	_	_
+13	.	PUNC	PUNC	2	_	_	_	_	_	_
+
+6	و	CONJ	AJCONJ	5	_	_	_	_
+14	و	CONJ	VCONJ	23	_	_	_	_
+16	را	POSTP	OBJ	23	_	_	_	Arg1
+17	از	PREP	AJPP	22	_	_	_	_
+24	.	PUNC	PUNC	23	_	_	_	_
+
+1	اما	CONJ	VCONJ	6	_	_	ArgM-DIS
+7	.	PUNC	PUNC	6	_	_	_
+
+2	از	PREP	VPP	5	_	_	Arg3	_
+9	را	POSTP	OBJ	15	_	_	_	Arg1
+10	از	PREP	ADVPP	13	_	_	_	_
+
+1	اما	CONJ	VCONJ	10	_	_	_	ArgM-DIS	_
+7	به	PREP	VPP	10	_	_	_	Arg3	_
+11	و	CONJ	VCONJ	19	_	_	_	_	ArgM-DIS
+12	با	PREP	ADVRB	19	_	_	_	_	ArgM-INS
+17	را	POSTP	OBJ	19	_	_	_	_	Arg1
+
+2	به	PREP	NPP	4	_	_	Arg3	_
+8	از	PREP	VPP	13	_	_	_	Arg3
+14	.	PUNC	PUNC	5	_	_	_	_
+
+1	ولی	CONJ	VCONJ	6	_	_	ArgM-DIS
+7	.	PUNC	PUNC	6	_	_	_
+
+5	را	POSTP	OBJ	6	_	_	Arg1	_	_
+10	،	PUNC	PUNC	9	_	_	_	_	_
+12	را	POSTP	OBJ	14	_	_	_	_	Arg1
+15	،	PUNC	PUNC	7	_	_	_	_	_
+
+4	را	POSTP	OBJ	7	_	_	Arg1
+5	به	PREP	VPP	7	_	_	Arg3
+8	.	PUNC	PUNC	7	_	_	_
+
+5	را	POSTP	OBJ	6	_	_	Arg1
+
+1	و	CONJ	VCONJ	3	_	_	ArgM-DIS	_
+4	:	PUNC	PUNC	3	_	_	_	_
+11	.	PUNC	PUNC	3	_	_	_	_
+
+8	را	POSTP	OBJ	9	_	_	_	Arg1	_
+10	و	CONJ	VCONJ	13	_	_	_	_	_
+14	.	PUNC	PUNC	2	_	_	_	_	_
+
+3	به	PREP	VPP	5	_	_	Arg3	_	_	_
+8	با	PREP	ADVRB	15	_	_	_	ArgM-COM	_	_
+11	از	PREP	AJPP	14	_	_	_	_	_	_
+16	اما	CONJ	VCONJ	22	_	_	_	_	ArgM-DIS	_
+19	را	POSTP	OBJ	22	_	_	_	_	Arg1	_
+20	با	PREP	ADVRB	22	_	_	_	_	ArgM-COM	_
+28	.	PUNC	PUNC	5	_	_	_	_	_	_
+
+6	در	PREP	VPP	9	_	_	ArgM-LOC	_	_
+10	و	CONJ	VCONJ	22	_	_	_	_	_
+11	در	PREP	VPP	22	_	_	_	ArgM-LOC	_
+17	به	PREP	NPP	16	_	_	_	_	_
+23	و	CONJ	VCONJ	32	_	_	_	_	_
+25	یک	NUM	NPREMOD	26	_	_	_	_	_
+27	از	PREP	NPP	26	_	_	_	_	_
+29	به	PREP	MOS	32	_	_	_	_	Arg2
+33	.	PUNC	PUNC	32	_	_	_	_	_
+
+2	(	PUNC	PUNC	3	_	_	_	_
+4	)	PUNC	PUNC	3	_	_	_	_
+5	از	PREP	MOS	8	_	_	Arg2	_
+14	.	PUNC	PUNC	8	_	_	_	_
+
+5	در	PREP	VPP	9	_	_	Arg3	_
+10	با	PREP	VPP	18	_	_	_	Arg2
+13	(	PUNC	PUNC	14	_	_	_	_
+16	)	PUNC	PUNC	14	_	_	_	_
+19	.	PUNC	PUNC	18	_	_	_	_
+
+3	در	PREP	VPP	12	_	_	Arg3
+6	و	CONJ	VPP	12	
+7	در	PREP	VPP	12	
+13	.	PUNC	PUNC	12	_	_	_
+
+3	در	PREP	NPP	2	_	_	_	_	_
+6	(	PUNC	PUNC	7	_	_	_	_	_
+7	در	PREP	POSDEP	5	_	_	_	_	_
+10	)	PUNC	POSDEP	5	
+14	به	PREP	VPRT	16	_	_	_	_	_
+17	(	PUNC	PUNC	18	_	_	_	_	_
+19	در	PREP	ADVRB	29	_	_	_	ArgM-TMP	_
+22	از	PREP	AJPP	28	_	_	_	_	_
+24	و	CONJ	AJCONJ	23	_	_	_	_	_
+30	)	PUNC	PUNC	29	_	_	_	_	_
+31	و	CONJ	VCONJ	37	_	_	_	_	_
+35	صدهزار	NUM	NPREMOD	36	_	_	_	_	_
+38	.	PUNC	PUNC	37	_	_	_	_	_
+
+4	را	POSTP	OBJ	7	_	_	Arg1
+8	.	PUNC	PUNC	7	_	_	_
+
+3	را	POSTP	OBJ	12	_	_	Arg1	_
+4	به	PREP	NPP	11	_	_	Arg3	_
+7	و	CONJ	NCONJ	5	_	_	_	_
+13	اما	CONJ	VCONJ	19	_	_	_	ArgM-DIS
+20	.	PUNC	PUNC	19	_	_	_	_
+
+2	33	NUM	NPREMOD	3	_	_	_	_	_	_
+5	،	PUNC	PUNC	4	_	_	_	_	_	_
+7	2	NUM	NPREMOD	8	_	_	_	_	_	_
+9	به	PREP	VPP	11	_	_	Arg3	_	_	_
+15	و	NUM	SBJ	20	_	_	_	Arg1	_	_
+22	از	PREP	MOS	24	_	_	_	_	Arg2	_
+25	و	CONJ	VCONJ	34	_	_	_	_	_	_
+28	و	CONJ	NCONJ	27	_	_	_	_	_	_
+30	به	PREP	NPP	27	_	_	_	_	_	_
+35	.	PUNC	PUNC	11	_	_	_	_	_	_
+
+9	تا	SUBR	VCL	8	_	_	_	Arg3	_
+12	را	POSTP	OBJ	14	_	_	_	_	Arg1
+15	.	PUNC	PUNC	8	_	_	_	_	_
+
+2	به	PREP	VPP	4	_	_	Arg3	_	_
+8	را	POSTP	OBJ	9	_	_	_	Arg1	_
+14	را	POSTP	OBJ	15	_	_	_	_	Arg1
+16	،	PUNC	PUNC	4	_	_	_	_	_
+
+5	را	POSTP	OBJ	7	_	_	Arg1
+8	.	PUNC	PUNC	7	_	_	_
+
+5	و	CONJ	VCONJ	8	_	_	_	_	_	_
+6	از	PREP	VPP	8	_	_	_	Arg3	_	_
+9	تا	SUBR	VCL	8	_	_	_	Arg1	_	_
+10	به	PREP	NPP	13	_	_	_	_	Arg3	_
+15	و	CONJ	VCONJ	17	_	_	_	_	_	_
+18	.	PUNC	PUNC	8	_	_	_	_	_	_
+
+11	اما	CONJ	VCONJ	12	_	_	_	_	_
+17	،	PUNC	PUNC	12	_	_	_	_	_
+
+3	را	POSTP	OBJ	7	_	_	Arg1	_	_
+4	از	PREP	VPP	7	_	_	Arg3	_	_
+11	را	POSTP	OBJ	12	_	_	_	Arg1	_
+16	و	CONJ	NCONJ	14	_	_	_	_	_
+19	را	POSTP	OBJ	23	_	_	_	_	Arg3
+24	.	PUNC	PUNC	23	_	_	_	_	_
+
+2	با	PREP	ADVRB	7	_	_	ArgM-CAU	_	_	_
+8	و	CONJ	VCONJ	16	_	_	_	_	_	_
+14	را	POSTP	OBJ	16	_	_	_	Arg1	_	_
+17	و	CONJ	VCONJ	18	_	_	_	_	_	_
+19	تا	SUBR	AJUCL	18	_	_	_	_	ArgM-CAU	_
+20	به	PREP	VPP	23	_	_	_	_	_	Arg4
+24	،	PUNC	PUNC	18	_	_	_	_	_	_
+
+2	یک	NUM	NPREMOD	3	_	_	_	_
+8	و	CONJ	NCONJ	7	_	_	_	_
+11	.	PUNC	PUNC	4	_	_	_	_
+
+11	را	POSTP	OBJ	12	_	_	_	Arg1	_	_
+13	و	CONJ	VCONJ	18	_	_	_	_	_	_
+16	را	POSTP	OBJ	18	_	_	_	_	Arg1	_
+19	و	CONJ	VCONJ	22	_	_	_	_	_	_
+23	.	PUNC	PUNC	4	_	_	_	_	_	_
+
+4	به	PREP	VPP	7	_	_	Arg3	_	_	_
+10	را	POSTP	OBJ	14	_	_	_	Arg1	_	_
+11	در	PREP	VPP	14	_	_	_	Arg3	_	_
+15	و	CONJ	VCONJ	21	_	_	_	_	_	_
+20	را	POSTP	OBJ	21	_	_	_	_	Arg1	_
+22	و	CONJ	VCONJ	26	_	_	_	_	_	_
+23	به	PREP	VPP	26	_	_	_	_	_	Arg3
+27	.	PUNC	PUNC	7	_	_	_	_	_	_
+
+2	به	PREP	NPP	4	_	_	Arg3	_
+6	تا	SUBR	VCL	5	_	_	Arg1	_
+7	به	PREP	NPP	9	_	_	_	Arg3
+11	.	PUNC	PUNC	5	_	_	_	_
+
+4	را	EMPH	POSDEP	3	_	_	_	_	_
+5	در	PREP	ADVRB	14	_	_	ArgM-LOC	_	_
+9	به	PREP	VPP	14	_	_	Arg3	_	_
+11	و	CONJ	NCONJ	10	_	_	_	_	_
+15	و	CONJ	VCONJ	20	_	_	_	_	_
+16	به	PREP	NPP	19	_	_	_	Arg3	_
+21	و	CONJ	VCONJ	25	_	_	_	_	_
+26	.	PUNC	PUNC	25	_	_	_	_	_
+
+5	را	POSTP	OBJ	7	_	_	Arg1	_	_	_	_
+8	و	CONJ	VCONJ	12	_	_	_	_	_	_	_
+9	به	PREP	VPP	12	_	_	_	Arg3	_	_	_
+13	تا	SUBR	VCL	12	_	_	_	Arg1	_	_	_
+15	را	POSTP	OBJ	18	_	_	_	_	Arg1	Arg1	_
+16	به	PREP	VPP	18	_	_	_	_	Arg4	_	_
+19	و	CONJ	VCONJ	21	_	_	_	_	_	_	_
+27	.	PUNC	PUNC	12	_	_	_	_	_	_	_
+
+2	با	PREP	ADVRB	11	_	_	ArgM-MNR	_
+5	و	CONJ	AJCONJ	4	_	_	_	_
+7	از	PREP	ADVRB	11	_	_	ArgM-LOC	_
+12	و	CONJ	VCONJ	27	_	_	_	_
+13	در	PREP	ADVRB	27	_	_	_	ArgM-LOC
+16	به	PREP	NPP	26	_	_	_	Arg3
+20	(	PUNC	PUNC	21	_	_	_	_
+22	از	PREP	NPP	21	_	_	_	_
+25	)	PUNC	PUNC	21	_	_	_	_
+28	،	PUNC	PUNC	27	_	_	_	_
+
+6	تا	SUBR	AJUCL	5	_	_	ArgM-TMP	_
+9	را	POSTP	OBJ	10	_	_	_	Arg1
+11	.	PUNC	PUNC	5	_	_	_	_
+
+1	در	PREP	ADVRB	8	_	_	ArgM-TMP	_
+9	و	CONJ	VCONJ	17	_	_	_	_
+10	از	PREP	NPP	13	_	_	_	Arg3
+15	و	CONJ	NCONJ	14	_	_	_	_
+18	.	PUNC	PUNC	17	_	_	_	_
+
+2	به	PREP	NPP	5	_	_	Arg4
+7	.	PUNC	PUNC	6	_	_	_
+
+1	اما	CONJ	VCONJ	5	_	_	ArgM-DIS	_	_
+3	به	PREP	VPRT	5	_	_	_	_	_
+6	و	CONJ	VCONJ	8	_	_	_	_	_
+14	.	PUNC	PUNC	8	_	_	_	_	_
+
+9	،	PUNC	PUNC	3	_	_	_	_
+
+5	و	CONJ	VCONJ	12	_	_	_	_
+9	را	POSTP	OBJ	12	_	_	_	Arg1
+10	به	PREP	VPP	12	_	_	_	Arg3
+13	.	PUNC	PUNC	12	_	_	_	_
+
+6	را	POSTP	OBJ	8	_	_	Arg1	_	_	_
+9	،	PUNC	PUNC	8	_	_	_	_	_	_
+11	را	POSTP	OBJ	13	_	_	_	Arg1	_	_
+14	و	CONJ	VCONJ	16	_	_	_	_	_	_
+17	تا	SUBR	VCL	16	_	_	_	_	Arg3	_
+19	را	POSTP	OBJ	20	_	_	_	_	_	Arg1
+21	،	PUNC	PUNC	16	_	_	_	_	_	_
+
+1	اما	CONJ	VCONJ	5	_	_	ArgM-DIS	_
+3	به	PREP	VPP	5	_	_	Arg3	_
+14	،	PUNC	PUNC	5	_	_	_	_
+
+11	.	PUNC	PUNC	1	_	_	_	_
+
+5	به	PREP	VPP	8	_	_	Arg4	_	_	_
+9	و	CONJ	VCONJ	16	_	_	_	_	_	_
+11	را	POSTP	OBJ	16	_	_	_	Arg1	_	_
+12	با	PREP	ADVRB	16	_	_	_	ArgM-MNR	_	_
+17	و	CONJ	VCONJ	21	_	_	_	_	_	_
+18	به	PREP	NPP	20	_	_	_	_	Arg3	_
+22	و	CONJ	VCONJ	29	_	_	_	_	_	_
+26	و	CONJ	NCONJ	25	_	_	_	_	_	_
+30	.	PUNC	PUNC	29	_	_	_	_	_	_
+
+3	را	POSTP	OBJ	8	_	_	Arg1	_
+6	و	CONJ	NCONJ	5	_	_	_	_
+9	تا	SUBR	AJUCL	8	_	_	ArgM-CAU	_
+15	.	PUNC	PUNC	8	_	_	_	_
+
+6	تا	SUBR	VCL	5	_	_	Arg1	_	_	_
+7	در	PREP	ADVRB	17	_	_	_	_	ArgM-LOC	_
+10	و	CONJ	NCONJ	9	_	_	_	_	_	_
+19	از	PREP	AJPP	22	_	_	_	_	_	_
+24	،	PUNC	PUNC	23	_	_	_	_	_	_
+
+3	را	POSTP	OBJ	9	_	_	Arg1
+4	به	PREP	AJPP	8	_	_	_
+6	در	PREP	NPP	5	_	_	_
+10	.	PUNC	PUNC	9	_	_	_
+
+1	اما	CONJ	VCONJ	12	_	_	_	ArgM-DIS	_	_
+3	با	PREP	ADVRB	12	_	_	_	ArgM-INS	_	_
+13	،	PUNC	PUNC	12	_	_	_	_	_	_
+16	را	POSTP	OBJ	17	_	_	_	_	Arg1	_
+20	از	PREP	NPP	22	_	_	_	_	_	Arg3
+24	.	PUNC	PUNC	12	_	_	_	_	_	_
+
+4	(	PUNC	PUNC	5	_	_	_	_	_
+6	)	PUNC	PUNC	5	_	_	_	_	_
+9	را	POSTP	OBJ	12	_	_	Arg1	_	_
+10	به	PREP	VPP	12	_	_	Arg3	_	_
+13	تا	SUBR	AJUCL	12	_	_	ArgM-CAU	_	_
+14	در	PREP	ADVRB	17	_	_	_	ArgM-LOC	_
+18	و	CONJ	VCONJ	22	_	_	_	_	_
+19	از	PREP	AJPP	21	_	_	_	_	_
+23	.	PUNC	PUNC	12	_	_	_	_	_
+
+2	در	PREP	ADVRB	6	_	_	ArgM-TMP	_	_	_	_	_	_
+4	،	PUNC	PUNC	3	_	_	_	_	_	_	_	_	_
+7	،	PUNC	PUNC	6	_	_	_	_	_	_	_	_	_
+9	با	PREP	AJPP	11	_	_	_	_	_	_	_	_	_
+13	و	CONJ	VCONJ	16	_	_	_	_	_	_	_	_	_
+17	،	PUNC	PUNC	16	_	_	_	_	_	_	_	_	_
+18	و	CONJ	VCONJ	27	_	_	_	_	_	_	_	_	_
+20	به	PREP	NPP	26	_	_	_	_	_	Arg3	_	_	_
+23	(	PUNC	PUNC	24	_	_	_	_	_	_	_	_	_
+25	)	PUNC	PUNC	24	_	_	_	_	_	_	_	_	_
+28	،	PUNC	PUNC	27	_	_	_	_	_	_	_	_	_
+33	،	PUNC	PUNC	32	_	_	_	_	_	_	_	_	_
+34	و	CONJ	VCONJ	42	_	_	_	_	_	_	_	_	_
+35	به	PREP	VPP	38	_	_	_	_	_	_	_	Arg3	_
+39	و	CONJ	VCONJ	42	_	_	_	_	_	_	_	_	_
+43	.	PUNC	PUNC	6	_	_	_	_	_	_	_	_	_
+
+4	به	PREP	MOS	6	_	_	Arg2	_
+12	به	PREP	NPP	14	_	_	_	Arg3
+16	،	PUNC	PUNC	6	_	_	_	_
+
+2	به	PREP	NPP	4	_	_	Arg3	_	_	_	_
+9	و	CONJ	NCONJ	8	_	_	_	_	_	_	_
+11	از	PREP	NPP	8	_	_	_	_	_	_	_
+14	(	PUNC	PUNC	15	_	_	_	_	_	_	_
+16	)	PUNC	PUNC	15	_	_	_	_	_	_	_
+18	را	POSTP	VPP	20	_	_	_	Arg3	_	_	_
+21	،	PUNC	PUNC	20	_	_	_	_	_	_	_
+24	را	PREP	VPP	29	_	_	_	_	_	_	_
+27	به	PREP	VPRT	29	_	_	_	_	_	_	_
+34	را	POSTP	OBJ	35	_	_	_	_	_	_	Arg1
+36	.	PUNC	PUNC	22	_	_	_	_	_	_	_
+
+2	به	PREP	VPP	5	_	_	Arg3	Arg3	_	_	_	_
+6	و	CONJ	VCONJ	7	_	_	_	_	_	_	_	_
+8	:	PUNC	PUNC	7	_	_	_	_	_	_	_	_
+11	از	PREP	ADVRB	13	_	_	_	_	ArgM-ADV	_	_	_
+14	،	PUNC	PUNC	13	_	_	_	_	_	_	_	_
+18	را	POSTP	OBJ	20	_	_	_	_	_	Arg1	_	_
+21	و	CONJ	VCONJ	27	_	_	_	_	_	_	_	_
+22	از	PREP	ADVRB	27	_	_	_	_	_	_	Arg1	_
+25	در	PREP	VPP	27	_	_	_	_	_	_	Arg3	_
+32	.	PUNC	PUNC	7	_	_	_	_	_	_	_	_
+
+11	در	PREP	VPP	14	_	_	_	Arg3
+15	،	PUNC	PUNC	1	_	_	_	_
+
+1	و	CONJ	VCONJ	8	_	_	_	_
+4	،	PUNC	PUNC	3	_	_	_	_
+5	به	PREP	VPP	8	_	_	Arg3	_
+9	تا	SUBR	AJUCL	8	_	_	ArgM-CAU	_
+15	.	PUNC	PUNC	8	_	_	_	_
+
+3	به	PREP	ADVRB	15	_	_	ArgM-ADV	_
+8	،	PUNC	PUNC	7	_	_	_	_
+10	را	POSTP	OBJ	15	_	_	Arg1	_
+11	به	PREP	NPP	14	_	_	Arg3	_
+16	و	CONJ	VCONJ	29	_	_	_	_
+19	به	PREP	ADVRB	29	_	_	_	ArgM-ADV
+25	را	POSTP	OBJ	29	_	_	_	Arg1
+26	به	PREP	VPP	29	_	_	_	Arg3
+30	.	PUNC	PUNC	29	_	_	_	_
+
+5	(	PUNC	PUNC	6	_	_	_	_	_
+7	)	PUNC	PUNC	6	_	_	_	_	_
+8	را	POSTP	OBJ	12	_	_	Arg1	_	_
+13	و	CONJ	VCONJ	19	_	_	_	_	_
+17	را	PREP	NPP	18	_	_	_	Arg3	_
+20	،	PUNC	PUNC	19	_	_	_	_	_
+24	را	PREP	NPP	30	_	_	_	_	Arg3
+25	در	PREP	ADVRB	31	_	_	_	_	_
+28	از	PREP	NPP	27	_	_	_	_	_
+32	.	PUNC	PUNC	21	_	_	_	_	_
+
+4	تا	SUBR	VCL	3	_	_	Arg1	_	_
+6	به	PREP	VPP	9	_	_	_	Arg3	_
+10	،	PUNC	PUNC	9	_	_	_	_	_
+11	و	CONJ	VCONJ	17	_	_	_	_	_
+14	را	POSTP	OBJ	17	_	_	_	_	Arg1
+15	به	PREP	VPRT	17	_	_	_	_	_
+18	،	PUNC	PUNC	3	_	_	_	_	_
+
+11	تا	SUBR	AJUCL	10	_	_	_	ArgM-PRP	_	_
+12	با	PREP	NPP	14	_	_	_	_	Arg3	_
+16	و	CONJ	VCONJ	21	_	_	_	_	_	_
+17	از	PREP	NPP	20	_	_	_	_	_	_
+22	.	PUNC	PUNC	5	_	_	_	_	_	_
+
+3	را	POSTP	OBJ	11	_	_	Arg1
+4	از	PREP	VPP	11	_	_	Arg3
+8	(	PUNC	PUNC	9	_	_	_
+10	)	PUNC	PUNC	9	_	_	_
+12	،	PUNC	PUNC	11	_	_	_
+
+6	(	PUNC	PUNC	7	_	_	_
+8	)	PUNC	PUNC	7	_	_	_
+10	.	PUNC	PUNC	1	_	_	_
+
+1	ولی	CONJ	VCONJ	5	_	_	ArgM-DIS	_	_
+6	و	CONJ	VCONJ	10	_	_	_	_	_
+8	را	POSTP	OBJ	10	_	_	_	Arg1	_
+11	و	CONJ	VCONJ	20	_	_	_	_	_
+13	را	POSTP	OBJ	20	_	_	_	_	Arg1
+14	با	PREP	ADVRB	20	_	_	_	_	ArgM-INS
+16	از	PREP	VPP	20	_	_	_	_	Arg3
+21	،	PUNC	PUNC	20	_	_	_	_	_
+
+4	و	CONJ	NCONJ	3	_	_	_
+6	از	PREP	ADVRB	9	_	_	ArgM-LOC
+10	،	PUNC	PUNC	1	_	_	_
+
+1	و	CONJ	VCONJ	10	_	_	ArgM-DIS	_
+3	و	CONJ	NCONJ	2	_	_	_	_
+6	به	PREP	NPP	9	_	_	Arg3	_
+11	و	CONJ	VCONJ	13	_	_	_	_
+
+1	ولی	CONJ	VCONJ	10	_	_	ArgM-DIS	_	_	_	_
+4	را	POSTP	OBJ	10	_	_	Arg1	_	_	_	_
+5	از	PREP	VPP	10	_	_	Arg3	_	_	_	_
+7	به	PREP	VPP	10	_	_	Arg4	_	_	_	_
+11	و	CONJ	VCONJ	15	_	_	_	_	_	_	_
+13	را	POSTP	OBJ	15	_	_	_	Arg1	_	_	_
+18	در	PREP	NPP	20	_	_	_	_	Arg3	_	_
+22	و	CONJ	VCONJ	26	_	_	_	_	_	_	_
+24	را	POSTP	OBJ	26	_	_	_	_	_	Arg1	_
+27	و	CONJ	VCONJ	35	_	_	_	_	_	_	_
+28	تا	PREP	ADVRB	35	_	_	_	_	_	_	ArgM-EXT
+32	از	PREP	AJPP	34	_	_	_	_	_	_	_
+36	.	PUNC	PUNC	15	_	_	_	_	_	_	_
+
+2	و	CONJ	NCONJ	1	_	_	_	_
+5	از	PREP	NPP	8	_	_	Arg3	_
+10	در	PREP	VPP	14	_	_	_	Arg4
+15	.	PUNC	PUNC	14	_	_	_	_
+
+6	در	PREP	NPP	4	_	_	_	_	_	_	_	_
+13	را	POSTP	OBJ	16	_	_	_	Arg3	_	_	_	_
+21	(	PUNC	PUNC	22	_	_	_	_	_	_	_	_
+24	)	PUNC	PUNC	22	_	_	_	_	_	_	_	_
+25	در	PREP	AJPP	27	_	_	_	_	_	_	_	_
+29	و	CONJ	VCONJ	45	_	_	_	_	_	_	_	_
+36	(	PUNC	PUNC	37	_	_	_	_	_	_	_	_
+43	)	PUNC	PUNC	37	_	_	_	_	_	_	_	_
+46	و	CONJ	VCONJ	50	_	_	_	_	_	_	_	_
+47	در	PREP	NPP	49	_	_	_	_	_	_	_	Arg3
+51	.	PUNC	PUNC	50	_	_	_	_	_	_	_	_
+
+2	چهل	NUM	NPREMOD	3	_	_	_	_	_
+4	به	PREP	VPP	6	_	_	Arg3	_	_
+7	و	CONJ	VCONJ	12	_	_	_	_	_
+8	از	PREP	VPP	12	_	_	_	Arg3	_
+13	و	CONJ	VCONJ	18	_	_	_	_	_
+14	به	PREP	NPP	17	_	_	_	_	Arg3
+19	،	PUNC	PUNC	18	_	_	_	_	_
+
+1	به	PREP	ADVRB	6	_	_	ArgM-ADV	_
+7	تا	SUBR	AJUCL	6	_	_	ArgM-PRP	_
+10	و	CONJ	NCONJ	9	_	_	_	_
+15	را	POSTP	OBJ	23	_	_	_	Arg1
+21	به	PREP	VPRT	23	_	_	_	_
+24	.	PUNC	PUNC	6	_	_	_	_
+
+2	در	PREP	VPP	6	_	_	Arg3	_	_
+7	و	CONJ	VCONJ	25	_	_	_	_	_
+8	در	PREP	ADVRB	25	_	_	_	_	ArgM-ADV
+13	به	PREP	AJPP	20	_	_	_	_	_
+16	و	CONJ	NCONJ	14	_	_	_	_	_
+18	و	CONJ	NCONJ	17	_	_	_	_	_
+22	به	PREP	VPP	25	_	_	_	_	Arg3
+26	.	PUNC	PUNC	25	_	_	_	_	_
+
+4	را	POSTP	OBJ	6	_	_	Arg1	Arg1	_	_	_	_	_
+7	و	CONJ	VCONJ	9	_	_	_	_	_	_	_	_	_
+10	و	CONJ	VCONJ	14	_	_	_	_	_	_	_	_	_
+15	و	CONJ	VCONJ	17	_	_	_	_	_	_	_	_	_
+18	و	CONJ	VCONJ	21	_	_	_	_	_	_	_	_	_
+22	و	CONJ	VCONJ	29	_	_	_	_	_	_	_	_	_
+26	را	POSTP	OBJ	29	_	_	_	_	_	_	_	Arg1	_
+27	به	PREP	VPP	29	_	_	_	_	_	_	_	Arg3	_
+30	و	CONJ	VCONJ	42	_	_	_	_	_	_	_	_	_
+34	را	POSTP	OBJ	42	_	_	_	_	_	_	_	_	Arg1
+35	به	PREP	AJPP	41	_	_	_	_	_	_	_	_	_
+38	[	PUNC	PUNC	39	_	_	_	_	_	_	_	_	_
+40	]	PUNC	PUNC	39	_	_	_	_	_	_	_	_	_
+43	.	PUNC	PUNC	42	_	_	_	_	_	_	_	_	_
+
+13	در	PREP	VPP	16	_	_	_	Arg3	_
+17	و	CONJ	VCONJ	23	_	_	_	_	_
+20	به	PREP	MOS	23	_	_	_	_	Arg2
+24	.	PUNC	PUNC	7	_	_	_	_	_
+
+9	و	CONJ	NCONJ	8	_	_	_	_	_
+13	و	CONJ	VCONJ	19	_	_	_	_	_
+20	.	PUNC	PUNC	5	_	_	_	_	_
+
+3	و	CONJ	NCONJ	2	_	_	_
+6	در	PREP	MOS	12	_	_	Arg2
+8	و	CONJ	NCONJ	7	_	_	_
+10	و	CONJ	NCONJ	9	_	_	_
+13	.	PUNC	PUNC	12	_	_	_
+
+5	در	PREP	AJPP	4	_	_	_
+7	،	PUNC	PUNC	6	_	_	_
+9	،	PUNC	PUNC	8	_	_	_
+11	و	CONJ	NCONJ	10	_	_	_
+14	.	PUNC	PUNC	13	_	_	_
+
+3	در	PREP	NPP	7	_	_	Arg3	_	_	_
+13	ولی	CONJ	VCONJ	19	_	_	_	_	_	_
+14	از	PREP	VPP	19	_	_	_	_	_	Arg3
+20	.	PUNC	PUNC	19	_	_	_	_	_	_
+
+3	(	PUNC	PUNC	4	_	_	_	_	_
+5	)	PUNC	PUNC	4	_	_	_	_	_
+6	با	PREP	ADVRB	30	_	_	ArgM-INS	_	_
+9	و	CONJ	AJCONJ	8	_	_	_	_	_
+11	و	CONJ	NCONJ	7	_	_	_	_	_
+14	و	CONJ	AJCONJ	13	_	_	_	_	_
+16	،	PUNC	PUNC	15	_	_	_	_	_
+17	و	CONJ	NCONJ	12	_	_	_	_	_
+20	و	CONJ	AJCONJ	19	_	_	_	_	_
+22	،	PUNC	PUNC	21	_	_	_	_	_
+25	را	POSTP	OBJ	30	_	_	Arg1	Arg1	Arg1
+31	و	CONJ	VCONJ	36	_	_	_	_	_
+32	به	PREP	VPP	36	_	_	_	Arg3	_
+37	و	CONJ	VCONJ	43	_	_	_	_	_
+38	از	PREP	VPP	43	_	_	_	_	Arg3
+44	.	PUNC	PUNC	43	_	_	_	_	_
+
+1	و	CONJ	VCONJ	8	_	_	ArgM-DIS	_	_
+5	به	PREP	VPP	8	_	_	Arg4	_	_
+9	،	PUNC	PUNC	8	_	_	_	_	_
+10	و	CONJ	VCONJ	20	_	_	_	_	_
+12	و	CONJ	NCONJ	11	_	_	_	_	_
+16	را	POSTP	OBJ	20	_	_	_	Arg1	_
+21	و	CONJ	VCONJ	30	_	_	_	_	_
+26	را	POSTP	OBJ	30	_	_	_	_	Arg1
+27	به	PREP	NPP	29	_	_	_	_	Arg3
+31	،	PUNC	PUNC	30	_	_	_	_	_
+
+5	را	POSTP	OBJ	6	_	_	Arg1	_
+7	و	CONJ	VCONJ	10	_	_	_	_
+
+2	(	PUNC	PUNC	3	_	_	_	_
+4	)	PUNC	PUNC	3	_	_	_	_
+10	در	PREP	NPP	13	_	_	Arg3	_
+15	،	PUNC	PUNC	14	_	_	_	_
+16	سه	NUM	NPREMOD	17	_	_	_	_
+19	را	POSTP	OBJ	21	_	_	_	Arg1
+22	.	PUNC	PUNC	21	_	_	_	_
+
+3	را	POSTP	OBJ	9	_	_	Arg1	_	_
+6	و	CONJ	AJCONJ	5	_	_	_	_	_
+10	،	PUNC	PUNC	9	_	_	_	_	_
+11	و	CONJ	VCONJ	17	_	_	_	_	_
+15	و	CONJ	AJCONJ	14	_	_	_	_	_
+18	،	PUNC	PUNC	17	_	_	_	_	_
+19	و	CONJ	VCONJ	30	_	_	_	_	_
+22	از	PREP	NPP	29	_	_	_	_	Arg3
+27	و	CONJ	AJCONJ	26	_	_	_	_	_
+31	.	PUNC	PUNC	30	_	_	_	_	_
+
+3	(	PUNC	PUNC	4	_	_	_
+5	)	PUNC	PUNC	4	_	_	_
+8	و	CONJ	NCONJ	7	_	_	_
+10	در	PREP	MOS	21	_	_	Arg2
+13	و	CONJ	NCONJ	12	_	_	_
+16	از	PREP	NPP	14	_	_	_
+19	و	CONJ	NCONJ	18	_	_	_
+22	،	PUNC	PUNC	21	_	_	_
+
+2	از	PREP	AJPP	8	_	_	_	_
+10	.	PUNC	PUNC	9	_	_	_	_
+
+1	در	PREP	MOS	4	_	_	Arg2	_
+10	را	POSTP	OBJ	17	_	_	_	Arg1
+11	به	PREP	VPP	17	_	_	_	Arg3
+14	(	PUNC	PUNC	15	_	_	_	_
+16	)	PUNC	PUNC	15	_	_	_	_
+18	،	PUNC	PUNC	4	_	_	_	_
+
+3	(	PUNC	PUNC	4	_	_	_	_
+5	)	PUNC	PUNC	4	_	_	_	_
+10	،	PUNC	PUNC	9	_	_	_	_
+13	را	POSTP	OBJ	24	_	_	Arg1	_
+14	از	PREP	ADVRB	24	_	_	Arg3	_
+18	و	CONJ	NCONJ	15	_	_	_	_
+25	،	PUNC	PUNC	24	_	_	_	_
+26	ولی	CONJ	VCONJ	31	_	_	_	ArgM-DIS
+28	به	PREP	VPP	31	_	_	_	Arg3
+32	.	PUNC	PUNC	31	_	_	_	_
+
+2	در	PREP	ADVRB	11	_	_	ArgM-TMP	_	_
+8	به	PREP	NPP	10	_	_	Arg3	_	_
+12	و	CONJ	VCONJ	18	_	_	_	_	_
+14	را	POSTP	OBJ	18	_	_	_	Arg1	_
+15	به	PREP	NPP	17	_	_	_	Arg3	_
+19	و	CONJ	VCONJ	23	_	_	_	_	_
+24	.	PUNC	PUNC	1	_	_	_	_	_
+
+4	را	POSTP	OBJ	5	_	_	Arg1	_	_	_	_
+11	و	CONJ	VCONJ	17	_	_	_	_	_	_	_
+13	به	PREP	VPRT	15	_	_	_	_	_	_	_
+18	و	CONJ	VCONJ	24	_	_	_	_	_	_	_
+21	را	POSTP	OBJ	24	_	_	_	_	_	_	Arg1
+25	.	PUNC	PUNC	5	_	_	_	_	_	_	_
+
+6	را	POSTP	OBJ	8	_	_	Arg1
+9	.	PUNC	PUNC	8	_	_	_
+
+1	اما	CONJ	VCONJ	18	_	_	_	_	ArgM-DIS	_
+4	از	PREP	VPP	18	_	_	_	_	Arg3	_
+9	را	POSTP	OBJ	11	_	_	Arg1	_	_	_
+12	و	CONJ	VCONJ	16	_	_	_	_	_	_
+13	به	PREP	VPP	16	_	_	_	Arg3	_	_
+19	و	CONJ	VCONJ	23	_	_	_	_	_	_
+21	را	POSTP	OBJ	23	_	_	_	_	_	Arg1
+24	.	PUNC	PUNC	23	_	_	_	_	_	_
+
+4	را	POSTP	OBJ	6	_	_	Arg1
+7	.	PUNC	PUNC	6	_	_	_
+
+6	،	PUNC	PUNC	5	_	_	_	_	_
+10	(	PUNC	PUNC	11	_	_	_	_	_
+12	)	PUNC	PUNC	11	_	_	_	_	_
+16	به	PREP	ADVRB	20	_	_	_	ArgM-MNR	_
+21	تا	SUBR	AJUCL	20	_	_	_	ArgM-CAU	_
+28	.	PUNC	PUNC	14	_	_	_	_	_
+
+5	و	CONJ	VCONJ	9	_	_	_	_
+10	.	PUNC	PUNC	9	_	_	_	_
+
+2	(	PUNC	PUNC	3	_	_	_	_
+4	)	PUNC	PUNC	3	_	_	_	_
+5	از	PREP	NPP	10	_	_	_	_
+9	یک	NUM	NPREMOD	10	_	_	_	_
+11	(	PUNC	PUNC	12	_	_	_	_
+13	و	CONJ	AJCONJ	12	_	_	_	_
+15	)	PUNC	PUNC	12	_	_	_	_
+17	و	CONJ	VCONJ	21	_	_	_	_
+18	در	PREP	NPP	20	_	_	_	Arg3
+22	.	PUNC	PUNC	21	_	_	_	_
+
+2	به	PREP	ADVRB	26	_	_	_	ArgM-ADV
+9	و	CONJ	NCONJ	6	_	_	_	_
+11	و	CONJ	NCONJ	10	_	_	_	_
+13	را	POSTP	OBJ	26	_	_	_	Arg1
+16	و	CONJ	NCONJ	15	_	_	_	_
+21	از	PREP	MOS	23	_	_	_	_
+27	.	PUNC	PUNC	26	_	_	_	_
+
+6	و	CONJ	VCONJ	9	_	_	_	_	_	_
+7	از	PREP	VPP	9	_	_	_	Arg3	_	_
+13	و	CONJ	VCONJ	17	_	_	_	_	_	_
+18	،	PUNC	PUNC	9	_	_	_	_	_	_
+
+1	ولی	CONJ	VCONJ	6	_	_	ArgM-DIS	_	_	_
+5	را	POSTP	OBJ	6	_	_	Arg1	_	_	_
+7	و	CONJ	VCONJ	12	_	_	_	_	_	_
+13	و	CONJ	VCONJ	16	_	_	_	_	_	_
+14	به	PREP	VPP	16	_	_	_	_	Arg3	_
+17	:	PUNC	PUNC	16	_	_	_	_	_	_
+22	به	PREP	VPP	24	_	_	_	_	_	Arg4
+25	.	PUNC	PUNC	16	_	_	_	_	_	_
+
+3	را	POSTP	OBJ	11	_	_	_	Arg1
+5	از	PREP	AJPP	7	_	_	_	_
+9	از	PREP	VPP	11	_	_	_	Arg3
+12	.	PUNC	PUNC	11	_	_	_	_
+
+2	از	PREP	NPP	4	_	_	Arg3	_	_	_
+6	و	CONJ	VCONJ	11	_	_	_	_	_	_
+7	با	PREP	NPP	10	_	_	_	Arg3	_	_
+12	و	CONJ	VCONJ	19	_	_	_	_	_	_
+15	را	POSTP	OBJ	19	_	_	_	_	Arg2	Arg1
+16	به	PREP	VPP	19	_	_	_	_	Arg3	_
+20	و	CONJ	VCONJ	22	_	_	_	_	_	_
+23	.	PUNC	PUNC	22	_	_	_	_	_	_
+
+5	به	PREP	ADVRB	14	_	_	ArgM-ADV	_	_
+8	،	PUNC	PUNC	7	_	_	_	_	_
+11	را	POSTP	OBJ	14	_	_	Arg2	_	_
+12	در	PREP	VPP	14	_	_	Arg3	_	_
+15	و	CONJ	VCONJ	21	_	_	_	_	_
+17	به	PREP	VPP	21	_	_	_	Arg3	_
+22	.	PUNC	PUNC	21	_	_	_	_	_
+23	[	PUNC	PUNC	33	_	_	_	_	_
+27	،	PUNC	PUNC	26	_	_	_	_	_
+29	در	PREP	VPP	33	_	_	_	_	Arg4
+34	]	PUNC	PUNC	33	_	_	_	_	_
+
+1	و	CONJ	VCONJ	15	_	_	_	ArgM-DIS	_
+3	و	CONJ	NCONJ	2	_	_	_	_	_
+7	80	NUM	NPREMOD	8	_	_	_	_	_
+10	در	PREP	ADVRB	15	_	_	_	ArgM-LOC	_
+16	و	CONJ	VCONJ	21	_	_	_	_	_
+17	به	PREP	VPP	21	_	_	_	_	Arg3
+22	.	PUNC	PUNC	21	_	_	_	_	_
+
+1	در	PREP	ADVRB	8	_	_	ArgM-TMP	_	_
+9	و	CONJ	VCONJ	13	_	_	_	_	_
+10	به	PREP	NPP	12	_	_	_	Arg3	_
+17	و	CONJ	NCONJ	16	_	_	_	_	_
+20	به	PREP	VPRT	22	_	_	_	_	_
+
+1	و	CONJ	VCONJ	2	_	_	ArgM-DIS	_	_
+5	و	CONJ	NCONJ	4	_	_	_	_	_
+8	را	POSTP	OBJ	14	_	_	Arg1	_	_
+9	به	PREP	AJPP	13	_	_	_	_	_
+20	و	CONJ	VCONJ	28	_	_	_	_	_
+26	را	POSTP	OBJ	28	_	_	_	_	Arg3
+29	.	PUNC	PUNC	2	_	_	_	_	_
+
+4	به	PREP	NPP	3	_	_	Arg3	_
+9	و	CONJ	VCONJ	14	_	_	_	_
+11	را	POSTP	OBJ	14	_	_	_	Arg1
+15	،	PUNC	PUNC	14	_	_	_	_
+
+4	را	POSTP	OBJ	10	_	_	Arg1
+11	.	PUNC	PUNC	10	_	_	_
+
+5	را	POSTP	OBJ	7	_	_	Arg1
+8	.	PUNC	PUNC	7	_	_	_
+
+9	و	CONJ	NCONJ	8	_	_	_	_	_
+13	و	CONJ	VCONJ	16	_	_	_	_	_
+17	.	PUNC	PUNC	5	_	_	_	_	_
+
+3	«	PUNC	PUNC	4	_	_	_
+5	»	PUNC	PUNC	4	_	_	_
+6	یا	CONJ	NCONJ	4	_	_	_
+7	«	PUNC	PUNC	8	_	_	_
+9	»	PUNC	PUNC	8	_	_	_
+12	،	PUNC	PUNC	11	_	_	_
+
+3	در	PREP	MOS	6	_	_	Arg2
+7	.	PUNC	PUNC	6	_	_	_
+
+4	(	PUNC	PUNC	5	_	_	_	_
+6	)	PUNC	PUNC	5	_	_	_	_
+7	در	PREP	AJPP	10	_	_	_	_
+8	پنج	NUM	NPREMOD	9	_	_	_	_
+15	از	PREP	NPP	13	_	_	_	_
+16	:	PUNC	NPP	13	
+19	،	PUNC	PUNC	18	_	_	_	_
+21	،	PUNC	PUNC	20	_	_	_	_
+23	،	PUNC	PUNC	22	_	_	_	_
+26	(	PUNC	PUNC	27	_	_	_	_
+29	)	PUNC	PUNC	27	_	_	_	_
+30	و	CONJ	NCONJ	24	_	_	_	_
+32	.	PUNC	PUNC	11	_	_	_	_
+
+2	،	PUNC	PUNC	1	_	_	_
+4	در	PREP	AJPP	3	_	_	_
+6	،	PUNC	PUNC	5	_	_	_
+9	و	CONJ	NCONJ	7	_	_	_
+12	.	PUNC	PUNC	11	_	_	_
+
+4	را	POSTP	OBJ	8	_	_	Arg1	_
+5	به	PREP	VPP	8	_	_	Arg4	_
+9	و	CONJ	VCONJ	16	_	_	_	_
+12	را	POSTP	OBJ	16	_	_	_	Arg1
+13	به	PREP	NPP	15	_	_	_	Arg3
+17	.	PUNC	PUNC	16	_	_	_	_
+
+1	در	PREP	ADVRB	9	_	_	ArgM-TMP2	_	_
+6	در	PREP	ADVRB	9	_	_	ArgM-LOC	_	_
+12	در	PREP	VPP	14	_	_	_	ArgM-LOC	_
+15	و	CONJ	VCONJ	25	_	_	_	_	_
+21	و	CONJ	NCONJ	20	_	_	_	_	_
+23	،	PUNC	PUNC	22	_	_	_	_	_
+26	.	PUNC	PUNC	9	_	_	_	_	_
+
+3	:	PUNC	PUNC	2	_	_	_	_	_	_
+10	:	PUNC	PUNC	9	_	_	_	_	_	_
+11	«	PUNC	PUNC	16	_	_	_	_	_	_
+14	به	PREP	VPRT	16	_	_	_	_	_	_
+20	و	CONJ	NCONJ	18	_	_	_	_	_	_
+23	به	PREP	VPP	27	_	_	_	_	_	ArgM-ADV
+28	»	PUNC	PUNC	16	_	_	_	_	_	_
+29	.	PUNC	PUNC	2	_	_	_	_	_	_
+
+9	را	POSTP	OBJ	10	_	_	Arg1	_	_	_	_
+15	و	CONJ	NCONJ	14	_	_	_	_	_	_	_
+17	را	POSTP	OBJ	21	_	_	_	_	Arg1	_	_
+18	از	PREP	AJPP	20	_	_	_	_	_	_	_
+22	و	CONJ	VCONJ	31	_	_	_	_	_	_	_
+26	به	PREP	VPRT	28	_	_	_	_	_	_	_
+30	را	POSTP	OBJ	31	_	_	_	_	_	_	Arg1
+32	.	PUNC	PUNC	12	_	_	_	_	_	_	_
+
+7	و	CONJ	NCONJ	6	_	_	_	_
+12	اما	CONJ	VCONJ	19	_	_	_	ArgM-DIS
+14	به	PREP	AJPP	18	_	_	_	_
+20	.	PUNC	PUNC	19	_	_	_	_
+
+4	را	POSTP	OBJ	9	_	_	Arg1	_
+5	از	PREP	AJPP	8	_	_	_	_
+10	تا	SUBR	AJUCL	9	_	_	ArgM-TMP	_
+12	در	PREP	ADVRB	17	_	_	_	ArgM-LOC
+14	از	PREP	NPP	13	_	_	_	_
+18	.	PUNC	PUNC	9	_	_	_	_
+
+2	با	PREP	ADVRB	14	_	_	ArgM-INS	_	_
+5	و	CONJ	NCONJ	4	_	_	_	_	_
+7	و	CONJ	NCONJ	6	_	_	_	_	_
+10	به	PREP	VPP	14	_	_	Arg3	_	_
+20	و	CONJ	VCONJ	23	_	_	_	_	_
+24	،	PUNC	PUNC	14	_	_	_	_	_
+
+3	را	POSTP	OBJ	8	_	_	Arg1
+4	در	PREP	ADVRB	8	_	_	ArgM-TMP
+9	.	PUNC	PUNC	8	_	_	_
+
+5	ولی	CONJ	VCONJ	10	_	_	_	ArgM-DIS
+8	را	POSTP	OBJ	10	_	_	_	Arg1
+11	.	PUNC	PUNC	10	_	_	_	_
+
+3	را	POSTP	OBJ	8	_	_	Arg1	Arg1
+4	به	PREP	NPP	7	_	_	Arg3	_
+9	و	CONJ	VCONJ	12	_	_	_	_
+10	از	PREP	VPP	12	_	_	_	Arg3
+13	.	PUNC	PUNC	12	_	_	_	_
+
+2	از	PREP	VPP	5	_	_	Arg3	_
+6	و	CONJ	VCONJ	11	_	_	_	_
+7	به	PREP	NPP	10	_	_	_	Arg3
+12	،	PUNC	PUNC	11	_	_	_	_
+
+2	به	PREP	VPP	4	_	_	Arg3	_
+10	؟	PUNC	PUNC	9	_	_	_	_
+
+2	از	PREP	VPP	6	_	_	Arg3	_	_
+7	و	CONJ	VCONJ	12	_	_	_	_	_
+10	را	POSTP	OBJ	12	_	_	_	Arg1	_
+13	تا	SUBR	AJUCL	12	_	_	_	ArgM-PRP	_
+14	در	PREP	ADVRB	20	_	_	_	_	ArgM-LOC
+17	از	PREP	NPP	19	_	_	_	_	Arg3
+21	.	PUNC	PUNC	12	_	_	_	_	_
+
+2	از	PREP	ADVRB	14	_	_	ArgM-ADV	_
+6	به	PREP	NPP	5	_	_	Arg3	_
+9	و	CONJ	NCONJ	8	_	_	_	_
+12	به	PREP	NPP	7	_	_	_	_
+15	ولی	CONJ	VCONJ	18	_	_	_	ArgM-DIS
+19	.	PUNC	PUNC	18	_	_	_	_
+
+4	از	PREP	AJPP	8	_	_	_	_	_	_	_	_
+11	به	PREP	VPP	15	_	_	_	Arg4	_	_	_	_
+16	و	CONJ	VCONJ	22	_	_	_	_	_	_	_	_
+17	با	PREP	ADVRB	22	_	_	_	_	ArgM-INS	_	_	_
+19	به	PREP	VPRT	22	_	_	_	_	_	_	_	_
+23	و	CONJ	VCONJ	28	_	_	_	_	_	_	_	_
+26	را	POSTP	OBJ	28	_	_	_	_	_	Arg1	_	_
+30	یک	NUM	NPREMOD	31	_	_	_	_	_	_	_	_
+35	را	POSTP	OBJ	39	_	_	_	_	_	_	Arg1	_
+36	به	PREP	VPP	39	_	_	_	_	_	_	Arg3	_
+40	و	CONJ	VCONJ	43	_	_	_	_	_	_	_	_
+41	به	PREP	VPP	43	_	_	_	_	_	_	_	Arg4
+44	.	PUNC	PUNC	43	_	_	_	_	_	_	_	_
+
+7	و	CONJ	VCONJ	13	_	_	_	_
+9	را	POSTP	OBJ	13	_	_	_	Arg4
+10	از	PREP	NPP	12	_	_	_	Arg3
+
+1	اما	CONJ	VCONJ	7	_	_	ArgM-DIS	_	_
+3	از	PREP	NPP	6	_	_	Arg3	_	_
+8	و	CONJ	VCONJ	11	_	_	_	_	_
+9	به	PREP	VPP	11	_	_	_	Arg3	_
+14	را	POSTP	OBJ	18	_	_	_	_	Arg1
+19	،	PUNC	PUNC	11	_	_	_	_	_
+
+1	در	PREP	ADVRB	13	_	_	_	_	ArgM-TMP
+14	.	PUNC	PUNC	13	_	_	_	_	_
+
+6	را	POSTP	OBJ	9	_	_	Arg1	_	_	_	_
+7	به	PREP	VPP	9	_	_	Arg3	_	_	_	_
+10	و	CONJ	VCONJ	14	_	_	_	_	_	_	_
+11	به	PREP	NPP	13	_	_	_	Arg3	_	_	_
+18	را	POSTP	OBJ	20	_	_	_	_	Arg1	_	_
+21	تا	SUBR	AJUCL	20	_	_	_	_	ArgM-CAU	_	_
+23	را	POSTP	OBJ	26	_	_	_	_	_	Arg1	_
+24	در	PREP	ADVRB	26	_	_	_	_	_	ArgM-LOC	_
+27	تا	SUBR	AJUCL	20	_	_	_	_	ArgM-CAU2	_	_
+33	.	PUNC	PUNC	14	_	_	_	_	_	_	_
+
+1	در	PREP	ADVRB	7	_	_	ArgM-TMP	_	_
+8	«	PUNC	PUNC	22	_	_	_	_	_
+15	و	CONJ	VCONJ	22	_	_	_	_	_
+18	،	PUNC	PUNC	17	_	_	_	_	_
+20	و	CONJ	AJCONJ	19	_	_	_	_	_
+23	.	PUNC	PUNC	22	_	_	_	_	_
+24	»	PUNC	PUNC	22	_	_	_	_	_
+
+6	را	POSTP	OBJ	10	_	_	Arg1	_	_
+11	،	PUNC	PUNC	10	_	_	_	_	_
+12	تا	SUBR	AJUCL	10	_	_	ArgM-CAU	_	_
+20	،	PUNC	PUNC	19	_	_	_	_	_
+21	با	PREP	ADVRB	30	_	_	_	_	ArgM-INS
+28	را	POSTP	OBJ	30	_	_	_	_	Arg3
+31	.	PUNC	PUNC	10	_	_	_	_	_
+
+1	در	PREP	MOS	4	_	_	Arg2	_
+8	.	PUNC	PUNC	4	_	_	_	_
+
+2	از	PREP	VPP	8	_	_	Arg3	_	_	_
+6	به	PREP	VPRT	8	_	_	_	_	_	_
+12	از	PREP	VPP	16	_	_	_	Arg3	_	_
+17	و	CONJ	VCONJ	20	_	_	_	_	_	_
+18	به	PREP	VPP	20	_	_	_	_	Arg4	_
+24	را	POSTP	OBJ	25	_	_	_	_	_	Arg1
+
+1	ولی	CONJ	VCONJ	8	_	_	ArgM-DIS	_
+5	در	PREP	VPP	8	_	_	Arg3	_
+9	و	CONJ	VCONJ	16	_	_	_	_
+11	از	PREP	ADVRB	16	_	_	_	ArgM-LOC
+13	به	PREP	VPP	16	_	_	_	Arg3
+17	.	PUNC	PUNC	16	_	_	_	_
+
+5	را	POSTP	OBJ	7	_	_	Arg4	_	_	_
+15	را	POSTP	OBJ	16	_	_	_	_	Arg1	_
+17	و	CONJ	VCONJ	20	_	_	_	_	_	_
+21	.	PUNC	PUNC	10	_	_	_	_	_	_
+
+9	به	PREP	MOS	12	_	_	_	_	Arg2
+13	؟	PUNC	PUNC	7	_	_	_	_	_
+
+10	و	CONJ	VCONJ	13	_	_	_	_	_	_
+11	به	PREP	VPP	13	_	_	_	Arg4	_	_
+19	را	POSTP	OBJ	22	_	_	_	_	Arg1	_
+23	،	PUNC	PUNC	22	_	_	_	_	_	_
+24	و	CONJ	VCONJ	37	_	_	_	_	_	_
+26	(	PUNC	PUNC	27	_	_	_	_	_	_
+28	)	PUNC	PUNC	27	_	_	_	_	_	_
+29	را	POSTP	OBJ	37	_	_	_	_	_	Arg1
+30	به	PREP	VPP	37	_	_	_	_	_	Arg3
+33	با	PREP	NPP	31	_	_	_	_	_	_
+35	هشت	NUM	NPREMOD	36	_	_	_	_	_	_
+38	،	PUNC	PUNC	13	_	_	_	_	_	_
+
+11	را	POSTP	OBJ	15	_	_	_	_	Arg1
+16	.	PUNC	PUNC	3	_	_	_	_	_
+
+3	از	PREP	MOS	5	_	_	Arg2	_	_
+10	را	POSTP	OBJ	13	_	_	_	Arg1	_
+11	به	PREP	VPP	13	_	_	_	Arg3	_
+14	تا	SUBR	AJUCL	13	_	_	_	ArgM-PRP	_
+15	از	PREP	AJPP	17	_	_	_	_	_
+19	.	PUNC	PUNC	13	_	_	_	_	_
+
+2	و	CONJ	NCONJ	1	_	_	_	_
+7	و	CONJ	VCONJ	16	_	_	_	_
+13	به	PREP	NPP	12	_	_	_	_
+17	.	PUNC	PUNC	16	_	_	_	_
+
+4	در	PREP	MOS	6	_	_	Arg2	_	_	_
+9	به	PREP	VPP	12	_	_	_	Arg3	_	_
+13	،	PUNC	PUNC	12	_	_	_	_	_	_
+18	را	POSTP	OBJ	19	_	_	_	_	Arg1	_
+20	،	PUNC	PUNC	19	_	_	_	_	_	_
+23	به	PREP	NPP	21	_	_	_	_	_	_
+28	،	PUNC	PUNC	27	_	_	_	_	_	_
+
+2	از	PREP	VPP	4	_	_	Arg3	_	_	_
+7	و	CONJ	VCONJ	12	_	_	_	_	_	_
+8	از	PREP	VPP	12	_	_	_	_	Arg3	_
+13	،	PUNC	PUNC	12	_	_	_	_	_	_
+14	تا	SUBR	AJUCL	12	_	_	_	_	ArgM-CAU	_
+18	.	PUNC	PUNC	4	_	_	_	_	_	_
+
+4	در	PREP	ADVRB	11	_	_	ArgM-LOC	_	_	_
+7	(	PUNC	PUNC	8	_	_	_	_	_	_
+9	)	PUNC	PUNC	8	_	_	_	_	_	_
+13	از	PREP	SBJ	33	_	_	_	Arg1	_	_
+17	به	PREP	NPP	14	_	_	_	_	_	_
+19	(	PUNC	PUNC	20	_	_	_	_	_	_
+21	)	PUNC	PUNC	20	_	_	_	_	_	_
+22	دو	NUM	NPREMOD	23	_	_	_	_	_	_
+25	به	PREP	NPP	23	_	_	_	_	_	_
+28	و	CONJ	NCONJ	27	_	_	_	_	_	_
+30	(	PUNC	PUNC	31	_	_	_	_	_	_
+32	)	PUNC	PUNC	31	_	_	_	_	_	_
+34	،	PUNC	PUNC	33	_	_	_	_	_	_
+35	تا	SUBR	AJUCL	33	_	_	_	ArgM-PRP	_	_
+40	و	CONJ	VCONJ	45	_	_	_	_	_	_
+43	را	POSTP	OBJ	45	_	_	_	_	_	Arg3
+46	.	PUNC	PUNC	1	_	_	_	_	_	_
+
+6	در	PREP	ADVRB	9	_	_	_	ArgM-LOC	_
+14	(	PUNC	PUNC	15	_	_	_	_	_
+16	)	PUNC	PUNC	15	_	_	_	_	_
+22	.	PUNC	PUNC	4	_	_	_	_	_
+
+2	از	PREP	VPP	4	_	_	Arg3	_	_	_
+8	را	POSTP	OBJ	12	_	_	_	Arg1	_	_
+9	به	PREP	VPP	12	_	_	_	Arg3	_	_
+17	به	PREP	VPP	19	_	_	_	_	Arg4	_
+20	و	CONJ	VCONJ	27	_	_	_	_	_	_
+25	را	POSTP	OBJ	27	_	_	_	_	_	Arg1
+28	.	PUNC	PUNC	4	_	_	_	_	_	_
+
+2	به	PREP	VPP	9	_	_	ArgM-COM
+7	را	POSTP	OBJ	9	_	_	Arg1
+10	.	PUNC	PUNC	9	_	_	_
+
+5	را	POSTP	OBJ	9	_	_	Arg1	_
+6	در	PREP	AJPP	8	_	_	_	_
+10	و	CONJ	VCONJ	17	_	_	_	_
+14	به	PREP	VPP	17	_	_	_	Arg4
+18	.	PUNC	PUNC	17	_	_	_	_
+
+1	در	PREP	ADVRB	7	_	_	ArgM-TMP	_	_
+5	در	PREP	ADVRB	7	_	_	ArgM-LOC	_	_
+10	به	PREP	VPP	13	_	_	_	Arg3	_
+14	تا	SUBR	VCL	13	_	_	_	Arg1	_
+17	را	POSTP	OBJ	19	_	_	_	_	Arg1
+20	.	PUNC	PUNC	7	_	_	_	_	_
+
+3	را	POSTP	OBJ	6	_	_	Arg1	_	_
+4	به	PREP	VPP	6	_	_	Arg3	_	_
+7	تا	SUBR	AJUCL	6	_	_	ArgM-PRP	_	_
+10	را	POSTP	OBJ	11	_	_	_	Arg1	_
+12	و	CONJ	VCONJ	20	_	_	_	_	_
+13	با	PREP	ADVRB	20	_	_	_	_	ArgM-MNR
+18	را	POSTP	OBJ	20	_	_	_	_	Arg1
+21	.	PUNC	PUNC	6	_	_	_	_	_
+
+11	را	POSTP	OBJ	13	_	_	_	_	Arg1
+14	.	PUNC	PUNC	8	_	_	_	_	_
+
+2	را	POSTP	OBJ	6	_	_	Arg1	_
+7	اما	CONJ	VCONJ	13	_	_	_	_
+9	به	PREP	ADVRB	13	_	_	_	ArgM-ADV
+14	.	PUNC	PUNC	13	_	_	_	_
+
+7	از	PREP	NPP	11	_	_	_	Arg3	_	_
+15	از	PREP	NPP	14	_	_	_	_	_	_
+17	و	CONJ	NCONJ	16	_	_	_	_	_	_
+22	و	CONJ	VCONJ	28	_	_	_	_	_	_
+24	در	PREP	AJPP	27	_	_	_	_	_	_
+29	.	PUNC	PUNC	3	_	_	_	_	_	_
+
+4	را	POSTP	OBJ	5	_	_	Arg1	_
+6	و	CONJ	VCONJ	11	_	_	_	_
+12	.	PUNC	PUNC	11	_	_	_	_
+
+3	از	PREP	ADVRB	10	_	_	ArgM-MNR	_
+6	به	PREP	VPP	10	_	_	Arg3	_
+11	و	CONJ	VCONJ	19	_	_	_	_
+13	را	POSTP	OBJ	19	_	_	_	Arg1
+14	به	PREP	NPP	18	_	_	_	Arg3
+20	،	PUNC	PUNC	19	_	_	_	_
+
+5	در	PREP	NPP	4	_	_	_
+7	و	CONJ	NCONJ	6	_	_	_
+9	و	CONJ	NCONJ	4	_	_	_
+14	.	PUNC	PUNC	13	_	_	_
+
+3	را	POSTP	OBJ	8	_	_	Arg1	_
+4	از	PREP	NPP	7	_	_	Arg3	_
+9	و	CONJ	VCONJ	13	_	_	_	_
+10	به	PREP	VPP	13	_	_	_	Arg3
+
+2	از	PREP	VPP	4	_	_	Arg3	_	_
+5	تا	SUBR	VCL	4	_	_	Arg1	_	_
+8	تا	SUBR	AJUCL	7	_	_	_	ArgM-PRP	_
+14	.	PUNC	PUNC	4	_	_	_	_	_
+
+8	.	PUNC	PUNC	7	_	_	_
+
+9	را	POSTP	OBJ	14	_	_	Arg1	_	_
+10	از	PREP	ADVRB	14	_	_	ArgM-MNR	_	_
+16	از	PREP	AJPP	20	_	_	_	_	_
+23	به	PREP	NPP	25	_	_	_	_	Arg3
+27	.	PUNC	PUNC	22	_	_	_	_	_
+
+5	را	POSTP	OBJ	7	_	_	Arg1
+8	.	PUNC	PUNC	7	_	_	_
+
+4	به	PREP	VPP	7	_	_	Arg4	_	_
+8	و	CONJ	VCONJ	15	_	_	_	_	_
+11	را	POSTP	OBJ	15	_	_	_	Arg1	_
+12	به	PREP	VPP	15	_	_	_	Arg3	_
+16	،	PUNC	PUNC	15	_	_	_	_	_
+17	اما	CONJ	VCONJ	23	_	_	_	_	_
+21	به	PREP	NPP	20	_	_	_	_	Arg3
+24	.	PUNC	PUNC	23	_	_	_	_	_
+
+2	اول	NUM	NPOSTMOD	1	_	_	_	_
+10	و	CONJ	NCONJ	9	_	_	_	_
+15	.	PUNC	PUNC	14	_	_	_	_
+
+2	به	PREP	ADVRB	13	_	_	ArgM-ADV
+6	در	PREP	ADVRB	13	_	_	ArgM-TMP
+10	را	POSTP	OBJ	13	_	_	Arg1
+11	به	PREP	VPRT	13	_	_	_
+14	.	PUNC	PUNC	13	_	_	_
+
+1	نه	NUM	NPREMOD	2	_	_	_	_
+3	از	PREP	NPP	2	_	_	_	_
+7	در	PREP	ADVRB	12	_	_	ArgM-ADV	_
+10	از	PREP	AJPP	9	_	_	_	_
+14	به	PREP	NPP	13	_	_	_	Arg3
+18	.	PUNC	PUNC	17	_	_	_	_
+
+3	به	PREP	NPP	2	_	_	Arg3
+8	.	PUNC	PUNC	7	_	_	_
+
+11	.	PUNC	PUNC	10	_	_	_
+
+2	(	PUNC	PUNC	3	_	_	_
+4	)	PUNC	PUNC	3	_	_	_
+7	را	POSTP	OBJ	11	_	_	Arg1
+8	به	PREP	NPP	10	_	_	Arg3
+12	،	PUNC	PUNC	11	_	_	_
+
+10	و	CONJ	VCONJ	19	_	_	_	_
+12	و	CONJ	NCONJ	11	_	_	_	_
+15	را	POSTP	OBJ	19	_	_	_	Arg1
+17	و	CONJ	AJCONJ	16	_	_	_	_
+20	.	PUNC	PUNC	19	_	_	_	_
+
+6	و	CONJ	NCONJ	5	_	_	_	_
+10	به	PREP	NPP	12	_	_	_	Arg3
+14	.	PUNC	PUNC	3	_	_	_	_
+
+12	در	PREP	VPP	16	_	_	_	Arg3
+13	34	NUM	NPREMOD	14	_	_	_	_
+17	.	PUNC	PUNC	6	_	_	_	_
+
+2	500	NUM	NPREMOD	3	_	_	_	_	_
+9	و	CONJ	VCONJ	14	_	_	_	_	_
+12	به	PREP	ADVRB	14	_	_	_	ArgM-ADV	_
+19	با	PREP	NPP	21	_	_	_	_	Arg4
+23	.	PUNC	PUNC	14	_	_	_	_	_
+
+5	(	PUNC	PUNC	6	_	_	_
+7	)	PUNC	PUNC	6	_	_	_
+8	را	POSTP	OBJ	14	_	_	Arg1
+10	در	PREP	AJPP	13	_	_	_
+11	پنج	NUM	NPREMOD	12	_	_	_
+15	،	PUNC	PUNC	9	_	_	_
+
+3	در	PREP	ADVRB	13	_	_	ArgM-TMP
+7	یا	CONJ	NCONJ	6	_	_	_
+9	در	PREP	ADVRB	13	_	_	ArgM-LOC
+14	.	PUNC	PUNC	13	_	_	_
+
+3	و	CONJ	NCONJ	2	_	_	_
+6	را	POSTP	OBJ	8	_	_	_
+9	ولی	CONJ	VCONJ	18	_	_	_
+10	به	PREP	NPP	17	_	_	_
+13	(	PUNC	PUNC	14	_	_	_
+16	)	PUNC	PUNC	14	_	_	_
+19	.	PUNC	PUNC	1	_	_	_
+
+2	در	PREP	ADVRB	10	_	_	_	ArgM-MNR	_	_
+7	از	PREP	AJPP	9	_	_	_	_	_	_
+11	و	CONJ	VCONJ	14	_	_	_	_	_	_
+12	در	PREP	VPP	14	_	_	_	_	Arg3	_
+15	و	CONJ	VCONJ	22	_	_	_	_	_	_
+17	را	POSTP	OBJ	22	_	_	_	_	_	Arg1
+23	،	PUNC	PUNC	22	_	_	_	_	_	_
+
+4	از	PREP	NPP	3	_	_	_	_	_
+6	به	PREP	VPRT	8	_	_	_	_	_
+11	و	CONJ	NCONJ	10	_	_	_	_	_
+14	را	POSTP	OBJ	16	_	_	_	_	Arg1
+17	.	PUNC	PUNC	2	_	_	_	_	_
+
+6	تا	SUBR	VCL	5	_	_	Arg1	_
+7	از	PREP	NPP	13	_	_	_	Arg3
+11	و	CONJ	NCONJ	10	_	_	_	_
+15	،	PUNC	PUNC	5	_	_	_	_
+
+1	ولی	CONJ	VCONJ	11	_	_	ArgM-DIS	_	_
+5	در	PREP	ADVRB	11	_	_	ArgM-TMP	_	_
+12	و	CONJ	VCONJ	16	_	_	_	_	_
+19	به	PREP	AJPP	18	_	_	_	_	_
+24	.	PUNC	PUNC	16	_	_	_	_	_
+
+9	و	CONJ	VCONJ	13	_	_	_	_	_	_	_
+14	و	CONJ	VCONJ	21	_	_	_	_	_	_	_
+20	را	POSTP	OBJ	21	_	_	_	_	_	_	Arg1
+22	.	PUNC	PUNC	5	_	_	_	_	_	_	_
+
+4	از	PREP	NPP	2	_	_	_	_
+13	،	PUNC	PUNC	12	_	_	_	_
+
+5	و	CONJ	VCONJ	10	_	_	_	_	_
+7	را	POSTP	OBJ	10	_	_	_	Arg1	_
+8	به	PREP	VPP	10	_	_	_	Arg3	_
+14	از	PREP	ADVRB	21	_	_	_	_	ArgM-ADV
+16	،	PUNC	PUNC	15	_	_	_	_	_
+18	را	POSTP	OBJ	21	_	_	_	_	Arg1
+22	.	PUNC	PUNC	10	_	_	_	_	_
+
+9	از	PREP	ADVRB	13	_	_	_	ArgM-ADV
+14	.	PUNC	PUNC	5	_	_	_	_
+
+3	از	PREP	NPP	5	_	_	Arg3	_	_	_
+13	را	POSTP	OBJ	17	_	_	_	_	Arg1	_
+14	به	PREP	NPP	16	_	_	_	_	Arg3	_
+18	اما	CONJ	VCONJ	25	_	_	_	_	_	_
+19	به	PREP	ADVRB	25	_	_	_	_	_	ArgM-ADV
+26	.	PUNC	PUNC	11	_	_	_	_	_	_
+
+1	اما	CONJ	VCONJ	12	_	_	_	ArgM-DIS	_	_	_
+7	و	CONJ	AVCONJ	6	_	_	_	_	_	_	_
+9	به	PREP	VPP	12	_	_	_	Arg3	_	_	_
+18	در	PREP	NPP	17	_	_	_	_	_	_	_
+24	به	PREP	NPP	23	_	_	_	_	_	_	Arg3
+28	.	PUNC	PUNC	27	_	_	_	_	_	_	_
+
+6	را	POSTP	OBJ	9	_	_	Arg1	_	_	_
+7	در	PREP	VPP	9	_	_	Arg3	_	_	_
+10	و	CONJ	VCONJ	16	_	_	_	_	_	_
+13	را	POSTP	OBJ	16	_	_	_	Arg1	_	_
+21	را	POSTP	OBJ	24	_	_	_	_	Arg1	_
+22	با	PREP	ADVRB	24	_	_	_	_	ArgM-COM	_
+25	و	CONJ	VCONJ	31	_	_	_	_	_	_
+27	به	PREP	VPP	31	_	_	_	_	_	Arg3
+32	.	PUNC	PUNC	16	_	_	_	_	_	_
+
+3	با	PREP	ADVRB	13	_	_	ArgM-COM	_	_	_
+7	در	PREP	ADVRB	13	_	_	ArgM-LOC	_	_	_
+16	به	PREP	VPP	18	_	_	_	Arg3	_	_
+19	و	CONJ	VCONJ	21	_	_	_	_	_	_
+22	تا	SUBR	VCL	21	_	_	_	_	Arg1	_
+24	را	POSTP	OBJ	27	_	_	_	_	_	Arg1
+25	از	PREP	VPP	27	_	_	_	_	_	Arg3
+28	.	PUNC	PUNC	21	_	_	_	_	_	_
+
+4	از	PREP	NPP	2	_	_	_	_	_
+9	را	POSTP	OBJ	10	_	_	Arg1	_	_
+11	و	CONJ	VCONJ	14	_	_	_	_	_
+12	با	PREP	ADVRB	14	_	_	_	ArgM-MNR	_
+20	.	PUNC	PUNC	14	_	_	_	_	_
+
+5	به	PREP	VPP	7	_	_	Arg3	_	_	_	_	_	_	_
+10	را	POSTP	OBJ	12	_	_	_	Arg1	_	_	_	_	_	_
+13	اما	CONJ	VCONJ	16	_	_	_	_	_	_	_	_	_	_
+17	و	CONJ	VCONJ	18	_	_	_	_	_	_	_	_	_	_
+24	و	CONJ	VCONJ	30	_	_	_	_	_	_	_	_	_	_
+28	را	POSTP	OBJ	30	_	_	_	_	_	_	_	Arg1	_	_
+31	اما	CONJ	VCONJ	36	_	_	_	_	_	_	_	_	_	_
+37	و	CONJ	VCONJ	45	_	_	_	_	_	_	_	_	_	_
+38	با	PREP	ADVRB	45	_	_	_	_	_	_	_	_	_	ArgM-MNR
+41	را	POSTP	OBJ	45	_	_	_	_	_	_	_	_	_	Arg1
+42	به	PREP	ADVRB	45	_	_	_	_	_	_	_	_	_	ArgM-ADV
+46	.	PUNC	PUNC	45	_	_	_	_	_	_	_	_	_	_
+
+7	.	PUNC	PUNC	2	_	_	_	_
+
+1	در	PREP	ADVRB	5	_	_	ArgM-TMP	_	_	_
+9	را	POSTP	OBJ	10	_	_	_	Arg1	_	_
+16	را	POSTP	OBJ	18	_	_	_	_	_	Arg1
+19	،	PUNC	PUNC	5	_	_	_	_	_	_
+
+4	را	POSTP	OBJ	7	_	_	Arg1	_
+5	به	PREP	VPP	7	_	_	Arg4	_
+10	با	PREP	ADVRB	16	_	_	_	ArgM-MNR
+17	.	PUNC	PUNC	7	_	_	_	_
+
+3	به	PREP	NPP	13	_	_	_	Arg3
+9	به	PREP	NPP	7	_	_	_	_
+15	.	PUNC	PUNC	14	_	_	_	_
+
+4	به	PREP	VPP	9	_	_	Arg3	_	_	_
+7	و	CONJ	NCONJ	6	_	_	_	_	_	_
+10	و	CONJ	VCONJ	15	_	_	_	_	_	_
+11	از	PREP	AJPP	14	_	_	_	_	_	_
+16	در	PREP	ADVRB	23	_	_	_	_	ArgM-TMP2	_
+21	را	POSTP	OBJ	23	_	_	_	_	Arg1	_
+24	و	CONJ	VCONJ	27	_	_	_	_	_	_
+28	.	PUNC	PUNC	27	_	_	_	_	_	_
+
+2	از	PREP	AJPP	5	_	_	_	_	_
+7	و	CONJ	VCONJ	9	_	_	_	_	_
+14	را	POSTP	OBJ	15	_	_	_	_	Arg1
+16	.	PUNC	PUNC	9	_	_	_	_	_
+
+6	به	PREP	VPP	8	_	_	Arg4	_
+9	و	CONJ	VCONJ	15	_	_	_	_
+12	به	PREP	NPP	11	_	_	_	Arg3
+16	.	PUNC	PUNC	15	_	_	_	_
+
+1	در	PREP	ADVRB	17	_	_	_	ArgM-TMP
+8	از	PREP	AJPP	11	_	_	_	_
+14	را	POSTP	OBJ	17	_	_	_	Arg1
+15	به	PREP	VPP	17	_	_	_	Arg3
+18	،	PUNC	PUNC	17	_	_	_	_
+
+2	در	PREP	ADVRB	8	_	_	ArgM-LOC	_
+5	از	PREP	AJPP	7	_	_	_	_
+9	اما	CONJ	VCONJ	18	_	_	_	_
+10	از	PREP	AJPP	17	_	_	_	_
+13	و	CONJ	NCONJ	12	_	_	_	_
+15	به	PREP	NPP	12	_	_	_	_
+19	.	PUNC	PUNC	18	_	_	_	_
+
+4	در	PREP	MOS	6	_	_	Arg2	_
+7	و	CONJ	VCONJ	19	_	_	_	_
+9	8	NUM	NPREMOD	10	_	_	_	_
+13	و	CONJ	NCONJ	12	_	_	_	_
+15	از	PREP	NPP	14	_	_	_	_
+17	به	PREP	VPP	19	_	_	_	Arg4
+20	.	PUNC	PUNC	19	_	_	_	_
+
+4	با	PREP	NPP	3	_	_	_	_	_
+13	و	CONJ	VCONJ	17	_	_	_	_	_
+18	.	PUNC	PUNC	7	_	_	_	_	_
+
+3	را	POSTP	OBJ	7	_	_	Arg1	_	_
+5	از	PREP	AJPP	4	_	_	_	_	_
+8	و	CONJ	VCONJ	13	_	_	_	_	_
+11	را	POSTP	OBJ	13	_	_	_	Arg1	_
+21	،	PUNC	PUNC	13	_	_	_	_	_
+
+5	و	CONJ	VCONJ	9	_	_	_	_
+7	را	POSTP	OBJ	9	_	_	_	Arg1
+10	.	PUNC	PUNC	9	_	_	_	_
+
+5	را	POSTP	OBJ	7	_	_	Arg1	_
+8	تا	SUBR	VCL	7	_	_	_	_
+10	را	POSTP	OBJ	15	_	_	_	Arg1
+16	.	PUNC	PUNC	7	_	_	_	_
+
+3	را	POSTP	OBJ	4	_	_	Arg1	_
+5	و	CONJ	VCONJ	8	_	_	_	_
+6	به	PREP	VPRT	8	_	_	_	_
+9	،	PUNC	PUNC	8	_	_	_	_
+
+2	(	PUNC	PUNC	3	_	_	_
+4	)	PUNC	PUNC	3	_	_	_
+7	را	POSTP	OBJ	14	_	_	Arg1
+10	(	PUNC	PUNC	11	_	_	_
+12	)	PUNC	PUNC	11	_	_	_
+15	،	PUNC	PUNC	14	_	_	_
+
+4	را	POSTP	OBJ	5	_	_	Arg1	_	_
+6	و	CONJ	VCONJ	10	_	_	_	_	_
+7	با	PREP	NPP	9	_	_	_	Arg3	_
+11	و	CONJ	VCONJ	18	_	_	_	_	_
+12	به	PREP	NPP	17	_	_	_	_	Arg3
+15	در	PREP	NPP	13	_	_	_	_	_
+19	.	PUNC	PUNC	18	_	_	_	_	_
+
+3	10	NUM	NPREMOD	4	_	_	_	_	_
+6	در	PREP	NPP	5	_	_	_	_	_
+8	در	PREP	ADVRB	13	_	_	ArgM-TMP	_	_
+11	به	PREP	VPP	13	_	_	Arg3	_	_
+16	به	PREP	VPP	18	_	_	_	_	Arg3
+19	.	PUNC	PUNC	13	_	_	_	_	_
+
+3	را	POSTP	OBJ	7	_	_	Arg1	_	_	_
+4	به	PREP	NPP	6	_	_	Arg3	_	_	_
+11	از	PREP	NPP	10	_	_	_	_	_	_
+14	در	PREP	MOS	16	_	_	_	Arg2	_	_
+21	و	CONJ	NCONJ	20	_	_	_	_	_	_
+27	در	PREP	VPP	31	_	_	_	_	_	Arg3
+32	.	PUNC	PUNC	7	_	_	_	_	_	_
+
+2	به	PREP	VPP	4	_	_	Arg3	_	_
+7	را	POSTP	OBJ	8	_	_	_	Arg1	_
+9	و	CONJ	VCONJ	12	_	_	_	_	_
+13	،	PUNC	PUNC	4	_	_	_	_	_
+
+2	به	PREP	VPP	4	_	_	Arg3	_	_
+6	را	POSTP	OBJ	7	_	_	_	Arg1	_
+11	را	POSTP	OBJ	15	_	_	_	_	Arg1
+12	به	PREP	NPP	14	_	_	_	_	Arg3
+16	.	PUNC	PUNC	4	_	_	_	_	_
+
+7	را	POSTP	OBJ	8	_	_	Arg1	_
+10	به	PREP	ADVRB	17	_	_	_	ArgM-COM
+18	.	PUNC	PUNC	8	_	_	_	_
+
+4	:	PUNC	PUNC	3	_	_	_	_
+7	!	PUNC	PUNC	6	_	_	_	_
+8	در	PREP	ADVRB	12	_	_	_	ArgM-LOC
+13	?	PUNC	PUNC	12	_	_	_	_
+
+3	:	PUNC	PUNC	2	_	_	_	_	_	_	_
+12	و	CONJ	VCONJ	19	_	_	_	_	_	_	_
+15	را	POSTP	OBJ	19	_	_	_	_	_	Arg1	_
+20	و	CONJ	VCONJ	26	_	_	_	_	_	_	_
+23	را	POSTP	OBJ	26	_	_	_	_	_	_	Arg1
+27	.	PUNC	PUNC	2	_	_	_	_	_	_	_
+
+2	به	PREP	ADVRB	11	_	_	ArgM-ADV2	_
+5	با	PREP	ADVRB	11	_	_	ArgM-ADV	_
+7	دو	NUM	NPREMOD	8	_	_	_	_
+12	تا	SUBR	VCL	11	_	_	_	_
+16	را	POSTP	OBJ	17	_	_	_	Arg1
+18	.	PUNC	PUNC	1	_	_	_	_
+
+5	را	POSTP	OBJ	7	_	_	_	_
+8	و	CONJ	VCONJ	13	_	_	_	_
+9	به	PREP	NPP	11	_	_	_	_
+14	.	PUNC	PUNC	13	_	_	_	_
+
+2	به	PREP	VPP	4	_	_
+5	و	CONJ	VCONJ	12	_	_
+6	با	PREP	VPP	12	_	_
+8	و	CONJ	NCONJ	7	_	_
+17	را	POSTP	OBJ	23	_	_
+18	به	PREP	NPP	22	_	_
+20	و	CONJ	NCONJ	19	_	_
+29	را	POSTP	OBJ	30	_	_
+31	.	PUNC	PUNC	12	_	_
+
+2	به	PREP	NPP	4	_	_
+10	و	CONJ	VCONJ	16	_	_
+12	با	PREP	VPP	16	_	_
+17	تا	SUBR	VCL	16	_	_
+22	را	POSTP	OBJ	24	_	_
+25	.	PUNC	PUNC	5	_	_
+
+2	به	PREP	NPP	4	_	_
+8	از	PREP	VPP	10	_	_
+11	.	PUNC	PUNC	5	_	_
+
+2	و	CONJ	NCONJ	1	_	_
+6	را	POSTP	OBJ	8	_	_
+9	و	CONJ	VCONJ	12	_	_
+13	و	CONJ	VCONJ	18	_	_
+16	را	POSTP	OBJ	18	_	_
+19	.	PUNC	PUNC	18	_	_
+
+1	اما	CONJ	VCONJ	7	_	_
+3	با	PREP	NPP	6	_	_
+5	به	PREP	VPP	7	_	_
+8	و	CONJ	VCONJ	15	_	_
+9	از	PREP	NPP	14	_	_
+16	.	PUNC	PUNC	15	_	_
+
+3	:	PUNC	PUNC	2	_	_
+8	و	CONJ	NCONJ	7	_	_
+11	،	PUNC	PUNC	10	_	_
+16	و	CONJ	NCONJ	15	_	_
+20	؛	PUNC	PUNC	19	_	_
+25	را	POSTP	OBJ	27	_	_
+28	.	PUNC	PUNC	2	_	_
+
+2	به	PREP	VPP	5	_	_
+6	:	PUNC	PUNC	5	_	_
+11	?	PUNC	PUNC	10	_	_
+
+3	و	CONJ	NCONJ	2	_	_
+10	را	POSTP	OBJ	11	_	_
+13	را	POSTP	OBJ	18	_	_
+14	به	PREP	NPP	17	_	_
+19	.	PUNC	PUNC	18	_	_
+
+2	دو	NUM	NPREMOD	3	_	_
+6	تا	PREP	ADVRB	5	_	_
+12	تا	SUBR	VCL	11	_	_
+16	تا	SUBR	VCL	15	_	_
+17	از	PREP	ADVRB	25	_	_
+20	از	PREP	NPP	23	_	_
+26	.	PUNC	PUNC	5	_	_
+
+2	در	PREP	ADVRB	10	_	_
+7	را	POSTP	OBJ	10	_	_
+8	به	PREP	VPP	10	_	_
+12	به	PREP	ADVC	17	_	_
+18	و	CONJ	VCONJ	26	_	_
+22	را	POSTP	OBJ	26	_	_
+23	در	PREP	VPP	26	_	_
+31	و	CONJ	AJCONJ	30	_	_
+34	.	PUNC	PUNC	26	_	_
+
+2	به	PREP	VPP	5	_	_
+11	را	POSTP	OBJ	20	_	_
+12	با	PREP	ADVRB	20	_	_
+14	و	CONJ	NCONJ	13	_	_
+16	از	PREP	NPP	19	_	_
+21	،	PUNC	PUNC	5	_	_
+
+4	در	PREP	NPP	3	_	_
+6	،	PUNC	PUNC	5	_	_
+7	از	PREP	NPP	11	_	_
+15	و	CONJ	VCONJ	18	_	_
+19	.	PUNC	PUNC	18	_	_
+
+4	و	CONJ	VCONJ	10	_	_
+7	به	PREP	VPP	10	_	_
+11	.	PUNC	PUNC	10	_	_
+
+1	در	PREP	ADVRB	10	_	_
+5	با	PREP	ADVRB	10	_	_
+8	به	PREP	VPP	10	_	_
+11	:	PUNC	PUNC	10	_	_
+12	اول	NUM	ADVRB	15	_	_
+16	یا	CONJ	VCONJ	19	_	_
+20	?	PUNC	PUNC	10	_	_
+
+3	و	CONJ	NCONJ	2	_	_
+7	را	POSTP	OBJ	10	_	_
+8	به	PREP	VPP	10	_	_
+16	و	CONJ	VCONJ	22	_	_
+19	را	POSTP	OBJ	22	_	_
+20	به	PREP	VPRT	22	_	_
+31	.	PUNC	PUNC	10	_	_
+
+4	در	PREP	AJPP	3	_	_
+7	.	PUNC	PUNC	6	_	_
+
+1	در	PREP	PREDEP	26	_	_
+8	و	CONJ	VCONJ	14	_	_
+11	در	PREP	PREDEP	14	_	_
+17	از	PREP	NPP	15	_	_
+21	در	PREP	ADVC	26	_	_
+24	به	PREP	VPRT	26	_	_
+27	.	PUNC	PUNC	26	_	_
+
+4	را	POSTP	OBJ	5	_	_
+8	به	PREP	NPP	11	_	_
+13	و	CONJ	VCONJ	18	_	_
+14	به	PREP	VPP	18	_	_
+19	و	CONJ	VCONJ	25	_	_
+21	را	POSTP	OBJ	25	_	_
+22	در	PREP	ADVRB	25	_	_
+26	.	PUNC	PUNC	5	_	_
+
+7	به	PREP	AJPP	6	_	_
+10	،	PUNC	PUNC	9	_	_
+12	به	PREP	VPP	14	_	_
+15	و	CONJ	VCONJ	22	_	_
+16	به	PREP	NPP	21	_	_
+18	و	CONJ	NCONJ	17	_	_
+23	.	PUNC	PUNC	2	_	_
+
+2	با	PREP	ADVRB	8	_	_
+9	و	CONJ	VCONJ	12	_	_
+10	به	PREP	VPP	12	_	_
+13	:	PUNC	PUNC	12	_	_
+17	به	PREP	NPP	19	_	_
+21	به	PREP	NPP	23	_	_
+25	?	PUNC	PUNC	24	_	_
+29	و	CONJ	NCONJ	28	_	_
+32	را	POSTP	OBJ	36	_	_
+37	.	PUNC	PUNC	12	_	_
+
+1	اما	CONJ	VCONJ	5	_	_
+3	به	PREP	VPP	5	_	_
+8	به	PREP	PREDEP	13	_	_
+10	و	CONJ	NCONJ	9	_	_
+15	،	PUNC	PUNC	5	_	_
+
+9	از	PREP	NPP	7	_	_
+11	و	CONJ	NCONJ	10	_	_
+13	به	PREP	NPP	15	_	_
+17	،	PUNC	PUNC	16	_	_
+
+4	را	POSTP	OBJ	10	_	_
+11	.	PUNC	PUNC	10	_	_
+
+5	را	POSTP	OBJ	8	_	_
+9	.	PUNC	PUNC	8	_	_
+
+4	را	POSTP	OBJ	8	_	_
+9	،	PUNC	PUNC	8	_	_
+10	ولی	CONJ	VCONJ	17	_	_
+12	و	CONJ	NCONJ	11	_	_
+18	.	PUNC	PUNC	17	_	_
+
+1	و	CONJ	VCONJ	8	_	_
+6	را	POSTP	OBJ	8	_	_
+9	و	CONJ	VCONJ	23	_	_
+11	و	CONJ	NCONJ	10	_	_
+14	را	POSTP	OBJ	23	_	_
+15	به	PREP	NPP	22	_	_
+17	و	CONJ	NCONJ	16	_	_
+19	و	CONJ	NCONJ	18	_	_
+24	.	PUNC	PUNC	23	_	_
+
+1	اما	CONJ	VCONJ	8	_	_
+9	و	CONJ	VCONJ	17	_	_
+12	به	PREP	NPP	16	_	_
+18	.	PUNC	PUNC	17	_	_
+
+1	اما	CONJ	VCONJ	8	_	_
+4	به	PREP	NPP	7	_	_
+9	و	CONJ	VCONJ	14	_	_
+10	از	PREP	NPP	13	_	_
+15	،	PUNC	PUNC	14	_	_
+
+2	و	CONJ	NCONJ	1	_	_
+5	از	PREP	ADVRB	10	_	_
+8	به	PREP	VPRT	10	_	_
+11	و	CONJ	VCONJ	16	_	_
+12	در	PREP	MOS	16	_	_
+14	و	CONJ	NCONJ	13	_	_
+17	تا	PREP	ADVRB	16	_	_
+24	را	POSTP	OBJ	26	_	_
+27	.	PUNC	PUNC	16	_	_
+
+7	.	PUNC	PUNC	6	_	_
+
+3	به	PREP	VPP	5	_	_
+8	و	CONJ	VCONJ	16	_	_
+11	به	PREP	AJPP	13	_	_
+14	و	CONJ	AJCONJ	13	_	_
+17	و	CONJ	VCONJ	26	_	_
+23	و	CONJ	NCONJ	22	_	_
+27	.	PUNC	PUNC	26	_	_
+
+1	در	PREP	ADVRB	7	_	_
+5	به	PREP	VPP	7	_	_
+10	در	PREP	MOS	13	_	_
+14	و	CONJ	VCONJ	18	_	_
+16	در	PREP	MOS	18	_	_
+19	و	CONJ	VCONJ	26	_	_
+23	با	PREP	NPP	22	_	_
+25	را	POSTP	OBJ	26	_	_
+27	.	PUNC	PUNC	7	_	_
+
+2	به	PREP	VPP	4	_	_
+7	با	PREP	MOS	9	_	_
+13	را	POSTP	OBJ	17	_	_
+14	به	PREP	NPP	16	_	_
+18	.	PUNC	PUNC	4	_	_
+
+1	در	PREP	MOS	5	_	_
+8	به	PREP	NPP	10	_	_
+16	را	POSTP	OBJ	19	_	_
+17	به	PREP	VPP	19	_	_
+20	.	PUNC	PUNC	5	_	_
+
+6	از	PREP	NPP	5	_	_
+9	از	PREP	AJPP	11	_	_
+15	به	PREP	VPP	17	_	_
+21	را	POSTP	OBJ	24	_	_
+22	به	PREP	VPRT	24	_	_
+25	.	PUNC	PUNC	17	_	_
+
+6	و	CONJ	VCONJ	11	_	_
+7	از	PREP	NPP	9	_	_
+12	و	CONJ	VCONJ	16	_	_
+13	به	PREP	NPP	15	_	_
+17	.	PUNC	PUNC	16	_	_
+
+1	اما	CONJ	VCONJ	4	_	_
+5	و	CONJ	VCONJ	13	_	_
+9	،	PUNC	PUNC	8	_	_
+11	را	POSTP	OBJ	13	_	_
+18	را	POSTP	OBJ	23	_	_
+19	به	PREP	NPP	22	_	_
+24	،	PUNC	PUNC	23	_	_
+25	تا	SUBR	VCL	23	_	_
+31	.	PUNC	PUNC	13	_	_
+
+5	و	CONJ	NCONJ	4	_	_
+8	از	PREP	NPP	10	_	_
+14	در	PREP	MOS	16	_	_
+18	را	POSTP	OBJ	19	_	_
+21	با	PREP	ADVRB	26	_	_
+27	،	PUNC	PUNC	16	_	_
+
+1	اما	CONJ	VCONJ	6	_	_
+4	را	POSTP	OBJ	6	_	_
+7	و	CONJ	VCONJ	8	_	_
+16	.	PUNC	PUNC	8	_	_
+
+4	و	CONJ	NCONJ	3	_	_
+7	در	PREP	MOS	13	_	_
+11	در	PREP	NPP	10	_	_
+23	یک	NUM	NPREMOD	24	_	_
+25	از	PREP	VPP	27	_	_
+30	را	POSTP	OBJ	31	_	_
+33	از	PREP	COMPPP	35	_	_
+37	?	PUNC	PUNC	31	_	_
+
+3	:	PUNC	PUNC	2	_	_
+5	.	PUNC	PUNC	2	_	_
+
+1	اما	CONJ	VCONJ	6	_	_
+3	به	PREP	NPP	5	_	_
+9	را	POSTP	OBJ	18	_	_
+10	در	PREP	ADVRB	18	_	_
+13	دو	NUM	NPREMOD	14	_	_
+16	و	CONJ	NCONJ	15	_	_
+20	از	PREP	COMPPP	22	_	_
+24	.	PUNC	PUNC	6	_	_
+
+6	را	POSTP	OBJ	7	_	_
+8	?	PUNC	PUNC	4	_	_
+
+3	:	PUNC	PUNC	2	_	_
+4	یک	NUM	NPREMOD	5	_	_
+7	و	CONJ	VCONJ	11	_	_
+12	و	CONJ	VCONJ	17	_	_
+15	دو	NUM	NPREMOD	16	_	_
+18	.	PUNC	PUNC	17	_	_
+
+2	یک	NUM	NPREMOD	3	_	_
+6	و	CONJ	VCONJ	14	_	_
+7	به	PREP	ADVRB	14	_	_
+15	.	PUNC	PUNC	14	_	_
+
+4	دو	NUM	ADVRB	9	_	_
+5	به	PREP	VPP	9	_	_
+7	دو	NUM	NPREMOD	8	_	_
+13	،	PUNC	PUNC	12	_	_
+
+4	به	PREP	NPP	7	_	_
+13	و	CONJ	VCONJ	17	_	_
+14	از	PREP	VPP	17	_	_
+19	را	POSTP	OBJ	23	_	_
+24	.	PUNC	PUNC	17	_	_
+
+1	در	PREP	ADVRB	7	_	_
+5	به	PREP	VPP	7	_	_
+10	در	PREP	ADVRB	15	_	_
+19	،	PUNC	PUNC	7	_	_
+
+2	به	PREP	NPP	4	_	_
+8	به	PREP	VPP	13	_	_
+14	و	CONJ	VCONJ	19	_	_
+15	در	PREP	ADVRB	19	_	_
+18	را	POSTP	OBJ	19	_	_
+20	.	PUNC	PUNC	5	_	_
+
+2	از	PREP	VPP	4	_	_
+5	تا	SUBR	VCL	4	_	_
+9	تا	SUBR	VCL	8	_	_
+10	از	PREP	NPP	13	_	_
+15	.	PUNC	PUNC	4	_	_
+
+1	اما	CONJ	VCONJ	11	_	_
+5	و	CONJ	NCONJ	4	_	_
+8	با	PREP	NPP	7	_	_
+10	را	POSTP	OBJ	11	_	_
+14	به	PREP	ADVRB	28	_	_
+19	از	PREP	NPP	21	_	_
+24	را	POSTP	OBJ	28	_	_
+25	به	PREP	VPP	28	_	_
+29	.	PUNC	PUNC	11	_	_
+
+2	به	PREP	VPRT	4	_	_
+6	در	PREP	ADVRB	17	_	_
+10	(	PUNC	PUNC	11	_	_
+12	)	PUNC	PUNC	11	_	_
+13	یک	NUM	NPREMOD	14	_	_
+15	را	POSTP	OBJ	17	_	_
+18	،	PUNC	PUNC	17	_	_
+20	را	POSTP	OBJ	21	_	_
+22	و	CONJ	VCONJ	27	_	_
+25	را	POSTP	OBJ	27	_	_
+28	در	PREP	ADVRB	27	_	_
+32	به	PREP	NPP	34	_	_
+36	،	PUNC	PUNC	4	_	_
+
+3	در	PREP	ADVRB	7	_	_
+8	و	CONJ	VCONJ	11	_	_
+9	به	PREP	VPP	11	_	_
+16	را	POSTP	OBJ	18	_	_
+19	?	PUNC	PUNC	18	_	_
+
+5	به	PREP	VPP	7	_	_
+8	:	PUNC	PUNC	7	_	_
+14	با	PREP	NPP	12	_	_
+17	و	CONJ	VCONJ	28	_	_
+24	را	POSTP	OBJ	25	_	_
+26	به	PREP	VPP	28	_	_
+29	.	PUNC	PUNC	7	_	_
+
+3	به	PREP	NPP	6	_	_
+8	و	CONJ	VCONJ	9	_	_
+15	.	PUNC	PUNC	9	_	_
+
+1	در	PREP	MOS	3	_	_
+9	را	POSTP	OBJ	12	_	_
+10	به	PREP	VPP	12	_	_
+13	.	PUNC	PUNC	3	_	_
+
+3	:	PUNC	PUNC	2	_	_
+7	از	PREP	NPP	6	_	_
+15	.	PUNC	PUNC	2	_	_
+
+3	،	PUNC	PUNC	2	_	_
+7	و	CONJ	NCONJ	6	_	_
+9	را	POSTP	OBJ	12	_	_
+10	در	PREP	VPP	12	_	_
+15	و	CONJ	NCONJ	14	_	_
+20	به	PREP	AJPP	22	_	_
+31	و	CONJ	NCONJ	30	_	_
+37	و	CONJ	NCONJ	36	_	_
+42	و	CONJ	VCONJ	47	_	_
+44	را	POSTP	OBJ	47	_	_
+45	به	PREP	VPP	47	_	_
+48	را	POSTP	OBJ	49	_	_
+50	تا	SUBR	VCL	49	_	_
+53	از	PREP	PREDEP	57	_	_
+55	در	PREP	PREDEP	57	_	_
+58	و	CONJ	VCONJ	67	_	_
+62	به	PREP	VPP	67	_	_
+68	.	PUNC	PUNC	18	_	_
+
+6	به	PREP	AJPP	5	_	_
+7	دو	NUM	NPREMOD	8	_	_
+14	به	PREP	AJPP	13	_	_
+26	.	PUNC	PUNC	10	_	_
+
+13	.	PUNC	PUNC	6	_	_
+
+2	در	PREP	ADVRB	12	_	_
+7	به	PREP	VPP	12	_	_
+10	و	CONJ	AJCONJ	9	_	_
+13	و	CONJ	VCONJ	18	_	_
+14	از	PREP	NPP	16	_	_
+20	به	PREP	PREDEP	29	_	_
+26	را	POSTP	OBJ	29	_	_
+27	به	PREP	PREDEP	29	_	_
+30	و	CONJ	VCONJ	40	_	_
+31	12	NUM	NPREMOD	32	_	_
+33	(	PUNC	PUNC	34	_	_
+34	به	PREP	ADVRB	40	_	_
+38	)	PUNC	ADVRB	40	
+47	را	POSTP	OBJ	48	_	_
+49	.	PUNC	PUNC	18	_	_
+
+2	در	PREP	ADVRB	9	_	_
+5	به	PREP	VPP	9	_	_
+10	و	CONJ	VCONJ	17	_	_
+11	از	PREP	ADVRB	17	_	_
+14	به	PREP	NPP	16	_	_
+18	.	PUNC	PUNC	17	_	_
+19	با	PREP	ADVRB	27	_	_
+28	.	PUNC	PUNC	17	_	_
+
+1	در	PREP	ADVRB	14	_	_
+10	از	PREP	NPP	12	_	_
+18	و	CONJ	NCONJ	17	_	_
+23	.	PUNC	PUNC	14	_	_
+
+2	به	PREP	NPP	4	_	_
+6	تا	SUBR	VCL	5	_	_
+8	را	POSTP	OBJ	13	_	_
+9	به	PREP	VPP	13	_	_
+14	و	CONJ	VCONJ	16	_	_
+17	.	PUNC	PUNC	5	_	_
+
+6	را	POSTP	OBJ	7	_	_
+8	تا	SUBR	VCL	7	_	_
+10	از	PREP	NPP	9	_	_
+13	.	PUNC	PUNC	7	_	_
+
+4	به	PREP	VPP	6	_	_
+11	و	CONJ	AJCONJ	10	_	_
+13	و	CONJ	AJCONJ	12	_	_
+16	.	PUNC	PUNC	6	_	_
+
+2	از	PREP	VPP	5	_	_
+6	و	CONJ	VCONJ	12	_	_
+7	از	PREP	NPP	11	_	_
+9	به	PREP	NPP	8	_	_
+13	با	PREP	ADVRB	12	_	_
+16	دو	NUM	NPREMOD	17	_	_
+18	از	PREP	NPP	17	_	_
+23	را	POSTP	OBJ	27	_	_
+24	به	PREP	NPP	26	_	_
+28	.	PUNC	PUNC	12	_	_
+
+3	از	PREP	NPP	5	_	_
+10	تا	PREP	ADVRB	21	_	_
+11	40	NUM	NPREMOD	12	_	_
+14	را	POSTP	OBJ	21	_	_
+15	به	PREP	AJPP	20	_	_
+17	در	PREP	NPP	16	_	_
+22	و	CONJ	VCONJ	31	_	_
+29	را	POSTP	OBJ	31	_	_
+32	.	PUNC	PUNC	6	_	_
+
+3	تا	PREP	ADVRB	9	_	_
+10	از	PREP	NPP	12	_	_
+16	و	CONJ	VCONJ	29	_	_
+17	به	PREP	ADVRB	29	_	_
+20	30	NUM	NPREMOD	21	_	_
+22	به	PREP	VPP	29	_	_
+27	و	CONJ	NCONJ	26	_	_
+30	.	PUNC	PUNC	29	_	_
+
+10	به	PREP	NPP	12	_	_
+16	تا	PREP	ADVRB	21	_	_
+17	30	NUM	NPREMOD	18	_	_
+22	و	CONJ	VCONJ	29	_	_
+26	را	POSTP	OBJ	29	_	_
+30	.	PUNC	PUNC	13	_	_
+
+2	30	NUM	NPREMOD	3	_	_
+5	،	PUNC	PUNC	4	_	_
+7	به	PREP	NPP	9	_	_
+11	تا	SUBR	VCL	10	_	_
+12	10	NUM	NPREMOD	13	_	_
+16	در	PREP	VPP	18	_	_
+19	.	PUNC	PUNC	10	_	_
+
+2	70	NUM	NPREMOD	3	_	_
+5	به	PREP	ADVRB	11	_	_
+8	به	PREP	VPP	11	_	_
+12	به	PREP	VPP	14	_	_
+15	:	PUNC	PUNC	14	_	_
+17	به	PREP	NPP	19	_	_
+25	را	POSTP	OBJ	29	_	_
+26	به	PREP	NPP	28	_	_
+30	!	PUNC	PUNC	14	_	_
+
+2	از	PREP	AJPP	5	_	_
+7	و	CONJ	VCONJ	14	_	_
+15	.	PUNC	PUNC	14	_	_
+
+1	در	PREP	ADVRB	7	_	_
+11	و	CONJ	NCONJ	10	_	_
+15	،	PUNC	PUNC	14	_	_
+19	و	CONJ	VCONJ	22	_	_
+23	.	PUNC	PUNC	7	_	_
+
+9	.	PUNC	PUNC	8	_	_
+
+5	و	CONJ	VCONJ	11	_	_
+6	به	PREP	ADVRB	11	_	_
+12	.	PUNC	PUNC	11	_	_
+
+4	10	NUM	NPREMOD	5	_	_
+7	از	PREP	COMPPP	6	_	_
+13	از	PREP	NPP	19	_	_
+16	و	CONJ	NCONJ	15	_	_
+21	و	CONJ	VCONJ	28	_	_
+22	از	PREP	VPP	28	_	_
+27	را	POSTP	OBJ	28	_	_
+29	و	CONJ	VCONJ	32	_	_
+34	با	PREP	ADVRB	41	_	_
+38	از	PREP	AJPP	40	_	_
+42	.	PUNC	PUNC	32	_	_
+
+2	به	PREP	NPP	4	_	_
+7	و	CONJ	VCONJ	8	_	_
+13	.	PUNC	PUNC	1	_	_
+
+4	را	POSTP	OBJ	8	_	_
+5	به	PREP	VPP	8	_	_
+9	!	PUNC	PUNC	1	_	_
+
+5	به	PREP	NPP	9	_	_
+11	با	PREP	ADVRB	15	_	_
+16	و	CONJ	VCONJ	21	_	_
+17	با	PREP	NPP	20	_	_
+19	به	PREP	VPP	21	_	_
+22	،	PUNC	PUNC	21	_	_
+
+1	در	PREP	ADVRB	10	_	_
+5	با	PREP	NPP	9	_	_
+11	و	CONJ	VCONJ	15	_	_
+13	را	POSTP	OBJ	15	_	_
+16	،	PUNC	PUNC	15	_	_
+
+2	در	PREP	VPP	4	_	_
+5	:	PUNC	PUNC	4	_	_
+11	از	PREP	NPP	10	_	_
+13	و	CONJ	NCONJ	12	_	_
+15	با	PREP	NPP	17	_	_
+19	تا	SUBR	VCL	18	_	_
+22	را	POSTP	OBJ	24	_	_
+25	.	PUNC	PUNC	4	_	_
+
+1	در	PREP	ADVRB	9	_	_
+6	را	POSTP	OBJ	9	_	_
+10	و	CONJ	VCONJ	13	_	_
+14	و	CONJ	VCONJ	15	_	_
+24	به	PREP	AJPP	26	_	_
+29	به	PREP	VPP	31	_	_
+33	با	PREP	NPP	35	_	_
+37	و	CONJ	VCONJ	39	_	_
+40	،	PUNC	PUNC	15	_	_
+
+4	را	POSTP	OBJ	5	_	_
+6	و	CONJ	VCONJ	11	_	_
+8	را	POSTP	OBJ	11	_	_
+9	در	PREP	VPP	11	_	_
+12	.	PUNC	PUNC	1	_	_
+
+3	را	POSTP	OBJ	7	_	_
+4	از	PREP	NPP	6	_	_
+8	و	CONJ	VCONJ	16	_	_
+11	را	POSTP	OBJ	16	_	_
+12	از	PREP	NPP	15	_	_
+17	،	PUNC	PUNC	16	_	_
+
+4	از	PREP	VPP	7	_	_
+8	و	CONJ	VCONJ	13	_	_
+10	را	POSTP	OBJ	13	_	_
+11	با	PREP	ADVRB	13	_	_
+14	به	PREP	VPP	17	_	_
+24	و	CONJ	AJCONJ	23	_	_
+26	و	CONJ	AJCONJ	25	_	_
+29	،	PUNC	PUNC	28	_	_
+34	را	POSTP	OBJ	39	_	_
+40	،	PUNC	PUNC	39	_	_
+
+4	به	PREP	NPP	3	_	_
+6	را	POSTP	OBJ	8	_	_
+9	از	PREP	ADVRB	13	_	_
+14	.	PUNC	PUNC	13	_	_
+
+4	را	POSTP	OBJ	6	_	_
+7	تا	SUBR	VCL	6	_	_
+10	از	PREP	NPP	8	_	_
+13	را	POSTP	OBJ	18	_	_
+19	،	PUNC	PUNC	6	_	_
+
+3	(	PUNC	PUNC	4	_	_
+5	)	PUNC	PUNC	4	_	_
+9	را	POSTP	OBJ	14	_	_
+11	به	PREP	POSDEP	10	_	_
+15	.	PUNC	PUNC	14	_	_
+
+3	یا	CONJ	NCONJ	2	_	_
+7	و	CONJ	VCONJ	12	_	_
+10	از	PREP	NPP	8	_	_
+13	.	PUNC	PUNC	12	_	_
+
+2	از	PREP	MOS	5	_	_
+6	و	CONJ	VCONJ	15	_	_
+12	در	PREP	VPP	15	_	_
+16	.	PUNC	PUNC	15	_	_
+
+16	و	CONJ	VCONJ	21	_	_
+17	از	PREP	NPP	19	_	_
+22	.	PUNC	PUNC	21	_	_
+
+1	اما	CONJ	VCONJ	9	_	_
+7	را	POSTP	OBJ	9	_	_
+10	و	CONJ	VCONJ	22	_	_
+11	به	PREP	VPP	22	_	_
+13	با	PREP	NPP	12	_	_
+15	و	CONJ	NCONJ	12	_	_
+17	و	CONJ	NCONJ	16	_	_
+23	و	CONJ	VCONJ	26	_	_
+24	به	PREP	VPP	26	_	_
+32	و	CONJ	NCONJ	31	_	_
+36	را	POSTP	OBJ	37	_	_
+40	به	PREP	VPP	44	_	_
+42	با	PREP	NPP	41	_	_
+45	.	PUNC	PUNC	26	_	_
+
+1	در	PREP	ADVRB	8	_	_
+9	و	CONJ	VCONJ	14	_	_
+15	.	PUNC	PUNC	14	_	_
+
+5	را	POSTP	OBJ	7	_	_
+8	و	CONJ	VCONJ	11	_	_
+9	از	PREP	VPP	11	_	_
+12	تا	SUBR	VCL	11	_	_
+17	.	PUNC	PUNC	11	_	_
+
+3	و	CONJ	VCONJ	8	_	_
+5	به	PREP	NPP	4	_	_
+9	.	PUNC	PUNC	8	_	_
+10	از	PREP	ADVRB	15	_	_
+22	100	NUM	NPREMOD	23	_	_
+26	و	CONJ	VCONJ	34	_	_
+31	80	NUM	NPREMOD	32	_	_
+35	.	PUNC	PUNC	8	_	_
+
+10	.	PUNC	PUNC	4	_	_
+
+4	را	POSTP	OBJ	6	_	_
+7	و	CONJ	VCONJ	14	_	_
+15	.	PUNC	PUNC	14	_	_
+
+2	به	PREP	VPP	4	_	_
+6	را	POSTP	OBJ	8	_	_
+11	به	PREP	VPP	13	_	_
+14	و	CONJ	VCONJ	21	_	_
+17	را	POSTP	OBJ	21	_	_
+22	.	PUNC	PUNC	4	_	_
+
+5	و	CONJ	VCONJ	6	_	_
+7	و	CONJ	VCONJ	19	_	_
+9	را	POSTP	OBJ	19	_	_
+15	را	POSTP	OBJ	17	_	_
+20	.	PUNC	PUNC	19	_	_
+
+7	و	CONJ	VCONJ	10	_	_
+8	به	PREP	VPP	10	_	_
+11	:	PUNC	PUNC	10	_	_
+12	به	PREP	NPP	14	_	_
+16	تا	SUBR	VCL	15	_	_
+18	و	CONJ	NCONJ	17	_	_
+21	را	POSTP	OBJ	24	_	_
+22	در	PREP	VPP	24	_	_
+29	.	PUNC	PUNC	10	_	_
+
+5	و	CONJ	VCONJ	14	_	_
+7	و	CONJ	NCONJ	6	_	_
+11	را	POSTP	OBJ	14	_	_
+12	در	PREP	VPP	14	_	_
+15	.	PUNC	PUNC	14	_	_
+
+2	در	PREP	NPP	5	_	_
+7	و	CONJ	VCONJ	14	_	_
+8	از	PREP	MOS	14	_	_
+10	و	CONJ	NCONJ	9	_	_
+15	و	CONJ	VCONJ	18	_	_
+16	به	PREP	VPP	18	_	_
+20	به	PREP	AJPP	24	_	_
+26	و	CONJ	VCONJ	28	_	_
+29	.	PUNC	PUNC	18	_	_
+
+3	در	PREP	MOS	6	_	_
+7	ولی	CONJ	VCONJ	17	_	_
+10	و	CONJ	NCONJ	9	_	_
+13	از	PREP	AJPP	16	_	_
+18	و	CONJ	VCONJ	25	_	_
+22	را	POSTP	OBJ	25	_	_
+23	از	PREP	VPRT	25	_	_
+26	تا	PREP	ADVRB	25	_	_
+29	در	PREP	VPP	36	_	_
+32	و	CONJ	NCONJ	31	_	_
+37	.	PUNC	PUNC	25	_	_
+
+3	از	PREP	VPP	5	_	_
+6	تا	SUBR	VCL	5	_	_
+8	را	POSTP	OBJ	10	_	_
+11	،	PUNC	PUNC	5	_	_
+
+5	را	POSTP	OBJ	6	_	_
+14	،	PUNC	PUNC	8	_	_
+
+2	با	PREP	ADVRB	8	_	_
+9	و	CONJ	VCONJ	13	_	_
+12	را	POSTP	OBJ	13	_	_
+14	تا	SUBR	VCL	13	_	_
+16	را	POSTP	OBJ	17	_	_
+19	به	PREP	ADVRB	26	_	_
+24	از	PREP	MOS	26	_	_
+32	.	PUNC	PUNC	13	_	_
+
+3	(	PUNC	PUNC	4	_	_
+5	)	PUNC	PUNC	4	_	_
+18	تا	SUBR	VCL	17	_	_
+19	از	PREP	ADVRB	24	_	_
+23	را	POSTP	OBJ	24	_	_
+25	در	PREP	ADVRB	29	_	_
+30	و	CONJ	VCONJ	35	_	_
+33	به	PREP	VPP	35	_	_
+36	.	PUNC	PUNC	35	_	_
+
+3	از	PREP	MOS	6	_	_	Arg2	_
+12	در	PREP	VPP	16	_	_	_	Arg3
+13	4	NUM	NPREMOD	14	_	_	_	_
+17	.	PUNC	PUNC	6	_	_	_	_
+
+3	(	PUNC	PUNC	4	_	_	_
+5	)	PUNC	PUNC	4	_	_	_
+6	در	PREP	VPP	17	_	_	ArgM-LOC
+9	،	PUNC	PUNC	8	_	_	_
+15	به	PREP	NPP	14	_	_	_
+18	،	PUNC	PUNC	17	_	_	_
+
+4	،	PUNC	PUNC	3	_	_	_	_
+7	به	PREP	AJPP	9	_	_	_	_
+11	تا	SUBR	AJUCL	10	_	_	ArgM-CAU	_
+15	را	POSTP	OBJ	24	_	_	_	Arg1
+16	از	PREP	VPP	24	_	_	_	Arg3
+18	و	CONJ	NCONJ	17	_	_	_	_
+22	و	CONJ	NCONJ	21	_	_	_	_
+25	،	PUNC	PUNC	10	_	_	_	_
+
+3	93	NUM	NPREMOD	4	_	_	_
+7	.	PUNC	PUNC	6	_	_	_
+
+8	و	CONJ	NCONJ	7	_	_	_	_
+11	را	POSTP	OBJ	13	_	_	_	Arg1
+14	.	PUNC	PUNC	4	_	_	_	_
+
+4	و	CONJ	AJCONJ	3	_	_	_	_
+7	و	CONJ	VCONJ	11	_	_	_	_
+8	در	PREP	NPP	10	_	_	_	Arg3
+12	.	PUNC	PUNC	11	_	_	_	_
+
+6	و	CONJ	VCONJ	12	_	_	_	_
+9	و	CONJ	NCONJ	8	_	_	_	_
+13	.	PUNC	PUNC	12	_	_	_	_
+
+9	را	POSTP	OBJ	12	_	_	_	Arg1	_	_	_
+10	از	PREP	VPRT	12	_	_	_	_	_	_	_
+13	و	CONJ	VCONJ	20	_	_	_	_	_	_	_
+14	به	PREP	AJPP	19	_	_	_	_	_	_	_
+17	و	CONJ	NCONJ	16	_	_	_	_	_	_	_
+21	و	CONJ	VCONJ	35	_	_	_	_	_	_	_
+26	به	PREP	AJPP	29	_	_	_	_	_	_	_
+
+1	ولی	CONJ	VCONJ	8	_	_	_	_
+3	در	PREP	ADVRB	8	_	_	ArgM-TMP	_
+9	و	CONJ	VCONJ	11	_	_	_	_
+12	.	PUNC	PUNC	11	_	_	_	_
+
+9	با	PREP	NPP	12	_	_	_	Arg3
+14	.	PUNC	PUNC	5	_	_	_	_
+
+4	،	PUNC	PUNC	3	_	_	_	_
+6	و	CONJ	NCONJ	5	_	_	_	_
+9	را	POSTP	OBJ	11	_	_	Arg1	_
+12	تا	PREP	ADVRB	11	_	_	ArgM-ADV	_
+19	و	CONJ	AJCONJ	18	_	_	_	_
+22	.	PUNC	PUNC	11	_	_	_	_
+
+5	(	PUNC	PUNC	6	_	_	_
+7	)	PUNC	PUNC	6	_	_	_
+8	هفت	NUM	NPREMOD	9	_	_	_
+12	.	PUNC	PUNC	11	_	_	_
+
+9	از	PREP	AJPP	13	_	_	_	_
+15	،	PUNC	PUNC	14	_	_	_	_
+
+3	را	POSTP	OBJ	11	_	_	Arg1
+7	،	PUNC	PUNC	6	_	_	_
+9	و	CONJ	NCONJ	8	_	_	_
+12	.	PUNC	PUNC	11	_	_	_
+
+2	7	NUM	NPREMOD	3	_	_	_
+6	در	PREP	MOS	10	_	_	Arg2
+8	و	CONJ	NCONJ	7	_	_	_
+11	،	PUNC	PUNC	10	_	_	_
+
+6	.	PUNC	PUNC	5	_	_	_
+
+1	به	PREP	ADVRB	8	_	_	ArgM-ADV	_	_
+5	از	PREP	VPP	8	_	_	Arg3	_	_
+10	به	PREP	ADVRB	16	_	_	_	ArgM-ADV	_
+13	از	PREP	VPP	16	_	_	_	Arg3	_
+17	و	CONJ	VCONJ	24	_	_	_	_	_
+20	را	POSTP	OBJ	24	_	_	_	_	Arg1
+21	در	PREP	ADVRB	24	_	_	_	_	ArgM-LOC
+25	،	PUNC	PUNC	8	_	_	_	_	_
+
+1	به	PREP	ADVRB	7	_	_	ArgM-ADV	_	_	_
+5	به	PREP	VPP	7	_	_	Arg3	_	_	_
+8	و	CONJ	VCONJ	13	_	_	_	_	_	_
+11	از	PREP	VPRT	13	_	_	_	_	_	_
+18	از	PREP	VPRT	20	_	_	_	_	_	_
+22	به	PREP	VPP	27	_	_	_	_	_	Arg3
+24	و	CONJ	NCONJ	23	_	_	_	_	_	_
+28	.	PUNC	PUNC	13	_	_	_	_	_	_
+
+11	در	PREP	VPP	15	_	_	_	Arg3
+12	دو	NUM	NPREMOD	13	_	_	_	_
+16	.	PUNC	PUNC	6	_	_	_	_
+
+2	از	PREP	MOS	7	_	_	Arg2
+8	.	PUNC	PUNC	7	_	_	_
+
+12	را	POSTP	OBJ	18	_	_	_	Arg1
+19	،	PUNC	PUNC	18	_	_	_	_
+
+6	در	PREP	MOS	9	_	_	Arg2	_
+10	در	PREP	NPP	13	_	_	_	Arg3
+15	.	PUNC	PUNC	14	_	_	_	_
+
+3	را	POSTP	OBJ	10	_	_	Arg1
+11	.	PUNC	PUNC	10	_	_	_
+
+6	را	POSTP	OBJ	8	_	_	Arg1	_
+9	و	CONJ	VCONJ	14	_	_	_	_
+10	از	PREP	NPP	13	_	_	_	Arg3
+15	.	PUNC	PUNC	14	_	_	_	_
+
+2	در	PREP	ADVRB	9	_	_	ArgM-TMP	_
+6	به	PREP	NPP	5	_	_	_	_
+12	را	POSTP	OBJ	17	_	_	_	Arg1
+13	به	PREP	NPP	16	_	_	_	Arg3
+18	.	PUNC	PUNC	9	_	_	_	_
+
+6	300	NUM	NPREMOD	7	_	_	_	_
+8	را	POSTP	OBJ	14	_	_	_	Arg1
+9	از	PREP	NPP	13	_	_	_	Arg3
+15	.	PUNC	PUNC	4	_	_	_	_
+
+2	با	PREP	AJPP	5	_	_	_	_
+7	و	CONJ	VCONJ	12	_	_	_	_
+8	از	PREP	ADVRB	12	_	_	_	ArgM-ADV
+13	.	PUNC	PUNC	12	_	_	_	_
+
+7	در	PREP	ADVRB	11	_	_	_	ArgM-LOC	_
+12	و	CONJ	VCONJ	16	_	_	_	_	_
+17	.	PUNC	PUNC	4	_	_	_	_	_
+
+3	را	POSTP	OBJ	5	_	_	Arg1	_	_	_
+8	و	CONJ	NCONJ	7	_	_	_	_	_	_
+12	را	POSTP	OBJ	20	_	_	_	_	Arg1	_
+13	،	PUNC	OBJ	20	
+17	،	PUNC	PUNC	16	_	_	_	_	_	_
+18	به	PREP	VPRT	20	_	_	_	_	_	_
+21	،	PUNC	PUNC	20	_	_	_	_	_	_
+23	به	PREP	NPP	25	_	_	_	_	_	Arg3
+27	.	PUNC	PUNC	5	_	_	_	_	_	_
+
+2	از	PREP	VPP	5	_	_	Arg3	_
+6	و	CONJ	VCONJ	12	_	_	_	_
+7	به	PREP	VPP	12	_	_	_	Arg4
+9	و	CONJ	NCONJ	8	_	_	_	_
+13	.	PUNC	PUNC	12	_	_	_	_
+
+3	(	PUNC	PUNC	4	_	_	_
+5	)	PUNC	PUNC	4	_	_	_
+6	7	NUM	NPREMOD	7	_	_	_
+11	.	PUNC	PUNC	10	_	_	_
+
+1	در	PREP	ADVRB	9	_	_	ArgM-TMP	_
+6	به	PREP	AJPP	8	_	_	_	_
+10	و	CONJ	VCONJ	14	_	_	_	_
+15	،	PUNC	PUNC	14	_	_	_	_
+
+3	در	PREP	NPP	1	_	_	_
+5	به	PREP	NPP	4	_	_	_
+12	.	PUNC	PUNC	11	_	_	_
+
+6	را	POSTP	OBJ	7	_	_	Arg1	_
+8	،	PUNC	PUNC	7	_	_	_	_
+12	.	PUNC	PUNC	11	_	_	_	_
+
+2	از	PREP	AJPP	5	_	_	_	_	_	_	_	_	_
+7	و	CONJ	VCONJ	13	_	_	_	_	_	_	_	_	_
+11	را	POSTP	OBJ	13	_	_	_	Arg1	_	_	_	_	_
+14	تا	SUBR	AJUCL	13	_	_	_	ArgM-PRP	_	_	_	_	_
+18	و	CONJ	VCONJ	21	_	_	_	_	_	_	_	_	_
+19	به	PREP	VPP	21	_	_	_	_	_	Arg3	_	_	_
+22	:	PUNC	PUNC	21	_	_	_	_	_	_	_	_	_
+27	،	PUNC	PUNC	26	_	_	_	_	_	_	_	_	_
+35	،	PUNC	PUNC	13	_	_	_	_	_	_	_	_	_
+
+1	تا	SUBR	ROOT	0	_	_	_	_	ArgM-DIS
+3	به	PREP	VPP	5	_	_	Arg3	_	_
+6	و	CONJ	VCONJ	17	_	_	_	_	_
+8	را	POSTP	OBJ	17	_	_	_	_	Arg1
+9	به	PREP	NPP	16	_	_	_	_	Arg3
+18	،	PUNC	PUNC	17	_	_	_	_	_
+
+1	و	CONJ	VCONJ	6	_	_	ArgM-DIS	_	_
+2	به	PREP	VPP	6	_	_	Arg3	_	_
+8	از	PREP	VPP	11	_	_	_	Arg3	_
+12	،	PUNC	PUNC	11	_	_	_	_	_
+13	و	CONJ	VCONJ	20	_	_	_	_	_
+17	و	CONJ	AJCONJ	16	_	_	_	_	_
+21	.	PUNC	PUNC	6	_	_	_	_	_
+
+6	را	POSTP	OBJ	7	_	_	Arg1	_	_
+8	به	PREP	ADVRB	14	_	_	_	ArgM-CAU	_
+11	به	PREP	VPP	14	_	_	_	Arg4	_
+15	تا	SUBR	AJUCL	14	_	_	_	ArgM-PRP	_
+16	از	PREP	NPP	18	_	_	_	_	Arg3
+20	.	PUNC	PUNC	14	_	_	_	_	_
+
+5	را	POSTP	OBJ	8	_	_	Arg1	_	_
+9	تا	SUBR	ACL	7	_	_	_	_	_
+11	و	CONJ	VCONJ	16	_	_	_	_	_
+13	از	PREP	AJPP	15	_	_	_	_	_
+17	.	PUNC	PUNC	8	_	_	_	_	_
+
+3	تا	PREP	ADVRB	10	_	_	ArgM-EXT
+6	را	POSTP	OBJ	10	_	_	Arg1
+7	از	PREP	AJPP	9	_	_	_
+
+1	اما	CONJ	VCONJ	8	_	_	ArgM-DIS	_
+5	به	PREP	VPP	8	_	_	Arg3	_
+12	را	POSTP	OBJ	15	_	_	_	Arg1
+16	?	PUNC	PUNC	8	_	_	_	_
+
+4	از	PREP	VPP	7	_	_	Arg3	_	_
+8	و	CONJ	VCONJ	14	_	_	_	_	_
+9	به	PREP	VPP	14	_	_	_	Arg4	_
+15	و	CONJ	VCONJ	21	_	_	_	_	_
+16	شش	NUM	NPREMOD	17	_	_	_	_	_
+18	در	PREP	AJPP	20	_	_	_	_	_
+
+1	و	CONJ	VCONJ	7	_	_	ArgM-DIS
+5	به	PREP	VPP	7	_	_	Arg3
+8	.	PUNC	PUNC	7	_	_	_
+
+1	و	CONJ	VCONJ	5	_	_	ArgM-DIS	_	_	_
+2	در	PREP	MOS	5	_	_	Arg2	_	_	_
+8	به	PREP	VPP	10	_	_	_	Arg3	_	_
+14	از	PREP	VPP	18	_	_	_	_	_	Arg3
+19	.	PUNC	PUNC	5	_	_	_	_	_	_
+
+2	از	PREP	NPP	4	_	_	Arg3
+7	،	PUNC	PUNC	6	_	_	_
+
+2	3	NUM	NPREMOD	3	_	_	_
+5	را	POSTP	OBJ	9	_	_	Arg1
+10	.	PUNC	PUNC	9	_	_	_
+
+2	با	PREP	ADVRB	7	_	_	ArgM-MNR	_
+8	و	CONJ	VCONJ	11	_	_	_	_
+12	.	PUNC	PUNC	1	_	_	_	_
+
+2	به	PREP	ADVRB	9	_	_	ArgM-COM	_
+14	و	CONJ	NCONJ	13	_	_	_	_
+18	،	PUNC	PUNC	9	_	_	_	_
+
+1	و	CONJ	VCONJ	7	_	_	ArgM-DIS	_	_
+2	در	PREP	ADVRB	7	_	_	ArgM-TMP	_	_
+5	از	PREP	VPP	7	_	_	Arg3	_	_
+8	تا	SUBR	VCL	7	_	_	Arg1	_	_
+15	.	PUNC	PUNC	7	_	_	_	_	_
+
+8	و	CONJ	VCONJ	17	_	_	_	_	_
+10	و	CONJ	NCONJ	9	_	_	_	_	_
+18	.	PUNC	PUNC	3	_	_	_	_	_
+
+1	اما	CONJ	VCONJ	10	_	_	ArgM-DIS	_
+11	و	CONJ	VCONJ	15	_	_	_	_
+12	از	PREP	VPP	15	_	_	_	Arg3
+16	.	PUNC	PUNC	15	_	_	_	_
+
+4	را	POSTP	OBJ	8	_	_	Arg1
+9	،	PUNC	PUNC	8	_	_	_
+
+7	را	EMPH	POSDEP	6	_	_	_	_
+8	به	PREP	NPP	5	_	_	Arg3	_
+11	و	CONJ	VCONJ	15	_	_	_	_
+12	به	PREP	VPP	15	_	_	_	Arg3
+16	.	PUNC	PUNC	15	_	_	_	_
+
+11	در	PREP	VPP	14	_	_	_	Arg3
+15	.	PUNC	PUNC	6	_	_	_	_
+
+3	با	PREP	VPP	11	_	_	ArgM-ADV	_
+4	پنج	NUM	NPREMOD	5	_	_	_	_
+6	به	PREP	VPP	11	_	_	Arg3	_
+8	(	PUNC	PUNC	9	_	_	_	_
+10	)	PUNC	PUNC	9	_	_	_	_
+12	و	CONJ	VCONJ	17	_	_	_	_
+14	300	NUM	NPREMOD	15	_	_	_	_
+18	.	PUNC	PUNC	17	_	_	_	_
+
+1	سی	NUM	NPREMOD	2	_	_	_
+3	از	PREP	ADVRB	9	_	_	ArgM-ADV
+10	.	PUNC	PUNC	9	_	_	_
+
+3	و	CONJ	AJCONJ	2	_	_	_	_	_	_
+5	و	CONJ	AJCONJ	4	_	_	_	_	_	_
+10	با	PREP	VPP	13	_	_	_	ArgM-INS	_	_
+14	و	CONJ	VCONJ	24	_	_	_	_	_	_
+16	به	PREP	VPP	24	_	_	_	_	Arg3	_
+20	و	CONJ	NCONJ	19	_	_	_	_	_	_
+22	و	CONJ	NCONJ	21	_	_	_	_	_	_
+29	.	PUNC	PUNC	8	_	_	_	_	_	_
+
+9	و	CONJ	VCONJ	11	_	_	_	_	_
+12	.	PUNC	PUNC	5	_	_	_	_	_
+
+1	در	PREP	ADVRB	7	_	_	ArgM-TMP
+8	.	PUNC	PUNC	7	_	_	_
+
+3	از	PREP	NPP	8	_	_	Arg3	_	_	_
+6	و	CONJ	AJCONJ	5	_	_	_	_	_	_
+12	به	PREP	AJPP	11	_	_	_	_	_	_
+16	.	PUNC	PUNC	15	_	_	_	_	_	_
+18	از	PREP	VPP	20	_	_	_	_	Arg3	_
+23	را	POSTP	OBJ	27	_	_	_	_	_	Arg1
+24	به	PREP	NPP	26	_	_	_	_	_	Arg3
+
+1	اما	CONJ	VCONJ	3	_	_	_	_
+8	به	PREP	AJPP	10	_	_	_	_
+12	.	PUNC	PUNC	3	_	_	_	_
+
+1	از	PREP	VPP	3	_	_	Arg3	_
+4	تا	SUBR	VCL	3	_	_	Arg3	_
+7	به	PREP	ADVRB	10	_	_	_	ArgM-LOC
+12	به	PREP	POSDEP	11	_	_	_	_
+15	.	PUNC	PUNC	3	_	_	_	_
+
+7	،	PUNC	PUNC	6	_	_	_	_	_	_
+11	،	PUNC	PUNC	10	_	_	_	_	_	_
+14	و	CONJ	VCONJ	19	_	_	_	_	_	_
+20	.	PUNC	PUNC	6	_	_	_	_	_	_
+
+2	بیست	NUM	NPREMOD	3	_	_	_	_
+5	و	CONJ	VCONJ	9	_	_	_	_
+6	از	PREP	ADVRB	9	_	_	_	Arg3
+10	.	PUNC	PUNC	9	_	_	_	_
+
+5	و	CONJ	NCONJ	4	_	_	_	_
+7	به	PREP	VPP	11	_	_	Arg3	_
+9	و	CONJ	NCONJ	8	_	_	_	_
+12	و	CONJ	VCONJ	17	_	_	_	_
+13	به	PREP	VPP	17	_	_	_	Arg3
+15	و	CONJ	NCONJ	14	_	_	_	_
+18	.	PUNC	PUNC	17	_	_	_	_
+
+2	به	PREP	NPP	4	_	_	Arg3	_	_	_
+10	،	PUNC	PUNC	9	_	_	_	_	_	_
+12	از	PREP	VPP	14	_	_	_	_	Arg3	_
+18	،	PUNC	PUNC	5	_	_	_	_	_	_
+
+1	اما	CONJ	VCONJ	5	_	_	_
+6	،	PUNC	PUNC	5	_	_	_
+
+5	را	POSTP	OBJ	7	_	_	Arg1	_
+13	و	CONJ	NCONJ	12	_	_	_	_
+16	به	PREP	NPP	14	_	_	_	_
+19	.	PUNC	PUNC	1	_	_	_	_
+
+2	از	PREP	ADVRB	9	_	_	ArgM-CAU	_
+6	و	CONJ	NCONJ	5	_	_	_	_
+11	از	PREP	ADVRB	16	_	_	_	Arg3
+17	،	PUNC	PUNC	9	_	_	_	_
+
+1	از	PREP	VPP	6	_	_	Arg3
+
+1	و	CONJ	VCONJ	3	_	_	_	_
+12	،	PUNC	PUNC	3	_	_	_	_
+
+1	اما	CONJ	VCONJ	9	_	_	_	_
+3	با	PREP	ADVRB	9	_	_	ArgM-MNR	_
+8	را	POSTP	OBJ	9	_	_	Arg1	_
+12	با	PREP	ADVRB	20	_	_	_	ArgM-CAU
+16	از	PREP	VPP	20	_	_	_	ArgM-ADV
+21	.	PUNC	PUNC	9	_	_	_	_
+
+7	اما	CONJ	VCONJ	14	_	_	_	_
+11	به	PREP	VPP	14	_	_	_	Arg3
+15	.	PUNC	PUNC	14	_	_	_	_
+
+5	به	PREP	NPP	7	_	_	Arg3
+9	.	PUNC	PUNC	8	_	_	_
+
+4	را	POSTP	OBJ	8	_	_	Arg1	_	_
+5	به	PREP	ADVRB	8	_	_	Arg3	_	_
+9	و	CONJ	VCONJ	16	_	_	_	_	_
+11	و	CONJ	NCONJ	10	_	_	_	_	_
+13	به	PREP	VPP	16	_	_	_	Arg4	_
+17	و	CONJ	VCONJ	21	_	_	_	_	_
+18	به	PREP	NPP	20	_	_	_	_	Arg3
+22	.	PUNC	PUNC	21	_	_	_	_	_
+
+1	به	PREP	ADVRB	9	_	_	ArgM-CAU	_
+10	و	CONJ	VCONJ	16	_	_	_	_
+12	را	POSTP	OBJ	16	_	_	_	Arg1
+13	از	PREP	NPP	15	_	_	_	Arg3
+17	.	PUNC	PUNC	16	_	_	_	_
+
+6	به	PREP	NPP	8	_	_	Arg3	_	_	_	_
+10	و	CONJ	VCONJ	14	_	_	_	_	_	_	_
+13	را	POSTP	OBJ	14	_	_	_	Arg1	_	_	_
+15	و	CONJ	VCONJ	24	_	_	_	_	_	_	_
+17	را	POSTP	OBJ	24	_	_	_	_	Arg1	_	_
+18	به	PREP	NPP	23	_	_	_	_	Arg4	_	_
+20	در	PREP	ADVRB	24	_	_	_	_	ArgM-LOC2	_	_
+28	و	CONJ	VCONJ	33	_	_	_	_	_	_	_
+29	از	PREP	ADVRB	33	_	_	_	_	_	_	Arg3
+34	.	PUNC	PUNC	24	_	_	_	_	_	_	_
+
+3	را	POSTP	OBJ	5	_	_	Arg1	_
+9	را	POSTP	OBJ	11	_	_	_	Arg1
+12	.	PUNC	PUNC	5	_	_	_	_
+
+2	در	PREP	ADVRB	6	_	_	ArgM-ADV	_
+4	از	PREP	VPP	6	_	_	Arg3	_
+8	از	PREP	ADVRB	11	_	_	_	Arg3
+
+1	و	CONJ	VCONJ	4	_	_	_	_
+6	به	PREP	NPP	9	_	_	_	_
+8	چهارم	NUM	NPOSTMOD	7	_	_	_	_
+11	.	PUNC	PUNC	4	_	_	_	_
+
+3	به	PREP	VPP	6	_	_	Arg4	_	_
+5	چهارم	NUM	NPOSTMOD	4	_	_	_	_	_
+8	را	POSTP	OBJ	9	_	_	_	Arg1	_
+11	با	PREP	ADVRB	16	_	_	_	_	ArgM-MNR
+13	به	PREP	NPP	15	_	_	_	_	Arg3
+17	.	PUNC	PUNC	9	_	_	_	_	_
+
+3	را	POSTP	OBJ	8	_	_	Arg1
+4	در	PREP	ADVRB	8	_	_	ArgM-LOC
+9	.	PUNC	PUNC	8	_	_	_
+
+5	(	PUNC	PUNC	6	_	_	_	_
+7	)	PUNC	PUNC	6	_	_	_	_
+9	،	PUNC	PUNC	8	_	_	_	_
+14	در	PREP	VPP	20	_	_	_	Arg3
+17	در	PREP	VPP	20	_	_	_	ArgM-LOC
+18	سه	NUM	NPREMOD	19	_	_	_	_
+21	،	PUNC	PUNC	8	_	_	_	_
+
+2	(	PUNC	PUNC	3	_	_	_	_
+4	)	PUNC	PUNC	3	_	_	_	_
+5	از	PREP	MOS	8	_	_	Arg2	_
+13	به	PREP	VPRT	19	_	_	_	Arg3
+16	(	PUNC	PUNC	17	_	_	_	_
+18	)	PUNC	PUNC	17	_	_	_	_
+20	.	PUNC	PUNC	8	_	_	_	_
+
+2	(	PUNC	PUNC	3	_	_	_
+4	)	PUNC	PUNC	3	_	_	_
+5	از	PREP	NPP	7	_	_	Arg3
+9	،	PUNC	PUNC	8	_	_	_
+
+1	و	CONJ	VCONJ	13	_	_	_	_
+6	و	CONJ	NCONJ	5	_	_	_	_
+10	از	PREP	NPP	12	_	_	_	Arg3
+14	،	PUNC	PUNC	13	_	_	_	_
+
+5	(	PUNC	PUNC	6	_	_	_	_
+7	)	PUNC	PUNC	6	_	_	_	_
+9	و	CONJ	VCONJ	13	_	_	_	_
+14	.	PUNC	PUNC	13	_	_	_	_
+
+2	از	PREP	POSDEP	1	_	_	_	_	_
+5	و	CONJ	NCONJ	4	_	_	_	_	_
+9	اما	CONJ	VCONJ	12	_	_	_	_	_
+13	و	CONJ	VCONJ	19	_	_	_	_	_
+17	را	POSTP	OBJ	19	_	_	_	_	Arg1
+20	،	PUNC	PUNC	19	_	_	_	_	_
+
+9	به	PREP	VPP	13	_	_	_	Arg3	_	_
+24	و	CONJ	VCONJ	32	_	_	_	_	_	_
+25	از	PREP	ADVRB	32	_	_	_	_	_	ArgM-MNR
+28	از	PREP	NPP	30	_	_	_	_	_	Arg3
+33	.	PUNC	PUNC	4	_	_	_	_	_	_
+
+5	را	POSTP	OBJ	7	_	_	Arg1	_
+8	و	CONJ	VCONJ	10	_	_	_	_
+11	.	PUNC	PUNC	10	_	_	_	_
+
+1	در	PREP	ADVRB	7	_	_	ArgM-TMP	_	_	_
+5	از	PREP	VPRT	7	_	_	_	_	_	_
+8	و	CONJ	VCONJ	11	_	_	_	_	_	_
+12	و	CONJ	VCONJ	14	_	_	_	_	_	_
+18	را	POSTP	OBJ	22	_	_	_	_	_	Arg1
+23	.	PUNC	PUNC	14	_	_	_	_	_	_
+
+6	اما	CONJ	VCONJ	13	_	_	_	_
+8	به	PREP	NPP	12	_	_	_	Arg3
+11	را	POSTP	OBJ	13	_	_	_	Arg1
+14	.	PUNC	PUNC	13	_	_	_	_
+
+12	.	PUNC	PUNC	11	_	_	_	_
+
+7	را	POSTP	OBJ	9	_	_	Arg1	_	_
+10	و	CONJ	VCONJ	15	_	_	_	_	_
+12	را	POSTP	OBJ	15	_	_	_	Arg1	Arg1
+13	به	PREP	VPP	15	_	_	_	Arg4	_
+16	و	CONJ	VCONJ	20	_	_	_	_	_
+17	به	PREP	NPP	19	_	_	_	_	Arg3
+21	.	PUNC	PUNC	20	_	_	_	_	_
+
+6	به	PREP	VPP	9	_	_	Arg4	_	_
+10	تا	SUBR	VCL	9	_	_	_	_	_
+19	.	PUNC	PUNC	9	_	_	_	_	_
+
+4	را	POSTP	OBJ	7	_	_	Arg1	_
+8	و	CONJ	VCONJ	12	_	_	_	_
+9	به	PREP	VPP	12	_	_	_	Arg3
+13	.	PUNC	PUNC	12	_	_	_	_
+
+2	به	PREP	VPP	8	_	_	Arg3	_	_
+4	و	CONJ	NCONJ	3	_	_	_	_	_
+6	از	PREP	NPP	5	_	_	_	_	_
+9	تا	SUBR	AJUCL	8	_	_	ArgM-TMP	_	Arg1
+13	و	CONJ	VCONJ	16	_	_	_	_	_
+17	.	PUNC	PUNC	8	_	_	_	_	_
+
+5	و	CONJ	VCONJ	9	_	_	_	_	_
+7	به	PREP	VPP	9	_	_	_	Arg3	_
+10	و	CONJ	VCONJ	20	_	_	_	_	_
+11	در	PREP	ADVRB	20	_	_	_	_	ArgM-LOC
+17	به	PREP	VPP	20	_	_	_	_	Arg3
+21	.	PUNC	PUNC	20	_	_	_	_	_
+
+4	به	PREP	VPP	7	_	_	Arg4	_	_
+10	در	PREP	ADVRB	15	_	_	_	ArgM-LOC	_
+21	.	PUNC	PUNC	15	_	_	_	_	_
+
+6	و	CONJ	NCONJ	5	_	_	_	_	_
+12	و	CONJ	VCONJ	19	_	_	_	_	_
+14	در	PREP	VPP	19	_	_	_	_	Arg3
+17	به	PREP	VPRT	19	_	_	_	_	_
+20	.	PUNC	PUNC	2	_	_	_	_	_
+
+3	از	PREP	NPP	5	_	_	Arg3	_
+8	تا	SUBR	VCL	7	_	_	_	_
+13	.	PUNC	PUNC	7	_	_	_	_
+
+7	در	PREP	ADVRB	6	_	_	ArgM-ADV	_	_	_
+11	در	PREP	MOS	14	_	_	_	Arg2	_	_
+15	و	CONJ	VCONJ	17	_	_	_	_	_	_
+21	در	PREP	ADVRB	26	_	_	_	_	_	ArgM-TMP
+27	،	PUNC	PUNC	6	_	_	_	_	_	_
+
+2	به	PREP	VPP	5	_	_	Arg3	_	_	_
+10	در	PREP	ADVRB	13	_	_	_	ArgM-TMP	_	_
+16	به	PREP	ADVRB	18	_	_	_	_	_	_
+20	و	CONJ	VCONJ	28	_	_	_	_	_	_
+21	با	PREP	ADVRB	28	_	_	_	_	_	ArgM-MNR
+24	از	PREP	NPP	26	_	_	_	_	_	Arg3
+29	.	PUNC	PUNC	1	_	_	_	_	_	_
+
+2	با	PREP	ADVRB	9	_	_	ArgM-CAU
+6	از	PREP	AJPP	8	_	_	_
+10	.	PUNC	PUNC	9	_	_	_
+
+5	در	PREP	ADVRB	9	_	_	_	ArgM-ADV	_	_	_	_	_
+10	و	CONJ	VCONJ	15	_	_	_	_	_	_	_	_	_
+11	از	PREP	NPP	13	_	_	_	_	Arg3	_	_	_	_
+16	و	CONJ	VCONJ	21	_	_	_	_	_	_	_	_	_
+18	به	PREP	NPP	20	_	_	_	_	_	Arg3	_	_	_
+30	تا	PREP	ADVRB	37	_	_	_	_	_	_	_	ArgM-TMP	_
+31	3	NUM	NPREMOD	32	_	_	_	_	_	_	_	_	_
+35	از	PREP	VPP	37	_	_	_	_	_	_	_	_	_
+38	و	CONJ	VCONJ	46	_	_	_	_	_	_	_	_	_
+44	را	POSTP	OBJ	46	_	_	_	_	_	_	_	_	Arg1
+47	.	PUNC	PUNC	3	_	_	_	_	_	_	_	_	_
+
+9	از	PREP	VPP	11	_	_	_	_	_	_
+12	و	CONJ	VCONJ	18	_	_	_	_	_	_
+14	در	PREP	VPP	18	_	_	_	_	ArgM-TMP	_
+20	در	PREP	ADVRB	34	_	_	_	_	_	ArgM-TMP
+22	3	NUM	NPREMOD	23	_	_	_	_	_	_
+24	با	PREP	ADVRB	34	_	_	_	_	_	ArgM-MNR
+27	و	CONJ	NCONJ	26	_	_	_	_	_	_
+31	با	PREP	NPP	33	_	_	_	_	_	Arg4
+35	.	PUNC	PUNC	5	_	_	_	_	_	_
+
+4	به	PREP	ADVRB	10	_	_	ArgM-ADV	_	_	_
+12	به	PREP	VPP	15	_	_	_	Arg4	_	_
+16	و	CONJ	VCONJ	20	_	_	_	_	_	_
+17	به	PREP	NPP	19	_	_	_	_	Arg3	_
+28	.	PUNC	PUNC	20	_	_	_	_	_	_
+
+2	به	PREP	VPP	4	_	_	Arg3	_	_	_
+5	و	CONJ	VCONJ	10	_	_	_	_	_	_
+9	را	POSTP	OBJ	10	_	_	_	Arg1	_	_
+15	و	CONJ	VCONJ	18	_	_	_	_	_	_
+16	به	PREP	VPP	18	_	_	_	_	_	Arg4
+19	.	PUNC	PUNC	10	_	_	_	_	_	_
+
+3	را	POSTP	OBJ	6	_	_	Arg1	_	_
+4	به	PREP	VPP	6	_	_	Arg3	_	_
+7	و	CONJ	VCONJ	12	_	_	_	_	_
+13	و	CONJ	VCONJ	18	_	_	_	_	_
+17	را	POSTP	OBJ	18	_	_	_	_	Arg1
+19	.	PUNC	PUNC	18	_	_	_	_	_
+
+1	اما	CONJ	VCONJ	11	_	_	_	_	_	_	_	_	_
+4	از	PREP	NPP	3	_	_	_	_	_	_	_	_	_
+7	را	POSTP	OBJ	11	_	_	Arg1	_	_	_	_	_	_
+8	از	PREP	ADVRB	11	_	_	ArgM-ADV	_	_	_	_	_	_
+12	و	CONJ	VCONJ	22	_	_	_	_	_	_	_	_	_
+13	به	PREP	VPP	22	_	_	_	_	Arg3	_	_	_	_
+15	از	PREP	NPP	14	_	_	_	_	_	_	_	_	_
+18	در	PREP	MOS	21	_	_	_	Arg2	_	_	_	_	_
+27	و	CONJ	VCONJ	31	_	_	_	_	_	_	_	_	_
+32	و	CONJ	VCONJ	41	_	_	_	_	_	_	_	_	_
+38	از	PREP	NPP	37	_	_	_	_	_	_	_	_	_
+43	از	PREP	VPP	46	_	_	_	_	_	_	_	_	Arg3
+47	.	PUNC	PUNC	22	_	_	_	_	_	_	_	_	_
+
+2	به	PREP	ADVRB	8	_	_	ArgM-ADV	_	_
+7	را	POSTP	OBJ	8	_	_	Arg1	_	_
+9	و	CONJ	VCONJ	18	_	_	_	_	_
+11	را	POSTP	OBJ	18	_	_	_	Arg1	_
+12	به	PREP	ADVRB	18	_	_	_	_	_
+15	به	PREP	MOS	18	_	_	_	Arg2	_
+16	دو	NUM	NPREMOD	17	_	_	_	_	_
+19	و	CONJ	VCONJ	24	_	_	_	_	_
+21	را	POSTP	OBJ	24	_	_	_	_	Arg1
+22	به	PREP	VPRT	24	_	_	_	_	_
+25	.	PUNC	PUNC	1	_	_	_	_	_
+

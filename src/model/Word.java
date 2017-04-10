@@ -175,15 +175,14 @@ public class Word {
 	 * @param isFull is data for this word full or not?
 	 */
 	public Word(String wStr, SentenceModel sentence, boolean isFull) {
-//		print(wStr);
+		
+		this._dataSetRecord = wStr;
 		
 		if(isFull){// it is full record of a word
 			//sample format:
 			//2	یوسف		N		MOZ		1	یوسف§n-23957	نفر§n-13075		role	_	_		_		_	_
 			//8	می‌خواست	V		PRD		7	خواستن§v-9670	رخداد§n-13136		no		Y	خواستن.360	Arg1	_	_	_		
-			 
-			this._dataSetRecord = wStr;
-			
+					
 			String[] parts = wStr.split("(\t)+");
 			
 			if(parts.length > 7){
@@ -417,6 +416,7 @@ public class Word {
 		
 		//TODO: complete list of stop words.
 		String[] junks = {"و", "به", "از", "با", "را", "در", "تا"};
+		
 		for(String junk:junks)
 			if(_wordName.equalsIgnoreCase(junk))
 				return true;
@@ -443,12 +443,8 @@ public class Word {
 	public void set_number(String number) {
 		if(number == null || number.equals("") || number.equals("-"))
 			this._number = -1;
-		else{
-			print("-" +number+ "-");
-			int num = Integer.parseInt(number);
-			
-			this._number = num;
-		}
+		else
+			this._number = Integer.parseInt(number);		
 	}
 	
 	public void set_gPOS(String gPos) {
@@ -770,38 +766,17 @@ public class Word {
  	 * 9	شخصیتی	N	MOS	11	_	_	_	Arg2	_		
  	 * @return
  	 */
- 	public String getStr4ManualDataSet() {	 	
+ 	public String getStr4ManualDataSet() {
  		
- 			//TODO: correct this based on _dataSetRecord
+ 		String rs = "";
  		
- 			String[] oldRecord = _dataSetRecord.split("[\t]+");
- 			
- 			if(oldRecord.length < 6)
- 				MyError.exit("bad format in old dataSet record: " + _dataSetRecord);
- 			
-						
-			String rs = _number + "\t";			
-			
-			if(_wordName != null) rs += _wordName;
-			else rs += "-";			
-			rs += "\t";
-			
-			if(_gPOS != null) rs += _gPOS;
-			else rs += "UNKNOWN";
-			rs += "\t";
-			
-			if(_syntaxTag != null) rs += _syntaxTag;
-			else rs += "NULL";
-			rs += "\t";
-			
-			if(_dataSetRecord != null){
-				int srcIndx = _dataSetRecord.indexOf(_srcOfSynTag_number);
-				
-				if(srcIndx != -1){
-					rs += _dataSetRecord.substring(srcIndx, _dataSetRecord.length());
-				}			
-			}
-			return rs;
+ 		if(_dataSetRecord != null)
+ 			rs = _dataSetRecord;
+ 		
+ 		else//_dataSetRecord == null{
+ 			MyError.exit("for word " + this._wordName + "_dataSetRecord must not be null !!!");
+ 		 	
+		return rs;
 	}
 
  	 

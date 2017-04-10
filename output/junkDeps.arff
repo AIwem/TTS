@@ -1,0 +1,1892 @@
+8	میان	N	POSDEP	7	_	_	_	_			از
+15	مادری	ADJ	POSDEP	14	_	_	_	_			و
+
+4	برادران	N	POSDEP	2	_	_	_			از
+
+
+
+8	عالم	N	POSDEP	7	_	_	_	_	_	_			در
+15	خورشید	N	POSDEP	14	_	_	_	_	_	_			و
+17	ماه	N	POSDEP	16	_	_	_	_	_	_			و
+
+4	تعبیر	N	PREDEP	6	_	_	_	_	_			را
+9	او	PR	POSDEP	8	_	_	_	_	_			از
+12	راز	N	PREDEP	14	_	_	_	_	_			را
+
+8	آینده	N	POSDEP	7	_	_	_	_	_			در
+14	فرمان	N	PREDEP	16	_	_	_	_	_			را
+
+3	او	PR	PREDEP	4	_	_	_	_			را
+6	پیامبری	N	POSDEP	5	_	_	_	_			به
+9	تعبیر	N	PREDEP	11	_	_	_	_			را
+13	او	PR	POSDEP	12	_	_	_	_			به
+
+6	الهامات	N	POSDEP	5	_	_	_	_			و
+14	عظمت	N	POSDEP	13	_	_	_	_			و
+17	چهره	N	POSDEP	16	_	_	_	_			در
+
+
+3	پیشنهاد	N	PREDEP	4	_	_	_			را
+
+3	روزها	N	POSDEP	1	_	_	_	_	_	_			در
+10	پدر	N	POSDEP	9	_	_	_	_	_	_			از
+13	یوسف	N	PREDEP	14	_	_	_	_	_	_			را
+18	صحرا	N	POSDEP	17	_	_	_	_	_	_			به
+23	آن‌ها	PR	POSDEP	22	_	_	_	_	_	_			به
+
+8	یوسف	N	PREDEP	9	_	_	_	_	_	_	_	_	_			را
+11	آن‌ها	PR	POSDEP	10	_	_	_	_	_	_	_	_	_			از
+17	او	PR	POSDEP	16	_	_	_	_	_	_	_	_	_			به
+23	ما	PR	POSDEP	22	_	_	_	_	_	_	_	_	_			به
+27	او	PR	PREDEP	28	_	_	_	_	_	_	_	_	Arg0			را
+30	دشت	N	POSDEP	29	_	_	_	_	_	_	_	_	_			به
+34	آنجا	N	POSDEP	33	_	_	_	_	_	_	_	_	_			در
+39	شادمانی	N	POSDEP	38	_	_	_	_	_	_	_	_	_			به
+
+3	او	PR	PREDEP	4	_	_	_	_			را
+8	زیانکاران	N	POSDEP	7	_	_	_	_			از
+
+5	یعقوب	N	POSDEP	4	_	_	_	_	_	_			از
+19	انتقام‌جویی	N	POSDEP	18	_	_	_	_	_	_			به
+
+
+3	درون	N	POSDEP	2	_	_	_			در
+6	خدا	N	POSDEP	5	_	_	_			به
+
+2	پیراهن	N	PREDEP	4	_	_	_	_	_	_			را
+7	خون	N	POSDEP	6	_	_	_	_	_	_			به
+19	او	PR	PREDEP	20	_	_	_	_	_	_			را
+
+7	شب	N	POSDEP	5	_	_	_	_	_	_			و
+13	این	PR	POSDEP	12	_	_	_	_	_	_			تا
+18	مدین	N	POSDEP	17	_	_	_	_	_	_			از
+20	مصر	N	POSDEP	19	_	_	_	_	_	_			به
+26	استفاده	N	POSDEP	25	_	_	_	_	_	_			و
+28	آب	N	POSDEP	27	_	_	_	_	_	_			از
+36	آن	PR	POSDEP	35	_	_	_	_	_	_			در
+
+9	پسری	N	POSDEP	8	_	_	_	_			به
+
+2	او	PR	PREDEP	3	_	_	_			را
+5	مصر	N	POSDEP	4	_	_	_			در
+7	بهایی	N	POSDEP	6	_	_	_			به
+
+3	یوسف	N	PREDEP	4	_	_	_	_			را
+
+4	همسر	N	POSDEP	3	_	_	_	_			و
+7	نعمت	N	POSDEP	6	_	_	_	_			از
+15	دلیل	N	POSDEP	13	_	_	_	_			به
+16	یوسف	N	PREDEP	17	_	_	_	_			را
+
+6	سن	N	POSDEP	5	_	_	_	_			به
+16	دلداده	ADJ	POSDEP	15	_	_	_	_			و
+
+4	روزها	N	POSDEP	2	_	_	_	_	_	_			در
+5	یوسف	N	PREDEP	6	_	_	_	_	_	_			را
+8	خانه	N	POSDEP	7	_	_	_	_	_	_			در
+14	وی	PR	POSDEP	13	_	_	_	_	_	_			به
+19	خود	PR	PREDEP	20	_	_	_	_	_	_			را
+
+3	هنگام	N	POSDEP	1	_	_	_	_			در
+4	و	CONJ	PCONJ	1	_	_	_	_			در
+5	در	PREP	POSDEP	4	_	_	_	_			و
+6	پشت	N	POSDEP	5	_	_	_	_			در
+9	،	PUNC	PUNC	8	_	_	_	_			آخر
+11	پیراهن	N	PREDEP	13	_	_	_	_			را
+
+4	هنگام	N	POSDEP	2	_	_	_	_			در
+10	راه	N	POSDEP	9	_	_	_	_			از
+14	این	ADJ	APREMOD	15	_	_	_	_			دو
+13	قضیه	N	POSDEP	16	_	_	_	_			را
+
+5	پیراهن	N	POSDEP	4	_	_	_	_	_			به
+13	پشت	N	POSDEP	12	_	_	_	_	_			از
+
+3	لحظه	N	POSDEP	1	_	_	_	_	_			در
+7	همسر	N	POSDEP	6	_	_	_	_	_			به
+12	او	PR	POSDEP	11	_	_	_	_	_			به
+18	افترا	N	POSDEP	17	_	_	_	_	_			و
+20	مکر	N	POSDEP	19	_	_	_	_	_			از
+
+5	زنان	N	PREDEP	7	_	_	_	_	_			را
+9	قصر	N	POSDEP	8	_	_	_	_	_			به
+13	یوسف	N	PREDEP	14	_	_	_	_	_			را
+16	آن‌ها	PR	POSDEP	15	_	_	_	_	_			به
+
+15	متمکن	ADJ	POSDEP	14	_	_	_	_			و
+12	زنان	N	PREDEP	17	_	_	_	_			را
+19	قصر	N	POSDEP	18	_	_	_	_			به
+
+3	کنیزان	N	POSDEP	2	_	_	_	_			به
+9	مهمان‌ها	N	POSDEP	8	_	_	_	_			از
+
+
+3	دست	N	POSDEP	2	_	_	_	_			به
+7	مهمانان	N	POSDEP	6	_	_	_	_			از
+12	پرتقال‌ها	N	PREDEP	13	_	_	_	_			را
+
+4	مشاهده	N	POSDEP	3	_	_	_	_			با
+7	جمال	N	POSDEP	6	_	_	_	_			و
+9	زیبایی	N	POSDEP	8	_	_	_	_			و
+14	دستان	N	PREDEP	16	_	_	_	_			را
+
+
+3	دعای	N	PREDEP	5	_	_	_			را
+
+2	وجودی	N	POSDEP	1	_	_	_	_	_			با
+7	ماجرا	N	POSDEP	5	_	_	_	_	_			در
+13	خاندان	N	POSDEP	12	_	_	_	_	_			و
+19	لکه	N	PREDEP	21	_	_	_	_	_			را
+23	خود	PR	POSDEP	22	_	_	_	_	_			از
+26	دستور	N	PREDEP	30	_	_	_	_	_			را
+
+4	هر	ADJ	APREMOD	5	_	_	_			دو
+7	زندان	N	POSDEP	6	_	_	_			در
+
+11	زندان	N	POSDEP	10	_	_	_	_	_			از
+17	دار	N	POSDEP	16	_	_	_	_	_			به
+
+3	کسی	N	POSDEP	2	_	_	Arg1	_	_			به
+6	آینده	N	POSDEP	5	_	_	_	_	_			در
+8	زندان	N	POSDEP	7	_	_	_	_	_			از
+14	م	PR	PREDEP	15	_	_	_	_	_			را
+17	پادشاه	N	POSDEP	16	_	_	_	_	_			به
+
+3	شبی	N	POSDEP	2	_	_	_	_			در
+5	شب‌ها	N	POSDEP	4	_	_	_	_			از
+12	او	PR	PREDEP	13	_	_	_	_			را
+
+3	هنگام	N	POSDEP	1	_	_	_	_	_	_	_			در
+9	زندان	N	POSDEP	8	_	_	_	_	_	_	_			در
+13	قضیه	N	PREDEP	15	_	_	_	_	_	_	_			را
+17	یاد	N	POSDEP	16	_	_	_	_	_	_	_			به
+21	پادشاه	N	POSDEP	20	_	_	_	_	_	_	_			به
+24	کسی	N	PREDEP	25	_	_	_	_	_	_	Arg0			را
+30	خواب	N	PREDEP	32	_	_	_	_	_	_	_			را
+
+6	تعبیر	N	PREDEP	9	_	_	_	_			را
+11	او	PR	POSDEP	10	_	_	_	_			به
+
+3	فکر	N	POSDEP	2	_	_	_	_	_	_			در
+7	درایت	N	POSDEP	6	_	_	_	_	_	_			به
+9	هوش	N	POSDEP	8	_	_	_	_	_	_			و
+17	او	PR	PREDEP	18	_	_	_	_	_	_			را
+20	قصر	N	POSDEP	19	_	_	_	_	_	_			به
+
+4	جواب	N	POSDEP	3	_	_	_	_	_	_			در
+9	زندان	N	POSDEP	8	_	_	_	_	_	_			از
+13	م	PR	PREDEP	14	_	_	_	_	_	_			را
+16	تهمت‌هایی	N	POSDEP	15	_	_	_	_	_	_			از
+19	من	PR	POSDEP	18	_	_	_	_	_	_			به
+
+7	زنان	N	PREDEP	8	_	_	_	_			را
+
+9	لغزشی	N	POSDEP	8	_	_	_	_			و
+11	او	PR	POSDEP	10	_	_	_	_			در
+
+5	جرم	N	POSDEP	4	_	_	_			به
+
+4	پاکدامنی	N	POSDEP	3	_	_	_	_	_			به
+11	یوسف	N	PREDEP	12	_	_	_	_	_			را
+14	احترام	N	POSDEP	13	_	_	_	_	_			با
+
+3	فرزندان	N	POSDEP	2	_	_	_			و
+7	زمره	N	POSDEP	6	_	_	_			در
+
+5	فرزندان	N	POSDEP	4	_	_	_	_	_			از
+10	مصر	N	POSDEP	9	_	_	_	_	_			به
+13	مایحتاج	N	PREDEP	15	_	_	_	_	_			را
+
+
+4	محل	N	POSDEP	3	_	_	_	_	_			در
+9	برادران	N	PREDEP	11	_	_	_	_	_			را
+14	حالی	N	POSDEP	13	_	_	_	_	_			در
+17	یوسف	N	PREDEP	18	_	_	_	_	_			را
+
+3	حال	N	POSDEP	2	_	_	_	_			از
+5	و	CONJ	PCONJ	2	_	_	_	_			از
+6	از	PREP	POSDEP	5	_	_	_	_			و
+7	خاندان	N	POSDEP	6	_	_	_	_			از
+
+5	بنیامین	N	PREDEP	6	_	_	_	_			را
+
+7	مصر	N	POSDEP	6	_	_	_	_	_			به
+14	برادر	N	PREDEP	16	_	_	_	_	_			را
+18	او	PR	POSDEP	17	_	_	_	_	_			به
+
+4	آن‌ها	PR	POSDEP	3	_	_	_	_	_	_			از
+9	گوشه‌ای	N	POSDEP	8	_	_	_	_	_	_			در
+11	دور	N	POSDEP	10	_	_	_	_	_	_			به
+13	چشم	N	POSDEP	12	_	_	_	_	_	_			از
+16	بنیامین	N	POSDEP	15	_	_	_	_	_	_			با
+20	خود	PR	PREDEP	21	_	_	_	_	_	_			را
+23	او	PR	POSDEP	22	_	_	_	_	_	_			به
+30	برادران	N	POSDEP	29	_	_	_	_	_	_			و
+27	داستان	N	PREDEP	32	_	_	_	_	_	_			را
+
+5	پدر	N	PREDEP	7	_	_	_	_			را
+14	توسل	N	POSDEP	13	_	_	_	_			با
+16	حیله‌ای	N	POSDEP	15	_	_	_	_			به
+18	کار	N	PREDEP	19	_	_	_	_			را
+
+4	اجناس	N	PREDEP	7	_	_	_	_			را
+9	بار	N	POSDEP	8	_	_	_	_			در
+14	ماموران	N	PREDEP	15	_	_	_	_			را
+
+9	بنیامین	N	POSDEP	8	_	_	_	_			به
+11	جنس	N	PREDEP	12	_	_	_	_			را
+14	آن	PR	POSDEP	13	_	_	_	_			در
+
+
+3	دل	N	POSDEP	2	_	_	_	_			به
+
+
+3	دربار	N	POSDEP	2	_	_	_	_	_	_	_			به
+11	التماس	N	POSDEP	10	_	_	_	_	_	_	_			و
+14	این	PR	POSDEP	13	_	_	_	_	_	_	_			تا
+19	حال	N	POSDEP	18	_	_	_	_	_	_	_			به
+26	خود	PR	PREDEP	27	_	_	_	_	_	_	_			را
+29	آن‌ها	PR	POSDEP	28	_	_	_	_	_	_	_			به
+
+4	شنیدن	N	POSDEP	3	_	_	_	_	_			با
+8	فکر	N	POSDEP	7	_	_	_	_	_			در
+12	او	PR	POSDEP	11	_	_	_	_	_			به
+
+2	سوال	N	PREDEP	3	_	_	_	_			را
+5	او	PR	POSDEP	4	_	_	_	_			از
+
+9	آن‌ها	PR	POSDEP	8	_	_	_	_	_			به
+14	لطف	N	POSDEP	13	_	_	_	_	_			با
+16	کرم	N	POSDEP	15	_	_	_	_	_			و
+18	ما	PR	PREDEP	19	_	_	_	_	_			را
+21	خطرها	N	POSDEP	20	_	_	_	_	_			از
+
+5	ناحیه	N	POSDEP	4	_	_	_	_	_			از
+11	صبر	N	POSDEP	10	_	_	_	_	_			و
+13	شکیبایی	N	POSDEP	12	_	_	_	_	_			و
+16	من	PR	POSDEP	15	_	_	_	_	_			به
+21	پاداش	N	PREDEP	23	_	_	_	_	_			را
+
+6	او	PR	POSDEP	5	_	_	_			از
+
+4	حق	N	POSDEP	3	_	_	_			در
+
+10	آن‌ها	PR	POSDEP	9	_	_	_	_	_	_	_			از
+15	آن‌ها	PR	POSDEP	14	_	_	_	_	_	_	_			به
+20	آن	PR	PREDEP	21	_	_	_	_	_	_	_			را
+27	او	PR	PREDEP	28	_	_	_	_	_	_	_			را
+
+3	فرزندان	N	POSDEP	2	_	_	_			و
+8	کنعان	N	POSDEP	7	_	_	_			از
+
+3	کمال	N	POSDEP	2	_	_	_	_			با
+6	پدر	N	POSDEP	5	_	_	_	_			از
+8	دودمان	N	POSDEP	7	_	_	_	_			و
+13	همگی	PR	PREDEP	14	_	_	_	_			را
+16	قصر	N	POSDEP	15	_	_	_	_			به
+
+5	قصر	N	POSDEP	4	_	_	_			در
+9	سجده	N	POSDEP	8	_	_	_			به
+
+3	هنگام	N	POSDEP	1	_	_	_	_	_	_	_	_			در
+6	یاد	N	POSDEP	5	_	_	_	_	_	_	_	_			به
+10	دوران	N	POSDEP	9	_	_	_	_	_	_	_	_			در
+17	پدر	N	POSDEP	16	_	_	_	_	_	_	_	_			به
+32	آن	PR	PREDEP	33	_	_	_	_	_	_	_	_			را
+
+
+5	او	PR	PREDEP	6	_	_	_	_	_			را
+8	نیل	N	POSDEP	7	_	_	_	_	_			در
+14	برکت	N	POSDEP	13	_	_	_	_	_			از
+
+13	قرآن	N	POSDEP	12	_	_	_	_	_			در
+20	نام	N	POSDEP	19	_	_	_	_	_			به
+
+3	نوادگان	N	POSDEP	2	_	_	_	_			از
+10	واسطه	N	POSDEP	8	_	_	_	_			با
+12	او	PR	POSDEP	11	_	_	_	_			به
+
+6	احقاف	N	POSDEP	5	_	_	_			در
+11	عمان	N	POSDEP	10	_	_	_			و
+14	جنوب	N	POSDEP	13	_	_	_			در
+
+5	تنومند	ADJ	POSDEP	4	_	_	_			و
+
+6	خرم	ADJ	POSDEP	5	_	_	_			و
+
+9	لجوج	ADJ	POSDEP	8	_	_	_			و
+
+6	کارهای	N	POSDEP	5	_	_	_	_	_			از
+
+2	قوم	N	PREDEP	4	_	_	_	_	_			را
+6	پرستش	N	POSDEP	5	_	_	_	_	_			به
+13	دعوت	N	PREDEP	15	_	_	_	_	_			را
+19	او	PR	POSDEP	18	_	_	_	_	_			به
+
+4	خدا	N	PREDEP	5	_	_	_	_			را
+14	غرور	N	POSDEP	13	_	_	_	_			در
+16	شهوت	N	POSDEP	15	_	_	_	_			و
+
+3	آن‌ها	PR	PREDEP	4	_	_	_	_			را
+
+
+4	فرصت	N	POSDEP	2	_	_	_	_	_	_			از
+10	آن‌ها	PR	POSDEP	9	_	_	_	_	_	_			از
+17	خدا	N	POSDEP	16	_	_	_	_	_	_			به
+
+3	مردم	N	POSDEP	2	_	_	_	_			از
+9	او	PR	POSDEP	8	_	_	_	_			از
+
+10	خرمی	N	POSDEP	9	_	_	_	_			و
+12	سرزمین	N	POSDEP	11	_	_	_	_			به
+
+5	کفر	N	POSDEP	4	_	_	_	_	_			به
+21	عذاب	N	PREDEP	22	_	_	_	_	_			را
+
+12	مدت	N	POSDEP	11	_	_	_	_	_	_	_	_			به
+17	روز	N	POSDEP	15	_	_	_	_	_	_	_	_			و
+23	آن‌ها	PR	PREDEP	24	_	_	_	_	_	_	_	_			را
+27	نابود	ADJ	POSDEP	26	_	_	_	_	_	_	_	_			و
+30	بدن‌های	N	PREDEP	32	_	_	_	_	_	_	_	_			را
+47	اطرافیان	N	POSDEP	46	_	_	_	_	_	_	_	_			و
+51	عذاب	N	POSDEP	49	_	_	_	_	_	_	_	_			از
+
+6	نابودی	N	POSDEP	5	_	_	_	_			و
+9	سرزمین	N	POSDEP	8	_	_	_	_			به
+16	عمر	N	POSDEP	14	_	_	_	_			تا
+18	آنجا	N	POSDEP	17	_	_	_	_			در
+
+5	سرزمین	N	POSDEP	4	_	_	_	_	_	_			در
+11	مردم	N	PREDEP	12	_	_	_	_	_	_			را
+14	یکتاپرستی	N	POSDEP	13	_	_	_	_	_	_			به
+25	شرایط	N	POSDEP	23	_	_	_	_	_	_			در
+28	وی	PR	POSDEP	27	_	_	_	_	_	_			به
+34	کنار	N	POSDEP	33	_	_	_	_	_	_			در
+
+3	سرزمین	N	POSDEP	2	_	_	_	_			به
+5	(	PUNC	PUNC	6	_	_	_	_			در
+7	اردن	N	POSDEP	6	_	_	_	_			در
+8	)	PUNC	PUNC	6	_	_	_	_			در
+16	انحراف	N	POSDEP	15	_	_	_	_			در
+18	فساد	N	POSDEP	17	_	_	_	_			و
+21	انحراف	N	POSDEP	19	_	_	_	_			و
+
+10	آن‌ها	PR	PREDEP	11	_	_	_	_	_	_			را
+18	عذاب	N	POSDEP	17	_	_	_	_	_	_			از
+27	کوردلان	N	POSDEP	25	_	_	_	_	_	_			در
+
+2	قوم	N	PREDEP	4	_	_	_	_	_	_	_			را
+6	خدا	N	POSDEP	5	_	_	_	_	_	_	_			به
+10	آن‌ها	PR	PREDEP	11	_	_	_	_	_	_	_			را
+13	عذاب	N	POSDEP	12	_	_	_	_	_	_	_			از
+29	تبلیغ	N	POSDEP	28	_	_	_	_	_	_	_			در
+
+7	سرشت	N	POSDEP	6	_	_	_	_	_	_	_			و
+5	طبیعت	N	PREDEP	9	_	_	_	_	_	_	_			را
+11	تباهی	N	POSDEP	10	_	_	_	_	_	_	_			به
+15	نظام	N	POSDEP	14	_	_	_	_	_	_	_			با
+22	مردان	N	POSDEP	21	_	_	_	_	_	_	_			با
+29	زنان	N	POSDEP	28	_	_	_	_	_	_	_			از
+
+
+3	انظار	N	POSDEP	2	_	_	_	_	_			در
+6	یکدیگر	PR	POSDEP	5	_	_	_	_	_			با
+11	کسانی	N	POSDEP	10	_	_	_	Arg0	_			به
+14	دیار	N	POSDEP	13	_	_	_	_	_			از
+
+4	ملائکه	N	POSDEP	3	_	_	_	_			از
+10	زمین	N	POSDEP	9	_	_	_	_			به
+
+4	موقع	N	POSDEP	2	_	_	_			در
+
+
+7	زشت‌کار	ADJ	POSDEP	6	_	_	_	_			و
+15	آن‌ها	PR	PREDEP	16	_	_	_	_			را
+18	برخورد	N	POSDEP	17	_	_	_	_			از
+
+
+3	همسر	N	POSDEP	2	_	_	_	_			از
+7	ورود	N	PREDEP	9	_	_	_	_			را
+11	قوم	N	POSDEP	10	_	_	_	_			از
+
+8	پشت‌بام	N	POSDEP	7	_	_	_	_	_			به
+14	کردن	N	POSDEP	12	_	_	_	_	_			با
+16	اوباشان	N	PREDEP	17	_	_	_	_	_			را
+
+3	آن‌ها	PR	POSDEP	2	_	_	_	_			به
+10	عمل	N	POSDEP	8	_	_	_	_			از
+
+
+3	صحبت	N	PREDEP	5	_	_	_	_	_			را
+11	خود	PR	PREDEP	12	_	_	_	_	_			را
+
+2	حقیقت	N	PREDEP	4	_	_	_			را
+6	او	PR	POSDEP	5	_	_	_			به
+
+2	علت	N	PREDEP	5	_	_	_			را
+
+
+6	درب	N	PREDEP	8	_	_	_	_	_			را
+
+4	لوط	N	POSDEP	3	_	_	_	_	_	_			به
+9	خانواده	N	POSDEP	8	_	_	_	_	_	_			با
+13	شهر	N	POSDEP	11	_	_	_	_	_	_			از
+17	زن	N	PREDEP	19	_	_	_	_	_	_			را
+21	خود	PR	POSDEP	20	_	_	_	_	_	_			با
+
+7	قرآن	N	POSDEP	6	_	_	_	_	_			در
+13	جا	N	POSDEP	11	_	_	_	_	_			در
+18	نام	N	POSDEP	17	_	_	_	_	_			به
+28	قرآن	N	POSDEP	27	_	_	_	_	_			از
+30	اسم	N	POSDEP	29	_	_	_	_	_			به
+
+6	پیامبران	N	POSDEP	5	_	_	_	_			از
+
+6	شکم	N	POSDEP	5	_	_	_	_			در
+11	لقب	N	POSDEP	10	_	_	_	_			با
+
+4	نزدیکی	N	POSDEP	3	_	_	_			در
+6	و	CONJ	PCONJ	3	_	_	_			در
+7	در	PREP	POSDEP	6	_	_	_			و
+8	کنار	N	POSDEP	7	_	_	_			در
+
+4	منطقه	N	POSDEP	3	_	_	_	_	_			در
+6	(	PUNC	PUNC	7	_	_	_	_	_			در
+8	عراق	N	POSDEP	7	_	_	_	_	_			در
+10	)	PUNC	PUNC	7	_	_	_	_	_			در
+15	شمار	N	POSDEP	14	_	_	_	_	_			به
+21	دوران	N	POSDEP	19	_	_	_	_	_			در
+26	شهرهای	N	POSDEP	22	_	_	_	_	_			از
+25	بزرگترین	ADJ	POSDEP	24	_	_	_	_	_			و
+34	بیش‌از	ADJ	NPREMOD	35	_	_	_	_	_			صدهزار
+
+2	حضرت	N	PREDEP	4	_	_	_			را
+
+2	آن‌ها	PR	PREDEP	3	_	_	_	_			را
+5	راه	N	POSDEP	4	_	_	_	_			به
+8	پرستش	N	POSDEP	7	_	_	_	_			و
+
+10	او	PR	POSDEP	9	_	_	_	_	_	_			به
+14	آن	ADJ	APREMOD	15	_	_	_	_	_	_			و
+23	دانشمندان	N	POSDEP	22	_	_	_	_	_	_			از
+29	زاهدی	N	POSDEP	28	_	_	_	_	_	_			و
+31	نام	N	POSDEP	30	_	_	_	_	_	_			به
+
+10	مردم	N	PREDEP	12	_	_	_	_	_			را
+
+3	او	PR	POSDEP	2	_	_	_	_	_			به
+7	کار	N	PREDEP	8	_	_	_	_	_			را
+12	هلاکت	N	PREDEP	14	_	_	_	_	_			را
+
+3	قوم	N	PREDEP	5	_	_	_			را
+
+7	آنان	PR	POSDEP	6	_	_	_	_	_	_			از
+11	درگاه	N	POSDEP	10	_	_	_	_	_	_			به
+
+
+2	قضیه	N	PREDEP	3	_	_	_	_	_			را
+6	اهالی	N	POSDEP	4	_	_	_	_	_			از
+10	او	PR	PREDEP	11	_	_	_	_	_			را
+17	توبه	N	POSDEP	16	_	_	_	_	_			و
+13	ماجرای	N	PREDEP	19	_	_	_	_	_			را
+
+3	شنیدن	N	POSDEP	2	_	_	_	_	_	_			با
+13	شهر	N	PREDEP	14	_	_	_	_	_	_			را
+21	کنار	N	POSDEP	20	_	_	_	_	_	_			به
+
+9	مسافر	N	POSDEP	8	_	_	_	_			و
+
+9	جلوی	PREP	PREDEP	11	_	_	_	_	_	_			را
+14	دهان	N	PREDEP	16	_	_	_	_	_	_			را
+
+5	نام	N	POSDEP	4	_	_	_	_	_	_			به
+9	او	PR	PREDEP	10	_	_	_	_	_	_			را
+12	درون	N	POSDEP	11	_	_	_	_	_	_			در
+19	او	PR	PREDEP	20	_	_	_	_	_	_			را
+24	اعماق	N	POSDEP	23	_	_	_	_	_	_			به
+
+3	ماهی	N	POSDEP	2	_	_	_	_			به
+8	او	PR	POSDEP	7	_	_	_	_			به
+
+6	درون	N	POSDEP	5	_	_	_	_	_			در
+10	اطاعت	N	POSDEP	9	_	_	_	_	_			به
+12	پرستش	N	POSDEP	11	_	_	_	_	_			و
+17	عظمت	N	POSDEP	16	_	_	_	_	_			به
+
+3	توبه	N	PREDEP	5	_	_	_	_	_	_	_			را
+10	ماهی	N	POSDEP	9	_	_	_	_	Arg0	Arg0	_			به
+14	او	PR	PREDEP	15	_	_	_	_	_	_	_			را
+17	ساحل	N	POSDEP	16	_	_	_	_	_	_	_			به
+
+3	حالی	N	POSDEP	2	_	_	_	_			با
+6	بیمار	ADJ	POSDEP	5	_	_	_	_			و
+8	شکم	N	POSDEP	7	_	_	_	_			از
+14	کنار	N	POSDEP	13	_	_	_	_			در
+17	سایه	N	POSDEP	16	_	_	_	_			به
+23	قسم	N	POSDEP	22	_	_	_	_			از
+
+7	سلامتی	N	PREDEP	9	_	_	_	_			را
+
+3	هنگام	N	POSDEP	1	_	_	_	_			در
+11	درگاه	N	POSDEP	10	_	_	_	_			از
+16	بخشش	N	POSDEP	15	_	_	_	_			و
+
+3	سمت	N	POSDEP	2	_	_	_			به
+
+4	زبان	N	POSDEP	3	_	_	_	_	_			به
+
+
+6	خبر	N	PREDEP	9	_	_	_	_			را
+11	مردم	N	POSDEP	10	_	_	_	_			به
+
+4	چنین	N	PREDEP	6	_	_	_	_	_	_			را
+10	چوپان	N	PREDEP	11	_	_	_	_	_	_			را
+18	او	PR	PREDEP	19	_	_	_	_	_	_			را
+
+4	آن‌ها	PR	POSDEP	3	_	_	_	_			به
+
+
+6	استقبال	N	POSDEP	5	_	_	_	_	_	_			به
+10	او	PR	PREDEP	11	_	_	_	_	_	_			را
+13	احترام	N	POSDEP	12	_	_	_	_	_	_			با
+19	او	PR	POSDEP	18	_	_	_	_	_	_			به
+27	راهنمایی‌های	N	POSDEP	26	_	_	_	_	_	_			و
+
+2	آدم	N	PREDEP	3	_	_	_	_			را
+7	مادر	N	POSDEP	6	_	_	_	_			و
+
+8	زمین	N	POSDEP	7	_	_	_	_	_	_			در
+11	نماینده‌ای	N	POSDEP	10	_	_	_	_	_	_			و
+21	خبر	N	POSDEP	19	_	_	_	_	_	_			از
+
+2	خود	PR	PREDEP	3	_	_	_			را
+5	جانشینی	N	POSDEP	4	_	_	_			به
+7	زمین	N	POSDEP	6	_	_	_			در
+
+4	اسرار	N	POSDEP	3	_	_	Arg1	_	_	_			با
+15	چیزی	N	PREDEP	16	_	_	_	_	_	_			را
+21	آن	PR	POSDEP	20	_	_	_	_	_	_			از
+
+8	اسما	N	PREDEP	9	_	_	_	_	_			را
+11	او	PR	POSDEP	10	_	_	_	_	_			به
+15	زمین	N	POSDEP	14	_	_	_	_	_			در
+20	آن	PR	POSDEP	19	_	_	_	_	_			از
+
+3	آغاز	N	POSDEP	2	_	_	_	_	_	_	_	_	_			در
+10	آب	N	POSDEP	9	_	_	_	_	_	_	_	_	_			با
+21	گل	N	POSDEP	20	_	_	_	_	_	_	_	_	_			به
+36	حالت	N	POSDEP	35	_	_	_	_	_	_	_	_	_			به
+
+5	آن	PR	POSDEP	4	_	_	_	_			به
+13	او	PR	POSDEP	12	_	_	_	_			به
+
+3	فرشتگان	N	POSDEP	2	_	_	_	Arg0	_	Arg0	_			به
+10	تجلیل	N	POSDEP	9	_	_	_	_	_	_	_			و
+12	مقام	N	POSDEP	11	_	_	_	_	_	_	_			از
+17	او	PR	PREDEP	18	_	_	_	_	_	_	_			را
+23	خدا	N	PREDEP	24	_	_	_	_	_	_	Arg0			را
+28	‌جا	ADJ	POSDEP	27	_	_	_	_	_	_	_			به
+32	موجود	N	PREDEP	34	_	_	_	_	_	_	_			را
+
+3	فرشتگان	N	POSDEP	2	_	_	_	_	_	_	_	_			به
+12	گل	N	POSDEP	11	_	_	_	_	_	_	_	_			از
+17	آن	PR	PREDEP	18	_	_	_	_	_	_	_	_			را
+23	روح	N	POSDEP	22	_	_	_	_	_	_	_	_			از
+26	آن	PR	POSDEP	25	_	_	_	_	_	_	_	_			در
+
+12	کالبد	N	POSDEP	11	_	_	_	_			در
+
+6	آدم	N	POSDEP	5	_	_	_	Arg1			به
+
+4	‌حکم	N	POSDEP	3	_	_	_	_			به
+9	او	PR	PREDEP	10	_	_	_	_			را
+12	امور	N	POSDEP	11	_	_	_	_			به
+20	‌حکم	N	POSDEP	19	_	_	_	_			به
+24	او	PR	PREDEP	25	_	_	_	_			را
+27	امور	N	POSDEP	26	_	_	_	_			به
+
+2	جنبه‌های	N	PREDEP	8	_	_	_	_	_			را
+16	آدم	N	PREDEP	17	_	_	_	_	_			را
+23	خدا	N	PREDEP	24	_	_	_	_	_			را
+26	راستای	N	POSDEP	25	_	_	_	_	_			در
+29	آدم	N	POSDEP	28	_	_	_	_	_			از
+
+7	آدم	N	POSDEP	6	_	_	_	_	_			به
+12	نسل	N	PREDEP	14	_	_	_	_	_			را
+16	وجود	N	POSDEP	15	_	_	_	_	_			به
+
+13	او	PR	POSDEP	12	_	_	_	_	_	_			با
+18	او	PR	POSDEP	17	_	_	_	_	_	_			از
+
+2	حوا	N	PREDEP	3	_	_	_			را
+6	گل	N	POSDEP	4	_	_	_			از
+
+
+7	آن‌ها	PR	PREDEP	8	_	_	_	_	_			را
+12	آن‌ها	PR	PREDEP	13	_	_	_	_	_			را
+15	فریبکاری	N	POSDEP	14	_	_	_	_	_			با
+17	مقام	N	POSDEP	16	_	_	_	_	_			از
+
+5	احترام	N	POSDEP	4	_	_	_			و
+7	اندام	N	POSDEP	6	_	_	_			از
+
+4	حوا	N	POSDEP	3	_	_	_	_			و
+7	اشتباه	N	POSDEP	6	_	_	_	_			به
+
+3	آن‌ها	PR	PREDEP	4	_	_	_	_	_	_	_			را
+6	بهشت	N	POSDEP	5	_	_	_	_	_	_	_			از
+8	زمین	N	POSDEP	7	_	_	_	_	_	_	_			به
+12	آن‌ها	PR	PREDEP	13	_	_	_	_	Arg0	Arg0	Arg1			را
+19	زمین	N	POSDEP	18	_	_	_	_	_	_	_			در
+23	آن	PR	PREDEP	24	_	_	_	_	_	_	_			را
+29	پایان	N	POSDEP	28	_	_	_	_	_	_	_			تا
+33	آن	PR	POSDEP	32	_	_	_	_	_	_	_			از
+
+3	حوا	N	POSDEP	2	_	_	_	_			و
+6	بهشت	N	POSDEP	5	_	_	_	_			از
+11	سرزمین	N	POSDEP	10	_	_	_	_			در
+
+7	کنار	N	POSDEP	6	_	_	_	_	_	_	_	_			در
+12	آن	PR	PREDEP	13	_	_	_	_	_	_	_	_			را
+26	آنجا	N	POSDEP	25	_	_	_	_	_	_	_	_			در
+48	آن	PR	POSDEP	47	_	_	_	_	_	_	_	_			در
+
+5	سجده	N	POSDEP	4	_	_	_	_	_			به
+9	فراق	N	POSDEP	8	_	_	_	_	_			از
+15	گناه	N	POSDEP	14	_	_	_	_	_			به
+
+2	فرمان	N	POSDEP	1	_	_	_	_			به
+11	گنجینه	N	POSDEP	10	_	_	_	_			و
+8	میراث	N	PREDEP	15	_	_	_	_			را
+22	ودیعه	N	POSDEP	21	_	_	_	_			به
+
+3	بستر	N	POSDEP	2	_	_	_	_	_			در
+9	حالی	N	POSDEP	8	_	_	_	_	_			در
+14	یکتایی	N	POSDEP	13	_	_	_	_	_			به
+17	شکر	N	POSDEP	16	_	_	_	_	_			و
+19	سپاس	N	POSDEP	18	_	_	_	_	_			و
+23	رحمت	N	POSDEP	22	_	_	_	_	_			به
+
+2	پدر	N	PREDEP	4	_	_	_	_	_	Arg1	_	_	_			را
+23	آیین	N	PREDEP	26	_	_	_	_	_	_	_	_	_			را
+28	مردم	N	POSDEP	27	_	_	_	_	_	_	_	_	_			به
+33	وصایا	N	PREDEP	34	_	_	_	_	_	_	_	_	_			را
+36	پسر	N	POSDEP	35	_	_	_	_	_	_	_	_	_			به
+
+14	قرآن	N	POSDEP	13	_	_	_	_	_			در
+21	نام	N	POSDEP	20	_	_	_	_	_			به
+
+10	کتاب	N	POSDEP	9	_	_	_	_	_			و
+
+4	دعوت	N	POSDEP	3	_	_	_			و
+7	شامات	N	POSDEP	6	_	_	_			در
+9	فلسطین	N	POSDEP	8	_	_	_			و
+11	عراق	N	POSDEP	10	_	_	_			و
+
+6	بت‌پرستی	N	POSDEP	5	_	_	_			در
+12	بیهوده‌گرایی	N	POSDEP	11	_	_	_			و
+
+4	عقیده	N	POSDEP	3	_	_	_	_	_	_			در
+15	عقیده	N	POSDEP	14	_	_	_	_	_	_			از
+
+7	بیانی	N	POSDEP	6	_	_	_	_	_			با
+10	روان	ADJ	POSDEP	9	_	_	_	_	_			و
+12	گفتاری	N	POSDEP	11	_	_	_	_	_			و
+15	دلنشین	ADJ	POSDEP	14	_	_	_	_	_			و
+18	سخنانی	N	POSDEP	17	_	_	_	_	_			و
+21	شیوا	ADJ	POSDEP	20	_	_	_	_	_			و
+23	قوم	N	PREDEP	25	_	_	_	_	_			را
+33	دریافت	N	POSDEP	32	_	_	_	_	_			به
+39	عذاب	N	POSDEP	38	_	_	_	_	_			از
+
+6	بالین	N	POSDEP	5	_	_	_	_	_			به
+13	آثار	N	POSDEP	12	_	_	_	_	_			و
+11	پستی	N	PREDEP	16	_	_	_	_	_			را
+22	خطر	N	PREDEP	26	_	_	_	_	_			را
+28	آن‌ها	PR	POSDEP	27	_	_	_	_	_			به
+
+2	دست	N	PREDEP	5	_	_	_	_			را
+
+12	سنگدلان	N	POSDEP	10	_	_	_	_			در
+17	برنامه	N	PREDEP	19	_	_	_	_			را
+
+2	آن‌ها	PR	PREDEP	3	_	_	_	_	_			را
+7	محرمانه	ADJ	POSDEP	6	_	_	_	_	_			و
+16	آشکار	ADJ	POSDEP	15	_	_	_	_	_			و
+23	روش	PR	POSDEP	22	_	_	_	_	_			از
+28	نهان	ADJ	POSDEP	27	_	_	_	_	_			و
+
+9	روز	N	POSDEP	8	_	_	_			و
+11	فکر	N	POSDEP	10	_	_	_			در
+14	نجات	N	POSDEP	13	_	_	_			و
+17	چنگال	N	POSDEP	16	_	_	_			از
+20	بت‌پرستی	N	POSDEP	19	_	_	_			و
+
+3	کارهایی	N	POSDEP	2	_	_	Arg1	_			از
+
+3	هنگام	N	POSDEP	1	_	_	_	_			در
+7	دستور	N	PREDEP	10	_	_	_	_			را
+12	حضرت	N	POSDEP	11	_	_	_	_			به
+
+11	قوم	N	PREDEP	13	_	_	_	_			را
+15	عذاب	N	POSDEP	14	_	_	_	_			از
+19	بلای	N	POSDEP	18	_	_	_	_			و
+29	لجاجت	N	POSDEP	28	_	_	_	_			به
+
+3	طول	N	POSDEP	2	_	_	_	_	_			در
+9	او	PR	POSDEP	8	_	_	_	_	_			به
+13	او	PR	PREDEP	14	_	_	_	_	_			را
+16	دیوانگی	N	POSDEP	15	_	_	_	_	_			به
+
+3	او	PR	PREDEP	4	_	_	_	Arg1	Arg0	Arg0	Arg0			را
+14	هوش	PR	POSDEP	13	_	_	_	_	_	_	_			به
+19	کار	N	PREDEP	21	_	_	_	_	_	_	_			را
+
+3	دستور	N	PREDEP	6	_	_	_			را
+
+5	این	PR	POSDEP	4	_	_	_	_	_	_			از
+8	آن‌ها	PR	PREDEP	9	_	_	_	_	_	_			را
+14	نجاری	N	POSDEP	13	_	_	_	_	_	_			به
+20	او	PR	PREDEP	21	_	_	_	_	_	_			را
+
+3	شما	PR	PREDEP	4	_	_	_			را
+
+17	زبان	N	POSDEP	16	_	_	_	_	_			به
+
+
+8	حیوانات	N	POSDEP	5	_	_	_	_			از
+14	ماده	ADJ	POSDEP	13	_	_	_	_			و
+19	کشتی	N	POSDEP	18	_	_	_	_			در
+
+3	دستور	N	POSDEP	2	_	_	_	_			به
+10	نزدیکان	N	POSDEP	9	_	_	_	_			و
+12	مومنین	N	POSDEP	11	_	_	_	_			و
+6	اعضای	N	PREDEP	13	_	_	_	_			را
+17	پسر	N	POSDEP	16	_	_	_	_			و
+22	کافران	N	POSDEP	21	_	_	_	_			از
+
+8	او	PR	POSDEP	7	_	_	_	_	Arg0	Arg1			از
+
+3	دعوت	N	PREDEP	5	_	_	_	_	_	_			را
+15	پدر	N	POSDEP	14	_	_	_	_	_	_			به
+23	بلندی‌ها	N	POSDEP	22	_	_	_	_	_	_			به
+
+2	آنچه	PR	PREDEP	3	_	_	_	_			را
+6	آن	PR	POSDEP	5	_	_	_	_			از
+10	من	PR	POSDEP	9	_	_	_	_			از
+
+3	زمین	N	POSDEP	2	_	_	_	_	_	_			از
+8	آب	N	POSDEP	7	_	_	_	_	_	_			با
+14	کافران	N	PREDEP	15	_	_	_	_	_	_			را
+17	کام	N	POSDEP	16	_	_	_	_	_	_			به
+
+6	دستور	N	POSDEP	5	_	_	_	_	_			به
+10	آبها	N	PREDEP	11	_	_	_	_	_			را
+13	خود	PR	POSDEP	12	_	_	_	_	_			در
+18	کوه	N	POSDEP	17	_	_	_	_	_			به
+30	سرزمین	N	POSDEP	29	_	_	_	_	_			در
+
+4	همراهان	N	POSDEP	3	_	_	_	_	_			و
+11	کنار	N	POSDEP	10	_	_	_	_	_			در
+18	زندگی	N	POSDEP	17	_	_	_	_	_			به
+
+2	اواخر	N	POSDEP	1	_	_	_	_	_			در
+11	او	PR	POSDEP	10	_	_	_	_	_			به
+18	عمر	N	POSDEP	17	_	_	_	_	_			و
+21	سر	N	POSDEP	20	_	_	_	_	_			به
+
+6	علم	N	POSDEP	5	_	_	_	_	_			و
+3	اسم	N	PREDEP	8	_	_	_	_	_			را
+10	پسر	N	POSDEP	9	_	_	_	_	_			به
+24	دعوت	N	PREDEP	26	_	_	_	_	_			را
+
+6	دنیای	N	POSDEP	4	_	_	_	_			به
+10	خود	PR	PREDEP	11	_	_	_	_			را
+
+2	ماموریت	N	PREDEP	4	_	_	_			را
+
+3	روح	N	PREDEP	5	_	_	_			را
+
+10	شریعت	N	POSDEP	9	_	_	_	_	_			و
+
+8	بونا	N	POSDEP	6	_	_	_			یا
+
+4	زمان	N	POSDEP	3	_	_	_			در
+
+9	دوره	N	POSDEP	7	_	_	_	Arg1			در
+16	:	PUNC	PUNC	15	_	_	_	_			از
+17	مقام	N	POSDEP	15	_	_	_	_			از
+31	امامت	N	POSDEP	30	_	_	_	_			و
+
+5	بت‌پرستی	N	POSDEP	4	_	_	_			در
+10	فساد	N	POSDEP	9	_	_	_			و
+
+3	خود	PR	PREDEP	4	_	_	_	_			را
+6	محضر	N	POSDEP	5	_	_	_	_			به
+11	موضوع	N	PREDEP	12	_	_	_	_			را
+14	نمرود	N	POSDEP	13	_	_	_	_			به
+
+3	وقت	N	POSDEP	1	_	_	_	_	_			در
+7	عالم	N	POSDEP	6	_	_	_	_	_			در
+13	آسمان	N	POSDEP	12	_	_	_	_	_			در
+22	ماه	N	POSDEP	21	_	_	_	_	_			و
+
+15	دنیا	N	POSDEP	14	_	_	_	_	_	_			به
+21	رژیم	N	POSDEP	20	_	_	_	_	_	_			و
+24	دست	N	POSDEP	23	_	_	_	_	_	_			به
+
+6	جلوی	PREP	PREDEP	9	_	_	_	_	_	_	_			را
+16	مردان	N	POSDEP	15	_	_	_	_	_	_	_			و
+14	زنان	N	PREDEP	17	_	_	_	_	_	_	_			را
+19	هم	PR	POSDEP	18	_	_	_	_	_	_	_			از
+27	دنیا	N	POSDEP	26	_	_	_	_	_	_	_			به
+29	آن	PR	PREDEP	30	_	_	_	_	_	_	_			را
+
+8	قابله‌های	N	POSDEP	7	_	_	_	_			و
+16	بودن	N	POSDEP	14	_	_	_	_			به
+
+2	وجود	N	PREDEP	4	_	_	_	_			را
+6	چشم	N	POSDEP	5	_	_	_	_			از
+13	خارج	N	POSDEP	12	_	_	_	_			در
+15	شهر	N	POSDEP	14	_	_	_	_			از
+
+3	دیدن	N	POSDEP	2	_	_	_	_	_			با
+6	ستارگان	N	POSDEP	5	_	_	_	_	_			و
+8	سایر	N	POSDEP	7	_	_	_	_	_			و
+12	نکته	N	POSDEP	10	_	_	_	_	_			به
+
+2	توحید	N	PREDEP	3	_	_	_			را
+6	زمان	N	POSDEP	4	_	_	_			در
+
+7	او	PR	PREDEP	8	_	_	_	_			را
+
+2	او	PR	PREDEP	3	_	_	_	_			را
+6	کردن	N	POSDEP	4	_	_	_	_			به
+11	خود	PR	POSDEP	10	_	_	_	_			از
+
+3	تهدیدهای	N	POSDEP	2	_	_	_	_			از
+8	دعوت	N	POSDEP	7	_	_	_	_			به
+
+3	ابراهیم	N	POSDEP	2	_	_	_	_			به
+
+3	انجام	N	POSDEP	2	_	_	_	_	_			از
+9	او	PR	PREDEP	10	_	_	_	_	_			را
+15	فرصت	N	POSDEP	14	_	_	_	_	_			در
+18	او	PR	POSDEP	17	_	_	_	_	_			از
+
+3	راههای	N	POSDEP	2	_	_	_	_			از
+7	دعوت	N	POSDEP	6	_	_	_	_			به
+11	مردم	N	POSDEP	9	_	_	_	_			و
+13	توحید	N	POSDEP	12	_	_	_	_			به
+
+5	وجود	N	POSDEP	4	_	_	_	_	_	_	_	_			از
+12	بت‌خانه	N	POSDEP	11	_	_	_	_	_	_	_	_			به
+18	تبر	N	POSDEP	17	_	_	_	_	_	_	_	_			با
+20	جان	N	POSDEP	19	_	_	_	_	_	_	_	_			به
+25	آن‌ها	PR	PREDEP	26	_	_	_	_	_	_	_	_			را
+34	تبر	N	PREDEP	35	_	_	_	_	_	_	_	_			را
+37	دوش	N	POSDEP	36	_	_	_	_	_	_	_	_			به
+42	خانه	N	POSDEP	41	_	_	_	_	_	_	_	_			به
+
+8	جریان	N	PREDEP	9	_	_	_	_			را
+11	او	PR	POSDEP	10	_	_	_	_			از
+
+5	فرصت	N	POSDEP	3	_	_	_	_	_			از
+10	آن‌ها	PR	POSDEP	9	_	_	_	_	_			به
+13	بتها	N	PREDEP	14	_	_	_	_	_			را
+
+3	هنگام	N	POSDEP	1	_	_	_	_	_			در
+
+5	ابراهیم	N	PREDEP	6	_	_	_	_	_	_	_			را
+8	زندان	N	POSDEP	7	_	_	_	_	_	_	_			به
+12	مردم	N	POSDEP	11	_	_	_	_	_	_	_			به
+16	هیزم	N	PREDEP	18	_	_	_	_	_	_	_			را
+22	ابراهیم	N	PREDEP	23	_	_	_	_	_	_	_			را
+25	آن	PR	POSDEP	24	_	_	_	_	_	_	_			در
+
+3	هنگام	N	POSDEP	1	_	_	_	_	_			در
+21	گوارا	ADJ	POSDEP	20	_	_	_	_	_			و
+
+5	حجت	N	PREDEP	6	_	_	_	_	_			را
+23	موجودات	N	POSDEP	21	_	_	_	_	_			با
+25	زندگی	N	PREDEP	28	_	_	_	_	_			را
+
+2	آنجا	N	POSDEP	1	_	_	_	_			در
+
+3	ترس	N	POSDEP	2	_	_	_	_	_	_			از
+7	هراس	N	POSDEP	6	_	_	_	_	_	_			به
+13	آنجا	N	POSDEP	12	_	_	_	_	_	_			از
+19	جایی	N	POSDEP	18	_	_	_	_	_	_			به
+23	او	PR	PREDEP	24	_	_	_	_	_	_			را
+
+6	مصر	N	POSDEP	5	_	_	_	_			در
+12	اطراف	N	POSDEP	11	_	_	_	_			از
+14	دیدن	N	POSDEP	13	_	_	_	_			به
+
+2	علت	N	PREDEP	5	_	_	_	_	_	_			را
+12	خبر	N	PREDEP	15	_	_	_	_	_	_			را
+
+10	همراه	N	POSDEP	9	_	_	_	_	_			به
+
+12	فلسطین	N	POSDEP	11	_	_	_	_	_	_			به
+16	قسمت	N	PREDEP	19	_	_	_	_	_	_			را
+25	لوط	N	PREDEP	29	_	_	_	_	_	_			را
+31	قسمت	N	POSDEP	30	_	_	_	_	_	_			به
+34	فاصله	N	POSDEP	33	_	_	_	_	_	_			با
+
+10	او	PR	PREDEP	11	_	_	_	_	_			را
+
+4	ساره	N	POSDEP	3	_	_	_	_	_			از
+7	کنیز	N	PREDEP	10	_	_	_	_	_			را
+12	ابراهیم	N	POSDEP	11	_	_	_	_	Arg1			به
+16	او	PR	POSDEP	15	_	_	_	_	_			از
+
+3	ابراهیم	N	POSDEP	2	_	_	_	_			و
+14	نام	N	POSDEP	13	_	_	_	_			به
+
+5	انتظار	N	POSDEP	4	_	_	_	_	_	_			در
+10	او	PR	POSDEP	9	_	_	_	_	_	_			به
+17	اسماعیل	N	PREDEP	18	_	_	_	_	_	_			را
+24	داشتن	N	POSDEP	23	_	_	_	_	_	_			به
+
+3	ابراهیم	N	POSDEP	2	_	_	_	Arg0	Arg0	_			از
+9	امدادهای	N	POSDEP	8	_	_	_	_	_	_			از
+
+5	زندگی	N	POSDEP	4	_	_	_	_	_	_			در
+14	پاداشهای	N	POSDEP	13	_	_	_	_	_	_			از
+18	ابراهیم	N	POSDEP	17	_	_	_	_	_	_			به
+26	نام	N	POSDEP	25	_	_	_	_	_	_			به
+29	اسحاق	N	POSDEP	28	_	_	_	_	_	_			و
+41	راه	N	PREDEP	43	_	_	_	_	_	_			را
+
+7	روی	N	POSDEP	6	_	_	_	_	_			در
+
+3	خدا	N	POSDEP	2	_	_	_	_	_	_			از
+6	مکان	N	PREDEP	8	_	_	_	_	_	_			را
+10	او	PR	POSDEP	9	_	_	_	_	_	_			به
+18	زمین	N	POSDEP	17	_	_	_	_	_	_			به
+22	مکان	N	PREDEP	25	_	_	_	_	_	_			را
+
+3	همراه	N	POSDEP	2	_	_	_			به
+5	خانه	N	PREDEP	7	_	_	_			را
+
+2	فرزند	N	PREDEP	5	_	_	_	_			را
+7	مکه	N	POSDEP	6	_	_	_	_			در
+15	دیدار	N	POSDEP	14	_	_	_	_			به
+
+3	دیدارها	N	POSDEP	1	_	_	_	_	_			در
+6	خواب	N	POSDEP	5	_	_	_	_	_			در
+11	او	PR	POSDEP	10	_	_	_	_	_			به
+15	فرزند	N	PREDEP	17	_	_	_	_	_			را
+
+2	ماجرا	N	PREDEP	3	_	_	_	_	_			را
+5	اسماعیل	N	POSDEP	4	_	_	_	_	_			به
+8	ایمان	N	PREDEP	10	_	_	_	_	_			را
+14	آرامش	N	POSDEP	13	_	_	_	_	_			با
+17	او	PR	PREDEP	18	_	_	_	_	_			را
+
+9	فرمان	N	PREDEP	11	_	_	_	_	_			را
+
+1	کارد	N	PREDEP	2	_	_	_	_			را
+10	فرمان	N	POSDEP	9	_	_	_	_			به
+
+8	ذبح	N	POSDEP	7	_	_	_	_	_	_			از
+16	آزمایش	N	POSDEP	15	_	_	_	_	_	_			از
+18	امتحان	N	POSDEP	17	_	_	_	_	_	_			و
+26	آزمایش	N	POSDEP	24	_	_	_	_	_	_			در
+
+3	گوسفند	N	PREDEP	4	_	_	_	Arg1			را
+
+4	راههای	N	POSDEP	3	_	_	_	_			از
+7	ارشاد	N	POSDEP	6	_	_	_	_			به
+12	آنها	PR	POSDEP	13	_	_	_	_			را
+15	پرستش	N	POSDEP	14	_	_	_	_			به
+
+6	خوردن	N	POSDEP	5	_	_	_			در
+8	آشامیدن	N	POSDEP	7	_	_	_			و
+10	ساختن	N	POSDEP	9	_	_	_			و
+
+2	آنها	PR	PREDEP	3	_	_	_	_			را
+6	کار	N	POSDEP	4	_	_	_	_			از
+11	ارشاد	N	POSDEP	10	_	_	_	_			به
+
+3	صالح	N	POSDEP	2	_	_	_	Arg0	_			از
+
+
+8	آنها	PR	PREDEP	9	_	_	_	_	_			را
+11	راه‌های	N	POSDEP	10	_	_	_	_	_			از
+17	ارشاد	N	POSDEP	16	_	_	_	_	_			از
+24	آنها	PR	POSDEP	23	_	_	_	_	_			به
+
+4	پیشنهاد	N	PREDEP	5	_	_	_			را
+
+6	مکان	N	POSDEP	4	_	_	_	_	_			به
+9	درخواست	N	PREDEP	11	_	_	_	_	_			را
+13	بت	N	POSDEP	12	_	_	_	_	_			به
+22	او	PR	POSDEP	21	_	_	_	_	_			به
+
+11	بتها	N	POSDEP	10	_	_	_	_			و
+
+3	درخواست	N	POSDEP	2	_	_	_			به
+8	لحظه	N	POSDEP	6	_	_	_			در
+9	بچه‌ای	N	PREDEP	10	_	_	_			را
+12	دنیا	N	POSDEP	11	_	_	_			به
+
+4	قوم	N	POSDEP	3	_	_	_	_			از
+8	فساد	N	POSDEP	7	_	_	_	_			در
+11	بقیه	N	POSDEP	10	_	_	_	_			از
+15	قتل	N	POSDEP	14	_	_	_	_			به
+
+4	قتل	N	POSDEP	3	_	_	_			به
+
+
+5	پیام	N	PREDEP	7	_	_	_			را
+9	آنها	PR	POSDEP	8	_	_	_			به
+
+13	پود	N	POSDEP	12	_	_	_	_			و
+11	تار	N	PREDEP	15	_	_	_	_			را
+18	نابود	ADJ	POSDEP	17	_	_	_	_			و
+
+7	افراد	N	POSDEP	6	_	_	_	_			و
+11	او	PR	POSDEP	10	_	_	_	_			به
+
+14	سوره	N	POSDEP	12	_	_	_	_			در
+
+13	خود	PR	POSDEP	12	_	_	_	_	_			به
+20	او	PR	POSDEP	19	_	_	_	_	_			با
+
+1	داستان	N	PREDEP	8	_	_	_			را
+12	دوره	N	POSDEP	10	_	_	_			در
+
+4	زمان	N	POSDEP	3	_	_	_			در
+8	رعمسیس	N	POSDEP	7	_	_	_			یا
+10	شهر	N	POSDEP	9	_	_	_			در
+
+4	خانه‌های	N	POSDEP	3	_	_	_			و
+2	کاخها	N	PREDEP	6	_	_	_			را
+11	خانه‌های	N	POSDEP	10	_	_	_			به
+
+3	حالی	N	POSDEP	2	_	_	_	_	_	_			در
+8	خواب	N	POSDEP	7	_	_	_	_	_	_			از
+13	غم	N	POSDEP	12	_	_	_	_	_	_			در
+16	ساحران	N	PREDEP	17	_	_	_	_	_	_			را
+
+5	بنی‌اسراییل	N	POSDEP	4	_	_	_	_	_			از
+7	دنیا	N	POSDEP	6	_	_	_	_	_			به
+12	یاران	N	POSDEP	11	_	_	_	_	_			و
+10	تو	PR	PREDEP	14	_	_	_	_	_			را
+
+9	شدن	N	POSDEP	7	_	_	_	_			از
+12	زن‌ها	N	POSDEP	11	_	_	_	_			و
+
+6	نیمه	N	POSDEP	5	_	_	_	_	_			در
+20	انعقاد	N	POSDEP	19	_	_	_	_	_			به
+
+19	او	PR	PREDEP	20	_	_	_	_	_	_	_			را
+
+5	منزل	N	POSDEP	4	_	_	_	_			از
+
+6	گزارش	N	PREDEP	7	_	_	_	_	_			را
+9	مادر	N	POSDEP	8	_	_	_	_	_			به
+15	ترس	N	POSDEP	14	_	_	_	_	_			از
+17	بچه	N	PREDEP	18	_	_	_	_	_			را
+
+10	آتش	N	POSDEP	9	_	_	_	_			از
+
+4	قضیه	N	POSDEP	3	_	_	_	_	_	_			از
+12	قضیه	N	PREDEP	13	_	_	_	_	_	_			را
+15	مامورین	N	POSDEP	14	_	_	_	_	_	_			به
+20	اذن	N	POSDEP	19	_	_	_	_	_	_			به
+
+8	سه‌باره	ADV	POSDEP	7	_	_	_	_	_	_	_			و
+11	وضع	N	POSDEP	9	_	_	_	_	_	_	_			به
+19	کار	N	POSDEP	18	_	_	_	_	_	_	_			در
+25	ساخت	N	POSDEP	24	_	_	_	_	_	_	_			به
+
+5	موسی	N	PREDEP	6	_	_	_	_	_	_			را
+8	صندوق	N	POSDEP	7	_	_	_	_	_	_			در
+12	او	PR	PREDEP	13	_	_	_	_	_	_			را
+20	صندوق	N	PREDEP	21	_	_	_	_	_	_			را
+23	خود	PR	POSDEP	22	_	_	_	_	_	_			با
+28	مادر	N	POSDEP	27	_	_	_	_	_	_			به
+
+4	زن	N	POSDEP	3	_	_	_	_	_	_			با
+8	کنار	N	POSDEP	7	_	_	_	_	_	_			در
+17	صندوق	N	POSDEP	16	_	_	_	_	_	_			به
+23	صندوق	N	PREDEP	24	_	_	_	_	_	_			را
+26	آب	N	POSDEP	25	_	_	_	_	_	_			از
+
+5	آب	N	POSDEP	4	_	_	_	_	_			از
+7	درب	N	PREDEP	9	_	_	_	_	_			را
+13	تعجب	N	POSDEP	12	_	_	_	_	_			با
+
+6	کودک	N	POSDEP	5	_	_	_	_	_	_	_	_	_	_			به
+8	محبت	N	PREDEP	10	_	_	_	_	_	_	_	_	_	_			را
+25	دستور	N	PREDEP	28	_	_	_	_	_	_	_	_	_	_			را
+39	اصرار	N	POSDEP	38	_	_	_	_	_	_	_	_	_	_			با
+40	او	PR	PREDEP	41	_	_	_	_	_	_	_	_	_	_			را
+43	فرزندی	N	POSDEP	42	_	_	_	_	_	_	_	_	_	_			به
+
+
+3	حین	N	POSDEP	1	_	_	_	_	_	_			در
+8	مادری	N	PREDEP	9	_	_	_	_	Arg1	Arg0			را
+15	کودک	N	PREDEP	16	_	_	_	_	_	_			را
+
+2	مادر	N	PREDEP	4	_	_	_	_			را
+6	کاخ	N	POSDEP	5	_	_	_	_			به
+11	اشتیاق	N	POSDEP	10	_	_	_	_			با
+
+4	وعده	N	POSDEP	3	_	_	Arg1	_			به
+10	مادر	N	POSDEP	9	_	_	_	_			به
+
+5	دوران	N	POSDEP	4	_	_	_	_	_	_			به
+8	بلوغ	N	POSDEP	7	_	_	_	_	_	_			و
+12	قدرت	N	POSDEP	11	_	_	_	_	_	_			از
+18	روزها	N	POSDEP	16	_	_	_	_	_	_			در
+19	کاخ	N	PREDEP	21	_	_	_	_	_	_			را
+
+4	حادثه	N	POSDEP	2	_	_	_	_	_			از
+12	توبه	N	PREDEP	14	_	_	_	_	_			را
+
+7	فرعون	N	POSDEP	6	_	_	_	_			به
+13	قتل	N	POSDEP	12	_	_	_	_			به
+
+3	حین	N	POSDEP	1	_	_	_	_			در
+9	ظلم	N	POSDEP	8	_	_	_	_			از
+13	قضیه	N	PREDEP	14	_	_	_	_			را
+16	موسی	N	POSDEP	15	_	_	_	_			به
+
+4	سفر	N	POSDEP	2	_	_	_	_			در
+6	زاد‌و‌توشه	N	POSDEP	5	_	_	_	_			از
+11	نعمت	N	POSDEP	10	_	_	_	_			از
+14	ایمان	N	POSDEP	13	_	_	_	_			و
+16	خدا	N	POSDEP	15	_	_	_	_			به
+
+5	راه	N	POSDEP	4	_	_	_	_			در
+14	استفاده	N	POSDEP	13	_	_	_	_			و
+16	گیاهان	N	POSDEP	15	_	_	_	_			از
+18	مدین	N	POSDEP	17	_	_	_	_			به
+
+5	آن‌ها	PR	POSDEP	4	_	_	_	_	_			با
+
+2	دلوی	N	PREDEP	3	_	_	_	_	_			را
+6	آب	N	POSDEP	5	_	_	_	_	_			از
+9	گوسفندان	N	PREDEP	11	_	_	_	_	_			را
+
+6	ماجرا	N	PREDEP	7	_	_	_	_			را
+
+2	دختر	N	PREDEP	5	_	_	_	_			را
+9	موسی	N	PREDEP	10	_	_	_	_			را
+
+2	دعوت	N	PREDEP	3	_	_	_	_			را
+7	راه	N	POSDEP	6	_	_	_	_			به
+
+5	ماجرای	N	PREDEP	7	_	_	_			را
+
+2	درخواست	N	PREDEP	4	_	_	_	_	_			را
+8	صفورا	N	POSDEP	7	_	_	_	_	_			با
+13	زندگی	N	POSDEP	12	_	_	_	_	_			به
+16	مدین	N	POSDEP	15	_	_	_	_	_			در
+
+7	مدین	N	POSDEP	6	_	_	_	_	_			در
+10	سال	N	POSDEP	8	_	_	_	_	_			در
+12	شعیب	N	POSDEP	11	_	_	_	_	_			به
+17	مصر	N	POSDEP	16	_	_	_	_	_			به
+
+2	او	PR	PREDEP	3	_	_	_	_	_	_			را
+5	اتاقی	N	POSDEP	4	_	_	_	_	_	_			به
+12	پیامبران	N	POSDEP	11	_	_	_	_	_	_			از
+15	آنجا	PR	POSDEP	14	_	_	_	_	_	_			در
+22	ابراهیم	N	POSDEP	21	_	_	_	_	_	_			و
+28	دست	N	POSDEP	27	_	_	_	_	_	_			در
+
+3	او	PR	POSDEP	2	_	_	_	_	_			به
+6	آن	PR	PREDEP	7	_	_	_	_	_			را
+
+3	موسی	N	POSDEP	2	_	_	_	_	_			به
+5	همان	PR	PREDEP	6	_	_	_	_	_			را
+10	آن	PR	PREDEP	11	_	_	_	_	_			را
+13	تو	PR	POSDEP	12	_	_	_	_	_			به
+
+4	موسی	N	PREDEP	7	_	_	_	Arg0			را
+11	همراه	N	POSDEP	10	_	_	_	_			به
+
+9	دست	N	POSDEP	8	_	_	_	_			در
+
+13	برگ	N	PREDEP	15	_	_	_	_	_	_	_			را
+21	کارهای	N	PREDEP	23	_	_	_	_	_	_	_			را
+
+3	دستور	N	POSDEP	2	_	_	_	_			به
+8	نشانه	N	POSDEP	5	_	_	_	_			با
+6	این	ADJ	APREMOD	7	_	_	_	_			دو
+14	سرکشی	N	PREDEP	16	_	_	_	_			را
+
+3	خواسته‌های	N	PREDEP	5	_	_	_	_			را
+10	او	PR	POSDEP	9	_	_	_	_			به
+
+3	مصر	N	POSDEP	2	_	_			به
+7	هارون	N	POSDEP	6	_	_			با
+9	مادر	N	POSDEP	8	_	_			و
+15	پیامبری	N	PREDEP	17	_	_			را
+19	برادر	N	POSDEP	18	_	_			به
+21	بنی‌اسراییل	N	POSDEP	20	_	_			و
+27	دعوت	N	PREDEP	29	_	_			را
+
+3	او	PR	POSDEP	2	_	_			به
+13	او	PR	POSDEP	12	_	_			با
+19	طبع	N	PREDEP	22	_	_			را
+
+3	خداوند	N	POSDEP	2	_	_			به
+9	فرعون	N	POSDEP	8	_	_			از
+
+3	هارون	N	POSDEP	2	_	_			و
+4	دعوت	N	PREDEP	6	_	_			را
+14	رسالت	N	PREDEP	16	_	_			را
+
+4	او	PR	POSDEP	3	_	_			با
+6	مناقشه	N	POSDEP	5	_	_			به
+10	او	PR	POSDEP	9	_	_			از
+
+9	زمین	N	POSDEP	8	_	_			و
+17	پیشینیان	N	POSDEP	16	_	_			و
+22	راز	N	PREDEP	25	_	_			را
+
+3	اطرافیان	N	POSDEP	2	_	_			به
+
+4	هارون	N	POSDEP	3	_	_			و
+8	سخن	N	PREDEP	10	_	_			را
+12	او	PR	PREDEP	13	_	_			را
+15	عذاب	N	POSDEP	14	_	_			به
+
+7	این	PR	POSDEP	6	_	_			تا
+18	طریق	N	POSDEP	17	_	_			از
+21	خدای	N	POSDEP	20	_	_			از
+
+4	هنگام	N	POSDEP	2	_	_			در
+5	عصای	N	PREDEP	7	_	_			را
+9	زمین	N	POSDEP	8	_	_			به
+13	شکل	N	POSDEP	12	_	_			به
+20	دست	N	PREDEP	22	_	_			را
+24	جیب	N	POSDEP	23	_	_			در
+32	سفید	ADJ	POSDEP	31	_	_			و
+
+3	اطرافیان	N	POSDEP	2	_	_			به
+10	شما	PR	PREDEP	11	_	_			را
+13	سحر	N	POSDEP	12	_	_			با
+15	جادو	N	POSDEP	14	_	_			و
+17	سرزمین	N	POSDEP	16	_	_			از
+
+5	قصر	N	POSDEP	4	_	_			در
+8	فرعون	N	POSDEP	7	_	_			از
+
+8	محل	N	POSDEP	7	_	_			به
+
+2	ابتدای	N	POSDEP	1	_	_			در
+6	غرور	N	POSDEP	5	_	_			با
+9	موسی	N	POSDEP	8	_	_			به
+
+4	وسایل	N	POSDEP	3	_	_			و
+2	طناب‌ها	N	PREDEP	7	_	_			را
+9	زمین	N	POSDEP	8	_	_			به
+17	صحنه	N	PREDEP	19	_	_			را
+21	وجود	N	POSDEP	20	_	_			به
+
+5	شادی	N	POSDEP	4	_	_			در
+
+3	هنگام	N	POSDEP	1	_	_			در
+13	ش	PR	POSDEP	11	_	_			در
+18	شکست	N	POSDEP	17	_	_			از
+22	دل	N	POSDEP	21	_	_			در
+25	وجود	N	POSDEP	24	_	_			به
+
+2	عصای	N	PREDEP	4	_	_			را
+9	اژدهای	N	POSDEP	8	_	_			به
+15	جان	N	POSDEP	14	_	_			به
+20	همه	PR	PREDEP	21	_	_			را
+23	لحظه‌ای	N	POSDEP	22	_	_			در
+
+8	جادو	N	POSDEP	7	_	_			به
+13	خاک	N	POSDEP	12	_	_			به
+17	موسی	N	POSDEP	16	_	_			به
+19	خدای	N	POSDEP	18	_	_			و
+
+3	دیدن	N	POSDEP	2	_	_			با
+11	آن‌ها	PR	POSDEP	10	_	_			به
+18	شما	PR	POSDEP	17	_	_			به
+22	او	PR	POSDEP	21	_	_			به
+30	پاهای	N	POSDEP	29	_	_			و
+28	دست	N	PREDEP	32	_	_			را
+
+4	او	PR	POSDEP	3	_	_			به
+9	موسی	N	POSDEP	8	_	_			به
+11	خدای	N	POSDEP	10	_	_			و
+
+10	بنی‌اسراییل	N	POSDEP	9	_	_			از
+12	دیگران	PR	POSDEP	11	_	_			و
+14	او	PR	POSDEP	13	_	_			به
+
+3	او	PR	PREDEP	4	_	_			را
+
+3	شکایت	N	PREDEP	5	_	_			را
+
+3	فرعونیان	N	PREDEP	4	_	_			را
+13	اندرز	N	POSDEP	12	_	_			و
+
+4	دعای	N	PREDEP	6	_	_			را
+12	قوم	N	POSDEP	11	_	_			و
+10	فرعون	N	PREDEP	14	_	_			را
+16	قحطی	N	POSDEP	15	_	_			به
+18	خشکسالی	N	POSDEP	17	_	_			و
+21	عذاب‌ها	N	POSDEP	19	_	_			و
+
+13	کارهای	N	POSDEP	12	_	_			به
+
+5	سرکشی	N	POSDEP	4	_	_			به
+12	بلاها	N	POSDEP	10	_	_			از
+
+3	پیروان	N	POSDEP	2	_	_			و
+6	ظلم	N	POSDEP	5	_	_			از
+9	ستوه	N	POSDEP	8	_	_			به
+13	فشار	N	POSDEP	12	_	_			در
+15	سختی	N	POSDEP	14	_	_			و
+18	این	PR	POSDEP	17	_	_			تا
+23	مصر	N	PREDEP	24	_	_			را
+
+
+4	دریایی	N	POSDEP	3	_	_			به
+12	آن‌ها	PR	POSDEP	11	_	_			به
+15	نزدیکتر	ADJ	POSDEP	14	_	_			و
+24	وحشت	N	POSDEP	23	_	_			و
+
+3	حین	N	POSDEP	1	_	_			در
+6	موسی	N	POSDEP	5	_	_			به
+11	پشت	N	POSDEP	10	_	_			در
+13	null	PSUS	PREDEP	14	_	_			و
+17	جلو	N	POSDEP	16	_	_			در
+24	دشمن	N	POSDEP	23	_	_			با
+21	توان	N	PREDEP	25	_	_			را
+
+3	آن‌ها	PR	POSDEP	2	_	_			به
+8	ما	PR	POSDEP	7	_	_			با
+11	راه	N	PREDEP	13	_	_			را
+15	ما	PR	POSDEP	14	_	_			به
+
+3	بحران	N	POSDEP	1	_	_			در
+9	موسی	N	POSDEP	8	_	_			به
+14	عصای	N	PREDEP	16	_	_			را
+18	دریا	N	POSDEP	17	_	_			به
+
+7	یاران	N	POSDEP	6	_	_			از
+10	دریا	N	POSDEP	9	_	_			از
+16	هم	PR	POSDEP	15	_	_			به
+20	فرعونیان	N	PREDEP	21	_	_			را
+23	هلاکت	N	POSDEP	22	_	_			به
+
+8	خدا	N	POSDEP	7	_	_			از
+14	او	PR	POSDEP	13	_	_			به
+
+10	فرعون	N	PREDEP	11	_	_			را
+15	کالبد	N	PREDEP	18	_	_			را
+20	بیرون	N	POSDEP	19	_	_			به
+
+6	یاران	N	POSDEP	5	_	_			و
+9	دریا	N	POSDEP	8	_	_			از
+15	حرکت	N	POSDEP	14	_	_			در
+17	قومی	N	PREDEP	18	_	_			را
+22	خضوع	N	POSDEP	21	_	_			با
+
+3	آن‌ها	PR	PREDEP	4	_	_			را
+
+5	پیروان	N	POSDEP	4	_	_			و
+8	حال	N	POSDEP	7	_	_			در
+12	نیل	N	POSDEP	11	_	_			در
+26	او	PR	POSDEP	25	_	_			از
+29	کسی	N	PREDEP	30	_	_			را
+34	تو	PR	POSDEP	33	_	_			از
+
+
+4	او	PR	POSDEP	3	_	_			به
+8	بنده‌ای	N	PREDEP	9	_	_			را
+11	محل	N	POSDEP	10	_	_			در
+17	مغرب	N	POSDEP	16	_	_			و
+21	تو	PR	POSDEP	20	_	_			از
+
+5	او	PR	PREDEP	6	_	_			را
+
+
+8	همراه	N	POSDEP	7	_	_			به
+
+3	این	ADJ	APREMOD	4	_	_			دو
+6	مسیر	N	POSDEP	5	_	_			به
+
+5	راه	N	POSDEP	4	_	_			به
+15	دوست	N	POSDEP	14	_	_			از
+18	غذایی	N	PREDEP	19	_	_			را
+
+3	لحظه	N	POSDEP	1	_	_			در
+6	موسی	N	POSDEP	5	_	_			به
+11	کنار	N	POSDEP	10	_	_			در
+
+3	حقیقت	N	POSDEP	2	_	_			به
+9	محل	N	POSDEP	8	_	_			به
+16	آنجا	N	POSDEP	15	_	_			در
+17	خضر	N	PREDEP	18	_	_			را
+
+3	خضر	N	POSDEP	2	_	_			از
+11	علم	N	POSDEP	10	_	_			از
+
+6	عدم	N	POSDEP	5	_	_			و
+9	او	PR	POSDEP	8	_	_			با
+4	شکیبایی	N	PREDEP	10	_	_			را
+16	شرط	N	POSDEP	14	_	_			به
+20	او	PR	POSDEP	19	_	_			از
+23	او	PR	PREDEP	24	_	_			را
+26	همراه	N	POSDEP	25	_	_			به
+
+3	راه	N	POSDEP	2	_	_			به
+7	مسیر	N	POSDEP	6	_	_			در
+14	کشتی	N	PREDEP	15	_	_			را
+19	پسربچه‌ای	N	PREDEP	20	_	_			را
+23	دیوار	N	PREDEP	25	_	_			را
+29	حالی‌	N	POSDEP	28	_	_			در
+33	آن‌ها	PR	POSDEP	32	_	_			به
+
+5	کارها	N	POSDEP	3	_	_			در
+10	خضر	N	POSDEP	9	_	_			به
+15	کار	N	PREDEP	16	_	_			را
+
+6	موسی	N	POSDEP	5	_	_			به
+15	من	PR	POSDEP	14	_	_			با
+22	تحمل	N	PREDEP	24	_	_			را
+27	تو	PR	POSDEP	26	_	_			به
+
+4	اشتباه	N	POSDEP	3	_	_			به
+
+2	اینجا	N	POSDEP	1	_	_			در
+6	اسرار	N	PREDEP	9	_	_			را
+11	موسی	N	POSDEP	10	_	_			به
+
+8	مستمندان	N	POSDEP	7	_	_			از
+
+8	تباهی	N	POSDEP	7	_	_			و
+5	آثار	N	PREDEP	9	_	_			را
+11	او	PR	POSDEP	10	_	_			در
+16	مادر	N	POSDEP	15	_	_			و
+21	او	PR	POSDEP	20	_	_			به
+32	تباهی	N	POSDEP	31	_	_			و
+38	مادر	N	POSDEP	37	_	_			و
+43	آن‌ها	PR	PREDEP	44	_	_			را
+46	کفر	N	POSDEP	45	_	_			به
+2	پسربچه	N	PREDEP	48	_	_			را
+54	شرش	N	POSDEP	53	_	_			از
+56	امان	N	POSDEP	55	_	_			در
+63	آن‌ها	PR	POSDEP	62	_	_			به
+
+8	پسربچه	N	POSDEP	6	_	_			به
+16	یتیمان	N	POSDEP	14	_	_			به
+
+
+3	مسیر	N	POSDEP	2	_	_			در
+8	صحرای	N	POSDEP	7	_	_			به
+11	بی‌آب‌وعلفی	ADJ	POSDEP	10	_	_			و
+15	موسی	N	POSDEP	14	_	_			از
+21	دستور	N	POSDEP	20	_	_			به
+23	موسی	N	PREDEP	26	_	_			را
+28	زمین	N	POSDEP	27	_	_			به
+33	(	PUNC	PUNC	34	_	_			به
+35	تعداد	N	POSDEP	34	_	_			به
+38	)	PUNC	PUNC	34	_	_			به
+44	آب	N	PREDEP	47	_	_			را
+
+3	ادامه	N	POSDEP	2	_	_			در
+6	صحرای	N	POSDEP	5	_	_			به
+12	فرط	N	POSDEP	11	_	_			از
+15	موسی	N	POSDEP	14	_	_			به
+20	درخواست	N	POSDEP	19	_	_			با
+
+2	ادامه	N	POSDEP	1	_	_			در
+11	خداوند	N	POSDEP	10	_	_			از
+19	سلوی	ARAB	POSDEP	18	_	_			و
+
+3	موسی	N	POSDEP	2	_	_			به
+7	بنی‌اسراییل	N	PREDEP	8	_	_			را
+10	سرزمین	N	POSDEP	9	_	_			به
+
+5	نفر	N	PREDEP	6	_	_			را
+11	آنجا	PR	POSDEP	10	_	_			از
+
+5	موسی	N	POSDEP	4	_	_			به
+12	نیرومند	ADJ	POSDEP	11	_	_			و
+14	سرکش	ADJ	POSDEP	13	_	_			و
+
+4	سخنان	N	POSDEP	2	_	_			از
+8	رفتن	N	POSDEP	7	_	_			از
+10	شهر	N	POSDEP	9	_	_			به
+14	آن	PR	POSDEP	13	_	_			با
+19	مردان	N	POSDEP	18	_	_			از
+21	قوم	N	PREDEP	23	_	_			را
+25	رفتن	N	POSDEP	24	_	_			به
+
+4	رفتن	N	POSDEP	3	_	_			از
+12	سال	N	POSDEP	10	_	_			تا
+13	آن‌ها	PR	PREDEP	14	_	_			را
+16	حبس	N	POSDEP	15	_	_			به
+18	صحرای	N	POSDEP	17	_	_			در
+27	توبه	N	PREDEP	29	_	_			را
+
+5	زمان	N	POSDEP	3	_	_			تا
+11	خدا	N	POSDEP	10	_	_			از
+18	دستور	N	POSDEP	17	_	_			به
+23	کوه	N	POSDEP	22	_	_			به
+28	روزه‌داری	N	POSDEP	27	_	_			و
+
+11	آن‌ها	PR	POSDEP	10	_	_			به
+18	روز	N	POSDEP	16	_	_			تا
+23	برادر	N	PREDEP	26	_	_			را
+
+8	او	PR	POSDEP	7	_	_			به
+17	آنجا	PR	POSDEP	16	_	_			در
+
+6	همراه	N	POSDEP	5	_	_			به
+9	کوه	N	POSDEP	8	_	_			به
+13	موسی	N	POSDEP	12	_	_			به
+18	تو	PR	POSDEP	17	_	_			به
+24	خدا	N	PREDEP	25	_	_			را
+27	ما	PR	POSDEP	26	_	_			به
+
+4	موضوع	N	POSDEP	2	_	_			از
+
+3	لحظه	N	POSDEP	1	_	_			در
+12	زلزله	N	POSDEP	11	_	_			و
+
+
+7	همراه	N	POSDEP	6	_	_			به
+
+8	آنچه	PR	POSDEP	7	_	_			از
+15	غیبت	N	POSDEP	13	_	_			از
+17	جهل	N	POSDEP	16	_	_			و
+23	زروزیور	N	POSDEP	22	_	_			از
+25	قالب	N	PREDEP	27	_	_			را
+35	وزیدن	N	POSDEP	34	_	_			با
+39	گوساله	N	POSDEP	38	_	_			از
+
+3	موسی	N	POSDEP	2	_	_			به
+
+2	اکثر	N	PREDEP	4	_	_			را
+6	آیین	N	POSDEP	5	_	_			به
+
+6	عمل	N	POSDEP	5	_	_			به
+12	ناراحتی	N	POSDEP	11	_	_			با
+18	آنان	PR	POSDEP	17	_	_			با
+20	مشاجره	N	POSDEP	19	_	_			به
+
+3	هنگام	N	POSDEP	1	_	_			در
+6	برادر	N	POSDEP	5	_	_			با
+12	او	PR	PREDEP	13	_	_			را
+
+3	جواب	N	POSDEP	2	_	_			در
+12	اختلاف	N	POSDEP	11	_	_			از
+14	دودستگی	N	POSDEP	13	_	_			و
+16	آن‌ها	PR	POSDEP	15	_	_			با
+21	م	PR	PREDEP	22	_	_			را
+
+3	هنگام	N	POSDEP	1	_	_			در
+5	سامری	N	PREDEP	6	_	_			را
+25	تو	PR	POSDEP	24	_	_			به
+30	او	PR	POSDEP	29	_	_			به
+34	من	PR	POSDEP	33	_	_			با
+
+3	گوساله	N	PREDEP	4	_	_			را
+7	آن	PR	PREDEP	8	_	_			را
+10	دریا	N	POSDEP	9	_	_			در
+
+2	سامری	N	PREDEP	3	_	_			را
+5	جامعه	N	POSDEP	4	_	_			از
+9	قوم	N	PREDEP	11	_	_			را
+13	شر	N	POSDEP	12	_	_			از
+
+5	کوه	N	POSDEP	4	_	_			از
+9	تورات	N	PREDEP	10	_	_			را
+12	خود	PR	POSDEP	11	_	_			با
+15	قوم	N	POSDEP	14	_	_			به
+25	حلال	ADJ	POSDEP	24	_	_			و
+27	حرام	ADJ	POSDEP	26	_	_			و
+33	آن	PR	PREDEP	34	_	_			را
+
+5	آن	PR	POSDEP	4	_	_			به
+3	عمل	N	PREDEP	6	_	_			را
+10	آن	PR	POSDEP	9	_	_			از
+
+3	فرشتگان	N	PREDEP	4	_	_			را
+11	کوه	N	POSDEP	10	_	_			از
+8	سنگ	N	PREDEP	13	_	_			را
+
+6	شرط	N	PREDEP	9	_	_			را
+12	کتاب	N	POSDEP	11	_	_			به
+
+4	پسرخاله	N	POSDEP	3	_	_			یا
+11	تورات	N	POSDEP	10	_	_			از
+
+3	همراهان	N	POSDEP	2	_	_			از
+13	دست	N	POSDEP	12	_	_			در
+
+18	او	PR	POSDEP	17	_	_			از
+
+2	قارون	N	PREDEP	7	_	_			را
+12	مبارزه	N	POSDEP	11	_	_			به
+14	موسی	N	POSDEP	13	_	_			با
+16	تحریک	N	POSDEP	15	_	_			و
+18	تهیج	N	POSDEP	17	_	_			و
+25	آن‌ها	PR	POSDEP	24	_	_			به
+33	اموال	N	POSDEP	32	_	_			و
+29	قصد	N	PREDEP	36	_	_			را
+41	مبارزه	N	POSDEP	40	_	_			به
+43	او	PR	POSDEP	42	_	_			با
+
+2	اینجا	PR	POSDEP	1	_	_			در
+
+4	مردم	N	PREDEP	5	_	_			را
+10	موسی	N	POSDEP	9	_	_			از
+
+6	ارشاد	N	POSDEP	5	_	_			به
+11	جمله	N	POSDEP	10	_	_			از
+
+
+2	نقشه	N	PREDEP	4	_	_			را
+
+3	او	PR	POSDEP	2	_	_			به
+5	حقیقت	N	PREDEP	6	_	_			را
+12	خود	PR	POSDEP	11	_	_			به
+16	ماجرا	N	PREDEP	17	_	_			را
+
+8	خدا	N	PREDEP	9	_	_			را
+13	آبروی	N	PREDEP	15	_	_			را
+
+9	موسی	N	POSDEP	8	_	_			به
+13	زمین	N	POSDEP	12	_	_			به
+19	خانه	N	POSDEP	18	_	_			و
+17	قارون	N	PREDEP	21	_	_			را
+23	خود	PR	POSDEP	22	_	_			در
+
+8	اموال	N	POSDEP	7	_	_			و
+6	قارون	N	PREDEP	11	_	_			را
+13	خود	PR	POSDEP	12	_	_			در
+
+3	عصر	N	POSDEP	2	_	_			در
+9	دانشمندان	N	POSDEP	8	_	_			از
+11	علمای	N	POSDEP	10	_	_			و
+17	جایی	N	POSDEP	16	_	_			به
+21	اسم	N	POSDEP	20	_	_			به
+
+4	مسیر	N	POSDEP	3	_	_			در
+11	وعیدهایی	N	POSDEP	10	_	_			و
+14	راه	N	POSDEP	13	_	_			از
+20	کمالات	N	PREDEP	22	_	_			را
+24	دست	N	POSDEP	23	_	_			از
+27	جایی	N	POSDEP	26	_	_			تا
+30	صف	N	POSDEP	29	_	_			در
+33	پیروان	N	POSDEP	32	_	_			و
+
+4	او	PR	POSDEP	3	_	_			از
+7	موسی	N	PREDEP	8	_	_			را
+
+3	تمرد	N	PREDEP	5	_	_			را
+
+3	شنیدن	N	POSDEP	2	_	_			با
+11	الاغ	N	PREDEP	12	_	_			را
+15	او	PR	PREDEP	16	_	_			را
+20	خواست	N	POSDEP	19	_	_			به
+25	او	PR	POSDEP	24	_	_			از
+
+20	آنجا	PR	POSDEP	19	_	_			از
+21	سرزمینهای	N	PREDEP	23	_	_			را
+26	سن	N	POSDEP	25	_	_			در
+34	خاک	N	POSDEP	33	_	_			به
+
+4	انبیا	N	POSDEP	3	_	_	_	_			از
+14	سوره	N	POSDEP	12	_	_	_	_			در
+
+7	سرزمین	N	POSDEP	6	_	_	_			در
+16	جهان	N	POSDEP	15	_	_	_			به
+
+8	پیامبری	N	POSDEP	7	_	_	_	_			به
+12	مردم	N	PREDEP	15	_	_	_	_			را
+17	بت‌پرستی	N	POSDEP	16	_	_	_	_			از
+19	فساد	N	POSDEP	18	_	_	_	_			و
+23	عدالت	N	POSDEP	22	_	_	_	_			و
+
+
+9	پیامبری	N	POSDEP	8	_	_	_	_			و
+7	نبوت	N	PREDEP	11	_	_	_	_			را
+
+5	باتقوا	ADJ	POSDEP	4	_	_	_	_			و
+9	مهمان‌نوازی	N	POSDEP	8	_	_	_	_			در
+
+10	حشم	N	POSDEP	9	_	_	_	_			و
+
+7	اموال	N	PREDEP	9	_	_	_	_	_	_	_			را
+11	دست	N	POSDEP	10	_	_	_	_	_	_	_			از
+15	انواع	N	POSDEP	14	_	_	_	_	_	_	_			به
+18	امراض	N	POSDEP	17	_	_	_	_	_	_	_			و
+27	ذکر	N	POSDEP	26	_	_	_	_	_	_	_			به
+
+6	مراحل	N	POSDEP	3	_	_	_	_			در
+
+10	او	PR	POSDEP	9	_	_	_	_			با
+
+7	شکر	N	POSDEP	6	_	_	_	_			و
+5	صبر	N	PREDEP	9	_	_	_	_			را
+13	آنجایی	N	POSDEP	12	_	_	_	_			تا
+20	عام	ADJ	POSDEP	19	_	_	_	_			و
+
+
+10	قسم	N	POSDEP	9	_	_	_	_			از
+
+2	ایشان	PR	PREDEP	3	_	_	_			را
+10	خویشتن‌دار	N	POSDEP	9	_	_	_			و
+
+7	رنج	N	POSDEP	6	_	_	_			در
+9	عذاب	N	POSDEP	8	_	_	_			و
+
+
+2	دستور	N	POSDEP	1	_	_	_	_	_			به
+6	آب	N	POSDEP	5	_	_	_	_	_			از
+11	فرمان	N	POSDEP	10	_	_	_	_	_			به
+15	آب	N	POSDEP	13	_	_	_	_	_			از
+18	بدن	N	PREDEP	20	_	_	_	_	_			را
+22	آن	PR	POSDEP	21	_	_	_	_	_			در
+
+2	خواست	N	POSDEP	1	_	_	_	_	_	_			به
+6	او	PR	POSDEP	5	_	_	_	_	_	_			به
+12	بین	N	POSDEP	11	_	_	_	_	_	_			از
+19	دست	N	POSDEP	18	_	_	_	_	_	_			از
+23	او	PR	POSDEP	22	_	_	_	_	_	_			به
+25	همسر	N	POSDEP	24	_	_	_	_	_	_			و
+
+13	سوره	N	POSDEP	11	_	_	_	_			در
+
+3	نوادگان	N	POSDEP	2	_	_	_			از
+
+11	آن	PR	PREDEP	12	_	_	_	_			را
+
+7	میان	N	POSDEP	6	_	_	_	_			در
+11	سرزمین	N	POSDEP	10	_	_	_	_			در
+
+2	الیاس	N	PREDEP	3	_	_	_			را
+
+4	سخن	N	PREDEP	6	_	_	_	_			را
+11	دعوت	N	POSDEP	10	_	_	_	_			از
+
+4	زمان	N	POSDEP	2	_	_	_	_			در
+7	نام	N	POSDEP	6	_	_	_	_			به
+11	مردم	N	PREDEP	12	_	_	_	_			را
+14	پرستش	N	POSDEP	13	_	_	_	_			به
+
+7	مومن	N	PREDEP	8	_	_	_	_			را
+10	حکم	N	POSDEP	9	_	_	_	_			از
+
+3	شاهان	N	POSDEP	2	_	_	_	_			با
+9	آنها	PR	POSDEP	8	_	_	_	_			از
+
+8	کنار	N	POSDEP	7	_	_	_	_	_			در
+
+2	خدا	N	PREDEP	3	_	_	_	_	Arg0	_			را
+9	همسر	N	POSDEP	8	_	_	_	_	_	_			و
+7	شاه	N	PREDEP	12	_	_	_	Arg0	_	_			را
+13	،	PUNC	PUNC	12	_	_	_	_	_	_			را
+19	هلاکت	N	POSDEP	18	_	_	_	_	_	_			به
+24	آنها	PR	POSDEP	23	_	_	_	_	_	_			به
+
+3	دست	N	POSDEP	2	_	_	_	_			از
+8	کوهها	N	POSDEP	7	_	_	_	_			به
+10	غارها	N	POSDEP	9	_	_	_	_			و
+
+
+3	میان	N	POSDEP	1	_	_	_	_			در
+7	بیماری	N	POSDEP	6	_	_	_	_			به
+
+4	توسل	N	POSDEP	3	_	_	_			در
+6	بتها	N	POSDEP	5	_	_	_			به
+
+4	صدای	N	PREDEP	6	_	_	_	_			را
+
+4	حادثه	N	POSDEP	2	_	_	_	_	_	_	_	_	_			از
+8	منشی	N	PREDEP	11	_	_	_	_	_	_	_	_	_			را
+20	او	PR	POSDEP	19	_	_	_	_	_	_	_	_	_			به
+
+4	ما	PR	POSDEP	3	_	_	_	_	_			به
+7	ما	PR	PREDEP	8	_	_	_	_	_			را
+10	آنچه	PR	POSDEP	9	_	_	_	Arg1	_			به
+
+3	قوم	N	POSDEP	2	_	_	_	Arg0	Arg1			به
+9	بت‌پرستی	N	POSDEP	8	_	_	_	_	_			از
+18	بی‌همتا	ADJ	POSDEP	17	_	_	_	_	_			و
+
+4	صدای	N	PREDEP	6	_	_	_	_	_			را
+9	اذن	N	POSDEP	8	_	_	_	_	_			به
+12	استقبال	N	POSDEP	11	_	_	_	_	_			به
+17	او	PR	POSDEP	16	_	_	_	_	_			از
+
+2	بیماری	N	PREDEP	5	_	_	_	_	_			را
+14	مومن	N	POSDEP	13	_	_	_	_	_			از
+
+4	مدتی	N	POSDEP	3	_	_	_			تا
+5	شاه	N	PREDEP	6	_	_	_			را
+8	او	PR	POSDEP	7	_	_	_			از
+
+6	منشی	N	POSDEP	5	_	_	_	_			به
+10	ماموریت	N	PREDEP	12	_	_	_	_			را
+
+5	کوه	N	POSDEP	4	_	_	_	_	_			از
+10	خانه	N	POSDEP	9	_	_	_	_	_			به
+19	آنجا	PR	POSDEP	18	_	_	_	_	_			در
+
+6	کوه	N	POSDEP	5	_	_	_			به
+
+4	زمان	N	POSDEP	2	_	_	_	_	_	_			در
+9	او	PR	POSDEP	8	_	_	_	_	_	_			به
+15	من	PR	POSDEP	14	_	_	_	_	_	_			از
+
+3	خدا	N	POSDEP	2	_	_	_			از
+
+4	قحطی	N	PREDEP	5	_	_	_			را
+
+4	شرمندگی	N	POSDEP	2	_	_	_	_			با
+
+3	همراه	N	POSDEP	2	_	_	_	_			به
+15	شاه	N	POSDEP	14	_	_	_	_			و
+
+3	نهایت	N	POSDEP	2	_	_	_	_	_			در
+6	او	PR	POSDEP	5	_	_	_	Arg0	_			از
+
+11	خرمی	N	POSDEP	10	_	_	_	_	_			و
+
+13	الیاس	N	POSDEP	12	_	_	_	_			از
+
+3	دشمنان	N	PREDEP	4	_	_	_			را
+
+9	الیسع	N	POSDEP	8	_	_	_	_			به
+13	آسمانها	N	POSDEP	12	_	_	_	_			به
+
+12	قرآن	N	POSDEP	11	_	_	_	_			در
+
+5	واسطه	N	POSDEP	3	_	_	_	_			با
+7	آدم	N	POSDEP	6	_	_	_	_			به
+
+4	کتابهای	N	POSDEP	3	_	_	_			از
+
+4	تنومند	ADJ	POSDEP	3	_	_	_	_	_	_			و
+7	انسانی	N	POSDEP	5	_	_	_	Arg0	_	_			و
+11	قلم	N	POSDEP	10	_	_	_	_	_	_			با
+17	او	PR	POSDEP	16	_	_	_	_	_	_			به
+21	حساب	N	POSDEP	20	_	_	_	_	_	_			و
+23	هییت	N	POSDEP	22	_	_	_	_	_	_			و
+
+
+2	زمان	N	POSDEP	1	_	_	_			در
+
+4	سرزمین	N	POSDEP	3	_	_	_	_	_	_			از
+7	خرمی	ADJ	POSDEP	6	_	_	_	_	_	_			و
+13	شخص	N	POSDEP	12	_	_	_	_	_	_			به
+19	او	PR	POSDEP	18	_	_	_	_	_	_			از
+22	زمین	N	PREDEP	23	_	_	_	_	_	

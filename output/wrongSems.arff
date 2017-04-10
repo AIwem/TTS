@@ -1,0 +1,262 @@
+6	است	V	ROOT	0	Y	بودن.15	Arg1	_	_
+11	است	V	VCONJ	19	Y	بودن.15	Arg1	_
+9	کرده	V	PREDEP	10	Y	کردن.25	_	Arg1	_
+9	بود	V	ROOT	0	Y	بودن.15	ArgM-ADV
+8	می‌خواست	V	PRD	7	Y	خواستن.360	Arg1	_	_	_
+7	خواهندکرد	V	PREDEP	8	Y	حیله‌‌کردن.226	Arg3	_
+8	شد	V	PREDEP	9	Y	کردن.25	Arg1	_	_	_	_
+7	کشیدند	V	PREDEP	8	Y	نقشه‌کشیدن.42	ArgM-DIS	_	_	_	_	_
+33	باشید	V	PRD	23	Y	بودن.15	_	Arg1	_	_	_	_
+6	یم	V	VCL	2	Y	بودن.15	Arg1	_
+4	کرد	V	NCL	1	Y	تلاش‌کردن.783	Arg0	_	_	_
+6	کرد	V	PREDEP	7	Y	لطف‌کردن.507	Arg0	_	_	_	_	_
+7	آورد	V	PREDEP	8	Y	آوردن.452	Arg0	_	_
+8	می‌برم	V	VCL	2	Y	پناه‌بردن.282	Arg1	_	_	_
+20	داشت	V	VCL	16	Y	قصد‌داشتن.515	_	_	Arg1	_	_
+33	کند	V	VCL	28	Y	خیانت‌کردن.537	_	_	_	_	_	Arg1	_
+28	نیست	V	VCL	9	Y	بودن.15	_	Arg1	_	_	_	_
+12	شد	V	PREDEP	13	Y	پخش‌کردن.550	Arg3	_
+12	است	V	VCL	8	Y	بودن.15	_	Arg1	_	_
+4	بود	V	PRD	2	Y	بودن.15	Arg1	_	_	_
+18	شدند	V	ROOT	0	Y	کردن.25	ArgM-CAU
+5	داشت	V	PRD	4	Y	داشتن.39	Arg0	_
+7	کرد	V	ROOT	0	Y	به‌فراموشی‌سپردن.356	Arg0	_	_
+12	نمود	V	PREDEP	13	Y	احضار‌کردن.572	ArgM-PRP	_
+12	رفت	V	PREDEP	13	Y	رفتن.17	Arg0	_
+5	بود	V	ROOT	0	Y	بودن.15	Arg1	_	_
+6	نمود	V	PREDEP	38	Y	تعبیر‌کردن.494	Arg0	_	_	_	_
+21	نماید	V	VCL	8	Y	بررسی‌کردن.603	_	Arg1	_	_
+10	داد	V	ROOT	0	Y	قرار‌دادن.309	Arg1
+12	داد	V	ROOT	0	Y	قرار‌دادن.309	Arg2	_
+11	کرد	V	PREDEP	12	Y	خدمت‌کردن.611	Arg0	_
+8	فرا‌رسید	V	PREDEP	9	Y	فرا‌رسیدن.613	Arg1	_
+4	خواست	V	ROOT	0	Y	خواستن.51	Arg0	_	_
+7	رسیدند	V	PREDEP	8	Y	رسیدن.501	Arg0	_	_
+7	نرفت	V	PREDEP	8	Y	زیر‌بار‌رفتن.546	Arg0	_	_	_	_
+4	داد	V	PREDEP	5	Y	نتیجه‌دادن.620	Arg1	_	_
+8	شده‌بودند	V	PRD	2	Y	کردن.25	Arg2	_	_	_	_
+10	فراگرفته‌بود	V	PRD	2	Y	فرا‌گرفتن.455	Arg1	_	_	_	_
+5	گفت	V	ROOT	0	Y	گفتن.35	Arg0	_	_
+6	برده	V	PREDEP	7	Y	بردن.208	Arg0	_	_	_
+8	شد	V	PRD	3	Y	کردن.25	Arg1	_
+12	نمود	V	PREDEP	13	Y	وداع‌کردن.172	Arg0	_	_
+11	بسپارد	V	VCL	3	Y	به‌خاک‌سپردن.185	Arg1	_
+4	می‌خواست	V	PRD	2	Y	خواستن.360	Arg1	_	_	_	_
+7	می‌گفتند	V	ROOT	0	Y	گفتن.298	Arg3	_	_
+7	است	V	ROOT	0	Y	بودن.15	Arg2	_	_	_
+23	بود	V	NCL	11	Y	بودن.15	Arg2	_
+11	بود	V	PRD	7	Y	بودن.15	Arg2	_
+18	خواهدشد	V	VCL	10	Y	کردن.25	_	Arg1	_	_
+14	کشید	V	PRD	9	Y	طول‌کشیدن.443	Arg2	_	_	_	_
+6	کرد	V	ROOT	0	Y	دعا‌کردن.182	ArgM-ADV
+6	است	V	ROOT	0	Y	بودن.15	Arg1	_	_
+7	یافت	V	PREDEP	8	Y	وفات‌یافتن.52	ArgM-ADV	_
+7	بودند	V	PREDEP	8	Y	بودن.15	Arg2	_
+10	فرا‌دهند	V	PRD	5	Y	گوش‌فرا‌دادن.522	Arg0	_	_	_	_
+8	کرد	V	ROOT	0	Y	ازدواج‌کردن.131	ArgM-CAU	_	_
+8	دادند	V	PREDEP	9	Y	ادامه‌دادن.527	ArgM-EXT	_	_	_
+7	نبود	V	PRD	1	Y	وجود‌داشتن.154	Arg1	_	_	_
+10	می‌زدند	V	ROOT	0	Y	دست‌زدن.475	Arg0	_	_	_
+6	دید	V	PREDEP	7	Y	دیدن.47	Arg0	_	_
+4	فهمیدند	V	ROOT	0	Y	فهمیدن.112	ArgM-DIS	_	_	_	_
+4	م	V	ROOT	0	Y	بودن.15	Arg2	_	_
+4	گفت	V	ROOT	0	Y	گفتن.35	Arg0	_	_	_
+7	گفت	V	ROOT	0	Y	گفتن.35	Arg0	_	_
+6	داشت	V	PRD	2	Y	حضور‌داشتن.552	Arg0	_
+5	بود	V	ROOT	0	Y	بودن.15	Arg2	_	_	_	_
+5	کردند	V	PREDEP	6	Y	محاصره‌کردن.556	Arg0	_
+5	شد	V	PRD	2	Y	کردن.25	Arg2	_	_	_	_
+5	بود	V	ROOT	0	Y	بودن.15	Arg1	_
+16	بود	V	ROOT	0	Y	بودن.15	_	ArgM-DIR
+17	كرد	V	ROOT	0	Y	ظهور‌کردن.74	Arg3
+13	شد	V	ROOT	0	Y	باعث‌شدن.296	Arg0	_	_
+15	بود	V	NCL	2	Y	بودن.15	Arg1	_	_	_
+4	کردند	V	ROOT	0	Y	کردن.857	Arg1	_
+4	‌شدند	V	ROOT	0	Y	کردن.25	Arg2	_
+3	گرفتند	V	PRD	1	Y	تصمیم‌گرفتن.68	ArgM-DIS	_	_	_
+4	نمودند	V	ROOT	0	Y	قرعه‌کشی‌کردن.588	Arg0
+8	یافت	V	PREDEP	9	Y	قدرت‌یافتن.595	Arg1	_	_	_	_
+7	شد	V	PREDEP	8	Y	کردن.25	ArgM-ADV	_
+15	شدی	V	VCL	5	Y	کردن.25	Arg1	_	_	_
+4	می‌کشید	V	PRD	2	Y	خجالت‌کشیدن.597	Arg0	_	_	_	_
+4	داشت	V	PRD	1	Y	خبر‌داشتن.598	Arg3	_	_
+9	گردید	V	ROOT	0	Y	کردن.25	ArgM-EXT	_	_	_	_
+11	است	V	PRD	8	Y	بودن.15	Arg2	_
+9	شده‌است	V	ROOT	0	Y	تشکیل‌شدن.832	Arg1
+6	ساخت	V	ROOT	0	Y	ساختن.137	Arg0	_	_
+3	داشتند	V	ROOT	0	Y	عرضه‌داشتن.560	ArgM-DIS	_	_	_	_	_	_	_
+11	نرسانید	V	ROOT	0	Y	رساندن.581	Arg0	_	_
+4	است	V	ROOT	0	Y	بودن.15	Arg2	_	_
+5	است	V	ROOT	0	Y	بودن.15	Arg1	_
+15	داد	V	PREDEP	17	Y	قرار‌دادن.655	Arg1	_	_
+18	رسید	V	ROOT	0	Y	رسیدن.382	ArgM-TMP	_	_	_	_
+6	کرده	V	PREDEP	7	Y	لطف‌کردن.507	Arg0	_	_	_	_
+10	گرفتند	V	PRD	2	Y	قرار‌گرفتن.78	Arg0	_	_	_
+19	شد	V	PREDEP	20	Y	کردن.25	ArgM-TMP	_
+17	آورد	V	PREDEP	18	Y	به‌جوش‌آوردن.643	Arg1	_	_	_
+7	بود	V	PRD	2	Y	بودن.15	Arg2	_	_
+8	رسید	V	ROOT	0	Y	رسیدن.846	Arg0	_	_	_	_
+10	بوده	V	PREDEP	11	Y	بودن.15	_	Arg2	_
+5	کرد	V	ROOT	0	Y	عمر‌کردن.103	Arg0	_	_	_	_
+15	می‌کردند	V	ROOT	0	Y	پافشاری‌کردن.607	_	Arg0
+12	نبودند	V	ROOT	0	Y	بودن.15	ArgM-DIS	_	_
+18	کرد	V	PREDEP	19	Y	صحبت‌کردن.142	Arg0	_
+13	برد	V	ROOT	0	Y	به‌کار‌بردن.619	Arg1
+17	نمی‌گذاشت	V	ROOT	0	Y	اثر‌گذاشتن.516	ArgM-DIS
+4	می‌گفتند	V	ROOT	0	Y	گفتن.35	Arg1	_	_
+6	می‌کرد	V	ROOT	0	Y	نصیحت‌کردن.202	ArgM-CAU	_
+19	می‌کنید	V	VCL	5	Y	انکار‌کردن.333	Arg1	_	_
+13	نمی‌خواهم	V	ROOT	0	Y	خواستن.51	ArgM-PRP	_
+7	کرد	V	NCL	3	Y	نصیحت‌کردن.202	Arg1	_	_	_	_	_	_
+26	نخواهندآورد	V	VCL	9	Y	ایمان‌آوردن.38	Arg1	_	_
+26	مکن	V	VCL	6	Y	شفاعت‌کردن.646	Arg1	_	_	_	_
+7	آمد	V	PREDEP	8	Y	به‌ستوه‌آمدن.870	Arg3	_	_
+36	نگذار	V	VCL	28	Y	باقی‌گذاشتن.210	_	_	_	Arg1	_	_	_
+21	دهد	V	VCL	9	Y	نجات‌دادن.61	_	Arg1	_
+13	خواهیدشد	V	VCL	6	Y	کردن.25	Arg1	_
+8	بود	V	PREDEP	9	Y	بودن.15	Arg1	_	_	_	_
+7	نکرد	V	PREDEP	8	Y	اثر‌کردن.645	Arg1	_	_
+26	است	V	VCL	7	Y	بودن.15	Arg1	_	_
+15	است	V	VCL	5	Y	بودن.15	Arg1	_	_
+4	آمد	V	ROOT	0	Y	بالا‌آمدن.675	ArgM-ADV	_
+8	بود	V	ROOT	0	Y	بودن.15	Arg1	_	_
+6	است	V	ROOT	0	Y	بودن.15	ArgM-DIS	_	_
+12	دیدم	V	VCL	6	Y	دیدن.302	Arg1	_	_	_	_
+4	گفت	V	ROOT	0	Y	گفتن.35	Arg0	_	_
+8	بده	V	VCL	5	Y	اجازه‌دادن.249	Arg1	_	_
+7	رفت	V	ROOT	0	Y	رفتن.17	Arg0	_	_	_
+16	شده‌است	V	PREDEP	17	Y	تکرار‌کردن.153	Arg2	_
+4	نشده‌بود	V	ROOT	0	Y	کردن.25	Arg2	_	_
+14	داشت	V	ROOT	0	Y	رواج‌داشتن.419	Arg3
+6	می‌زیست	V	PREDEP	7	Y	زیستن.109	Arg0	_	_
+6	پیمود	V	PREDEP	7	Y	پیمودن.665	ArgM-ADV	_	_
+8	کرده	V	PREDEP	9	Y	معرفی‌کردن.115	Arg0	_	_	_	_	_
+23	داشت	V	ROOT	0	Y	قرار‌داشتن.87	Arg3	_
+9	بود	V	PREDEP	10	Y	بودن.15	Arg2	_	_
+7	فهمید	V	ROOT	0	Y	فهمیدن.112	Arg1	_	_
+8	شد	V	PRD	3	Y	کردن.25	Arg1	_	_
+10	کرد	V	ROOT	0	Y	کردن.25	Arg0
+3	گرفت	V	ROOT	0	Y	تصمیم‌گرفتن.68	Arg0	_	_	_	_	_
+6	نپرست	V	ROOT	0	Y	پرستیدن.436	ArgM-CAU	_
+2	گفت	V	ROOT	0	Y	گفتن.35	Arg0	_
+6	پیچید	V	PREDEP	7	Y	پیچیدن.682	Arg1	_
+2	گفت	V	ROOT	0	Y	گفتن.35	Arg1	_
+2	گفت	V	ROOT	0	Y	گفتن.35	Arg0	_	_	_	_
+5	بود	V	ROOT	0	Y	بودن.15	ArgM-TMP	_	_
+8	رفتند	V	PREDEP	9	Y	رفتن.17	Arg0	_	_
+5	گفت	V	ROOT	0	Y	گفتن.35	Arg1	_	_	_
+4	بود	V	ROOT	0	Y	بودن.15	Arg2	_	_
+9	خواست	V	ROOT	0	Y	خواستن.51	Arg0	_	_	_	_
+10	می‌کرد	V	PREDEP	12	Y	تاخت‌وتاز‌کردن.696	Arg0	_
+12	فرستاد	V	ROOT	0	Y	فرستادن.341	ArgM-PRP
+5	خواست	V	ROOT	0	Y	خواستن.51	Arg3	_	_	_	_	_
+9	نمود	V	PREDEP	10	Y	ذبح‌کردن.703	Arg0	_	_	_	_	_
+8	بود	V	PRD	3	Y	بودن.15	Arg1	_
+10	کرد	V	ROOT	0	Y	ازدواج‌کردن.131	Arg0
+14	آورده‌بودند	V	PRD	10	Y	ایمان‌آوردن.38	Arg0	_	_	_
+8	رسید	V	PREDEP	9	Y	رسیدن.501	Arg0	_	_	_	_
+2	گفت	V	ROOT	0	Y	گفتن.35	Arg0	_
+13	برگشت	V	PREDEP	14	Y	برگشتن.825	ArgM-ADV	_	_	_
+3	null	V	PREDEP	4	Y	احترام‌کردن.719	Arg0	_	_	_	_	_
+18	است	V	PRD	9	Y	بودن.15	Arg2	_
+13	نمی‌شد	V	VCL	4	Y	کردن.25	Arg1	_	_	_
+3	کرد	V	ROOT	0	Y	دعا‌کردن.182	Arg0	_	_
+8	رسیده‌بود	V	PRD	3	Y	رسیدن.846	Arg0	_
+4	گفت	V	ROOT	0	Y	گفتن.35	Arg0	_	_
+7	خوابانید	V	ROOT	0	Y	خوابانیدن.108	Arg0	_	_
+6	کرد	V	ROOT	0	Y	فوت‌کردن.224	Arg1	_	_
+6	است	V	ROOT	0	Y	بودن.15	Arg2	_
+7	شد	V	PREDEP	8	Y	کردن.25	Arg1	_	_
+5	کرد	V	PREDEP	6	Y	عمر‌کردن.103	Arg0	_
+7	بودند	V	ROOT	0	Y	بودن.15	Arg1	_	_	_
+12	بودند	V	ROOT	0	Y	بودن.15	Arg1
+9	میساختند	V	PREDEP	11	Y	ساختن.137	Arg1	_
+9	فرستاد	V	ROOT	0	Y	فرستادن.341	ArgM-PRP	_
+7	نمی‌آوردند	V	PREDEP	8	Y	ایمان‌آوردن.38	Arg0	_
+14	می‌کردند	V	ROOT	0	Y	متهم‌کردن.652	Arg1
+4	گفت	V	ROOT	0	Y	گفتن.35	Arg0	_	_	_	_
+2	شد	V	ROOT	0	Y	کردن.25	Arg1	_
+5	فرارسید	V	ROOT	0	Y	فرا‌رسیدن.613	Arg1	_	_	_
+4	خواستند	V	ROOT	0	Y	خواستن.51	Arg0	_	_	_
+3	شد	V	PRD	1	Y	کردن.25	Arg1	_	_	_	_
+11	آورد	V	ROOT	0	Y	بیرون‌آوردن.706	ArgM-PRP	_
+5	گرفتند	V	ROOT	0	Y	تصمیم‌گرفتن.68	Arg3	_
+10	پرداخت	V	ROOT	0	Y	پرداختن.72	Arg0	_	_
+4	بود	V	ROOT	0	Y	بودن.15	Arg1	_	_	_	_	_
+11	داشتند	V	PRD	4	Y	قصد‌داشتن.515	Arg1	_	_
+11	می‌انداخت	V	ROOT	0	Y	به‌دوش‌انداختن.718	Arg1
+19	برداشته‌شود	V	PRD	5	Y	برداشتن.77	Arg1	_	_
+7	رفتند	V	PREDEP	8	Y	رفتن.17	Arg0	_	_	_	_
+13	خواهدشد	V	PRD	5	Y	کردن.25	Arg1	_
+12	بیاور	V	VCL	2	Y	آوردن.526	Arg1	_	_
+4	فرمود	V	ROOT	0	Y	فرمودن.95	Arg1	_	_	_	_
+9	شد	V	PREDEP	10	Y	کردن.25	ArgM-ADV	_	_	_	_	_	_
+5	است	V	ROOT	0	Y	بودن.15	Arg1	_
+7	می‌باشد	V	ROOT	0	Y	بودن.15	Arg1
+10	داشت	V	ROOT	0	Y	نام‌داشتن.176	Arg1
+4	ند	V	ROOT	0	Y	بودن.15	Arg2	_
+31	سوزاند	V	VCL	5	Y	سوزاندن.691	Arg1	_	_	_	_	_
+7	می‌شد	V	NCL	2	Y	کردن.25	Arg1	_	_	_
+15	‌شد	V	PRD	9	Y	کردن.25	Arg1	_	_
+6	رفت	V	PREDEP	7	Y	رفتن.17	ArgM-PRP	_	_
+10	آمده‌بود	V	PRD	3	Y	آمدن.44	Arg0	_	_
+7	گشتند	V	ROOT	0	Y	گشتن.721	ArgM-ADV
+4	دید	V	ROOT	0	Y	دیدن.47	ArgM-LOC	_	_	_
+7	کرد	V	ROOT	0	Y	درخواست‌کردن.63	Arg0	_	_	_
+10	شد	V	ROOT	0	Y	تکرار‌کردن.153	Arg1
+3	گرفت	V	ROOT	0	Y	تصمیم‌گرفتن.68	Arg0	_	_	_	_
+4	رسید	V	NCL	1	Y	رسیدن.501	Arg4	_	_	_
+12	کرد	V	PREDEP	13	Y	استقبال‌کردن.654	Arg0	_	_	_
+8	دیده‌بود	V	PRD	2	Y	دیدن.47	Arg0	_	_
+13	درمی‌آورم	V	VCL	4	Y	به‌عقد‌در‌آوردن.810	Arg1	_	_
+8	گفت	V	ROOT	0	Y	گفتن.35	Arg1	_	_
+8	کرد	V	PREDEP	9	Y	کردن.25	ArgM-TMP	_	_
+6	رسید	V	NCL	1	Y	رسیدن.501	Arg0	_	_	_
+11	برگزیده‌ام	V	ROOT	0	Y	بر‌گزیدن.229	Arg0	_	_	_	_	_	_
+2	فرمود	V	ROOT	0	Y	فرمودن.95	Arg0	_
+5	افکند	V	ROOT	0	Y	افکندن.168	ArgM-ADV	_	_
+11	فروکرد	V	ROOT	0	Y	فرو‌کردن.826	ArgM-ADV2	_
+4	خواست	V	ROOT	0	Y	خواستن.51	Arg1	_	_
+15	می‌کرد	V	PRD	6	Y	دعوت‌کردن.352	Arg1	_
+11	ننمود	V	ROOT	0	Y	مهربانی‌کردن.220	ArgM-ADV	_
+31	خواهم‌داد	V	VCL	18	Y	دادن.110	_	_	Arg1	_	_	_
+6	بود	V	PRD	2	Y	بودن.15	Arg1	_	_	_	_
+11	گرفت	V	PREDEP	12	Y	به‌دست‌گرفتن.754	ArgM-ADV	_	_
+23	بکوب	V	VCL	13	Y	کوبیدن.152	Arg1	_
+5	بوده	V	PREDEP	7	Y	بودن.15	Arg1	_
+7	است	V	ROOT	0	Y	بودن.15	ArgM-ADV	_	_	_	_	_
+4	داشت	V	ROOT	0	Y	داشتن.39	Arg0	_	_	_
+10	کشت	V	PREDEP	11	Y	کشتن.102	ArgM-TMP	_
+6	نمودند	V	PREDEP	7	Y	ایستادگی‌کردن.713	ArgM-DIS	_
+11	شد	V	ROOT	0	Y	باعث‌شدن.296	ArgM-DIS	_
+15	است	V	VCL	4	Y	بودن.15	Arg1	_	_	_	_
+4	رفتند	V	PREDEP	5	Y	رفتن.17	Arg0	_	_
+16	نیست	V	VCL	7	Y	بودن.305	_	Arg1	_	_
+4	آفریده‌ام	V	PREDEP	5	Y	آفریدن.187	Arg0	_	_	_	_	_	_
+4	رفته	V	PREDEP	5	Y	رفتن.17	Arg0	_
+4	شد	V	PREDEP	5	Y	کردن.25	Arg2	_	_	_
+2	گفتند	V	ROOT	0	Y	گفتن.35	Arg0	_	_	_
+11	فرستادند	V	ROOT	0	Y	فرستادن.341	ArgM-ADV	_	_
+7	رفته	V	PREDEP	8	Y	رفتن.17	Arg0	_	_	_
+55	بده	V	VCL	15	Y	قرار‌دادن.655	_	_	Arg1	_	_	_	_	_	_
+5	نشده‌بود	V	ROOT	0	Y	کردن.25	ArgM-TMP	_	_
+25	خواهدکشت	V	VCL	4	Y	کشتن.102	Arg1	_	_	_	_
+8	کرد	V	ROOT	0	Y	وحی‌کردن.218	ArgM-TMP	_	_	_
+9	ندارم	V	VCL	2	Y	خبر‌داشتن.598	Arg1	_
+5	گفت	V	ROOT	0	Y	گفتن.35	Arg1	_	_	_
+3	کرد	V	ROOT	0	Y	عرض‌کردن.744	Arg0	_	_	_	_
+9	داد	V	ROOT	0	Y	قرار‌دادن.655	Arg1	_	_	_
+5	کردند	V	VCONJ	14	Y	سرکوب‌کردن.760	Arg0	_	_
+9	است	V	ROOT	0	Y	بودن.15	Arg2	_
+7	شد	V	ROOT	0	Y	کردن.25	Arg1	_	_
+6	شد	V	PREDEP	7	Y	کردن.25	Arg1	_	_	_	_
+4	گفت	V	ROOT	0	Y	گفتن.35	ArgM-TMP	_	_	_	_
+7	شد	V	ROOT	0	Y	تهدید‌کردن.177	ArgM-ADV	_	_	_
+13	شده‌ای	V	VCL	2	Y	کردن.25	Arg1	_	_	_	_	_	_
+17	داده	V	VCL	11	Y	دستور‌دادن.104	_	Arg1	_	_	_
+9	داشت	V	ROOT	0	Y	وجود‌داشتن.154	Arg2	_	_
+7	بود	V	ROOT	0	Y	بودن.15	Arg1
+9	بود	V	PRD	3	Y	بودن.15	Arg2	_
+7	گفت	V	ROOT	0	Y	گفتن.35	ArgM-TMP	_	_	_	_	_
+2	نکشید	V	ROOT	0	Y	طول‌کشیدن.443	Arg1	_
+12	داده	V	PREDEP	13	Y	غسل‌دادن.657	ArgM-TMP	_	_	_

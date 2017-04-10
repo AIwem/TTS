@@ -1,0 +1,141 @@
+total sentence num from CSRI 896
+total sentence num from CSRI with semantic tags 800 //these 96 sentence had no semantic tags
+total sentence num from CSRI with correct semantic tags 538 //these 262 sentence had wrong semantic tags; semantic tags was placed for verbs instead of words depended to them.
+
+
+========================================== static_objectt ========================================
+%216-61sentence-11header=144		kolan 21 static_object dare
+%Accuracy of J48: 85.42%
+%---------------------------------
+%Accuracy of PART: 86.81%
+%---------------------------------
+%Accuracy of DecisionTable: 80.56%
+%---------------------------------
+%Accuracy of DecisionStump: 82.64%
+%---------------------------------
+
+======================================== static_object_state =====================================
+%216-61sentence-11header=144		kolan 19 static_object dare
+%Accuracy of J48: 86.81%
+%---------------------------------
+%Accuracy of PART: 87.50%
+%---------------------------------
+%Accuracy of DecisionTable: 75.69%
+%---------------------------------
+%Accuracy of DecisionStump: 86.81%
+%---------------------------------
+
+========================================== dynamic_object =======================================
+%216-61sentence-11header=144		kolan 5 dynamic_object dare
+%Accuracy of J48: 96.53%
+%---------------------------------
+%Accuracy of PART: 96.53%
+%---------------------------------
+%Accuracy of DecisionTable: 92.36%
+%---------------------------------
+%Accuracy of DecisionStump: 99.31%
+%---------------------------------
+
+======================================= dynamic_objecttAction ====================================
+%216-61sentence-11header=144		kolan 2 dynamic_object_action dare
+%Accuracy of J48: 98.61%
+%---------------------------------
+%Accuracy of PART: 98.61%
+%---------------------------------
+%Accuracy of DecisionTable: 98.61%
+%---------------------------------
+%Accuracy of DecisionStump: 98.61%
+%---------------------------------
+
+======================================= dynamic_object_state =====================================
+%216-61sentence-11header=144		kolan 5 dynamic_object_state dare
+%Accuracy of J48: 96.53%
+%---------------------------------
+%Accuracy of PART: 96.53%
+%---------------------------------
+%Accuracy of DecisionTable: 96.53%
+%---------------------------------
+%Accuracy of DecisionStump: 96.53%
+%---------------------------------
+
+=========================================== Location ===========================================
+%216-61sentence-11header=144		kolan 7 Location dare
+%Accuracy of J48: 95.14%
+%---------------------------------
+%Accuracy of PART: 95.14%
+%---------------------------------
+%Accuracy of DecisionTable: 93.06%
+%---------------------------------
+%Accuracy of DecisionStump: 97.22%
+%---------------------------------
+
+============================================= Time =============================================
+%216-61sentence-11header=144		kolan 3 Time dare
+%Accuracy of J48: 97.92%
+%---------------------------------
+%Accuracy of PART: 97.92%
+%---------------------------------
+%Accuracy of DecisionTable: 97.92%
+%---------------------------------
+%Accuracy of DecisionStump: 99.31%
+%---------------------------------
+
+============================================ scene_goal =========================================
+%216-61sentence-11header=144		kolan 4 scene_goal dare
+%Accuracy of J48: 97.22%
+%---------------------------------
+%Accuracy of PART: 97.22%
+%---------------------------------
+%Accuracy of DecisionTable: 97.22%
+%---------------------------------
+%Accuracy of DecisionStump: 97.22%
+%---------------------------------
+
+========================================== SceneEmotion ========================================
+%216-61sentence-11header=144		hichiiii nadare 
+
+============================================= Role =============================================
+%216-61sentence-11header=144		kolan 14 role dare
+%Accuracy of J48: 90.28%
+%---------------------------------
+%Accuracy of PART: 90.28%
+%---------------------------------
+%Accuracy of DecisionTable: 87.50%
+%---------------------------------
+%Accuracy of DecisionStump: 95.14%
+%---------------------------------
+
+=========================================== role_action =========================================
+%216-61sentence-11header=144		kolan 26 role_action dare
+%Accuracy of J48: 96.53%
+%---------------------------------
+%Accuracy of PART: 96.53%
+%---------------------------------
+%Accuracy of DecisionTable: 95.14%
+%---------------------------------
+%Accuracy of DecisionStump: 96.53%
+%---------------------------------
+========================================== roleEmotion ========================================
+%216-61sentence-11header=144		hichiiii nadare 
+
+=========================================== role_state =========================================
+%216-61sentence-11header=144		kolan 10 role_state dare
+%Accuracy of J48: 93.06%
+%---------------------------------
+%Accuracy of PART: 93.06%
+%---------------------------------
+%Accuracy of DecisionTable: 88.19%
+%---------------------------------
+%Accuracy of DecisionStump: 93.75%
+%---------------------------------
+
+=========================================== role_intent ========================================
+%216-61sentence-11header=144		kolan 11 role_intent dare
+%Accuracy of J48: 92.36%
+%---------------------------------
+%Accuracy of PART: 92.36%
+%---------------------------------
+%Accuracy of DecisionTable: 86.11%
+%---------------------------------
+%Accuracy of DecisionStump: 91.67%
+%---------------------------------
