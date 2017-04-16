@@ -1116,7 +1116,7 @@ public class SentenceModel {
 		
 		this.addPhrase(verb_ph);
 		
-		print(""+ verb_ph);		
+//		print(""+ verb_ph);		
 			
 	}
 	
@@ -1190,6 +1190,14 @@ public class SentenceModel {
 										newDataSetRecord += junkSrcNum + "\t";
 										newDataSetRecord += dep._dataSetRecord.substring(Yindex, dep._dataSetRecord.length());
 									}
+									else{									
+										
+										int junkStartIndex = junkDataSetRcrd.indexOf("" + junkSrcNum);
+										
+										if(junkStartIndex != -1)
+											newDataSetRecord += junkDataSetRcrd.substring(junkStartIndex,junkDataSetRcrd.length());										
+										
+									}
 								}
 								dep._dataSetRecord = newDataSetRecord;
 								dep._syntaxTag = junkSyn_tag;
@@ -1198,7 +1206,7 @@ public class SentenceModel {
 								continue;
 							}
 							
-							newDataSetRecord += junkSrcNum + "\t";
+//							newDataSetRecord += junkSrcNum + "\t";
 							
 							junkDepsWriter.println(dep._dataSetRecord + "\t\t\t" + wrd);
 							

@@ -665,6 +665,9 @@ public class Word {
  	}
  	
  	public String getFullStr() {
+ 		
+ 			if(_dataSetRecord.contains("3	مصر	N	POSDEP"))
+ 				 print("\nhere\n");
 	 		String rs = "" + _number;		
 			rs += "\t";
 			if(_wordName != null) rs += "" + _wordName; 
@@ -870,12 +873,12 @@ public class Word {
  			adjectives = new ArrayList<Word>();
  		
  		if(!hasAdjective(adj._wsd)){
- 			System.out.println(adj._wsd + " adj added to " + this._wordName + "\n");
+// 			System.out.println(adj._wsd + " adj added to " + this._wordName + "\n");
  			adjectives.add(adj);
  			return 1;
  		}
  		else{
- 			System.out.println(this._wordName + " has this " + adj._wsd + " adj before! so they will merge \n");
+// 			System.out.println(this._wordName + " has this " + adj._wsd + " adj before! so they will merge \n");
  			
  			Word oldAdj = getAdjective(adj._wsd);
  			
@@ -899,12 +902,12 @@ public class Word {
  			mozaf_elaih = new ArrayList<Word>();
  		
  		if(!hasMozaf_elaih(moz._wsd)){
- 			System.out.println(moz._wsd + " mozaf added to " + this._wordName + "\n");
+// 			System.out.println(moz._wsd + " mozaf added to " + this._wordName + "\n");
  			mozaf_elaih.add(moz);
  			return 1;
  		}
  		else{
- 			System.out.println(this._wordName + " has this " + moz._wsd + " mozaf before! so they will merge \n");
+// 			System.out.println(this._wordName + " has this " + moz._wsd + " mozaf before! so they will merge \n");
  			
  			Word oldMoz = getMozaf_elaih(moz._wsd);
  			
