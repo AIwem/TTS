@@ -1,0 +1,248 @@
+8	میان	N	ADVRB	17	
+16	او	PR	MOZ	12	null	_	null	_	role	_	_
+
+3	همه	ADJ	NPREMOD	4	null	_	null	_	no	_
+5	جز	PREP	POSDEP	4	null	_	null	_	no	_
+
+6	که	SUBR	NCL	1	null	_	null	_	no	_	_
+
+
+3	که	SUBR	NCL	2	null	_	null	_	no	_	_	_
+9	او	PR	VPP	10	
+13	خود	PR	MOZ	12	خود§n-13459	_	نفر§n-13075	_	role	_	_	_
+
+12	که	SUBR	NCL	9	null	_	null	_	no	_	_	_
+
+3	او	PR	PREDEP	4	null	_	null	_	role	_	_
+13	او	PR	VPP	14	
+
+7	دیگر	PR	MOZ	6	دیگر§a-9809	_	null	_	no	_	_
+10	که	SUBR	NCL	8	null	_	null	_	no	_	_
+
+
+2	این	ADJ	NPREMOD	3	null	_	null	_	no	_
+
+6	شان	PR	MOZ	5	null	_	null	_	no	_	_	_	_
+16	خود	PR	MOZ	15	خود§n-13459	_	نفر§n-13075	_	role	_	_	_	_
+
+2	آن	PR	POSDEP	1	null	_	null	_	no	_	_	_	_	_	_	_
+3	که	SUBR	NCL	2	null	_	null	_	no	_	_	_	_	_	_	_
+17	او	PR	VPP	18	
+23	ما	PR	NPP	24	
+34	آنجا	N	ADVRB	36	
+
+3	او	PR	PREDEP	4	null	_	null	_	role	_	_
+
+2	که	SUBR	NCL	1	null	_	null	_	no	_	_	_	_
+9	شان	PR	MOZ	8	null	_	null	_	no	_	_	_	_
+14	شان	PR	MOZ	13	null	_	null	_	no	_	_	_	_
+
+
+3	درون	N	ADVRB	8	
+
+5	که	SUBR	NCL	2	null	_	null	_	no	_	_	_	_
+19	او	PR	PREDEP	20	null	_	null	_	role	_	_	_	_
+22	خود	PR	MOZ	21	خود§n-13459	_	نفر§n-13075	_	role	_	_	_	_
+
+13	این	PR	ADVRB	11	
+14	که	SUBR	NCL	13	null	_	null	_	no	_	_	_	_
+16	که	SUBR	NCL	15	null	_	null	_	no	_	_	_	_
+26	استفاده	N	NCONJ	23	
+31	همان	ADJ	NPREMOD	32	null	_	null	_	no	_	_	_	_
+33	که	SUBR	NCL	32	null	_	null	_	no	_	_	_	_
+36	آن	PR	MOS	37	
+
+7	شان	PR	MOZ	6	null	_	null	_	no	_	_
+
+2	او	PR	PREDEP	3	null	_	null	_	role	_
+
+2	که	SUBR	NCL	1	null	_`null	_	no	_	_
+
+8	داشتن	N	MOZ	7	داشتن§v-8512	_	رخداد§n-13136	_	no	_	_
+14	همین	ADJ	NPREMOD	15	null	_	null	_	no	_	_
+
+3	که	SUBR	NCL	2	null	_	null	_	no	_	_
+17	او	PR	NEZ	14	null	_	null	_	role	_	_
+
+9	خود	PR	MOZ	8	null	_	null	_	role	_	_	_	_
+14	وی	PR	VPP	15	
+19	خود	PR	PREDEP	20	null	_	null	_	role	_	_	_	_
+21	برای	PREP	AJPP	23	null	_	null	_	no	_	_	_	_
+22	ت	PR	POSDEP	21	null	_	null	_	no	_	_	_	_
+
+2	آن	ADJ	NPREMOD	3	null	_	null	_	no	_	_
+3	هنگام	N	ADVRB	14	
+15	که	SUBR	VCL	14	null	_	null	_	no	_	_
+16	این	ADJ	NPREMOD	17	null	_	null	_	no	_	_
+
+3	این	ADJ	NPREMOD	4	null	_	null	_	no	_	_
+4	هنگام	N	ADVRB	11	
+10	راه	N	ADVRB	11	
+14	این	ADJ	APREMOD	15	null	_	null	_	no	_	_
+
+
+2	این	ADJ	NPREMOD	3	null	_	null	_	no	_	_	_
+5	رو	N	NVE	9	null	_	null	_	no	_	_	_
+12	او	PR	VPP	13	
+15	این	ADJ	NPREMOD	16	null	_	null	_	no	_	_	_
+22	شما	PR	MOZ	20	null	_	null	_	role	_	_	_
+
+17	نشان	N	NVE	18	null	_	null	_	roleIntent	_	_	_
+
+5	اش	PR	MOZ	4	null	_	null	_	no	_	_
+11	تمام	ADJ	NPREMOD	12	تمام§n-16534	_	اندازه§n-13756	_	roleState	_	_
+20	خود	PR	MOZ	19	خود§n-13459	_	نفر§n-13075	_	role	_	_
+
+4	خود	PR	MOZ	3	خود§n-13459	_	نفر§n-13075	_	role	_	_
+
+
+4	هر	ADJ	NPREMOD	5	null	_	null	_	no	_	_
+5	کدام	N	MOZ	3	null	_	null	_	no	_	_
+8	خود	PR	MOZ	7	null	_	null	_	role	_	_
+
+10	او	PR	MOZ	7	null	_	null	_	role	_	_
+15	خود	PR	MOZ	14	null	_	null	_	role	_	_
+
+
+4	او	PR	MOZ	3	null	_	null	_	role	_
+
+3	که	SUBR	NCL	2	null	_	null	_	no	_	_	_
+6	این	ADJ	NPREMOD	7	null	_	null	_	no	_	_	_
+16	این	PR	POSDEP	15	null	_	null	_	no	_	_	_
+17	که	SUBR	NCL	16	null	_	null	_	no	_	_	_
+18	این	ADJ	NPREMOD	19	null	_	null	_	no	_	_	_
+23	خود	PR	PREDEP	24	
+28	کردن	N	MOZ	26	زندانی کردن§v-8434	_	رخداد§n-13136	_	no	_	_	_
+
+1	که	SUBR	ROOT	0	null	_	null	_	no	_
+4	هر	ADJ	APREMOD	5	null	_	null	_	no	_
+
+7	که	SUBR	NCL	5	null	_	null	_	no	_	_	_
+17	دار	N	VPRT	19	
+
+4	که	SUBR	NCL	3	null	_	null	_	no	_	_	_
+
+11	که	SUBR	NCL	9	null	_	null	_	no	_	_
+12	او	PR	PREDEP	13	null	_	null	_role		_	_
+
+2	این	ADJ	NPREMOD	3	null	_	null	_	no	_	_	_	_	_
+3	هنگام	N	ADVRB	18	
+5	که	SUBR	NCL	4	null	_	null	_	no	_	_	_	_	_
+28	که	SUBR	NCL	24	null	_	null	_	no	_	_	_	_	_
+31	شما	PR	MOZ	30	null	_	null	_	role	_	_	_	_	_
+
+11	او	PR	NPP	12	
+
+17	او	PR	PREDEP	18	null	_	null	_	role	_	_	_	_
+
+10	بیرون	N	NVE	11	برون§n-11860	_	جا§n-12733	_	no	_	_	_	_
+17	که	SUBR	NCL	16	null	_	null	_	no	_	_	_	_
+19	من	PR	VPP	20	
+
+
+6	هیچ	ADJ	NPREMOD	7	null	_	null	_	no	_	_
+11	او	PR	NPP	7	
+
+6	خود	PR	MOZ	5	خود§n-13459	_	نفر§n-13075	_	role	_
+
+2	که	SUBR	NCL	1	null	_	null	_	no	_	_	_
+
+8	این	ADJ	NPREMOD	9	null	_	null	_	no	_
+
+2	همین	PR	POSDEP	1	null	_	null	_	no	_	_	_
+6	خود	PR	MOZ	5	خود§n-13459	_	نفر§n-13075	_	role	_	_	_
+14	خود	PR	MOZ	13	خود§n-13459	_	نفر§n-13075	_	role	_	_	_
+
+5	خود	PR	MOZ	4	خود§n-13459	_	نفر§n-13075	_	role	_
+
+2	که	SUBR	NCL	1	null	_	null	_	no	_	_	_
+10	خود	PR	MOZ	9	خود§n-13459	_	نفر§n-13075	_	role	_	_	_
+15	که	SUBR	NCL	14	null	_	null	_	no	_	_	_
+
+3	حال	N	VPP	10	
+8	شان	PR	MOZ	7	null	_	null	_	no	_	_
+
+
+3	چند	ADJ	NPREMOD	4	null	_	null	_	no	_	_	_
+4	روز	N	POSDEP	2	روز§n-12632	_	دوره زمانی§n-12603	_	time	_	_	_
+15	خود	PR	MOZ	14	خود§n-13459	_	نفر§n-13075	_	role	_	_	_
+18	او	PR	NPP	19	
+
+20	خود	PR	PREDEP	21	خود§n-13459	_	نفر§n-13075	_	role	_	_	_	_
+23	او	PR	NPP	24	
+28	خود	PR	MOZ	27	خود§n-13459	_	نفر§n-13075	_	role	_	_	_	_
+
+3	این	PR	POSDEP	2	null	_	null	_	no	_	_
+4	که	SUBR	NCL	3	null	_	null	_	no	_	_
+10	خود	PR	POSDEP	9	خود§n-13459	_	نفر§n-13075	_	role	_	_
+17	این	ADJ	NPREMOD	18	null	_	null	_	no	_	_
+
+9	بار	N	VPP	12	
+
+3	باز	ADJ	PREDEP	4	باز§a-15702	_	‌مشخصه§n-12756	_	roleIntent	_	_
+4	کردن	N	POSDEP	2	باز کردن§v-21449	_	رخداد§n-13136	_	roleAction	_	_
+6	که	SUBR	NCL	5	null	_	null	_	no	_	_
+14	آن	PR	VPP	15	
+
+4	آن	ADJ	NPREMOD	5	null	_	null	_	no	_
+5	زمان	N	MOZ	3	زمانه§n-12682	_	دوره زمانی§n-12603	_	time	_
+
+1	او	PR	APP	4	null	_	null	_	role	_	_
+
+
+14	این	PR	ADVRB	12	
+15	که	SUBR	NCL	14	null	_	null	_	no	_	_	_	_	_
+19	حال	N	VPP	21	
+26	خود	PR	PREDEP	27	خود§n-13459	_	نفر§n-13075	_	role	_	_	_	_	_
+
+5	این	ADJ	NPREMOD	6	null	_	null	_	no	_	_	_
+12	او	PR	NPP	13	
+15	که	SUBR	VCL	14	null	_	null	_	no	_	_	_
+
+1	این	ADJ	NPREMOD	2	null	_	null	_	no	_	_
+5	او	PR	VPP	6	
+7	که	SUBR	NCL	2	null	_	null	_	no	_	_
+
+4	شان	PR	MOZ	3	null	_	null	_	no	_	_	_
+17	خویش	PR	MOZ	14	خویش§n-13365	_	نفر§n-13075	_	role	_	_	_
+18	ما	PR	PREDEP	19	null	_	null	_	role	_	_	_
+
+7	که	SUBR	NCL	2	null	_	null	_	no	_	_	_
+14	ام	PR	MOZ	9	null	_	null	_	no	_	_	_
+16	من	PR	VPP	18	
+
+4	گذشته	ADJ	NPOSTMOD	3	گذشته§a-2461	_	مشخصه§n-12756	_	time	_
+6	او	PR	NPP	7	
+
+4	حق	N	VPP	7	
+
+2	این	ADJ	NPREMOD	3	null	_	null	_	no	_	_	_	_	_
+20	آن	PR	PREDEP	21	null	_	null	_	static_object	_	_	_	_	_
+27	او	PR	PREDEP	28	null	_	null	_	role	_	_	_	_	_
+30	من	PR	POSDEP	29	خود§n-13459	_	نفر§n-13075	_	role	_	_	_	_	_
+
+
+17	خود	PR	MOZ	16	خود§n-13459	_	نفر§n-13075	_	role	_	_
+
+
+2	این	ADJ	NPREMOD	3	null	_	null	_	no	_	_	_	_	_	_
+3	هنگام	N	ADVRB	13	
+8	که	SUBR	NCL	7	null	_	null	_	no	_	_	_	_	_	_
+15	رو	N	NVE	18	رخ§n-11310	_	رابطه§n-13628	_	roleState	_	_	_	_	_	_
+22	ای	ADR	VCONJ	29	null	_	null	_	no	_	_	_	_	_	_
+27	سابق	ADJ	NPOSTMOD	26	پیشین§a-2442	_	‌مشخصه§n-12756	_	time	_	_	_	_	_	_
+28	من	PR	MOZ	26	خود§n-13459	_	نفر§n-13075	_	role	_	_	_	_	_	_
+30	که	SUBR	NCL	26	null	_	null	_	no	_	_	_	_	_	_
+32	آن	PR	PREDEP	33	null	_	null	_	no	_	_	_	_	_	_
+
+8	اش	PR	MOZ	7	null	_	null	_	no	_	_
+
+5	او	PR	PREDEP	6	null	_	null	_	role	_	_	_
+15	وجود	N	MOZ	14	هستی§n-12391	_	مشخصه§n-12756	_	no	_	_	_
+
+7	که	SUBR	NCL	4	null	_	null	_	no	_	_	_
+20	نام	N	MOS	22	
+21	ایشان	PR	MOZ	20	null	_	null	_	role	_	_	_
+
+12	او	PR	VPP	13	
+

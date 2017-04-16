@@ -441,10 +441,13 @@ public class Word {
  	//-------------------- setter part --------------------------
  	
 	public void set_number(String number) {
+//		print(this._wordName);
 		if(number == null || number.equals("") || number.equals("-"))
 			this._number = -1;
-		else
-			this._number = Integer.parseInt(number);		
+		else{
+//			print(this._dataSetRecord);
+			this._number = Integer.parseInt(number);
+		}
 	}
 	
 	public void set_gPOS(String gPos) {

@@ -1,0 +1,45 @@
+6	است	V	ROOT	0	بودن§v-9328		رخداد§n-13136	no	Y	بودن.15	Arg1	_	_
+11	است	V	VCONJ	19	بودن§v-16430	رخداد§n-13136	no	Y	بودن.15	Arg1	_
+9	کرده	V	PREDEP	10	مومیایی کردن§v-9359	رخداد§n-13136	roleAction			Y	کردن.25	_	Arg1	_
+9	بود	V	ROOT	0	بودن§v-9332	رخداد§n-13136	roleAction		Y	بودن.15	ArgM-ADV
+8	می‌خواست	V	PRD	7	خواستن§v-16218	رخداد§n-13136	roleAction	Y	خواستن.360	Arg1	_	_	_
+7	خواهندکرد	V	PREDEP	8	حیله کردن§v-8443	رخداد§n-13136	roleAction	Y	حیله‌‌کردن.226	Arg3	_
+8	شد	V	PREDEP	9	کردن§v-8678	رخداد§n-13136	no	Y	کردن.25	Arg1	_	_	_	_
+7	کشیدند	V	PREDEP	8	null	رخداد§n-13136	roleAction	Y	نقشه‌کشیدن.42	ArgM-DIS	_	_	_	_	_
+33	باشید	V	PRD	23	بودن§v-16430	رخداد§n-13136	roleAction	Y	بودن.15	_	Arg1	_	_	_	_
+6	یم	V	VCL	2	null	null	no	Y	بودن.15	Arg1	_
+4	کرد	V	NCL	1	همت گماشتن§v-9224	رخداد§n-13136	roleAction	Y	تلاش‌کردن.783	Arg0	_	_	_
+6	کرد	V	PREDEP	7	یاری کردن§v-9088	رخداد§n-13136	roleAction	Y	لطف‌کردن.507	Arg0	_	_	_	_	_
+7	آورد	V	PREDEP	8	آوردن§v-21639	رخداد§n-13136	roleAction	Y	آوردن.452	Arg0	_	_
+8	می‌برم	V	VCL	2	پناه بردن§v-8160	رخداد§n-13136	roleAction	Y	پناه‌بردن.282	Arg1	_	_	_
+20	داشت	V	VCL	16	نقشه داشتن§v-9203	رخداد§n-13136	roleAction	Y	قصد‌داشتن.515	_	_	Arg1	_	_
+33	کند	V	VCL	28	خیانت کردن§v-8870	رخداد§n-13136	roleAction	Y	خیانت‌کردن.537	_	_	_	_	_	Arg1	_
+28	نیست	V	VCL	9	null	null	no	Y	بودن.15	_	Arg1	_	_	_	_
+12	شد	V	PREDEP	13	منتشر کردن§v-7949	رخداد§n-13136	no	Y	پخش‌کردن.550	Arg3	_
+12	است	V	VCL	8	بودن§v-9328	رخداد§n-13136	no	Y	بودن.15	_	Arg1	_	_
+4	بود	V	PRD	2	بودن§v-16430	رخداد§n-13136	no	Y	بودن.15	Arg1	_	_	_
+18	شدند	V	ROOT	0	زندانی کردن§v-8434	رخداد§n-13136	no	Y	کردن.25	ArgM-CAU
+5	داشت	V	PRD	4	داشتن§v-8512	رخداد§n-13136	no	Y	داشتن.39	Arg0	_
+7	کرد	V	ROOT	0	به فراموشی سپردن§v-8858	رخداد§n-13136	roleAction	Y	به‌فراموشی‌سپردن.356	Arg0	_	_
+12	نمود	V	PREDEP	13	فرا خواندن§v-18650	رخداد§n-13136	roleAction	Y	احضار‌کردن.572	ArgM-PRP	_
+12	رفت	V	PREDEP	13	پوییدن§v-7700	رخداد§n-13136	roleAction	Y	رفتن.17	Arg0	_
+5	بود	V	ROOT	0	بودن§v-9328	رخداد§n-13136	no	Y	بودن.15	Arg1	_	_
+6	نمود	V	PREDEP	38	شرح دادن§v-8268	رخداد§n-13136	roleAction	Y	تعبیر‌کردن.494	Arg0	_	_	_	_
+21	نماید	V	VCL	8	سنجیدن§v-19208	رخداد§n-13136	roleAction	Y	بررسی‌کردن.603	_	Arg1	_	_
+10	داد	V	ROOT	0	null	null	no	Y	قرار‌دادن.309	Arg1
+12	داد	V	ROOT	0	null	null	no	Y	قرار‌دادن.309	Arg2	_
+11	کرد	V	PREDEP	12	خدمت کردن§n-10171	رخداد§n-13136	roleAction	Y	خدمت‌کردن.611	Arg0	_
+8	فرا‌رسید	V	PREDEP	9	رسیدن§v-8616	رخداد§n-13136	no	Y	فرا‌رسیدن.613	Arg1	_
+4	خواست	V	ROOT	0	خواستن§v-19251	رخداد§n-13136	roleAction	Y	خواستن.51	Arg0	_	_
+7	رسیدند	V	PREDEP	8	رسیدن§v-8613	رخداد§n-13136	roleAction	Y	رسیدن.501	Arg0	_	_
+7	نرفت	V	PREDEP	8	null	null	roleAction	Y	زیر‌بار‌رفتن.546	Arg0	_	_	_	_
+4	داد	V	PREDEP	5	ثمر دادن§v-9141	رخداد§n-13136	no	Y	نتیجه‌دادن.620	Arg1	_	_
+8	شده‌بودند	V	PRD	2	متاثر کردن§v-16385	رخداد§n-13136	roleAction	Y	کردن.25	Arg2	_	_	_	_
+10	فراگرفته‌بود	V	PRD	2	فرا گرفتن§v-8018	رخداد§n-13136	no	Y	فرا‌گرفتن.455	Arg1	_	_	_	_
+5	گفت	V	ROOT	0	گفتن§v-7774	رخداد§n-13136	roleAction	Y	گفتن.35	Arg0	_	_
+6	برده	V	PREDEP	7	بردن§v-7660	رخداد§n-13136	roleAction	Y	بردن.208	Arg0	_	_	_
+8	شد	V	PRD	3	اطلاع دادن§v-9299	رخداد§n-13136	roleAction	Y	کردن.25	Arg1	_
+12	نمود	V	PREDEP	13	وداع گفتن§v-7997	رخداد§n-13136	roleAction	Y	وداع‌کردن.172	Arg0	_	_
+11	بسپارد	V	VCL	3	به خاک سپردن§v-9614	رخداد§n-13136	roleAction	Y	به‌خاک‌سپردن.185	Arg1	_
+4	می‌خواست	V	PRD	2	دوست داشتن§v-9669	رخداد§n-13136	roleAction	Y	خواستن.360	Arg1	_	_	_	_
+7	می‌گفتند	V	ROOT	0	گفتن§v-9244	رخداد§n-13136	roleAction	Y	گفتن.298	Arg3	_	_

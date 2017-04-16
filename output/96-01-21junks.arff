@@ -1,0 +1,464 @@
+3	11	NUM	NPREMOD	4	null	_	null	_	no	_	_
+6	و	CONJ	VCONJ	17	null	_	null	_	no	_	_
+7	از	PREP	ADVRB	17	null	_	null	_	no	_	ArgM-ADV
+14	و	CONJ	AJCONJ	13	null	_	null	_	no	_	_
+18	.	PUNC	PUNC	17	null	_	null	_	no	_	_
+
+2	از	PREP	AJPP	7	null	_	null	_	no	_
+9	.	PUNC	PUNC	8	null	_	null	_	no	_
+
+2	9	NUM	NPREMOD	3	null	_	null	_	no	_	_
+7	یک	NUM	NPREMOD	8	یک§n-14494	_	 اندازه§n-12768	_	no	_	_
+9	،	PUNC	PUNC	8	null	_	null	_	no	_	_
+12	.	PUNC	PUNC	5	null	_	null	_	no	_	_
+
+5	و	CONJ	VCONJ	6	null	_	null	_		_	_	_	_
+7	در	PREP	ADVRB	10	null	_null	_	no	_	_	ArgM-LOC	_
+12	11	NUM	NPREMOD	13	null	_	null	_	no	_	_	_	_
+14	و	CONJ	NCONJ	13	null	_	null	_	no	_	_	_	_
+16	و	CONJ	NCONJ	15	null	_	null	_	no	_	_	_	_
+22	.	PUNC	PUNC	6	null	_	null	_	no	_	_	_	_
+
+6	را	POSTP	OBJ	7	null	_	null	_	no	Arg1	_	_
+8	از	PREP	VPP	10	null	_	null	_	no	_	Arg3	_
+11	تا	SUBR	VCL	10	null	_	null	_	no	_	Arg1	_
+14	را	POSTP	OBJ	19	null	_	null	_	no	_	_	Arg1
+
+7	در	PREP	ADVRB	11	null	_	null	_	no	_	ArgM-TMP	_
+16	را	POSTP	OBJ	18	null	_	null	_	no	_	_	Arg3
+
+1	و	CONJ	VCONJ	7	null	_	null	_	no	_	_
+4	را	POSTP	OBJ	7	null	_	null	_	no	Arg1	_
+5	به	PREP	VPP	7	null	_	null	_	no	Arg3	_
+8	و	CONJ	VCONJ	14	null	_	null	_	no	_	_
+11	را	POSTP	OBJ	14	null	_	null	_	no	_	Arg1
+12	به	PREP	VPP	14	null	_	null	_	no	_	Arg3
+15	.	PUNC	PUNC	14	null	_	null	_	no	_	_
+
+5	و	CONJ	NCONJ	2	null	_	null	_	no	_	_
+13	و	CONJ	NCONJ	12	null	_	null	_	no	_	_
+16	در	PREP	NPP	19	null	_	null	_	no	_	ArgM-LOC
+
+1	و	CONJ	VCONJ	2	null	_	null	_	no	_	_
+7	،	PUNC	PUNC	6	null	_	null	_	no	_	_
+
+4	را	POSTP	OBJ	5	null	_	null	_	no	Arg1
+6	.	PUNC	PUNC	5	null	_	null	_	no	_
+
+1	در	PREP	ADVRB	7	null	_	null	_	no	ArgM-TMP	_	_	_
+8	و	CONJ	VCONJ	11	null	_	null	_	no	_	_	_	_
+9	از	PREP	VPP	11	null	_	null	_	no	_	Arg3	_	_
+12	تا	SUBR	VCL	11	null	_	null	_	no	_	Arg1	_	_
+14	را	POSTP	OBJ	19	null	_	null	_	no	_	_	Arg1	_
+17	به	PREP	VPP	19	null	_	null	_	no	_	_	Arg4	_
+20	ولی	CONJ	VCONJ	26	null	_	null	_	no	_	_	_	_
+22	به	PREP	NPP	24	null	_	null	_	no	_	_	_	Arg3
+27	.	PUNC	PUNC	26	null	_	null	_	no	_	_	_	_
+
+7	،	PUNC	PUNC	6	null	_	null	_		_	_	_	_	_	_	_
+9	را	POSTP	OBJ	14	null	_	null	_	no	_	Arg1	_	_	_	_	_
+10	از	PREP	VPP	14	null	_	null	_	no	_	Arg3	_	_	_	_	_
+15	،	PUNC	PUNC	14	null	_	null	_	no	_	_	_	_	_	_	_
+16	به	PREP	VPP	18	null	_	null	_	no	_	_	Arg3	_	_	_	_
+22	به	PREP	NPP	24	null	_	null	_	no	_	_	_	Arg3	_	_	_
+26	تا	SUBR	AJUCL	25	null	_	null	_	no	_	_	_	ArgM-CAU2	_	_	_
+28	را	POSTP	OBJ	31	null	_	null	_	no	_	_	_	_	Arg1	_	_
+29	به	PREP	VPP	31	null	_	null	_	no	_	_	_	_	Arg4	_	_
+32	تا	SUBR	AJUCL	31	null	_	null	_	no	_	_	_	_	ArgM-CAU	_	_
+33	در	PREP	ADVRB	36	null	_	null	_	no	_	_	_	_	_	ArgM-LOC	_
+37	و	CONJ	VCONJ	40	null	_	null	_	no	_	_	_	_	_	_	_
+38	به	PREP	VPP	40	null	_	null	_	no	_	_	_	_	_	_	Arg3
+41	؟	PUNC	PUNC	18	null	_	null	_	no	_	_	_	_	_	_	_
+
+4	را	POSTP	OBJ	5	null	_	null	_	no	Arg1	_
+7	از	PREP	MOS	9	null	_	null	_	no	_	Arg2
+10	.	PUNC	PUNC	9	null	_	null	_	no	_	_
+
+4	از	PREP	NPP	6	null	_	null	_	no	Arg3	_	_	_
+12	و	CONJ	VCONJ	16	null	_	null	_	no	_	_	_	_
+17	و	CONJ	VCONJ	20	null	_	null	_	no	_	_	_	_
+18	به	PREP	VPP	20	null	_	null	_	no	_	_	_	Arg3
+21	.	PUNC	PUNC	20	null	_	null	_	no	_	_	_	_
+
+
+2	در	PREP	ADVRB	8	null	_	null	_	no	ArgM-LOC
+5	به	PREP	NPP	7	null	_	null	_	no	Arg3
+9	،	PUNC	PUNC	8	null	_	null	_	no	_
+
+4	را	POSTP	OBJ	14	null	_	null	_	no	Arg1	Arg1	_	_
+6	به	PREP	AJPP	9	null	_	null	_	no	_	_	_	_
+11	،	PUNC	PUNC	10	null	_	null	_	no	_	_	_	_
+15	و	CONJ	VCONJ	16	null	_	null	_	no	_	_	_	_
+20	را	POSTP	OBJ	23	null	_	null	_	no	_	_	_	Arg1
+24	.	PUNC	PUNC	16	null	_	null	_	no	_	_	_	_
+
+2	[	PUNC	PUNC	4	null	_	null	_	no	_	_	_	_
+3	سه	NUM	NPREMOD	4	سه§n-13492	_	اندازه§n-12768	_	no	_	_	_	_
+5	و	CONJ	NCONJ	4	null	_	null	_	role	_	_	_	_
+6	سه	NUM	NPREMOD	7	سه§n-13492	_	اندازه§n-12768	_	no	_	_	_	_
+8	]	PUNC	PUNC	4	null	_	null	_	no	_	_	_	_
+12	تا	PREP	ADVRB	11	null	_	null	_	no	_	_	_	_
+17	از	PREP	VPP	21	null	_	null	_	no	_	Arg3	_	_
+19	به	PREP	VPP	21	null	_	null	_	no	_	Arg4	_	_
+25	و	CONJ	NCONJ	23	null	_	null	_	no	_	_	_	_
+27	از	PREP	NPP	26	null	_	null	_	no	_	_	_	_
+29	،	PUNC	PUNC	28	null	_	null	_	NO	_	_	_	_
+35	در	PREP	MOS	37	null	_	null	_	no	_	_	Arg2	_
+
+1	اما	CONJ	VCONJ	11	null	_	null	_	NO	_	_
+5	،	PUNC	PUNC	4	null	_	null	_	no	_	_
+8	به	PREP	VPP	11	null	_	null	_	no	Arg3	_
+12	و	CONJ	VCONJ	14	null	_	null	_	no	_	_
+
+1	و	CONJ	VCONJ	9	null	_	null	_	no	_
+3	را	POSTP	OBJ	9	null	_	null	_	no	Arg1
+4	در	PREP	ADVRB	9	null	_	null	_	no	ArgM-LOC
+6	به	PREP	VPP	9	null	_	null	_	no	Arg2
+10	.	PUNC	PUNC	9	null	_	null	_	no	_
+
+4	را	POSTP	OBJ	5	null	_	null	_	no	Arg1	_
+10	.	PUNC	PUNC	9	null	_	null	_	no	_	_
+
+3	و	CONJ	NCONJ	1	null	_	null	_	no	_	_
+6	از	PREP	AJPP	10	null	_	null	_	no	_	_
+12	و	CONJ	VCONJ	20	null	_	null	_	no	_	_
+13	به	PREP	ADVRB	20	null	_	null	_	no	_	ArgM-CAU
+17	را	POSTP	OBJ	20	null	_	null	_	no	_	Arg1
+
+1	اما	CONJ	VCONJ	18	null	_	null	_	no	_	ArgM-ADV
+5	به	PREP	VPP	8	null	_	null	_	no	Arg3	_
+9	،	PUNC	PUNC	8	null	_	null	_	no	_	_
+13	،	PUNC	PUNC	12	null	_	null	_	no	_	_
+15	و	CONJ	AJCONJ	14	null	_	null	_	no	_	_
+
+1	و	CONJ	VCONJ	11	null	_	null	_	no	_	_	_	_
+2	در	PREP	ADVRB	11	null	_	null	_	no	ArgM-TMP	_	_	_
+6	را	POSTP	OBJ	11	null	_	null	_	no	Arg1	_	_	_
+7	در	PREP	ADVRB	11	null	_	null	_	no	Arg3	_	_	_
+12	و	CONJ	VCONJ	15	null	_	null	_	no	_	_	_	_
+13	به	PREP	VPP	15	null	_	null	_	no	_	Arg3	_	_
+20	را	POSTP	OBJ	24	null	_	null	_	no	_	_	_	Arg1
+25	.	PUNC	PUNC	15	null	_	null	_	no	_	_	_	_
+
+1	در	PREP	ADVRB	14	null	_	null	_	no	ArgM-TMP	_
+4	و	CONJ	ADVRB	14	
+5	در	PREP	ADVRB	14	
+8	آخر	NUM	NPOSTMOD	7	اختتام§n-11548	_	رخداد§n-13136	_	staticObjState	_	_
+9	،	PUNC	NPOSTMOD	7	
+13	را	POSTP	OBJ	14	null	_	null	_	no	Arg1	_
+
+1	و	CONJ	VCONJ	11	null	_	null	_	no	_	_
+2	در	PREP	ADVRB	11	null	_	null	_	no	ArgM-TMP	_
+5	،	PUNC	PUNC	4	null	_	null	_	no	_	_
+9	از	PREP	ADVRB	11	null	_	null	_	no	ArgM-LOC	_
+12	و	CONJ	VCONJ	18	null	_	null	_	no	_	_
+15	دو	NUM	NPOSTMOD	13	دو§n-13491	_	اندازه§n-12768	_	no	_	_
+16	را	POSTP	OBJ	18	null	_	null	_	no	_	Arg1
+19	.	PUNC	PUNC	18	null	_	null	_	no	_	_
+
+4	به	PREP	VPP	8	null	_	null	_	no	Arg3	_	_
+12	از	PREP	ADVRB	15	null	_	null	_	no	_	_	ArgM-MNR
+16	.	PUNC	PUNC	9	null	_	null	_	no	_	_	_
+
+1	در	PREP	ADVRB	9	null	_	null	_	no	ArgM-TMP	_	_
+6	به	PREP	NPP	5	null	_	null	_	no	Arg3	_	_
+10	و	CONJ	VCONJ	13	null	_	null	_	no	_	_	_
+11	به	PREP	VPP	13	null	_	null	_	no	_	Arg3	_
+17	و	CONJ	NCONJ	16	null	_	null	_	no	_	_	_
+19	از	PREP	MOS	23	null	_	null	_	no	_	_	Arg2
+24	.	PUNC	PUNC	13	null	_	null	_	no	_	_	_
+
+7	را	POSTP	OBJ	11	null	_	null	_	no	_	Arg1	_
+8	به	PREP	NPP	10	null	_	null	_	no	_	Arg3	_
+12	تا	SUBR	AJUCL	11	null	_	null	_	no	_	ArgM-CAU	_
+14	را	POSTP	OBJ	18	null	_	null	_	no	_	_	Arg1
+15	به	PREP	VPP	18	null	_	null	_	no	_	_	Arg3
+19	.	PUNC	PUNC	3	null	_	null	_	no	_	_	_
+
+10	و	CONJ	VCONJ	22	null	_	null	_	no	_	_
+14	و	CONJ	AJCONJ	13	null	_	null	_	no	_	_
+17	را	POSTP	OBJ	22	null	_	null	_	no	_	Arg1
+18	به	PREP	NPP	21	null	_	null	_	no	_	Arg3
+23	.	PUNC	PUNC	22	null	_	null	_	no	_	_
+
+2	به	PREP	NPP	5	null	_	null	_	no	Arg3	_
+7	تا	SUBR	VCL	6	null	_	null	_	no	Arg1	_
+8	از	PREP	NPP	10	null	_	null	_		_	Arg3
+
+3	،	PUNC	PUNC	2	null	_	null	_	no	_
+6	.	PUNC	PUNC	5	null	_	null	_	no	_
+
+2	به	PREP	VPP	10	null	_	null	_	no	Arg3	_
+6	از	PREP	POSDEP	5	null	_	null	_	no	_	_
+11	تا	SUBR	AJUCL	10	null	_	null	_	no	ArgM-CAU	_
+13	را	POSTP	OBJ	15	null	_	null	_	no	_	Arg1
+
+1	اما	CONJ	VCONJ	12	null	_	null	_	no	_	_
+3	با	PREP	ADVRB	12	null	_	null	_	no	ArgM-ADV	_
+6	و	CONJ	NCONJ	5	null	_	null	_	no	_	_
+8	و	CONJ	NCONJ	7	null	_	null	_	no	_	_
+13	و	CONJ	VCONJ	17	null	_	null	_	no	_	_
+16	را	POSTP	OBJ	17	null	_	null	_	no	_	Arg1
+
+1	و	CONJ	VCONJ	7	null	_	null	_	no	_
+
+1	و	CONJ	VCONJ	7	null	_	null	_	no	_
+5	را	POSTP	OBJ	7	null	_	null	_	no	Arg1
+8	.	PUNC	PUNC	7	null	_	null	_	no	_
+
+1	با	PREP	ADVRB	32	null	_	null	_	no	_	_	_
+5	در	PREP	ADVRB	9	null	_	null	_	no	ArgM-ADV	_	_
+10	اما	CONJ	VCONJ	32	null	_	null	_	no	_	_	_
+12	و	CONJ	NCONJ	11	null	_	null	_	no	_	_	_
+21	را	POSTP	OBJ	25	null	_	null	_	no	_	Arg1	_
+22	از	PREP	PREDEP	24	null	_	null	_	no	_	_	_
+30	را	POSTP	OBJ	32	null	_	null	_	no	_	_	Arg1
+33	.	PUNC	PUNC	32	null	_	null	_	no	_	_	_
+
+5	دو	NUM	SBJ	9	دو§n-13491	_	اندازه§n-12768	_	no	Arg0
+6	در	PREP	ADVRB	9	null	_	null	_	no	ArgM-LOC
+10	،	PUNC	PUNC	9	null	_	null	_	null	_
+
+10	از	PREP	AJPP	12	null	_	null	_	no	_	_	_
+14	و	CONJ	VCONJ	19	null	_	null	_	no	_	_	_
+16	به	PREP	VPRT	19	null	_	null	_	no	_	_	_
+20	.	PUNC	PUNC	6	null	_	null	_	no	_	_	_
+
+2	به	PREP	VPP	11	null	_	null	_	null	_	Arg3	_
+5	در	PREP	ADVRB	10	null	_	null	_	no	ArgM-TMP	_	_
+7	از	PREP	AJPP	9	null	_	null	_	no	_	_	_
+15	را	POSTP	OBJ	18	null	_	null	_	no	_	_	Arg3
+16	به	PREP	NPP	13	null	_	null	_	no	_	_	Arg4
+
+1	و	CONJ	VCONJ	10	null	_	null	_	no	_	_
+2	در	PREP	ADVRB	10	null	_	null	_	no	ArgM-TMP	_
+4	از	PREP	NPP	3	null	_	null	_	no	_	_
+13	را	POSTP	OBJ	15	null	_	null	_	no	_	Arg1
+
+1	در	PREP	ADVRB	18	null	_	null	_	no	_	ArgM-TMP	_	_	_
+7	را	EMPH	POSDEP	6	null	_	null	_	no	_	_	_	_	_
+8	در	PREP	ADVRB	12	null	_	null	_	no	ArgM-LOC	_	_	_	_
+15	را	POSTP	OBJ	18	null	_	null	_	no	_	Arg1	_	_	_
+16	به	PREP	VPRT	18	null	_	null	_	no	_	_	_	_	_
+19	و	CONJ	VCONJ	22	null	_	null	_	no	_	_	_	_	_
+20	به	PREP	VPP	22	null	_	null	_	no	_	_	Arg3	_	_
+25	را	POSTP	OBJ	27	null	_	null	_	no	_	_	_	Arg1	_
+32	را	POSTP	OBJ	34	null	_	null	_	no	_	_	_	_	Arg1
+35	.	PUNC	PUNC	22	null	_	null	_	no	_	_	_	_	_
+
+5	و	CONJ	VCONJ	13	null	_	null	_	no	_	_
+9	را	POSTP	OBJ	13	null	_	null	_	no	_	Arg1
+10	به	PREP	NPP	12	null	_	null	_	no	_	Arg3
+14	.	PUNC	PUNC	13	null	_	null	_	no	_	_
+
+2	در	PREP	VPP	4	null	_	null	_	no	Arg3	_	_	_
+5	و	CONJ	VCONJ	12	null	_	null	_	no	_	_	_	_
+6	به	PREP	NPP	11	null	_	null	_	no	_	Arg3	_	_
+8	و	CONJ	NCONJ	7	null	_	null	_	roleState	_	_	_	_
+13	و	CONJ	VCONJ	15	null	_	null	_	no	_	_	_	_
+18	را	POSTP	OBJ	22	null	_	null	_	no	_	_	_	Arg1
+19	به	PREP	NPP	21	null	_	null	_	no	_	_	_	Arg3
+23	،	PUNC	PUNC	15	null	_	null	_	no	_	_	_	_
+
+1	اما	CONJ	VCONJ	5	null	_	null	_	no	ArgM-DIS	_	_	_
+3	در	PREP	ADVRB	5	null	_	null	_	no	ArgM-LOC	_	_	_
+6	:	PUNC	PUNC	5	null	_	null	_	no	_	_	_	_
+8	از	PREP	NPP	10	null	_	null	_	no	_	Arg3	_	_
+12	تا	SUBR	AJUCL	11	null	_	null	_	no	_	ArgM-CAU	_	_
+14	را	POSTP	OBJ	22	null	_	null	_	no	_	_	_	Arg1
+15	از	PREP	AJPP	21	null	_	null	_	no	_	_	_	_
+18	به	PREP	VPP	20	null	_	null	_	no	_	_	Arg3	_
+23	.	PUNC	PUNC	5	null	_	null	_	no	_	_	_	_
+
+1	و	CONJ	VCONJ	4	null	_	null	_	no	_	_
+5	و	CONJ	VCONJ	10	null	_	null	_	no	_	_
+8	را	POSTP	OBJ	10	null	_	null	_	no	_	Arg1
+11	،	PUNC	PUNC	10	null	_	null	_	no	_	_
+
+8	و	CONJ	NCONJ	7	null	_	null	_	no	_	_
+10	در	PREP	NPP	7	null	_	null	_	no	_	_
+
+1	و	CONJ	VCONJ	8	null	_	null	_	no	_
+4	به	PREP	NPP	7	null	_	null	_	no	Arg3
+9	.	PUNC	PUNC	8	null	_	null	_	no	_
+
+3	به	PREP	NPP	6	null	_	null	_	no	Arg3	_	_
+10	تا	SUBR	VCL	9	null	_	null	_	no	_	Arg3	_
+12	را	POSTP	OBJ	17	null	_	null	_	no	_	_	Arg1
+13	با	PREP	ADVRB	17	null	_	null	_	no	_	_	ArgM-MNR
+18	.	PUNC	PUNC	9	null	_	null	_	no	_	_	_
+
+2	و	CONJ	NCONJ	1	null	_	null	_	no	_
+6	در	PREP	MOS	10	null	_	null	_	no	Arg2
+11	.	PUNC	PUNC	10	null	_	null	_	no	_
+
+4	از	PREP	VPP	7	null	_	null	_	no	Arg3	_	_
+9	به	PREP	VPP	11	null	_	null	_	no	_	Arg4	_
+12	و	CONJ	VCONJ	17	null	_	null	_	no	_	_	_
+15	را	POSTP	OBJ	17	null	_	null	_	no	_	_	Arg1
+18	.	PUNC	PUNC	7	null	_	null	_	no	_	_	_
+
+9	،	PUNC	PUNC	8	null	_	null	_	no	_
+
+3	در	PREP	NPP	6	null	_	null	_	no	Arg3	_	_
+8	،	PUNC	PUNC	7	null	_	null	_	no	_	_	_
+11	را	POSTP	OBJ	12	null	_	null	_	no	_	Arg1	_
+13	در	PREP	ADVRB	12	null	_	null	_	no	_	ArgM-CAU	_
+18	را	POSTP	OBJ	19	null	_	null	_	no	_	_	Arg1
+
+2	از	PREP	VPP	10	null	_	null	_	no	Arg3	_
+5	و	CONJ	VPP	10	
+6	از	PREP	VPP	10	
+15	.	PUNC	PUNC	10	null	_	null	_	no	_	_
+
+6	را	POSTP	OBJ	10	null	_	null	_	no	_	Arg1
+11	.	PUNC	PUNC	3	null	_	null	_	no	_	_
+
+6	به	PREP	VPP	8	null	_	null	_	no	Arg4	_	_
+9	و	CONJ	VCONJ	12	null	_	null	_	no	_	_	_
+13	و	CONJ	VCONJ	20	null	_	null	_	no	_	_	_
+16	را	POSTP	OBJ	20	null	_	null	_	no	_	_	Arg1
+17	به	PREP	NPP	19	null	_	null	_	no	_	_	Arg3
+21	.	PUNC	PUNC	20	null	_	null	_	no	_	_	_
+
+3	از	PREP	NPP	5	null	_	null	_	no	Arg3	_	_	_
+7	و	CONJ	VCONJ	18	null	_	null	_	no	_	_	_	_
+8	در	PREP	ADVRB	18	null	_	null	_	no	_	ArgM-LOC	_	_
+10	به	PREP	ADVRB	18	null	_	null	_	no	_	ArgM-MNR	_	_
+12	از	PREP	NPP	11	null	_	null	_	no	_	_	_	_
+15	با	PREP	VPP	18	null	_	null	_	no	_	Arg3	_	_
+19	و	CONJ	VCONJ	25	null	_	null	_	no	_	_	_	_
+21	را	POSTP	OBJ	25	null	_	null	_	no	_	_	Arg1	_
+22	به	PREP	NPP	24	null	_	null	_	no	_	_	Arg3	_
+26	و	CONJ	VCONJ	36	null	_	null	_	no	_	_	_	_
+29	و	CONJ	NCONJ	28	null	_	null	_	no	_	_	_	_
+32	را	POSTP	OBJ	36	null	_	null	_	no	_	_	_	Arg1
+37	.	PUNC	PUNC	36	null	_	null	_	no	_	_	_	_
+
+7	را	POSTP	OBJ	12	null	_	null	_	no	Arg1	_
+13	با	PREP	ADVRB	21	null	_	null	_	no	_	ArgM-MNR
+15	به	PREP	NPP	14	null	_	null	_	no	_	_
+19	را	POSTP	OBJ	21	null	_	null	_	no	_	Arg1
+22	.	PUNC	PUNC	21	null	_	null	_	no	_	_
+
+7	را	POSTP	OBJ	12	null	_	null	_	no	Arg1	_
+8	در	PREP	VPP	12	null	_	null	_	no	Arg3	_
+13	و	CONJ	VCONJ	20	null	_	null	_	no	_	_
+15	را	POSTP	OBJ	20	null	_	null	_	no	_	Arg1
+21	.	PUNC	PUNC	20	null	_	null	_	no	_	_
+
+8	به	PREP	AJPP	7	null	_	null	_	no	_	_
+12	را	POSTP	OBJ	15	null	_	null	_	no	_	Arg1
+13	در	PREP	VPP	15	null	_	null	_	no	_	ArgM-LOC
+16	،	PUNC	PUNC	15	null	_	null	_	no	_	_
+
+12	.	PUNC	PUNC	11	null	_	null	_	no	_
+
+2	به	PREP	NPP	5	null	_	null	_	no	Arg3	_
+12	.	PUNC	PUNC	6	null	_	null	_	no	_	_
+
+1	و	CONJ	VCONJ	4	null	_	null	_	no	_
+5	.	PUNC	PUNC	4	null	_	null	_	no	_
+
+2	به	PREP	VPP	5	null	_	null	_	no	Arg4	_	_	_	_
+6	و	CONJ	VCONJ	12	null	_	null	_	no	_	_	_	_	_
+10	و	CONJ	NCONJ	9	null	_	null	_	no	_	_	_	_	_
+13	تا	PREP	ADVRB	12	null	_	null	_	no	_	ArgM-TMP	_	_	_
+18	به	PREP	VPP	21	null	_	null	_	no	_	_	Arg3	_	_
+22	و	CONJ	VCONJ	24	null	_	null	_	no	_	_	_	_	_
+27	را	POSTP	OBJ	31	null	_	null	_	no	_	_	_	_	Arg1
+28	به	PREP	NPP	30	null	_	null	_	no	_	_	_	_	Arg3
+32	.	PUNC	PUNC	12	null	_	null	_	no	_	_	_	_	_
+
+3	با	PREP	ADVRB	9	null	_	null	_	no	ArgM-ADV	_	_
+7	در	PREP	VPP	9	null	_	null	_	no	Arg3	_	_
+10	و	CONJ	VCONJ	14	null	_	null	_	no	_	_	_
+11	به	PREP	NPP	13	null	_	null	_	no	_	Arg3	_
+20	?	PUNC	PUNC	14	null	_	null	_	no	_	_	_
+
+3	را	POSTP	OBJ	6	null	_	null	_	no	Arg1	_
+4	از	PREP	VPP	6	null	_	null	_	no	Arg3	_
+12	?	PUNC	PUNC	6	null	_	null	_	no	_	_
+
+5	را	EMPH	POSDEP	4	null	_	null	_	no	_	_	_
+7	و	CONJ	VCONJ	10	null	_	null	_	no	_	_	_
+8	به	PREP	VPP	10	null	_	null	_	no	_	Arg3	_
+13	با	PREP	ADVRB	23	null	_	null	_	no	_	_	ArgM-ADV
+15	و	CONJ	NCONJ	14	null	_	null	_	no	_	_	_
+19	را	POSTP	OBJ	23	null	_	null	_	no	_	_	Arg1
+20	از	PREP	VPP	23	null	_	null	_	no	_	_	Arg3
+24	.	PUNC	PUNC	10	null	_	null	_	no	_	_	_
+
+4	از	PREP	NPP	2	null	_	null	_	no	_	_	_
+10	و	CONJ	NCONJ	9	null	_	null	_	no	_	_	_
+12	و	CONJ	NCONJ	11	null	_	null	_	no	_	_	_
+15	به	PREP	VPP	18	null	_	null	_	no	_	Arg3	_
+23	را	POSTP	OBJ	25	null	_	null	_	no	_	_	Arg1
+26	.	PUNC	PUNC	3	null	_	null	_	no	_	_	_
+
+5	از	PREP	NPP	7	null	_	null	_	no	Arg3
+
+1	و	CONJ	VCONJ	7	null	_	null	_	no	_
+3	در	PREP	VPP	7	null	_	null	_	no	Arg3
+8	.	PUNC	PUNC	7	null	_	null	_	no	_
+
+4	،	PUNC	PUNC	3	null	_	null	_	no	_	_	_	_	_
+8	را	EMPH	POSDEP	7	null	_	null	_	no	_	_	_	_	_
+9	از	PREP	VPP	11	null	_	null	_	no	Arg3	_	_	_	_
+12	و	CONJ	VCONJ	16	null	_	null	_	no	_	_	_	_	_
+14	به	PREP	VPP	16	null	_	null	_no		_	Arg3	Arg3	_	_
+17	و	CONJ	VCONJ	18	null	_	null	_	no	_	_	_	_	_
+21	را	POSTP	OBJ	25	null	_	null	_	no	_	_	_	Arg1	_
+26	و	CONJ	VCONJ	31	null	_	null	_	no	_	_	_	_	_
+28	را	POSTP	OBJ	31	null	_	null	_	no	_	_	_	_	Arg1
+32	.	PUNC	PUNC	18	null	_	null	_	no	_	_	_	_	_
+
+2	و	CONJ	NCONJ	1	null	_	null	_	no	_
+4	،	PUNC	PUNC	3	null	_	null	_	no	_
+7	از	PREP	NPP	6	null	_	null	_	no	_
+12	.	PUNC	PUNC	11	null	_	null	_	no	_
+
+2	با	PREP	ADVRB	11	null	_	null	_	no	ArgM-MNR	_
+5	از	PREP	NPP	10	null	_	null	_	no	Arg3	_
+7	و	CONJ	NCONJ	6	null	_	null	_	no	_	_
+12	و	CONJ	VCONJ	18	null	_	null	_	no	_	_
+14	را	POSTP	OBJ	18	null	_	null	_	no	_	Arg1
+15	به	PREP	VPP	18	null	_	null	_	no	_	Arg4
+19	،	PUNC	PUNC	18	null	_	null	_	no	_	_
+
+4	در	PREP	NPP	3	null	_	null	_	no	_
+8	به	PREP	VPP	10	null	_	null	_	no	Arg3
+11	.	PUNC	PUNC	10	null	_	null	_	no	_
+
+1	در	PREP	ADVRB	13	null	_	null	_	no	_	ArgM-TMP	_	_	_	_
+5	به	PREP	VPRT	13	null	_	null	_	no	_	_	_	_	_	_
+9	در	PREP	ADVRB	12	null	_	null	_	no	ArgM-TMP	_	_	_	_	_
+14	و	CONJ	VCONJ	18	null	_	null	_	no	_	_	_	_	_	_
+16	به	PREP	NPP	15	null	_	null	_	no	_	_	Arg3	_	_	_
+19	و	CONJ	VCONJ	20	null	_	null	_	no	_	_	_	_	_	_
+21	:	PUNC	PUNC	20	null	_	null	_	no	_	_	_	_	_	_
+33	را	POSTP	OBJ	35	null	_	null	_	no	_	_	_	_	_	Arg1
+36	.	PUNC	PUNC	20	null	_	null	_	no	_	_	_	_	_	_
+
+12	.	PUNC	PUNC	4	null	_	null	_	no	_	_
+
+4	تا	SUBR	VCL	3	null	_	null	_	no	Arg3	_	_
+6	را	POSTP	OBJ	10	null	_	null	_	no	_	Arg1	_
+7	در	PREP	VPP	10	null	_	null	_	no	_	Arg3	_
+11	تا	SUBR	AJUCL	10	null	_	null	_	no	_	ArgM-CAU	_
+13	از	PREP	AJPP	17	null	_	null	_	no	_	_	_
+19	.	PUNC	PUNC	3	null	_	null	_	no	_	_	_
+
+12	در	PREP	VPP	14	null	_	null	_	no	_	Arg3	_
+15	و	CONJ	VCONJ	22	null	_	null	_	no	_	_	_
+16	یک	NUM	NPREMOD	17	null	_	null	_	no	_	_	_
+19	به	PREP	MOS	22	null	_	null	_	no	_	_	Arg2
+23	.	PUNC	PUNC	6	null	_	null	_	no	_	_	_
+
+2	از	PREP	MOS	6	null	_	null	_	no	Arg2	_
+7	و	CONJ	VCONJ	13	null	_	null	_	no	_	_
+8	با	PREP	ADVRB	13	null	_	null	_	no	_	ArgM-MNR
+9	هفت	NUM	NPREMOD	10	هفت§n-13742	_	اندازه§n-12768	_	no	_	_
+11	به	PREP	VPP	13	null	_	null	_	no	_	Arg3
+14	.	PUNC	PUNC	13	null	_	null	_	no	_	_
+

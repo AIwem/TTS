@@ -1,0 +1,146 @@
+8	میان	N	POSDEP	7	null	_	null	_	no	_			از
+15	مادری	ADJ	POSDEP	14	مامان§n-13374	_	نفر§n-13075		_	role	_	_			و
+
+4	برادران	N	POSDEP	2	برادر§n-14090	_	 نفر§n-13075	_	role	_			از
+
+
+8	عالم	N	POSDEP	7	دنیا§n-13316	_	شیء§n-12703	_	no		_	_	_	_			در
+15	خورشید	N	POSDEP	14	خورشید§n-14662	_	شیء§n-12703	_	role	_	_	_	_			و
+17	ماه	N	POSDEP	16	بدر§n-10065	_	شیء§n-12703	_		_	_	_	_			و
+
+4	تعبیر	N	PREDEP	6	تعبیر§n-20347	_	خصوصیت روانی§n-12725	_	no	_	_	_			را
+9	او	PR	POSDEP	8	null	_	null	_	role	_	_	_			از
+12	راز	N	PREDEP	14	سر§n-13702	_	خبر§n-13975	_	roleIntent	_	_	_			را
+
+8	آینده	N	POSDEP	7	آتیه§n-13503	_	مشخصه§n-12756	_	time	_	_	_			در
+14	فرمان	N	PREDEP	16	امر§n-11505	_	رخداد§n-13136	_	roleIntent	_	_	_			را
+
+3	او	PR	PREDEP	4	null	_	null	_	role	_	_			را
+6	پیامبری	N	POSDEP	5	رسول§n-15053	_	نفر§n-13075	_	roleIntent	_	_			به
+9	تعبیر	N	PREDEP	11	تعبیر§n-20347	_	خصوصیت روانی§n-12725	_	no	_	_			را
+13	او	PR	POSDEP	12	null	_	null	_	role	_	_			به
+
+6	الهامات	N	POSDEP	5	وحی§n-15103	_	خصوصیت روانی§n-12725	_	no	_	_			و
+14	عظمت	N	POSDEP	13	فرهی§n-11193	_	 مشخصه§n-12756	_	no	_	_			و
+17	چهره	N	POSDEP	16	رخ§n-11175	_	 مشخصه§n-12756	_	roleState	_	_			در
+
+
+3	پیشنهاد	N	PREDEP	4	پیشنهاد§n-11501	_	خبر§n-13975	_	roleIntent	_			را
+
+3	روزها	N	POSDEP	1	روز§n-13556	_	دوره زمانی§n-12603	_	time	_	_	_	_			در
+10	پدر	N	POSDEP	9	والد§n-13357	_	نفر§n-13075	_	role	_	_	_	_			از
+13	یوسف	N	PREDEP	14	یوسف§n-23957	_	نفر§n-13075	_	role	_	_	_	_			را
+18	صحرا	N	POSDEP	17	صحرا§n-16714	_	محیط§n-11848	_	Location	_	_	_	_			به
+23	آن‌ها	PR	POSDEP	22	null	_	null	_	role	_	_	_	_			به
+
+8	یوسف	N	PREDEP	9	یوسف§n-23957	_	نفر§n-13075	_	role	_	_	_	_	_	_	_			را
+11	آن‌ها	PR	POSDEP	10	null	_	null	_	role	_	_	_	_	_	_	_			از
+17	او	PR	POSDEP	16	null	_	null	_	role	_	_	_	_	_	_	_			به
+23	ما	PR	POSDEP	22	null	_	null	_	role	_	_	_	_	_	_	_			به
+27	او	PR	PREDEP	28	null	_	null	_	role	_	_	_	_	_	_	Arg0			را
+30	دشت	N	POSDEP	29	دشت§n-13308	_	شیء§n-12703	_	Location	_	_	_	_	_	_	_			به
+34	آنجا	N	POSDEP	33	null	_	null	_	Location	_	_	_	_	_	_	_			در
+39	شادمانی	N	POSDEP	38	جشن§n-12939	_	رخداد§n-13136	_	roleEmotion	_	_	_	_	_	_	_			به
+
+3	او	PR	PREDEP	4	null	_	null	_	role	_	_			را
+8	زیانکاران	N	POSDEP	7	null	_	null	_	roleState	_	_			از
+
+5	یعقوب	N	POSDEP	4	یعقوب§n-23940	_	نفر§n-13075	_	role	_	_	_	_			از
+19	انتقام‌جویی	N	POSDEP	18	null	_	null	_	roleIntent	_	_	_	_			به
+
+
+3	درون	N	POSDEP	2	تو§n-11857	_	جا§n-12733	_	no	_			در
+6	خدا	N	POSDEP	5	باری تعالی§n-11940	_	خصوصیت روانی§n-12725	_	role	_			به
+
+2	پیراهن	N	PREDEP	4	پیرهن§n-11108	_	شیء§n-12703	_	staticObj	_	_	_	_			را
+7	خون	N	POSDEP	6	خون§n-11279	_	ماده§n-14032	_	no	_	_	_	_			به
+19	او	PR	PREDEP	20	null	_	null	_	role	_	_	_	_			را
+
+7	شب	N	POSDEP	5	شب§n-12642	_	دوره زمانی§n-12603	_	time	_	_	_	_			و
+13	این	PR	POSDEP	12	null	_	null	_	no	_	_	_	_			تا
+18	مدین	N	POSDEP	17	یثرب§n-23603	_	جا§n-12733	_	Location	_	_	_	_			از
+20	مصر	N	POSDEP	19	مصر§n-20196	_	گروه§n-12753	_	Location	_	_	_	_			به
+26	استفاده	N	POSDEP	25	مصرف§n-10624	_	null	_	roleIntent	_	_	_	_			و
+28	آب	N	POSDEP	27	آب شرب§n-14289	_	ماده§n-14032	_	no	_	_	_	_			از
+36	آن	PR	POSDEP	35	null	_	null	_	no	_	_	_	_			در
+
+9	پسری	N	POSDEP	8	پسر§n-13367	_	نفر§n-13075	_	role	_	_			به
+
+2	او	PR	PREDEP	3	null	_	null	_	role	_			را
+5	مصر	N	POSDEP	4	مصر§n-20196	_	گروه§n-12753	_	Location	_			در
+7	بهایی	N	POSDEP	6	ثمن§n-11246	_	مشخصه§n-12756	_	no	_			به
+
+3	یوسف	N	PREDEP	4	یوسف§n-23957	_	نفر§n-13075	_	role	_	_			را
+
+4	همسر	N	POSDEP	3	مرد زندگی§n-13369	_	نفر§n-13075	_	role	_	_			و
+7	نعمت	N	POSDEP	6	null	_	null	_	no	_	_			از
+15	دلیل	N	POSDEP	13	سبب§n-12730	_	خصوصیت روانی§n-12725	_	no 	_	_			به
+16	یوسف	N	PREDEP	17	یوسف§n-23957	_	نفر§n-13075	_	role	_	_			را
+
+6	سن	N	POSDEP	5	سن§n-12627	_	 دوره زمانی§n-12603	_	no	_	_			به
+16	دلداده	ADJ	POSDEP	15	عاشق§n-11950	_	نفر§n-13075	_	roleEmotion	_	_			و
+
+4	روزها	N	POSDEP	2	روز§n-13556	_	دوره زمانی§n-12603	_	Time	_	_	_	_			در
+5	یوسف	N	PREDEP	6	یوسف§n-23957	_	نفر§n-13075	_	roleAction	_	_	_	_			را
+8	خانه	N	POSDEP	7	سرا§n-12809	_	جا§n-11881	_	Location	_	_	_	_			در
+14	وی	PR	POSDEP	13	null	_	null	_	role	_	_	_	_			به
+19	خود	PR	PREDEP	20	null	_	null	_	role	_	_	_	_			را
+
+3	هنگام	N	POSDEP	1	موقع§n-12614	_	دوره زمانی§n-12603	_	time	_	_			در
+4	و	CONJ	PCONJ	1	null	_	null	_	no	_	_			در
+5	در	PREP	POSDEP	4	null	_	null	_	no	_	_			و
+6	پشت	N	POSDEP	5	پشت§n-10278	_	جا§n-12733	_	Location	_	_			در
+9	،	PUNC	PUNC	8	null	_	null	_	no	_	_			آخر
+11	پیراهن	N	PREDEP	13	پیرهن§n-11108	_	شیء§n-12703	_	static_object	_	_			را
+
+4	هنگام	N	POSDEP	2	موقع§n-12614	_	دوره زمانی§n-12603	_	time	_	_			در
+10	راه	N	POSDEP	9	راه§n-10059	_	اندازه§n-11239	_	no	_	_			از
+14	این	ADJ	APREMOD	15	null	_	null	_	no	_	_			دو
+13	قضیه	N	POSDEP	16	رخداد§n-13136	_	رخداد§n-13136	_	no	_	_			را
+
+5	پیراهن	N	POSDEP	4	پیرهن§n-11108	_	شیء§n-12703	_	static_object	_	_	_			به
+13	پشت	N	POSDEP	12	پشت§n-10278	_	جا§n-12733	_	no	_	_	_			از
+
+3	لحظه	N	POSDEP	1	زمان خاص§n-12649	_	اندازه§n-12768	_	time	_	_	_			در
+7	همسر	N	POSDEP	6	عیال§n-12059	_	نفر§n-13075	_	role	_	_	_			به
+12	او	PR	POSDEP	11	null	_	null	_	role	_	_	_			به
+18	افترا	N	POSDEP	17	تهمت§n-22120	_	خصوصیت روانی§n-12725	_	no	_	_	_			و
+20	مکر	N	POSDEP	19	null	_	null	_	no	_	_	_			از
+
+5	زنان	N	PREDEP	7	خانم§n-12070	_	نفر§n-13075	_	role	_	_	_			را
+9	قصر	N	POSDEP	8	null	_	null	_	Location	_	_	_			به
+13	یوسف	N	PREDEP	14	یوسف§n-23957	_	نفر§n-13075	_	role	_	_	_			را
+16	آن‌ها	PR	POSDEP	15	null	_	null	_	role	_	_	_			به
+
+15	متمکن	ADJ	POSDEP	14	null	_	null	_	roleState	_	_			و
+12	زنان	N	PREDEP	17	زن§n-10132	_	نفر§n-13075	_	role	_	_			را
+19	قصر	N	POSDEP	18	null	_	null	_	Location	_	_			به
+
+3	کنیزان	N	POSDEP	2	null	_	null	_	role	_	_			به
+9	مهمان‌ها	N	POSDEP	8	null	_	null	_	role	_	_			از
+
+
+3	دست	N	POSDEP	2	دست§n-13537	_	چیز§n-10392	_	no	_	_			به
+7	مهمانان	N	POSDEP	6	null	_	null	_	no	_	_			از
+12	پرتقال‌ها	N	PREDEP	13	پرتقال§n-19189	_	شیء§n-12703	_	static_object	_	_			را
+
+4	مشاهده	N	POSDEP	3	null	_	null	_	roleState	_	_			با
+7	جمال	N	POSDEP	6	وجاهت§n-11176	_	مشخصه§n-12756	_	roleState	_	_			و
+9	زیبایی	N	POSDEP	8	زیبایی§n-19694	_	مشخصه§n-12756	_	roleState	_	_			و
+14	دستان	N	PREDEP	16	دست§n-13537	_	شیء§n-12703	_	no	_	_			را
+
+
+3	دعای	N	PREDEP	5	مناجات§n-11513	_	خبر§n-12766	_	no	_			را
+
+2	وجودی	N	POSDEP	1	null	_	null	_	no	_	_	_			با
+7	ماجرا	N	POSDEP	5	رخداد§n-13136	_	رخداد§n-13136	_	no	_	_	_			در
+13	خاندان	N	POSDEP	12	طایفه§n-20062	_	گروه§n-12753	_	role	_	_	_			و
+19	لکه	N	PREDEP	21	لکه§n-10424	_	رخداد§n-13136	_	no	_	_	_			را
+23	خود	PR	POSDEP	22	خود§n-13459	_	نفر§n-13075	_	role	_	_	_			از
+26	دستور	N	PREDEP	30	دستور§n-11503	_	رخداد§n-13136	_	no	_	_	_			را
+
+4	هر	ADJ	APREMOD	5	null	_	null	_	no	_			دو
+7	زندان	N	POSDEP	6	حبسگاه§n-14859	_	جا§n-12733	_	Location	_			در
+
+11	زندان	N	POSDEP	10	حبسگاه§n-14859	_	جا§n-12733	_	Location	_	_	_			از
+17	دار	N	POSDEP	16	

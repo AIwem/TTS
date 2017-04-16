@@ -1,0 +1,1465 @@
+1	او	PR	SBJ	5	NULL	_	NULL	_	role	Arg0	_
+2	مجموعا	ADV	ADVRB	5	مجموع§n-11384	_	null	_	no	ArgM-ADV	_
+3	11	NUM	NPREMOD	4	null	_	null	_	no	_	_
+4	برادر	N	OBJ	5	برادر§n-14090	_	نفر§n-13075	_	role	Arg1	_
+5	داشت	V	PREDEP	6	داشتن§v-8512	رخداد§n-13136	no	Y	داشتن.39	_	_
+6	و	CONJ	VCONJ	17	null	_	null	_	no	_	_
+7	از	PREP	ADVRB	17	null	_	null	_	no	_	ArgM-ADV
+8	میان	N	POSDEP	7	null	_	null	_	no	_
+9	آن‌ها	PR	MOZ	8	null	_	null	_	role	_	_
+10	فقط	ADV	ADVRB	17	صرفاً§r-15263	_	null	_	no	_	ArgM-ADV2
+11	بنیامین	N	SBJ	17	null	_	نفر§n-13075	_	role	_	Arg1
+12	برادر	N	MOS	17	برادر§n-14090	_	نفر§n-13075	_	role	_	Arg2
+13	پدری	ADJ	NPOSTMOD	12	والد§n-13357	_	نفر§n-13075	_	role	_	_
+14	و	CONJ	AJCONJ	13	null	_	null	_	no	_	_
+15	مادری	ADJ	POSDEP	14	مامان§n-13374	_	نفر§n-13075		_	role	_	_
+16	او	PR	MOZ	12	null	_	null	_	role	_	_
+17	بود	V	ROOT	0	بودن§v-16430	رخداد§n-13136	no	Y	بودن.15	_	_
+18	.	PUNC	PUNC	17	null	_	null	_	no	_	_
+
+1	یوسف	N	SBJ	8	یوسف§n-23957	_	 نفر§n-13075		_	role	Arg1
+2	از	PREP	AJPP	7	null	_	null	_	no	_
+3	همه	ADJ	NPREMOD	4	null	_	null	_	no	_
+4	برادران	N	POSDEP	2	برادر§n-14090	_	 نفر§n-13075	_	role	_
+5	جز	PREP	POSDEP	4	null	_	null	_	no	_
+6	بنیامین	N	POSDEP	5	null	_نفر§n-13075	_	role	_
+7	کوچکتر	ADJ	MOS	8	جوان§a-82	_	‌مشخصه§n-12756	_	roleState	Arg2
+8	بود	V	ROOT	0	هستی§n-12391	رخداد§n-13136	no		Y	بودن.15	_
+9	.	PUNC	PUNC	8	null	_	null	_	no	_
+
+1	یوسف	N	SBJ	5	یوسف§n-23957	_	نفر§n-13075	_	role	Arg0	Arg0
+2	9	NUM	NPREMOD	3	null	_	null	_	no	_	_
+3	سال	N	ADVC	5	سال§n-13471	_	دوره زمانی§n-12603	_	no	_
+4	بیشتر	ADV	ADVRB	5	بیشتر§r-15271	_	null	_	no	ArgM-EXT	_
+5	نداشت	V	ROOT	0	داشتن§v-8512	رخداد§n-13136	no	Y	داشتن.39	_	_
+6	که	SUBR	NCL	1	null	_	null	_	no	_	_
+7	یک	NUM	NPREMOD	8	یک§n-14494	_	 اندازه§n-12768	_	no	_	_
+8	شب	N	ADVRB	11	شب§n-12642	_	 دوره زمانی§n	-	time	12603	_	_	ArgM-TMP
+9	،	PUNC	PUNC	8	null	_	null	_	no	_	_
+10	رویایی	N	OBJ	11	خیالی§a-1684	_	null	_	no	_	Arg1
+11	دید	V	PRD	6	دیدن§v-9138	رخداد§n-13136	no	Y	دیدن.47	_	_
+12	.	PUNC	PUNC	5	null	_	null	_	no	_	_
+
+1	صبح	N	ADVRB	4	صبح§n-12638		دوره زمانی§n-12603	time	_	_	ArgM-TMP
+2	نزد	PREP	VPP	4	محضر§n-10120	_	جا§n-12733	_	no	A[g4	_	_	_
+3	پدر	N	POSDEP	2	والد§n-13357	_	نفر§n-13075	_	role	_	_	_	_
+4	آمده	V	PREDEP	5	آمدن§v-7847	رخداد§n-13136	roleAction	Y	آمدن.44	_	_	_	_
+5	و	CONJ	VCONJ	6	null	_	null	_		_	_	_	_
+6	گفت	V	ROOT	0	گفتن§v-9244	رخداد§n-13136	roleAction	Y	گفتن.35	_	_	_	_
+7	در	PREP	ADVRB	10	null	_null	_	no	_	_	ArgM-LOC	_
+8	عالم	N	POSDEP	7	دنیا§n-13316	_	شیء§n-12703	_	no		_	_	_	_
+9	خواب	N	MOZ	8	رویا§n-15102	_	خصوصیت روانی§n-12725	_		_	_	_	_
+10	دیدم	V	VCL	6	رویت کردن§v-8581	رخداد§n-13136	roleAction	Y	دیدن.47	_	_	_	_
+11	که	SUBR	VCL	10	null	_	null	_	no	_	_	Arg1	_
+12	11	NUM	NPREMOD	13	null	_	null	_	no	_	_	_	_
+13	ستاره	N	SBJ	21	ستاره§n-14529	_	شیء§n-12703	_	role	_	_	_	Arg0
+14	و	CONJ	NCONJ	13	null	_	null	_	no	_	_	_	_
+15	خورشید	N	POSDEP	14	خورشید§n-14662	_	شیء§n-12703	_	role	_	_	_	_
+16	و	CONJ	NCONJ	15	null	_	null	_	no	_	_	_	_
+17	ماه	N	POSDEP	16	بدر§n-10065	_	شیء§n-12703	_		_	_	_	_
+18	دربرابر	PREP	NPP	20	null	_	null	_	no	_	_	_	Arg3
+19	م	PR	POSDEP	18	null	_	null	_	no	_	_	_	_
+20	سجده	N	NVE	21	سجده§n-25850	_	رخداد§n-13136	_	roleState	_	_	_	_
+21	می‌کنند	V	PRD	11	null	رخداد§n-13136	roleAction	Y	سجده‌کردن.41	_	_	_	_
+22	.	PUNC	PUNC	6	null	_	null	_	no	_	_	_	_
+
+1	حضرت	N	SBJ	10	null	_	null	_	role	Arg0	Arg0	_
+2	یعقوب	N	MOZ	1	یعقوب§n-23940	_	نفر§n-13075	_	role	_	_	_
+3	که	SUBR	NCL	2	null	_	null	_	no	_	_	_
+4	تعبیر	N	PREDEP	6	تعبیر§n-20347	_	خصوصیت روانی§n-12725	_	no	_	_	_
+5	خواب	N	MOZ	4	رویا§n-15102	_	خصوصیت روانی§n-12725	_	no	_	_	_
+6	را	POSTP	OBJ	7	null	_	null	_	no	Arg1	_	_
+7	می‌دانست	V	PRD	3	بلد بودن§v-8050	رخداد§n-13136	roleAction	Y	دانستن.97	_	_	_
+8	از	PREP	VPP	10	null	_	null	_	no	_	Arg3	_
+9	او	PR	POSDEP	8	null	_	null	_	role	_	_	_
+10	خواست	V	ROOT	0	خواستن§v-19251	رخداد§n-13136	roleAction	Y	خواستن.51	_	_	_
+11	تا	SUBR	VCL	10	null	_	null	_	no	_	Arg1	_
+12	راز	N	PREDEP	14	سر§n-13702	_	خبر§n-13975	_	roleIntent	_	_	_
+13	خود	PR	MOZ	12	خود§n-13459	_	نفر§n-13075	_	role	_	_	_
+14	را	POSTP	OBJ	19	null	_	null	_	no	_	_	Arg1
+15	برای	PREP	ADVRB	19	null	_	null	_	no	_	_	ArgM-GOL
+16	برادران	N	POSDEP	15	برادر§n-14090	_	نفر§n-13075	_	role	_	_	_
+17	ش	PR	MOZ	16	null	_	null	_	no	_	_	_
+18	آشکار	ADJ	MOS	19	گویا§a-268	_	null	_	no	_	_	Arg2
+19	نکند	V	PRD	11	انجام دادن§v-8044	رخداد§n-13136	roleAction	Y	کردن.25	_	_	_
+
+1	سپس	SUBR	ROOT	0	سپس§r-21500	_	null	_	no	ArgM-ADV	_	_
+2	برای	PREP	ADVRB	5	null	_	null	_	no	ArgM-GOL	_	_
+3	ش	PR	POSDEP	2	null	_	null	_	no	_	_	_
+4	روشن	ADJ	MOS	5	گویا§a-268	_	مشخصه§n-12756	_	roleIntent	Arg2	_	_
+5	ساخت	V	PRD	1	کردن§v-8678	رخداد§n-13136	roleAction	Y	ساختن.498	_	_	_
+6	که	SUBR	VCL	5	null	_	null	_	no	Arg1	_	_
+7	در	PREP	ADVRB	11	null	_	null	_	no	_	ArgM-TMP	_
+8	آینده	N	POSDEP	7	آتیه§n-13503	_	مشخصه§n-12756	_	time	_	_	_
+9	شخصیتی	N	MOS	11	شخصیت§n-11163	_	مشخصه§n-12756	_	roleState	_	Arg2	_
+10	برجسته	ADJ	NPOSTMOD	9	null	_	مشخصه§n-12756	_	roleState	_	_	_
+11	خواهدشد	V	PRD	6	کردن§v-8678	رخداد§n-13136	no	Y	کردن.25	_	_	_
+12	که	SUBR	NCL	9	null	_	null	_	no	_	_	_
+13	همه	N	SBJ	18	null	_	نفر§n-13075	_	role	_	_	Arg0
+14	فرمان	N	PREDEP	16	امر§n-11505	_	رخداد§n-13136	_	roleIntent	_	_	_
+15	ش	PR	MOZ	14	null	_	null	_	no	_	_	_
+16	را	POSTP	OBJ	18	null	_	null	_	no	_	_	Arg3
+17	گردن	N	NVE	18	گردن§n-10188	_	شیء§n-12703	_	no	_	_	_
+18	می‌نهند	V	PRD	12	سر فرود آوردن§v-8964	رخداد§n-13136	roleAction	Y	گردن‌نهادن.227	_	_	_
+
+1	و	CONJ	VCONJ	7	null	_	null	_	no	_	_
+2	خداوند	N	SBJ	7	باری تعالی§n-11940	_	خصوصیت روانی§n-12725	_	role	Arg0	Arg0
+3	او	PR	PREDEP	4	null	_	null	_	role	_	_
+4	را	POSTP	OBJ	7	null	_	null	_	no	Arg1	_
+5	به	PREP	VPP	7	null	_	null	_	no	Arg3	_
+6	پیامبری	N	POSDEP	5	رسول§n-15053	_	نفر§n-13075	_	roleIntent	_	_
+7	برمی‌گزیند	V	PREDEP	8	گزیدن§v-7948	رخداد§n-13136	roleAction	Y	بر‌گزیدن.229	_	_
+8	و	CONJ	VCONJ	14	null	_	null	_	no	_	_
+9	تعبیر	N	PREDEP	11	تعبیر§n-20347	_	خصوصیت روانی§n-12725	_	no	_	_
+10	خواب	N	MOZ	9	رویا§n-15102	_	خصوصیت روانی§n-12725	_	no	_	_
+11	را	POSTP	OBJ	14	null	_	null	_	no	_	Arg1
+12	به	PREP	VPP	14	null	_	null	_	no	_	Arg3
+13	او	PR	POSDEP	12	null	_	null	_	role	_	_
+14	می‌آموزد	V	ROOT	0	تدریس کردن§v-9219	رخداد§n-13136	roleAction	Y	آموختن.230	_	_
+15	.	PUNC	PUNC	14	null	_	null	_	no	_	_
+
+1	همچنین	ADV	ADVRB	9	مضافاً§r-16715	_	null	_	no	ArgM-ADV	_
+2	خواب	N	SBJ	9	رویا§n-15102	_	خصوصیت روانی§n-12725	_	no	Arg1	_
+3	دیدن	N	MOZ	2	رویت کردن§v-8581	_	رخداد§n-13136	_	roleAction	_	_
+4	یوسف	N	MOZ	3	یوسف§n-23957	_	نفر§n-13075	_	role	_	_
+5	و	CONJ	NCONJ	2	null	_	null	_	no	_	_
+6	الهامات	N	POSDEP	5	وحی§n-15103	_	خصوصیت روانی§n-12725	_	no	_	_
+7	دیگر	PR	MOZ	6	دیگر§a-9809	_	null	_	no	_	_
+8	موجب	N	MOS	9	مسبب§n-13036	_	مسبب§n-13036	_	no	Arg2	_
+9	شد	V	ROOT	0	انجام دادن§v-8044	رخداد§n-13136	no	Y	کردن.25	_	_
+10	که	SUBR	NCL	8	null	_	null	_	no	_	_
+11	یعقوب	N	SBJ	20	یعقوب§n-23940	_	نفر§n-13075	_	role	_	Arg0
+12	امتیاز	N	OBJ	20	برتری§n-11247	_	مشخصه§n-12756	_	no	_	Arg1
+13	و	CONJ	NCONJ	12	null	_	null	_	no	_	_
+14	عظمت	N	POSDEP	13	فرهی§n-11193	_	 مشخصه§n-12756	_	no	_	_
+15	خاصی	ADJ	NPOSTMOD	12	مختص§a-1538	_	مشخصه§n-12756	_	no	_	_
+16	در	PREP	NPP	19	null	_	null	_	no	_	ArgM-LOC
+17	چهره	N	POSDEP	16	رخ§n-11175	_	 مشخصه§n-12756	_	roleState	_	_
+18	یوسف	N	MOZ	17	یوسف§n-23957	_	نفر§n-13075	_	role	_	_
+19	مشاهده	N	NVE	20	null	_	رخداد§n-13136	_	roleState	_	_
+20	کند	V	PRD	10	رویت کردن§v-8581	رخداد§n-13136	roleAction	Y	مشاهده‌کردن.231	_	_
+
+1	و	CONJ	VCONJ	2	null	_	null	_	no	_	_
+2	می‌دانست	V	ROOT	0	دانستن§v-8456	رخداد§n-13136	no	Y	دانستن.97	_	_
+3	که	SUBR	VCL	2	null	_	null	_	no	Arg1	_
+4	آینده	N	OBJ	6	آتیه§n-13503	_	اندازه§n-12768	_	time	_	Arg1
+5	درخشانی	ADJ	NPOSTMOD	4	null	_	مشخصه§n-12756	_	roleState	_	_
+6	دارد	V	PRD	3	داشتن§v-8512	رخداد§n-13136	no	Y	داشتن.39	_	_
+7	،	PUNC	PUNC	6	null	_	null	_	no	_	_
+
+1	برادران	N	SBJ	5	برادر§n-14090	_	نفر§n-13075	_	role	Arg0
+2	این	ADJ	NPREMOD	3	null	_	null	_	no	_
+3	پیشنهاد	N	PREDEP	4	پیشنهاد§n-11501	_	خبر§n-13975	_	roleIntent	_
+4	را	POSTP	OBJ	5	null	_	null	_	no	Arg1
+5	پذیرفتند	V	ROOT	0	پذیرفتن§v-9413	رخداد§n-13136	roleAction	Y	پذیرفتن.88	_
+6	.	PUNC	PUNC	5	null	_	null	_	no	_
+
+1	در	PREP	ADVRB	7	null	_	null	_	no	ArgM-TMP	_	_	_
+2	یکی‌از	ADJ	NPREMOD	3	null	_	null	_	no	_	_	_	_
+3	روزها	N	POSDEP	1	روز§n-13556	_	دوره زمانی§n-12603	_	time	_	_	_	_
+4	نزد	PREP	VPP	7	محضر§n-10120	_	جا§n-12733	_	Location	Arg4	_	_	_
+5	پدر	N	POSDEP	4	والد§n-13357	_	نفر§n-13075	_	role	_	_	_	_
+6	شان	PR	MOZ	5	null	_	null	_	no	_	_	_	_
+7	آمدند	V	PREDEP	8	آمدن§v-7847	رخداد§n-13136	roleAction	Y	آمدن.44	_	_	_	_
+8	و	CONJ	VCONJ	11	null	_	null	_	no	_	_	_	_
+9	از	PREP	VPP	11	null	_	null	_	no	_	Arg3	_	_
+10	پدر	N	POSDEP	9	والد§n-13357	_	نفر§n-13075	_	role	_	_	_	_
+11	خواستند	V	PREDEP	20	استدعا کردن§v-9400	رخداد§n-13136	roleAction	Y	خواستن.51	_	_	_	_
+12	تا	SUBR	VCL	11	null	_	null	_	no	_	Arg1	_	_
+13	یوسف	N	PREDEP	14	یوسف§n-23957	_	نفر§n-13075	_	role	_	_	_	_
+14	را	POSTP	OBJ	19	null	_	null	_	no	_	_	Arg1	_
+15	همراه	N	ADVRB	19	همراه§n-10369	_	رخداد§n-13136	_	roleIntent	_	_	ArgM-COM	_
+16	خود	PR	MOZ	15	خود§n-13459	_	نفر§n-13075	_	role	_	_	_	_
+17	به	PREP	VPP	19	null	_	null	_	no	_	_	Arg4	_
+18	صحرا	N	POSDEP	17	صحرا§n-16714	_	محیط§n-11848	_	Location	_	_	_	_
+19	ببرند	V	PRD	12	بردن§v-7660	رخداد§n-13136	roleAction	Y	بردن.208	_	_	_	_
+20	ولی	CONJ	VCONJ	26	null	_	null	_	no	_	_	_	_
+21	یعقوب	N	SBJ	26	یعقوب§n-23940	_	نفر§n-13075	_	role	_	_	_	Arg0
+22	به	PREP	NPP	24	null	_	null	_	no	_	_	_	Arg3
+23	آن‌ها	PR	POSDEP	22	null	_	null	_	role	_	_	_	_
+24	پاسخ	N	NVE	26	پاسخ§n-11519	_	رخداد§n-13136	_	roleEmotion	_	_	_	_
+25	مثبت	ADJ	NPOSTMOD	24	مثبت§a-219	_	مشخصه§n-12756	_	roleIntent	_	_	_	_
+26	نمی‌داد	V	ROOT	0	جواب دادن§v-8114	رخداد§n-13136	roleAction	Y	پاسخ‌دادن.175	_	_	_	_
+27	.	PUNC	PUNC	26	null	_	null	_	no	_	_	_	_
+
+1	بعداز	PREP	ADVRB	18	null	_	null	_	no	_	_	ArgM-TMP	_	_	_	_
+2	آن	PR	POSDEP	1	null	_	null	_	no	_	_	_	_	_	_	_
+3	که	SUBR	NCL	2	null	_	null	_	no	_	_	_	_	_	_	_
+4	احساس	N	NVE	5	برداشت§n-14027	_	خصوصیت روانی§n-12725	_	roleEmotion	_	_	_	_	_	_	_
+5	کردند	V	PRD	3	احساس کردن§v-7687	رخداد§n-13136	roleAction	Y	احساس‌کردن.60	_	_	_	_	_	_	_
+6	پدر	N	SBJ	14	والد§n-13357	_	نفر§n-13075	_	role	_	Arg0	_	_	_	_	_
+7	،	PUNC	PUNC	6	null	_	null	_		_	_	_	_	_	_	_
+8	یوسف	N	PREDEP	9	یوسف§n-23957	_	نفر§n-13075	_	role	_	_	_	_	_	_	_
+9	را	POSTP	OBJ	14	null	_	null	_	no	_	Arg1	_	_	_	_	_
+10	از	PREP	VPP	14	null	_	null	_	no	_	Arg3	_	_	_	_	_
+11	آن‌ها	PR	POSDEP	10	null	_	null	_	role	_	_	_	_	_	_	_
+12	دور	ADV	ADVRB	14	دور§a-2270	_	مشخصه§n-12756	_	no	_	Arg2	_	_	_	_	_
+13	نگه	N	NVE	14	null	_	null	_	no	_	_	_	_	_	_	_
+14	می‌دارد	V	VCL	5	null	رخداد§n-13136	roleAction	Y	نگه‌داشتن.831	_	_	_	_	_	_	_
+15	،	PUNC	PUNC	14	null	_	null	_	no	_	_	_	_	_	_	_
+16	به	PREP	VPP	18	null	_	null	_	no	_	_	Arg3	_	_	_	_
+17	او	PR	POSDEP	16	null	_	null	_	role	_	_	_	_	_	_	_
+18	گفتند	V	ROOT	0	گفتن§v-9244	رخداد§n-13136	roleAction	Y	گفتن.35	_	_	_	_	_	_	_
+19	چرا	ADV_INTG	ADVRB	25	چرا§r-16765	_	null	_	no	_	_	_	ArgM-CAU	_	_	_
+20	درمورد	PREP	ADVRB	25	null	_	null	_	no	_	_	_	ArgM-ADV	_	_	_
+21	یوسف	N	POSDEP	20	یوسف§n-23957	_	نفر§n-13075	_	role	_	_	_	_	_	_	_
+22	به	PREP	NPP	24	null	_	null	_	no	_	_	_	Arg3	_	_	_
+23	ما	PR	POSDEP	22	null	_	null	_	role	_	_	_	_	_	_	_
+24	اطمینان	N	NVE	25	اعتماد§n-11208	_	مشخصه§n-12756	_	roleEmotion	_	_	_	_	_	_	_
+25	نمی‌کنی	V	VCL	18	اعتماد داشتن§v-9414	رخداد§n-13136	roleAction	Y	اطمینان‌کردن.244	_	_	_	_	_	_	_
+26	تا	SUBR	AJUCL	25	null	_	null	_	no	_	_	_	ArgM-CAU2	_	_	_
+27	او	PR	PREDEP	28	null	_	null	_	role	_	_	_	_	_	_	Arg0
+28	را	POSTP	OBJ	31	null	_	null	_	no	_	_	_	_	Arg1	_	_
+29	به	PREP	VPP	31	null	_	null	_	no	_	_	_	_	Arg4	_	_
+30	دشت	N	POSDEP	29	دشت§n-13308	_	شیء§n-12703	_	Location	_	_	_	_	_	_	_
+31	ببریم	V	PRD	26	بردن§v-7660	رخداد§n-13136	roleAction	Y	بردن.208	_	_	_	_	_	_	_
+32	تا	SUBR	AJUCL	31	null	_	null	_	no	_	_	_	_	ArgM-CAU	_	_
+33	در	PREP	ADVRB	36	null	_	null	_	no	_	_	_	_	_	ArgM-LOC	_
+34	آنجا	N	POSDEP	33	null	_	null	_	Location	_	_	_	_	_	_	_
+35	بازی	N	NVE	36	بازی§n-13574	_	رخداد§n-13136	_	roleIntent	_	_	_	_	_	_	_
+36	کند	V	PREDEP	37	بازی کردن§v-7630	رخداد§n-13136	roleAction	Y	بازی‌کردن.246	_	_	_	_	_	_	_
+37	و	CONJ	VCONJ	40	null	_	null	_	no	_	_	_	_	_	_	_
+38	به	PREP	VPP	40	null	_	null	_	no	_	_	_	_	_	_	Arg3
+39	شادمانی	N	POSDEP	38	جشن§n-12939	_	رخداد§n-13136	_	roleEmotion	_	_	_	_	_	_	_
+40	بپردازد	V	PRD	32	Y	پرداختن§v-19365	رخداد§n-13136	roleAction	پرداختن.72	_	_	_	_	_	_	_
+41	؟	PUNC	PUNC	18	null	_	null	_	no	_	_	_	_	_	_	_
+
+1	اگر	SUBR	AJUCL	9	null	_	null	_	no	_	ArgM-CND
+2	گرگ	N	SBJ	5	گرگ§n-19212	_	جان دار§n-10393	_	role	Arg0	_
+3	او	PR	PREDEP	4	null	_	null	_	role	_	_
+4	را	POSTP	OBJ	5	null	_	null	_	no	Arg1	_
+5	بخورد	V	PRD	1	خوردن§v-7695	رخداد§n-13136	roleAction	Y	خوردن.83	_	_
+6	ما	PR	SBJ	9	null	_	null	_	role	_	Arg1
+7	از	PREP	MOS	9	null	_	null	_	no	_	Arg2
+8	زیانکاران	N	POSDEP	7	null	_	null	_	roleState	_	_
+9	خواهیم‌بود	V	ROOT	0	بودن§v-16430	رخداد§n-13136	roleAction	Y	بودن.15	_	_
+10	.	PUNC	PUNC	9	null	_	null	_	no	_	_
+
+1	وقتی	N	ADVRB	11	null	_	null	_	no	_	ArgM-TMP	_	_
+2	که	SUBR	NCL	1	null	_	null	_	no	_	_	_	_
+3	آن‌ها	PR	SBJ	7	null	_	null	_	role	Arg0	_	_	Arg0
+4	از	PREP	NPP	6	null	_	null	_	no	Arg3	_	_	_
+5	یعقوب	N	POSDEP	4	یعقوب§n-23940	_	نفر§n-13075	_	role	_	_	_	_
+6	فاصله	N	NVE	7	null	_	null	_	no	_	_	_	_
+7	گرفتند	V	PRD	2	دور شدن§v-16372	رخداد§n-13136	roleAction	Y	فاصله‌گرفتن.504	_	_	_	_
+8	کینه‌های	N	SBJ	11	عناد§n-11662	_	مشخصه§n-12756	_	roleEmotion	_	Arg1	_	_
+9	شان	PR	MOZ	8	null	_	null	_	no	_	_	_	_
+10	آشکار	ADJ	MOS	11	گویا§a-268	_	مشخصه§n-12756	_	no	_	Arg2	_	_
+11	شد	V	PREDEP	12	شکار کردن§v-9121	رخداد§n-13136	no	Y	کردن.25	_	_	_	_
+12	و	CONJ	VCONJ	16	null	_	null	_	no	_	_	_	_
+13	حسادت	N	SBJ	1	رشکینی§n-10600	_	مشخصه§n-12756	_	roleEmotion		_	_	Arg1	_
+14	شان	PR	MOZ	13	null	_	null	_	no	_	_	_	_
+15	ظاهر	N	MOS	16	null	_	null	_	no	_	_	Arg2	_
+16	گشت	V	PREDEP	17	مشعر بودن§v-8034	رخداد§n-13136	no	Y	کردن.25	_	_	_	_
+17	و	CONJ	VCONJ	20	null	_	null	_	no	_	_	_	_
+18	به	PREP	VPP	20	null	_	null	_	no	_	_	_	Arg3
+19	انتقام‌جویی	N	POSDEP	18	null	_	null	_	roleIntent	_	_	_	_
+20	پرداختند	V	ROOT	0	پرداختن§v-19365	رخداد§n-13136	roleAction	Y	پرداختن.72	_	_	_	_
+21	.	PUNC	PUNC	20	null	_	null	_	no	_	_	_	_
+
+1	وی	PR	SBJ	5	null	_	null	_	role	Arg0
+2	دربرابر	PREP	ADVRB	5	null	_	null	_	no	ArgM-ADV
+3	آزار	N	POSDEP	2	سیاست§n-10530	_	رخداد§n-13136	_	roleState	_
+4	آن‌ها	PR	MOZ	3	null	_	null	_	role	_
+5	نمی‌توانست	V	ROOT	0	null	_	null	_	roleAction	_
+6	کاری	N	NVE	7	_	_	_
+
+1	یوسف	N	SBJ	8	یوسف§n-23957	_	نفر§n-13075	_	role	Arg0
+2	در	PREP	ADVRB	8	null	_	null	_	no	ArgM-LOC
+3	درون	N	POSDEP	2	تو§n-11857	_	جا§n-12733	_	no	_
+4	چاه	N	MOZ	3	چاه§n-16033	_	null	_	Location	_
+5	به	PREP	NPP	7	null	_	null	_	no	Arg3
+6	خدا	N	POSDEP	5	باری تعالی§n-11940	_	خصوصیت روانی§n-12725	_	role	_
+7	توکل	N	NVE	8	تکال§n-22841	_	خصوصیت روانی§n-12725	_	roleIntent	_
+8	کرد	V	ROOT	0	توکل کردن§v-8335	رخداد§n-13136	roleAction	Y	توکل‌کردن.506	_
+9	،	PUNC	PUNC	8	null	_	null	_	no	_
+
+1	برادران	N	SBJ	14	برادر§n-14090	_	نفر§n-13075	_	role	Arg0	Arg0	Arg0	_
+2	پیراهن	N	PREDEP	4	پیرهن§n-11108	_	شیء§n-12703	_	staticObj	_	_	_	_
+3	یوسف	N	MOZ	2	یوسف§n-23957	_	نفر§n-13075	_	role	_	_	_	_
+4	را	POSTP	OBJ	14	null	_	null	_	no	Arg1	Arg1	_	_
+5	که	SUBR	NCL	2	null	_	null	_	no	_	_	_	_
+6	به	PREP	AJPP	9	null	_	null	_	no	_	_	_	_
+7	خون	N	POSDEP	6	خون§n-11279	_	ماده§n-14032	_	no	_	_	_	_
+8	بزغاله	N	MOZ	7	بزغاله§n-25938	_	جانور§n-12239	_	no	_	_	_	_
+9	آلوده	ADJ	MOS	10	null	_	null	_	roleIntent	Arg2	_	_	_
+10	کرده‌بودند	V	PRD	5	null	null	roleAction	Y	کردن.25	_	_	_	_
+11	،	PUNC	PUNC	10	null	_	null	_	no	_	_	_	_
+12	نزد	PREP	VPP	14		_	_	_	Arg3	_	_
+13	پدر	N	POSDEP	12	والد§n-13357	_	نفر§n-13075	_	role	_	_	_	_
+14	آورده	V	PREDEP	15	آوردن§v-7850	رخداد§n-13136	roleAction	Y	آوردن.452	_	_	_	_
+15	و	CONJ	VCONJ	16	null	_	null	_	no	_	_	_	_
+16	گفتند	V	ROOT	0	گفتن§v-7774	رخداد§n-13136	roleAction	Y	گفتن.35	_	_	_	_
+17	که	SUBR	VCL	16	null	_	null	_	no	_	_	Arg1	_
+18	گرگ	N	SBJ	23	گرگ§n-19212	_	جانور§n-12239	_	role	_	_	_	Arg0
+19	او	PR	PREDEP	20	null	_	null	_	role	_	_	_	_
+20	را	POSTP	OBJ	23	null	_	null	_	no	_	_	_	Arg1
+21	طعمه	N	MOS	23	طعمه§n-20232	_	شیء§n-12703	_	roleIntent	_	_	_	Arg2
+22	خود	PR	MOZ	21	خود§n-13459	_	نفر§n-13075	_	role	_	_	_	_
+23	ساخت	V	PRD	17	ساختن#v1	رخداد§n-13136	Y	ساختن.498	_	_	_	_
+24	.	PUNC	PUNC	16	null	_	null	_	no	_	_	_	_
+
+1	یوسف	N	SBJ	11	یوسف§n-23957	_	نفر§n-13075	_	role	Arg1	_	_	_
+2	[	PUNC	PUNC	4	null	_	null	_	no	_	_	_	_
+3	سه	NUM	NPREMOD	4	سه§n-13492	_	اندازه§n-12768	_	no	_	_	_	_
+4	روز	N	ADVRB	11	روشنایی روز§n-12637	_	NULL	_	time	ArgM-TMP	_	_	_
+5	و	CONJ	NCONJ	4	null	_	null	_	role	_	_	_	_
+6	سه	NUM	NPREMOD	7	سه§n-13492	_	اندازه§n-12768	_	no	_	_	_	_
+7	شب	N	POSDEP	5	شب§n-12642	_	دوره زمانی§n-12603	_	time	_	_	_	_
+8	]	PUNC	PUNC	4	null	_	null	_	no	_	_	_	_
+9	درمیان	PREP	MOS	11	null	_	null	_	no	Arg2	_	_	_
+10	چاه	N	POSDEP	9	چاه§n-16033	_	null	_	Location	_	_	_	_
+11	بود	V	ROOT	0	بودن§v-9332	رخداد§n-13136	no	Y	بودن.15	_	_	_	_
+12	تا	PREP	ADVRB	11	null	_	null	_	no	_	_	_	_
+13	این	PR	POSDEP	12	null	_	null	_	no	_	_	_	_
+14	که	SUBR	NCL	13	null	_	null	_	no	_	_	_	_
+15	کاروانی	N	SBJ	38	قافله§n-14002	_	نفر§n-13075	_	role	_	Arg0	_	Arg0
+16	که	SUBR	NCL	15	null	_	null	_	no	_	_	_	_
+17	از	PREP	VPP	21	null	_	null	_	no	_	Arg3	_	_
+18	مدین	N	POSDEP	17	یثرب§n-23603	_	جا§n-12733	_	Location	_	_	_	_
+19	به	PREP	VPP	21	null	_	null	_	no	_	Arg4	_	_
+20	مصر	N	POSDEP	19	مصر§n-20196	_	گروه§n-12753	_	Location	_	_	_	_
+21	می‌رفتند	V	PRD	16	پوییدن§v-7700	رخداد§n-13136	roleAction	Y	رفتن.17	_	_	_	_
+22	برای	PREP	ADVRB	38	null	_	null	_	no	_	_	_	ArgM-CAU
+23	رفع	N	POSDEP	22	رفع§n-14718	_	null	_	roleIntent	_	_	_	_
+24	خستگی	N	MOZ	23	جریحه§n-10523	_	مشخصه§n-12756	_	roleEmotion	_	_	_	_
+25	و	CONJ	NCONJ	23	null	_	null	_	no	_	_	_	_
+26	استفاده	N	POSDEP	25	مصرف§n-10624	_	null	_	roleIntent	_	_	_	_
+27	از	PREP	NPP	26	null	_	null	_	no	_	_	_	_
+28	آب	N	POSDEP	27	آب شرب§n-14289	_	ماده§n-14032	_	no	_	_	_	_
+29	،	PUNC	PUNC	28	null	_	null	_	NO	_	_	_	_
+30	کنار	N	ADVRB	38	نزدیک§n-10189	_	جا§n-12733	_	no	_	_	_	Arg4
+31	همان	ADJ	NPREMOD	32	null	_	null	_	no	_	_	_	_
+32	چاهی	N	MOZ	30	چاه§n-16033	_	null	_	Location	_	_	_	_
+33	که	SUBR	NCL	32	null	_	null	_	no	_	_	_	_
+34	یوسف	N	SBJ	37	یوسف§n-23957	_	نفر§n-13075	_	role	_	_	Arg1	_
+35	در	PREP	MOS	37	null	_	null	_	no	_	_	Arg2	_
+36	آن	PR	POSDEP	35	null	_	null	_	no	_	_	_	_
+37	بود	V	PRD	33	بودن§v-9332	رخداد§n-13136	no	Y	بودن.15	_	_	_	_
+38	آمدند	V	PRD	14	آمدن§v-7847	رخداد§n-13136	roleAction	Y	آمدن.44	_	_	_	_
+
+1	اما	CONJ	VCONJ	11	null	_	null	_	NO	_	_
+2	آن‌ها	PR	SBJ	11	null	_	null	_	no	Arg0	Arg0
+3	به‌جای	PREP	ADVRB	11	null	_	null	_	no	ArgM-ADV	_
+4	آب	N	POSDEP	3	آب شرب§n-14289	_	ماده§n-14032	_	no	_	_
+5	،	PUNC	PUNC	4	null	_	null	_	no	_	_
+6	چشم	N	NVE	11	عین§n-10314	_	چیز§n-10392	_	no	_	_
+7	شان	PR	MOZ	6	null	_	null	_	no	_	_
+8	به	PREP	VPP	11	null	_	null	_	no	Arg3	_
+9	پسری	N	POSDEP	8	پسر§n-13367	_	نفر§n-13075	_	role	_	_
+10	ماه‌چهره	ADJ	NPOSTMOD	9	null	_	null	_	roleState	_	_
+11	افتاد	V	PREDEP	12	null	null	no	Y	چشم‌افتادن.510	_	_
+12	و	CONJ	VCONJ	14	null	_	null	_	no	_	_
+13	خوشحال	ADJ	MOS	14	مسرور§a-115	_	‌مشخصه§n-12756	_	roleEmotion	_	Arg2
+14	شدند	V	ROOT	0	خوشحال کردن§v-9998	رخداد§n-13136	roleAction	Y	کردن.25	_	_
+
+1	و	CONJ	VCONJ	9	null	_	null	_	no	_
+2	او	PR	PREDEP	3	null	_	null	_	role	_
+3	را	POSTP	OBJ	9	null	_	null	_	no	Arg1
+4	در	PREP	ADVRB	9	null	_	null	_	no	ArgM-LOC
+5	مصر	N	POSDEP	4	مصر§n-20196	_	گروه§n-12753	_	Location	_
+6	به	PREP	VPP	9	null	_	null	_	no	Arg2
+7	بهایی	N	POSDEP	6	ثمن§n-11246	_	مشخصه§n-12756	_	no	_
+8	اندک	ADJ	NPOSTMOD	7	معدود§a-123	_	‌مشخصه§n-12756	_	no	_
+9	فروختند	V	ROOT	0	فروختن§v-7667	رخداد§n-13136	roleAction	Y	فروختن.353	_
+10	.	PUNC	PUNC	9	null	_	null	_	no	_
+
+1	کسی	N	SBJ	9	null	_	null	_	role	Arg0	Arg1
+2	که	SUBR	NCL	1	null	_`null	_	no	_	_
+3	یوسف	N	PREDEP	4	یوسف§n-23957	_	نفر§n-13075	_	role	_	_
+4	را	POSTP	OBJ	5	null	_	null	_	no	Arg1	_
+5	خرید	V	PRD	2	خریدن§v-7668	null	roleAction	Y	خریدن.162	_	_
+6	وزیر	N	MOS	9	وزیر§n-12032	_	نفر§n-13075	_	role	_	Arg2
+7	پادشاه	N	MOZ	6	سلطان§n-13386	_	نفر§n-13075	_	role	_	_
+8	مصر	N	MOZ	7	مصر§n-20196	_	گروه§n-12753	_	Location	_	_
+9	بود	V	ROOT	0	بودن§v-8897	رخداد§n-13136	no	Y	بودن.15	_	_
+10	.	PUNC	PUNC	9	null	_	null	_	no	_	_
+
+1	عزیز	N	SBJ	11	عزیز§n-11967	_	شیء§n-12703	_	roleState	Arg1	Arg0
+2	مصر	N	MOZ	1	مصر§n-20196	_	گروه§n-12753	_	Location	_	_
+3	و	CONJ	NCONJ	1	null	_	null	_	no	_	_
+4	همسر	N	POSDEP	3	مرد زندگی§n-13369	_	نفر§n-13075	_	role	_	_
+5	ش	PR	MOZ	4	null	_	null	_	no	_	_
+6	از	PREP	AJPP	10	null	_	null	_	no	_	_
+7	نعمت	N	POSDEP	6	null	_	null	_	no	_	_
+8	داشتن	N	MOZ	7	داشتن§v-8512	_	رخداد§n-13136	_	no	_	_
+9	فرزند	N	MOZ	8	بچه§n-13350	_	نفر§n-13075	_	role	_	_
+10	محروم	ADJ	MOS	11	بی بهره§a-562	_	‌مشخصه§n-12756	_	roleState		Arg2	_
+11	بودند	V	PREDEP	12	بودن§v-16430	رخداد§n-13136	roleAction	Y	بودن.15	_	_
+12	و	CONJ	VCONJ	20	null	_	null	_	no	_	_
+13	به	PREP	ADVRB	20	null	_	null	_	no	_	ArgM-CAU
+14	همین	ADJ	NPREMOD	15	null	_	null	_	no	_	_
+15	دلیل	N	POSDEP	13	سبب§n-12730	_	خصوصیت روانی§n-12725	_	no 	_	_
+16	یوسف	N	PREDEP	17	یوسف§n-23957	_	نفر§n-13075	_	role	_	_
+17	را	POSTP	OBJ	20	null	_	null	_	no	_	Arg1
+18	به‌خوبی	ADV	ADVRB	20	null	_	null	_	roleEmotion	_	ArgM-MNR
+19	تربیت	N	MOS	20	پرورش§n-10180	_	رخداد§n-13136	_	roleIntent	_	Arg2
+20	کردند	V	ROOT	0	بار آوردن§v-8043	رخداد§n-13136	roleAction	Y	کردن.25	_	_
+
+1	اما	CONJ	VCONJ	18	null	_	null	_	no	_	ArgM-ADV
+2	هنگامی	N	ADVRB	18	موقع§n-12614	_	دوره زمانی§n-12603	_	no	ArgM-TMP	_
+3	که	SUBR	NCL	2	null	_	null	_	no	_	_
+4	یوسف	N	SBJ	8	یوسف§n-23957	_	نفر§n-13075	_	role	Arg0	_
+5	به	PREP	VPP	8	null	_	null	_	no	Arg3	_
+6	سن	N	POSDEP	5	سن§n-12627	_	 دوره زمانی§n-12603	_	no	_	_
+7	بلوغ	N	MOZ	6	رسیدگی§n-12629	_	دوره زمانی§n-12603	_	roleState	_	_
+8	رسید	V	PRD	3	رسیدن§v-8616	رخداد§n-13136	no	Y	رسیدن.846	_	_
+9	،	PUNC	PUNC	8	null	_	null	_	no	_	_
+10	زلیخا	N	SBJ	18	null	_	null	_	role	_	Arg1
+11	به‌خاطر	PREP	ADVRB	18	null	_	null	_	no	_	ArgM-CAU
+12	زیبایی	N	POSDEP	11	زیبایی§n-19694	_	مشخصه§n-12756	_	roleEmotion	_	_
+13	،	PUNC	PUNC	12	null	_	null	_	no	_	_
+14	عاشق	ADJ	MOS	18	محب§a-1077	_	مشخصه§n-12756	_	roleEmotion	_	Arg2
+15	و	CONJ	AJCONJ	14	null	_	null	_	no	_	_
+16	دلداده	ADJ	POSDEP	15	عاشق§n-11950	_	نفر§n-13075	_	roleEmotion	_	_
+17	او	PR	NEZ	14	null	_	null	_	role	_	_
+18	شد	V	ROOT	0	شیدا شدن§v-9665	رخداد§n-13136	roleAction	Y	کردن.25	_	_
+
+1	و	CONJ	VCONJ	11	null	_	null	_	no	_	_	_	_
+2	در	PREP	ADVRB	11	null	_	null	_	no	ArgM-TMP	_	_	_
+3	یکی‌از	ADJ	NPREMOD	4	null	_	null	_	no	_	_	_	_
+4	روزها	N	POSDEP	2	روز§n-13556	_	دوره زمانی§n-12603	_	Time	_	_	_	_
+5	یوسف	N	PREDEP	6	یوسف§n-23957	_	نفر§n-13075	_	roleAction	_	_	_	_
+6	را	POSTP	OBJ	11	null	_	null	_	no	Arg1	_	_	_
+7	در	PREP	ADVRB	11	null	_	null	_	no	Arg3	_	_	_
+8	خانه	N	POSDEP	7	سرا§n-12809	_	جا§n-11881	_	Location	_	_	_	_
+9	خود	PR	MOZ	8	null	_	null	_	role	_	_	_	_
+10	تنها	ADV	ADVRB	11	بی‌کس§a-668	_	مشخصه§n-12756	_	roleState	ArgM-MNR	_	_	_
+11	یافت	V	PREDEP	12	جستن§v-8367	رخداد§n-13136	roleAction	Y	یافتن.848	_	_	_	_
+12	و	CONJ	VCONJ	15	null	_	null	_	no	_	_	_	_
+13	به	PREP	VPP	15	null	_	null	_	no	_	Arg3	_	_
+14	وی	PR	POSDEP	13	null	_	null	_	role	_	_	_	_
+15	گفت	V	ROOT	0	گفتن§v-9244	رخداد§n-13136	roleAction	Y	گفتن.35	_	_	_	_
+16	که	SUBR	VCL	15	null	_	null	_	no	_	Arg1	_	_
+17	بیا	V	PRD	16	آمدن§v-7847	رخداد§n-13136	no	Y	آمدن.44	_	_	_	_
+18	که	SUBR	AJUCL	17	null	_	null	_	no	_	_	ArgM-CAU	_
+19	خود	PR	PREDEP	20	null	_	null	_	role	_	_	_	_
+20	را	POSTP	OBJ	24	null	_	null	_	no	_	_	_	Arg1
+21	برای	PREP	AJPP	23	null	_	null	_	no	_	_	_	_
+22	ت	PR	POSDEP	21	null	_	null	_	no	_	_	_	_
+23	آماده	ADJ	MOS	24	مهیا§a-2354	_	مشخصه§n-12756	_	roleState	_	_	_	Arg2
+24	کرده‌ام	V	PRD	18	تدارک دیدن§v-8233	رخداد§n-13136	roleAction	Y	کردن.25	_	_	_	_
+25	.	PUNC	PUNC	15	null	_	null	_	no	_	_	_	_
+
+1	در	PREP	ADVRB	14	null	_	null	_	no	ArgM-TMP	_
+2	آن	ADJ	NPREMOD	3	null	_	null	_	no	_	_
+3	هنگام	N	POSDEP	1	موقع§n-12614	_	دوره زمانی§n-12603	_	time	_	_
+4	و	CONJ	PCONJ	1	null	_	null	_	no	_	_
+5	در	PREP	POSDEP	4	null	_	null	_	no	_	_
+6	پشت	N	POSDEP	5	پشت§n-10278	_	جا§n-12733	_	Location	_	_
+7	درب	N	MOZ	6	درگاه§n-10373	_	ساختار§n-12875	_	ساختار§n-12875	_	_
+8	آخر	NUM	NPOSTMOD	7	اختتام§n-11548	_	رخداد§n-13136	_	staticObjState	_	_
+9	،	PUNC	PUNC	8	null	_	null	_	no	_	_
+10	زلیخا	N	SBJ	14	null	_	null	_	role	Arg0	_
+11	پیراهن	N	PREDEP	13	پیرهن§n-11108	_	شیء§n-12703	_	static_object	_	_
+12	یوسف	N	MOZ	11	یوسف§n-23957	_	نفر§n-13075	_	role	_	_
+13	را	POSTP	OBJ	14	null	_	null	_	no	Arg1	_
+14	کشید	V	ROOT	0	null	null	no	Y	کشیدن.512	_	_
+15	که	SUBR	VCL	14	null	_	null	_	no	_	_
+16	این	ADJ	NPREMOD	17	null	_	null	_	no	_	_
+17	امر	N	SBJ	23	موضوع§n-12988	_	مشخصه§n-12756	_	no	_	Arg0
+18	باعث	N	NVE	23	سبب§n-13414	_	null	_	no	_	_
+19	پاره	ADJ	PREDEP	20	پاره§a-2389	_	مشخصه§n-12756	_	staticObjState	_	_
+20	شدن	N	MOZ	18	گردیدن§v-9382	_	رخداد§n-13136	_	no	_	Arg1
+21	پیراهن	N	MOZ	20	پیرهن§n-11108	_	شیء§n-12703	_	static_object	_	_
+22	یوسف	N	MOZ	21	یوسف§n-23957	_	نفر§n-13075	_	role	_	_
+23	شد	V	PRD	15	موجب شدن§v-7980	رخداد§n-13136	no	Y	باعث‌شدن.296	_	_
+
+1	و	CONJ	VCONJ	11	null	_	null	_	no	_	_
+2	در	PREP	ADVRB	11	null	_	null	_	no	ArgM-TMP	_
+3	این	ADJ	NPREMOD	4	null	_	null	_	no	_	_
+4	هنگام	N	POSDEP	2	موقع§n-12614	_	دوره زمانی§n-12603	_	time	_	_
+5	،	PUNC	PUNC	4	null	_	null	_	no	_	_
+6	همسر	N	SBJ	11	مرد زندگی§n-13369	_	نفر§n-13075	_	role	Arg0	Arg0
+7	زلیخا	N	MOZ	6	null	_	null	_	role	_	_
+8	نیز	ADV	ADVRB	11	null	_	null	_	no	ArgM-ADV	_
+9	از	PREP	ADVRB	11	null	_	null	_	no	ArgM-LOC	_
+10	راه	N	POSDEP	9	راه§n-10059	_	اندازه§n-11239	_	no	_	_
+11	رسید	V	PREDEP	12	رسیدن§v-8613	رخداد§n-13136	no	Y	رسیدن.501	_	_
+12	و	CONJ	VCONJ	18	null	_	null	_	no	_	_
+13	قضیه	N	POSDEP	16	رخداد§n-13136	_	رخداد§n-13136	_	no	_	_
+14	این	ADJ	APREMOD	15	null	_	null	_	no	_	_
+15	دو	NUM	NPOSTMOD	13	دو§n-13491	_	اندازه§n-12768	_	no	_	_
+16	را	POSTP	OBJ	18	null	_	null	_	no	_	Arg1
+17	مشاهده	N	NVE	18	null	_	null	_	roleIntent	_	_
+18	نمود	V	ROOT	0	null	null	roleAction	Y	مشاهده‌کردن.231	_	_
+19	.	PUNC	PUNC	18	null	_	null	_	no	_	_
+
+1	وقتی	N	ADVRB	9	null	_	null	_	no	ArgM-TMP	_	_
+2	عزیز	N	SBJ	8	عزیز§n-11967	_	جانور§n-12239	_	role	Arg0	Arg0	_
+3	مصر	N	MOZ	2	مصر§n-20196	_	گروه§n-12753	_	Location	_	_	_
+4	به	PREP	VPP	8	null	_	null	_	no	Arg3	_	_
+5	پیراهن	N	POSDEP	4	پیرهن§n-11108	_	شیء§n-12703	_	static_object	_	_	_
+6	یوسف	N	MOZ	5	یوسف§n-23957	_	نفر§n-13075	_	role	_	_	_
+7	نظر	N	NVE	8	نگاه§n-10631	_	رخداد§n-13136	_	no	_	_	_
+8	افکند	V	NCL	1	null	null	no	Y	نظر‌افکندن.854	_	_	_
+9	دید	V	ROOT	0	دیدن§v-9138	رخداد§n-13136	roleAction	Y	دیدن.47	_	_	_
+10	که	SUBR	VCL	9	null	_	null	_	null	_	Arg1	_
+11	پیراهن	N	SBJ	15	پیرهن§n-11108	_	شیء§n-12703	_	static_object	_	_	Arg1
+12	از	PREP	ADVRB	15	null	_	null	_	no	_	_	ArgM-MNR
+13	پشت	N	POSDEP	12	پشت§n-10278	_	جا§n-12733	_	no	_	_	_
+14	پاره	ADJ	MOS	15	پاره§a-2389	_	مشخصه§n-12756	_	staticObjState	_	_	Arg2
+15	شده‌است	V	PRD	10	چاک دادن§v-8540	رخداد§n-13136	no	Y	کردن.25	_	_	_
+16	.	PUNC	PUNC	9	null	_	null	_	no	_	_	_
+
+1	در	PREP	ADVRB	9	null	_	null	_	no	ArgM-TMP	_	_
+2	این	ADJ	NPREMOD	3	null	_	null	_	no	_	_	_
+3	لحظه	N	POSDEP	1	زمان خاص§n-12649	_	اندازه§n-12768	_	time	_	_	_
+4	او	PR	SBJ	9	null	_	null	_	no	Arg0	Arg0	_
+5	رو	N	NVE	9	null	_	null	_	no	_	_	_
+6	به	PREP	NPP	5	null	_	null	_	no	Arg3	_	_
+7	همسر	N	POSDEP	6	عیال§n-12059	_	نفر§n-13075	_	role	_	_	_
+8	ش	PR	MOZ	7	null	_	null	_	no	_	_	_
+9	نمود	V	PREDEP	10	رو کردن§v-8630	رخداد§n-13136	roleAction	Y	رو‌کردن.548	_	_	_
+10	و	CONJ	VCONJ	13	null	_	null	_	no	_	_	_
+11	به	PREP	VPP	13	null	_	null	_	no	_	Arg3	_
+12	او	PR	POSDEP	11	null	_	null	_	role	_	_	_
+13	گفت	V	ROOT	0	گفتن§v-7774	رخداد§n-13136	roleAction	Y	گفتن.35	_	_	_
+14	که	SUBR	VCL	13	null	_	null	_	no	_	Arg1	_
+15	این	ADJ	NPREMOD	16	null	_	null	_	no	_	_	_
+16	تهمت	N	SBJ	23	تهمت§n-22120	_	خصوصیت روانی§n-12725	_	no	_	_	Arg1
+17	و	CONJ	NCONJ	16	null	_	null	_	no	_	_	_
+18	افترا	N	POSDEP	17	تهمت§n-22120	_	خصوصیت روانی§n-12725	_	no	_	_	_
+19	از	PREP	MOS	23	null	_	null	_	no	_	_	Arg2
+20	مکر	N	POSDEP	19	null	_	null	_	no	_	_	_
+21	زنانه	ADJ	NPOSTMOD	20	زنانه§a-868	_	مشخصه§n-12756	_	roleState	_	_	_
+22	شما	PR	MOZ	20	null	_	null	_	role	_	_	_
+23	ست	V	PRD	14	بودن§v-9328	رخداد§n-13136	no	Y	بودن.15	_	_	_
+24	.	PUNC	PUNC	13	null	_	null	_	no	_	_	_
+
+1	زلیخا	N	SBJ	3	null	_	null	_	role	Arg0	Arg0	Arg0
+2	نقشه‌ای	N	NVE	3	فکر§n-13030	_	خصوصیت روانی§n-12725	_	roleIntent	_	_	_
+3	کشید	V	ROOT	0	طراحی کردن§v-9745	رخداد§n-13136	roleAction	Y	نقشه‌کشیدن.42	_	_	_
+4	که	SUBR	VCL	3	null	_	null	_	no	Arg3	_	_
+5	زنان	N	PREDEP	7	خانم§n-12070	_	نفر§n-13075	_	role	_	_	_
+6	اشراف‌زاده	ADJ	NPOSTMOD	5	null	_	null	_	roleState	_	_	_
+7	را	POSTP	OBJ	11	null	_	null	_	no	_	Arg1	_
+8	به	PREP	NPP	10	null	_	null	_	no	_	Arg3	_
+9	قصر	N	POSDEP	8	null	_	null	_	Location	_	_	_
+10	دعوت	N	NVE	11	دعوت§n-11510	_	خبر§n-13975	_	roleIntent	_	_	_
+11	کند	V	PRD	4	خواندن§v-8493	رخداد§n-13136	roleAction	Y	دعوت‌کردن.352	_	_	_
+12	تا	SUBR	AJUCL	11	null	_	null	_	no	_	ArgM-CAU	_
+13	یوسف	N	PREDEP	14	یوسف§n-23957	_	نفر§n-13075	_	role	_	_	_
+14	را	POSTP	OBJ	18	null	_	null	_	no	_	_	Arg1
+15	به	PREP	VPP	18	null	_	null	_	no	_	_	Arg3
+16	آن‌ها	PR	POSDEP	15	null	_	null	_	role	_	_	_
+17	نشان	N	NVE	18	null	_	null	_	roleIntent	_	_	_
+18	دهد	V	PRD	12	به نمایش گذاشتن§v-9507	رخداد§n-13136	roleAction	Y	نشان‌دادن.128	_	_	_
+19	.	PUNC	PUNC	3	null	_	null	_	no	_	_	_
+
+1	او	PR	SBJ	9	null	_	null	_	role	Arg0	Arg0
+2	برای	PREP	ADVRB	9	null	_	null	_	no	ArgM-CAU	_
+3	اجرای	N	POSDEP	2	اجرا کردن§n-10404	_	رخداد§n-13136	_	roleState	_	_
+4	نقشه	N	MOZ	3	فکر§n-13030	_	خصوصیت روانی§n-12725	_	roleIntent	_	_
+5	اش	PR	MOZ	4	null	_	null	_	no	_	_
+6	مهمانی	N	OBJ	9	ضیافت§n-13150	_	رخداد§n-13136	_	roleIntent	Arg1	_
+7	بزرگی	ADJ	NPOSTMOD	6	بزرگ§a-384	_	مشخصه§n-12756	_	no	_	_
+8	ترتیب	N	NVE	9	ترتیب§n-11360	_	خصوصیت روانی§n-12725	_	no	_	_
+9	داد	V	PREDEP	10	زمینه سازی کردن§v-19793	رخداد§n-13136	roleAction	Y	ترتیب‌دادن.553	_	_
+10	و	CONJ	VCONJ	22	null	_	null	_	no	_	_
+11	تمام	ADJ	NPREMOD	12	تمام§n-16534	_	اندازه§n-13756	_	roleState	_	_
+12	زنان	N	PREDEP	17	زن§n-10132	_	نفر§n-13075	_	role	_	_
+13	اشرافی	ADJ	NPOSTMOD	12	شیک§a-2189	_	مشخصه§n-12756	_	roleState	_	_
+14	و	CONJ	AJCONJ	13	null	_	null	_	no	_	_
+15	متمکن	ADJ	POSDEP	14	null	_	null	_	roleState	_	_
+16	شهر	N	MOZ	12	ملک§n-11759	_	گروه§n-12753	_	Location	_	_
+17	را	POSTP	OBJ	22	null	_	null	_	no	_	Arg1
+18	به	PREP	NPP	21	null	_	null	_	no	_	Arg3
+19	قصر	N	POSDEP	18	null	_	null	_	Location	_	_
+20	خود	PR	MOZ	19	خود§n-13459	_	نفر§n-13075	_	role	_	_
+21	دعوت	N	NVE	22	دعوت§n-11510	_	خبر§n-12766	_	roleIntent	_	_
+22	نمود	V	ROOT	0	خواندن§v-8493	رخداد§n-13136	roleAction	Y	دعوت‌کردن.352	_	_
+23	.	PUNC	PUNC	22	null	_	null	_	no	_	_
+
+1	سپس	SUBR	ROOT	0	null	_	null	_	no	ArgM-ADV	_
+2	به	PREP	NPP	5	null	_	null	_	no	Arg3	_
+3	کنیزان	N	POSDEP	2	null	_	null	_	role	_	_
+4	خود	PR	MOZ	3	خود§n-13459	_	نفر§n-13075	_	role	_	_
+5	دستور	N	NVE	6	امر§n-11505	_	رخداد§n-13136	_	NO	_	_
+6	داد	V	PRD	1	فرمان دادن§v-19253	رخداد§n-13136	roleAction	Y	دستور‌دادن.104	_	_
+7	تا	SUBR	VCL	6	null	_	null	_	no	Arg1	_
+8	از	PREP	NPP	10	null	_	null	_		_	Arg3
+9	مهمان‌ها	N	POSDEP	8	null	_	null	_	role	_	_
+10	پذیرایی	N	NVE	11	پذیرایی§n-18367	_	خصوصیت روانی§n-12725	_	no	_	_
+11	کنند	V	PRD	7	null	null	roleAction	Y	پذیرایی‌کردن.555	_	_
+
+1	ازجمله	PREP	MOS	5	null	_	null	_	no	Arg2
+2	پذیرایی‌کنندگان	N	POSDEP	1	null	_	null	_	role	_
+3	،	PUNC	PUNC	2	null	_	null	_	no	_
+4	یوسف	N	SBJ	5	یوسف§n-23957	_	نفر§n-13075	_	role	Arg1
+5	بود	V	ROOT	0	بودن§v-9328	رخداد§n-13136	no	Y	بودن.15	_
+6	.	PUNC	PUNC	5	null	_	null	_	no	_
+
+1	زلیخا	N	SBJ	10	null	_	null	_	role	Arg0	_
+2	به	PREP	VPP	10	null	_	null	_	no	Arg3	_
+3	دست	N	POSDEP	2	دست§n-13537	_	چیز§n-10392	_	no	_	_
+4	هر	ADJ	NPREMOD	5	null	_	null	_	no	_	_
+5	کدام	N	MOZ	3	null	_	null	_	no	_	_
+6	از	PREP	POSDEP	5	null	_	null	_	no	_	_
+7	مهمانان	N	POSDEP	6	null	_	null	_	no	_	_
+8	خود	PR	MOZ	7	null	_	null	_	role	_	_
+9	چاقویی	N	OBJ	10	چاقو§n-11016	_	شیء§n-12703	_	static_object	Arg1	_
+10	داد	V	ROOT	0	اعطا کردن§v-7665	رخداد§n-13136	roleAction	Y	دادن.110	_	_
+11	تا	SUBR	AJUCL	10	null	_	null	_	no	ArgM-CAU	_
+12	پرتقال‌ها	N	PREDEP	13	پرتقال§n-19189	_	شیء§n-12703	_	static_object	_	_
+13	را	POSTP	OBJ	15	null	_	null	_	no	_	Arg1
+14	پوست	N	NVE	15	پوسه§n-12555	_	شیء§n-12703	_	static_object	_	_
+15	بگیرند	V	PRD	11	null	رخداد§n-13136	roleAction	Y	پوست‌گرفتن.558	_	_
+
+1	اما	CONJ	VCONJ	12	null	_	null	_	no	_	_
+2	آن‌ها	PR	SBJ	12	null	_	null	_	role	Arg1	Arg0
+3	با	PREP	ADVRB	12	null	_	null	_	no	ArgM-ADV	_
+4	مشاهده	N	POSDEP	3	null	_	null	_	roleState	_	_
+5	یوسف	N	MOZ	4	یوسف§n-23957	_	نفر§n-13075	_	role	_	_
+6	و	CONJ	NCONJ	5	null	_	null	_	no	_	_
+7	جمال	N	POSDEP	6	وجاهت§n-11176	_	مشخصه§n-12756	_	roleState	_	_
+8	و	CONJ	NCONJ	7	null	_	null	_	no	_	_
+9	زیبایی	N	POSDEP	8	زیبایی§n-19694	_	مشخصه§n-12756	_	roleState	_	_
+10	او	PR	MOZ	7	null	_	null	_	role	_	_
+11	حیرت‌زده	ADJ	MOS	12	null	_	مشخصه§n-12756	_	roleState		Arg2	_
+12	‌شده	V	PREDEP	13	null	null	no	Y	کردن.25	_	_
+13	و	CONJ	VCONJ	17	null	_	null	_	no	_	_
+14	دستان	N	PREDEP	16	دست§n-13537	_	شیء§n-12703	_	no	_	_
+15	خود	PR	MOZ	14	null	_	null	_	role	_	_
+16	را	POSTP	OBJ	17	null	_	null	_	no	_	Arg1
+17	بریدند	V	ROOT	0	بریدن§v-7724	رخداد§n-13136	roleAction	Y	بریدن.563	_	_
+
+1	و	CONJ	VCONJ	7	null	_	null	_	no	_
+2	بدین	PREP	ADVRB	7	null	_	null	_	no	ArgM-MNR
+3	گونه	N	POSDEP	2	شیوه§n-10396	_	رخداد§n-13136	_	no	_
+4	توسط	PREP	ADVRB	7	null	_	null	_	no	ArgM-ADV
+5	زلیخا	N	POSDEP	4	null	_	null	_	role	_
+6	رسوا	ADJ	MOS	7	رسوا§a-1790	_	مشخصه§n-12756	_	roleState	Arg2
+7	شدند	V	ROOT	0	مفتضح کردن§v-8610	رخداد§n-13136	no	Y	کردن.25	_
+
+1	و	CONJ	VCONJ	7	null	_	null	_	no	_
+2	خداوند	N	SBJ	7	باری تعالی§n-11940	_	خصوصیت روانی§n-12725	_	role	Arg0
+3	دعای	N	PREDEP	5	مناجات§n-11513	_	خبر§n-12766	_	no	_
+4	او	PR	MOZ	3	null	_	null	_	role	_
+5	را	POSTP	OBJ	7	null	_	null	_	no	Arg1
+6	مستجاب	ADJ	MOS	7	null	_	null	_	no	Arg2
+7	نمود	V	ROOT	0	null	null	no	Y	کردن.25	_
+8	.	PUNC	PUNC	7	null	_	null	_	no	_
+
+1	با	PREP	ADVRB	32	null	_	null	_	no	_	_	_
+2	وجودی	N	POSDEP	1	null	_	null	_	no	_	_	_
+3	که	SUBR	NCL	2	null	_	null	_	no	_	_	_
+4	یوسف	N	SBJ	9	یوسف§n-23957	_	نفر§n-13075	_	role	Arg1	_	_
+5	در	PREP	ADVRB	9	null	_	null	_	no	ArgM-ADV	_	_
+6	این	ADJ	NPREMOD	7	null	_	null	_	no	_	_	_
+7	ماجرا	N	POSDEP	5	رخداد§n-13136	_	رخداد§n-13136	_	no	_	_	_
+8	بی‌گناه	ADJ	TAM	9	بی گناه§a-839	_	مشخصه§n-12756	_	roleState	Arg2	_	_
+9	شناخته‌شد	V	PRD	3	شناختن§v-8761	رخداد§n-13136	no	Y	شناختن.389	_	_	_
+10	اما	CONJ	VCONJ	32	null	_	null	_	no	_	_	_
+11	زلیخا	N	SBJ	32	null	_	null	_	role	_	Arg0	Arg0
+12	و	CONJ	NCONJ	11	null	_	null	_	no	_	_	_
+13	خاندان	N	POSDEP	12	طایفه§n-20062	_	گروه§n-12753	_	role	_	_	_
+14	ش	PR	MOZ	13	null	_	null	_	no	_	_	_
+15	برای	PREP	ADVRB	32	null	_null	_	no	_	_	ArgM-CAU
+16	این	PR	POSDEP	15	null	_	null	_	no	_	_	_
+17	که	SUBR	NCL	16	null	_	null	_	no	_	_	_
+18	این	ADJ	NPREMOD	19	null	_	null	_	no	_	_	_
+19	لکه	N	PREDEP	21	لکه§n-10424	_	رخداد§n-13136	_	no	_	_	_
+20	ننگ	N	MOZ	19	سرشکستگی§n-12472	_	null	_	no	_	_	_
+21	را	POSTP	OBJ	25	null	_	null	_	no	_	Arg1	_
+22	از	PREP	PREDEP	24	null	_	null	_	no	_	_	_
+23	خود	PR	POSDEP	22	خود§n-13459	_	نفر§n-13075	_	role	_	_	_
+24	محو	ADJ	MOS	25	مفتون§a-605	_	مشخصه§n-12756	_	no	_	Arg2	_
+25	کنند	V	PRD	17	محو کردن§v-8623	رخداد§n-13136	roleAction	Y	کردن.25	_	_	_
+26	دستور	N	PREDEP	30	دستور§n-11503	_	رخداد§n-13136	_	no	_	_	_
+27	زندانی	ADJ	PREDEP	28	ناآزاد§a-604	_	مشخصه§n-12756	_	roleState	_	_	_
+28	کردن	N	MOZ	26	زندانی کردن§v-8434	_	رخداد§n-13136	_	no	_	_	_
+29	یوسف	N	MOZ	28	یوسف§n-23957	_	نفر§n-13075	_	role	_	_	_
+30	را	POSTP	OBJ	32	null	_	null	_	no	_	_	Arg1
+31	صادر	ADJ	NVE	32	null	_	null	_	no	_	_	_
+32	نمودند	V	ROOT	0	صادر کردن§v-8772	رخداد§n-13136	roleAction	Y	صادر‌کردن.292	_	_	_
+33	.	PUNC	PUNC	32	null	_	null	_	no	_	_	_
+
+1	که	SUBR	ROOT	0	null	_	null	_	no	_
+2	بعداز	PREP	ADVRB	9	null	_	null	_	no	ArgM-TMP
+3	مدتی	N	POSDEP	2	null	_	null	_	Time	_
+4	هر	ADJ	APREMOD	5	null	_	null	_	no	_
+5	دو	NUM	SBJ	9	دو§n-13491	_	اندازه§n-12768	_	no	Arg0
+6	در	PREP	ADVRB	9	null	_	null	_	no	ArgM-LOC
+7	زندان	N	POSDEP	6	حبسگاه§n-14859	_	جا§n-12733	_	Location	_
+8	خوابی	N	OBJ	9	رویا§n-15102	_	خصوصیت روانی§n-12725	_	no	Arg1
+9	دیدند	V	PRD	1	رویا دیدن§v-8482	رخداد§n-13136	roleAction	Y	دیدن.47	_
+10	،	PUNC	PUNC	9	null	_	null	_	null	_
+
+1	تعبیر	N	SBJ	6	تعبیر§n-20347	_	خصوصیت روانی§n-12725	_	no	Arg1	_	_
+2	خواب	N	MOZ	1	رویا§n-15102	_	خصوصیت روانی§n-12725	_	no	_	_	_
+3	آن‌ها	PR	MOZ	2	null	_	null	_	role	_	_	_
+4	بدین	PREP	MOS	6	null	_	null	_	no	Arg2	_	_
+5	شکل	N	POSDEP	4	null	_	null	_	no	_	_	_
+6	بود	V	ROOT	0	بودن§v-9328	رخداد§n-13136	no	Y	بودن.15	_	_	_
+7	که	SUBR	NCL	5	null	_	null	_	no	_	_	_
+8	یکی‌از	ADJ	NPREMOD	9	null	_	null	_	no	_	_	_
+9	آن‌ها	PR	SBJ	13	null	_	null	_	role	_	Arg1	_
+10	از	PREP	AJPP	12	null	_	null	_	no	_	_	_
+11	زندان	N	POSDEP	10	حبسگاه§n-14859	_	جا§n-12733	_	Location	_	_	_
+12	آزاد	ADJ	MOS	13	ول§a-1594	_	مشخصه§n-12756	_	roleState	_	Arg2	_
+13	می‌شد	V	PREDEP	14	آزاد کردن§v-7836	رخداد§n-13136	no	Y	کردن.25	_	_	_
+14	و	CONJ	VCONJ	19	null	_	null	_	no	_	_	_
+15	دیگری	PR	SBJ	19	null	_	null	_	role	_	_	Arg1
+16	به	PREP	VPRT	19	null	_	null	_	no	_	_	_
+17	دار	N	POSDEP	16	دار§n-14786	_	شیء§n-12703	_	static_object	_	_	_
+18	مجازات	N	MOZ	17	مجازات§n-13887	_	خصوصیت روانی§n-12725	_	خصوصیت روانی§n-12725	_	_	_
+19	آویخته‌می‌شد	V	PRD	7	آویزان بودن§v-15598	رخداد§n-13136	no	Y	به‌دار‌آویختن.570	_	_	_
+20	.	PUNC	PUNC	6	null	_	null	_	no	_	_	_
+
+1	یوسف	N	SBJ	11	یوسف§n-23957	_	نفر§n-13075	_	role	_	Arg0	_
+2	به	PREP	VPP	11	null	_	null	_	null	_	Arg3	_
+3	کسی	N	POSDEP	2	null	_	null	_	no	Arg1	_	_
+4	که	SUBR	NCL	3	null	_	null	_	no	_	_	_
+5	در	PREP	ADVRB	10	null	_	null	_	no	ArgM-TMP	_	_
+6	آینده	N	POSDEP	5	آینده§n-21805	_	اندازه§n-12768	_	time	_	_	_
+7	از	PREP	AJPP	9	null	_	null	_	no	_	_	_
+8	زندان	N	POSDEP	7	حبسگاه§n-14859	_	جا§n-12733	_	Location	_	_	_
+9	آزاد	ADJ	MOS	10	ول§a-1594	_	مشخصه§n-12756	_	roleState	Arg2	_	_
+10	می‌شد	V	PRD	4	آزاد کردن§v-7836	رخداد§n-13136	no	Y	کردن.25	_	_	_
+11	گفت	V	ROOT	0	گفتن§v-9244	رخداد§n-13136	roleAction	Y	گفتن.35	_	_	_
+12	که	SUBR	VCL	11	null	_	null	_	no	_	Arg1	_
+13	سفارش	N	NVE	18	موعظه§n-11468	_	خبر§n-13975	_	no	_	_	_
+14	م	PR	PREDEP	15	null	_	null	_	no	_	_	_
+15	را	POSTP	OBJ	18	null	_	null	_	no	_	_	Arg3
+16	به	PREP	NPP	13	null	_	null	_	no	_	_	Arg4
+17	پادشاه	N	POSDEP	16	سلطان§n-13386	_	نفر§n-13075	_	role	_	_	_
+18	بکن	V	PRD	12	سفارش کردن§v-8331	رخداد§n-13136	roleAction	Y	سفارش‌کردن.50	_	_	_
+
+1	و	CONJ	VCONJ	10	null	_	null	_	no	_	_
+2	در	PREP	ADVRB	10	null	_	null	_	no	ArgM-TMP	_
+3	شبی	N	POSDEP	2	شب§n-12644	_	دوره زمانی§n-12603	_	no	_	_
+4	از	PREP	NPP	3	null	_	null	_	no	_	_
+5	شب‌ها	N	POSDEP	4	شب§n-12644	_	دوره زمانی§n-12603	_	no	_	_
+6	پادشاه	N	SBJ	10	سلطان§n-13386	_	نفر§n-13075	_	role	Arg0	_
+7	وقت	N	MOZ	6	null	_	null	_	no	_	_
+8	مصر	N	MOZ	7	مصر§n-20196	_	گروه§n-12753	_	Location	_	_
+9	خوابی	N	OBJ	10	رویا§n-15102	_	خصوصیت روانی§n-12725	_	no	Arg1	_
+10	دید	V	ROOT	0	دیدن§v-9138	رخداد§n-13136	roleAction	Y	دیدن.47	_	_
+11	که	SUBR	NCL	9	null	_	null	_	no	_	_
+12	او	PR	PREDEP	13	null	_	null	_role		_	_
+13	را	POSTP	OBJ	15	null	_	null	_	no	_	Arg1
+14	آشفته	ADJ	MOS	15	آشفته§a-475	_	مشخصه§n-12756	_	roleState	_	Arg2
+15	ساخت	V	PRD	11	کردن§v-8678	رخداد§n-13136	no	Y	ساختن.498	_	_
+
+1	در	PREP	ADVRB	18	null	_	null	_	no	_	ArgM-TMP	_	_	_
+2	این	ADJ	NPREMOD	3	null	_	null	_	no	_	_	_	_	_
+3	هنگام	N	POSDEP	1	موقع§n-12614	_	فاصله زمانی§n-12691	_	time	_	_	_	_	_
+4	جوانی	N	SBJ	18	جوان§n-14402	_	نفر§n-13075	_	role	Arg1	Arg0	Arg0	_	_
+5	که	SUBR	NCL	4	null	_	null	_	no	_	_	_	_	_
+6	مدتی	N	ADVRB	12	مدت§n-12613	_	مدت§n-12613	_	time	ArgM-TMP	_	_	_	_
+7	را	EMPH	POSDEP	6	null	_	null	_	no	_	_	_	_	_
+8	در	PREP	ADVRB	12	null	_	null	_	no	ArgM-LOC	_	_	_	_
+9	زندان	N	POSDEP	8	حبسگاه§n-14859	_	جا§n-12733	_	Location	_	_	_	_	_
+10	نزد	PREP	MOS	12	null	_	null	_	Location	Arg2	_	_	_	_
+11	یوسف	N	POSDEP	10	یوسف§n-23957	_	نفر§n-13075	_	role	_	_	_	_	_
+12	بود	V	PRD	5	بودن§v-8897	رخداد§n-13136	no	Y	بودن.15	_	_	_	_	_
+13	قضیه	N	PREDEP	15	رخداد§n-13136	_	رخداد§n-13136	_	no	_	_	_	_	_
+14	یوسف	N	MOZ	13	یوسف§n-23957	_	نفر§n-13075	_	role	_	_	_	_	_
+15	را	POSTP	OBJ	18	null	_	null	_	no	_	Arg1	_	_	_
+16	به	PREP	VPRT	18	null	_	null	_	no	_	_	_	_	_
+17	یاد	N	POSDEP	16	به خاطر آوردن§n-11353	_	خصوصیت روانی§n-12725	_	no	_	_	_	_	_
+18	آورد	V	PREDEP	19	یاد (کسی) آمدن§v-9565	رخداد§n-13136	roleAction	Y	به‌یاد‌آوردن.574	_	_	_	_	_
+19	و	CONJ	VCONJ	22	null	_	null	_	no	_	_	_	_	_
+20	به	PREP	VPP	22	null	_	null	_	no	_	_	Arg3	_	_
+21	پادشاه	N	POSDEP	20	سلطان§n-13386	_	نفر§n-13075	_	role	_	_	_	_	_
+22	گفت	V	ROOT	0	گفتن§v-9244	رخداد§n-13136	roleAction	Y	گفتن.35	_	_	_	_	_
+23	من	PR	SBJ	27	خود§n-13459	_	نفر§n-13075	_	role	_	_	_	Arg0	_
+24	کسی	N	PREDEP	25	null	_	null	_	no	_	_	_	_	Arg0
+25	را	POSTP	OBJ	27	null	_	null	_	no	_	_	_	Arg1	_
+26	سراغ	N	NVE	27	null	_	null	_	no	_	_	_	_	_
+27	دارم	V	VCL	22	null	null	no	Y	سراغ‌داشتن.575	_	_	_	_	_
+28	که	SUBR	NCL	24	null	_	null	_	no	_	_	_	_	_
+29	می‌تواند	V	PRD	28	null	_	null	_	roleAction	_	_	_	_	_
+30	خواب	N	PREDEP	32	رویا§n-15102	_	خصوصیت روانی§n-12725	_	no	_	_	_	_	_
+31	شما	PR	MOZ	30	null	_	null	_	role	_	_	_	_	_
+32	را	POSTP	OBJ	34	null	_	null	_	no	_	_	_	_	Arg1
+33	تعبیر	N	NVE	34	تعبیر§n-20347	_	خصوصیت روانی§n-12725	_	no	_	_	_	_	_
+34	نماید	V	VCL	29	شرح دادن§v-8268	رخداد§n-13136	roleAction	Y	تعبیر‌کردن.494	_	_	_	_	_
+35	.	PUNC	PUNC	22	null	_	null	_	no	_	_	_	_	_
+
+1	جوان	N	SBJ	4	جوان§n-14402	_	نفر§n-13075	_	role	Arg0	Arg0
+2	نزد	PREP	VPP	4	null	_	null	_	no	Arg4	_
+3	پادشاه	N	POSDEP	2	سلطان§n-13386	_	نفر§n-13075	_	role	_	_
+4	رفت	V	PREDEP	5	پوییدن§v-7700	رخداد§n-13136	roleAction	Y	رفتن.17	_	_
+5	و	CONJ	VCONJ	13	null	_	null	_	no	_	_
+6	تعبیر	N	PREDEP	9	تعبیر§n-20347	_	خصوصیت روانی§n-12725	_	no	_	_
+7	خواب	N	MOZ	6	رویا§n-15102	_	خصوصیت روانی§n-12725	_	NO	_	_
+8	یوسف	N	MOZ	7	یوسف§n-23957	_	نفر§n-13075	_	ROLE	_	_
+9	را	POSTP	OBJ	13	null	_	null	_	no	_	Arg1
+10	به	PREP	NPP	12	null	_	null	_	no	_	Arg3
+11	او	PR	POSDEP	10	null	_	null	_	role	_	_
+12	عرضه	N	NVE	13	null	_	null	_	no	_	_
+13	نمود	V	ROOT	0	null	null	no	Y	عرضه‌کردن.583	_	_
+14	.	PUNC	PUNC	13	null	_	null	_	no	_	_
+
+1	پادشاه	N	SBJ	4	سلطان§n-13386	_	نفر§n-13075	_	role	Arg0	Arg0	Arg0	_
+2	در	PREP	VPP	4	null	_	null	_	no	Arg3	_	_	_
+3	فکر	N	POSDEP	2	ذهن§n-12977	_	خصوصیت روانی§n-12725	_	roleState	_	_	_	_
+4	فرورفت	V	PREDEP	5	فرو رفتن§v-8868	رخداد§n-13136	roleAction	Y	فرو‌رفتن.632	_	_	_	_
+5	و	CONJ	VCONJ	12	null	_	null	_	no	_	_	_	_
+6	به	PREP	NPP	11	null	_	null	_	no	_	Arg3	_	_
+7	درایت	N	POSDEP	6	بینش§n-16834	_	رخداد§n-13136	_	no	_	_	_	_
+8	و	CONJ	NCONJ	7	null	_	null	_	roleState	_	_	_	_
+9	هوش	N	POSDEP	8	عقل§n-11204	_	مشخصه§n-12756	_	roleState	_	_	_	_
+10	یوسف	N	MOZ	7	یوسف§n-23957	_	نفر§n-13075	_	role	_	_	_	_
+11	پی	N	NVE	12	null	_	null	_	no	_	_	_	_
+12	برد	V	PREDEP	13	در یافتن§v-16389	رخداد§n-13136	roleAction	Y	پی‌بردن.48	_	_	_	_
+13	و	CONJ	VCONJ	15	null	_	null	_	no	_	_	_	_
+14	دستور	N	NVE	15	امر§n-11505	_	رخداد§n-13136	_	roleState	_	_	_	_
+15	داد	V	ROOT	0	فرمان دادن§v-19253	رخداد§n-13136	roleAction	Y	دستور‌دادن.104	_	_	_	_
+16	که	SUBR	VCL	15	null	_	null	_	no	_	_	Arg1	_
+17	او	PR	PREDEP	18	null	_	null	_	role	_	_	_	_
+18	را	POSTP	OBJ	22	null	_	null	_	no	_	_	_	Arg1
+19	به	PREP	NPP	21	null	_	null	_	no	_	_	_	Arg3
+20	قصر	N	POSDEP	19	null	_	null	_	Location	_	_	_	_
+21	دعوت	N	NVE	22	دعوت§n-11510	_	خبر§n-13975	_	roleIntent	_	_	_	_
+22	نمایند	V	PRD	16	خواندن§v-8493	رخداد§n-13136	roleAction	Y	دعوت‌کردن.352	_	_	_	_
+23	،	PUNC	PUNC	15	null	_	null	_	no	_	_	_	_
+
+1	اما	CONJ	VCONJ	5	null	_	null	_	no	ArgM-DIS	_	_	_
+2	یوسف	N	SBJ	5	یوسف§n-23957	_	نفر§n-13075	_	role	Arg0	_	_	_
+3	در	PREP	ADVRB	5	null	_	null	_	no	ArgM-LOC	_	_	_
+4	جواب	N	POSDEP	3	جواب§n-11476	_	خبر§n-13975	_	no	_	_	_	_
+5	گفت	V	ROOT	0	گفتن§v-9244	رخداد§n-13136	roleAction	Y	گفتن.35	_	_	_	_
+6	:	PUNC	PUNC	5	null	_	null	_	no	_	_	_	_
+7	من	PR	SBJ	11	خود§n-13459	_	نفر§n-13075	_	role	_	Arg0	_	_
+8	از	PREP	NPP	10	null	_	null	_	no	_	Arg3	_	_
+9	زندان	N	POSDEP	8	حبسگاه§n-14859	_	جا§n-12733	_	Location	_	_	_	_
+10	بیرون	N	NVE	11	برون§n-11860	_	جا§n-12733	_	no	_	_	_	_
+11	نمی‌روم	V	VCL	5	خارج شدن§v-8450	رخداد§n-13136	roleAction	Y	بیرون‌رفتن.587	_	_	_	_
+12	تا	SUBR	AJUCL	11	null	_	null	_	no	_	ArgM-CAU	_	_
+13	م	PR	PREDEP	14	null	_	null	_	no	_	_	_	_
+14	را	POSTP	OBJ	22	null	_	null	_	no	_	_	_	Arg1
+15	از	PREP	AJPP	21	null	_	null	_	no	_	_	_	_
+16	تهمت‌هایی	N	POSDEP	15	تهمت§n-22120	_	خصوصیت روانی§n-12725	_	roleState	_	_	_	_
+17	که	SUBR	NCL	16	null	_	null	_	no	_	_	_	_
+18	به	PREP	VPP	20	null	_	null	_	no	_	_	Arg3	_
+19	من	PR	POSDEP	18	خود§n-13459	_	نفر§n-13075	_	role	_	_	_	_
+20	زده‌اند	V	PRD	17	افترا زدن§v-7924	رخداد§n-13136	roleAction	Y	تهمت‌زدن.134	_	_	_	_
+21	مبرا	ADJ	MOS	22	بی بهره§a-1580	_	‌مشخصه§n-12756	_	roleState	_	_	_	Arg2
+22	نمایند	V	PRD	12	بری کردن§v-9027	رخداد§n-13136	roleAction	Y	کردن.25	_	_	_	_
+23	.	PUNC	PUNC	5	null	_	null	_	no	_	_	_	_
+
+1	و	CONJ	VCONJ	4	null	_	null	_	no	_	_
+2	پادشاه	N	SBJ	4	سلطان§n-13386	_	نفر§n-13075	_	role	Arg1	Arg0
+3	چنین	PR	MOS	4	null	_	null	_	no	Arg2	_
+4	کرد	V	PREDEP	5	null	null	no	Y	کردن.25	_	_
+5	و	CONJ	VCONJ	10	null	_	null	_	no	_	_
+6	تمامی	ADJ	NPREMOD	7	تمام§n-16534	_	‌مشخصه§n-12756	_	roleState	_	_
+7	زنان	N	PREDEP	8	خانم§n-12070	_	نفر§n-13075	_	role	_	_
+8	را	POSTP	OBJ	10	null	_	null	_	no	_	Arg1
+9	احضار	N	NVE	10	احضار§n-14822	_	خبر§n-13975	_	roleIntent	_	_
+10	کرد	V	ROOT	0	فرا خواندن§v-18650	رخداد§n-13136	roleAction	Y	احضار‌کردن.572	_	_
+11	،	PUNC	PUNC	10	null	_	null	_	no	_	_
+
+1	آن‌ها	PR	SBJ	3	null	_	null	_	role	Arg0	_
+2	اقرار	N	NVE	3	اقرار§n-22419	_	null	_	roleState	_	_
+3	کردند	V	ROOT	0	null	null	no	Y	اقرار‌کردن.604	_	_
+4	که	SUBR	VCL	3	null	null	no	_	_	Arg3	_
+5	ما	PR	SBJ	12	null	_	null	_	role	_	Arg0
+6	هیچ	ADJ	NPREMOD	7	null	_	null	_	no	_	_
+7	بدی	N	OBJ	12	ناپسندی§n-10590	_	خصوصیت روانی§n-12725	_	roleState	_	Arg1
+8	و	CONJ	NCONJ	7	null	_	null	_	no	_	_
+9	لغزشی	N	POSDEP	8	لغزش§n-10597	_	 رخداد§n-13136	_	roleState	_	_
+10	در	PREP	NPP	7	null	_	null	_	no	_	_
+11	او	PR	POSDEP	10	null	_	null	_	role	_	_
+12	ندیدیم	V	PRD	4	رویت کردن§v-8581	رخداد§n-13136	roleAction	Y	دیدن.47	_	_
+
+1	و	CONJ	VCONJ	8	null	_	null	_	no	_
+2	زلیخا	N	SBJ	8	null	_	null	_	role	Arg0
+3	نیز	ADV	ADVRB	8	null	_	null	_	no	ArgM-ADV
+4	به	PREP	NPP	7	null	_	null	_	no	Arg3
+5	جرم	N	POSDEP	4	قانون شکنی§n-10601	_	رخداد§n-13136	_	roleState	_
+6	خود	PR	MOZ	5	خود§n-13459	_	نفر§n-13075	_	role	_
+7	اقرار	N	NVE	8	اقرار§n-22419	_	null	_	roleState	_
+8	نمود	V	ROOT	0	null	null	no	Y	اقرار‌کردن.604	_
+9	.	PUNC	PUNC	8	null	_	null	_	no	_
+
+1	پادشاه	N	SBJ	9	سلطان§n-13386	_	نفر§n-13075	_	role	Arg0	Arg0	_
+2	که	SUBR	NCL	1	null	_	null	_	no	_	_	_
+3	به	PREP	NPP	6	null	_	null	_	no	Arg3	_	_
+4	پاکدامنی	N	POSDEP	3	طهارت§n-25289	_	مشخصه§n-11381	_	roleState	_	_	_
+5	یوسف	N	MOZ	4	یوسف§n-23957	_	نفر§n-13075	_	role	_	_	_
+6	پی	N	NVE	7	null	_	null	_	no	_	_	_
+7	برد	V	PRD	2	در یافتن§v-16389	رخداد§n-13136	roleAction	Y	پی‌بردن.48	_	_	_
+8	دستور	N	NVE	9	امر§n-11505	_	رخداد§n-13136	_	no	_	_	_
+9	داد	V	ROOT	0	فرمان دادن§v-19253	رخداد§n-13136	roleAction	Y	دستور‌دادن.104	_	_	_
+10	تا	SUBR	VCL	9	null	_	null	_	no	_	Arg3	_
+11	یوسف	N	PREDEP	12	یوسف§n-23957	_	نفر§n-13075	_	role	_	_	_
+12	را	POSTP	OBJ	17	null	_	null	_	no	_	_	Arg1
+13	با	PREP	ADVRB	17	null	_	null	_	no	_	_	ArgM-MNR
+14	احترام	N	POSDEP	13	اکرام§n-11419	_	رخداد§n-13136	_	roleState	_	_	_
+15	به‌نزد	PREP	VPP	17	null	_	null	_	no	_	_	Arg4
+16	ش	PR	POSDEP	15	null	_	null	_	no	_	_	_
+17	بیاورند	V	PRD	10	آوردن§v-21639	رخداد§n-13136	roleAction	Y	آوردن.452	_	_	_
+18	.	PUNC	PUNC	9	null	_	null	_	no	_	_	_
+
+1	یعقوب	N	SBJ	10	یعقوب§n-23940	_	نفر§n-13075	_	role	Arg1
+2	و	CONJ	NCONJ	1	null	_	null	_	no	_
+3	فرزندان	N	POSDEP	2	بچه§n-13350	_	نفر§n-13075	_	role	_
+4	ش	PR	MOZ	3	null	_	null	_	no	_
+5	نیز	ADV	ADVRB	10	null	_	null	_	no	ArgM-ADV
+6	در	PREP	MOS	10	null	_	null	_	no	Arg2
+7	زمره	N	POSDEP	6	زمره§n-22641	_	گروه§n-12753	_	no	_
+8	این	ADJ	NPREMOD	9	null	_	null	_	no	_
+9	افراد	N	MOZ	7	افراد§n-13188	_	گروه§n-12753	_	role	_
+10	بودند	V	ROOT	0	بودن§v-16430	رخداد§n-13136	no	Y	بودن.15	_
+11	.	PUNC	PUNC	10	null	_	null	_	no	_
+
+1	برای	PREP	ADVRB	7	null	_	null	_	no	ArgM-GOL	_	_
+2	همین	PR	POSDEP	1	null	_	null	_	no	_	_	_
+3	یعقوب	N	SBJ	7	یعقوب§n-23940	_	نفر§n-13075	_	role	Arg0	_	_
+4	از	PREP	VPP	7	null	_	null	_	no	Arg3	_	_
+5	فرزندان	N	POSDEP	4	بچه§n-13350	_	نفر§n-13075	_	role	_	_	_
+6	خود	PR	MOZ	5	خود§n-13459	_	نفر§n-13075	_	role	_	_	_
+7	خواست	V	ROOT	0	خواستن§v-19251	رخداد§n-13136	Location	Y	خواستن.51	_	_	_
+8	که	SUBR	VCL	7	null	_	null	_	no	Arg1	_	_
+9	به	PREP	VPP	11	null	_	null	_	no	_	Arg4	_
+10	مصر	N	POSDEP	9	مصر§n-20196	_	گروه§n-12753	_	Location	_	_	_
+11	بروند	V	PREDEP	12	پوییدن§v-7700	رخداد§n-13136	roleAction	Y	رفتن.17	_	_	_
+12	و	CONJ	VCONJ	17	null	_	null	_	no	_	_	_
+13	مایحتاج	N	PREDEP	15	مایحتاج§n-16671	_	چیز§n-10392	_	no	_	_	_
+14	خود	PR	MOZ	13	خود§n-13459	_	نفر§n-13075	_	role	_	_	_
+15	را	POSTP	OBJ	17	null	_	null	_	no	_	_	Arg1
+16	تهیه	N	NVE	17	آماده سازی§n-10697	_	رخداد§n-13136	_	roleIntent	_	_	_
+17	نمایند	V	PRD	8	تدارک دیدن§v-8233	رخداد§n-13136	roleAction	Y	تهیه‌کردن.614	_	_	_
+18	.	PUNC	PUNC	7	null	_	null	_	no	_	_	_
+
+1	آن‌ها	PR	SBJ	8	null	_	null	_	role	Arg1
+2	برای	PREP	ADVRB	8	null	_	null	_	no	ArgM-PRP
+3	تهیه	N	POSDEP	2	آماده سازی§n-10697	_	رخداد§n-13136	_	roleIntent	_
+4	مایحتاج	N	MOZ	3	مایحتاج§n-16671	_	چیز§n-10392	_	no	_
+5	خود	PR	MOZ	4	خود§n-13459	_	نفر§n-13075	_	role	_
+6	روانه	ADJ	MOS	8	عازم§a-1336	_	‌مشخصه§n-12756	_	roleState	Arg2
+7	مصر	N	NEZ	6	مصر§n-20196	_	گروه§n-12753	_	Location	_
+8	شدند	V	ROOT	0	عازم کردن§v-8859	رخداد§n-13136	roleAction	Y	کردن.25	_
+9	،	PUNC	PUNC	8	null	_	null	_	no	_
+
+1	یوسف	N	SBJ	12	یوسف§n-23957	_	نفر§n-13075	_	role	Arg0	Arg0	_
+2	که	SUBR	NCL	1	null	_	null	_	no	_	_	_
+3	در	PREP	NPP	6	null	_	null	_	no	Arg3	_	_
+4	محل	N	POSDEP	3	محل§n-11878	_	جا§n-12733	_	Location	_	_	_
+5	توزیع	N	MOZ	4	توزیع§n-14892	_	رخداد§n-13136	_	no	_	_	_
+6	حضور	N	NVE	7	حضور داشتن§n-12393	_	مشخصه§n-12756	_	roleState	_	_	_
+7	داشت	V	PRD	2	حضور داشتن§n-12393	رخداد§n-13136	roleAction	Y	حضور‌داشتن.552	_	_	_
+8	،	PUNC	PUNC	7	null	_	null	_	no	_	_	_
+9	برادران	N	PREDEP	11	برادر§n-14090	_	نفر§n-13075	_	role	_	_	_
+10	خود	PR	MOZ	9	خود§n-13459	_	نفر§n-13075	_	role	_	_	_
+11	را	POSTP	OBJ	12	null	_	null	_	no	_	Arg1	_
+12	شناخت	V	ROOT	0	به جا آوردن§v-8069	رخداد§n-13136	roleAction	Y	شناختن.64	_	_	_
+13	در	PREP	ADVRB	12	null	_	null	_	no	_	ArgM-CAU	_
+14	حالی	N	POSDEP	13	null	_	null	_	no	_	_	_
+15	که	SUBR	NCL	14	null	_	null	_	no	_	_	_
+16	آن‌ها	PR	SBJ	19	null	_	null	_	role	_	_	Arg0
+17	یوسف	N	PREDEP	18	یوسف§n-23957	_	نفر§n-13075	_	role	_	_	_
+18	را	POSTP	OBJ	19	null	_	null	_	no	_	_	Arg1
+19	نشناختند	V	PRD	15	به جا آوردن§v-8069	رخداد§n-13136	roleAction	Y	شناختن.64	_	_	_
+
+1	یوسف	N	SBJ	10	یوسف§n-23957	_	نفر§n-13075	_	role	Arg0	_
+2	از	PREP	VPP	10	null	_	null	_	no	Arg3	_
+3	حال	N	POSDEP	2	احوال§n-13606	_	مشخصه§n-12756	_roleState	_	_
+4	آن‌ها	PR	MOZ	3	null	_	null	_	role	_	_
+5	و	CONJ	PCONJ	2	null	_	null	_	no	_	_
+6	از	PREP	POSDEP	5	null	_	null	_	no	_	_
+7	خاندان	N	POSDEP	6	طایفه§n-20062	_	گروه§n-12753	_	role	_	_
+8	شان	PR	MOZ	7	null	_	null	_	no	_	_
+9	سوال	N	NVE	10	پرسش§n-11515	_	خبر§n-13975	_	no	_	_
+10	کرد	V	ROOT	0	پرسش کردن§v-8136	رخداد§n-13136	roleAction	Y	سوال‌کردن.304	_	_
+11	که	SUBR	VCL	10	null	_	null	_	no	Arg4	_
+12	آن‌ها	PR	SBJ	14	null	_	null	_	role	_	Arg0
+13	جواب	N	NVE	14	پاسخ§n-11519	_	رخداد§n-13136	_	roleState	_	_
+14	دادند	V	PRD	11	جواب دادن§v-8114	رخداد§n-13136	roleAction	Y	جواب‌دادن.849	_	_
+15	.	PUNC	PUNC	10	null	_	null	_	no	_	_
+
+1	آن‌ها	PR	SBJ	3	null	_	null	_	role	Arg0	Arg0
+2	سوگند	N	NVE	3	قسم§n-22370	_	خبر§n-13975	_	no	_	_
+3	خوردند	V	ROOT	0	قسم خوردن§v-8901	رخداد§n-13136	roleAction	Y	سوگند‌یاد‌کردن.151	_	_
+4	که	SUBR	VCL	3	null	_	null	_	no	Arg3	_
+5	بنیامین	N	PREDEP	6	null	_	null	_	role	_	_
+6	را	POSTP	OBJ	10	null	_	null	_	no	_	Arg1
+7	سالم	ADV	ADVRB	10	تندرست§a-92	_	مشخصه§n-12756	_	roleState	_	ArgM-MNR
+8	نزد	PREP	VPP	10	null	_	null	_	no	_	Arg4
+9	پدر	N	POSDEP	8	والد§n-13357	_	نفر§n-13075	_	role	_	_
+10	بیاورند	V	PRD	4	آوردن§v-7850	رخداد§n-13136	roleAction	Y	آوردن.452	_	_
+11	.	PUNC	PUNC	3	null	_	null	_	no	_	_
+
+1	برادران	N	SBJ	8	برادر§n-14090	_	نفر§n-13075	_	role	Arg0	Arg0	Arg0
+2	بعداز	PREP	ADVRB	8	null	_	null	_	no	ArgM-TMP	_	_
+3	چند	ADJ	NPREMOD	4	null	_	null	_	no	_	_	_
+4	روز	N	POSDEP	2	روز§n-12632	_	دوره زمانی§n-12603	_	time	_	_	_
+5	مجددا	ADV	ADVRB	8	دوباره§r-15315	_	مشخصه§n-12756	_	no	ArgM-ADV	_	_
+6	به	PREP	VPP	8	null	_	null	_	no	Arg4	_	_
+7	مصر	N	POSDEP	6	مصر§n-20196	_	گروه§n-12753	_	Location	_	_	_
+8	رسیدند	V	PREDEP	9	رسیدن§v-8613	رخداد§n-13136	no	Y	رسیدن.501	_	_	_
+9	و	CONJ	VCONJ	12	null	_	null	_	no	_	_	_
+10	نزد	PREP	VPP	12	null	_	null	_	no	_	Arg4	_
+11	یوسف	N	POSDEP	10	یوسف§n-23957	_	نفر§n-13075	_	role	_	_	_
+12	رفته	V	PREDEP	13	پوییدن§v-7700	رخداد§n-13136	roleAction	Y	رفتن.17	_	_	_
+13	و	CONJ	VCONJ	20	null	_	null	_	no	_	_	_
+14	برادر	N	PREDEP	16	برادر§n-14090	_	نفر§n-13075	_	role	_	_	_
+15	خود	PR	MOZ	14	خود§n-13459	_	نفر§n-13075	_	role	_	_	_
+16	را	POSTP	OBJ	20	null	_	null	_	no	_	_	Arg1
+17	به	PREP	NPP	19	null	_	null	_	no	_	_	Arg3
+18	او	PR	POSDEP	17	null	_	null	_	role	_	_	_
+19	معرفی	N	NVE	20	معرفی§n-14492	_	رخداد§n-13136	_	roleIntent	_	_	_
+20	نمودند	V	ROOT	0	آشنا ساختن§v-9308	رخداد§n-13136	roleAction	Y	معرفی‌کردن.115	_	_	_
+21	.	PUNC	PUNC	20	null	_	null	_	no	_	_	_
+
+1	یوسف	N	SBJ	6	یوسف§n-23957	_	نفر§n-13075	_	role	Arg0	Arg0	Arg0	Arg0
+2	به‌خوبی	ADV	ADVRB	6	null	_	null	_	roleState	ArgM-MNR	_	_	_
+3	از	PREP	NPP	5	null	_	null	_	no	Arg3	_	_	_
+4	آن‌ها	PR	POSDEP	3	null	_	null	_	role	_	_	_	_
+5	پذیرایی	N	NVE	6	پذیرایی§n-18367	_	خصوصیت روانی§n-12725	_	roleIntent	_	_	_	_
+6	نمود	V	PREDEP	7	null	null	roleAction	Y	پذیرایی‌کردن.555	_	_	_	_
+7	و	CONJ	VCONJ	18	null	_	null	_	no	_	_	_	_
+8	در	PREP	ADVRB	18	null	_	null	_	no	_	ArgM-LOC	_	_
+9	گوشه‌ای	N	POSDEP	8	null	_	null	_	Location	_	_	_	_
+10	به	PREP	ADVRB	18	null	_	null	_	no	_	ArgM-MNR	_	_
+11	دور	N	POSDEP	10	null	_	null	_	no	_	_	_	_
+12	از	PREP	NPP	11	null	_	null	_	no	_	_	_	_
+13	چشم	N	POSDEP	12	عین§n-10314	_	رابطه§n-13628	_	no	_	_	_	_
+14	برادران	N	MOZ	13	برادر§n-14090	_	نفر§n-13075	_	role	_	_	_	_
+15	با	PREP	VPP	18	null	_	null	_	no	_	Arg3	_	_
+16	بنیامین	N	POSDEP	15	null	_	null	_	role	_	_	_	_
+17	خلوت	N	NVE	18	null	_	null	_	roleState	_	_	_	_
+18	نمود	V	PREDEP	19	null	null	roleAction	Y	خلوت‌کردن.625	_	_	_	_
+19	و	CONJ	VCONJ	25	null	_	null	_	no	_	_	_	_
+20	خود	PR	PREDEP	21	خود§n-13459	_	نفر§n-13075	_	role	_	_	_	_
+21	را	POSTP	OBJ	25	null	_	null	_	no	_	_	Arg1	_
+22	به	PREP	NPP	24	null	_	null	_	no	_	_	Arg3	_
+23	او	PR	POSDEP	22	null	_	null	_	role	_	_	_	_
+24	معرفی	N	NVE	25	معرفی§n-14492	_	رخداد§n-13136	_	roleIntent	_	_	_	_
+25	نمود	V	PREDEP	26	آشنا ساختن§v-9308	رخداد§n-13136	roleAction	Y	معرفی‌کردن.115	_	_	_	_
+26	و	CONJ	VCONJ	36	null	_	null	_	no	_	_	_	_
+27	داستان	N	PREDEP	32	سرگذشت§n-11533	_	خبر§n-13975	_	no	_	_	_	_
+28	خود	PR	MOZ	27	خود§n-13459	_	نفر§n-13075	_	role	_	_	_	_
+29	و	CONJ	NCONJ	28	null	_	null	_	no	_	_	_	_
+30	برادران	N	POSDEP	29	برادر§n-14090	_	نفر§n-13075	_	role	_	_	_	_
+31	ش	PR	MOZ	30	null	_	null	_	no	_	_	_	_
+32	را	POSTP	OBJ	36	null	_	null	_	no	_	_	_	Arg1
+33	برای	PREP	VPP	36	null	_	null	_	no	_	_	_	Arg3
+34	ش	PR	POSDEP	33	null	_	null	_	no	_	_	_	_
+35	تعریف	N	NVE	36	تعریف§n-14347	_	رخداد§n-13136	_	roleIntent	_	_	_	_
+36	نمود	V	ROOT	0	تعریف کردن§v-8271	رخداد§n-13136	roleAction	Y	تعریف‌کردن.855	_	_	_	_
+37	.	PUNC	PUNC	36	null	_	null	_	no	_	_	_	_
+
+1	یوسف	N	SBJ	21	یوسف§n-23957	_	نفر§n-13075	_	role	Arg0	Arg0
+2	برای	PREP	ADVRB	21	null	_	null	_	no	_	ArgM-CAU
+3	این	PR	POSDEP	2	null	_	null	_	no	_	_
+4	که	SUBR	NCL	3	null	_	null	_	no	_	_
+5	پدر	N	PREDEP	7	والد§n-13357	_	نفر§n-13075	_	role	_	_
+6	ش	PR	MOZ	5	null	_	null	_	no	_	_
+7	را	POSTP	OBJ	12	null	_	null	_	no	Arg1	_
+8	نیز	ADV	ADVRB	12	null	_	null	_	no	ArgM-ADV	_
+9	به‌نزد	PREP	NPP	11	null	_	null	_	no	Arg3	_
+10	خود	PR	POSDEP	9	خود§n-13459	_	نفر§n-13075	_	role	_	_
+11	دعوت	N	NVE	12	دعوت§n-11510	_	خبر§n-13975	_	roleIntent	_	_
+12	کند	V	PRD	4	خواندن§v-8493	رخداد§n-13136	roleAction		Y	دعوت‌کردن.352	_	_
+13	با	PREP	ADVRB	21	null	_	null	_	no	_	ArgM-MNR
+14	توسل	N	POSDEP	13	توسل§n-19701	_	null	_	roleIntent	_	_
+15	به	PREP	NPP	14	null	_	null	_	no	_	_
+16	حیله‌ای	N	POSDEP	15	غدر§n-10596	_	رخداد§n-13136	_	roleState	_	_
+17	این	ADJ	NPREMOD	18	null	_	null	_	no	_	_
+18	کار	N	PREDEP	19	مساله§n-13011	_	خصوصیت روانی§n-12725	_	roleIntent	_	_
+19	را	POSTP	OBJ	21	null	_	null	_	no	_	Arg1
+20	عملی	ADJ	MOS	21	کارکردی§a-1565	_	‌مشخصه§n-12756	_	no	_	Arg2
+21	نمود	V	ROOT	0	انجام دادن§v-7577	رخداد§n-13136	roleAction	Y	کردن.25	_	_
+22	.	PUNC	PUNC	21	null	_	null	_	no	_	_
+
+1	او	PR	SBJ	12	null	_	null	_	role	Arg0	Arg0
+2	به‌عمد	ADV	ADVRB	12	null	_	null	_	roleState	ArgM-ADV	_
+3	یکی‌از	ADJ	NPREMOD	4	null	_	null	_	no	_	_
+4	اجناس	N	PREDEP	7	جنس§n-11040	_	شیء§n-12703	_	static_object	_	_
+5	قیمتی	ADJ	NPOSTMOD	4	null	_	null	_	staticObjState	_	_
+6	قصر	N	MOZ	4	null	_	null	_	Location	_	_
+7	را	POSTP	OBJ	12	null	_	null	_	no	Arg1	_
+8	در	PREP	VPP	12	null	_	null	_	no	Arg3	_
+9	بار	N	POSDEP	8	بار§n-13673	_	شیء§n-12703	_	static_object	_	_
+10	بنیامین	N	MOZ	9	null	_	null	_	role	_	_
+11	قرار	N	NVE	12	null	_	null	_	no	_	_
+12	داد	V	PREDEP	13	گنجاندن§v-20159	رخداد§n-13136	roleAction	Y	قرار‌دادن.557	_	_
+13	و	CONJ	VCONJ	20	null	_	null	_	no	_	_
+14	ماموران	N	PREDEP	15	متصدی§n-12039	_	نفر§n-13075	_	role	_	_
+15	را	POSTP	OBJ	20	null	_	null	_	no	_	Arg1
+16	به‌دنبال	PREP	VPP	20	null	_	null	_	no	_	Arg3
+17	جستجوی	N	POSDEP	16	جستجو§n-12249	_null	_	roleIntent	_	_
+18	جنس	N	MOZ	17	جنس§n-11040	_	شیء§n-12703	_	static_object	_	_
+19	گم‌شده	ADJ	NPOSTMOD	18	null	_	null	_	staticObjState	_	_
+20	فرستاد	V	ROOT	0	فرستادن§v-22050		رخداد§n-13136	roleAction	فرستادن.341	_	_
+21	.	PUNC	PUNC	20	null	_	null	_	no	_	_
+
+1	ماموران	N	SBJ	15	متصدی§n-12039	_	نفر§n-13075	_	role	_	Arg0
+2	بعداز	PREP	ADVRB	15	null	_	null	_	no	_	ArgM-TMP
+3	باز	ADJ	PREDEP	4	باز§a-15702	_	‌مشخصه§n-12756	_	roleIntent	_	_
+4	کردن	N	POSDEP	2	باز کردن§v-21449	_	رخداد§n-13136	_	roleAction	_	_
+5	باری	N	MOZ	4	بار§n-13673	_	شیء§n-12703	_	static_object	Arg1	_
+6	که	SUBR	NCL	5	null	_	null	_	no	_	_
+7	متعلق	ADJ	MOS	10	متعلق§a-1563	_	مشخصه§n-12756	_	no	Arg2	_
+8	به	PREP	AJPP	7	null	_	null	_	no	_	_
+9	بنیامین	N	POSDEP	8	null	_	null	_	role	_	_
+10	بود	V	PRD	6	متعلق بودن§v-16545	رخداد§n-13136	no	Y	بودن.15	_	_
+11	جنس	N	PREDEP	12	جنس§n-11040	_	شیء§n-12703	_	static_object	_	_
+12	را	POSTP	OBJ	15	null	_	null	_	no	_	Arg1
+13	در	PREP	VPP	15	null	_	null	_	no	_	ArgM-LOC
+14	آن	PR	POSDEP	13	null	_	null	_	static_object	_	_
+15	یافتند	V	ROOT	0	جستن§v-8367	رخداد§n-13136	roleAction	Y	یافتن.848	_	_
+16	،	PUNC	PUNC	15	null	_	null	_	no	_	_
+
+1	بدین‌ترتیب	ADV	ADVRB	11	null	_	null	_	no	ArgM-DIS
+2	بنابه	PREP	ADVRB	11	null	_	null	_	no	ArgM-ADV
+3	رسم	N	POSDEP	2	سنت§n-12853	_	رخداد§n-13136	_	no	_
+4	آن	ADJ	NPREMOD	5	null	_	null	_	no	_
+5	زمان	N	MOZ	3	زمانه§n-12682	_	دوره زمانی§n-12603	_	time	_
+6	بنیامین	N	SBJ	11	null	_	null	_	role	Arg0
+7	به‌عنوان	PREP	NPP	6	null	_	null	_	no	_
+8	گروگان	N	POSDEP	7	گروگان§n-15700	_	نفر§n-13075	_	roleState	_
+9	نزد	PREP	VPP	11	null	_	null	_	no	Arg3
+10	یوسف	N	POSDEP	9	یوسف§n-23957	_	نفر§n-13075	_	role	_
+11	ماند	V	ROOT	0	ماندن§v-16643	رخداد§n-13136	roleAction	Y	ماندن.571	_
+12	.	PUNC	PUNC	11	null	_	null	_	no	_
+
+1	او	PR	APP	4	null	_	null	_	role	_	_
+2	به	PREP	NPP	5	null	_	null	_	no	Arg3	_
+3	دل	N	POSDEP	2	دل§n-14828	_	جا§n-14035	_	no	_	_
+4	ش	PR	MOZ	3	null	_	null	_	no	_	_
+5	الهام	N	NVE	6	وحی§n-15103	_	خصوصیت روانی§n-12725	_	no	_	_
+6	شده‌بود	V	ROOT	0	null	null	no	Y	الهام‌کردن.590	_	_
+7	که	SUBR	VCL	6	null	_	null	_	no	Arg1	_
+8	فرزندان	N	SBJ	11	بچه§n-13350	_	نفر§n-13075	_	role	_	Arg1
+9	ش	PR	MOZ	8	null	_	null	_	no	_	_
+10	زنده‌	ADJ	MOS	11	زنده§a-86	_	مشخصه§n-12756	_	roleState	_	Arg2
+11	اند	V	PRD	7	زنده بودن§v-9329	رخداد§n-13136	no	Y	بودن.15	_	_
+12	.	PUNC	PUNC	6	null	_	null	_	no	_	_
+
+1	و	CONJ	VCONJ	4	null	_	null	_	no	_
+2	آن‌ها	PR	SBJ	4	null	_	null	_	role	Arg0
+3	چنین	PR	OBJ	4	null	_	null	_	no	Arg1
+4	کردند	V	ROOT	0	null	null	roleAction	Y	کردن.857	_
+5	.	PUNC	PUNC	4	null	_	null	_	no	_
+
+1	آن‌ها	PR	SBJ	5	null	_	null	_	role	Arg0	Arg0	_	_	_
+2	به	PREP	VPP	5	null	_	null	_	no	Arg4	_	_	_	_
+3	دربار	N	POSDEP	2	دربار§n-11725	_	مشخصه§n-12756	_	no	_	_	_	_	_
+4	یوسف	N	MOZ	3	یوسف§n-23957	_	نفر§n-13075	_	role	_	_	_	_	_
+5	رفته	V	PREDEP	6	پوییدن§v-7700	رخداد§n-13136	roleAction	Y	رفتن.17	_	_	_	_	_
+6	و	CONJ	VCONJ	12	null	_	null	_	no	_	_	_	_	_
+7	به‌نزد	PREP	ADVRB	12	 null	_	null	_	no	_	ArgM-LOC	_	_	_
+8	ش	PR	POSDEP	7	null	_	null	_	no	_	_	_	_	_
+9	ناله	N	NVE	12	تضرع§n-11512	_	خبر§n-13975	_	roleState	_	_	_	_	_
+10	و	CONJ	NCONJ	9	null	_	null	_	no	_	_	_	_	_
+11	التماس	N	POSDEP	10	التماس§n-11511	_	خبر§n-13975	_	roleState	_	_	_	_	_
+12	نمودند	V	ROOT	0	ناله کردن§v-8670	رخداد§n-13136	roleAction	Y	ناله‌کردن.466	_	_	_	_	_
+13	تا	PREP	ADVRB	12	null	_	null	_	no	_	ArgM-TMP	_	_	_
+14	این	PR	POSDEP	13	null	_	null	_	no	_	_	_	_	_
+15	که	SUBR	NCL	14	null	_	null	_	no	_	_	_	_	_
+16	دل	N	SBJ	21	دل§n-14828	_	جا§n-14035	_	no	_	_	Arg0	_	_
+17	یوسف	N	MOZ	16	یوسف§n-23957	_	نفر§n-13075	_	role	_	_	_	_	_
+18	به	PREP	VPP	21	null	_	null	_	no	_	_	Arg3	_	_
+19	حال	N	POSDEP	18	احوال§n-13606	_	مشخصه§n-12756	_	roleState	_	_	_	_	_
+20	آن‌ها	PR	MOZ	19	null	_	null	_	role	_	_	_	_	_
+21	سوخت	V	PREDEP	22	سوختن§v-8727	رخداد§n-13136	no	Y	سوختن.642	_	_	_	_	_
+22	و	CONJ	VCONJ	24	null	_	null	_	no	_	_	_	_	_
+23	تصمیم	N	NVE	24	تصمیم§n-11378	_	خصوصیت روانی§n-12725	_	roleIntent	_	_	_	_	_
+24	گرفت	V	PRD	15	تصمیم گرفتن§v-16866	رخداد§n-13136	roleAction	Y	تصمیم‌گرفتن.68	_	_	_	_	_
+25	که	SUBR	VCL	24	null	_	null	_	no	_	_	_	Arg3	_
+26	خود	PR	PREDEP	27	خود§n-13459	_	نفر§n-13075	_	role	_	_	_	_	_
+27	را	POSTP	OBJ	31	null	_	null	_	no	_	_	_	_	Arg1
+28	به	PREP	NPP	30	null	_	null	_	no	_	_	_	_	Arg3
+29	آن‌ها	PR	POSDEP	28	null	_	null	_	role	_	_	_	_	_
+30	معرفی	N	NVE	31	معرفی§n-14492	_	رخداد§n-13136	_	roleIntent	_	_	_	_	_
+31	کند	V	PRD	25	آشنا ساختن§v-9308	رخداد§n-13136	roleAction	Y	معرفی‌کردن.115	_	_	_	_	_
+32	.	PUNC	PUNC	12	null	_	null	_	no	_	_	_	_	_
+
+1	برادران	N	SBJ	9	برادر§n-1409	_	نفر§n-13075	_	role	Arg0	Arg0	_
+2	یوسف	N	MOZ	1	یوسف§n-23957	_	نفر§n-13075	_	role	_	_	_
+3	با	PREP	ADVRB	9	null	_	null	_	no	ArgM-ADV	_	_
+4	شنیدن	N	POSDEP	3	شنیدن§v-7802	_	رخداد§n-13136	_	roleAction	_	_	_
+5	این	ADJ	NPREMOD	6	null	_	null	_	no	_	_	_
+6	سخنان	N	MOZ	4	جمله§n-13125	_	رخداد§n-13136	_	no	_	_	_
+7	در	PREP	VPP	9	null	_	null	_	no	Arg3	_	_
+8	فکر	N	POSDEP	7	فکر کردن§n-13003	_	خصوصیت روانی§n-12725	_	roleState	_	_	_
+9	فرورفته	V	PREDEP	10	فرو رفتن§v-8868	رخداد§n-13136	roleAction	Y	فرو‌رفتن.632	_	_	_
+10	و	CONJ	VCONJ	14	null	_	null	_	no	_	_	_
+11	به	PREP	NPP	13	null	_	null	_	no	_	Arg3	_
+12	او	PR	POSDEP	11	null	_	null	_	role	_	_	_
+13	شک	N	NVE	14	تذبذب§n-11341	_	مشخصه§n-12756	_	roleEmotion	_	_	_
+14	کردند	V	ROOT	0	مظنون شدن§v-8986	رخداد§n-13136	roleAction	Y	شک‌کردن.644	_	_	_
+15	که	SUBR	VCL	14	null	_	null	_	no	_	_	_
+16	آیا	ADV_INTG	ADVRB	19	آیا§r-15282	_	مشخصه§n-12756	_	no	_	_	ArgM-ADV
+17	او	PR	SBJ	19	null	_	null	_	role	_	_	Arg1
+18	یوسف	N	MOS	19	یوسف§n-23957	_	نفر§n-13075	_	role	_	_	Arg2
+19	نیست	V	PRD	15	بودن§v-9328	رخداد§n-13136	no	Y	بودن.15	_	_	_
+20	?	PUNC	PUNC	14	null	_	null	_	no	_	_	_
+
+1	این	ADJ	NPREMOD	2	null	_	null	_	no	_	_
+2	سوال	N	PREDEP	3	پرسش§n-11515	_	رخداد§n-13136	_	no	_	_
+3	را	POSTP	OBJ	6	null	_	null	_	no	Arg1	_
+4	از	PREP	VPP	6	null	_	null	_	no	Arg3	_
+5	او	PR	POSDEP	4	null	_	null	_	role	_	_
+6	پرسیدند	V	ROOT	0	پرسش کردن§v-8136	رخداد§n-13136	roleAction	Y	پرسیدن.124	_	_
+7	که	SUBR	NCL	2	null	_	null	_	no	_	_
+8	آیا	ADV_INTG	ADVRB	11	آیا§r-15282	_	مشخصه§n-12756	_	no	_	ArgM-ADV
+9	تو	PR	SBJ	11	null	_	null	_	role	_	Arg1
+10	یوسف	N	MOS	11	یوسف§n-23957	_	نفر§n-13075	_	role	_	Arg2
+11	ی	V	PRD	7	null	null	no	Y	بودن.15	_	_
+12	?	PUNC	PUNC	6	null	_	null	_	no	_	_
+
+1	یوسف	N	SBJ	6	یوسف§n-23957	_	نفر§n-13075	_	role	Arg0	Arg0	_
+2	باصداقت	ADV	ADVRB	6	null	_	null	_	roleState	ArgM-MNR	_	_
+3	جواب	N	NVE	6	پاسخ§n-11519	_	رخداد§n-13136	_	roleIntent	_	_	_
+4	شان	PR	MOZ	3	null	_	null	_	no	_	_	_
+5	را	EMPH	POSDEP	4	null	_	null	_	no	_	_	_
+6	داد	V	PREDEP	7	جواب دادن§v-8114	رخداد§n-13136	roleAction	Y	جواب‌دادن.849	_	_	_
+7	و	CONJ	VCONJ	10	null	_	null	_	no	_	_	_
+8	به	PREP	VPP	10	null	_	null	_	no	_	Arg3	_
+9	آن‌ها	PR	POSDEP	8	null	_	null	_	role	_	_	_
+10	گفت	V	ROOT	0	گفتن§v-7774	رخداد§n-13136	roleAction	Y	گفتن.35	_	_	_
+11	که	SUBR	VCL	10	null	_	null	_	no	_	Arg1	_
+12	خداوند	N	SBJ	23	باری تعالی§n-11940	_	خصوصیت روانی§n-12725	_	role	_	_	Arg0
+13	با	PREP	ADVRB	23	null	_	null	_	no	_	_	ArgM-ADV
+14	لطف	N	POSDEP	13	موهبت الهی§n-12481	_	مشخصه§n-12756	_	roleState	_	_	_
+15	و	CONJ	NCONJ	14	null	_	null	_	no	_	_	_
+16	کرم	N	POSDEP	15	موهبت الهی§n-12481	_	مشخصه§n-12756	_	roleState	_	_	_
+17	خویش	PR	MOZ	14	خویش§n-13365	_	نفر§n-13075	_	role	_	_	_
+18	ما	PR	PREDEP	19	null	_	null	_	role	_	_	_
+19	را	POSTP	OBJ	23	null	_	null	_	no	_	_	Arg1
+20	از	PREP	VPP	23	null	_	null	_	no	_	_	Arg3
+21	خطرها	N	POSDEP	20	خطر§n-12514	_	رخداد§n-13136	_	no	_	_	_
+22	حفظ	N	NVE	23	وقایه§n-10064	_	رخداد§n-13136	_	roleIntent	_	_	_
+23	نمود	V	PRD	11	حفظ کردن§v-9922	رخداد§n-13136	roleAction	Y	حفظ‌کردن.511	_	_	_
+24	.	PUNC	PUNC	10	null	_	null	_	no	_	_	_
+
+1	این	PR	SBJ	3	null	_	null	_	no	Arg1	_	_
+2	پاداشی	N	MOS	3	جایزه§n-12172	_	مشخصه§n-12756	_	no	Arg2	Arg1	_
+3	بود	V	ROOT	0	بودن§v-9328	رخداد§n-13136	no	Y	بودن.15	_	_	_
+4	از	PREP	NPP	2	null	_	null	_	no	_	_	_
+5	ناحیه	N	POSDEP	4	null	_	null	_	no	_	_	_
+6	خدا	N	MOZ	5	باری تعالی§n-11940	_	خصوصیت روانی§n-12725	_	role	_	_	_
+7	که	SUBR	NCL	2	null	_	null	_	no	_	_	_
+8	به‌خاطر	PREP	ADVRB	18	null	_	null	_	no	_	ArgM-CAU	_
+9	تقوا	N	POSDEP	8	خداترسی§n-11194	_	مشخصه§n-12756	_	roleState	_	_	_
+10	و	CONJ	NCONJ	9	null	_	null	_	no	_	_	_
+11	صبر	N	POSDEP	10	null	_	null	_	roleState	_	_	_
+12	و	CONJ	NCONJ	11	null	_	null	_	no	_	_	_
+13	شکیبایی	N	POSDEP	12	بردباری§n-22863	_	مشخصه§n-12756	_	roleState	_	_	_
+14	ام	PR	MOZ	9	null	_	null	_	no	_	_	_
+15	به	PREP	VPP	18	null	_	null	_	no	_	Arg3	_
+16	من	PR	POSDEP	15	خود§n-13459	_	نفر§n-13075	_	role	_	_	_
+17	مرحمت	N	NVE	18	مرحمت§n-11665	_	مشخصه§n-11381	_	roleState	_	_	_
+18	فرمود	V	PRD	7	null	null	roleAction	Y	مرحمت‌کردن.371	_	_	_
+19	که	SUBR	AJUCL	18	null	_	null	_	no	_	ArgM-CAU2	_
+20	خداوند	N	SBJ	25	باری تعالی§n-11940	_	خصوصیت روانی§n-12725	_	role	_	_	Arg0
+21	پاداش	N	PREDEP	23	جایزه§n-12172	_	مشخصه§n-12756	_	no	_	_	_
+22	نیکوکاران	N	MOZ	21	خیر§n-14898	_	نفر§n-13075	_	role	_	_	_
+23	را	POSTP	OBJ	25	null	_	null	_	no	_	_	Arg1
+24	ضایع	ADJ	MOS	25	پایمال§a-1726	_	مشخصه§n-12756	_	no	_	_	Arg2
+25	نمی‌کند	V	PRD	19	ضایع کردن§v-8778	رخداد§n-13136	roleAction	Y	کردن.25	_	_	_
+26	.	PUNC	PUNC	3	null	_	null	_	no	_	_	_
+
+1	برادران	N	SBJ	9	برادر§n-14090	_	نفر§n-13075	_	role	Arg0
+2	به‌خاطر	PREP	ADVRB	9	null	_	null	_	no	ArgM-CAU
+3	کارهای	N	POSDEP	2	null	_	null	_	roleIntent	_
+4	گذشته	ADJ	NPOSTMOD	3	گذشته§a-2461	_	مشخصه§n-12756	_	time	_
+5	از	PREP	NPP	7	null	_	null	_	no	Arg3
+6	او	PR	POSDEP	5	null	_	null	_	role	_
+7	طلب	N	NVE	9	طلب§n-19500	_	رخداد§n-13136	_	no	_
+8	بخشش	N	MOZ	7	null	_	null	_	no	Arg1
+9	کردند	V	ROOT	0	طلب کردن§v-8491	رخداد§n-13136	roleAction	Y	طلب‌کردن.217	_
+
+1	و	CONJ	VCONJ	7	null	_	null	_	no	_
+2	یوسف	N	SBJ	7	یوسف§n-23957	_	نفر§n-13075	_	role	Arg0
+3	در	PREP	VPP	7	null	_	null	_	no	Arg3
+4	حق	N	POSDEP	3	حق§n-13762	_	رخداد§n-13136	_	no	_
+5	آن‌ها	PR	MOZ	4	null	_	null	_	role	_
+6	دعا	N	NVE	7	مناجات§n-11513	_	خبر§n-13975	_	roleIntent	_
+7	کرد	V	ROOT	0	دعا نمودن§v-18655	رخداد§n-13136	roleAction	Y	دعا‌کردن.182	_
+8	.	PUNC	PUNC	7	null	_	null	_	no	_
+
+1	پس‌از	PREP	ADVRB	11	null	_	null	_	no	ArgM-TMP	_	_	_	_
+2	این	ADJ	NPREMOD	3	null	_	null	_	no	_	_	_	_	_
+3	صحبت‌ها	N	POSDEP	1	گفتگو§n-11493	_	رخداد§n-13136	_	roleIntent	_	_	_	_	_
+4	،	PUNC	PUNC	3	null	_	null	_	no	_	_	_	_	_
+5	یوسف	N	SBJ	11	یوسف§n-23957	_	نفر§n-13075	_	role	Arg0	Arg0	Arg0	_	_
+6	سراغ	N	NVE	11	null	_	null	_	no	_	_	_	_	_
+7	پدر	N	MOZ	6	والد§n-13357	_	نفر§n-13075	_	role	_	_	_	_	_
+8	را	EMPH	POSDEP	7	null	_	null	_	no	_	_	_	_	_
+9	از	PREP	VPP	11	null	_	null	_	no	Arg3	_	_	_	_
+10	آن‌ها	PR	POSDEP	9	null	_	null	_	role	_	_	_	_	_
+11	گرفت	V	PREDEP	12	سراغ گرفتن§v-8691	رخداد§n-13136	roleAction	Y	سراغ‌گرفتن.648	_	_	_	_	_
+12	و	CONJ	VCONJ	16	null	_	null	_	no	_	_	_	_	_
+13	پیراهنی	N	SBJ	16	پیرهن§n-11108	_	شیء§n-12703	_	static_object	_	Arg1	_	_	_
+14	به	PREP	VPP	16	null	_	null	_no		_	Arg3	Arg3	_	_
+15	آن‌ها	PR	POSDEP	14	null	_	null	_	role	_	_	_	_	_
+16	داد	V	PREDEP	17	دادن§v-16675	رخداد§n-13136	roleAction	Y	دادن.110	_	_	_	_	_
+17	و	CONJ	VCONJ	18	null	_	null	_	no	_	_	_	_	_
+18	گفت	V	ROOT	0	گفتن§v-7774	رخداد§n-13136	roleAction	Y	گفتن.35	_	_	_	_	_
+19	که	SUBR	VCL	18	null	_	null	_	no	_	_	Arg1	_	_
+20	آن	PR	PREDEP	21	null	_	null	_	static_object	_	_	_	_	_
+21	را	POSTP	OBJ	25	null	_	null	_	no	_	_	_	Arg1	_
+22	بر	PREP	VPP	25	null	_	null	_	no	_	_	_	Arg3	_
+23	دیدگان	N	POSDEP	22	عین§n-10314	_	رابطه§n-13628	_	no	_	_	_	_	_
+24	پدر	N	MOZ	23	والد§n-13357	_	نفر§n-13075	_	role	_	_	_	_	_
+25	بیفکنید	V	PREDEP	26	انداختن§v-7928	رخداد§n-13136	roleAction	Y	افکندن.168	_	_	_	_	_
+26	و	CONJ	VCONJ	31	null	_	null	_	no	_	_	_	_	_
+27	او	PR	PREDEP	28	null	_	null	_	role	_	_	_	_	_
+28	را	POSTP	OBJ	31	null	_	null	_	no	_	_	_	_	Arg1
+29	به‌نزد	PREP	VPP	31	null	_	null	_	no	_	_	_	_	Arg4
+30	من	PR	POSDEP	29	خود§n-13459	_	نفر§n-13075	_	role	_	_	_	_	_
+31	بیاورید	V	PRD	19	آوردن§v-21639	رخداد§n-13136	roleAction	Y	آوردن.452	_	_	_	_	_
+32	.	PUNC	PUNC	18	null	_	null	_	no	_	_	_	_	_
+
+1	یعقوب	N	SBJ	11	یعقوب§n-23940	_	نفر§n-13075	_	role	Arg1
+2	و	CONJ	NCONJ	1	null	_	null	_	no	_
+3	فرزندان	N	POSDEP	2	بچه§n-13350	_	نفر§n-13075	_	role	_
+4	،	PUNC	PUNC	3	null	_	null	_	no	_
+5	آماده	ADJ	MOS	11	null	_	null	_	roleState	Arg2
+6	حرکت	N	NEZ	5	حرکت§n-15937	_	رخداد§n-13136	_	roleIntent	_
+7	از	PREP	NPP	6	null	_	null	_	no	_
+8	کنعان	N	POSDEP	7	null	_	null	_	Location	_
+9	به‌سوی	PREP	NPP	6	null	_	null	_	no	_
+10	مصر	N	POSDEP	9	مصر§n-20196	_	گروه§n-12753	_	Location	_
+11	شدند	V	ROOT	0	روانه شدن§v-8643	رخداد§n-13136	roleAction	Y	کردن.25	_
+12	.	PUNC	PUNC	11	null	_	null	_	no	_
+
+1	او	PR	SBJ	11	null	_	null	_	role	Arg0	Arg0
+2	با	PREP	ADVRB	11	null	_	null	_	no	ArgM-MNR	_
+3	کمال	N	POSDEP	2	کامل بودن§n-12482	_	مشخصه§n-12756	_	no	_	_
+4	عزت	N	MOZ	3	null	_	null	_	roleState	_	_
+5	از	PREP	NPP	10	null	_	null	_	no	Arg3	_
+6	پدر	N	POSDEP	5	والد§n-13357	_	نفر§n-13075	_	role	_	_
+7	و	CONJ	NCONJ	6	null	_	null	_	no	_	_
+8	دودمان	N	POSDEP	7	خاندان§n-11730	_	گروه§n-12753	_	role	_	_
+9	ش	PR	MOZ	6	null	_	null	_	no	_	_
+10	استقبال	N	NVE	11	استقبال§n-14524	_	خبر§n-13975	_	roleIntent	_	_
+11	نمود	V	PREDEP	12	پیشواز رفتن§v-7899	رخداد§n-13136	roleAction	Y	استقبال‌کردن.654	_	_
+12	و	CONJ	VCONJ	18	null	_	null	_	no	_	_
+13	همگی	PR	PREDEP	14	null	_	null	_	roleState	_	_
+14	را	POSTP	OBJ	18	null	_	null	_	no	_	Arg1
+15	به	PREP	VPP	18	null	_	null	_	no	_	Arg4
+16	قصر	N	POSDEP	15	null	_	null	_	Location	_	_
+17	خود	PR	MOZ	16	خود§n-13459	_	نفر§n-13075	_	role	_	_
+18	برد	V	ROOT	0	بردن§v-7660	رخداد§n-13136	roleAction	Y	بردن.208	_	_
+19	،	PUNC	PUNC	18	null	_	null	_	no	_	_
+
+1	آن‌ها	PR	SBJ	10	null	_	null	_	role	Arg0
+2	پس‌از	PREP	ADVRB	10	null	_	null	_	no	ArgM-TMP
+3	حضور	N	POSDEP	2	حضور داشتن§n-12393	_	مشخصه§n-12756	_	roleState	_
+4	در	PREP	NPP	3	null	_	null	_	no	_
+5	قصر	N	POSDEP	4	null	_	null	_	Location	_
+6	دربرابر	PREP	ADVRB	10	null	_	null	_	no	ArgM-LOC
+7	ش	PR	POSDEP	6	null	_	null	_	no	_
+8	به	PREP	VPP	10	null	_	null	_	no	Arg3
+9	سجده	N	POSDEP	8	سجده§n-25850	_	رخداد§n-13136	_	roleState	_
+10	افتادند	V	ROOT	0	زمین خوردن§v-9503	رخداد§n-13136	roleAction	Y	افتادن.780	_
+11	.	PUNC	PUNC	10	null	_	null	_	no	_
+
+1	در	PREP	ADVRB	13	null	_	null	_	no	_	ArgM-TMP	_	_	_	_
+2	این	ADJ	NPREMOD	3	null	_	null	_	no	_	_	_	_	_	_
+3	هنگام	N	POSDEP	1	موقع§n-12614	_	فاصله زمانی§n-12691	_	time	_	_	_	_	_	_
+4	یوسف	N	SBJ	13	یوسف§n-23957	_	نفر§n-13075	_	role	Arg0	Arg0	Arg0	Arg0	_	_
+5	به	PREP	VPRT	13	null	_	null	_	no	_	_	_	_	_	_
+6	یاد	N	POSDEP	5	به خاطر آوردن§n-11353	_	خصوصیت روانی§n-12725	_	no	_	_	_	_	_	_
+7	خوابی	N	MOZ	6	رویا§n-15102	_	خصوصیت روانی§n-12725	_	no	Arg1	Arg1	_	_	_	_
+8	که	SUBR	NCL	7	null	_	null	_	no	_	_	_	_	_	_
+9	در	PREP	ADVRB	12	null	_	null	_	no	ArgM-TMP	_	_	_	_	_
+10	دوران	N	POSDEP	9	دوران§n-13782	_	دوره زمانی§n-12603	_	time	_	_	_	_	_	_
+11	کودکی	N	MOZ	10	نوباوگی§n-12628	_	دوره زمانی§n-12603	_	roleState	_	_	_	_	_	_
+12	دیده‌بود	V	PRD	8	رویت کردن§v-8581	رخداد§n-13136	roleAction	Y	دیدن.47	_	_	_	_	_	_
+13	افتاد	V	PREDEP	14	null	null	roleAction	Y	به‌یاد‌افتادن.62	_	_	_	_	_	_
+14	و	CONJ	VCONJ	18	null	_	null	_	no	_	_	_	_	_	_
+15	رو	N	NVE	18	رخ§n-11310	_	رابطه§n-13628	_	roleState	_	_	_	_	_	_
+16	به	PREP	NPP	15	null	_	null	_	no	_	_	Arg3	_	_	_
+17	پدر	N	POSDEP	16	والد§n-13357	_	نفر§n-13075	_	role	_	_	_	_	_	_
+18	کرد	V	PREDEP	19	رو کردن§v-8630	رخداد§n-13136	roleAction	Y	رو‌کردن.548	_	_	_	_	_	_
+19	و	CONJ	VCONJ	20	null	_	null	_	no	_	_	_	_	_	_
+20	گفت‌	V	ROOT	0	گفتن§v-9244	رخداد§n-13136	roleAction	Y	گفتن.35	_	_	_	_	_	_
+21	:	PUNC	PUNC	20	null	_	null	_	no	_	_	_	_	_	_
+22	ای	ADR	VCONJ	29	null	_	null	_	no	_	_	_	_	_	_
+23	پدر	N	POSDEP	22	والد§n-13357	_	نفر§n-13075	_	role	_	_	_	_	_	_
+24	این	PR	SBJ	29	null	_	null	_	no	_	_	_	_	Arg1	_
+25	تعبیر	N	MOS	29	تعبیر§n-20347	_	خصوصیت روانی§n-12725	_	no	_	_	_	_	Arg2	_
+26	خواب	N	MOZ	25	رویا§n-15102	_	خصوصیت روانی§n-12725	_	no	_	_	_	_	_	_
+27	سابق	ADJ	NPOSTMOD	26	پیشین§a-2442	_	‌مشخصه§n-12756	_	time	_	_	_	_	_	_
+28	من	PR	MOZ	26	خود§n-13459	_	نفر§n-13075	_	role	_	_	_	_	_	_
+29	است	V	VCL	20	بودن§v-9328	رخداد§n-13136	no	Y	بودن.15	_	_	_	_	_	_
+30	که	SUBR	NCL	26	null	_	null	_	no	_	_	_	_	_	_
+31	خداوند	N	SBJ	35	باری تعالی§n-11940	_	خصوصیت روانی§n-12725	_	role	_	_	_	_	_	Arg0
+32	آن	PR	PREDEP	33	null	_	null	_	no	_	_	_	_	_	_
+33	را	POSTP	OBJ	35	null	_	null	_	no	_	_	_	_	_	Arg1
+34	محقق	ADJ	MOS	35	محقق§a-164	_	مشخصه§n-12756	_	no	_	_	_	_	_	Arg2
+35	نمود	V	PRD	30	محقق کردن§v-9066	رخداد§n-13136	roleAction	Y	کردن.25	_	_	_	_	_	_
+36	.	PUNC	PUNC	20	null	_	null	_	no	_	_	_	_	_	_
+
+1	یوسف	N	SBJ	4	یوسف§n-23957	_	نفر§n-13075	_	role	Arg0	_
+2	آن‌چنان	ADJ	NPREMOD	3	null	_	null	_	no	_	_
+3	محبوبیتی	N	OBJ	4	محبوب بودن§n-11189	_	مشخصه§n-12756	_	roleState	Arg1	_
+4	داشت	V	ROOT	0	داشتن§v-8512	رخداد§n-13136	no	Y	داشتن.39	_	_
+5	که	SUBR	AJUCL	4	null	_	null	_	no	ArgM-ADV	_
+6	سر	PREP	NPP	10	null	_	null	_	no	_	_
+7	جنازه	N	POSDEP	6	جنازه§n-20405	_	شیء§n-12703	_	roleState	_	_
+8	اش	PR	MOZ	7	null	_	null	_	no	_	_
+9	نیز	ADV	ADVRB	11	null	_	null	_	no	_	ArgM-ADV
+10	دعوا	N	MOS	11	درگیری§n-10734	_	رخداد§n-13136	_	roleState	_	Arg2
+11	بود	V	PRD	5	بودن§v-9328	رخداد§n-13136	roleAction	Y	بودن.15	_	_
+12	.	PUNC	PUNC	4	null	_	null	_	no	_	_
+
+1	درنتیجه	SUBR	ROOT	0	null	_	null	_	no	ArgM-DIS	_	_
+2	تصمیم	N	NVE	3	تصمیم گرفتن§n-10446	_	رخداد§n-13136	_	roleIntent	_	_	_
+3	گرفتند	V	PRD	1	تصمیم گرفتن§v-16866	رخداد§n-13136	roleAction	Y	تصمیم‌گرفتن.68	_	_	_
+4	تا	SUBR	VCL	3	null	_	null	_	no	Arg3	_	_
+5	او	PR	PREDEP	6	null	_	null	_	role	_	_	_
+6	را	POSTP	OBJ	10	null	_	null	_	no	_	Arg1	_
+7	در	PREP	VPP	10	null	_	null	_	no	_	Arg3	_
+8	نیل	N	POSDEP	7	نیل§n-25805	_	مشخصه§n-12756	_	Location	_	_	_
+9	دفن	N	NVE	10	خاکسپاری§n-11616	_	رخداد§n-13136	_	roleIntent	_	_	_
+10	کنند	V	PRD	4	به خاک سپردن§v-9614	رخداد§n-13136	roleAction	Y	دفن‌کردن.67	_	_	_
+11	تا	SUBR	AJUCL	10	null	_	null	_	no	_	ArgM-CAU	_
+12	همگان	PR	SBJ	18	عامه مردم§n-11696	_	گروه§n-12753	_	role	_	_	Arg1
+13	از	PREP	AJPP	17	null	_	null	_	no	_	_	_
+14	برکت	N	POSDEP	13	موهبت الهی§n-12481	_	مشخصه§n-12756	_	roleState	_	_	_
+15	وجود	N	MOZ	14	هستی§n-12391	_	مشخصه§n-12756	_	no	_	_	_
+16	ش	PR	MOZ	15	null	_	null	_	no	_	_	_
+17	بهره‌مند	ADJ	MOS	18	متمتع§a-17760	_	‌مشخصه§n-12756	_	roleIntent	_	_	Arg2
+18	شوند	V	PRD	11	null	null	roleAction	Y	کردن.25	_	_	_
+19	.	PUNC	PUNC	3	null	_	null	_	no	_	_	_
+
+1	حضرت	N	SBJ	6	null	_	null	_	roleState	Arg1	_	_
+2	هود	N	MOZ	1	هود§n-23052	_	نفر§n-13075	_	role	_	_	_
+3	یكی‌از	ADJ	NPREMOD	4	null	_	null	_	no	_	_	_
+4	انبیای	N	MOS	6	null	_	null	_	roleState	Arg2	_	_
+5	الهی	ADJ	NPOSTMOD	4	ربانی§a-2083	_	‌مشخصه§n-12756	_	no	_	_	_
+6	است	V	ROOT	0	بودن§v-9328	رخداد§n-13136	no	Y	بودن.15	_	_	_
+7	که	SUBR	NCL	4	null	_	null	_	no	_	_	_
+8	نام	N	SBJ	14	نام§n-13061	_	null	_	no	_	Arg1	_
+9	مبارک	ADJ	NPOSTMOD	8	همایون§a-1636	_	مشخصه§n-12756	_	roleState	_	_	_
+10	ش	PR	MOZ	8	null	_	null	_	no	_	_	_
+11	ده‌بار	ADV	ADVRB	14	null	_	null	_	no	_	ArgM-EXT	_
+12	در	PREP	VPP	14	null	_	null	_	no	_	Arg3	_
+13	قرآن	N	POSDEP	12	مصحف§n-10198	_	خبر§n-13975	_	static_object	_	_	_
+14	آمده	V	PREDEP	15	null	null	no	Y	آمدن.31	_	_	_
+15	و	CONJ	VCONJ	22	null	_	null	_	no	_	_	_
+16	یک	NUM	NPREMOD	17	null	_	null	_	no	_	_	_
+17	سوره	N	SBJ	22	سوره§n-20384	_	خبر§n-13975	_	no	_	_	Arg1
+18	نیز	ADV	ADVRB	22	null	_	null	_	no	_	_	ArgM-ADV
+19	به	PREP	MOS	22	null	_	null	_	no	_	_	Arg2
+20	نام	N	POSDEP	19	نام§n-13061	_	null	_	no	_	_	_
+21	ایشان	PR	MOZ	20	null	_	null	_	role	_	_	_
+22	می‌باشد	V	PRD	7	بودن§v-9328	رخداد§n-13136	no	Y	بودن.15	_	_	_
+23	.	PUNC	PUNC	6	null	_	null	_	no	_	_	_
+
+1	هود	N	SBJ	6	هود§n-23052	_	نفر§n-13075	_	role	Arg1	Arg1
+2	از	PREP	MOS	6	null	_	null	_	no	Arg2	_
+3	نوادگان	N	POSDEP	2	null	_	null	_	roleState	_	_
+4	حضرت	N	MOZ	3	null	_	null	_	roleState	_	_
+5	نوح	N	MOZ	4	حضرت نوح§n-23928	_	نفر§n-13075	_	role	_	_
+6	بوده	V	PREDEP	7	بودن§v-9328	رخداد§n-13136	no	Y	بودن.15	_	_
+7	و	CONJ	VCONJ	13	null	_	null	_	no	_	_
+8	با	PREP	ADVRB	13	null	_	null	_	no	_	ArgM-MNR
+9	هفت	NUM	NPREMOD	10	هفت§n-13742	_	اندازه§n-12768	_	no	_	_
+10	واسطه	N	POSDEP	8	واسطه§n-12815	_	شیء§n-12703	_	no	_	_
+11	به	PREP	VPP	13	null	_	null	_	no	_	Arg3
+12	او	PR	POSDEP	11	null	_	null	_	role	_	_
+13	می‌رسد	V	ROOT	0	رسیدن§v-8613	رخداد§n-13136	no	Y	رسیدن.69	_	_
+14	.	PUNC	PUNC	13	null	_	null	_	no	_	_
+

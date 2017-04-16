@@ -34,10 +34,12 @@ public class UI {
 	private String inputDataSetFilePath = "inputStory/sampleManualInputDataSetToformat.arff";
 	private String persianStopWordFilePath = "inputStory/persianStopWrods.txt";
 	//sentences with no semantic tags were deleted.
-	private String rawDataSetFilePath = "inputStory/cleanedSRLDataSet.arff";
+//	private String rawDataSetFilePath = "inputStory/cleanedSRLDataSet.arff";
+	private String rawDataSetFilePath = "inputStory/96-01-21cleanedSRLDataSet-checked.arff";
 	//all sentences from CSRI
 //	private String rawDataSetFilePath = "inputStory/cleanedSRLDataSet - Copy.arff";
-	private String cleanedWrongSemanticDataSetFilePath = "output/cleanedWrongSemSRLDataSet.arff";
+//	private String cleanedWrongSemanticDataSetFilePath = "output/cleanedWrongSemSRLDataSet.arff";
+	private String cleanedWrongSemanticDataSetFilePath = "output/96-01-21cleanedWrongSemSRLDataSet.arff";	
 	private String inputDataSetHeaderFilePath = "inputStory/dataSetHeader.txt";
 //	private String mainKbFilePath = "kb/farsnet--24.txt";
 	private String mainKbFilePath = "kb/farsnet.txt";
@@ -161,9 +163,9 @@ public class UI {
 	 */
 	public void checkSemanticTags(){
 		try {
-			PrintWriter writer = new PrintWriter("output\\cleanedWrongSemSRLDataSet.arff", "UTF-8");
+			PrintWriter writer = new PrintWriter("output\\96-01-21cleanedWrongSemSRLDataSet.arff", "UTF-8");
 		
-			PrintWriter wrongSemWriter = new PrintWriter("output\\wrongSems.arff", "UTF-8");
+			PrintWriter wrongSemWriter = new PrintWriter("output\\96-01-21wrongSems.arff", "UTF-8");
 		
 			ArrayList<ArrayList<String>> inputs = importInputDataSetInfo(rawDataSetFilePath);
 			
@@ -210,10 +212,10 @@ public class UI {
 	public void removeJunkWords(){
 		
 		try {			
-			PrintWriter writer = new PrintWriter("output\\cleanedJunkSRLDataSet.arff", "UTF-8");
-			PrintWriter junksWriter = new PrintWriter("output\\junks.arff", "UTF-8");
-			PrintWriter junkDepsWriter = new PrintWriter("output\\junkDeps.arff", "UTF-8");
-			PrintWriter stopWordWriter = new PrintWriter("output\\deletedStopWords.arff", "UTF-8");			
+			PrintWriter writer = new PrintWriter("output\\96-01-21cleanedJunkSRLDataSet.arff", "UTF-8");
+			PrintWriter junksWriter = new PrintWriter("output\\96-01-21junks.arff", "UTF-8");
+			PrintWriter junkDepsWriter = new PrintWriter("output\\96-01-21junkDeps.arff", "UTF-8");
+			PrintWriter stopWordWriter = new PrintWriter("output\\21deletedStopWords.arff", "UTF-8");			
 			
 			ArrayList<String> stopWords = importInputTexts(persianStopWordFilePath);
 			
@@ -628,7 +630,7 @@ public class UI {
 					continue;
 				}
 				
-				if(!line.startsWith("%"))
+				if(!line.startsWith("%") && !line.startsWith("#"))
 					oneSentence.add(line);															
 			
 			}
@@ -838,6 +840,7 @@ public class UI {
 		
 	}
 }
+
 
 
 
