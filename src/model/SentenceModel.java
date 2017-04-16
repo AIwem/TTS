@@ -1203,15 +1203,13 @@ public class SentenceModel {
 							junkDepsWriter.println(dep._dataSetRecord + "\t\t\t" + wrd);
 							
 							//27	او	PR	PREDEP	28	_	_	_	_	_	_	_	_	Arg0
-							if(dep._dataSetRecord.toLowerCase().contains("arg")){
-								
-								
+//							if(dep._dataSetRecord.toLowerCase().contains("arg")){								
 								
 								int junkStartIndex = junkDataSetRcrd.indexOf("" + junkSrcNum);
 								
 								if(junkStartIndex != -1)
 									newDataSetRecord += junkDataSetRcrd.substring(junkStartIndex,junkDataSetRcrd.length());
-							}
+//							}
 							dep._dataSetRecord = newDataSetRecord;
 						}
 						else

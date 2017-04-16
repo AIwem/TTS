@@ -27,6 +27,14 @@
 8	بود	V	ROOT	0	هستی§n-12391	رخداد§n-13136	no		Y	بودن.15	_
 9	.	PUNC	PUNC	8	null	_	null	_	no	_
 
+1	او	PR	SBJ	6	null	_	null	_	role	Arg0
+2	حدود	PREP	ADVC	6	اندازه§n-13756	مشخصه§n-12756	no	-	-	Arg2
+3	110	NUM	NPREMOD	4	null	null	no	_	_	_
+4	سال	N	POSDEP	2	سال§n-13471	دوره زمانی§n-12603	time	_
+5	زندگی	N	NVE	6	زندگی§n-13552	_	رخداد§n-13136	_	roleAction	_
+6	کرد	V	ROOT	0	عمر کردن§v-8674	رخداد§n-13136	roleAction		Y	زندگی‌کردن.40	_
+7	.	PUNC	PUNC	6	null	_	null	_	no	_
+
 1	یوسف	N	SBJ	5	یوسف§n-23957	_	نفر§n-13075	_	role	Arg0	Arg0
 2	9	NUM	NPREMOD	3	null	_	null	_	no	_	_
 3	سال	N	ADVC	5	سال§n-13471	_	دوره زمانی§n-12603	_	no	_

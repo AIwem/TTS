@@ -7,6 +7,9 @@
 2	از	PREP	AJPP	7	null	_	null	_	no	_
 9	.	PUNC	PUNC	8	null	_	null	_	no	_
 
+3	110	NUM	NPREMOD	4	null	null	no	_	_	_
+7	.	PUNC	PUNC	6	null	_	null	_	no	_
+
 2	9	NUM	NPREMOD	3	null	_	null	_	no	_	_
 7	یک	NUM	NPREMOD	8	یک§n-14494	_	 اندازه§n-12768	_	no	_	_
 9	،	PUNC	PUNC	8	null	_	null	_	no	_	_
@@ -141,10 +144,10 @@
 25	.	PUNC	PUNC	15	null	_	null	_	no	_	_	_	_
 
 1	در	PREP	ADVRB	14	null	_	null	_	no	ArgM-TMP	_
-4	و	CONJ	ADVRB	14	
-5	در	PREP	ADVRB	14	
+4	و	CONJ	ADVRB	14	14	null	_	null	_	no	ArgM-TMP	_
+5	در	PREP	ADVRB	14	14	14	null	_	null	_	no	ArgM-TMP	_
 8	آخر	NUM	NPOSTMOD	7	اختتام§n-11548	_	رخداد§n-13136	_	staticObjState	_	_
-9	،	PUNC	NPOSTMOD	7	
+9	،	PUNC	NPOSTMOD	7	7	اختتام§n-11548	_	رخداد§n-13136	_	staticObjState	_	_
 13	را	POSTP	OBJ	14	null	_	null	_	no	Arg1	_
 
 1	و	CONJ	VCONJ	11	null	_	null	_	no	_	_
@@ -307,8 +310,8 @@
 18	را	POSTP	OBJ	19	null	_	null	_	no	_	_	Arg1
 
 2	از	PREP	VPP	10	null	_	null	_	no	Arg3	_
-5	و	CONJ	VPP	10	
-6	از	PREP	VPP	10	
+5	و	CONJ	VPP	10	10	null	_	null	_	no	Arg3	_
+6	از	PREP	VPP	10	10	10	null	_	null	_	no	Arg3	_
 15	.	PUNC	PUNC	10	null	_	null	_	no	_	_
 
 6	را	POSTP	OBJ	10	null	_	null	_	no	_	Arg1

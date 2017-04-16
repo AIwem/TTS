@@ -77,10 +77,11 @@
 1	او	PR	SBJ	6	null	_	null	_	role	Arg0	
 2	حدود	PREP	ADVC	6	اندازه§n-13756	مشخصه§n-12756	no	-	-	Arg2	
 3	110	NUM	NPREMOD	4	null	null	no	_	_	_
-%4	سال	N	POSDEP	2	سال§n-13471	دوره زمانی§n-12603	time	_	
-%5	زندگی	N	NVE	6	زندگی§n-13552	_	رخداد§n-13136	_	roleAction	_
+4	سال	N	POSDEP	2	سال§n-13471	دوره زمانی§n-12603	time	_	
+5	زندگی	N	NVE	6	زندگی§n-13552	_	رخداد§n-13136	_	roleAction	_
 6	کرد	V	ROOT	0	عمر کردن§v-8674	رخداد§n-13136	roleAction		Y	زندگی‌کردن.40	_	
 7	.	PUNC	PUNC	6	null	_	null	_	no	_	
+
 1	هنگامی	N	ADVRB	13	موقع§n-12614	_	فاصله زمانی§n-12691	_	no	_	_	_	
 2	كه	SUBR	NCL	1	null	_	null	_	no	_	_	
 3	فوت	N	NVE	4	درگذشت§n-11584	_	 رخداد§n-13136	_	no	_	_	_	
