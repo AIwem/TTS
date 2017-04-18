@@ -1415,7 +1415,7 @@
 14	دور	ADJ	MOS	15	دور§a-2270	مشخصه§n-12756	no	_	_	_	Arg2	_	_
 15	شو	V	VCONJ	22	دور کردن§v-15886	رخداد§n-13136	no	Y	کردن.25	_	_	_	_
 17	زن	N	OBJ	22	زوجه§n-12069	نفر§n-13075	role	_	_	_	_	Arg1	_
-21	خود	PR	ADVRB	خود§n-13459	نفر§n-13075	role	22	_	_	_	_	ArgM-COM	_
+21	خود	PR	ADVRB	22	خود§n-13459	نفر§n-13075	role	22	_	_	_	_	ArgM-COM	_
 22	نبر	V	PRD	6	بردن§v-7660	رخداد§n-13136	no	Y	بردن.208	_	_	_	_
 23	که	SUBR	AJUCL	22	null	null	no	_	_	_	_	ArgM-CAU	_
 24	او	PR	SBJ	27	null	null	role	_	_	_	_	_	Arg1

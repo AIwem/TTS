@@ -35,13 +35,13 @@ public class UI {
 	private String persianStopWordFilePath = "inputStory/persianStopWrods.txt";
 	//sentences with no semantic tags were deleted.
 	private String rawDataSetFilePath = "inputStory/cleanedSRLDataSet2.arff";
-//	private String rawDataSetFilePath = "inputStory/96-01-27cleanedJunkSRLDataSet.arff";
+//	private String rawDataSetFilePath = "inputStory/96-01-28cleanedJunkSRLDataSet.arff";
 //	private String rawDataSetFilePath = "inputStory/96-01-21cleanedSRLDataSet-checked.arff";
 	//all sentences from CSRI
 //	private String rawDataSetFilePath = "inputStory/cleanedSRLDataSet - Copy.arff";
 //	private String cleanedWrongSemanticDataSetFilePath = "output/cleanedWrongSemSRLDataSet.arff";
-	private String cleanedWrongSemanticDataSetFilePath = "output/cleanedWrongSemSRLDataSet.arff";	
 	private String inputDataSetHeaderFilePath = "inputStory/dataSetHeader.txt";
+	private String cleanedWrongSemanticDataSetFilePath = "output/cleanedWrongSemSRLDataSet.arff";	
 //	private String mainKbFilePath = "kb/farsnet--24.txt";
 	private String mainKbFilePath = "kb/farsnet.txt";
 	private String myKbFilePath = "kb/injuredPigeon9.txt";
