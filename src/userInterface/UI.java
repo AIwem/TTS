@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import org.apache.tika.parser.ParseContext;
 
 import model.SentenceModel;
+import model.Word;
 import sceneReasoner.TTSEngine;
 
 
@@ -29,24 +30,35 @@ public class UI {
 //	private String inputStoryFilePath = "inputStory/inputStrory2-1.txt";
 //	private String inputStoryFilePath = "inputStory/inputStrory3.txt";
 //	private String inputStoryFilePath = "inputStory/inputStory4.txt";
+
+	private String inputDataSetHeaderFilePath = "inputStory/dataSetHeader.txt";
 //	private String inputSRLDataSetFilePath = "inputStory/story4DataSetToformat.txt";
 //	private String inputDataSetFilePath = "inputStory/srl-stories.conll";
-	private String inputDataSetFilePath = "inputStory/sampleManualInputDataSetToformat.arff";
+//	private String inputDataSetFilePath = "inputStory/sampleManualInputDataSetToformat.arff";
+//	private String inputDataSetFilePath = "inputStory/96-01-28cleanedJunkSRLDataSet.arff";
+	private String inputDataSetFilePath = "inputStory/96-02-12cleanedJunk.arff";
+	private String inputDataSetSceneCorrectedFilePath = "inputStory/96-02-12cleanedJunkScene.arff";
+	private String inputDataSetSceneCorrectedDashedTunedFilePath = "inputStory/96-02-12cleanedJunkSceneDash.arff";
+	
 	private String persianStopWordFilePath = "inputStory/persianStopWrods.txt";
-	//sentences with no semantic tags were deleted.
-	private String rawDataSetFilePath = "inputStory/cleanedSRLDataSet2.arff";
-//	private String rawDataSetFilePath = "inputStory/96-01-28cleanedJunkSRLDataSet.arff";
-//	private String rawDataSetFilePath = "inputStory/96-01-21cleanedSRLDataSet-checked.arff";
+
 	//all sentences from CSRI
 //	private String rawDataSetFilePath = "inputStory/cleanedSRLDataSet - Copy.arff";
-//	private String cleanedWrongSemanticDataSetFilePath = "output/cleanedWrongSemSRLDataSet.arff";
-	private String inputDataSetHeaderFilePath = "inputStory/dataSetHeader.txt";
-	private String cleanedWrongSemanticDataSetFilePath = "output/cleanedWrongSemSRLDataSet.arff";	
+	//2000 words with no semantic tags were deleted manually.
+//	private String rawDataSetFilePath = "inputStory/cleanedSRLDataSet.arff";
+	//2500 more words with no semantic tags were deleted manually.	
+	private String rawDataSetFilePath = "inputStory/cleanedSRLDataSet3.arff";
+//	private String rawDataSetFilePath = "inputStory/96-01-28cleanedJunkSRLDataSet.arff";
+//	private String rawDataSetFilePath = "inputStory/96-01-21cleanedSRLDataSet-checked.arff";
+	
+	private String outCleanedWrongSemanticDataSetFilePath = "output/cleanedWrongSemSRLDataSet.arff";
+	private String outCleanedJunkSRLDataSet = "output\\cleanedJunkSRLDataSet.arff";
+
 //	private String mainKbFilePath = "kb/farsnet--24.txt";
 	private String mainKbFilePath = "kb/farsnet.txt";
 	private String myKbFilePath = "kb/injuredPigeon9.txt";
-	//private String myKbFilePath = "kb/injuredPigeon_simple.txt";
-	//private String myKbFilePath = "kb/injuredPigeon_SS.txt";
+//	private String myKbFilePath = "kb/injuredPigeon_simple.txt";
+//	private String myKbFilePath = "kb/injuredPigeon_SS.txt";
 	private String verbSemanticCapacitiesPath = "kb/verbSemanticCapacities.txt";
 	private String verbVisualCapacitiesPath = "kb/verbVisualCapacities.txt";
 	private TTSEngine tts;
@@ -57,9 +69,6 @@ public class UI {
 		//tts = new TTSEngine(mainKbFilePath, myKbFilePath);
 	}
 	
-	private void print(String s){
-		System.out.println(s);
-	}
 	/**
 	 * main cycle of reading input sentences from user input file, and giving sentence to TTSEngine,
 	 * and showing its output to the user.
@@ -155,6 +164,20 @@ public class UI {
 		}
 		 	
 	}
+	
+	private SentenceModel makeSenteces(ArrayList<String> oneSentence, boolean isRecordFull){
+		if(oneSentence == null)
+			MyError.exit("bad input lines!");			
+		
+		String[] sentenceElem = new String[oneSentence.size()];
+		
+		for(int i = 0; i < sentenceElem.length; i++)				 
+			sentenceElem[i] = oneSentence.get(i);
+		
+		return new SentenceModel("", sentenceElem, isRecordFull);
+		
+	}
+	
 	/**
 	 * checks semantic tags of sentence to be correct.
 	 * some sentences incorrectly have semantic tags in verbs instead of nouns depended to verbs.
@@ -164,7 +187,7 @@ public class UI {
 	 */
 	public void checkSemanticTags(){
 		try {
-			PrintWriter writer = new PrintWriter(cleanedWrongSemanticDataSetFilePath, "UTF-8");//"output\\cleanedWrongSemSRLDataSet.arff", "UTF-8");
+			PrintWriter writer = new PrintWriter(outCleanedWrongSemanticDataSetFilePath, "UTF-8");//"output\\cleanedWrongSemSRLDataSet.arff", "UTF-8");
 		
 			PrintWriter wrongSemWriter = new PrintWriter("output\\wrongSems.arff", "UTF-8");
 		
@@ -173,15 +196,7 @@ public class UI {
 			//each oneSentence is an ArrayList containing the whole elements of one sentence.
 			for(ArrayList<String> oneSentence:inputs){
 				
-				if(oneSentence == null)
-					MyError.exit("bad input lines!");			
-				
-				String[] sentenceElem = new String[oneSentence.size()];
-				
-				for(int i = 0; i < sentenceElem.length; i++)				 
-					sentenceElem[i] = oneSentence.get(i);
-				
-				SentenceModel sentence = new SentenceModel("", sentenceElem, false);
+				SentenceModel sentence = makeSenteces(oneSentence, false);
 											
 				if(sentence.hasWrongSemanticTags(wrongSemWriter))				
 					continue;//this sentence semantic tags are incorrect so ignore it!					
@@ -213,7 +228,7 @@ public class UI {
 	public void removeJunkWords(){
 		
 		try {			
-			PrintWriter writer = new PrintWriter("output\\cleanedJunkSRLDataSet.arff", "UTF-8");
+			PrintWriter writer = new PrintWriter(outCleanedJunkSRLDataSet, "UTF-8");
 			PrintWriter junksWriter = new PrintWriter("output\\junks.arff", "UTF-8");
 			PrintWriter junkDepsWriter = new PrintWriter("output\\junkDeps.arff", "UTF-8");
 			PrintWriter stopWordWriter = new PrintWriter("output\\deletedStopWords.arff", "UTF-8");			
@@ -221,21 +236,13 @@ public class UI {
 			ArrayList<String> stopWords = importInputTexts(persianStopWordFilePath);
 			
 			//output\\cleanedWrongSemSRLDataSet.arff writed by method:checkSemanticTags();
-			ArrayList<ArrayList<String>> inputs = importInputDataSetInfo(cleanedWrongSemanticDataSetFilePath);
+			ArrayList<ArrayList<String>> inputs = importInputDataSetInfo(outCleanedWrongSemanticDataSetFilePath);
 			
 			//each oneSentence is an ArrayList containing the whole elements of one sentence.
 			for(ArrayList<String> oneSentence:inputs){
 			
-				if(oneSentence == null)
-					MyError.exit("bad input lines!");			
+				SentenceModel sentence = makeSenteces(oneSentence, false);
 				
-				String[] sentenceElem = new String[oneSentence.size()];
-				
-				for(int i = 0; i < sentenceElem.length; i++)				 
-					sentenceElem[i] = oneSentence.get(i);
-				
-				SentenceModel sentence = new SentenceModel("", sentenceElem, false);
-			
 				print(">>>>>>>>>>>>>>> before edit junk");
 				print(sentence.getOrdinalDetailedStr());
 				
@@ -286,6 +293,135 @@ public class UI {
 //			e.printStackTrace();
 //		}
 //	}
+	
+	/**
+	 * inserts a new line before and after scene marker; #.....
+	 */
+	public void correctSceneMarker(){
+		try{
+			PrintWriter writer = new PrintWriter(inputDataSetSceneCorrectedFilePath, "UTF-8");
+			
+			ArrayList<String> inputs = importInputTexts(inputDataSetFilePath);
+			
+			//correct writing scene marker
+			for(String line:inputs)
+				if(line != null && line.startsWith("#")){
+					writer.println("\n" + line + "\n");
+				}
+				else 					
+					writer.println(line);
+			
+			writer.println("");
+			writer.close();
+		}	 
+		catch (FileNotFoundException | UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
+	}
+	
+	/**
+	 * first check the number of elements for all words of a sentence be equal.
+	 * then shift _ from between of not_element to the end of not_elements. 
+	 */
+	public void checkAndCorrectDataSet(){
+		try{
+			PrintWriter writer = new PrintWriter(inputDataSetSceneCorrectedDashedTunedFilePath, "UTF-8");
+			
+			//file format: 4	برادر	N	OBJ	5	برادر§n-14090	_	نفر§n-13075	_	role	Arg1	_
+			ArrayList<ArrayList<String>> inputs = importInputDataSetInfo(inputDataSetSceneCorrectedFilePath);
+					
+			//each oneSentence is an ArrayList containing the whole elements of one sentence.
+			for(ArrayList<String> oneSentence:inputs){				
+				
+				int partsNum = -1;
+				
+				for(String word:oneSentence){
+				
+					String[] parts = word.split("(\t)+");
+					
+					if(parts != null){
+						if(partsNum == -1)
+							partsNum = parts.length;
+						else if(partsNum != parts.length)
+							MyError.exit("wrong record format must be " + partsNum + "\n" + parts.length + ": " + word + " must have " + partsNum + " elments!");
+					}
+					else
+						MyError.exit("bad word format + " + word);
+				}
+//				print("" + partsNum);
+				
+				//here we are sure that all words of a sentence have equal number of elements.
+				for(String word:oneSentence){
+					
+	//				print("\nword before correct>>>>>>>>>>");
+	//				print(word);
+					
+					String[] parts = word.split("(\t)+");
+					
+					if(parts != null){
+						
+						ArrayList<String> elems = new ArrayList<String>();
+						for(String par:parts)						
+							elems.add(par.trim());
+											
+						int _nums = 0;					
+						
+						for(int index = 0; index < 10  && index  < elems.size(); index++)
+							if(elems.get(index).equalsIgnoreCase("_"))
+								_nums++;
+						
+						for(int i = _nums; i > 0; i--)						
+							elems.remove("_");	
+						
+						for(int i = 0; i < _nums; i++)								
+							elems.add((8 + i), "_");			
+	
+	//					print("word after correct----------");
+						String newWord = "";
+						for(String elem:elems)
+							newWord += elem + "\t";
+						writer.println(newWord);
+					}				
+				}	
+				writer.println("");
+			}
+			writer.close();
+		}	 
+		catch (FileNotFoundException | UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+	}
+	
+	public void getStatistics(){
+		//file format: 4	برادر	N	OBJ	5	برادر§n-14090	_	نفر§n-13075	_	role	Arg1	_
+		ArrayList<ArrayList<String>> inputs = importInputDataSetInfo(inputDataSetSceneCorrectedDashedTunedFilePath);
+		
+		int sentenceNum = countSentences(inputDataSetSceneCorrectedDashedTunedFilePath);
+		
+		int wordsNum = countWords(inputDataSetSceneCorrectedDashedTunedFilePath);
+				
+		print("sentence numbers: " + sentenceNum + " -- words numner " + wordsNum);
+		
+		//each oneSentence is an ArrayList containing the whole elements of one sentence.
+		for(ArrayList<String> oneSentence:inputs){
+			
+			SentenceModel sentence = makeSenteces(oneSentence, true);
+			
+			if(sentence != null && sentence.getWords() != null){
+				ArrayList<Word> words = sentence.getWords();
+				
+				for(Word wrd:words){
+					print("" + wrd._multiClassTag);
+				}
+			}
+			else
+				MyError.exit("bad sentence generated from " + oneSentence);
+		}
+	}
+
+	
 
 	/**
 	 * reformat full human made dataSet file to the final format.
@@ -538,9 +674,85 @@ public class UI {
 		 	
 	}
 
+	private int countSentences(String filename) {
+		
+		int sentNum = 0;
+		
+		BufferedReader stream = null;
+		
+		try
+		{
+			stream = new BufferedReader(new InputStreamReader(new FileInputStream(filename), "utf-8"));
+				
+			String line = stream.readLine();
+			
+			String beforeLine = null;
+						
+			while (line != null)
+			{
+				line = line.trim();
+								
+				if(line.length() == 0 && beforeLine != null){
+					beforeLine = beforeLine.trim();
+					
+					if(beforeLine.length() != 0 && !beforeLine.startsWith("#"))
+						sentNum++;
+				}
+				
+				
+				beforeLine = line;
+				line = stream.readLine();			
+			}
+			
+			stream.close();
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}		
+
+		return sentNum;
+	}
 
 	
+	private int countWords(String filename) {
+		
+		int wordsNum = 0;
+		
+		BufferedReader stream = null;
+		
+		try
+		{
+			stream = new BufferedReader(new InputStreamReader(new FileInputStream(filename), "utf-8"));
+				
+			String line = stream.readLine();
+						
+			while (line != null)
+			{
+				line = line.trim();
+								
+				if(line.length() != 0 && !line.startsWith("%") && !line.startsWith("#"))
+					wordsNum++;
+					
+				line = stream.readLine();			
+			}
+			
+			stream.close();
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}		
+
+		return wordsNum;
+	}
+
 	
+	/**
+	 * returns all lines of input, including blank lines, excluding lines starts with % and # 
+	 * @param filename
+	 * @return guaranteed not to be null!
+	 */
 	public ArrayList<String> importInputTexts(String filename)
 	{
 		ArrayList<String> inputs = new ArrayList<>();
@@ -559,9 +771,9 @@ public class UI {
 		
 		String line = "";
 		
-		while (line != null)
-		{
-			try
+		try{			
+		
+			while (line != null)
 			{
 				line = stream.readLine();
 				
@@ -570,22 +782,14 @@ public class UI {
 				
 				line = line.trim();				
 							
-				if (line.startsWith("#") || line.startsWith("%")) // comment lines
+				if (line.startsWith("%"))//|| line.startsWith("#")) // comment lines
 					continue;
 							
 				inputs.add(line);
 
 			}
-			catch (IOException e)
-			{
-				e.printStackTrace();
-			}
-		}
-	
-		try
-		{
 			stream.close();
-		}
+		}		
 		catch (IOException e)
 		{
 			e.printStackTrace();
@@ -593,14 +797,16 @@ public class UI {
 		return inputs;
 	}
 	
+		
 	/**
 	 * returns lines of input dataSet for each sentence in an ArrayList<String>.
+	 * excluds lines starts with % and #
 	 * sentences are separated with a blank line. 
 	 * sample:
 	 * 2	یوسف		N		MOZ		1	یوسف§n-23957	نفر§n-13075		role		_	_	_		_		_	
 	 *  
 	 * @param filename file name of input dataSet.
-	 * @return
+	 * @return guaranteed not to be null!
 	 */
 	public ArrayList<ArrayList<String>> importInputDataSetInfo(String filename)
 	{
@@ -631,8 +837,8 @@ public class UI {
 					continue;
 				}
 				
-				if(!line.startsWith("%") && !line.startsWith("#"))
-					oneSentence.add(line);															
+				if(!line.startsWith("%")) //&& !line.startsWith("#"))
+					oneSentence.add(line);										
 			
 			}
 			
@@ -819,7 +1025,10 @@ public class UI {
 	     System.out.println(" ------------ END OF TESTING IMP3 ------ ");
 	     
 	}
-		
+
+	private void print(String s){
+		System.out.println(s);
+	}
 	
 	public static void main(String[] args) {
 		System.out.println("بسم الله الرحمن الرحیم و توکلت علی الله ");
@@ -828,15 +1037,20 @@ public class UI {
 
 //		ui.clearSRLDataset();
 		
-		ui.checkSemanticTags();
+//		ui.checkSemanticTags();
 		
-		ui.removeJunkWords();		
+//		ui.removeJunkWords();
 		
-//		ui.reformatDataset();
+//		ui.correctSceneMarker();
 		
+//		ui.checkAndCorrectDataSet();
+		
+		ui.getStatistics();
+
 		//TODO: correct relation name in all of generating dataSet
 		//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-
+//		ui.reformatDataset();
+		
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ الحمدلله");
 		
 	}

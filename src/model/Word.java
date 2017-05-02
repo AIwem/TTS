@@ -666,9 +666,7 @@ public class Word {
  	
  	public String getFullStr() {
  		
- 			if(_dataSetRecord.contains("3	مصر	N	POSDEP"))
- 				 print("\nhere\n");
-	 		String rs = "" + _number;		
+ 			String rs = "" + _number;		
 			rs += "\t";
 			if(_wordName != null) rs += "" + _wordName; 
 			else rs += "-";
@@ -682,7 +680,7 @@ public class Word {
 			if(_gPOS != null) rs += "" + _gPOS;
 			else rs += "NULL";
 			
-			if(_gPOS.toString().length() < 3)
+			if(_gPOS != null && _gPOS.toString().length() < 3)
 				rs += "\t\t";
 			else
 				rs += "\t";

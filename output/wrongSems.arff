@@ -59,6 +59,7 @@
 10	می‌زدند	V	ROOT	0	Y	دست‌زدن.475	Arg0	_	_	_
 6	دید	V	PREDEP	7	Y	دیدن.47	Arg0	_	_
 4	فهمیدند	V	ROOT	0	Y	فهمیدن.112	ArgM-DIS	_	_	_	_
+22	بردند	V	PREDEP	23	Y	هجوم‌بردن.542	_	_	ArgM-DIS	_	_
 4	م	V	ROOT	0	Y	بودن.15	Arg2	_	_
 4	گفت	V	ROOT	0	Y	گفتن.35	Arg0	_	_	_
 7	گفت	V	ROOT	0	Y	گفتن.35	Arg0	_	_

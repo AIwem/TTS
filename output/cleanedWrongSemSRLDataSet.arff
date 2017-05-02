@@ -1,3 +1,5 @@
+#..........
+
 1	او	PR	SBJ	5	_	_	Arg0	_
 2	مجموعا	ADV	ADVRB	5	_	_	ArgM-ADV	_
 3	11	NUM	NPREMOD	4	_	_	_	_
@@ -1741,6 +1743,8 @@
 53	یافتند	V	PRD	36	Y	نجات‌یافتن.45	_	_	_	_	_	_
 54	.	PUNC	PUNC	9	_	_	_	_	_	_	_	_
 
+#..........
+
 1	آن‌ها	PR	SBJ	12	_	_	Arg0	Arg0
 2	بعداز	PREP	ADVRB	12	_	_	ArgM-TMP	_
 3	پایان	N	POSDEP	2	_	_	_	_
@@ -1799,6 +1803,8 @@
 34	کنار	N	POSDEP	33	_	_	_	_	_	_
 35	او	PR	MOZ	34	_	_	_	_	_	_
 36	بود	V	PRD	22	Y	بودن.15	_	_	_	_
+
+#..........
 
 1	سپس	SUBR	ROOT	0	_	_	ArgM-DIS	_
 2	به	PREP	VPP	9	_	_	Arg4	_
@@ -2031,6 +2037,8 @@
 23	کرد	V	ROOT	0	Y	کردن.25	_	_
 24	.	PUNC	PUNC	23	_	_	_	_
 
+#..........
+
 1	اما	CONJ	VCONJ	6	_	_	ArgM-DIS
 2	مهمان‌ها	N	SBJ	6	_	_	Arg1
 3	وارد	ADJ	MOS	6	_	_	Arg2
@@ -2061,6 +2069,9 @@
 4	هم‌کیش	ADJ	MOS	6	_	_	Arg2	_	_
 5	دشمنان	N	NEZ	4	_	_	_	_	_
 6	بود	V	PRD	3	Y	بودن.15	_	_	_
+
+#..........
+
 7	به	PREP	VPP	10	_	_	_	Arg3	_
 8	پشت‌بام	N	POSDEP	7	_	_	_	_	_
 9	خانه	N	MOZ	8	_	_	_	_	_
@@ -2074,6 +2085,8 @@
 17	را	POSTP	OBJ	19	_	_	_	_	Arg1
 18	خبر	N	NVE	19	_	_	_	_	_
 19	کرد	V	ROOT	0	Y	خبر‌کردن.539	_	_	_
+
+#..........
 
 1	لوط	N	SBJ	5	_	_	Arg0	_
 2	به	PREP	NPP	4	_	_	Arg3	_
@@ -2097,6 +2110,8 @@
 5	بار	N	POSDEP	4	_	_	_
 6	نرفتند	V	ROOT	0	Y	زیر‌بار‌رفتن.546	_
 7	.	PUNC	PUNC	6	_	_	_
+
+#.........
 
 1	لوط	N	SBJ	7	_	_	Arg0	Arg0	_
 2	که	SUBR	NCL	1	_	_	_	_	_
@@ -2141,6 +2156,8 @@
 9	ت	PR	MOZ	8	_	_	_	_
 10	آمده‌ایم	V	VCL	3	Y	آمدن.44	_	_
 11	.	PUNC	PUNC	3	_	_	_	_
+
+#.........
 
 1	چیزی	N	SBJ	2	_	_	Arg1	_	_
 2	نگذشت	V	ROOT	0	Y	گذشتن.43	_	_	_

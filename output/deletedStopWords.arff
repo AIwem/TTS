@@ -1,3 +1,4 @@
+
 16	او	PR	MOZ	12	_	_	_	_
 
 3	همه	ADJ	NPREMOD	4	_	_	_
@@ -260,11 +261,13 @@
 50	این	ADJ	NPREMOD	51	_	_	_	_	_	_	_	_
 
 
+
 9	کنونی	ADJ	NPOSTMOD	8	_	_	_	_	_	_
 11	مردم	N	PREDEP	12	_	_	_	_	_	_
 22	که	SUBR	NCL	20	_	_	_	_	_	_
 24	آن	ADJ	NPREMOD	25	_	_	_	_	_	_
 35	او	PR	MOZ	34	_	_	_	_	_	_
+
 
 12	آن	ADJ	NPREMOD	13	_	_	_	_
 
@@ -298,15 +301,20 @@
 21	خویش	PR	MOZ	20	_	_	_	_
 
 
+
 14	نگاه	N	NVE	15	_	_	_	_
 
 3	که	SUBR	NCL	2	_	_	_	_	_
+
+
+
 
 9	این	ADJ	NPREMOD	10	_	_	_	_
 12	خود	PR	MOZ	10	_	_	_	_
 
 4	زیر	PREP	VPRT	6	_	_	_
 5	بار	N	POSDEP	4	_	_	_
+
 
 2	که	SUBR	NCL	1	_	_	_	_	_
 11	خود	PR	PREDEP	12	_	_	_	_	_
@@ -316,6 +324,7 @@
 4	شان	PR	MOZ	3	_	_	_
 
 9	ت	PR	MOZ	8	_	_	_	_
+
 
 3	که	SUBR	VCL	2	_	_	_	_	_
 

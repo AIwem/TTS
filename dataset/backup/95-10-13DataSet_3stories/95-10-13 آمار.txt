@@ -1,5 +1,5 @@
-========================================== static_objectt ========================================
-%216-61sentence-11header=144		kolan 21 static_object dare
+========================================== StaticObject ========================================
+%216-61sentence-11header=144		kolan 21 staticObj dare
 %Accuracy of J48: 85.42%
 %---------------------------------
 %Accuracy of PART: 86.81%
@@ -9,8 +9,8 @@
 %Accuracy of DecisionStump: 82.64%
 %---------------------------------
 
-======================================== static_object_state =====================================
-%216-61sentence-11header=144		kolan 19 static_object dare
+======================================== StaticObjectState =====================================
+%216-61sentence-11header=144		kolan 19 staticObj dare
 %Accuracy of J48: 86.81%
 %---------------------------------
 %Accuracy of PART: 87.50%
@@ -20,8 +20,8 @@
 %Accuracy of DecisionStump: 86.81%
 %---------------------------------
 
-========================================== dynamic_object =======================================
-%216-61sentence-11header=144		kolan 5 dynamic_object dare
+========================================== DynamicObject =======================================
+%216-61sentence-11header=144		kolan 5 DynamicObject dare
 %Accuracy of J48: 96.53%
 %---------------------------------
 %Accuracy of PART: 96.53%
@@ -31,8 +31,8 @@
 %Accuracy of DecisionStump: 99.31%
 %---------------------------------
 
-======================================= dynamic_objecttAction ====================================
-%216-61sentence-11header=144		kolan 2 dynamic_object_action dare
+======================================= DynamicObjectAction ====================================
+%216-61sentence-11header=144		kolan 2 DynamicObjectAction dare
 %Accuracy of J48: 98.61%
 %---------------------------------
 %Accuracy of PART: 98.61%
@@ -42,8 +42,8 @@
 %Accuracy of DecisionStump: 98.61%
 %---------------------------------
 
-======================================= dynamic_object_state =====================================
-%216-61sentence-11header=144		kolan 5 dynamic_object_state dare
+======================================= DynamicObjectState =====================================
+%216-61sentence-11header=144		kolan 5 DynamicObjectState dare
 %Accuracy of J48: 96.53%
 %---------------------------------
 %Accuracy of PART: 96.53%
@@ -75,8 +75,8 @@
 %Accuracy of DecisionStump: 99.31%
 %---------------------------------
 
-============================================ scene_goal =========================================
-%216-61sentence-11header=144		kolan 4 scene_goal dare
+============================================ SceneGoal =========================================
+%216-61sentence-11header=144		kolan 4 sceneGoal dare
 %Accuracy of J48: 97.22%
 %---------------------------------
 %Accuracy of PART: 97.22%
@@ -100,8 +100,8 @@
 %Accuracy of DecisionStump: 95.14%
 %---------------------------------
 
-=========================================== role_action =========================================
-%216-61sentence-11header=144		kolan 26 role_action dare
+=========================================== RoleAction =========================================
+%216-61sentence-11header=144		kolan 26 roleAction dare
 %Accuracy of J48: 96.53%
 %---------------------------------
 %Accuracy of PART: 96.53%
@@ -113,8 +113,8 @@
 ========================================== roleEmotion ========================================
 %216-61sentence-11header=144		hichiiii nadare 
 
-=========================================== role_state =========================================
-%216-61sentence-11header=144		kolan 10 role_state dare
+=========================================== roleState =========================================
+%216-61sentence-11header=144		kolan 10 roleState dare
 %Accuracy of J48: 93.06%
 %---------------------------------
 %Accuracy of PART: 93.06%
@@ -124,8 +124,8 @@
 %Accuracy of DecisionStump: 93.75%
 %---------------------------------
 
-=========================================== role_intent ========================================
-%216-61sentence-11header=144		kolan 11 role_intent dare
+=========================================== roleIntent ========================================
+%216-61sentence-11header=144		kolan 11 roleIntent dare
 %Accuracy of J48: 92.36%
 %---------------------------------
 %Accuracy of PART: 92.36%

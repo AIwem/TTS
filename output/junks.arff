@@ -1,3 +1,4 @@
+
 3	11	NUM	NPREMOD	4	_	_	_	_
 6	و	CONJ	VCONJ	17	_	_	_	_
 7	از	PREP	ADVRB	17	_	_	_	ArgM-ADV
@@ -545,6 +546,7 @@
 49	از	PREP	NPP	52	_	_	_	_	_	_	_	Arg3
 54	.	PUNC	PUNC	9	_	_	_	_	_	_	_	_
 
+
 5	و	CONJ	NCONJ	4	_	_	_	_
 8	به	PREP	NPP	11	_	_	Arg4	_
 13	و	CONJ	VCONJ	20	_	_	_	_
@@ -562,6 +564,7 @@
 27	به	PREP	NPP	29	_	_	_	_	Arg3	_
 31	و	CONJ	VCONJ	36	_	_	_	_	_	_
 33	در	PREP	MOS	36	_	_	_	_	_	Arg2
+
 
 2	به	PREP	VPP	9	_	_	Arg4	_
 5	(	PUNC	PUNC	6	_	_	_	_
@@ -628,6 +631,7 @@
 17	از	PREP	AJPP	22	_	_	_	_
 24	.	PUNC	PUNC	23	_	_	_	_
 
+
 1	اما	CONJ	VCONJ	6	_	_	ArgM-DIS
 7	.	PUNC	PUNC	6	_	_	_
 
@@ -636,10 +640,13 @@
 10	از	PREP	ADVPP	13	_	_	_	_
 
 1	اما	CONJ	VCONJ	10	_	_	_	ArgM-DIS	_
+
+
 7	به	PREP	VPP	10	_	_	_	Arg3	_
 11	و	CONJ	VCONJ	19	_	_	_	_	ArgM-DIS
 12	با	PREP	ADVRB	19	_	_	_	_	ArgM-INS
 17	را	POSTP	OBJ	19	_	_	_	_	Arg1
+
 
 2	به	PREP	NPP	4	_	_	Arg3	_
 8	از	PREP	VPP	13	_	_	_	Arg3
@@ -647,6 +654,7 @@
 
 1	ولی	CONJ	VCONJ	6	_	_	ArgM-DIS
 7	.	PUNC	PUNC	6	_	_	_
+
 
 5	را	POSTP	OBJ	6	_	_	Arg1	_	_
 10	،	PUNC	PUNC	9	_	_	_	_	_
@@ -662,6 +670,7 @@
 1	و	CONJ	VCONJ	3	_	_	ArgM-DIS	_
 4	:	PUNC	PUNC	3	_	_	_	_
 11	.	PUNC	PUNC	3	_	_	_	_
+
 
 8	را	POSTP	OBJ	9	_	_	_	Arg1	_
 10	و	CONJ	VCONJ	13	_	_	_	_	_

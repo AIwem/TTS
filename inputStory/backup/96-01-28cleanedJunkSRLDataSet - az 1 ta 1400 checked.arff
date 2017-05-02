@@ -1,5 +1,3 @@
-#..........
-
 1	او	PR	SBJ	5	يوسف§n-23957	_	 نفر§n-13075		_	role	Arg0	_
 2	مجموعا	ADV	ADVRB	5	مجموع§n-11384	_	null	_	no	ArgM-ADV	_
 4	برادر	N	OBJ	5	برادر§n-14090	_	نفر§n-13075	_	role	Arg1	_
@@ -165,8 +163,8 @@
 9	خواهيم‌بود	V	ROOT	0	بودن§v-16430	رخداد§n-13136	roleAction	Y	بودن.15	_	_
 
 1	وقتي	N	ADVRB	11	null	_	null	_	no	_	ArgM-TMP	_	_
-3	آن‌ها	PR	SBJ	7	برادر§n-14090	_	نفر§n-13075		_	role	Arg0	_	_	Arg0
-5	يعقوب	N	NPP	6	یعقوب§n-23940	_	 نفر§n-13075	_	role	Arg3	_	_	_
+3	آن‌ها	PR	SBJ	7	برادر§n-14090	_	نفر§n-13075	_	role	Arg0	_	_	Arg0
+5	يعقوب	N	NPP	6	یعقوب§n-23940	_	 نفر§n-13075_	role	Arg3	_	_	_
 6	فاصله	N	NVE	7	فاصله§n-12930	_	 مشخصه§n-12756	_	no	_	_	_	_
 7	گرفتند	V	PRD	2	دور شدن§v-16372	رخداد§n-13136	roleAction	Y	فاصله‌گرفتن.504	_	_	_	_
 8	کينه‌هاي	N	SBJ	11	عناد§n-11662	_	مشخصه§n-12756	_	roleEmotion	_	Arg1	_	_
@@ -1115,7 +1113,6 @@
 53	يافتند	V	PRD	36	نجات يافتن§v-8668	رخداد§n-13136	roleAction	Y	نجات‌يافتن.45	_	_	_	_	_	_
 
 #..........
-
 1	آن‌ها	PR	SBJ	12	null	null	role	_	_	Arg0	Arg0
 2	بعداز	PREP	ADVRB	12	null	null	no	_	_	ArgM-TMP	_
 3	پايان	N	POSDEP	2	نهايت§n-12517	مشخصه§n-12756	time	_	_	_	_
@@ -1155,7 +1152,6 @@
 36	بود	V	PRD	22	بودن§v-16430	رخداد§n-13136	no	Y	بودن.15	_	_	_	_
 
 #..........
-
 1	سپس	SUBR	ROOT	0	null	null	no	_	_	ArgM-DIS	_
 3	سرزمين	N	VPP	9	خطه§n-13265	جا§n-12733	location		_	_	Arg4	_
 4	سدوم	N	MOZ	3	null	null	location	_	_	_	_
@@ -1291,7 +1287,6 @@
 23	کرد	V	ROOT	0	اطلاع دادن§v-9299	رخداد§n-13136	roleAction	Y	کردن.25	_	_
 
 #..........
-
 2	مهمان‌ها	N	SBJ	6	میهمان§a-183	مشخصه§n-12756	role	_	_	Arg1
 3	وارد	ADJ	MOS	6	null	null	roleState	_	_	Arg2
 4	خانه	N	NEZ	3	سرا§n-12809	جا§n-11881	location	_	_	_
@@ -1314,9 +1309,7 @@
 4	هم‌کيش	ADJ	MOS	6	null	null	roleState	_	_	Arg2	_	_
 5	دشمنان	N	NEZ	4	خصم§n-11695	گروه§n-12753	role	_	_	_	_	_
 6	بود	V	PRD	3	بودن§v-9328	رخداد§n-13136	no	Y	بودن.15	_	_	_
-
 #..........
-
 8	پشت‌بام	N	VPP	10	پشت بام§n-11102	شيء§n-12703	location		_	_	_	Arg3	_
 9	خانه	N	MOZ	8	سرا§n-12809	جا§n-11881	location	_		_	_	_	_
 10	رفت	V	VCONJ	19	پوييدن§v-7700	رخداد§n-13136	roleAction	Y	رفتن.17	_	_	_
@@ -1327,9 +1320,7 @@
 18	خبر	N	NVE	19	خبر§n-12766	خبر§n-12766	roleIntent	_	_	_	_	_
 19	کرد	V	ROOT	0	اطلاع دادن§v-9299	رخداد§n-13136	roleAction	Y	خبر‌کردن.539	_	_	_
 
-#..........
-
-
+#.........
 1	لوط	N	SBJ	5	لوط§n-23932	نفر§n-13075	role	_	_	Arg0	_
 3	آن‌ها	PR	NPP	4	جک و جونورها§n-11802	گروه§n-12753	role		_	_	Arg3	_
 4	التماس	N	NVE	5	التماس§n-11511	خبر§n-13975	roleState	_	_	_	_
@@ -1345,7 +1336,6 @@
 6	نرفتند	V	ROOT	0	null	null	roleAction	Y	زير‌بار‌رفتن.546	_
 
 #.........
-
 1	لوط	N	SBJ	7	لوط§n-23932	نفر§n-13075	role	_	_	Arg0	Arg0	_
 3	صحبت	N	OBJ	6	گفتگو§n-11493	رخداد§n-13136	roleIntent		_	_	Arg1	_	_
 4	آن‌ها	PR	MOZ	3	ملک#n5	هست§n-12706	role	_	_	_	_	_
@@ -1375,7 +1365,6 @@
 10	آمده‌ايم	V	VCL	3	آمدن§v-7847	رخداد§n-13136	roleAction	Y	آمدن.44	_	_
 
 #.........
-
 1	چيزي	N	SBJ	2	null	null	no	_	_	Arg1	_	_
 2	نگذشت	V	ROOT	0	گذشتن§v-18384	رخداد§n-13136	roleAction	Y	گذشتن.43	_	_	_
 4	قوم	N	SBJ	9	قوم§n-13461	گروه§n-12753	role	_	_	_	Arg0	Arg1
@@ -1414,6 +1403,3 @@
 11	سليمان	N	POSDEP	10	سليمان§n-23934	نفر§n-13075	role	_	_	_	_
 12	ظهور	N	NVE	13	ظهور§n-10410	رخداد§n-13136	roleIntent	_	_	_	_
 13	کرد	V	PRD	9	ظهور کردن§v-21725	رخداد§n-13136	no	Y	ظهور‌کردن.74	_	_
-
-
-

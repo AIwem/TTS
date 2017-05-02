@@ -368,7 +368,7 @@ public class SentenceModel {
 				if(wrd != null && wrd.isVerb())
 					return wrd;
 		
-		MyError.error("This sentence has no verb!: " + this);
+//		MyError.error("This sentence has no verb!: " + this);
 		return null;
 	}
 	
