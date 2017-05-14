@@ -186,6 +186,7 @@ public class SentenceModel {
 			this._words.add(wd);
 		}
 		makeNLSentence();
+				
 		arrangeWords();			
 	}
 	
@@ -1229,16 +1230,19 @@ public class SentenceModel {
 					}
 				}				
 			}
-			else if(stopWords.contains(wrd._wordName))
-				if(wrd._gPOS != POS.V)
+			else if(stopWords.contains(wrd._wordName)){
+				//	if(wrd._gPOS != POS.V)
 					if(wrd._dataSetRecord != null){
-						if(!wrd._dataSetRecord.toLowerCase().contains("arg")){
+//						if(!wrd._dataSetRecord.toLowerCase().contains("arg")){
+						if(!wrd._dataSetRecord.toLowerCase().contains("time")){
 							toBeRemoved.add(wrd);
-							stopWordtWriter.println(wrd._dataSetRecord);						
+							stopWordtWriter.println(wrd._dataSetRecord);
 						}
+//						}
 					}
-					else
-						MyError.exit("word " + wrd + " dataSetRecord must not be null !!!");					
+//					else
+//						MyError.exit("word " + wrd + " dataSetRecord must not be null !!!");
+			}
 					
 			
 		}

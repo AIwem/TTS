@@ -1,0 +1,66 @@
+ÈÓã Çááå ÇáÑÍãä ÇáÑÍíã æ Êæ˜áÊ Úáí Çááå
+------------------------------------------------------------
+statistics with first series of stopWords (not verbs and those don't have semantic arguments) deleted:
+
+role:      1059  roleAction:    774
+roleState:    503  roleIntent:    382
+roleEmotion:    30
+—----------------------------------------------------------
+dynamic_object:    13  dynamic_objAction:  2
+dynamic_objState:  0
+—----------------------------------------------------------
+static_object:    86  static_objState:  19
+—----------------------------------------------------------
+location    263
+time:      112
+—----------------------------------
+no:      1719
+—----------------------------------
+all Scene elements are: 3243
+no elements are: 1719
+
+============================================================
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+============================================================
+number of more stopWords to be deleted (verbs and those don't have semantic arguments)
+
+role:			142	roleAction:		383
+roleState:		14	roleIntent:		2
+roleEmotion:		0
+------------------------------------------------------------
+dynamic_object:		0	dynamic_objAction:	0
+dynamic_objState:	0
+------------------------------------------------------------
+static_object:		1	static_objState:	0
+------------------------------------------------------------
+location		16
+time:			0
+------------------------------------
+no:			584
+------------------------------------
+all Scene elements are: 593
+no elements are: 584
+words num 1177 ?= all elems 1177
+
+============================================================
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+============================================================
+statistics with all stopWords deleted:
+
+role:			947	roleAction:		386		<<<<<<			role:      1059-142  roleAction:    774-383
+roleState:		480	roleIntent:		380		<<<<<<			roleState:    503-14  roleIntent:    382-2
+roleEmotion:		30
+------------------------------------------------------------
+dynamic_object:		45	dynamic_objAction:	8
+dynamic_objState:	6
+------------------------------------------------------------
+static_object:		137	static_objState:	30
+------------------------------------------------------------
+location		247							<<<<<<			location		263-16
+time:			112							<<<<<<			
+------------------------------------
+no:			1013							<<<<<<			no:      		1719-584
+------------------------------------
+all Scene elements are: 2808
+no elements are: 1013
+words num 3821 ?= all elems 3821

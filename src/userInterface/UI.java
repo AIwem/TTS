@@ -19,6 +19,7 @@ import org.apache.tika.parser.ParseContext;
 
 import model.SentenceModel;
 import model.Word;
+import model.ScenePart;
 import sceneReasoner.TTSEngine;
 
 
@@ -30,30 +31,40 @@ public class UI {
 //	private String inputStoryFilePath = "inputStory/inputStrory2-1.txt";
 //	private String inputStoryFilePath = "inputStory/inputStrory3.txt";
 //	private String inputStoryFilePath = "inputStory/inputStory4.txt";
-
+	
+	private String persianStopWordFilePath = "inputStory/persianStopWrods.txt";
+	
 	private String inputDataSetHeaderFilePath = "inputStory/dataSetHeader.txt";
 //	private String inputSRLDataSetFilePath = "inputStory/story4DataSetToformat.txt";
 //	private String inputDataSetFilePath = "inputStory/srl-stories.conll";
 //	private String inputDataSetFilePath = "inputStory/sampleManualInputDataSetToformat.arff";
 //	private String inputDataSetFilePath = "inputStory/96-01-28cleanedJunkSRLDataSet.arff";
-	private String inputDataSetFilePath = "inputStory/96-02-12cleanedJunk.arff";
-	private String inputDataSetSceneCorrectedFilePath = "inputStory/96-02-12cleanedJunkScene.arff";
-	private String inputDataSetSceneCorrectedDashedTunedFilePath = "inputStory/96-02-12cleanedJunkSceneDash.arff";
+//	private String inputDataSetFilePath = "inputStory/96-02-12cleanedJunk.arff";
+	private String inputDataSetFilePath = "inputStory/96-02-24full.arff";			
+														
+	private String inputDataSetSceneFilePath = "inputStory/96-02-24full_scene.arff";
+//											   "output\\fullcleanedJunkSRLDataSet.arff";	
 	
-	private String persianStopWordFilePath = "inputStory/persianStopWrods.txt";
+	private String outCleanedWrongSemanticDataSetFilePath = "output/cleanedWrongSemSRLDataSet.arff";
+//	private String outCleanedJunkSRLDataSet = "output\\cleanedJunkSRLDataSet.arff";
+	private String inputDataSetSceneJunkFilePath = "inputStory/96-02-24full_scene_junk.arff";
+//											  	   "output\\fullcleanedJunkSRLDataSet.arff";
 
+	
+//	private String inputDataSetSceneCorrectedFilePath = "inputStory/96-02-17fullcleanedJunkScene.arff";
+	private String inputDataSetSceneJunkDashFilePath = "inputStory/96-02-24full_scene_junk_dash.arff";
+	
 	//all sentences from CSRI
 //	private String rawDataSetFilePath = "inputStory/cleanedSRLDataSet - Copy.arff";
 	//2000 words with no semantic tags were deleted manually.
 //	private String rawDataSetFilePath = "inputStory/cleanedSRLDataSet.arff";
 	//2500 more words with no semantic tags were deleted manually.	
-	private String rawDataSetFilePath = "inputStory/cleanedSRLDataSet3.arff";
+//	private String rawDataSetFilePath = "inputStory/cleanedSRLDataSet3.arff";	
 //	private String rawDataSetFilePath = "inputStory/96-01-28cleanedJunkSRLDataSet.arff";
 //	private String rawDataSetFilePath = "inputStory/96-01-21cleanedSRLDataSet-checked.arff";
+//	private String rawDataSetFilePath = inputDataSetSceneFilePath;
 	
-	private String outCleanedWrongSemanticDataSetFilePath = "output/cleanedWrongSemSRLDataSet.arff";
-	private String outCleanedJunkSRLDataSet = "output\\cleanedJunkSRLDataSet.arff";
-
+	
 //	private String mainKbFilePath = "kb/farsnet--24.txt";
 	private String mainKbFilePath = "kb/farsnet.txt";
 	private String myKbFilePath = "kb/injuredPigeon9.txt";
@@ -191,8 +202,8 @@ public class UI {
 		
 			PrintWriter wrongSemWriter = new PrintWriter("output\\wrongSems.arff", "UTF-8");
 		
-			ArrayList<ArrayList<String>> inputs = importInputDataSetInfo(rawDataSetFilePath);
-			
+			ArrayList<ArrayList<String>> inputs = importInputDataSetInfo(inputDataSetSceneFilePath);
+			//"inputStory/96-02-17fullcleanedJunkScene.arff"
 			//each oneSentence is an ArrayList containing the whole elements of one sentence.
 			for(ArrayList<String> oneSentence:inputs){
 				
@@ -228,7 +239,7 @@ public class UI {
 	public void removeJunkWords(){
 		
 		try {			
-			PrintWriter writer = new PrintWriter(outCleanedJunkSRLDataSet, "UTF-8");
+			PrintWriter writer = new PrintWriter(inputDataSetSceneJunkFilePath, "UTF-8");
 			PrintWriter junksWriter = new PrintWriter("output\\junks.arff", "UTF-8");
 			PrintWriter junkDepsWriter = new PrintWriter("output\\junkDeps.arff", "UTF-8");
 			PrintWriter stopWordWriter = new PrintWriter("output\\deletedStopWords.arff", "UTF-8");			
@@ -243,13 +254,13 @@ public class UI {
 			
 				SentenceModel sentence = makeSenteces(oneSentence, false);
 				
-				print(">>>>>>>>>>>>>>> before edit junk");
-				print(sentence.getOrdinalDetailedStr());
+//				print(">>>>>>>>>>>>>>> before edit junk");
+//				print(sentence.getOrdinalDetailedStr());
 				
 				sentence.editJunkWords(stopWords, stopWordWriter, junksWriter, junkDepsWriter);	
 				
-				print(">>>>>>>>>>>>>>> after edit junk");
-				print(sentence.getOrdinalDetailedStr() + "\n\n");
+//				print(">>>>>>>>>>>>>>> after edit junk");
+//				print(sentence.getOrdinalDetailedStr() + "\n\n");
 				
 				String toWrite = "";
 				ArrayList<String> wrdRecs = sentence.getManualDataSetStr();
@@ -299,7 +310,7 @@ public class UI {
 	 */
 	public void correctSceneMarker(){
 		try{
-			PrintWriter writer = new PrintWriter(inputDataSetSceneCorrectedFilePath, "UTF-8");
+			PrintWriter writer = new PrintWriter(inputDataSetSceneFilePath, "UTF-8");
 			
 			ArrayList<String> inputs = importInputTexts(inputDataSetFilePath);
 			
@@ -326,10 +337,10 @@ public class UI {
 	 */
 	public void checkAndCorrectDataSet(){
 		try{
-			PrintWriter writer = new PrintWriter(inputDataSetSceneCorrectedDashedTunedFilePath, "UTF-8");
+			PrintWriter writer = new PrintWriter(inputDataSetSceneJunkDashFilePath, "UTF-8");
 			
 			//file format: 4	برادر	N	OBJ	5	برادر§n-14090	_	نفر§n-13075	_	role	Arg1	_
-			ArrayList<ArrayList<String>> inputs = importInputDataSetInfo(inputDataSetSceneCorrectedFilePath);
+			ArrayList<ArrayList<String>> inputs = importInputDataSetInfo(inputDataSetSceneJunkFilePath);
 					
 			//each oneSentence is an ArrayList containing the whole elements of one sentence.
 			for(ArrayList<String> oneSentence:inputs){				
@@ -396,29 +407,125 @@ public class UI {
 	
 	public void getStatistics(){
 		//file format: 4	برادر	N	OBJ	5	برادر§n-14090	_	نفر§n-13075	_	role	Arg1	_
-		ArrayList<ArrayList<String>> inputs = importInputDataSetInfo(inputDataSetSceneCorrectedDashedTunedFilePath);
+		ArrayList<ArrayList<String>> inputs = importInputDataSetInfo(inputDataSetSceneJunkDashFilePath);
 		
-		int sentenceNum = countSentences(inputDataSetSceneCorrectedDashedTunedFilePath);
+		int sentenceNum = countSentences(inputDataSetSceneJunkDashFilePath);
 		
-		int wordsNum = countWords(inputDataSetSceneCorrectedDashedTunedFilePath);
+		int wordsNum = countWords(inputDataSetSceneJunkDashFilePath);
 				
 		print("sentence numbers: " + sentenceNum + " -- words numner " + wordsNum);
 		
+		int role_num = 0;int role_action_num = 0;int role_state_num = 0;int role_intent_num = 0; int role_emotion_num = 0;
+		int dynamic_obejct_num = 0;int dynamic_obejct_action_num = 0;int dynamic_obejct_state_num = 0;
+		int static_object_num = 0; int static_object_state = 0; 
+		int location_num = 0; int time_num = 0; int no_num = 0;
+						
 		//each oneSentence is an ArrayList containing the whole elements of one sentence.
 		for(ArrayList<String> oneSentence:inputs){
 			
 			SentenceModel sentence = makeSenteces(oneSentence, true);
-			
+								
 			if(sentence != null && sentence.getWords() != null){
 				ArrayList<Word> words = sentence.getWords();
 				
 				for(Word wrd:words){
-					print("" + wrd._multiClassTag);
+															
+//					print(wrd._multiClassTag + " -- " + wrd._dataSetRecord);
+					
+					if(wrd != null && wrd._multiClassTag != null){
+						switch(wrd._multiClassTag){
+							case ROLE:{
+								role_num++;
+								break;
+							}
+							case ROLE_ACTION:{
+								role_action_num++;
+								break;
+							}
+							case ROLE_STATE:{
+								role_state_num++;
+								break;
+							}
+							case ROLE_INTENT:{
+								role_intent_num++;
+								break;
+							}
+							case ROLE_EMOTION:{
+								role_emotion_num++;
+								break;
+							}
+							case DYNAMIC_OBJECT:{
+								dynamic_obejct_num++;
+								break;
+							}
+							case DYNAMIC_OBJECT_ACTION:{
+								dynamic_obejct_action_num++;
+								break;
+							}
+							case DYNAMIC_OBJECT_STATE:{
+								dynamic_obejct_state_num++;
+								break;
+							}
+							case STATIC_OBJECT:{
+								static_object_num++;
+								break;							
+							}
+							case STATIC_OBJECT_STATE:{
+								static_object_state++;
+								break;							
+							}
+							case LOCATION:{
+								location_num++;
+								break;
+							}
+							case TIME:{
+								time_num++;
+								break;
+							}
+							case UNKNOWN:{
+//								if(!wrd._dataSetRecord.contains("no"))
+//								print(wrd._dataSetRecord);
+								no_num++;
+								break;
+							}
+							default:{
+								print("\n" + wrd._multiClassTag + "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n");
+								break;
+							}
+						}
+					}
+//					else
+//						print("multiClassTag of word " + wrd + " is null!!!!!!!!!!!!");				
 				}
 			}
 			else
 				MyError.exit("bad sentence generated from " + oneSentence);
 		}
+		print("\nnumber of each elements are as follows");
+		print("------------------------------------------------------------");
+		print("role:\t\t\t" +  role_num + "\troleAction:\t\t" + role_action_num);
+		print("roleState:\t\t" + role_state_num + "\troleIntent:\t\t"+ role_intent_num);
+		print("roleEmotion:\t\t" + role_emotion_num);
+		print("------------------------------------------------------------");
+		print("dynamic_object:\t\t" + dynamic_obejct_num + "\tdynamic_objAction:\t" + dynamic_obejct_action_num);
+		print("dynamic_objState:\t" + dynamic_obejct_state_num);
+		print("------------------------------------------------------------");
+		print("static_object:\t\t" + static_object_num + "\tstatic_objState:\t" + static_object_state);
+		print("------------------------------------------------------------");
+		print("location\t\t" + location_num);
+		print("time:\t\t\t" + time_num);
+		print("------------------------------------");
+		print("no:\t\t\t" + no_num);		
+		print("------------------------------------");
+		
+		int allWords_num = role_num + role_action_num + role_state_num + role_intent_num + role_emotion_num;
+		allWords_num += dynamic_obejct_num + dynamic_obejct_action_num + dynamic_obejct_state_num;
+		allWords_num += static_object_num + static_object_state; 
+		allWords_num += location_num + time_num;
+				
+		print("all Scene elements are: " + allWords_num);
+		print("no elements are: " + no_num);
+		print("words num " + wordsNum + " ?= all elems " + (allWords_num + no_num));
 	}
 
 	
@@ -1036,14 +1143,14 @@ public class UI {
 		UI ui = new UI();
 
 //		ui.clearSRLDataset();
+
+		ui.correctSceneMarker();
 		
-//		ui.checkSemanticTags();
+		ui.checkSemanticTags();
 		
-//		ui.removeJunkWords();
-		
-//		ui.correctSceneMarker();
-		
-//		ui.checkAndCorrectDataSet();
+		ui.removeJunkWords();
+				
+		ui.checkAndCorrectDataSet();
 		
 		ui.getStatistics();
 

@@ -1,0 +1,1036 @@
+»”„ «··Â «·—Õ„‰ «·—ÕÌ„ Ê  Êò·  ⁄·Ì «··Â 
+sentence numbers: 502 -- words numner 3785
+8	„Ì«‰	N	ADVRB	17	null	null	no	_	_	_	ArgM-ADV
+2	ÕœÊœ	PREP	ADVC	6	«‰œ«“Âßn-13756	„‘Œ’Âßn-12756	no	_	_	Arg2
+3	”«·	N	ADVC	5	”«·ßn-13471	œÊ—Â “„«‰Ìßn-12603	no	_	_	Arg1	_
+10	—ÊÌ«ÌÌ	N	OBJ	11	—ÊÌ«ßn-15102	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	Arg1
+8	⁄«·„	N	ADVRB	10	null	null	no	_	_	_	_	ArgM-LOC	_
+9	ŒÊ«»	N	MOZ	8	—ÊÌ«ßn-15102	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	_
+18	œ—»—«»—	PREP	NPP	20	null	null	no	_	_	_	_	_	Arg3
+4	 ⁄»Ì—	N	OBJ	7	 ⁄»Ì—ßn-20347	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	Arg1	_	_
+5	ŒÊ«»	N	MOZ	4	—ÊÌ«ßn-15102	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_
+7	„Ìùœ«‰” 	V	PRD	3	»·œ »Êœ‰ßv-8050	—Œœ«œßn-13136	no	Y	œ«‰” ‰.97	_	_	_
+12	—«“	N	OBJ	19	”—ßn-13702	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	Arg1
+18	¬‘ò«—	ADJ	MOS	19	êÊÌ«ßa-268	null	no	_	_	_	_	Arg2
+11	ŒÊ«Âœ‘œ	V	PRD	6	ò—œ‰ßv-8678	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_	_
+14	›—„«‰	N	OBJ	18	«„—ßn-11505	—Œœ«œßn-13136	no	_	_	_	_	Arg3
+17	ê—œ‰	N	NVE	18	ê—œ‰ßn-10188	‘Ì¡ßn-12703	no	_	_	_	_	_
+2	Œœ«Ê‰œ	N	SBJ	7	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	Arg0	Arg0
+7	»—„Ìùê“Ì‰œ	V	VCONJ	14	ê“Ìœ‰ßv-7948	—Œœ«œßn-13136	no	Y	»—ùê“Ìœ‰.229	_	_
+9	 ⁄»Ì—	N	OBJ	14	 ⁄»Ì—ßn-20347	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	Arg1
+10	ŒÊ«»	N	MOZ	9	—ÊÌ«ßn-15102	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_
+2	ŒÊ«»	N	SBJ	9	—ÊÌ«ßn-15102	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	Arg1	_
+6	«·Â«„« 	N	NCONJ	2	null	null	no	_	_	_	_
+8	„ÊÃ»	N	MOS	9	„”»»ßn-13036	„”»»ßn-13036	no	_	_	Arg2	_
+15	Œ«’Ì	ADJ	NPOSTMOD	12	„Œ ’ßa-1538	„‘Œ’Âßn-12756	no	_	_	_	_
+17	çÂ—Â	N	NPP	19	null	null	no	_	_	_	ArgM-LOC
+19	„‘«ÂœÂ	N	NVE	20	null	—Œœ«œßn-13136	no	_	_	_	_
+2	„Ìùœ«‰” 	V	ROOT	0	œ«‰” ‰ßv-8456	—Œœ«œßn-13136	no	Y	œ«‰” ‰.97	_	_
+3	ÅÌ‘‰Â«œ	N	OBJ	5	null	null	no	_	_	Arg1
+2	ÌòÌù«“	ADJ	NPREMOD	3	null	null	no	_	_	_	_	_	_
+24	Å«”Œ	N	NVE	26	Å«”Œßn-11519	—Œœ«œßn-13136	no	_	_	_	_	_	_
+1	»⁄œ«“	PREP	ADVRB	18	null	null	no	_	_	_	_	ArgM-TMP	_	_	_	_
+4	«Õ”«”	N	NVE	5	»—œ«‘ ßn-14027	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	_	_	_	_
+13	‰êÂ	N	NVE	14	null	null	no	_	_	_	_	_	_	_	_	_
+20	œ—„Ê—œ	PREP	ADVRB	25	null	null	no	_	_	_	_	_	ArgM-ADV	_	_	_
+6	›«’·Â	N	NVE	7	›«’·Âßn-12930	„‘Œ’Âßn-12756	no	_	_	_	_	_	_
+10	¬‘ò«—	ADJ	MOS	11	êÊÌ«ßa-268	„‘Œ’Âßn-12756	no	_	_	_	Arg2	_	_
+15	Ÿ«Â—	N	MOS	16	—Êßn-11383	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	Arg2	_
+2	œ—»—«»—	PREP	ADVRB	5	null	null	no	_	_	ArgM-ADV
+6	ò«—Ì	N	NVE	7	⁄„·ßn-12803	—Œœ«œßn-13136	no	_	_	_
+6	Œœ«	N	NPP	7	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	Arg3
+21	ÿ⁄„Â	N	MOS	23	ÿ⁄„Âßn-20232	‘Ì¡ßn-12703	no	_	_	_	_	_	Arg2
+9	œ—„Ì«‰	PREP	MOS	11	null	null	no	_	_	Arg2	_	_	_
+18	„œÌ‰	N	VPP	21	null	null	no	_	_	_	Arg3	_	_
+3	»ÂùÃ«Ì	PREP	ADVRB	11	null	null	no	_	_	ArgM-ADV	_
+6	ç‘„	N	NVE	11	⁄Ì‰ßn-10314	çÌ“ßn-10392	no	_	_	_	_
+7	»Â«ÌÌ	N	VPP	9	À„‰ßn-11246	„‘Œ’Âßn-12756	no	_	_	Arg2
+8	«‰œò	ADJ	NPOSTMOD	7	„⁄œÊœßa-123	ù„‘Œ’Âßn-12756	no	_	_	_
+7	‰⁄„ 	N	AJPP	10	null	null	no	_	_	_	_
+15	œ·Ì·	N	ADVRB	20	null	null	no	_	_	_	ArgM-CAU
+18	»ÂùŒÊ»Ì	ADV	ADVRB	20	null	null	no	_	_	_	ArgM-MNR
+2	Â‰ê«„Ì	N	ADVRB	18	„Êﬁ⁄ßn-12614	œÊ—Â “„«‰Ìßn-12603	no	_	_	ArgM-TMP	_
+6	”‰	N	VPP	8	null	null	no	_	_	Arg3	_
+8	—”Ìœ	V	PRD	3	—”Ìœ‰ßv-8616	—Œœ«œßn-13136	no	Y	—”Ìœ‰.846	_	_
+11	»ÂùŒ«ÿ—	PREP	ADVRB	18	null	null	no	_	_	_	ArgM-CAU
+3	ÌòÌù«“	ADJ	NPREMOD	4	null	null	no	_	_	_	_	_	_
+17	»Ì«	V	PRD	16	¬„œ‰ßv-7847	—Œœ«œßn-13136	no	Y	¬„œ‰.44	_	_	_	_
+6	Å‘ 	N	ADVRB	14	null	null	no	_	_	ArgM-TMP	_
+14	ò‘Ìœ	V	ROOT	0	null	null	no	Y	ò‘Ìœ‰.512	_	_
+17	«„—	N	SBJ	23	„Ê÷Ê⁄ßn-12988	„‘Œ’Âßn-12756	no	_	_	_	Arg0
+18	»«⁄À	N	NVE	23	”»»ßn-13414	null	no	_	_	_	_
+13	ﬁ÷ÌÂ	N	OBJ	18	—Œœ«œßn-13136	—Œœ«œßn-13136	no	_	_	_	Arg1
+7	‰Ÿ—	N	NVE	8	‰ê«Âßn-10631	—Œœ«œßn-13136	no	_	_	_	_	_
+8	«›ò‰œ	V	NCL	1	null	null	no	Y	‰Ÿ—ù«›ò‰œ‰.854	_	_	_
+13	Å‘ 	N	ADVRB	15	null	null	no	_	_	_	_	ArgM-MNR
+15	‘œÂù«” 	V	PRD	10	ç«ò œ«œ‰ßv-8540	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_	_
+3	·ÕŸÂ	N	ADVRB	9	null	null	no	_	_	ArgM-TMP	_	_
+16	 Â„ 	N	SBJ	23	 Â„ ßn-22120	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	Arg1
+18	«› —«	N	NCONJ	16	null	null	no	_	_	_	_	_
+23	” 	V	PRD	14	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+7	»“—êÌ	ADJ	NPOSTMOD	6	»“—êßa-384	„‘Œ’Âßn-12756	no	_	_	_	_
+8	 — Ì»	N	NVE	9	 — Ì»ßn-11360	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_
+5	œ” Ê—	N	NVE	6	«„—ßn-11505	—Œœ«œßn-13136	no	_	_	_	_
+10	Å–Ì—«ÌÌ	N	NVE	11	Å–Ì—«ÌÌßn-18367	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_
+3	œ” 	N	VPP	10	null	null	no	_	_	Arg3	_
+4	„‘«ÂœÂ	N	ADVRB	12	null	null	no	_	_	ArgM-ADV	_
+12	ù‘œÂ	V	VCONJ	17	ê—œÌœ‰ßv-9382	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_
+14	œ” «‰	N	OBJ	17	null	null	no	_	_	_	Arg1
+2	»œÌ‰	PREP	ADVRB	7	null	null	no	_	_	ArgM-MNR
+3	êÊ‰Â	N	POSDEP	2	‘ÌÊÂßn-10396	—Œœ«œßn-13136	no	_	_	_
+2	Œœ«Ê‰œ	N	SBJ	7	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	Arg0
+3	œ⁄«Ì	N	OBJ	7	null	null	no	_	_	Arg1
+6	„” Ã«»	ADJ	MOS	7	null	null	no	_	_	Arg2
+7	‰„Êœ	V	ROOT	0	ê—œÌœ‰ßv-9382	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_
+2	ÊÃÊœÌ	N	ADVRB	32	null	null	no	_	_	_	_	_
+7	„«Ã—«	N	ADVRB	9	null	null	no	_	_	ArgM-ADV	_	_
+9	‘‰«Œ Âù‘œ	V	PRD	3	‘‰«Œ ‰ßv-8761	—Œœ«œßn-13136	no	Y	‘‰«Œ ‰.389	_	_	_
+19	·òÂ	N	OBJ	25	null	null	no	_	_	_	Arg1	_
+24	„ÕÊ	ADJ	MOS	25	„› Ê‰ßa-605	„‘Œ’Âßn-12756	no	_	_	_	Arg2	_
+26	œ” Ê—	N	OBJ	32	«„—ßn-11502	—Œœ«œßn-13136	no	_	_	_	_	Arg1
+31	’«œ—	ADJ	NVE	32	null	null	no	_	_	_	_	_
+2	»⁄œ«“	PREP	ADVRB	9	null	null	no	_	_	ArgM-TMP
+8	ŒÊ«»Ì	N	OBJ	9	—ÊÌ«ßn-15102	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	Arg1
+1	 ⁄»Ì—	N	SBJ	6	 ⁄»Ì—ßn-20347	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	Arg1	_	_
+2	ŒÊ«»	N	MOZ	1	—ÊÌ«ßn-15102	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_
+4	»œÌ‰	PREP	MOS	6	null	null	no	_	_	Arg2	_	_
+5	‘ò·	N	POSDEP	4	null	null	no	_	_	_	_	_
+8	ÌòÌù«“	ADJ	NPREMOD	9	null	null	no	_	_	_	_	_
+13	„Ìù‘œ	V	VCONJ	19	ê—œÌœ‰ßv-9382	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_	_
+19	¬ÊÌŒ Âù„Ìù‘œ	V	PRD	7	¬ÊÌ“«‰ »Êœ‰ßv-15598	—Œœ«œßn-13136	no	Y	»Âùœ«—ù¬ÊÌŒ ‰.570	_	_	_
+10	„Ìù‘œ	V	PRD	4	¬“«œ ò—œ‰ßv-7836	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_	_
+13	”›«—‘	N	NVE	18	„Ê⁄ŸÂßn-11468	Œ»—ßn-13975	no	_	_	_	_	_
+7	Êﬁ 	N	MOZ	6	null	null	no	_	_	_	_
+9	ŒÊ«»Ì	N	OBJ	10	—ÊÌ«ßn-15102	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	Arg1	_
+15	”«Œ 	V	PRD	11	ò—œ‰ßv-8678	—Œœ«œßn-13136	no	Y	”«Œ ‰.498	_	_
+13	ﬁ÷ÌÂ	N	OBJ	18	—Œœ«œßn-13136	„›ÂÊ„ ò·Ìßn-12726	no	_	_	_	Arg1	_	_	_
+17	Ì«œ	N	VPRT	18	null	null	no	_	_	_	_	_	_	_
+26	”—«€	N	NVE	27	null	null	no	_	_	_	_	_	_	_
+30	ŒÊ«»	N	OBJ	34	—ÊÌ«ßn-15102	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	_	Arg1
+33	 ⁄»Ì—	N	NVE	34	 ⁄»Ì—ßn-20347	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	_	_
+6	 ⁄»Ì—	N	OBJ	13	 ⁄»Ì—ßn-20347	Â” ßn-12706	no	_	_	_	Arg1
+7	ŒÊ«»	N	MOZ	6	—ÊÌ«ßn-15102	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_
+12	⁄—÷Â	N	NVE	13	null	null	no	_	_	_	_
+13	‰„Êœ	V	ROOT	0	null	null	no	Y	⁄—÷Âùò—œ‰.583	_	_
+3	›ò—	N	VPP	4	›ò— ò—œ‰ßn-13003	Â” ßn-12706	no	_	_	Arg3	_	_	_
+11	ÅÌ	N	NVE	12	null	null	no	_	_	_	_	_	_
+4	ÃÊ«»	N	ADVRB	5	ÃÊ«»ßn-11476	Œ»—ßn-12766	no	_	_	ArgM-LOC	_	_	_
+16	 Â„ ùÂ«ÌÌ	N	AJPP	21	 Â„ ßn-22120	—Œœ«œßn-13136	no	_	_	_	_	_	_
+5	Ã—„	N	NPP	7	ﬁ«‰Ê‰ ‘ò‰Ìßn-10601	—Œœ«œßn-13136	no	_	_	Arg3
+8	‰„Êœ	V	ROOT	0	null	null	no	Y	«ﬁ—«—ùò—œ‰.604	_
+6	ÅÌ	N	NVE	7	null	null	no	_	_	_	_	_
+8	œ” Ê—	N	NVE	9	«„—ßn-11505	—Œœ«œßn-13136	no	_	_	_	_	_
+7	“„—Â	N	MOS	10	“„—Âßn-22641	ê—ÊÂßn-12753	no	_	_	Arg2
+5	 Ê“Ì⁄	N	MOZ	4	 Ê“Ì⁄ßn-14892	—Œœ«œßn-13136	no	_	_	_	_	_
+14	Õ«·Ì	N	ADVRB	12	null	null	no	_	_	_	ArgM-CAU	_
+2	»⁄œ«“	PREP	ADVRB	8	null	null	no	_	_	ArgM-TMP	_	_
+13	ç‘„	N	NPP	11	⁄Ì‰ßn-10314	‘Ì¡ßn-12703	no	_	_	_	_	_	_
+27	œ«” «‰	N	OBJ	36	”—ê–‘ ßn-11449	Œ»—ßn-13975	no	_	_	_	_	_	Arg1
+14	 Ê”·	N	ADVRB	21	 Ê”·ßn-19701	Â” ßn-12706	no	_	_	_	ArgM-MNR
+18	ò«—	N	OBJ	21	ò«—ßn-13007	—Œœ«œßn-13136	no	_	_	_	Arg1
+20	⁄„·Ì	ADJ	MOS	21	ò«—ò—œÌßa-1565	ù„‘Œ’Âßn-12756	no	_	_	_	Arg2
+11	ﬁ—«—	N	NVE	12	Ê÷⁄Ì ßn-12745	„‘Œ’Âßn-12756	no	_	_	_	_
+2	»⁄œ«“	PREP	ADVRB	15	null	null	no	_	_	_	ArgM-TMP
+7	„ ⁄·ﬁ	ADJ	MOS	10	„ ⁄·ﬁßa-1563	„‘Œ’Âßn-12756	no	_	_	Arg2	_
+1	»œÌ‰ù — Ì»	ADV	ADVRB	11	null	null	no	_	_	ArgM-DIS
+2	»‰«»Â	PREP	ADVRB	11	null	null	no	_	_	ArgM-ADV
+3	—”„	N	POSDEP	2	”‰ ßn-12853	—Œœ«œßn-13136	no	_	_	_
+7	»Âù⁄‰Ê«‰	PREP	NPP	6	null	null	no	_	_	_
+3	œ·	N	NPP	5	null	null	no	_	_	Arg3	_
+5	«·Â«„	N	NVE	6	ÊÕÌßn-15103	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_
+6	‘œÂù»Êœ	V	ROOT	0	null	null	no	Y	«·Â«„ùò—œ‰.590	_	_
+16	œ·	N	SBJ	21	null	null	no	_	_	_	_	Arg0	_	_
+6	”Œ‰«‰	N	MOZ	4	Ã„·Âßn-13125	—Œœ«œßn-13136	no	_	_	_	_	_
+16	¬Ì«	ADV_INTG	ADVRB	19	¬Ì«ßr-15282	„‘Œ’Âßn-12756	no	_	_	_	_	ArgM-ADV
+2	”Ê«·	N	OBJ	6	Å—”‘ßn-11515	—Œœ«œßn-13136	no	_	_	Arg1	_
+8	¬Ì«	ADV_INTG	ADVRB	11	¬Ì«ßr-15282	„‘Œ’Âßn-12756	no	_	_	_	ArgM-ADV
+11	Ì	V	PRD	7	null	null	no	Y	»Êœ‰.15	_	_
+12	Œœ«Ê‰œ	N	SBJ	23	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	Arg0
+14	·ÿ›	N	ADVRB	23	„ÊÂ»  «·ÂÌßn-12481	„‘Œ’Âßn-12756	no	_	_	_	_	ArgM-ADV
+16	ò—„	N	NCONJ	14	„ÊÂ»  «·ÂÌßn-12481	„‘Œ’Âßn-12756	no	_	_	_	_	_
+21	Œÿ—Â«	N	VPP	23	„Œ«ÿ—Âßn-12513	„‘Œ’Âßn-12756	no	_	_	_	_	Arg3
+2	Å«œ«‘Ì	N	MOS	3	Ã«Ì“Âßn-12172	„‘Œ’Âßn-12756	no	_	_	Arg2	Arg1	_
+5	‰«ÕÌÂ	N	NPP	2	null	null	no	_	_	_	_	_
+6	Œœ«	N	MOZ	5	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_
+8	»ÂùŒ«ÿ—	PREP	ADVRB	18	null	null	no	_	_	_	ArgM-CAU	_
+17	„—Õ„ 	N	NVE	18	„—Õ„ ßn-11665	„‘Œ’Âßn-11381	no	_	_	_	_	_
+20	Œœ«Ê‰œ	N	SBJ	25	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	Arg0
+21	Å«œ«‘	N	OBJ	25	Ã«Ì“Âßn-12172	„‘Œ’Âßn-12756	no	_	_	_	_	Arg1
+2	»ÂùŒ«ÿ—	PREP	ADVRB	9	null	null	no	_	_	ArgM-CAU
+3	ò«—Â«Ì	N	POSDEP	2	„”«·Âßn-13011	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_
+7	ÿ·»	N	NVE	9	ÿ·»ßn-19500	—Œœ«œßn-13136	no	_	_	_
+1	Å”ù«“	PREP	ADVRB	11	null	null	no	_	_	ArgM-TMP	_	_	_	_
+3	’Õ» ùÂ«	N	POSDEP	1	ê› êÊßn-11493	—Œœ«œßn-13136	no	_	_	_	_	_	_	_
+6	”—«€	N	NVE	11	null	null	no	_	_	_	_	_	_	_
+23	œÌœê«‰	N	POSDEP	22	⁄Ì‰ßn-10314	—«»ÿÂßn-13628	no	_	_	_	_	_	_	_
+9	»Âù”ÊÌ	PREP	NPP	6	null	null	no	_	_	_
+3	ò„«·	N	ADVRB	11	ò«„· »Êœ‰ßn-12482	„‘Œ’Âßn-12756	no	_	_	ArgM-MNR	_
+2	Å”ù«“	PREP	ADVRB	10	null	null	no	_	_	ArgM-TMP
+6	œ—»—«»—	PREP	ADVRB	10	null	null	no	_	_	ArgM-LOC
+7	ŒÊ«»Ì	N	MOZ	6	—ÊÌ«ßn-15102	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	Arg1	Arg1	_	_	_	_
+25	 ⁄»Ì—	N	MOS	29	 ⁄»Ì—ßn-20347	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	_	Arg2	_
+26	ŒÊ«»	N	MOZ	25	—ÊÌ«ßn-15102	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	_	_	_
+31	Œœ«Ê‰œ	N	SBJ	35	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	_	_	Arg0
+2	¬‰ùç‰«‰	ADJ	NPREMOD	3	null	null	no	_	_	_	_
+6	”—	PREP	NPP	10	null	null	no	_	_	_	_
+1	œ—‰ ÌÃÂ	SUBR	ROOT	0	null	null	no	_	_	ArgM-DIS	_	_
+11	œÂù»«—	ADV	ADVRB	14	null	null	no	_	_	_	ArgM-EXT	_
+17	”Ê—Â	N	SBJ	22	”Ê—Âßn-20384	Œ»—ßn-13975	no	_	_	_	_	Arg1
+22	„Ìù»«‘œ	V	PRD	7	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+13	„Ìù—”œ	V	ROOT	0	—”Ìœ‰ßv-8613	—Œœ«œßn-13136	no	Y	—”Ìœ‰.69	_	_
+1	Â„ùç‰Ì‰	ADV	ADVRB	7	null	null	no	_	_	ArgM-ADV
+3	‰»Êœ‰œ	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+4	œ” 	N	NVE	9	œ” ßn-13537	—«»ÿÂßn-13628	no	_	_	_	_	_
+6	ò«—Â«Ì	N	VPP	9	ò«—ßn-12781	—Œœ«œßn-13136	no	_	_	_	Arg3	_
+9	»—œ«—‰œ	V	VCONJ	14	„‰’—› ‘œ‰ßv-8543	—Œœ«œßn-13136	no	Y	œ” ù»—œ«‘ ‰.521	_	_	_
+11	œ—»—«»—	PREP	AJPP	13	null	null	no	_	_	_	_	_
+7	Œœ«Ì	N	MOZ	6	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_
+20	‰”» 	N	NVE	22	‰”»  œ«œ‰ßn-10102	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_
+22	„Ìùœ«œ‰œ	V	ROOT	0	‰”»  œ«œ‰ßv-9142	—Œœ«œßn-13136	no	Y	‰”» ùœ«œ‰.70	_	_	_
+4	Œœ«	N	OBJ	10	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	Arg1	_
+6	»ÂùŒ«ÿ—	PREP	VPP	10	null	null	no	_	_	Arg3	_
+8	‘	PR	MOZ	7	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_
+10	‰„Ìùê› ‰œ	V	VCONJ	17	null	null	no	Y	”Å«”ùê› ‰.71	_	_
+8	«ﬁœ«„« 	N	SBJ	14	ò‰‘ßn-12746	—Œœ«œßn-13136	no	_	_	_	Arg0
+11	 «ÀÌ—Ì	N	NVE	14	 «ÀÌ—ßn-11252	„‘Œ’Âßn-12756	no	_	_	_	_
+14	‰ê–«‘ 	V	ROOT	0	«À— »Œ‘Ìœ‰ßv-9349	—Œœ«œßn-13136	no	Y	 √ÀÌ—ùê–«‘ ‰.127	_	_
+4	›—’ 	N	NPP	5	›—’ ßn-12497	„œ ßn-12693	no	_	_	Arg3	_	_	_
+17	Œœ«	N	NPP	18	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	Arg3
+14	»«“ê‘ 	V	ROOT	0	»—ê‘ ‰ßv-8032	—Œœ«œßn-13136	no	Y	»«“ùê‘ ‰.363	_	_
+10	ÿÊ—Ì	N	ADVRB	8	null	null	no	_	_	ArgM-ADV2	_	_
+15	Œœ«	N	MOZ	14	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_
+18	ﬁ—«—	N	NVE	19	null	null	no	_	_	_	_	_
+21	⁄–«»	N	OBJ	26	‰ò» ßn-11559	—Œœ«œßn-13136	no	_	_	_	_	Arg1
+25	‰«“·	ADJ	MOS	26	null	null	no	_	_	_	_	Arg2
+1	Œœ«Ê‰œ	N	SBJ	9	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	Arg0	_	_	_	_	_
+20	Ê“Ìœ	V	VCONJ	28	null	null	no	Y	Ê“Ìœ‰.549	_	_	_	_	_	_
+28	‰„Êœ	V	VCONJ	34	‰«»Êœ ò—œ‰ßv-9575	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_	_	_	_	_
+35	»ÂùÿÊ—Ì	PREP	ADVRB	34	null	null	no	_	_	_	_	_	ArgM-MNR	_	_
+42	‰„«‰œ‰œ	V	VCONJ	53	‰Ã«  Ì«› ‰ßv-8668	—Œœ«œßn-13136	no	Y	„«‰œ‰.369	_	_	_	_	_	_
+51	⁄–«»	N	NPP	52	‰ò» ßn-11559	—Œœ«œßn-13136	no	_	_	_	_	_	_	_	Arg3
+2	»⁄œ«“	PREP	ADVRB	12	null	null	no	_	_	ArgM-TMP	_
+4	⁄–«»	N	MOZ	3	‰ò» ßn-11559	—Œœ«œßn-13136	no	_	_	_	_
+25	‘—«Ìÿ	N	ADVRB	30	‘—«Ìÿßn-12506	null	no	_	_	_	_	ArgM-ADV	_
+26	”Œ 	ADJ	NPOSTMOD	25	‘—«Ìÿßn-12506	ù„‘Œ’Âßn-12756	no	_	_	_	_	_	_
+20	„Œ’Ê’«	ADV	PREDEP	21	null	null	no	_	_	_	_
+2	œ—„Ì«‰	PREP	VPP	8	null	null	no	_	_	Arg3	_	_	_
+12	»Âù”ÊÌ	PREP	NPP	14	null	null	no	_	_	_	Arg3	_	_
+13	Œœ«	N	POSDEP	12	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	_
+18	⁄–«»	N	VPP	22	‰ò» ßn-11559	—Œœ«œßn-13136	no	_	_	_	_	Arg3	_
+19	«·ÂÌ	ADJ	NPOSTMOD	18	—»«‰Ìßa-2083	„‘Œ’Âßn-12756	no	_	_	_	_	_	_
+28	«À—	N	NVE	29	«À—ê–«—Ìßn-10445	—Œœ«œßn-13136	no	_	_	_	_	_	_
+6	Œœ«	N	NPP	7	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	Arg3	_	_	_	_
+13	⁄–«»	N	VPP	17	‰ò» ßn-11559	—Œœ«œßn-13136	no	_	_	_	Arg3	_	_	_
+22	Œœ«	N	MOZ	21	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	_	_
+23	»Âù”ÊÌ	PREP	NPP	21	null	null	no	_	_	_	_	_	_	_
+30	—”«· 	N	MOZ	29	null	null	no	_	_	_	_	_	_	_
+32	Ì„	V	VCL	19	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_	_
+1	À„—Â	N	SBJ	6	»—ßn-13477	—Œœ«œßn-13136	no	_	_	Arg1	_
+12	 «ÀÌ—Ì	N	NVE	16	 «ÀÌ—ßn-11252	„‘Œ’Âßn-12756	no	_	_	_	_
+13	œ—„Ì«‰	PREP	NPP	12	null	null	no	_	_	_	Arg3
+16	‰ê–«‘ 	V	ROOT	0	«À— ê–«‘ ‰ßv-16383	—Œœ«œßn-13136	no	Y	«À—ùê–«‘ ‰.516	_	_
+1	Â„ùç‰Ì‰	ADV	ADVRB	8	null	null	no	_	_	ArgM-ADV	_	_
+3	«‰Ÿ«—	N	ADVRB	8	‰ê«Âßn-10631	—Œœ«œßn-13136	no	_	_	ArgM-LOC	_	_
+4	⁄„Ê„Ì	ADJ	NPOSTMOD	3	null	null	no	_	_	_	_	_
+13	»Âù”—«€	PREP	VPP	15	null	null	no	_	_	_	Arg4
+5	Ì„	V	VCONJ	9	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_
+9	Ì„	V	VCL	2	»Êœ‰ßv-16430	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_
+2	»« ÊÃÂù»Â	PREP	ADVRB	13	null	null	no	_	_	ArgM-ADV	_
+12	ﬁ—«—	N	NVE	13	Ê÷⁄Ì ßn-12745	„‘Œ’Âßn-12756	no	_	_	_	_
+7	Ê—Êœ	N	OBJ	15	œŒÊ·ßn-10411	—Œœ«œßn-13136	no	_	_	_	Arg1
+7	œ” 	N	NVE	13	œ” ßn-13537	—«»ÿÂßn-13628	no	_	_	_	_
+11	òÀÌ›	ADJ	NPOSTMOD	10	òÀÌ›ßa-250	„‘Œ’Âßn-12756	no	_	_	_	_
+2	ÕﬁÌﬁ 	N	OBJ	7	ÕﬁÌﬁ ßn-10263	„‘Œ’Âßn-12756	no	_	_	Arg1
+2	⁄· 	N	OBJ	6	”»»ßn-13414	null	no	_	_	Arg1
+10	»⁄œ«“	PREP	ADVRB	13	null	null	no	_	_	_	ArgM-TMP
+2	»ÂùŒ«ÿ—	PREP	ADVRB	18	null	null	no	_	_	_	ArgM-CAU
+6	‘ò„	N	VPP	9	œ·ßn-11297	—«»ÿÂßn-13628	no	_	_	Arg3	_
+8	ﬁ—«—	N	NVE	9	null	null	no	_	_	_	_
+11	·ﬁ»	N	VPP	18	·ﬁ»ßn-13062	null	no	_	_	_	Arg2
+17	Ì«œ	N	NVE	18	null	null	no	_	_	_	_
+18	‘œÂù«” 	V	ROOT	0	Ì«œ ò—œ‰ßv-9190	—Œœ«œßn-13136	no	Y	Ì«œùò—œ‰.497	_	_
+11	ﬁ—«—	N	NVE	12	null	null	no	_	_	_
+12	œÊ· 	N	MOZ	11	ÂÌ«  œÊ· ßn-13220	„‘Œ’Âßn-12756	no	_	_	_	_	_
+15	‘„«—	N	VPRT	16	null	null	no	_	_	_	_	_
+16	„Ìù—› 	V	VCONJ	37	»Â ‘„«— ¬„œ‰ßv-8084	—Œœ«œßn-13136	no	Y	»Âù‘„«—ù—› ‰.561	_	_	_
+27	„‘—ﬁù“„Ì‰	N	MOZ	26	null	null	no	_	_	_	_	_
+28	„Õ”Ê»	ADJ	MOS	29	„Õ”Ê»ßa-1102	„‘Œ’Âßn-12756	no	_	_	_	Arg2	_
+29	„Ìù‘œ	V	POSDEP	2	null	null	no	Y	ò—œ‰.25	_	_	_
+32	œ«—«Ì	ADJ	MOS	37	null	null	no	_	_	_	_	Arg2
+34	»Ì‘ù«“	ADJ	NPREMOD	36	null	null	no	_	_	_	_	_
+36	‰›—	N	POSDEP	33	”—ßn-10152	«‰œ«“Âßn-12768	no	_	_	_	_	_
+5	»Âù”ÊÌ	PREP	VPP	7	null	null	no	_	_	Arg3
+6	—«” 	ADJ	NPOSTMOD	5	—«” ßa-546	„‘Œ’Âßn-12756	no	_	_	_	_
+18	«’—«—	N	NVE	19	«·Õ«Õßn-14330	—Œœ«œßn-13136	no	_	_	_	_
+1	»⁄œ«“	PREP	ADVRB	11	null	null	no	_	_	ArgM-TMP	_	_	_
+8	‰›—	N	POSDEP	6	”—ßn-10152	«‰œ«“Âßn-12768	no	_	_	_	_	_	_
+13	ÌòÌù«“	ADJ	APREMOD	14	null	null	no	_	_	_	_	_	_
+5	»Ìù‰ ÌÃÂ	ADV	ADVC	6	»Âùœ—œ‰ŒÊ—ßa-141	„‘Œ’Âßn-12756	no	_	_	Arg2	_	_
+6	„«‰œ	V	PRD	2	»Êœ‰ßv-16430	—Œœ«œßn-13136	no	Y	„«‰œ‰.369	_	_	_
+13	‰›—Ì‰	N	NVE	14	‰›—Ì‰ßn-22931	null	no	_	_	_	_	_
+9	‰ò‰	V	PRD	5	ò«— ò—œ‰ßv-15721	—Œœ«œßn-13136	no	Y	ò—œ‰.297	_	_	_
+10	“Ì—«òÂ	SUBR	AJUCL	9	null	null	no	_	_	_	ArgM-CAU	_
+15	‰„ÌùÅ”‰œœ	V	PRD	10	Å”‰œÌœ‰ßv-21834	—Œœ«œßn-13136	no	Y	Å”‰œÌœ‰.569	_	_	_
+1	œ—‰ ÌÃÂ	SUBR	ROOT	0	null	null	no	_	_	ArgM-DIS
+11	œ—ê«Â	N	NPP	13	œ—ê«Âßn-10373	‘Ì¡ßn-12703	no	_	_	_	_	Arg3	_
+1	»⁄œ«“	PREP	ADVRB	10	null	null	no	_	_	ArgM-TMP	_	_
+7	⁄–«»	N	MOZ	6	‰ò» ßn-11559	—Œœ«œßn-13136	no	_	_	_	_	_
+8	Ê«—œ	ADJ	MOS	10	null	null	no	_	_	Arg2	_	_
+15	Œ«’Ì	ADJ	NPOSTMOD	14	„Œ ’ßa-1538	„‘Œ’Âßn-12756	no	_	_	_	_	_
+16	‰Ì› «œÂ	V	PRD	13	ÅÌ‘ ¬„œ‰ßv-9399	—Œœ«œßn-13136	no	Y	« ›«ﬁù«› «œ‰.221	_	_	_
+2	ﬁ÷ÌÂ	N	OBJ	7	—Œœ«œßn-13136	—Œœ«œßn-13136	no	_	_	Arg1	_	_
+5	ÌòÌù«“	ADJ	NPREMOD	6	null	null	no	_	_	_	_	_
+13	„«Ã—«Ì	N	OBJ	23	—Œœ«œßn-13136	—Œœ«œßn-13136	no	_	_	_	_	Arg3
+14	‰›—Ì‰	N	MOZ	13	‰›—Ì‰ßn-22931	null	no	_	_	_	_	_
+5	Œ»—	N	MOZ	3	«Œ»«—ßn-11470	Œ»—ßn-13975	no	_	_	_	_	_	_
+10	«–‰	N	POSDEP	9	—Œ’ ßn-13708	Œ»—ßn-13975	no	_	_	_	_	_	_
+6	Å—ù«“	ADJ	NPREMOD	7	null	null	no	_	_	_	_
+2	œ—ù„Ì«‰Â	PREP	MOS	4	null	null	no	_	_	Arg2	_	_	_
+9	Ã·ÊÌ	PREP	OBJ	12	Ã·Êßn-13563	Ã«ßn-12733	no	_	_	_	Arg1	_	_
+3	ﬁ—⁄Â	N	SBJ	7	ﬁ—⁄Âßn-23516	null	no	_	_	Arg1	_	_	_
+7	œ—¬„œ	V	ROOT	0	null	null	no	Y	œ—ù¬„œ‰.868	_	_	_	_
+8	œ—‰ ÌÃÂ	SUBR	AJUCL	7	null	null	no	_	_	ArgM-CAU	_	_	ArgM-DIS
+18	›Ê—Ì	ADV	ADVRB	21	›Ê—Ìßa-2453	„‘Œ’Âßn-12756	no	_	_	_	_	ArgM-TMP	_
+7	‘ò„	N	MOZ	6	œ·ßn-11297	—«»ÿÂßn-13628	no	_	_	_	_	_
+18	‘	PR	MOZ	17	null	null	no	_	_	_	_	_
+6	ﬁ»Ê·	ADJ	NVE	7	ﬁ»Ê·ßa-1553	„‘Œ’Âßn-12756	no	_	_	_	_	_	_	_
+3	Õ«·Ì	N	ADVRB	11	«ÕÊ«·ßn-13606	Ê÷⁄Ì ßn-12745	no	_	_	ArgM-MNR	_
+8	‘ò„	N	ADVRB	11	œ·ßn-11297	—«»ÿÂßn-13628	no	_	_	ArgM-LOC	_
+17	”«ÌÂ	N	NPP	26	”«ÌÂßn-14341	ÿ—Õßn-12335	no	_	_	_	Arg3
+19	òœÊ»‰Ì	N	MOZ	18	null	null	no	_	_	_	_
+23	ﬁ”„	N	NPP	21	’Ê— ßn-11379	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_
+4	Œœ«	N	MOZ	3	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_
+11	œ—ê«Â	N	NPP	13	œ—ê«Âßn-10373	‘Ì¡ßn-12703	no	_	_	_	Arg3
+3	”„ 	N	NPP	5	Ã«‰»ßn-10268	Ã«ßn-13280	no	_	_	Arg4
+2	Ê«—œ	ADJ	MOS	4	null	null	no	_	_	Arg2	_
+6	Œ»—	N	OBJ	12	Œ»—ßn-12766	Œ»—ßn-12766	no	_	_	_	Arg1
+5	Œ»—Ì	N	MOZ	4	Œ»—ßn-12766	Œ»—ßn-12766	no	_	_	_	_	_	_
+9	’œﬁ	N	POSDEP	8	œ—” Ìßn-11198	„‘Œ’Âßn-12756	no	_	_	_	_
+9	—«” 	N	NVE	10	—«” ßa-546	null	no	_	_	_	_
+10	„ÌùêÊÌœ	V	PRD	7	null	null	no	Y	—«” ùê› ‰.747	_	_
+2	Å”ù«“	PREP	ADVRB	8	null	null	no	_	_	ArgM-TMP	_	_	_
+4	„«Ã—«	N	POSDEP	2	—Œœ«œßn-13136	—Œœ«œßn-13136	no	_	_	_	_	_	_
+14	Ê«—œ	ADJ	MOS	16	null	null	no	_	_	_	Arg2	_	_
+10	œ·Ì·Ì	N	MOS	11	»—Â«‰ßn-10163	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	Arg2
+21	Œ»—	N	AJPP	22	«Œ»«—ßn-11465	Œ»—ßn-13975	no	_	_	_	_	_	_
+4	«”—«—	N	ADVRB	12	”—ßn-13702	Œ»—ßn-13975	no	_	_	_	ArgM-INS	_	_
+5	€Ì»Ì	ADJ	NPOSTMOD	4	€Ì»Ìßa-1846	„‘Œ’Âßn-12756	no	_	_	_	_	_	_
+9	ÅÊ‘ÌœÂ	ADJ	MOS	10	ÅÊ‘ÌœÂßa-905	„‘Œ’Âßn-12756	no	_	_	Arg2	_	_	_
+10	ù»Êœ	V	PRD	6	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_
+1	Å”ù«“	PREP	ADVRB	12	null	null	no	_	_	ArgM-TMP	_	_
+5	⁄	ARAB	POSDEP	3	null	null	no	_	_	_	_	_
+8	«”„«	N	OBJ	12	null	null	no	_	_	Arg1	_	_
+3	¬€«“	N	ADVRB	6	¬€«“ßn-13261	œÊ—Â “„«‰Ìßn-12603	no	_	_	ArgM-TMP	_	_	_	_	_	_
+6	»ÊœÂù«” 	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_	_	_	_
+11	¬„ÌŒ Â	ADJ	MOS	12	ç‰œ”Ì” „Ìßa-2343	„‘Œ’Âßn-12756	no	_	_	_	Arg2	_	_	_	_	_
+12	ù‘œÂù«” 	V	VCONJ	16	„Œ·Êÿ ò—œ‰ßv-18868	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_	_	_	_	_	_
+14	»Âù’Ê— 	PREP	VPP	16	null	null	no	_	_	_	_	Arg3	_	_	_	_
+16	œ—¬„œÂù«” 	V	VCONJ	27	null	null	no	Y	œ—ù¬„œ‰.472	_	_	_	_	_	_	_
+22	»œ»Ê	ADJ	NPOSTMOD	21	„ ⁄›‰ßa-1052	„‘Œ’Âßn-12756	no	_	_	_	_	_	_	_	_	_
+24	·Ã‰	N	APP	21	·Ã‰ßn-15930	„«œÂßn-14032	no	_	_	_	_	_	_	_	_	_
+26	 »œÌ·	N	NVE	27	 »œÌ·ßn-13632	—Œœ«œßn-13136	no	_	_	_	_	_	_	_	_	_
+30	Õ«· 	N	OBJ	32	Ê÷⁄Ì ßn-12745	„‘Œ’Âßn-12756	no	_	_	_	_	_	_	Arg2	_	_
+32	ÅÌœ«ò—œÂ	V	VCONJ	42	null	null	no	Y	ÅÌœ«ùò—œ‰.824	_	_	_	_	_	_	_
+36	Õ«· 	N	VPP	38	Ê÷⁄Ì ßn-12745	„‘Œ’Âßn-12756	no	_	_	_	_	_	_	_	Arg3	_
+38	œ—¬„œÂ	V	VCONJ	42	null	null	no	Y	œ—ù¬„œ‰.472	_	_	_	_	_	_	_
+42	ê—œÌœÂù«” 	V	PRD	29	ê—œÌœ‰ßv-9382	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_	_	_	_	_	_
+1	„—Õ·Â	N	SBJ	6	›«“ßn-12698	œÊ—Â “„«‰Ìßn-12603	no	_	_	Arg1	_
+8	—ÊÕ	N	SBJ	15	—ÊÕßn-10348	„”»»ßn-13036	no	_	_	_	Arg0
+9	«‰”«‰Ì	ADJ	NPOSTMOD	8	»‘—Ìßa-2045	„‘Œ’Âßn-12756	no	_	_	_	_
+10	«“Ã«‰»	PREP	VPP	15	null	null	no	_	_	_	ArgM-ADV
+11	Œœ«	N	POSDEP	10	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_
+14	œ„ÌœÂ	N	NVE	15	null	null	no	_	_	_	_
+7	»Âù⁄‰Ê«‰	PREP	ADVRB	20	null	null	no	_	_	_	ArgM-ADV	_	_	_
+15	⁄	ARAB	POSDEP	13	null	null	no	_	_	_	_	_	_	_
+23	Œœ«	N	VPP	29	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	_	_
+28	ùÃ«	ADJ	VPRT	29	null	null	no	_	_	_	_	_	_	_
+4	Œÿ«»	N	NVE	5	Œÿ«»ßn-17515	—Œœ«œßn-13136	no	_	_	_	_	_	_	_	_
+23	—ÊÕ	N	ADVRB	27	—ÊÕßn-10348	„”»»ßn-13036	no	_	_	_	_	_	_	Arg1	_
+4	»ÂùŒ«ÿ—	PREP	MOS	8	null	null	no	_	_	Arg2	_
+6	—ÊÕ	N	POSDEP	4	—ÊÕßn-10348	„”»»ßn-13036	no	_	_	_	_
+7	ÊÌéÂù«Ì	ADJ	NPOSTMOD	6	„Œ ’ßa-1538	„‘Œ’Âßn-12756	no	_	_	_	_
+12	ò«·»œ	N	VPP	14	ÂÌò·ßn-12946	‘Ì¡ßn-12703	no	_	_	_	Arg3
+3	—ÊÕÌ	N	SBJ	8	—ÊÕßn-10348	„”»»ßn-13036	no	_	_	Arg0	_
+11	Œœ«	N	MOZ	10	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_
+12	»——ÊÌ	PREP	NPP	10	null	null	no	_	_	_	_
+4	ùÕò„	N	ADVRB	15	null	null	no	_	_	ArgM-ADV	_
+20	ùÕò„	N	ADVRB	29	null	null	no	_	_	_	ArgM-ADV
+2	Ã‰»ÂùÂ«Ì	N	OBJ	12	ÃÂ ßn-11382	„‘Œ’Âßn-11381	no	_	_	Arg1	_	_
+6	⁄	ARAB	POSDEP	4	null	null	no	_	_	_	_	_
+11	Œœ«	N	MOZ	10	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_
+15	çÊ‰ùÊç—«	N	POSDEP	14	null	null	no	_	_	_	_	_
+22	œ—ÕﬁÌﬁ 	N	ADVRB	31	null	null	no	_	_	_	_	ArgM-ADV
+23	Œœ«	N	NPP	30	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	Arg3
+26	—«” «Ì	N	ADVRB	31	null	null	no	_	_	_	_	_
+8	⁄ÿ«	N	NVE	9	⁄ÿ«ßn-13615	—Œœ«œßn-13136	no	_	_	_	_	_
+12	‰”·	N	OBJ	17	Œ«‰œ«‰ßn-11730	ê—ÊÂßn-12753	no	_	_	_	_	Arg1
+1	„‘Ì 	N	SBJ	5	 ﬁœÌ—ßn-11574	—Œœ«œßn-13136	no	_	_	Arg1	_	_	_
+4	ﬁ—«—	N	NVE	5	Ê÷⁄Ì ßn-12745	„‘Œ’Âßn-12756	no	_	_	_	_	_	_
+10	œ«‘ Âù»«‘œ	V	PRD	6	œ«‘ ‰ßv-8512	—Œœ«œßn-13136	no	Y	œ«‘ ‰.39	_	_	_	_
+19	œ«—«Ì	ADJ	MOS	21	null	null	no	_	_	_	_	_	Arg2
+5	“Ì«œÌ	ADJ	NPREMOD	6	»·«„’—›ßa-17786	„‘Œ’Âßn-12756	no	_	_	_
+9	⁄	ARAB	POSDEP	7	null	null	no	_	_	_
+3	»⁄œ«“	PREP	ADVRB	9	null	null	no	_	_	ArgM-TMP
+7	⁄	ARAB	POSDEP	5	null	null	no	_	_	_
+3	»Âù”—«€	PREP	VPP	5	null	null	no	_	_	Arg4	_	_
+19	›—Êœ	N	NVE	20	Å«ÌÌ‰ —› ‰ßn-12788	—Œœ«œßn-13136	no	_	_	_	_	_
+7	«‰œ«„	N	ADVRB	9	«‰œ«„ßn-18815	—«»ÿÂßn-13628	no	_	_	ArgM-LOC
+9	›—Ê—ÌŒ 	V	PRD	1	›—Ê —ÌŒ ‰ßv-8869	—Œœ«œßn-13136	no	Y	›—Êù—ÌŒ ‰.250	_
+5	”—Ì⁄	ADV	ADVRB	10	«ò”Å—”ßa-18373	„‘Œ’Âßn-12756	no	_	_	ArgM-ADV	_
+9	ÅÌ	N	NVE	10	null	null	no	_	_	_	_
+9	›—Êœ	N	NVE	10	Å«ÌÌ‰ —› ‰ßn-12788	—Œœ«œßn-13136	no	_	_	_	_	_	_	_
+29	Å«Ì«‰	N	ADVRB	35	Å«Ì«‰ßn-13269	null	no	_	_	_	_	_	_	ArgM-EXT
+30	⁄„—	N	MOZ	29	⁄„—ßn-12622	œÊ—Â “„«‰Ìßn-12603	no	_	_	_	_	_	_	_
+34	»Â—Âù„‰œ	ADJ	MOS	35	„ „ ⁄ßa-17760	„‘Œ’Âßn-12756	no	_	_	_	_	_	_	Arg2
+13	›—Êœ	N	NVE	14	Å«ÌÌ‰ —› ‰ßn-12788	—Œœ«œßn-13136	no	_	_	_	_
+5	’›«	N	MOZ	4	’›«ßn-15080	‘Ì¡ßn-12703	no	_	_	_	_	_	_	_	_
+11	«“«Ì‰ù—Ê	SUBR	AJUCL	10	null	null	no	_	_	_	ArgM-DIS	_	_	_	_
+15	’›«	N	MOZ	14	’›«ßn-15080	‘Ì¡ßn-12703	no	_	_	_	_	_	_	_	_
+20	..«	N	MOZ	19	null	null	no	_	_	_	_	_	_	_	_
+23	Œœ«	N	MOZ	22	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	_	_	_
+27	Ê«—œ	ADJ	MOS	28	null	null	no	_	_	_	_	Arg2	_	_	_
+40	„‰ŸÊ—	N	SBJ	42	Âœ›ßn-11403	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	Arg1	_	_
+44	›—Êœ	N	NVE	45	Å«ÌÌ‰ —› ‰ßn-12788	—Œœ«œßn-13136	no	_	_	_	_	_	_	_	_
+17	«ﬁ—«—	N	NVE	18	«ﬁ—«—ßn-22419	null	no	_	_	_	_	_
+6	ê‘ 	V	ROOT	0	„«„Ê— ò—œ‰ßv-15650	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_
+8	„Ì—«À	N	OBJ	23	«—Àßn-10427	—Œœ«œßn-13136	no	_	_	_	Arg1
+9	‰»Ê 	N	MOZ	8	null	null	no	_	_	_	_
+11	ê‰ÃÌ‰Â	N	NCONJ	9	ê‰ÃÌ‰Âßn-15773	‘Ì¡ßn-12703	no	_	_	_	_
+12	œ«‰‘	N	MOZ	11	‘‰«Œ ßn-12727	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_
+22	ÊœÌ⁄Â	N	VPRT	23	null	null	no	_	_	_	_
+3	»” —	N	VPP	6	»«·Ì‰ßn-10323	‘Ì¡ßn-12703	no	_	_	Arg3	_	_
+5	ﬁ—«—	N	NVE	6	null	null	no	_	_	_	_	_
+9	Õ«·Ì	N	ADVRB	25	null	null	no	_	_	_	_	ArgM-ADV
+10	ùòÂ	SUBR	NCL	9	null	null	no	_	_	_	_	_
+11	“»«‰	N	SBJ	21	“»«‰ßn-13978	‘Ì¡ßn-12703	no	_	_	_	Arg1	_
+19	»ÂùÃ«Ì	PREP	VPP	21	null	null	no	_	_	_	_	_	_	Arg3	_	_
+33	Ê’«Ì«	N	OBJ	42	null	null	no	_	_	_	_	_	_	_	_	Arg1
+3	ÌòÌù«“	ADJ	NPREMOD	4	null	null	no	_	_	_	_	_
+10	„»«—ò	ADJ	NPOSTMOD	9	Â„«ÌÊ‰ßa-1636	„‘Œ’Âßn-12756	no	_	_	_	_	_
+12	43»«—	ADV	ADVRB	16	null	null	no	_	_	_	ArgM-EXT	_
+16	¬„œÂù«” 	V	VCONJ	23	null	null	no	Y	¬„œ‰.31	_	_	_
+19	”Ê—Âù«Ì	N	SBJ	23	”Ê—Âßn-20384	Œ»—ßn-13975	no	_	_	_	_	Arg1
+23	„Ìù»«‘œ	V	PRD	8	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+7	œ«—«Ì	ADJ	MOS	12	€‰Ìßa-46	„‘Œ’Âßn-12756	no	_	_	_	Arg2	_
+17	»⁄œ«“	PREP	ADVRB	19	null	null	no	_	_	_	_	ArgM-TMP
+19	„Ìù»«‘œ	V	PRD	6	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+12	»ÊœÂù«” 	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_
+2	»Âùﬁœ—Ì	ADV	ADVRB	8	null	null	no	_	_	ArgM-EXT	_	_	_
+18	œ” 	N	NVE	19	Ìœßn-13538	—«»ÿÂßn-13628	no	_	_	_	_	_	_
+4	⁄	ARAB	POSDEP	2	null	null	no	_	_	_	_	_
+26	»Âù”ÊÌ	PREP	NPP	29	null	null	no	_	_	Arg3	_	_
+34	Å«œ«‘	N	MOZ	33	⁄Ê÷ßn-12178	„‘Œ’Âßn-12756	no	_	_	_	_	_
+39	⁄–«»	N	VPP	43	‰ò» ßn-11559	—Œœ«œßn-13136	no	_	_	_	_	Arg3
+11	Å” Ì	N	OBJ	20	·∆«„ ßn-24430	—Œœ«œßn-13136	no	_	_	_	Arg1	_
+13	¬À«—	N	NCONJ	11	«À—ê–«—Ìßn-10445	—Œœ«œßn-13136	no	_	_	_	_	_
+14	“‘ 	ADJ	NPOSTMOD	13	‰«„—€Ê»ßa-132	„‘Œ’Âßn-12756	no	_	_	_	_	_
+22	Œÿ—	N	OBJ	30	»Õ—«‰ßn-11606	—Œœ«œßn-13136	no	_	_	_	_	Arg1
+23	”Œ 	ADJ	NPOSTMOD	22	œÌ—›Â„ßa-1100	„‘Œ’Âßn-12756	no	_	_	_	_	_
+2	œ” 	N	OBJ	6	œ” ßn-13537	—«»ÿÂßn-13628	no	_	_	Arg1	_
+3	⁄	ARAB	POSDEP	1	null	null	no	_	_	_	_
+13	‰›Ê–	N	NVE	14	‰›Ê–ßn-11254	„‘Œ’Âßn-12756	no	_	_	_	_
+4	»ÂùÿÊ—	PREP	ADVRB	9	null	null	no	_	_	ArgM-MNR	_	_
+23	—Ê‘	PR	NPP	29	‰ÕÊÂßn-13373	—Œœ«œßn-13136	no	_	_	_	_	Arg3
+4	⁄	ARAB	POSDEP	2	null	null	no	_	_	_
+17	ç‰ê«·	N	NPP	14	ç‰ê«·ßn-14226	null	no	_	_	_
+9	„»«‘	V	PRD	1	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+7	œ” Ê—	N	OBJ	17	«„—ßn-11505	—Œœ«œßn-13136	no	_	_	_	Arg1
+15	⁄	ARAB	POSDEP	13	null	null	no	_	_	_	_
+4	⁄	ARAB	POSDEP	2	null	null	no	_	_	_	_
+7	„ÿ«»ﬁ	ADV	ADVRB	24	„ ‰«Ÿ—ßa-1570	„‘Œ’Âßn-12756	no	_	_	ArgM-ADV	_
+9	Œœ«	N	MOZ	8	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_
+15	⁄–«»	N	ADVRB	24	‰ò» ßn-11559	—Œœ«œßn-13136	no	_	_	Arg3	_
+16	”Œ 	ADJ	NPOSTMOD	15	œÌ—›Â„ßa-1100	„‘Œ’Âßn-12756	no	_	_	_	_
+19	»·«Ì	N	NCONJ	15	‰ò» ß	—Œœ«œßn-13136	no	_	_	_	_
+20	⁄ŸÌ„	ADJ	NPOSTMOD	19	»“—êßa-387	„‘Œ’Âßn-12756	no	_	_	_	_
+21	ÿÊ›«‰	N	MOZ	15	ÿÊ›«‰ßn-12097	null	no	_	_	_	_
+3	ÿÊ·	N	ADVRB	11	ÿÊ·ßn-12618	œÊ—Â “„«‰Ìßn-12603	no	_	_	ArgM-TMP	_	_
+7	«‰œòÌ	N	POSDEP	6	„⁄œÊœßa-123	null	no	_	_	_	_	_
+17	„ Â„	N	NVE	18	„ Â„ßn-14813	‰›—ßn-13075	no	_	_	_	_	_
+23	‘—Ê⁄	N	NVE	24	¬€«“ßn-12689	«‰œ«“Âßn-12768	no	_	_	_	_	_	_	_
+3	œ” Ê—	N	OBJ	8	«„—ßn-11505	—Œœ«œßn-13136	no	_	_	Arg1
+7	’«œ—	N	NVE	8	null	null	no	_	_	_
+1	Å”ù«“	PREP	ADVRB	14	null	null	no	_	_	ArgM-TMP	_	_
+2	Å«Ì«‰	N	POSDEP	1	 „«„ ò—œ‰ßn-12719	—Œœ«œßn-13136	no	_	_	_	_	_
+11	⁄	ARAB	POSDEP	9	null	null	no	_	_	_	_	_
+17	“»«‰	N	ADVRB	20	”Œ‰ßn-12982	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	ArgM-MNR	_
+18	”—Ì«‰Ì	ADJ	NPOSTMOD	17	null	null	no	_	_	_	_	_
+3	⁄	ARAB	POSDEP	1	null	null	no	_	_	_	_
+3	œ” Ê—	N	ADVRB	26	«„—ßn-11505	—Œœ«œßn-13136	no	_	_	_	ArgM-ADV
+5	ò·ÌÂ	ADJ	NPREMOD	6	ò·Ìßa-1550	„‘Œ’Âßn-12756	no	_	_	_	_
+14	»ÂùÃ“	PREP	NPP	6	null	null	no	_	_	_	_
+2	»Âù”—«€	PREP	VPP	5	null	null	no	_	_	Arg4	_	_	_
+9	ò›—	N	POSDEP	8	null	null	no	_	_	_	_	_	_
+8	‰Ì” Ì	V	PRD	4	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+4	ÃÊ‘Ìœ‰	N	NVE	5	›Ê—«‰ ò—œ‰ßv-8879	null	no	_	_	_	_	_	_
+10	ÅÌÊ‰œ	N	NVE	11	null	null	no	_	_	_	_	_	_
+11	ŒÊ—œ	V	VCONJ	19	null	null	no	Y	ÅÌÊ‰œùŒÊ—œ‰.679	_	_	_	_
+17	ò«„	N	VPP	19	null	null	no	_	_	_	_	Arg3	_
+19	›—Ê»—œ	V	VCONJ	22	›—Ê »—œ‰ßv-8866	—Œœ«œßn-13136	no	Y	›—Êù»—œ‰.677	_	_	_	_
+21	‰«»Êœ	ADJ	MOS	22	„‰Âœ„ßa-1202	„‘Œ’Âßn-12756	no	_	_	_	_	_	Arg2
+1	Å”ù«“	PREP	ADVRB	14	null	null	no	_	_	ArgM-TMP	_	_
+3	 „«„Ì	ADJ	NPREMOD	4	 „«„ßn-16534	„‘Œ’Âßn-12756	no	_	_	_	_	_
+6	œ” Ê—	N	ADVRB	14	«„—ßn-11505	—Œœ«œßn-13136	no	_	_	ArgM-ADV	_	_
+14	›—Ê»—œ	V	VCONJ	21	›—Ê »—œ‰ßv-8866	—Œœ«œßn-13136	no	Y	›—Êù»—œ‰.677	_	_	_
+20	ÅÂ·Ê	N	NVE	21	‰“œÌòßn-10189	Ã«ßn-12733	no	_	_	_	_	_
+24	ÿ»ﬁ	N	ADVRB	33	null	null	no	_	_	_	_	ArgM-ADV
+25	»—ŒÌù«“	ADJ	NPREMOD	26	null	null	no	_	_	_	_	_
+26	—Ê«Ì« 	N	MOZ	24	—Ê«Ì ßn-21628	Œ»—ßn-13974	no	_	_	_	_	_
+32	›—Êœ	N	NVE	33	Å«ÌÌ‰ —› ‰ßn-12788	—Œœ«œßn-13136	no	_	_	_	_	_
+6	ÕœÊœ	PREP	MOS	9	null	null	no	_	_	Arg2	_	_
+20	«œ«„Â	N	NVE	21	œ‰»«·Âßn-13567	—«»ÿÂßn-13628	no	_	_	_	_	_
+2	«Ê«Œ—	N	ADVRB	8	¬Œ—ßn-13504	«‰œ«“Âßn-12768	no	_	_	ArgM-TMP	_	_
+3	⁄„—	N	MOZ	2	⁄„—ßn-12915	„‘Œ’Âßn-12756	no	_	_	_	_	_
+21	”—	N	VPRT	22	null	null	no	_	_	_	_	_
+22	¬„œÂù«” 	V	PRD	14	»Â ”— ¬„œ‰ßv-8082	—Œœ«œßn-13136	no	Y	»Âù”—ù¬„œ‰.683	_	_	_
+3	«”„	N	OBJ	14	‰«„ßn-13061	null	no	_	_	Arg1	_	_
+4	«ò»—	N	MOZ	3	null	null	no	_	_	_	_	_
+6	⁄·„	N	NCONJ	4	⁄·„ßn-11404	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_
+15	Êù”Å”	SUBR	AJUCL	14	null	null	no	_	_	ArgM-ADV	_	_
+21	Å”ù«“	PREP	ADVRB	28	null	null	no	_	_	_	_	ArgM-TMP
+27	·»Ìò	N	NVE	28	null	null	no	_	_	_	_	_
+3	œ·	N	NVE	8	œ·ßn-14828	Ã«ßn-14035	no	_	_	_	_
+7	›«‰Ì	ADJ	NPOSTMOD	6	›«‰Ìßa-2459	„‘Œ’Âßn-12756	no	_	_	_	_
+5	œ—„Ê—œ	PREP	NPP	2	null	null	no	_	_	_
+7	—ÊÕ	N	MOZ	6	—ÊÕßn-10348	„”»»ßn-13036	no	_	_	_
+3	—ÊÕ	N	OBJ	7	—ÊÕßn-10348	„”»»ßn-13036	no	_	_	Arg1
+2	œÊ„Ì‰	ADJ	NPREMOD	3	null	null	no	_	_	_	_	_
+5	„Ìù»«‘œ	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+7	œ«—«Ì	ADJ	MOS	12	€‰Ìßa-46	„‘Œ’Âßn-12756	no	_	_	_	Arg2	_
+15	ÃÂ«‰Ì	ADJ	NPOSTMOD	14	ÃÂ«‰Ìßa-99	„‘Œ’Âßn-12756	no	_	_	_	_	_
+16	œ«‘ Âù«” 	V	PRD	6	œ«‘ ‰ßv-8512	—Œœ«œßn-13136	no	Y	œ«‘ ‰.39	_	_	_
+4	‰Ê‰«	N	TAM	11	null	null	no	_	_	Arg2
+8	»Ê‰«	N	NCONJ	4	null	null	no	_	_	_
+1	Ê·«œ 	N	SBJ	6	 Ê·œßn-11570	—Œœ«œßn-13136	no	_	_	Arg1
+2	œ—Œ‘«‰	ADJ	NPOSTMOD	1	›—Ê“‰œÂßa-1018	„‘Œ’Âßn-12756	no	_	_	_	_
+5	⁄	ARAB	POSDEP	3	null	null	no	_	_	_	_
+13	⁄»«— 	N	MOS	14	⁄»«— ßn-13127	—Œœ«œßn-13136	no	_	_	_	Arg2
+14	‰œ	V	PRD	12	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+17	„ﬁ«„	N	NPP	13	Å«Ìê«Â «Ã „«⁄Ìßn-12388	„‘Œ’Âßn-12756	no	_	_	_	_
+25	Œœ«	N	MOZ	24	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_
+3	€—ﬁ	ADJ	MOS	11	€—ﬁßn-16157	„‘Œ’Âßn-12756	no	_	_	Arg2
+11	„Ê÷Ê⁄	N	OBJ	16	„Ê÷Ê⁄ßn-12990	„‘Œ’Âßn-12756	no	_	_	_	Arg1
+8	ŒÊ«»	N	MOZ	7	—ÊÌ«ßn-15102	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_
+25	ê—œÌœ	V	PRD	10	ê—œÌœ‰ßv-9382	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_	_
+4	 ⁄»Ì—	N	SBJ	8	 ⁄»Ì—ßn-20347	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	Arg1	_	_
+6	ŒÊ«»	N	MOZ	4	—ÊÌ«ßn-15102	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	_
+16	„Ìù¬Ìœ	V	PRD	9	»Â œ‰Ì« ¬„œ‰ßv-8079	—Œœ«œßn-13136	no	Y	»Âùœ‰Ì«ù¬„œ‰.36	_	_	_	_
+21	—éÌ„	N	NCONJ	18	ÕòÊ„ ßn-11724	„‘Œ’Âßn-12756	no	_	_	_	_	_	_
+24	œ” 	N	VPP	27	œ” ßn-13537	—«»ÿÂßn-13628	no	_	_	_	_	_	ArgM-ADV
+6	Ã·ÊÌ	PREP	OBJ	10	null	null	no	_	_	Arg1	_	_	_	_
+8	 Ê·œ	N	POSDEP	6	 Ê·œßn-11570	—Œœ«œßn-13136	no	_	_	_	_	_	_	_
+11	œ” Ê—	N	NVE	12	«„—ßn-11505	—Œœ«œßn-13136	no	_	_	_	_	_	_	_
+10	¬“„«Ì‘	N	NVE	11	 ” ßn-10610	—Œœ«œßn-13136	no	_	_	_	_
+19	ù‰‘œ	V	ROOT	0	«ÿ·«⁄ œ«œ‰ßv-9299	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_
+6	ç‘„	N	AJPP	8	⁄Ì‰ßn-10314	—«»ÿÂßn-13628	no	_	_	_	_
+13	Œ«—Ã	N	ADVRB	17	»—Ê‰ßn-11860	Ã«ßn-12733	no	_	_	_	ArgM-LOC
+12	‰ò Â	N	VPP	14	Ã“¡ßn-11365	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	Arg3	_	_
+13	ÅÌ	N	NVE	14	null	null	no	_	_	_	_	_
+21	»ÌÂÊœÂ	ADV	ADVRB	23	»Âùœ—œ‰ŒÊ—ßa-141	„‘Œ’Âßn-12756	no	_	_	_	_	ArgM-MNR
+23	‰‘œÂù«” 	V	PRD	15	Œ·ﬁ ò—œ‰ßv-17680	—Œœ«œßn-13136	no	Y	Œ·ﬁùò—œ‰.444	_	_	_
+1	»œÌ‰ùÊ”Ì·Â	ADV	ADVRB	8	null	null	no	_	_	ArgM-DIS
+2	 ÊÕÌœ	N	OBJ	8	Ìò «Å—” Ìßn-21598	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	Arg1
+10	«œ«„Â	N	NVE	11	œ‰»«·Âßn-13567	—«»ÿÂßn-13628	no	_	_	_	_
+9	” 	V	PRD	5	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+16	„‰«”»	ADJ	NPOSTMOD	15	œ—ŒÊ—ßa-1544	„‘Œ’Âßn-12756	no	_	_	_	_	_
+3	—«ÂÂ«Ì	N	ADVRB	14	—Ê‘ßn-12704	—Œœ«œßn-13136	no	_	_	ArgM-ADV	_
+5	«ﬁœ«„	N	NVE	14	«ﬁœ«„ßn-10449	—Œœ«œßn-13136	no	_	_	_	_
+13	 ÊÕÌœ	N	NPP	7	Ìò «Å—” Ìßn-21598	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_
+2	ùòÂ	SUBR	NCL	1	null	null	no	_	_	_	_	_	_	_	_
+8	Œ«·Ì	ADJ	MOS	9	 ÂÌßa-1188	„‘Œ’Âßn-12756	no	_	_	Arg2	_	_	_	_	_
+20	Ã«‰	N	VPRT	22	Â” Ìßn-13366	‰›—ßn-13075	no	_	_	_	_	_	_	_	_
+29	»ÂùÃ“	PREP	NPP	25	null	null	no	_	_	_	_	_	_	_	_
+37	œÊ‘	N	VPP	39	‘«‰Âßn-11291	Ã«ßn-13844	no	_	_	_	_	_	_	Arg3	_
+1	¬‰ùÂ«	PR	SBJ	6	null	null	no	_	_	Arg0	Arg0
+2	»Ìùœ—‰ê	ADV	ADVRB	6	»Ìùœ—‰êßr-17132	„‘Œ’Âßn-12756	no	_	_	ArgM-MNR	_
+3	»Âù”„ 	PREP	VPP	6	null	null	no	_	_	Arg4	_
+5	›—’ 	N	NPP	6	›—’ ßn-12493	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	Arg3	_	_
+17	‰«»Êœ	ADJ	MOS	18	„‰Âœ„ßa-1202	„‘Œ’Âßn-12756	no	_	_	_	_	Arg2
+8	”Œ‰Ì	N	OBJ	9	”Œ‰ßn-12982	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	Arg1	_
+9	‰„ÌùêÊÌ‰œ	V	VCL	6	ê› ‰ßv-9244	—Œœ«œßn-13136	no	Y	ê› ‰.35	_	_	_
+10	œ—„ﬁ«»·	PREP	AJPP	12	null	null	no	_	_	_	_	_
+2	Å”ù«“	PREP	ADVRB	9	null	null	no	_	_	ArgM-TMP	_	_	_	_
+4	„«Ã—«	N	POSDEP	2	—Œœ«œßn-13136	—Œœ«œßn-13136	no	_	_	_	_	_	_	_
+13	œ” Ê—	N	NVE	14	«„—ßn-11505	—Œœ«œßn-13136	no	_	_	_	_	_	_	_
+19	›—«Â„	ADJ	MOS	20	„«Ì·ßa-119	„‘Œ’Âßn-12756	no	_	_	_	_	Arg2	_	_
+28	œ—”	N	MOS	32	œ—”ßn-13559	Œ»—ßn-13975	no	_	_	_	_	_	_	Arg2
+29	⁄»— Ì	N	MOZ	28	null	null	no	_	_	_	_	_	_	_
+4	œ” Ê—	N	SBJ	7	«„—ßn-11505	—Œœ«œßn-13136	no	_	_	Arg1	_	_
+6	’«œ—	ADJ	MOS	7	null	null	no	_	_	Arg2	_	_
+3	¬Œ—Ì‰	ADJ	NPREMOD	4	«‰ Â«ÌÌßa-1372	„‘Œ’Âßn-12756	no	_	_	_	_	_
+5	ÕÃ 	N	OBJ	10	»—Â«‰ßn-10163	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	Arg1	_	_
+24	‘	PR	MOZ	23	null	null	no	_	_	_	_	_
+4	¬“«—	N	MOZ	3	”Ì«” ßn-10530	—Œœ«œßn-13136	no	_	_	_	_	_	_
+9	·–«	SUBR	AJUCL	8	Å”ßr-21612	null	no	_	_	_	ArgM-DIS	_	_
+10	Å”ù«“	PREP	ADVRB	16	null	null	no	_	_	_	ArgM-TMP	_	_
+2	Œ»—	N	SBJ	8	Œ»—ßn-12766	Œ»—ßn-12766	no	_	_	Arg1	_
+7	ÅŒ‘	N	NVE	8	 Ê“Ì⁄ßn-10706	—Œœ«œßn-13136	no	_	_	_	_
+2	⁄· 	N	OBJ	7	”»»ßn-13414	null	no	_	_	Arg4	_	_	_
+8	Êù”Å”	SUBR	AJUCL	7	null	null	no	_	_	_	ArgM-DIS	_	_
+12	Œ»—	N	OBJ	16	Œ»—ßn-12766	Œ»—ßn-12766	no	_	_	_	_	Arg1	_
+18	»Âù”ÊÌ	PREP	VPP	20	null	null	no	_	_	_	_	_	Arg4
+7	” 	V	PRD	3	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+12	” 	V	PRD	8	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+2	»⁄œ«“	PREP	ADVRB	9	null	null	no	_	_	ArgM-TMP	_	_	_
+4	Ê«ﬁ⁄Â	N	POSDEP	2	—Œœ«œßn-13136	—Œœ«œßn-13136	no	_	_	_	_	_	_
+6	»Âù”„ 	PREP	NPP	8	null	null	no	_	_	Arg4	_	_	_
+16	ﬁ”„ 	N	OBJ	22	ﬁ”„ ßn-12840	‘Ì¡ßn-12703	no	_	_	_	_	Arg1	_
+27	⁄	ARAB	POSDEP	25	null	null	no	_	_	_	_	_	_
+31	ﬁ”„ 	N	VPP	37	ﬁ”„ ßn-12840	‘Ì¡ßn-12703	no	_	_	_	_	_	Arg3
+34	›«’·Â	N	NPP	31	›«’·Âßn-12930	«‰œ«“Âßn-11239	no	_	_	_	_	_	_
+36	›—”Œ	N	MOZ	34	›—”Œßn-25780	null	no	_	_	_	_	_	_
+13	Œœ«	N	POSDEP	12	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_
+2	„‘ò·	N	SBJ	5	„‘ò·ßn-13137	—Œœ«œßn-13136	no	_	_	Arg1	_	_
+4	»«Â„	ADV	ADVRB	6	„ ›ﬁ«ßr-19480	null	no	_	_	ArgM-COM	_
+8	À„—Â	N	SBJ	16	»—ßn-13477	—Œœ«œßn-13136	no	_	_	_	Arg1
+14	»ÂùŒ’Ê’	ADV	ADVRB	27	null	null	no	_	_	_	_	_	ArgM-ADV
+27	„Ìù‘œ	V	ROOT	0	«›“«Ì‘ œ«œ‰ßv-7574	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_	_	_
+9	«„œ«œÂ«Ì	N	VPP	12	«„œ«œßn-10742	—Œœ«œßn-13136	no	_	_	_	_	Arg3	_
+10	€Ì»Ì	ADJ	NPOSTMOD	9	€Ì»Ìßa-1846	„‘Œ’Âßn-12756	no	_	_	_	_	_	_
+2	›’·	N	SBJ	11	null	null	no	_	_	Arg1	_	_	_
+3	ÃœÌœÌ	ADJ	NPOSTMOD	2	‰Êßa-134	„‘Œ’Âßn-12756	no	_	_	_	_	_	_
+8	⁄	ARAB	POSDEP	6	null	null	no	_	_	_	_	_	_
+10	ÅœÌœ	ADJ	NVE	11	null	null	no	_	_	_	_	_	_
+12	“Ì—«	SUBR	AJUCL	11	null	null	no	_	_	ArgM-CAU	_	_	_
+14	Å«œ«‘Â«Ì	N	SBJ	33	Ã«Ì“Âßn-12172	„‘Œ’Âßn-12756	no	_	_	_	Arg1	_	_
+15	„Œ’Ê’	ADJ	NPOSTMOD	14	„Œ ’ßa-1538	„‘Œ’Âßn-12756	no	_	_	_	_	_	_
+20	⁄	ARAB	POSDEP	18	null	null	no	_	_	_	_	_	_
+31	⁄	ARAB	POSDEP	27	null	null	no	_	_	_	_	_	_
+39	ê—œ‰œ	V	VCONJ	45	null	null	no	Y	ò—œ‰.25	_	_	_	_
+2	‰Œ” Ì‰	ADJ	NPREMOD	3	‰Œ” Ì‰ßa-1367	„‘Œ’Âßn-12756	no	_	_	_	_	_
+9	”«Œ Âù‘œ	V	PRD	5	œ—”  ò—œ‰ßv-8535	—Œœ«œßn-13136	no	Y	”«Œ ‰.137	_	_	_
+15	⁄	ARAB	POSDEP	13	null	null	no	_	_	_	_	_
+20	œ—” 	ADJ	NVE	21	null	null	no	_	_	_	_	_
+3	Œœ«	N	VPP	4	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	Arg3	_	_	_
+15	«“ÿ—›	PREP	ADVRB	19	null	null	no	_	_	_	_	ArgM-ADV	_
+16	Œœ«	N	POSDEP	15	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	_
+16	Œœ«	N	POSDEP	15	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	_
+2	ÌòÌù«“	ADJ	NPREMOD	3	null	null	no	_	_	_	_	_
+6	ŒÊ«»	N	ADVRB	7	—ÊÌ«ßn-15102	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	ArgM-LOC	_	_
+12	›—„«‰	N	NVE	13	«„—ßn-11505	—Œœ«œßn-13136	no	_	_	_	_	_
+2	„«Ã—«	N	OBJ	6	—Œœ«œßn-13136	—Œœ«œßn-13136	no	_	_	Arg1	_	_
+15	œ·	N	MOZ	14	œ·ßn-14828	Ã«ßn-14035	no	_	_	_	_	_
+3	«»—«“	N	NVE	5	«»—«“ßn-14960	—Œœ«œßn-13136	no	_	_	_	_	_
+9	›—„«‰	N	OBJ	13	«„—ßn-11505	—Œœ«œßn-13136	no	_	_	_	_	Arg1
+4	ê—œ‰	N	POSDEP	3	ê—œ‰ßn-10188	—«»ÿÂßn-13628	no	_	_	_	_
+10	›—„«‰	N	ADVRB	13	«„—ßn-11505	—Œœ«œßn-13136	no	_	_	_	ArgM-ADV
+13	‰ò—œ	V	ROOT	0	ò«— ò—œ‰ßv-7588	—Œœ«œßn-13136	no	Y	⁄„·ùò—œ‰.370	_	_
+2	‰œ«	N	NVE	3	null	null	no	_	_	_	_	_	_
+4	òÂù	SUBR	VCL	3	null	null	no	_	_	Arg1	_	_	_
+13	“Ì—«	SUBR	AJUCL	12	null	null	no	_	_	_	ArgM-CAU	_	_
+20	Õ«’·	N	NVE	21	À„—ßn-11552	—Œœ«œßn-13136	no	_	_	_	_	_	_
+21	ê—œÌœ	V	VCONJ	28	ò”» ò—œ‰ßv-16262	—Œœ«œßn-13136	no	Y	Õ«’·ùò—œ‰.743	_	_	_	_
+7	»ÂùÃ«Ì	PREP	ADVRB	11	null	null	no	_	_	_	ArgM-ADV
+4	—«ÂÂ«Ì	N	ADVRB	10	—Ê‘ßn-12704	—Œœ«œßn-13136	no	_	_	ArgM-MNR	_
+5	êÊ‰«êÊ‰	ADJ	NPOSTMOD	4	‰«Â„êÊ‰ßa-1557	„‘Œ’Âßn-12756	no	_	_	_	_
+1	ÌòÌù«“	ADJ	NPREMOD	2	null	null	no	_	_	_
+2	⁄«œ« 	N	SBJ	13	⁄«œ ßn-10525	—Œœ«œßn-13136	no	_	_	Arg1
+12	„Ã··	ADJ	NPOSTMOD	11	„Ã··ßa-1779	„‘Œ’Âßn-12756	no	_	_	_
+6	ò«—	N	NPP	7	ò«—ßn-13007	—Œœ«œßn-13136	no	_	_	Arg3	_
+6	„⁄Ã“Âù«Ì	N	OBJ	7	null	null	no	_	_	_	Arg1	Arg1
+9	œ·Ì·Ì	N	MOS	13	ÕÃ ßn-11373	Œ»—ßn-13975	no	_	_	_	_	Arg2
+1	«“«Ì‰ù—Ê	SUBR	ROOT	0	null	null	no	_	_	ArgM-DIS
+3	„⁄Ã“Âù«Ì	N	OBJ	7	null	null	no	_	_	Arg1
+4	—Ê‘‰	ADJ	NPOSTMOD	3	êÊÌ«ßa-268	„‘Œ’Âßn-12756	no	_	_	_
+11	—«ÂùÂ«Ì	N	ADVRB	14	—Ê‘ßn-12704	—Œœ«œßn-13136	no	_	_	ArgM-MNR	_	_
+13	—Â‰„Ê‰	N	NVE	14	null	null	no	_	_	_	_	_
+15	⁄«ﬁ» 	ADV	ADVRB	21	‰Â«Ì ßn-12517	„‘Œ’Âßn-12756	no	_	_	_	ArgM-ADV	_
+18	ﬁÊ„	N	MOZ	17	ﬁÊ„ßn-13461	ê—ÊÂßn-12753	no	_	_	_	_	_
+22	Êù”Å”	SUBR	ROOT	0	null	null	no	_	_	_	_	_
+2	À„Êœ	N	MOZ	1	null	null	no	_	_	_
+6	ﬁ»Ê·	N	NVE	7	ﬁ»Ê·ßn-11507	—Œœ«œßn-13136	no	_	_	_
+9	œ—ŒÊ«” 	N	OBJ	15	ŒÊ«Â‘ßn-13129	Œ»—ßn-13975	no	_	_	_	Arg1	_
+14	»“—êÌ	ADJ	NPOSTMOD	13	»“—êßa-384	„‘Œ’Âßn-12756	no	_	_	_	_	_
+20	ÃÊ«»Ì	N	NVE	23	ÃÊ«»ßn-11476	Œ»—ßn-13975	no	_	_	_	_	_
+23	‰œ«œ	V	ROOT	0	ÃÊ«» œ«œ‰ßv-8114	—Œœ«œßn-13136	no	Y	ÃÊ«»ùœ«œ‰.849	_	_	_
+5	”Å—Ì	N	NVE	6	null	null	no	_	_	_	_
+7	Êù”Å”	SUBR	VCL	6	null	null	no	_	_	_	_
+8	¬»—ÊÌ	N	SBJ	14	çÂ—Âßn-14291	„‘Œ’Âßn-12756	no	_	_	_	Arg1
+3	œ—ŒÊ«” 	N	ADVRB	13	ŒÊ«Â‘ßn-13129	Œ»—ßn-13975	no	_	_	ArgM-ADV
+4	ﬁÊ„	N	NPP	2	ﬁÊ„ßn-13461	ê—ÊÂßn-12753	no	_	_	_	_
+11	»ﬁÌÂ	N	AJPP	9	œÌê—ßa-9809	null	no	_	_	_	_
+1	Å”ù«“	PREP	ADVRB	10	null	null	no	_	_	ArgM-TMP
+3	⁄	ARAB	POSDEP	1	null	null	no	_	_	_
+5	ÅÌ«„	N	OBJ	11	ÅÌ«„ßn-13051	—Œœ«œßn-13136	no	_	_	Arg1
+11	 «—	N	OBJ	19	 «—ßn-14129	„«œÂßn-14032	no	_	_	_	Arg1
+13	ÅÊœ	N	NCONJ	11	null	null	no	_	_	_	_
+4	»ÂùÃ“	PREP	NPP	1	null	null	no	_	_	_	_
+3	ÌòÌù«“	ADJ	NPREMOD	4	null	null	no	_	_	_	_
+9	„»«—ò	ADJ	NPOSTMOD	8	Â„«ÌÊ‰ßa-1636	„‘Œ’Âßn-12756	no	_	_	_	_
+11	136»«—	ADV	ADVRB	16	null	null	no	_	_	_	ArgM-EXT
+14	”Ê—Â	N	VPP	16	”Ê—Âßn-20384	Œ»—ßn-13975	no	_	_	_	Arg3
+16	¬„œÂù«” 	V	PRD	7	null	null	no	Y	¬„œ‰.31	_	_
+4	»⁄œ«“	PREP	NPP	3	null	null	no	_	_	_	_	_
+10	·ﬁ»	N	OBJ	14	·ﬁ»ßn-13062	null	no	_	_	_	Arg1	_
+18	Ê«”ÿÂ	N	POSDEP	17	Ê«”ÿÂßn-11951	‰›—ßn-13075	no	_	_	_	_	_
+1	œ«” «‰	N	OBJ	14	”—ê–‘ ßn-11533	Œ»—ßn-13975	no	_	_	Arg1
+3	Å—›—«“Ê‰‘Ì»	ADJ	NPOSTMOD	2	Å—›—«“Ê‰‘Ì»ßa-18918	„‘Œ’Âßn-12756	no	_	_	_
+6	⁄	ARAB	POSDEP	4	null	null	no	_	_	_
+9	„Ìù Ê«‰	V	ROOT	0	null	null	no	_	_	_
+12	œÊ—Â	N	AJPP	13	œÊ—Âßn-10264	œÊ—Â “„«‰Ìßn-12603	no	_	_	_
+8	”«Œ 	V	VCONJ	18	‰«»Êœ ò—œ‰ßv-9575	—Œœ«œßn-13136	no	Y	”«Œ ‰.498	_
+12	”»ÿÌ«‰	N	MOZ	11	ﬁ»Ì·Âßn-11795	ê—ÊÂßn-12753	no	_	_	_
+18	‰—”«‰œ	V	PRD	1	¬”Ì» —”«‰œ‰ßv-20940	—Œœ«œßn-13136	no	_	_	_
+3	Õ«·Ì	N	ADVRB	10	Õ«· ßn-12385	null	no	_	_	_	ArgM-MNR	_	_
+4	ùòÂ	SUBR	NCL	3	null	null	no	_	_	_	_	_	_
+8	ŒÊ«»	N	AJPP	9	ŒÊ«»ßn-12427	„‘Œ’Âßn-12756	no	_	_	_	_	_	_
+20	ŒÊ«»	N	MOZ	19	—ÊÌ«ßn-15102	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	_
+2	»⁄œ«“	PREP	ADVRB	5	null	null	no	_	_	ArgM-TMP	_
+6	‰Ì„Â	N	ADVRB	11	‰Ì„Âßn-13960	çÌ“ßn-10392	no	_	_	ArgM-TMP	_	_
+14	»«Â„	ADV	ADVRB	16	null	null	no	_	_	_	ArgM-COM	_
+18	„‰Ã—	ADJ	MOS	23	„‰Ã—ßa-1617	„‘Œ’Âßn-12756	no	_	_	_	_	Arg2
+20	«‰⁄ﬁ«œ	N	AJPP	18	null	null	no	_	_	_	_	_
+21	‰ÿ›Â	N	MOZ	20	‰ÿ›Âßn-11573	null	no	_	_	_	_	_
+1	»⁄œ«“	PREP	ADVRB	12	null	null	no	_	_	_	ArgM-TMP
+10	Ê«—œ	ADJ	MOS	12	null	null	no	_	_	_	Arg2
+6	ê“«—‘	N	OBJ	10	ê“«—‘ßn-11530	—Œœ«œßn-13136	no	_	_	_	Arg1	_
+1	»⁄œ«“	PREP	ADVRB	5	null	null	no	_	_	ArgM-TMP	_
+13	„«‰œÂù«” 	V	PRD	6	»Êœ‰ßv-16430	—Œœ«œßn-13136	no	Y	„«‰œ‰.369	_	_
+9	Ã«Ì“Â	N	MOZ	8	Ã«Ì“Âßn-12172	null	no	_	_	_	_	_	_
+12	ﬁ÷ÌÂ	N	OBJ	17	—Œœ«œßn-13136	—Œœ«œßn-13136	no	_	_	_	_	Arg1	_
+16	ê“«—‘	N	NVE	17	ê“«—‘ßn-11530	—Œœ«œßn-13136	no	_	_	_	_	_	_
+21	Œœ«	N	MOZ	20	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	_
+22	“»«‰	N	SBJ	25	“»«‰ßn-13978	‘Ì¡ßn-12703	no	_	_	_	_	_	Arg1
+8	”Âù»«—Â	UNKNOWN	AVCONJ	6	null	null	no	_	_	_	_	_	_	_
+12	«› «œ	V	VCONJ	27	null	null	no	Y	«› «œ‰.780	_	_	_	_	_
+17	„’·Õ Ì	N	MOS	20	null	null	no	_	_	_	_	_	Arg2	_
+19	ò«—	N	NPP	17	ò«—ßn-10133	„‘Œ’Âßn-12756	no	_	_	_	_	_	_	_
+2	ÿ»ﬁ	PREP	ADVRB	9	null	null	no	_	_	ArgM-ADV	_	_	_
+3	›—„«‰	N	POSDEP	2	«„—ßn-11505	—Œœ«œßn-13136	no	_	_	_	_	_	_
+19	»Âù”—⁄ 	ADV	ADVRB	24	null	null	no	_	_	_	_	ArgM-MNR	_
+14	ç‘„	N	NVE	18	⁄Ì‰ßn-10314	—«»ÿÂßn-13628	no	_	_	_	_	_	_
+1	»⁄œ«“	PREP	ADVRB	10	null	null	no	_	_	ArgM-TMP	_	_
+7	œ—»	N	OBJ	10	œ—ê«Âßn-10373	‘Ì¡ßn-12703	no	_	_	Arg1	_	_
+19	‰Â› Âù«” 	V	PRD	15	ÅÊ‘«‰œ‰ßv-15813	—Œœ«œßn-13136	no	Y	ÅÊ‘«‰œ‰.321	_	_	_
+11	Ã·»	N	NVE	12	null	null	no	_	_	_	_	_	_	_	_	_	_
+23	ù‰‘œÂù«” 	V	PRD	19	null	null	no	Y	ò—œ‰.25	_	_	_	_	_	_	_	_
+29	’«œ—	ADJ	NVE	30	null	null	no	_	_	_	_	_	_	_	_	_	_
+35	ò«—	N	MOZ	33	ò«—ßn-10133	„‘Œ’Âßn-12756	no	_	_	_	_	_	_	_	_	_	_
+2	‰ò‘Ìœ	V	ROOT	0	ÿÊ· ò‘Ìœ‰ßv-8803	—Œœ«œßn-13136	no	Y	ÿÊ·ùò‘Ìœ‰.443	_	_
+6	ù‘œ	V	PRD	3	ê—”‰Â ò—œ‰ßv-8967	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_
+3	ÕÌ‰	N	ADVRB	5	null	null	no	_	_	ArgM-TMP	_	_	_
+17	‘Ì—	N	NVE	18	‘Ì— „«œ—ßn-14005	„«œÂßn-14032	no	_	_	_	_	_	_
+8	Ê”Å”	SUBR	VCL	7	null	null	no	_	_	_	_
+14	‘Ì—	N	MOZ	13	‘Ì— „«œ—ßn-14005	„«œÂßn-14032	no	_	_	_	_
+1	»œÌ‰ù — Ì»	ADV	ADVRB	14	null	null	no	_	_	_	ArgM-ADV
+2	Œœ«	N	SBJ	14	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	Arg0
+4	Ê⁄œÂ	N	NPP	13	Ê⁄œÂßn-11535	Œ»—ßn-13975	no	_	_	_	Arg3
+17	ÌòÌù«“	ADJ	NPREMOD	18	null	null	no	_	_	_	_	_	_
+25	Ê«—œ	ADJ	MOS	27	null	null	no	_	_	_	_	_	Arg2
+4	Õ«œÀÂ	N	AJPP	5	—Œœ«œßn-13136	—Œœ«œßn-13136	no	_	_	_	_	_
+11	Œœ«	N	SBJ	15	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	Arg0
+1	«“ÿ—›	PREP	ADVRB	8	null	null	no	_	_	ArgM-ADV2	_
+3	ê“«—‘	N	SBJ	8	ê“«—‘ßn-11530	—Œœ«œßn-13136	no	_	_	Arg0	_
+8	—”ÌœÂ	V	VCONJ	15	—”Ìœ‰ßv-7580	—Œœ«œßn-13136	no	Y	—”Ìœ‰.501	_	_
+3	ÕÌ‰	N	ADVRB	17	null	null	no	_	_	_	ArgM-TMP
+4	ÌòÌù«“	ADJ	NPREMOD	5	null	null	no	_	_	_	_
+13	ﬁ÷ÌÂ	N	OBJ	17	—Œœ«œßn-13136	—Œœ«œßn-13136	no	_	_	_	Arg1
+11	‰⁄„ 	N	AJPP	17	null	null	no	_	_	_	_
+16	Œœ«	N	NPP	12	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_
+8	Å”ù«“	PREP	ADVRB	19	null	null	no	_	_	_	ArgM-TMP
+2	Å”ù«“	PREP	ADVRB	7	null	null	no	_	_	ArgM-TMP	_	_
+14	»ÂùÃ«Ì	PREP	ADVRB	17	null	null	no	_	_	_	_	ArgM-ADV
+4	Å—	ADJ	MOS	7	·»—Ì“ßa-1390	„‘Œ’Âßn-12756	no	_	_	Arg2	_	_
+14	Ê”Å”	SUBR	VCL	13	null	null	no	_	_	_	_	_
+18	”«ÌÂ	N	POSDEP	17	”«ÌÂßn-14341	„‘Œ’Âßn-12756	no	_	_	_	_	_
+6	„«Ã—«	N	OBJ	9	—Œœ«œßn-13136	—Œœ«œßn-13136	no	_	_	_	Arg1
+3	⁄	ARAB	POSDEP	1	null	null	no	_	_	_
+5	„«Ã—«Ì	N	OBJ	14	—Œœ«œßn-13136	—Œœ«œßn-13136	no	_	_	Arg1
+11	⁄	ARAB	POSDEP	9	null	null	no	_	_	_
+2	Å”ù«“	PREP	ADVRB	13	null	null	no	_	_	ArgM-TMP2	_	_
+9	¬Œ—Ì‰	ADJ	NPREMOD	10	«‰ Â«ÌÌßa-1372	„‘Œ’Âßn-12756	no	_	_	_	_	_
+23	»Âùÿ—›	PREP	VPP	25	null	null	no	_	_	_	_	Arg4	_
+25	ÃÂÌœ	V	PRD	17	ÃÂÌœ‰ßv-18954	—Œœ«œßn-13136	no	Y	ÃÂÌœ‰.812	_	_	_	_
+26	Êù”Å”	SUBR	VCL	25	null	null	no	_	_	_	_	_	_
+28	œ” 	N	VPP	31	œ” ßn-13537	—«»ÿÂßn-13628	no	_	_	_	_	_	Arg3
+30	ﬁ—«—	N	NVE	31	Ê÷⁄Ì ßn-12745	„‘Œ’Âßn-12756	no	_	_	_	_	_	_
+14	«Œ ’«’	N	NVE	15	 Œ’Ì’ßn-10707	—Œœ«œßn-13136	no	_	_	_	_	_
+1	Å”ù«“	PREP	PREDEP	8	null	null	no	_	_	ArgM-TMP	_
+3	„«Ã—«	N	POSDEP	1	—Œœ«œßn-13136	—Œœ«œßn-13136	no	_	_	_	_
+14	»Âùÿ—›	PREP	NPP	16	null	null	no	_	_	_	Arg4
+2	‰œ«	N	NVE	3	null	null	no	_	_	_	_
+9	œ” 	N	ADVRB	12	œ” ßn-13537	—«»ÿÂßn-13628	no	_	_	_	ArgM-LOC
+10	—«” 	ADJ	NPOSTMOD	9	—«” ßa-16246	„‘Œ’Âßn-12756	no	_	_	_	_
+13	»—ê	N	OBJ	19	»—êßn-12152	‘Ì¡ßn-12703	no	_	_	_	_	_	Arg1	_
+21	ò«—Â«Ì	N	OBJ	26	null	null	no	_	_	_	_	_	_	Arg1
+4	Œœ«	N	MOZ	3	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_
+8	‰‘«‰Â	N	ADVRB	11	œ·Ì·ßn-12446	Œ»—ßn-13975	no	_	_	ArgM-ADV	_
+13	ÃÊ«»	N	NVE	17	Å«”Œßn-11519	Œ»—ßn-13975	no	_	_	_	_
+9	„»«—ò	ADJ	NPOSTMOD	8	Â„«ÌÊ‰ßa-1636	„‘Œ’Âßn-12756	no	_	_	_	_
+11	4»«—	ADV	ADVRB	16	null	null	no	_	_	_	ArgM-EXT
+14	”Ê—Â	N	VPP	16	”Ê—Âßn-20384	Œ»—ßn-13975	no	_	_	_	Arg3
+16	¬„œÂù«” 	V	PRD	7	null	null	no	Y	¬„œ‰.31	_	_
+4	⁄·ÌÂù«·”·«„	ARAB	POSDEP	2	null	null	no	_	_	_
+10	ÌòÌù«“	ADJ	NPREMOD	11	null	null	no	_	_	_
+11	‰ﬁ«ÿ	N	APP	8	null	null	no	_	_	_
+12	„⁄—Ê›	ADJ	NPOSTMOD	11	»·‰œ¬Ê«“Âßa-1574	„‘Œ’Âßn-12756	no	_	_	_
+14	ç‘„	N	OBJ	17	⁄Ì‰ßn-10314	—«»ÿÂßn-13628	no	_	_	Arg1
+2	Å”ù«“	PREP	ADVRB	10	null	null	no	_	_	ArgM-TMP	_
+5	«“ÿ—›	PREP	ADVRB	10	null	null	no	_	_	ArgM-ADV	_
+10	ê—œÌœ	V	ROOT	0	ê—œÌœ‰ßv-9382	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_
+20	»Âù”ÊÌ	PREP	VPP	24	null	null	no	_	_	_	Arg4
+5	⁄„—	N	NVE	6	⁄„—ßn-12622	œÊ—Â “„«‰Ìßn-12603	no	_	_	_
+2	ÌòÌù«“	ADJ	NPREMOD	3	null	null	no	_	_	_	_
+12	»Ì«‰	N	NVE	13	”Œ‰ßn-10144	Œ»—ßn-13975	no	_	_	_	_
+13	ò—œÂù«” 	V	PRD	5	»Ì«‰ ò—œ‰ßv-19509	—Œœ«œßn-13136	no	Y	»Ì«‰ùò—œ‰.140	_	_
+11	œ«‘ Âù«” 	V	ROOT	0	‘Â—  œ«‘ ‰ßv-8767	—Œœ«œßn-13136	no	Y	‘Â— ùœ«‘ ‰.377	_	_
+2	œ«—«Ì	ADJ	MOS	5	null	null	no	_	_	Arg2	_
+3	„«·	N	NEZ	2	œ«—«ÌÌßn-12158	null	no	_	_	_	_
+4	›—«Ê«‰Ì	ADJ	NPOSTMOD	3	Å—‘„«—ßa-124	„‘Œ’Âßn-12756	no	_	_	_	_
+7	œ«—«Ì	ADJ	MOS	12	null	null	no	_	_	_	Arg2
+11	›—«Ê«‰Ì	ADJ	NPOSTMOD	8	Å—‘„«—ßa-124	„‘Œ’Âßn-12756	no	_	_	_	_
+12	»ÊœÂù«” 	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+1	«Êﬁ« Ì	N	SBJ	4	null	null	no	_	_	Arg1	_	_	_	_
+4	ê–‘ 	V	ROOT	0	ê–‘ ‰ßv-21340	—Œœ«œßn-13136	no	Y	ê–‘ ‰.43	_	_	_	_	_
+7	«„Ê«·	N	OBJ	12	œ«—«ÌÌßn-22813	null	no	_	_	_	Arg1	_	_	_
+11	œ” 	N	VPRT	12	œ” ßn-13548	„‘Œ’Âßn-12756	no	_	_	_	_	_	_	_
+15	«‰Ê«⁄	N	AJPP	19	null	null	no	_	_	_	_	_	_	_
+16	»·«Ì«	N	MOZ	15	‰ò» ßn-11559	—Œœ«œßn-13136	no	_	_	_	_	_	_	_
+18	«„—«÷	N	NCONJ	16	»Ì„«—Ìßn-12437	null	no	_	_	_	_	_	_	_
+19	„» ·«	ADJ	MOS	20	ê—› «—ßa-896	„‘Œ’Âßn-12756	no	_	_	_	_	Arg2	_	_
+20	ê‘ 	V	VCONJ	35	null	null	no	Y	ò—œ‰.25	_	_	_	_	_
+23	“»«‰	N	POSDEP	22	·”«‰ßn-11270	—«»ÿÂßn-13628	no	_	_	_	_	_	Arg1	_
+27	–ò—	N	AJPP	29	–ò—ßn-14656	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	_	_
+28	Œœ«	N	MOZ	27	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	_	_
+31	⁄÷Ê	N	SBJ	35	⁄÷Êßn-11267	—«»ÿÂßn-13628	no	_	_	_	_	_	_	Arg1
+32	”«·„Ì	ADJ	NPOSTMOD	31	 ‰œ—” ßa-92	„‘Œ’Âßn-12756	no	_	_	_	_	_	_	_
+35	‰„«‰œ	V	PRD	5	»«ﬁÌ „«‰œ‰ßv-7982	—Œœ«œßn-13136	no	Y	»«ﬁÌù„«‰œ‰.433	_	_	_	_	_
+4	 „«„Ì	ADJ	APREMOD	5	 „«„ßn-16534	„‘Œ’Âßn-12756	no	_	_	_	_
+6	„—«Õ·	N	ADVRB	8	null	null	no	_	_	ArgM-TMP	_
+4	ÿÊ·«‰Ì	ADJ	MOS	5	ÿÊÌ·ßa-42	„‘Œ’Âßn-12756	no	_	_	Arg2	_
+7	ÂÌçù	ADJ	NPREMOD	8	null	null	no	_	_	_	_
+12	—«»ÿÂ	N	NVE	13	 „«”ßn-12369	„‘Œ’Âßn-12756	no	_	_	_	_
+10	“Ì«œ —	ADJ	MOS	11	Å—‘„«—ßa-124	„‘Œ’Âßn-12756	no	_	_	Arg2	_
+13	¬‰Ã«ÌÌ	N	ADVRB	11	null	null	no	_	_	ArgM-ADV	_
+6	⁄	ARAB	POSDEP	4	null	null	no	_	_	_
+10	«œ«„Â	N	NVE	11	œ‰»«·Âßn-13567	—«»ÿÂßn-13628	no	_	_	_
+1	Êﬁ Ìù	N	ADVRB	14	null	null	no	_	_	_	ArgM-TMP
+6	Œœ«	N	MOZ	5	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_
+11	„ÌùŒÊ«‰œ	V	ROOT	0	ŒÊ«‰œ‰ßv-7906	—Œœ«œßn-13136	no	Y	ŒÊ«‰œ‰.133	_
+4	»ÂùÿÊ—	PREP	ADVRB	10	null	null	no	_	_	ArgM-MNR
+8	ÃÊ‘Ìœ	V	ROOT	0	›Ê—«‰ ò—œ‰ßv-8879	—Œœ«œßn-13136	no	Y	ÃÊ‘Ìœ‰.409	_	_	_
+18	»œ‰	N	OBJ	24	ÂÌò·ßn-12946	‘Ì¡ßn-12703	no	_	_	_	_	Arg1
+7	»—ê‘ 	V	VCONJ	13	»—ê‘ ‰ßv-8032	—Œœ«œßn-13136	no	Y	»—ê‘ ‰.825	_	_	_	_
+9	«„—«÷	N	SBJ	13	»Ì„«—Ìßn-12437	null	no	_	_	_	Arg1	_	_
+16	çÌ“Â«ÌÌ	N	SBJ	27	çÌ“ßn-10392	null	no	_	_	_	_	Arg1	Arg0
+19	œ” 	N	VPRT	20	œ” ßn-13548	„‘Œ’Âßn-12756	no	_	_	_	_	_	_
+27	»—ê‘ 	V	PRD	14	»—ê‘ ‰ßv-8032	—Œœ«œßn-13136	no	Y	»—ê‘ ‰.825	_	_	_	_
+3	ÌòÌù«“	ADJ	NPREMOD	4	null	null	no	_	_	_	_
+9	„»«—ò	ADJ	NPOSTMOD	8	Â„«ÌÊ‰ßa-1636	„‘Œ’Âßn-12756	no	_	_	_	_
+13	”Ê—Â	N	VPP	15	”Ê—Âßn-20384	Œ»—ßn-13975	no	_	_	_	Arg3
+15	¬„œÂù«” 	V	PRD	7	null	null	no	Y	¬„œ‰.31	_	_
+4	»⁄œ«“	PREP	ADVRB	10	null	null	no	_	_	ArgM-TMP	_
+15	”»ÿÌùÂ«Ì	N	MOZ	14	ﬁ»Ì·Âßn-11795	ê—ÊÂßn-12753	no	_	_	_	_
+16	œÊ«“œÂùê«‰Â	ADJ	NPOSTMOD	15	null	null	no	_	_	_	_
+1	ÌòÌù«“	ADJ	NPREMOD	3	null	null	no	_	_	_	_
+3	ê—ÊÂÂ«	N	SBJ	14	ê—ÊÂßn-22146	ê—ÊÂßn-13239	no	_	_	_	Arg0
+4	»Âù⁄‰Ê«‰	PREP	ADVRB	10	null	null	no	_	_	ArgM-ADV
+4	”Œ‰	N	OBJ	8	Ã„·Âßn-13125	—Œœ«œßn-13136	no	_	_	Arg1	_
+7	 ò–Ì»	N	NVE	8	null	null	no	_	_	_	_
+10	Õò„	N	NPP	13	—«Ìßn-10739	—Œœ«œßn-13136	no	_	_	_	Arg3
+11	«⁄œ«„	N	MOZ	10	«⁄œ«„ßn-22522	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_
+4	„ ⁄œœÌ	ADJ	NPOSTMOD	3	Å—‘„«—ßa-124	„‘Œ’Âßn-12756	no	_	_	_	_
+2	Œœ«	N	OBJ	5	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	Arg1	_	_	_
+22	Ê”Å”	SUBR	AJUCL	20	null	null	no	_	_	_	_	_	ArgM-DIS
+3	œ” 	N	VPP	5	ç‰ê«·ßn-14226	null	no	_	_	Arg3	_
+4	⁄	ARAB	POSDEP	2	null	null	no	_	_	_
+8	»œÌ‰	PREP	ADVC	10	null	null	no	_	_	Arg2
+9	„‰Ê«·	N	POSDEP	8	‘ÌÊÂßn-10396	—Œœ«œßn-13136	no	_	_	_
+7	»Ì„«—Ì	N	AJPP	8	»Ì„«—Ìßn-12437	„‘Œ’Âßn-12756	no	_	_	_	_
+8	„» ·«	ADJ	MOS	9	ê—› «—ßa-896	„‘Œ’Âßn-12756	no	_	_	Arg2	_
+11	»Ì„«—Ì	N	SBJ	14	»Ì„«—Ìßn-12437	„‘Œ’Âßn-12756	no	_	_	_	Arg1
+13	œ—„«‰	N	NVE	14	œ—„«‰ßn-12851	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_
+14	‰Ì«› 	V	ROOT	0	null	null	no	Y	œ—„«‰ùÌ«› ‰.726	_	_
+10	»Ìù‰ ÌÃÂ	ADJ	MOS	11	»Âùœ—œ‰ŒÊ—ßa-141	„‘Œ’Âßn-12756	no	_	_	Arg2
+11	„«‰œ	V	ROOT	0	»Ì ‰ ÌÃÂ „«‰œ‰ßv-8097	—Œœ«œßn-13136	no	Y	„«‰œ‰.369	_
+1	Êﬁ Ìù	N	ADVRB	11	null	null	no	_	_	_	ArgM-TMP
+4	’œ«Ì	N	OBJ	7	’œ«ßn-13148	Œ»—ßn-12766	no	_	_	Arg1	_
+4	Õ«œÀÂ	N	AJPP	5	—Œœ«œßn-13136	—Œœ«œßn-13136	no	_	_	_	_	_	_	_	_	_
+15	»Âù”—«€	PREP	VPP	17	null	null	no	_	_	_	_	Arg4	_	_	_	_
+24	Êﬁ 	N	SBJ	26	Êﬁ ßn-10084	«‰œ«“Âßn-12768	no	_	_	_	_	_	_	Arg1	_	_
+26	›—«—”ÌœÂ	V	VCL	21	—”Ìœ‰ßv-8616	—Œœ«œßn-13136	no	Y	›—«ù—”Ìœ‰.613	_	_	_	_	_	_	_
+10	œ” 	N	NVE	11	œ” ßn-13548	„‘Œ’Âßn-12756	no	_	_	_	_	_
+14	»Âù”ÊÌ	PREP	NPP	19	null	null	no	_	_	_	_	_
+4	’œ«Ì	N	OBJ	7	’œ«ßn-13148	Œ»—ßn-12766	no	_	_	Arg1	_	_
+9	«–‰	N	ADVRB	14	—Œ’ ßn-13708	Œ»—ßn-13975	no	_	_	_	ArgM-CAU	_
+2	»Ì„«—Ì	N	OBJ	8	»Ì„«—Ìßn-12437	„‘Œ’Âßn-12756	no	_	_	Arg1	_	_
+7	“Ì«œ	ADJ	MOS	8	Å—‘„«—ßa-124	„‘Œ’Âßn-12756	no	_	_	Arg2	_	_
+10	»„Ì—œ	V	VCONJ	16	›Ê  ‰„Êœ‰ßv-9406	—Œœ«œßn-13136	no	Y	„—œ‰.608	_	_	_
+2	»⁄œ«“	PREP	ADVRB	8	null	null	no	_	_	ArgM-TMP	_
+4	ÿÊ·«‰Ì	ADJ	NPOSTMOD	3	ÿÊÌ·ßa-42	„‘Œ’Âßn-12756	no	_	_	_	_
+2	Å”ù«“	PREP	ADVRB	7	null	null	no	_	_	ArgM-TMP
+3	Œœ«	N	NPP	4	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	Arg3
+4	ﬁÕÿÌ	N	OBJ	9	‰«Ì«»Ìßn-19336	„‘Œ’Âßn-12756	no	_	_	Arg1
+8	„”·ÿ	ADJ	MOS	9	„” Ê·Ìßa-719	„‘Œ’Âßn-12756	no	_	_	Arg2
+1	·–«	SUBR	ROOT	0	Å”ßr-21612	null	no	_	_	ArgM-DIS	_
+10	Ê”Å”	SUBR	AJUCL	9	null	null	no	_	_	ArgM-TMP	ArgM-ADV
+3	‰Â«Ì 	N	ADVRB	7	‰Â«Ì ßn-12517	„‘Œ’Âßn-12756	no	_	_	ArgM-TMP	_	_
+14	»—ê—œœ	V	VCL	10	»—ê‘ ‰ßv-8032	—Œœ«œßn-13136	no	Y	»—ùê‘ ‰.637	_	_	_
+4	Êù”Å”	SUBR	AJUCL	3	null	null	no	_	_	_	_	ArgM-DIS
+7	»«—Ìœ	V	VCONJ	17	—Ì“‘ ò—œ‰ßv-9241	—Œœ«œßn-13136	no	Y	»«—Ìœ‰.181	_	_	_
+9	”»“Ì	N	SBJ	17	”»“ßn-20040	„«œÂßn-14032	no	_	_	_	_	Arg1
+11	Œ—„Ì	N	NCONJ	9	Œ—„ßa-1575	null	no	_	_	_	_	_
+16	Õ«ò„	ADJ	MOS	17	null	null	no	_	_	_	_	Arg2
+3	ò„ùò„	ADV	ADVRB	10	«‰œòù«‰œòßr-20670	„‘Œ’Âßn-12756	no	_	_	ArgM-MNR	_
+4	»—«À—	PREP	ADVRB	10	null	null	no	_	_	ArgM-CAU	_
+5	Ê›Ê—	ADJ	NPREMOD	6	null	null	no	_	_	_	_
+6	‰⁄„ 	N	POSDEP	4	null	null	no	_	_	_	_
+7	„”·ÿ	ADJ	MOS	8	„” Ê·Ìßa-719	„‘Œ’Âßn-12756	no	_	_	Arg2
+2	Å”ù«“	PREP	ADVRB	10	null	null	no	_	_	ArgM-TMP	_
+4	„«Ã—«	N	POSDEP	2	—Œœ«œßn-13136	—Œœ«œßn-13136	no	_	_	_	_
+3	ÌòÌù«“	ADJ	NPREMOD	4	null	null	no	_	_	_	_
+10	œÊ»«—	ADV	ADVRB	14	null	null	no	_	_	_	ArgM-EXT
+13	ò—Ì„	ADJ	NPOSTMOD	12	œ”  Ê œ· »«“ßa-573	„‘Œ’Âßn-12756	no	_	_	_	_
+14	¬„œÂù«” 	V	PRD	7	null	null	no	Y	¬„œ‰.31	_	_
+5	Ê«”ÿÂ	N	VPP	11	Ê«”ÿÂßn-12815	‘Ì¡ßn-12703	no	_	_	ArgM-ADV	_
+9	⁄	ARAB	POSDEP	7	null	null	no	_	_	_	_
+16	⁄„—	N	NVE	17	⁄„—ßn-12622	œÊ—Â “„«‰Ìßn-12603	no	_	_	_	_
+2	’ÕÌ›Â	N	SBJ	9	null	null	no	_	_	Arg1
+8	‰«“·	ADJ	MOS	9	null	null	no	_	_	Arg2
+9	ê—œÌœ	V	ROOT	0	ê”Ì· œ«œ‰ßv-21561	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_
+12	Œÿ	N	OBJ	13	Œÿßn-14508	—Œœ«œßn-13136	no	_	_	_	Arg1	_	_
+19	‰ÃÊ„	N	MOZ	18	‰ÃÊ„ßn-10057	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	_
+21	Õ”«»	N	NCONJ	19	—Ì«÷Ì« ßn-11408	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	_
+23	ÂÌÌ 	N	NCONJ	21	null	null	no	_	_	_	_	_	_
+28	” 	V	PRD	25	»Êœ‰ßv-8897	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_
+5	”»“	ADJ	NPOSTMOD	4	”»“ßn-20040	„«œÂßn-14032	no	_	_	_	_	_	_
+7	Œ—„Ì	ADJ	AJCONJ	5	Œ—„ßa-1575	null	no	_	_	_	_	_	_
+11	„ ⁄·ﬁ	ADJ	MOS	15	„ ⁄·ﬁßa-1563	„‘Œ’Âßn-12756	no	_	_	_	Arg2	_	_
+10	‰»«—œ	V	VCL	3	—Ì“‘ ò—œ‰ßv-9241	—Œœ«œßn-13136	no	Y	»«—Ìœ‰.181	_	_
+1	«“ÿ—›	PREP	ADVRB	6	null	null	no	_	_	ArgM-ADV	_	_	_
+9	ÊÌ—«‰	ADJ	MOS	10	ÊÌ—«‰ßa-2378	„‘Œ’Âßn-12756	no	_	_	_	Arg2	_	_
+10	ê‘ 	V	VCONJ	13	„‰Âœ„ ò—œ‰ßv-9170	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_	_	_
+13	ò‘ Â	V	VCONJ	19	 ·› ò—œ‰ßv-21387	—Œœ«œßn-13136	no	Y	ò‘ ‰.102	_	_	_	_
+17	ÿ⁄„Â	N	MOS	19	ÿ⁄„Âßn-20232	Ã«‰Ê—ßn-12239	no	_	_	_	_	_	Arg2
+19	ê‘ 	V	VCL	6	null	null	no	Y	ò—œ‰.25	_	_	_	_
+4	ê–‘ 	V	VCONJ	9	ê–‘ ‰ßv-18384	—Œœ«œßn-13136	no	Y	ê–‘ ‰.43	_	_
+9	‰»«—Ìœ	V	ROOT	0	—Ì“‘ ò—œ‰ßv-9241	—Œœ«œßn-13136	no	Y	»«—Ìœ‰.181	_	_
+2	ò„ùò„	ADV	ADVRB	11	«‰œòù«‰œòßr-20670	null	no	_	_	ArgM-EXT	_
+3	œ—«À—	PREP	ADVRB	11	null	null	no	_	_	ArgM-CAU	_
+8	«‰«»Â	N	VPP	11	null	null	no	_	_	Arg3	_
+1	œ—‰ ÌÃÂ	SUBR	ROOT	0	null	null	no	_	_	_	_
+3	—Ê“Ì	N	OBJ	7	—Ê“Ìßn-14534	null	no	_	_	Arg1	_
+4	‘	PR	MOZ	3	null	null	no	_	_	_	_
+10	ò«—	N	SBJ	18	ò«—ßn-10133	„‘Œ’Âßn-12756	no	_	_	_	Arg1
+11	»«⁄À	ADJ	MOS	18	”»»ßn-13414	„‘Œ’Âßn-12756	no	_	_	_	Arg2
+4	Ê«—œ	ADJ	MOS	9	null	null	no	_	_	Arg2	_
+13	»ÊÌ	N	OBJ	16	»Êßn-12920	„‘Œ’Âßn-12756	no	_	_	_	Arg1
+16	„Ìù—”Ìœ	V	PRD	10	null	null	no	Y	—”Ìœ‰.382	_	_
+4	ﬁ—’	N	MOZ	3	ê—œÂßn-14782	«‰œ«“Âßn-12768	no	_	_	Arg1
+5	‰›—Ì‰	N	SBJ	11	‰›—Ì‰ßn-22931	null	no	_	_	_	Arg0
+10	»«ﬁÌ	N	NVE	11	›“Ê‰Ìßn-12307	—«»ÿÂßn-13628	no	_	_	_	_
+5	”Â„	N	OBJ	9	”Â„ßn-12180	«‰œ«“Âßn-12768	no	_	_	Arg1	_
+10	Ê”Å”	SUBR	VCL	9	null	null	no	_	_	_	_
+15	ò«—	N	MOZ	13	ò«—ßn-10133	„‘Œ’Âßn-12756	no	_	_	_	_
+19	Ã«‰	N	NVE	20	Ã«‰ßn-13878	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_
+3	»«⁄À	ADJ	NVE	6	”»»ßn-13414	„‘Œ’Âßn-12756	no	_	_	_	_
+9	Ã«‰	N	OBJ	14	Ã«‰ßn-13878	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	Arg1
+1	Å”ù«“	PREP	ADVRB	8	null	null	no	_	_	ArgM-TMP
+3	Ê«ﬁ⁄Â	N	POSDEP	1	—Œœ«œßn-13136	—Œœ«œßn-13136	no	_	_	_
+3	Œ»—	N	OBJ	8	«Œ»«—ßn-11465	Œ»—ßn-12766	no	_	_	Arg1	_	_
+14	ﬁÕÿÌ	N	NPP	15	‰«Ì«»Ìßn-19336	„‘Œ’Âßn-12756	no	_	_	_	Arg3
+4	»‰«»Â	PREP	ADVRB	9	null	null	no	_	_	ArgM-CAU	_	_	_	_
+5	œ·«Ì·Ì	N	PREDEP	4	”»»ßn-12730	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	_	_
+22	”—Œ	N	MOZ	21	”—Œßn-24635	„«œÂßn-14032	no	_	_	_	_	_	_	_
+3	⁄Ê÷	N	ADVRB	6	⁄Ê÷ßn-10762	—Œœ«œßn-13136	no	_	_	ArgM-ADV	_
+7	—ÊÕ	N	MOZ	6	—ÊÕßn-10348	„”»»ßn-13036	no	_	_	_
+1	ÌòÌù«“	ADJ	NPREMOD	2	null	null	no	_	_	_	_
+6	⁄	ARAB	POSDEP	4	null	null	no	_	_	_	_
+12	„»«—ò	ADJ	NPOSTMOD	11	Â„«ÌÊ‰ßa-1636	„‘Œ’Âßn-12756	no	_	_	_	_
+16	7»«—	ADV	ADVRB	20	null	null	no	_	_	_	ArgM-EXT
+19	”Ê—Â	N	VPP	20	”Ê—Âßn-20384	Œ»—ßn-13975	no	_	_	_	ArgM-LOC
+20	¬„œÂù«” 	V	PRD	10	null	null	no	Y	¬„œ‰.31	_	_
+3	⁄	ARAB	POSDEP	1	null	null	no	_	_	_	_
+10	”·”·Â	N	SBJ	19	‘Ã—Âßn-11731	ê—ÊÂßn-12753	no	_	_	_	Arg1
+11	‰”»	N	MOZ	10	›—“‰œÌßn-12310	—«»ÿÂßn-13628	no	_	_	_	_
+17	⁄	ARAB	POSDEP	15	null	null	no	_	_	_	_
+3	⁄	ARAB	POSDEP	1	null	null	no	_	_	_
+4	ÌòÌù«“	ADJ	NPREMOD	5	null	null	no	_	_	_	_
+6	⁄	ARAB	POSDEP	4	null	null	no	_	_	_	_
+8	ê–‘ 	V	VCONJ	12	ê–‘ ‰ßv-18384	—Œœ«œßn-13136	no	Y	ê–‘ ‰.43	_	_	_
+10	œ«—«Ì	ADJ	MOS	12	null	null	no	_	_	_	Arg2	_
+15	«„—	N	SBJ	19	„Ê÷Ê⁄ßn-12988	„‘Œ’Âßn-12756	no	_	_	_	_	Arg0
+19	„Ìùœ«œ	V	ROOT	0	—‰Ã œ«œ‰ßv-9411	—Œœ«œßn-13136	no	Y	—‰Ãùœ«œ‰.816	_	_	_
+16	«„—	N	SBJ	23	„Ê÷Ê⁄ßn-12988	„‘Œ’Âßn-12756	no	_	_	_	_	Arg1	_
+17	»«⁄À	ADJ	MOS	23	”»»ßn-13414	„‘Œ’Âßn-12756	no	_	_	_	_	Arg2	_
+18	‘⁄·ÂùÊ—	ADJ	PREDEP	19	‘⁄·Â Ê—ßa-1284	„‘Œ’Âßn-12756	no	_	_	_	_	_	_
+26	 Â	ADJ	ADVRB	32	 Âßn-11910	Ã«ßn-12733	no	_	_	_	_	_	ArgM-MNR
+27	œ·	N	NEZ	26	œ·ßn-14828	Ã«ßn-14035	no	_	_	_	_	_	_
+29	Œœ«	N	NPP	30	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	Arg3
+21	Œœ«	N	MOZ	20	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	_
+12	⁄ÿ«	N	NVE	13	⁄ÿ«ßn-13615	—Œœ«œßn-13136	no	_	_	_	_
+4	Œœ«	N	MOZ	3	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_
+5	«“„Ì«‰	PREP	NPP	7	null	null	no	_	_	_	_
+7	«‰ Œ«»	N	MOS	8	«‰ Œ«» ò—œ‰ßn-12701	—Œœ«œßn-13136	no	_	_	Arg2	_
+8	„Ìù‘œ‰œ	V	PRD	1	ê“Ìœ‰ßv-7948	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_
+2	‘	PR	MOZ	1	null	null	no	_	_	_	_	_
+3	»⁄œ«“	PREP	ADVRB	9	null	null	no	_	_	_	_	_
+4	 Ê·œ	N	POSDEP	3	 Ê·œßn-11570	—Œœ«œßn-13136	no	_	_	_	_	_
+19	ÂœÌÂ	N	NVE	20	Â»Âßn-12170	‘Ì¡ßn-12703	no	_	_	_	_	_
+3	»—⁄ÂœÂ	N	POSDEP	2	null	null	no	_	_	_	_	_
+2	«”„	N	OBJ	7	‰«„ßn-13061	null	no	_	_	Arg1	_
+16	ê—œÌœ	V	AJUCL	8	null	null	no	Y	ò—œ‰.25	_	_	_
+15	«“‰Ÿ—	PREP	ADVRB	20	null	null	no	_	_	_	_	ArgM-ADV
+18	Å«Ì	N	VPP	20	Å«ßn-14956	—«»ÿÂßn-13628	no	_	_	_	_	Arg3
+17	»«⁄À	ADJ	MOS	20	”»»ßn-13414	„‘Œ’Âßn-12756	no	_	_	_	_	Arg2
+20	„Ìù‘œ	V	PRD	16	null	null	no	Y	ò—œ‰.25	_	_	_
+18	”—	N	VPRT	19	null	null	no	_	_	_	_	_
+9	»⁄œ«“	PREP	ADVRB	12	null	null	no	_	_	_	ArgM-TMP
+8	Õ«·Ì	N	ADVRB	6	null	null	no	_	_	ArgM-ADV	_	_	_
+25	‘	PR	POSDEP	24	null	null	no	_	_	_	_	_	_
+26	¬„œÂù«” 	V	PRD	18	¬„œ‰ßv-7847	—Œœ«œßn-13136	no	Y	¬„œ‰.44	_	_	_	_
+1	·–«	SUBR	ROOT	0	Å”ßr-21612	null	no	_	_	_	_	_	_
+4	‰ ÌÃÂ	N	VPP	5	‰ ÌÃÂ ‰Â«ÌÌßn-11549	—Œœ«œßn-13136	no	_	_	Arg3	_	_	_
+12	»çÂùœ«—	ADJ	MOS	13	null	null	no	_	_	_	Arg2	_	_
+25	Œœ«	N	NPP	26	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	Arg3
+5	Œ»—	N	MOZ	3	«Œ»«—ßn-11465	Œ»—ßn-13975	no	_	_	_
+8	»çÂùœ«—	ADJ	MOS	9	null	null	no	_	_	_	Arg2	_	_	_	_	_
+12	Œœ«	N	NPP	13	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	Arg3	_	_	_	_
+14	‰‘«‰Â	N	MOZ	13	œ·Ì·ßn-12446	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	Arg1	_	_	_	_
+23	‰‘«‰Â	N	SBJ	28	œ·Ì·ßn-12446	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	_	Arg1	_	_
+24	»çÂùœ«—	ADJ	NE	25	null	null	no	_	_	_	_	_	_	_	_	_
+33	“»«‰	N	SBJ	37	·”«‰ßn-11270	—«»ÿÂßn-13628	no	_	_	_	_	_	_	_	Arg1	_
+36	ò«—	N	VPP	37	null	null	no	_	_	_	_	_	_	_	_	_
+37	ŒÊ«Âœ«› «œ	V	VCONJ	46	ŒÊ«»Ìœ‰ßv-7888	—Œœ«œßn-13136	no	Y	«“ùò«—ù«› «œ‰.835	_	_	_	_	_	_	_
+42	‰⁄„ 	N	POSDEP	40	null	null	no	_	_	_	_	_	_	_	_	_
+43	Œœ«	N	OBJ	46	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	_	_	_	Arg1
+2	»⁄œ«“	PREP	ADVRB	5	null	null	no	_	_	ArgM-TMP	_	_	_
+10	ò«—	N	VPP	11	null	null	no	_	_	_	_	_	_
+11	«› «œÂ	V	VCONJ	18	ŒÊ«»Ìœ‰ßv-7888	—Œœ«œßn-13136	no	Y	«“ùò«—ù«› «œ‰.835	_	_	_	_
+26	·»Â«	N	MOZ	25	·»ßn-14192	—«»ÿÂßn-13628	no	_	_	_	_	_	_
+28	 ò«‰	N	NCONJ	26	 ò«‰ßn-10498	—Œœ«œßn-13136	no	_	_	_	_	_	_
+33	”Œ‰	N	NVE	34	”Œ‰ßn-10144	Œ»—ßn-13975	no	_	_	_	_	_	_
+5	«–‰	N	ADVRB	10	—Œ’ ßn-13708	Œ»—ßn-13975	no	_	_	ArgM-ADV	_	_	_
+6	Œœ«	N	MOZ	5	»«—Ì  ⁄«·Ìßn-11940	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	_	_	_
+19	«·ﬁ«	N	NVE	20	null	null	no	_	_	_	_	_	_
+25	ò«—	N	MOS	27	ò«—ßn-12781	—Œœ«œßn-13136	no	_	_	_	_	_	Arg2
+9	Ê«—œ	PREP	MOS	12	null	null	no	_	_	_	Arg2	_
+10	‘ò«›	N	POSDEP	9	‘ò«›ßn-15733	«‰œ«“Âßn-11239	no	_	_	_	_	_
+15	‘ò«›	N	OBJ	18	‘ò«›ßn-15733	«‰œ«“Âßn-11239	no	_	_	_	_	Arg1
+3	êÊ‘Âù«Ì	N	OBJ	11	ò‰«—Âßn-11847	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	Arg1	_	_	_	_	_	_
+19	Ã” ÃÊÌ	N	MOS	21	Ã” ÃÊßn-12249	null	no	_	_	_	Arg2	_	_	_	_	_
+33	‰‘«‰Â	N	SBJ	41	null	null	no	_	_	_	_	_	_	_	Arg1	_
+37	ﬁ”„ 	N	MOS	41	»Œ‘ßn-12302	null	no	_	_	_	_	_	_	_	Arg2	Arg0
+46	¬„œÂù«” 	V	PRD	42	null	null	no	Y	¬„œ‰.44	_	_	_	_	_	_	_
+3	œ” Ê—	N	ADVRB	8	«„—ßn-11505	—Œœ«œßn-13136	no	_	_	ArgM-ADV	_	_
+
+number of each elements are as follows
+------------------------------------------------------------
+role:			947	roleAction:		386
+roleState:		480	roleIntent:		380
+roleEmotion:		30
+------------------------------------------------------------
+dynamic_object:		45	dynamic_objAction:	8
+dynamic_objState:	6
+------------------------------------------------------------
+static_object:		137	static_objState:	30
+------------------------------------------------------------
+location		247
+time:			76
+------------------------------------
+no:			1013
+------------------------------------
+all Scene elements are: 2772
+no elements are: 1013
+words num 3785 ?= all elems 3785
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ «·Õ„œ··Â

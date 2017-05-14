@@ -38,4 +38,11 @@ public enum ScenePart {
 		}
        return UNKNOWN;
 	}
+	
+	@Override
+	public String toString(){
+		if(this != UNKNOWN)
+			return this.name().toLowerCase();
+		return "no";
+	}
 }

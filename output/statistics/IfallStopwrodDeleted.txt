@@ -1,0 +1,1200 @@
+»”„ «··Â «·—Õ„‰ «·—ÕÌ„ Ê  Êò·  ⁄·Ì «··Â 
+sentence numbers: 430 -- words numner 1177
+no -- 1	«Ê	PR	SBJ	5	ÌÊ”›ßn-23957	_	 ‰›—ßn-13075		_	role	Arg0	_
+no -- 2	„Ã„Ê⁄«	ADV	ADVRB	5	„Ã„Ê⁄ßn-11384	_	null	_	no	ArgM-ADV	_
+no -- 5	œ«‘ 	V	VCONJ	17	œ«‘ ‰ßv-8512	—Œœ«œßn-13136	no	Y	œ«‘ ‰.39	_	_
+no -- 10	›ﬁÿ	ADV	ADVRB	17	’—›«ßr-15263	_	null	_	no	_	ArgM-ADV2
+no -- 17	»Êœ	V	ROOT	0	»Êœ‰ßv-16430	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+no -- 8	»Êœ	V	ROOT	0	Â” Ìßn-12391	—Œœ«œßn-13136	no		Y	»Êœ‰.15	_
+no -- 1	«Ê	PR	SBJ	6	ÌÊ”›ßn-23957	_	 ‰›—ßn-13075		_	role	Arg0
+role_action -- 6	ò—œ	V	ROOT	0	⁄„— ò—œ‰ßv-8674	—Œœ«œßn-13136	role_action		Y	“‰œêÌùò—œ‰.40	_
+no -- 4	»Ì‘ —	ADV	ADVRB	5	»Ì‘ —ßr-15271	_	null	_	no	ArgM-EXT	_
+no -- 5	‰œ«‘ 	V	ROOT	0	œ«‘ ‰ßv-8512	—Œœ«œßn-13136	no	Y	œ«‘ ‰.39	_	_
+role_action -- 4	¬„œÂ	V	VCONJ	6	¬„œ‰ßv-7847	—Œœ«œßn-13136	role_action	Y	¬„œ‰.44	_	_	_	_
+role_action -- 6	ê› 	V	ROOT	0	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_	_
+no -- 11	òÂ	SUBR	VCL	10	null	_	null	_	no	_	_	Arg1	_
+no -- 9	«Ê	PR	VPP	10	ÌÊ”›ßn-23957	_	 ‰›—ßn-13075		_	role	_	Arg3	_
+role_action -- 10	ŒÊ«” 	V	ROOT	0	ŒÊ«” ‰ßv-19251	—Œœ«œßn-13136	role_action	Y	ŒÊ«” ‰.51	_	_	_
+no -- 15	»—«Ì	PREP	ADVRB	19	null	_	null	_	no	_	_	ArgM-GOL
+no -- 1	”Å”	SUBR	ROOT	0	”Å”ßr-21500	_	null	_	no	ArgM-ADV	_	_
+no -- 2	»—«Ì	PREP	ADVRB	5	null	_	null	_	no	ArgM-GOL	_	_
+no -- 6	òÂ	SUBR	VCL	5	null	_	null	_	no	Arg1	_	_
+no -- 13	Â„Â	N	SBJ	18	null	_	‰›—ßn-13075	_	role	_	_	Arg0
+no -- 13	«Ê	PR	VPP	14	ÌÊ”›ßn-23957	_	 ‰›—ßn-13075		_	role	_	Arg3
+no -- 1	Â„ç‰Ì‰	ADV	ADVRB	9	„÷«›«ßr-16715	_	null	_	no	ArgM-ADV	_
+no -- 9	‘œ	V	ROOT	0	«‰Ã«„ œ«œ‰ßv-8044	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_
+role_action -- 20	ò‰œ	V	PRD	10	—ÊÌ  ò—œ‰ßv-8581	—Œœ«œßn-13136	role_action	Y	„‘«ÂœÂùò—œ‰.231	_	_
+no -- 3	òÂ	SUBR	VCL	2	null	_	null	_	no	Arg1	_
+no -- 6	œ«—œ	V	PRD	3	œ«‘ ‰ßv-8512	—Œœ«œßn-13136	no	Y	œ«‘ ‰.39	_	_
+role_action -- 11	ŒÊ«” ‰œ	V	VCONJ	26	ŒÊ«” ‰ßv-16218	—Œœ«œßn-13136	role_action	Y	ŒÊ«” ‰.51	_	_	_	_
+role_action -- 5	ò—œ‰œ	V	PRD	3	«Õ”«” ò—œ‰ßv-7687	—Œœ«œßn-13136	role_action	Y	«Õ”«”ùò—œ‰.60	_	_	_	_	_	_	_
+no -- 17	«Ê	PR	VPP	18	Ê«·œßn-13357	_	‰›—ßn-13075	_	role	_	_	Arg3	_	_	_	_
+role_action -- 18	ê› ‰œ	V	ROOT	0	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_	_	_	_	_
+no -- 19	ç—«	ADV_INTG	ADVRB	25	ç—«ßr-16765	_	null	_	no	_	_	_	ArgM-CAU	_	_	_
+no -- 23	„«	PR	NPP	24	»—«œ—ßn-14090	_	‰›—ßn-13075	_	role	_	_	_	Arg3	_	_	_
+no -- 27	«Ê	PR	OBJ	31	ÌÊ”›ßn-23957	_	‰›—ßn-13075	_	role	_	_	_	_	Arg1	_	_
+no -- 34	¬‰Ã«	N	ADVRB	36	œ‘ ßn-13308	_	 ‘Ì¡ßn-12703	_	location	_	_	_	_	_	ArgM-LOC	_
+no -- 36	ò‰œ	V	VCONJ	40	»«“Ì ò—œ‰ßv-7630	—Œœ«œßn-13136	role_action 	Y	»«“Ìùò—œ‰.246	_	_	_	_	_	_	_
+no -- 1	«ê—	SUBR	AJUCL	9	null	_	null	_	no	_	ArgM-CND
+no -- 6	„«	PR	SBJ	9	»—«œ—ßn-14090	_	‰›—ßn-13075	_	role	_	Arg1
+no -- 1	Êﬁ Ì	N	ADVRB	11	null	_	null	_	no	_	ArgM-TMP	_	_
+role_action -- 7	ê—› ‰œ	V	PRD	2	œÊ— ‘œ‰ßv-16372	—Œœ«œßn-13136	role_action	Y	›«’·Âùê—› ‰.504	_	_	_	_
+role_action -- 11	‘œ	V	VCONJ	16	«›‘«¡ ò—œ‰ßv-7543	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_	_	_
+no -- 1	ÊÌ	PR	SBJ	5	ÌÊ”›ßn-23957	_	 ‰›—ßn-13075	_	role	Arg0
+role_action -- 7	»ò‰œ	V	VCL	5	ò«— ò—œ‰ßv-15721	—Œœ«œßn-13136	role_action	Y	ò—œ‰.857	_
+no -- 3	œ—Ê‰	N	ADVRB	8	 Êßn-11857	_	„›ÂÊ„ ò·Ìßn-12726	_	no	ArgM-LOC
+role_action -- 8	ò—œ	V	ROOT	0	 Êò· ò—œ‰ßv-8335	—Œœ«œßn-13136	role_action	Y	 Êò·ùò—œ‰.506	_
+role_action -- 14	¬Ê—œÂ	V	VCONJ	16	¬Ê—œ‰ßv-21639	—Œœ«œßn-13136	role_action	Y	¬Ê—œ‰.452	_	_	_	_
+role_action -- 16	ê› ‰œ	V	ROOT	0	ê› ‰ßv-7774	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_	_
+no -- 17	òÂ	SUBR	VCL	16	null	_	null	_	no	_	_	Arg1	_
+no -- 4	—Ê“	N	ADVRB	11	—Ê‘‰«ÌÌ —Ê“ßn-12637	_	null	_	time	ArgM-TMP	_	_	_
+no -- 11	»Êœ	V	ROOT	0	»Êœ‰ßv-9332	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_
+no -- 22	»—«Ì	PREP	ADVRB	38	null	_	null	_	no	_	_	_	ArgM-CAU
+no -- 30	ò‰«—	N	ADVRB	38	‰“œÌòßn-10189	_	Ã«ßn-12733	_	location	_	_	_	Arg4
+no -- 36	¬‰	PR	MOS	37	ç«Âßn-16033	_	null	_	no	_	_	Arg2	_
+no -- 37	»Êœ	V	PRD	33	»Êœ‰ßv-9332	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_
+role_action -- 14	‘œ‰œ	V	ROOT	0	ŒÊ‘Õ«· ò—œ‰ßv-9998	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_
+no -- 9	»Êœ	V	ROOT	0	»Êœ‰ßv-8897	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+no -- 11	»Êœ‰œ	V	VCONJ	20	»Êœ‰ßv-9328	—Œœ«œßn-13136	no		Y	»Êœ‰.15	_	_
+role_action -- 20	ò—œ‰œ	V	ROOT	0	»«— ¬Ê—œ‰ßv-8043	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_
+no -- 18	‘œ	V	ROOT	0	‘Ìœ« ‘œ‰ßv-9665	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_
+no -- 10	 ‰Â«	ADV	ADVRB	11	»Ìùò”ßa-668	_	„‘Œ’Âßn-12756	_	role_state	ArgM-MNR	_	_	_
+no -- 14	ÊÌ	PR	VPP	15	ÌÊ”›ßn-23957	_	 ‰›—ßn-13075	_	role	_	Arg3	_	_
+role_action -- 15	ê› 	V	ROOT	0	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_	_
+no -- 16	òÂ	SUBR	VCL	15	null	_	null	_	no	_	Arg1	_	_
+no -- 18	òÂ	SUBR	AJUCL	17	null	_	null	_	no	_	_	ArgM-CAU	_
+no -- 3	Â‰ê«„	N	ADVRB	14	null	_	null	_	no	ArgM-TMP	_
+no -- 20	‘œ‰	N	MOZ	18	ê—œÌœ‰ßv-9382	_	—Œœ«œßn-13136	_	no	_	Arg1
+no -- 23	‘œ	V	PRD	15	„ÊÃ» ‘œ‰ßv-7980	—Œœ«œßn-13136	no	Y	»«⁄Àù‘œ‰.296	_	_
+no -- 4	Â‰ê«„	N	ADVRB	11	null	_	null	_	no	ArgM-TMP	_
+no -- 8	‰Ì“	ADV	ADVRB	11	„÷«›«ßr-16715	_	null	_	no	ArgM-ADV	_
+no -- 10	—«Â	N	ADVRB	11	null	_	null	_	location	ArgM-LOC	_
+no -- 1	Êﬁ Ì	N	ADVRB	9	null	_	null	_	no	ArgM-TMP	_	_
+no -- 10	òÂ	SUBR	VCL	9	null	_	null	_	no	_	Arg1	_
+no -- 4	«Ê	PR	SBJ	9	null	_	null	_	no	Arg0	Arg0	_
+role -- 12	«Ê	PR	VPP	13	⁄Ì«·ßn-12059	‰›—ßn-13075	role	_	_	_	Arg3	_
+role_action -- 13	ê› 	V	ROOT	0	ê› ‰ßv-7774	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_
+no -- 14	òÂ	SUBR	VCL	13	null	_	null	_	no	_	Arg1	_
+no -- 4	òÂ	SUBR	VCL	3	null	_	null	_	no	Arg3	_	_
+role_action -- 11	ò‰œ	V	PRD	4	ŒÊ«‰œ‰ßv-8493	—Œœ«œßn-13136	role_action	Y	œ⁄Ê ùò—œ‰.352	_	_	_
+role_action -- 18	œÂœ	V	AJUCL	11	»Â ‰„«Ì‘ ê–«‘ ‰ßv-9507	—Œœ«œßn-13136	role_action	Y	‰‘«‰ùœ«œ‰.128	_	_	_
+no -- 1	«Ê	PR	SBJ	9	null	_	null	_	role	Arg0	Arg0
+no -- 2	»—«Ì	PREP	ADVRB	9	null	_	null	_	no	ArgM-CAU	_
+role_action -- 9	œ«œ	V	VCONJ	22	“„Ì‰Â ”«“Ì ò—œ‰ßv-19793	—Œœ«œßn-13136	role_action	Y	 — Ì»ùœ«œ‰.553	_	_
+no -- 1	”Å”	SUBR	ROOT	0	null	_	null	_	no	ArgM-ADV	_
+role_action -- 6	œ«œ	V	PRD	1	›—„«‰ œ«œ‰ßv-19253	—Œœ«œßn-13136	role_action	Y	œ” Ê—ùœ«œ‰.104	_	_
+role_action -- 11	ò‰‰œ	V	VCL	6	null	null	role_action	Y	Å–Ì—«ÌÌùò—œ‰.555	_	_
+no -- 1	«“Ã„·Â	PREP	MOS	5	null	_	null	_	no	Arg2
+no -- 5	»Êœ	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_
+role_action -- 10	œ«œ	V	ROOT	0	«⁄ÿ« ò—œ‰ßv-7665	—Œœ«œßn-13136	role_action	Y	œ«œ‰.110	_	_
+no -- 4	 Ê”ÿ	PREP	ADVRB	7	null	_	null	_	no	ArgM-ADV
+role_action -- 7	‘œ‰œ	V	ROOT	0	„› ÷Õ ò—œ‰ßv-8610	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_
+no -- 15	»—«Ì	PREP	ADVRB	32	null	_	null	_	no	_	_	ArgM-CAU
+role_action -- 25	ò‰‰œ	V	PRD	17	„ÕÊ ò—œ‰ßv-8623	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_	_
+no -- 6	»Êœ	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+no -- 15	œÌê—Ì	PR	SBJ	19	null	_	null	_	role	_	_	Arg1
+role_action -- 11	ê› 	V	ROOT	0	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_
+no -- 12	òÂ	SUBR	VCL	11	null	_	null	_	no	_	Arg1	_
+role_action -- 18	»ò‰	V	PRD	12	”›«—‘ ò—œ‰ßv-8331	—Œœ«œßn-13136	role_action	Y	”›«—‘ùò—œ‰.50	_	_	_
+no -- 3	Â‰ê«„	N	ADVRB	18	null	_	null	_	no	_	ArgM-TMP	_	_	_
+no -- 12	»Êœ	V	PRD	5	»Êœ‰ßv-8897	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_	_
+role_action -- 18	¬Ê—œ	V	VCONJ	22	Ì«œ (ò”Ì) ¬„œ‰ßv-9565	—Œœ«œßn-13136	role_action	Y	»ÂùÌ«œù¬Ê—œ‰.574	_	_	_	_	_
+role_action -- 22	ê› 	V	ROOT	0	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_	_	_
+no -- 23	„‰	PR	SBJ	27	ŒÊœßn-13459	_	‰›—ßn-13075	_	role	_	_	_	Arg0	_
+no -- 27	œ«—„	V	VCL	22	null	null	no	Y	”—«€ùœ«‘ ‰.575	_	_	_	_	_
+role_action -- 34	‰„«Ìœ	V	VCL	29	‘—Õ œ«œ‰ßv-8268	—Œœ«œßn-13136	role_action	Y	 ⁄»Ì—ùò—œ‰.494	_	_	_	_	_
+role_action -- 4	—› 	V	VCONJ	13	ÅÊÌÌœ‰ßv-7700	—Œœ«œßn-13136	role_action	Y	—› ‰.17	_	_
+no -- 11	«Ê	PR	NPP	12	”·ÿ«‰ßn-13386	_	‰›—ßn-13075	_	role	_	Arg3
+role_action -- 15	œ«œ	V	ROOT	0	›—„«‰ œ«œ‰ßv-19253	—Œœ«œßn-13136	role_action	Y	œ” Ê—ùœ«œ‰.104	_	_	_	_
+no -- 16	òÂ	SUBR	VCL	15	null	_	null	_	no	_	_	Arg1	_
+role_action -- 5	ê› 	V	ROOT	0	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_	_
+no -- 7	„‰	PR	SBJ	11	ŒÊœßn-13459	_	‰›—ßn-13075	_	role	_	Arg0	_	_
+no -- 19	„‰	PR	VPP	20	ÌÊ”›ßn-23957	_	‰›—ßn-13075	_	role	_	_	Arg3	_
+no -- 3	ç‰Ì‰	PR	MOS	4	null	_	null	_	no	Arg2	_
+role_action -- 4	ò—œ	V	VCONJ	10	«‰Ã«„ œ«œ‰ßv-8044	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_
+no -- 6	 „«„Ì	ADJ	NPREMOD	7	 „«„ßn-16534	_	ù„‘Œ’Âßn-12756	_	no	_	_
+role_action -- 10	ò—œ	V	ROOT	0	›—« ŒÊ«‰œ‰ßv-18650	—Œœ«œßn-13136	role_action	Y	«Õ÷«—ùò—œ‰.572	_	_
+no -- 3	ò—œ‰œ	V	ROOT	0	null	null	no	Y	«ﬁ—«—ùò—œ‰.604	_	_
+no -- 4	òÂ	SUBR	VCL	3	null	null	no	_	_	Arg3	_
+role -- 5	„«	PR	SBJ	12	“ÊÃÂßn-12069	‰›—ßn-13075	role	_	_	_	Arg0
+no -- 3	‰Ì“	ADV	ADVRB	8	„÷«›«ßr-16715	_	null	_	no	ArgM-ADV
+role_action -- 9	œ«œ	V	ROOT	0	›—„«‰ œ«œ‰ßv-19253	—Œœ«œßn-13136	role_action	Y	œ” Ê—ùœ«œ‰.104	_	_	_
+no -- 5	‰Ì“	ADV	ADVRB	10	„÷«›«ßr-16715	_	null	_	no	ArgM-ADV
+no -- 10	»Êœ‰œ	V	ROOT	0	»Êœ‰ßv-16430	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_
+no -- 1	»—«Ì	PREP	ADVRB	7	null	_	null	_	no	ArgM-GOL	_	_
+role_action -- 7	ŒÊ«” 	V	ROOT	0	ŒÊ«” ‰ßv-19251	—Œœ«œßn-13136	role_action	Y	ŒÊ«” ‰.51	_	_	_
+no -- 8	òÂ	SUBR	VCL	7	null	_	null	_	no	Arg1	_	_
+no -- 2	»—«Ì	PREP	ADVRB	8	null	_	null	_	no	ArgM-PRP
+role_action -- 8	‘œ‰œ	V	ROOT	0	⁄«“„ ò—œ‰ßv-8859	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_
+role_action -- 7	œ«‘ 	V	PRD	2	Õ÷Ê— œ«‘ ‰ßv-8440	—Œœ«œßn-13136	role_action	Y	Õ÷Ê—ùœ«‘ ‰.552	_	_	_
+no -- 3	Õ«·	N	VPP	10	null	_	null	_	no	Arg3	_
+role_action -- 10	ò—œ	V	ROOT	0	Å—”‘ ò—œ‰ßv-8136	—Œœ«œßn-13136	role_action	Y	”Ê«·ùò—œ‰.304	_	_
+no -- 11	òÂ	SUBR	VCL	10	null	_	null	_	no	Arg4	_
+role_action -- 14	œ«œ‰œ	V	PRD	11	ÃÊ«» œ«œ‰ßv-8114	—Œœ«œßn-13136	role_action	Y	ÃÊ«»ùœ«œ‰.849	_	_
+no -- 4	òÂ	SUBR	VCL	3	null	_	null	_	no	Arg3	_
+time -- 4	—Ê“	N	POSDEP	2	—Ê“ßr-22016	null	time	_	_	_	_	_
+no -- 5	„Ãœœ«	ADV	ADVRB	8	œÊ»«—Âßr-15315	_	„‘Œ’Âßn-12756	_	no	ArgM-ADV	_	_
+role_action -- 12	—› Â	V	VCONJ	20	ÅÊÌÌœ‰ßv-7700	—Œœ«œßn-13136	role_action	Y	—› ‰.17	_	_	_
+no -- 18	«Ê	PR	NPP	19	ÌÊ”›ßn-23957	_	‰›—ßn-13075	_	role	_	_	Arg3
+no -- 23	«Ê	PR	NPP	24	null	_	null	_	role	_	_	Arg3	_
+no -- 33	»—«Ì	PREP	VPP	36	null	_	null	_	no	_	_	_	Arg3
+no -- 2	»—«Ì	PREP	ADVRB	21	null	_	null	_	no	_	ArgM-CAU
+no -- 8	‰Ì“	ADV	ADVRB	12	„÷«›«ßr-16715	_	null	_	no	ArgM-ADV	_
+role_action -- 12	ò‰œ	V	PRD	4	ŒÊ«‰œ‰ßv-8493	—Œœ«œßn-13136	role_action		Y	œ⁄Ê ùò—œ‰.352	_	_
+no -- 1	«Ê	PR	SBJ	12	ÌÊ”›ßn-23957	_	‰›—ßn-13075	_	role	Arg0	Arg0
+no -- 9	»«—	N	VPP	12	»«—ßn-10887	_	 ‘Ì¡ßn-12703	_	static_object	Arg3	_
+role_action -- 12	œ«œ	V	VCONJ	20	ê‰Ã«‰œ‰ßv-20159	—Œœ«œßn-13136	role_action	Y	ﬁ—«—ùœ«œ‰.557	_	_
+no -- 10	»Êœ	V	PRD	6	„ ⁄·ﬁ »Êœ‰ßv-16545	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+no -- 14	¬‰	PR	VPP	15	»«—ßn-13673	_	‘Ì¡ßn-12703	_	static_object	_	ArgM-LOC
+no -- 7	òÂ	SUBR	VCL	6	null	_	null	_	no	Arg1	_
+no -- 11	«‰œ	V	PRD	7	“‰œÂ »Êœ‰ßv-9329	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+no -- 3	ç‰Ì‰	PR	OBJ	4	null	_	null	_	no	Arg1
+role_action -- 4	ò—œ‰œ	V	ROOT	0	«‰Ã«„ œ«œ‰ßv-8044	—Œœ«œßn-13136	role_action	Y	ò—œ‰.857	_
+role_action -- 5	—› Â	V	VCONJ	12	ÅÊÌÌœ‰ßv-7700	—Œœ«œßn-13136	role_action	Y	—› ‰.17	_	_	_	_	_
+no -- 14	«Ì‰	PR	ADVRB	12	null	_	null	_	no	_	ArgM-TMP	_	_	_
+no -- 19	Õ«·	N	VPP	21	null	_	null	_	no	_	_	Arg3	_	_
+role_action -- 24	ê—› 	V	PRD	15	 ’„Ì„ ê—› ‰ßv-16866	—Œœ«œßn-13136	role_action	Y	 ’„Ì„ùê—› ‰.68	_	_	_	_	_
+no -- 25	òÂ	SUBR	VCL	24	null	_	null	_	no	_	_	_	Arg3	_
+role_action -- 31	ò‰œ	V	PRD	25	¬‘‰« ”«Œ ‰ßv-9308	—Œœ«œßn-13136	role_action	Y	„⁄—›Ìùò—œ‰.115	_	_	_	_	_
+no -- 12	«Ê	PR	NPP	13	ÌÊ”›ßn-23957	_	‰›—ßn-13075	_	role	_	Arg3	_
+role_action -- 14	ò—œ‰œ	V	ROOT	0	„Ÿ‰Ê‰ ‘œ‰ßv-8986	—Œœ«œßn-13136	role_action	Y	‘òùò—œ‰.644	_	_	_
+no -- 17	«Ê	PR	SBJ	19	ÌÊ”›ßn-23957	_	‰›—ßn-13075	_	role	_	_	Arg1
+no -- 19	‰Ì” 	V	PRD	15	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+no -- 5	«Ê	PR	VPP	6	ÌÊ”›ßn-23957	_	‰›—ßn-13075	_	role	Arg3	_
+no -- 9	 Ê	PR	SBJ	11	ÌÊ”›ßn-23957	_	‰›—ßn-13075	_	role	_	Arg1
+role_action -- 6	œ«œ	V	VCONJ	10	ÃÊ«» œ«œ‰ßv-8114	—Œœ«œßn-13136	role_action	Y	ÃÊ«»ùœ«œ‰.849	_	_	_
+role_action -- 10	ê› 	V	ROOT	0	ê› ‰ßv-7774	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_
+no -- 11	òÂ	SUBR	VCL	10	null	_	null	_	no	_	Arg1	_
+no -- 1	«Ì‰	PR	SBJ	3	null	_	null	_	no	Arg1	_	_
+no -- 3	»Êœ	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+no -- 16	„‰	PR	VPP	18	ÌÊ”›ßn-23957	_	‰›—ßn-13075	_	role	_	Arg3	_
+no -- 19	òÂ	SUBR	AJUCL	18	null	_	null	_	no	_	ArgM-CAU2	_
+no -- 6	«Ê	PR	NPP	7	ÌÊ”›ßn-23957	_	‰›—ßn-13075	_	role	Arg3
+role_action -- 9	ò—œ‰œ	V	ROOT	0	ÿ·» ò—œ‰ßv-8491	—Œœ«œßn-13136	role_action	Y	ÿ·»ùò—œ‰.217	_
+no -- 4	Õﬁ	N	VPP	7	null	_	null	_	no	Arg3
+role_action -- 7	ò—œ	V	ROOT	0	œ⁄« ‰„Êœ‰ßv-18655	—Œœ«œßn-13136	role_action	Y	œ⁄«ùò—œ‰.182	_
+role_action -- 11	ê—› 	V	VCONJ	16	”—«€ ê—› ‰ßv-8691	—Œœ«œßn-13136	role_action	Y	”—«€ùê—› ‰.648	_	_	_	_	_
+role_action -- 16	œ«œ	V	VCONJ	18	œ«œ‰ßv-7663	—Œœ«œßn-13136	role_action	Y	œ«œ‰.110	_	_	_	_	_
+role_action -- 18	ê› 	V	ROOT	0	ê› ‰ßv-7774	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_	_	_
+no -- 19	òÂ	SUBR	VCL	18	null	_	null	_	no	_	_	Arg1	_	_
+no -- 22	»—	PREP	VPP	25	null	_	null	_	no	_	_	_	Arg3	_
+role_action -- 11	‘œ‰œ	V	ROOT	0	—Ê«‰Â ‘œ‰ßv-8643	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_
+no -- 1	«Ê	PR	SBJ	11	ÌÊ”›ßn-23957	_	‰›—ßn-13075	_	role	Arg0	Arg0
+no -- 3	Â‰ê«„	N	ADVRB	13	null	_	null	_	no	_	ArgM-TMP	_	_	_	_
+role_action -- 18	ò—œ	V	VCONJ	20	—Ê ò—œ‰ßv-8630	—Œœ«œßn-13136	role_action	Y	—Êùò—œ‰.548	_	_	_	_	_	_
+no -- 24	«Ì‰	PR	SBJ	29	null	_	null	_	no	_	_	_	_	Arg1	_
+no -- 29	«” 	V	VCL	20	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_	_	_
+no -- 4	œ«‘ 	V	ROOT	0	œ«‘ ‰ßv-8512	—Œœ«œßn-13136	no	Y	œ«‘ ‰.39	_	_
+no -- 5	òÂ	SUBR	AJUCL	4	null	_	null	_	no	ArgM-ADV	_
+no -- 9	‰Ì“	ADV	ADVRB	11	„÷«›«ßr-16715	_	null	_	no	_	ArgM-ADV
+role_action -- 11	»Êœ	V	PRD	5	»Êœ‰ßv-9328	—Œœ«œßn-13136	role_action	Y	»Êœ‰.15	_	_
+role_action -- 3	ê—› ‰œ	V	PRD	1	 ’„Ì„ ê—› ‰ßv-16866	—Œœ«œßn-13136	role_action	Y	 ’„Ì„ùê—› ‰.68	_	_	_
+role_action -- 10	ò‰‰œ	V	VCL	3	»Â Œ«ò ”Å—œ‰ßv-9614	—Œœ«œßn-13136	role_action	Y	œ›‰ùò—œ‰.67	_	_	_
+no -- 18	‘Ê‰œ	V	AJUCL	10	ê—œÌœ‰ßv-9382	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_	_
+no -- 6	«” 	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+no -- 8	‰«„	N	SBJ	14	‰«„ßn-13061	_	null	_	no	_	Arg1	_
+no -- 14	¬„œÂ	V	VCONJ	22	null	null	no	Y	¬„œ‰.31	_	_	_
+no -- 18	‰Ì“	ADV	ADVRB	22	„÷«›«ßr-16715	_	null	_	no	_	_	ArgM-ADV
+no -- 20	‰«„	N	MOS	22	‰«„ßn-13061	_	null	_	no	_	_	Arg2
+no -- 6	»ÊœÂ	V	VCONJ	13	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+no -- 12	«Ê	PR	VPP	13	Õ÷—  ‰ÊÕßn-23928	_	‰›—ßn-13075	_	role	_	Arg3
+no -- 17	«” 	V	ROOT	0	Â” Ìœ‰ßv-9339	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_
+no -- 6	»Êœ‰œ	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_
+no -- 7	»Êœ‰œ	V	ROOT	0	»Êœ‰ßv-9332	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_
+no -- 10	»Êœ‰œ	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_
+role_state -- 2	Õ«÷—	ADJ	MOS	3	„«Ì·ßa-119	„‘Œ’Âßn-12756	role_state	_	_	Arg2	_	_
+no -- 14	‘Ê‰œ	V	ACL	2	null	null	no	Y	ò—œ‰.25	_	_	_
+role -- 19	«Ê		PR	NPP	20	ÂÊœßn-23052	‰›—ßn-13075	role	_	_	_	_	Arg3
+no -- 17	»Êœ‰œ	V	ROOT	0	»Êœ‰ßv-16430	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+no -- 2	»”Ì«—	ADV	ADVRB	6	Å—‘„«—ßa-124	„‘Œ’Âßn-12756	no	_	_	ArgM-EXT	_
+no -- 12	»—	PREP	NPP	11	null	null	no	_	_	_	Arg3
+role_action -- 6	ò—œ	V	VCONJ	11	«” ›«œÂ ò—œ‰ßv-20683	—Œœ«œßn-13136	role_action	Y	«” ›«œÂùò—œ‰.278	_	_	_	_
+no -- 8	„Ãœœ«	ADV	ADVRB	11	null	null	no	_	_	_	ArgM-EXT	_	_
+role_action -- 11	ŒÊ«” 	V	ROOT	0	ŒÊ«” ‰ßv-19251	—Œœ«œßn-13136	role_action	Y	ŒÊ«” ‰.51	_	_	_	_
+no -- 12	òÂ	SUBR	VCL	11	null	null	no	_	_	_	Arg1	_	_
+role_action -- 14	ò—œÂ	V	VCONJ	19	‰«œ„ ‘œ‰ßv-21859	—Œœ«œßn-13136	role_action	Y	 Ê»Âùò—œ‰.544	_	_	_	_
+role -- 1	ê—ÊÂÌ	N	SBJ	6	ê—ÊÂßn-13239	ê—ÊÂßn-12753	role	_	_	Arg0	Arg0
+role_action -- 6	—› Â	V	VCONJ	12	ÅÊÌÌœ‰ßv-7700	—Œœ«œßn-13136	role_action	Y	—› ‰.17	_	_
+role -- 9	«Ê	PR	POSDEP	8	ÂÊœßn-23052	‰›—ßn-13075	role	_	_	_	Arg3
+role_action -- 12	ò—œ‰œ	V	ROOT	0	ÿ·» ò—œ‰ßv-8491	—Œœ«œßn-13136	role_action	Y	ÿ·»ùò—œ‰.217	_	_
+no -- 1	„Ãœœ«	ADV	ADVRB	6	null	null	no	_	_	ArgM-EXT	_
+no -- 6	‘œ	V	VCONJ	14	ê”Ì· œ«œ‰ßv-21561	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_
+no -- 1	«„«	SUBR	ROOT	0	null	null	no	_	_	ArgM-DIS	_	_
+no -- 3	Â„ç‰«‰	ADV	ADVRB	8	null	null	no	_	_	ArgM-ADV	_	_
+role_action -- 8	œ«œ‰œ	V	PRD	1	«œ«„Â œ«œ‰ßv-7779	—Œœ«œßn-13136	role_action	Y	«œ«„Âùœ«œ‰.527	_	_	_
+no -- 16	»—	PREP	VPP	19	null	null	no	_	_	_	Arg2	_
+no -- 19	ê—› 	V	PRD	11	null	null	no	Y	ﬁ—«—ùê—› ‰.866	_	_	_
+role_action -- 26	‰„«Ìœ	V	PRD	20	ê”Ì· œ«œ‰ßv-21561	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_	_
+role_action -- 9	ò—œ	V	ROOT	0	ê”Ì· œ«œ‰ßv-21561	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_	_	_	_	_
+no -- 12	„œ 	N	POSDEP	11	„œ ßn-12613	œÊ—Â “„«‰Ìßn-12603	no	_	_	_	ArgM-EXT	_	_	_	_
+time -- 17	—Ê“	N	POSDEP	15	—Ê“ßr-22016	Ê«Õœ “„«‰ßn-12631	time	_	_	_	_	_	_	_	_
+no -- 18	»—	PREP	VPP	20	null	null	no	_	_	_	Arg3	_	_	_	_
+role_state -- 25	‰Ì” 	ADJ	MOS	28	null	null	role_state	_	_	_	_	Arg2	_	_	_
+no -- 37	Õ Ì	ADV	ADVRB	42	 «¬‰Ã«òÂßr-20951	„‘Œ’Âßn-12756	no	_		_	_	_	_	_	ArgM-ADV2	_
+no -- 40	‰Ì“	ADV	ADVRB	42	„÷«›«ßr-16715	null	no	_	_	_	_	_	_	ArgM-ADV	_
+no -- 44	›ﬁÿ	ADV	ADVRB	53	null	null	no	_	_	_	_	_	_	_	ArgM-ADV
+role_action -- 12	ò—œÂ	V	VCONJ	20	òÊçßn-10723	—Œœ«œßn-13136	role_action	Y	òÊçùò—œ‰.184	_	_
+location -- 18	¬‰Ã«	N	POSDEP	17	null	null	location	_	_	_	Arg3
+no -- 1	Êﬁ Ì	N	ADVRB	21	null	null	no	_	_	_	ArgM-TMP	_	_
+role -- 11	„—œ„	N	OBJ	16	Ã«„⁄Âßn-13236	„›ÂÊ„ ò·Ìßn-12726	role	_	_	Arg1	_	_	_
+role_state -- 19	‰Œ” Ì‰	ADJ	NPREMOD	20	‰Œ” Ì‰ßa-1367	ù„‘Œ’Âßn-12756	role_state	_	_	_	_	_	_
+no -- 21	»Êœ	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_
+role -- 28	ÊÌ	PR	NPP	29	«»—«ÂÌ„ßn-23925	‰›—ßn-13075	role	_	_	_	_	Arg3	_
+role_action -- 30	¬Ê—œ	V	VCONJ	36	«Ì„«‰ ¬Ê—œ‰ßv-7966	—Œœ«œßn-13136	role_action	Y	«Ì„«‰ù¬Ê—œ‰.38	_	_	_	_
+no -- 32	Â„Ê«—Â	ADV	ADVRB	36	null	null	no	_	_	_	_	_	ArgM-ADV
+no -- 36	»Êœ	V	PRD	22	»Êœ‰ßv-16430	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_
+no -- 1	”Å”	SUBR	ROOT	0	null	null	no	_	_	ArgM-DIS	_
+no -- 9	¬„œ	V	PRD	1	¬„œ‰ßv-7847	—Œœ«œßn-13136	no	Y	¬„œ‰.44	_	_
+no -- 10	“Ì—«	SUBR	AJUCL	9	null	null	no	_	_	ArgM-CAU	_
+role -- 11	„—œ„	N	SBJ	23	„—œ„ßn-13215	ê—ÊÂßn-12753	role	_	_	_	Arg1
+no -- 23	»Êœ‰œ	V	PRD	10	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+role -- 1	«Ê	PR	SBJ	8	·Êÿßn-23932	‰›—ßn-13075	role	_	_	Arg0	Arg0	Arg0	Arg0
+role_action -- 8	ò—œ	V	VCONJ	15	⁄„— ò—œ‰ßv-8674	—Œœ«œßn-13136	role_action	Y	“‰œêÌùò—œ‰.40	_	_	_	_
+no -- 24	ò„ —	ADV	ADVRB	29	null	null	no	_	_	_	_	_	ArgM-EXT
+role_action -- 8	ò—œ	V	VCONJ	17	ŒÊ«‰œ‰ßv-8493	—Œœ«œßn-13136	role_action	Y	œ⁄Ê ùò—œ‰.352	_	_	_	_	_
+role_action -- 17	œ«‘ 	V	VCONJ	19	null	null	role_action	Y	»—ùÕ–—ùœ«‘ ‰.518	_	_	_	_	_
+role_action -- 19	ê› 	V	ROOT	0	ê› ‰ßv-7774	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_	_	_
+role -- 20	„‰	PR	SBJ	25	ŒÊœßn-13459	‰›—ßn-13075	role	_	_	_	_	_	Arg1	Arg1
+no -- 25	Â” „	V	VCONJ	32	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_	_
+no -- 6	»Êœ	V	VCONJ	16	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+no -- 9	Õ Ì	ADV	ADVRB	20	 «¬‰Ã«òÂßr-20951	„‘Œ’Âßn-12756	no	_	_	_	_	ArgM-ADV2
+no -- 18	‰Ì“	ADV	ADVRB	20	„÷«›«ßr-16715	null	no	_	_	_	_	ArgM-ADV
+no -- 5	»—«Ì	PREP	ADVRB	11	null	null	no	_	_	ArgM-GOL	_
+role_action -- 9	»Êœ	V	ROOT	0	»Êœ‰ßv-16430	—Œœ«œßn-13136	role_action	Y	»Êœ‰.15	_
+role_action -- 2	ê› ‰œ	V	ROOT	0	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_	_
+role -- 3	„«	PR	SBJ	5	„·ò#n5	Â” ßn-12706	role	_	_	_	Arg1	Arg1	Arg1
+time -- 7	«„‘»	ADV	ADVRB	9	«„‘»ßr-15240	„‘Œ’Âßn-12756	time	_	_	_	_	ArgM-TMP	_
+role_action -- 12	»«‘Ì„	V	ACL	8	»Êœ‰ßv-9328	—Œœ«œßn-13136	role_action	Y	»Êœ‰.15	_	_	_	_
+no -- 9	 Õ 	PREP	VPP	13	 Âßn-11833	‘Ì¡ßn-12703	no	_	_	Arg3	_
+role_action -- 13	ê—› 	V	VCONJ	23	ﬁ—«— ê—› ‰ßv-21466	—Œœ«œßn-13136	role_action	Y	ﬁ—«—ùê—› ‰.314	_	_
+role_action -- 23	ò—œ	V	ROOT	0	«ÿ·«⁄ œ«œ‰ßv-9299	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_
+role_action -- 6	‘œ‰œ	V	ROOT	0	null	null	role_action	Y	ò—œ‰.25	_
+role_action -- 5	ŒÊ«” 	V	ROOT	0	ŒÊ«” ‰ßv-19251	—Œœ«œßn-13136	role_action	Y	ŒÊ«” ‰.51	_	_
+no -- 6	òÂ	SUBR	VCL	5	null	null	no	_	_	Arg1	_
+role_action -- 15	œ«—œ	V	PRD	6	ê–«‘ ‰ßv-19501	—Œœ«œßn-13136	role_action	Y	‰êÂùœ«‘ ‰.831	_	_
+role -- 2	«Ê	PR	SBJ	10	“ÊÃÂßn-12069	‰›—ßn-13075	role	_	_	Arg1	Arg0	Arg0
+no -- 6	»Êœ	V	PRD	3	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+role_action -- 10	—› 	V	VCONJ	19	ÅÊÌÌœ‰ßv-7700	—Œœ«œßn-13136	role_action	Y	—› ‰.17	_	_	_
+role_action -- 14	ò—œ‰	N	ADVRB	19	—Ê‘‰ ò—œ‰ßv-8636	„‘Œ’Âßn-12756	role_action		_	_	_	_	ArgM-INS
+role_action -- 19	ò—œ	V	ROOT	0	«ÿ·«⁄ œ«œ‰ßv-9299	—Œœ«œßn-13136	role_action	Y	Œ»—ùò—œ‰.539	_	_	_
+role_action -- 5	ò—œ	V	ROOT	0	ŒÊ«Â‘ ò—œ‰ßv-9319	—Œœ«œßn-13136	role_action	Y	«· „«”ùò—œ‰.545	_	_
+no -- 6	òÂ	SUBR	VCL	5	null	null	no	_	_	Arg1	_
+no -- 10	⁄„·	N	VPP	13	⁄„·ßn-12803	⁄„·ßn-12803		no	_	_	_	Arg3
+role_action -- 7	ŒÊ«” 	V	ROOT	0	ŒÊ«” ‰ßv-19251	—Œœ«œßn-13136	role_action	Y	ŒÊ«” ‰.51	_	_	_
+no -- 8	òÂ	SUBR	VCL	7	null	null	no	_	_	_	Arg1	_
+role -- 9	¬‰«‰	PR	SBJ	14	„·ò#n5	Â” ßn-12706	role	_	_	_	_	Arg0
+role -- 6	«Ê	PR	VPP	7	·Êÿßn-23932	‰›—ßn-13075	role	_	_	Arg3
+role_action -- 7	ê› ‰œ	V	ROOT	0	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_
+role_action -- 3	ê› 	V	ROOT	0	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_
+role -- 5	„«	PR	SBJ	10	„·ò#n5	Â” ßn-12706	role	_	_	_	Arg0
+no -- 6	»—«Ì	PREP	ADVRB	10	null	null	no	_	_	_	ArgM-GOL
+no -- 1	çÌ“Ì	N	SBJ	2	null	null	no	_	_	Arg1	_	_
+role_action -- 13	‘œ‰œ	V	PRD	3	null	null	role_action	Y	ò—œ‰.25	_	_	_
+no -- 1	”Å”	SUBR	ROOT	0	null	null	no	_	_	ArgM-DIS	_	_	_
+role_action -- 5	ê› ‰œ	V	PRD	1	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_	_
+no -- 6	òÂ	SUBR	VCL	5	null	null	no	_	_	Arg1	_	_	_
+role -- 21	ŒÊœ	PR	ADVRB	22	ŒÊœßn-13459	‰›—ßn-13075	role	_	_	_	_	ArgM-COM	_
+no -- 23	òÂ	SUBR	AJUCL	22	null	null	no	_	_	_	_	ArgM-CAU	_
+role -- 24	«Ê	PR	SBJ	27	“ÊÃÂßn-12069	‰›—ßn-13075	role	_	_	_	_	_	Arg1
+role_action -- 27	‘Êœ	V	VCL	25	Â·«ò ò—œ‰ßv-18849	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_	_	_
+no -- 8	«” 	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+no -- 13	ò—œ	V	PRD	9	ŸÂÊ— ò—œ‰ßv-21725	—Œœ«œßn-13136	no	Y	ŸÂÊ—ùò—œ‰.74	_	_
+role -- 1	«Ì‘«‰	PR	SBJ	18	null	null	role	_	_	Arg0	_
+no -- 9	ê—› 	V	PRD	4	Ã« ê—› ‰ßv-8898	—Œœ«œßn-13136	no	Y	ﬁ—«—ùê—› ‰.78	_	_
+no -- 8	ò‰«—	N	VPP	12	‰“œÌòßn-10189	Ã«ßn-12733	no	_	_	Arg3
+no -- 12	œ«—œ	V	ROOT	0	»Êœ‰ßv-8897	—Œœ«œßn-13136	no	Y	ﬁ—«—ùœ«‘ ‰.87	_
+no -- 37	»Êœ	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+role -- 1	«Ê	PR	SBJ	12	null	null	role	_	_	Arg0	_
+no -- 5	—«Â	N	NPP	11	—Ê‘ßn-12704	—Œœ«œßn-13136	no	_	_	Arg3	_
+no -- 15	»—	PREP	NPP	18	null	null	no	_	_	_	Arg3
+no -- 6	Ã“	PREP	SBJ	11	null	null	no	_	_	Arg0	_	_	_
+role -- 10	«Ê	PR	VPP	11	null	null	role	_	_	Arg3	_	_	_
+no -- 20	»Êœ	V	VCONJ	34	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_
+no -- 24	»Êœ	V	PRD	21	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_
+no -- 26	œÌê—Ì	PR	SBJ	34	»Ìê«‰Âßn-13515	‰›—ßn-13075	no	_	_	_	_	_	Arg1
+no -- 34	œ«‘ 	V	PRD	12	null	null	no	Y	‰«„ùœ«‘ ‰.176	_	_	_	_
+time -- 1	Â‰ê«„Ì	N	ADVRB	8	„Êﬁ⁄ßn-12614	„œ ßn-12613	time	_	_	_	ArgM-TMP	_
+role_action -- 8	ê—› 	V	ROOT	0	 ’„Ì„ ê—› ‰ßv-16866	—Œœ«œßn-13136	role_action	Y	 ’„Ì„ùê—› ‰.68	_	_	_
+role_action -- 14	ò‰œ	V	VCL	8	‰›—Ì‰ ò—œ‰ßv-18658	—Œœ«œßn-13136	role_action	Y	‰›—Ì‰ùò—œ‰.76	_	_	_
+role -- 3	«Ê	PR	VPP	4	null	null	role	_	_	Arg3	_	_
+role_action -- 4	ê› 	V	ROOT	0	«Ì—«œ ò—œ‰ßv-9365	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_
+no -- 5	òÂ	SUBR	VCL	4	null	null	no	_	_	Arg1	_	_
+role_action -- 7	ò—œ	V	PRD	1	‰›—Ì‰ ò—œ‰ßv-18658	—Œœ«œßn-13136	role_action	Y	‰›—Ì‰ùò—œ‰.76	_
+role_action -- 4	—› 	V	VCONJ	8	ÅÊÌÌœ‰ßv-7700	—Œœ«œßn-13136	role_action	Y	—› ‰.17	_	_	_	_
+role -- 7	¬‰«‰	PR	VPP	8	null	null	role	_	_	_	Arg3	_	_
+role_action -- 8	ŒÊ«” 	V	ROOT	0	ŒÊ«” ‰ßv-19251	—Œœ«œßn-13136	role_action	Y	ŒÊ«” ‰.51	_	_	_	_
+role_action -- 14	ò‰‰œ	V	VCONJ	17	Ì«—Ì ŒÊ«” ‰ßv-20679	—Œœ«œßn-13136	role_action	Y	«” €«ÀÂùò—œ‰.573	_	_	_	_
+no -- 5	ÃÂ 	N	ADVRB	10	”»»ßn-12730	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	ArgM-PRP	_	_
+role_action -- 10	‘œ	V	VCONJ	12	null	null	role_action	Y	ò—œ‰.25	_	_	_
+no -- 13	òÂ	SUBR	VCL	12	null	null	no	_	_	_	Arg1	_
+no -- 1	Êﬁ Ì	N	ADVRB	23	null	null	no	_	_	_	_	ArgM-TMP
+no -- 20	»—«Ì	PREP	VPP	23	null	null	no	_	_	_	_	Arg4
+role_action -- 23	œ«œ	V	ROOT	0	‘—Õ œ«œ‰ßv-8268	—Œœ«œßn-13136	role_action	Y	 Ê÷ÌÕùœ«œ‰.146	_	_	_
+role_action -- 7	‘œ	V	VCONJ	16	⁄’»«‰Ì ò—œ‰ßv-7685	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_	_	_
+no -- 9	»œÊ‰	PREP	ADVRB	16	null	null	no	_	_	_	ArgM-NEG	_	_
+role_action -- 16	ò—œ	V	VCONJ	18	 —ò ê› ‰ßv-16797	—Œœ«œßn-13136	role_action	Y	 —òùò—œ‰.431	_	_	_	_
+role_action -- 18	—› 	V	ROOT	0	ÅÊÌÌœ‰ßv-7700	—Œœ«œßn-13136	role_action	Y	—› ‰.17	_	_	_	_
+no -- 21	ò‰«—	N	VPP	23	‰“œÌòßn-10189	Ã«ßn-12733	no	_	_	_	_	_	Arg4
+role_action -- 23	—”Ìœ	V	AJUCL	18	—”Ìœ‰ßv-8613	—Œœ«œßn-13136	role_action	Y	—”Ìœ‰.501	_	_	_	_
+role_action -- 4	‘œ	V	ROOT	0	”Ê«— ò—œ‰ßv-8722	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_
+static_object -- 7	»«—	N	MOS	10	»«—ßn-10887	‘Ì¡ßn-12703	static_object	_	_	_	Arg2
+no -- 10	»Êœ	V	PRD	5	»Êœ‰ßv-9332	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+no -- 4	»Êœ	V	ROOT	0	Â” Ìœ‰ßv-9339	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_
+no -- 5	òÂ	SUBR	AJUCL	4	null	null	no	_	_	ArgM-TMP	_	_	_
+no -- 6	‰«êÂ«‰	ADV	ADVRB	12	null	null	no	_	_	_	ArgM-ADV	_	_
+role_action -- 12	ê—› 	V	VCONJ	18	»” Â ‘œ‰ßv-7641	—Œœ«œßn-13136	role_action	Y	ê—› ‰.582	_	_	_	_
+no -- 17	»«“	ADJ	MOS	18	»«“ßa-15702	„‘Œ’Âßn-12756	no	_	_	_	_	Arg2	_
+role_action -- 18	ò—œ	V	VCONJ	22	ê‘Êœ‰ßv-7637	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_	_	_
+no -- 2	»«—	N	ADVRB	7	œ” ßn-13141	œÊ—Â “„«‰Ìßn-12603	no	_	_	ArgM-TMP	_	_	_
+no -- 5	‰«„	N	VPP	7	‰«„ßn-13061	null	no	_	_	Arg3	_	_	_
+no -- 12	œ—Ê‰	N	VPP	14	 Êßn-11857	ê—ÊÂßn-12753	no	_	_	_	Arg3	_	_
+no -- 17	‰Ì“	ADV	ADVRB	21	null	null	no	_	_	_	_	ArgM-ADV	_
+role -- 8	«Ê	PR	NPP	9	null	null	role	_	_	_	Arg3
+no -- 6	œ—Ê‰	N	ADVRB	14	 Êßn-11857	ê—ÊÂßn-12753	no	_	_	ArgM-LOC	_	_
+role_action -- 20	ò—œ	V	VCONJ	25	„ﬁ— ¬„œ‰ßv-22066	—Œœ«œßn-13136	role_action	Y	«⁄ —«›ùò—œ‰.591	_	_	_
+role_action -- 25	‘œ	V	ROOT	0	Œ»ÿ ò—œ‰ßv-8457	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_	_
+no -- 2	‰Ì“	ADV	ADVRB	7	null	null	no	_	_	ArgM-ADV	_	_	_	_
+role_action -- 12	ò—œ	V	ROOT	0	null	null	role_action	Y	«·Â«„ùò—œ‰.590	_	_	_	_	_
+no -- 22	Å”	SUBR	AJUCL	21	null	null	no	_	_	_	_	_	ArgM-DIS	_
+no -- 24	‰Ì“	ADV	ADVRB	26	null	null	no	_	_	_	_	_	_	ArgM-ADV
+no -- 25	ç‰«‰	PR	OBJ	26	null	null	no	_	_	_	_	_	_	Arg1
+role_action -- 26	ò—œ	V	PRD	22	«‰Ã«„ œ«œ‰ßv-8044	—Œœ«œßn-13136	role_action	Y	ò—œ‰.857	_	_	_	_	_
+role_action -- 11	‘œ	V	VCONJ	27	»Ì—Ê‰ œ«œ‰ßv-9851	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_
+location -- 14	ò‰«—	N	ADVRB	27	‰“œÌòßn-10189	Ã«ßn-12733	Location	_	_	_	ArgM-LOC
+role -- 1	«Ê	PR	SBJ	5	null	null	role	_	_	Arg0	Arg0
+no -- 2	Â„Ê«—Â	ADV	ADVRB	5	Â„Ê«—Âßr-15292	„‘Œ’Âßn-12756	no	_	_	ArgM-ADV	_
+time -- 3	Â‰ê«„	N	ADVRB	8	„Êﬁ⁄ßn-12614	œÊ—Â “„«‰Ìßn-12603	time	_	_	ArgM-TMP	_
+role_action -- 8	‘œ	V	VCONJ	17	‰‘«‰Â —› ‰ßv-9052	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_
+no -- 1	”Å”	SUBR	ROOT	0	”Å”ßr-21500	null	no	_	_	ArgM-DIS
+role_action -- 6	ò—œ	V	PRD	1	—Ê«‰Â ‘œ‰ßv-8643	—Œœ«œßn-13136	role_action	Y	Õ—ò ùò—œ‰.186	_
+no -- 5	¬„œ	V	VCONJ	8	null	null	no	Y	»Âù“»«‰ù¬„œ‰.601	_	_	_
+role_action -- 8	œ«œ	V	ROOT	0	‘Â«œ  œ«œ‰ßv-9309	—Œœ«œßn-13136	role_action	Y	êÊ«ÂÌùœ«œ‰.600	_	_	_
+no -- 9	òÂ	SUBR	VCL	8	null	null	no	_	_	_	Arg1	_
+no -- 13	«” 	V	PRD	9	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+no -- 3	‘œ	V	ROOT	0	„ ﬁ«⁄œ ò—œ‰ßv-8891	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_
+no -- 8	«” 	V	PRD	4	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+role_action -- 4	‘œ	V	VCONJ	12	null	null	role_action	Y	ò—œ‰.25	_	_
+role -- 11	„—œ„	N	VPP	12	«›—«œßn-13188	ê—ÊÂßn-12753	role	_	_	_	Arg3
+role_action -- 12	œ«œ	V	ROOT	0	Œ»— œ«œ‰ßv-9298	—Œœ«œßn-13136	role_action	Y	œ«œ‰.110	_	_
+role -- 1	„—œ„	N	SBJ	13	«›—«œßn-13188	ê—ÊÂßn-12753	role	_	_	Arg0	Arg0	Arg0	Arg0
+no -- 3	Â—ê“	ADV	ADVRB	8	»ÂùÂÌçùÊÃÂßr-16470	„‘Œ’Âßn-12756	no	_	_	ArgM-NEG	_	_	_
+role_action -- 13	ò—œÂ	V	VCONJ	16	«”Ì— ò—œ‰ßv-8991	—Œœ«œßn-13136	role_action	Y	œ” êÌ—ùò—œ‰.862	_	_	_	_
+role_action -- 16	ê—› ‰œ	V	ROOT	0	 ’„Ì„ ê—› ‰ßv-16866	—Œœ«œßn-13136	role_action	Y	 ’„Ì„ùê—› ‰.68	_	_	_	_
+role_action -- 5	ê› 	V	ROOT	0	ê› ‰ßv-7774	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_
+no -- 6	òÂ	SUBR	VCL	5	null	null	no	_	_	Arg1	_
+role -- 7	„‰	PR	SBJ	13	ŒÊœßn-13459	‰›—ßn-13075	role	_	_	_	Arg0
+no -- 13	œ«—„	V	PRD	6	œ«‘ ‰ßv-8512	—Œœ«œßn-13136	no	Y	œ«‘ ‰.39	_	_
+no -- 1	”Å”	SUBR	ROOT	0	”Å”ßr-21500	null	no	_	_	ArgM-DIS	_
+role_state -- 4	„Ãœœ«	ADV	ADVRB	6	null	null	role_state	_	_	ArgM-ADV	_
+role_action -- 6	œ«œ	V	PRD	1	‘Â«œ  œ«œ‰ßv-9309	—Œœ«œßn-13136	role_action	Y	‘Â«œ ùœ«œ‰.129	_	_
+no -- 7	òÂ	SUBR	VCL	6	null	null	no	_	_	Arg3	_
+role -- 1	„—œ„	N	SBJ	8	«›—«œßn-13188	ê—ÊÂßn-12753	role	_	_	Arg0	Arg0	Arg0	Arg1
+role_action -- 8	—› Â	V	VCONJ	16	ÅÊÌÌœ‰ßv-7700	—Œœ«œßn-13136	role_action	Y	—› ‰.17	_	_	_	_
+role_action -- 16	ò—œ‰œ	V	VCONJ	21	null	null	role_action	Y	ò—œ‰.25	_	_	_	_
+role -- 19	«Ê	PR	NPP	20	null	null	role	_	_	_	_	Arg3	_
+role_action -- 21	¬Ê—œÂ	V	VCONJ	29	«Ì„«‰ ¬Ê—œ‰ßv-7966	—Œœ«œßn-13136	role_action	Y	«Ì„«‰ù¬Ê—œ‰.38	_	_	_	_
+no -- 24	 Õ 	PREP	MOS	29	null	null	no	_	_	_	_	_	Arg2
+no -- 29	»Êœ‰œ	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_
+no -- 4	»œÊ‰	PREP	ADVRB	8	null	null	no	_	_	ArgM-NEG	_
+no -- 11	»«‘œ	V	AJUCL	8	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+time -- 1	Â‰ê«„Ì	N	ADVRB	23	„Êﬁ⁄ßn-12614	œÊ—Â “„«‰Ìßn-12603	time	_	_	_	_	_	ArgM-TMP
+role_action -- 5	ò—œ	V	PRD	2	‰Ì  ò—œ‰ßv-8811	—Œœ«œßn-13136	role_action	Y	«—«œÂùò—œ‰.80	_	_	_	_
+no -- 15	»«‘œ	V	PRD	12	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_
+role_action -- 17	œÂœ	V	VCL	5	Â‘ ‰ßv-9211	—Œœ«œßn-13136	role_action		Y	ﬁ—«—ùœ«œ‰.309	_	_	_	_
+role_action -- 23	‘œ‰œ	V	ROOT	0	null	null	role_action	Y	ò—œ‰.25	_	_	_	_
+role_action -- 12	œ«œ	V	ROOT	0	ÃÊ«» œ«œ‰ßv-8114	—Œœ«œßn-13136	role_action	Y	Å«”Œùœ«œ‰.175	_	_	_	_
+role -- 19	¬‰«‰	PR	SBJ	23	null	null	role	_	_	_	_	_	Arg0
+no -- 21	¬‰	PR	NPP	22	null	null	no	_	_	_	_	_	Arg3
+no -- 23	‰œ«—‰œ	V	PRD	18	œ«‰” ‰ßv-8456	—Œœ«œßn-13136	no	Y	¬ê«ÂÌùœ«‘ ‰.865	_	_	_	_
+role -- 11	«Ê	PR	VPP	12	null	null	role	_	_	Arg3	_	_
+no -- 17	Ì«› Â	V	VCONJ	22	ò”» ò—œ‰ßv-16262	—Œœ«œßn-13136	no	Y	Ì«› ‰.576	_	_	_
+no -- 22	ê—œœ	V	AJUCL	12	null	null	no	Y	ò—œ‰.25	_	_	_
+no -- 8	”Å”	SUBR	AJUCL	6	”Å”ßr-21500	null	no	_	_	_	ArgM-DIS	_	_	_	_	_
+no -- 19	»⁄œ	ADV	ADVRB	27	»⁄œßa-9917	„‘Œ’Âßn-12756	no	_	_	_	_	_	ArgM-ADV	_	_	_
+no -- 27	‘œÂ	V	PRD	8	 »œÌ· ò—œ‰ßv-9384	—Œœ«œßn-13136	no	Y	 »œÌ·ùò—œ‰.138	_	_	_	_	_	_	_
+no -- 29	”Å”	SUBR	AJUCL	27	”Å”ßr-21500	null	no	_	_	_	_	_	_	ArgM-DIS	_	_
+no -- 40	Â„çÊ‰	PREP	MOS	42	null	null	no	_	_	_	_	_	_	_	_	Arg2
+no -- 5	¬‰	PR	MOS	6	null	null	no	_	_	Arg2	_
+no -- 6	«” 	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+role -- 13	«Ê	PR	NPP	14	null	null	role	_	_	_	Arg3
+no -- 15	ê—œœ	V	PRD	7	null	null	no	Y	œ„Ìœ‰.372	_	_
+role_action -- 5	œ«œ	V	SBJ	22	›—„«‰ œ«œ‰ßv-19253	—Œœ«œßn-13136	role_action	Y	›—„«‰ùœ«œ‰.300	_	_	_	_	_
+no -- 6	òÂ	SUBR	VCL	5	null	null	no	_	_	Arg1	_	_	_	_
+no -- 20	ò‰‰œ	V	PRD	6	null	null	no	Y	”ÃœÂùò—œ‰.41	_	_	_	_	_
+no -- 30	òÂ	SUBR	AJUCL	29	null	null	no	_	_	_	_	_	ArgM-PRP	_
+role -- 9	„‰	PR	SBJ	13	ŒÊœßn-13459	‰›—r-13075	role	_	_	_	_	Arg0	Arg0	Arg0	_
+time -- 15	Â‰ê«„Ì	N	ADVRB	31	„Êﬁ⁄ßn-12614	œÊ—Â “„«‰Ìßn-12603	time	_	_	_	_	_	_	ArgM-TMP	_
+role -- 26	¬‰	PR	VPP	27	null	null	role	_	_	_	_	_	_	Arg3	_
+no -- 28	»—	PREP	NPP	30	null	null	no	_	_	_	_	_	_	_	Arg3
+no -- 31	ò‰Ìœ	V	VCL	13	null	null	no	Y	”ÃœÂùò—œ‰.41	_	_	_	_	_	_
+no -- 1	»‰«»—«Ì‰	SUBR	ROOT	0	Å”ßr-21612	null	no	_	_	ArgM-DIS	_
+no -- 8	»Êœ	V	PRD	1	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+no -- 8	œ«œ	V	ROOT	0	null	null	no	Y	œ«œ‰.110	_	_
+no -- 14	‘Êœ	V	AJUCL	8	‰„«Ì‰œÂ ò—œ‰ßv-16240	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_
+no -- 12	«„Ê—	N	NPP	14	„Ê÷Ê⁄ßn-12988	„‘Œ’Âßn-12756	no	_	_	Arg3	_
+no -- 27	«„Ê—	N	VPP	29	„Ê÷Ê⁄ßn-12988	„‘Œ’Âßn-12756	no	_	_	_	Arg3
+no -- 9	»—«”«”	PREP	ADVRB	12	null	null	no	_	_	ArgM-ADV	_	_
+no -- 14	»œÊ‰	PREP	ADVRB	19	null	null	no	_	_	_	ArgM-NEG	_
+role_action -- 19	ò—œ‰œ	V	SBJ	21	null	null	role_action	Y	”ÃœÂùò—œ‰.41	_	_	_
+role_action -- 9	ò‰œ	V	VCONJ	17	null	null	role_action	Y	⁄ÿ«ùò—œ‰.420	_	_	_
+role_action -- 17	¬Ê—œ	V	VCL	3	¬Ê—œ‰ßv-7851	—Œœ«œßn-13136	role_action	Y	»ÂùÊÃÊœù¬Ê—œ‰.617	_	_	_
+no -- 3	ç‰Ì‰	N	ADVRB	5	null	null	no	_	_	Arg2	_	_	_
+no -- 5	ê—› 	V	ROOT	0	null	null	no	Y	ﬁ—«—ùê—› ‰.866	_	_	_	_
+role -- 13	«Ê	PR	NPP	14	null	null	role	_	_	_	_	Arg3	_
+no -- 21	ê—œœ	V	AJUCL	10	null	null	no	Y	ò—œ‰.25	_	_	_	_
+no -- 1	»‰«»—«Ì‰	SUBR	ROOT	0	Å”ßr-21612	null	no	_	_	ArgM-DIS
+role_action -- 5	¬„œ	V	VCONJ	10	¬„œ‰ßv-7847	—Œœ«œßn-13136	role_action	Y	¬„œ‰.44	_	_	_
+role_action -- 10	ò—œ	V	VCONJ	20	null	null	role_action	Y	Ê”Ê”Âùò—œ‰.81	_	_	_
+role_action -- 20	¬Ê—œ	V	ROOT	0	null	null	role_action	Y	›—Êœù¬Ê—œ‰.485	_	_	_
+no -- 1	”Å”	SUBR	ROOT	0	”Å”ßr-21500	null	no	_	_	ArgM-DIS
+role_action -- 13	ò—œ‰œ	V	ROOT	0	‰«œ„ ‘œ‰ßv-21859	—Œœ«œßn-13136	role_action	Y	 Ê»Âùò—œ‰.544	_	_
+role_action -- 10	¬Ê—œ	V	VCONJ	15	null	null	role_action	Y	›—Êœù¬Ê—œ‰.485	_	_	_	_	_
+role_action -- 21	ò‰‰œ	V	VCONJ	26	«ﬁ«„  ò—œ‰ßn-10696	—Œœ«œßn-13136	role_action	Y	«ﬁ«„ ùò—œ‰.628	_	_	_	_	_
+no -- 25	¬»«œ	ADJ	MOS	26	null	null	no	_	_	_	_	_	Arg2	_
+no -- 35	‘Ê‰œ	V	VCL	17	null	null	no	Y	ò—œ‰.25	_	_	_	_	_
+no -- 4	Êﬁ Ì	N	ADVRB	14	null	null	no	_	_	_	ArgM-TMP
+no -- 9	‘œ‰œ	V	NCL	4	»Ì—Ê‰ —«‰œ‰ßv-7873	—Œœ«œßn-13136	no	Y	«Œ—«Ãùò—œ‰.500	_	_
+no -- 3	»—	PREP	VPP	10	»—ßn-14261	‘Ì¡ßn-12703	no	_	_	Arg4	_	_	_	_	_
+role -- 10	ò—œ	V	VCONJ	45	null	null	role	Y	Â»Êÿùò—œ‰.192	_	_	_	_	_	_
+no -- 16	êÊÌ‰œ	V	PRD	11	null	null	no	Y	ê› ‰.298	_	_	_	_	_	_
+role_action -- 28	‘œ	V	PRD	17	null	null	role_action	Y	ò—œ‰.25	_	_	_	_	_	_
+no -- 32	»—	PREP	VPP	45	»—ßn-14261	‘Ì¡ßn-12703	no	_	_	_	_	_	_	_	Arg4
+no -- 42	«” 	V	PRD	39	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_	_	_
+role_action -- 45	¬„œ	V	VCONJ	50	›—Êœ ¬„œ‰ßv-9200	—Œœ«œßn-13136	role_action	Y	›—Êœù¬„œ‰.101	_	_	_	_	_	_
+location -- 48	¬‰	PR	NPP	49	null	null	location	_	_	_	_	_	_	_	Arg3
+role_action -- 12	ò—œ	V	VCONJ	18	“«— “«— ò—œ‰ßv-8977	—Œœ«œßn-13136	role_action	Y	ê—ÌÂùò—œ‰.194	_	_	_
+role_action -- 6	ê—› 	V	VCONJ	25	ﬁ—«— ê—› ‰ßv-19953	null	role_action	Y	ﬁ—«—ùê—› ‰.78	_	_	_
+role_action -- 21	»Êœ	V	PRD	10	»Êœ‰ßv-16430	—Œœ«œßn-13136	role_action	Y	»Êœ‰.15	_	_	_
+role_action -- 6	œ«œ	V	VCONJ	9	null	null	role_action	Y	€”·ùœ«œ‰.657	_	_	_	_	_	_	_
+role_action -- 9	ò—œ	V	VCONJ	14	null	null	role_action	Y	ò›‰ùò—œ‰.659	_	_	_	_	_	_	_
+no -- 11	»—	PREP	ADVRB	14	null	null	no	_	_	_	_	ArgM-GOL	_	_	_	_
+role_action -- 17	ò—œ	V	VCONJ	21	»Â Œ«ò ”Å—œ‰ßv-9614	—Œœ«œßn-13136	role_action	Y	œ›‰ùò—œ‰.67	_	_	_	_	_	_	_
+role -- 28	„—œ„	N	VPP	29	„—œ„ßn-13215	ê—ÊÂßn-12753	role	_	_	_	_	_	_	_	Arg3	_
+no -- 31	‰Ì“	ADV	ADVRB	42	null	null	no	_	_	_	_	_	_	_	_	ArgM-ADV
+role_action -- 42	ò—œ	V	ROOT	0	«»·«€ ò—œ‰ßv-9622	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_	_	_	_	_	_
+no -- 7	«” 	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+no -- 9	‰«„	N	SBJ	16	‰«„ßn-13061	null	no	_	_	_	Arg1	_
+no -- 18	‰Ì“	ADV	ADVRB	23	null	null	no	_	_	_	_	ArgM-ADV
+no -- 21	‰«„	N	MOS	23	‰«„ßn-13061	null	no	_	_	_	_	Arg2
+role -- 1	«Ê	PR	SBJ	5	Õ÷—  ‰ÊÕßn-23928	‰›—ßn-13075	role	_	_	Arg1	_	Arg1
+no -- 5	«” 	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+no -- 12	»ÊœÂ	V	VCONJ	19	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+no -- 14	‰Ì“	ADV	ADVRB	19	null	null	no	_	_	_	_	ArgM-ADV
+role -- 1	„—œ„	N	SBJ	13	„—œ„ßn-13215	ê—ÊÂßn-12753	role	_	_	Arg1
+no -- 13	»Êœ‰œ	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_
+role_action -- 8	œ«‘ ‰œ	V	ROOT	0	null	null	role_action	Y	«Ì” «œêÌùœ«‘ ‰.609	_	_	_	_
+role_state -- 10	Õ«÷—	ADJ	MOS	11	„«Ì·ßa-119	„‘Œ’Âßn-12756	role_state	_	_	_	Arg2	_	_
+no -- 11	»Êœ‰œ	V	PRD	9	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_
+no -- 2	Â„çÊ‰	PREP	ADVRB	8	null	null	no	_	_	ArgM-MNR	_	_
+role_action -- 8	—› 	V	VCONJ	20	ÅÊÌÌœ‰ßv-7700	—Œœ«œßn-13136	role_action	Y	—› ‰.17	_	_	_
+no -- 17	»—«Ì	PREP	ADVRB	20	null	null	no	_	_	_	Arg3	_
+role_action -- 20	œ«œ	V	VCONJ	30	Ê’› ò—œ‰ßv-8330	—Œœ«œßn-13136	role_action	Y	‘—Õùœ«œ‰.315	_	_	_
+role_action -- 30	ò—œ	V	ROOT	0	Ì«œ¬Ê—Ì ò—œ‰ßv-8237	—Œœ«œßn-13136	role_action	Y	êÊ‘“œùò—œ‰.621	_	_	_
+role_action -- 6	ê—› Â	V	VCONJ	10	ê—› ‰ßv-7616	—Œœ«œßn-13136	role_action	Y	ê—› ‰.867	_	_
+no -- 5	»—«Ì	PREP	ADVRB	21	null	null	no	_	_	_	ArgM-PRP
+no -- 14	ò‰œ	V	PRD	7	‰›Ê– ò—œ‰ßv-16382		—Œœ«œßn-13136	no	Y	‰›Ê–ùò—œ‰.627	_	_
+role_action -- 21	ò—œ	V	ROOT	0	ÅÌêÌ—Ì ò—œ‰ßv-19216	—Œœ«œßn-13136	role_action	Y	œ‰»«·ùò—œ‰.199	_	_
+time -- 1	ê«Â	ADV	ADVRB	9	„Êﬁ⁄ßn-12614	œÊ—Â “„«‰Ìßn-12603	time	_	_	ArgM-TMP	_	_
+time -- 12	ê«Â	ADV	ADVRB	17	„Êﬁ⁄ßn-12614	œÊ—Â “„«‰Ìßn-12603	time	_	_	_	ArgM-TMP	_
+role_action -- 17	œ«‘ 	V	VCONJ	30	œ«‘ ‰ßv-8512	—Œœ«œßn-13136	role_action	Y	œ«‘ ‰.39	_	_	_
+no -- 21	‰Ì“	ADV	ADVRB	30	null	null	no	_	_	_	_	ArgM-ADV
+no -- 6	Â„ç‰«‰	ADV	ADVRB	21	null	null	no	_	_	ArgM-ADV
+no -- 21	»Êœ	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_
+no -- 1	»‰«»—«Ì‰	SUBR	ROOT	0	Å”ßr-21612	null	no	_	_	_	ArgM-DIS
+time -- 3	Â‰ê«„	N	MOS	4	„Êﬁ⁄ßn-12614	œÊ—Â “„«‰Ìßn-12603	time	_	_	Arg2	_
+no -- 4	»Êœ	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+role_action -- 17	œ«œ	V	PRD	5	«„— œ«œ‰ßv-9613	—Œœ«œßn-13136	role_action	Y	œ«œ‰.110	_	_
+no -- 6	‰Ì“	ADV	ADVRB	24	null	null	no	_	_	ArgM-ADV2	_
+no -- 1	çÊ‰	SUBR	ROOT	0	null	null	no	_	_	ArgM-DIS	_	_
+no -- 6	Ã“	PREP	ADVRB	11	null	null	no	_	_	ArgM-ADV	_	_
+role -- 9	«Ê	PR	NPP	10	null	null	role	_	_	Arg3	_	_
+time -- 1	ê«ÂÌ	ADV	ADVRB	5	»⁄÷«ßr-20941	„‘Œ’Âßn-12756	time	_	_	ArgM-TMP	_	_	_	_
+no -- 2	¬‰ﬁœ—	ADV	ADVRB	5	¬‰ùﬁœ—ßr-16461	„‘Œ’Âßn-12756	no	_	_	ArgM-EXT	_	_	_	_
+role -- 3	«Ê	PR	OBJ	5	Õ÷—  ‰ÊÕßn-23928	‰›—ßn-13075	role	_	_	Arg1	_	_	_	_
+no -- 8	—ÊÌ	PREP	VPP	10	—Êßn-13624	‘Ì¡ßn-12703	no	_	_	_	Arg3	_	_	_
+time -- 12	Êﬁ Ì	N	ADVRB	17	null	null	time	_	_	_	_	_	ArgM-TMP	_
+no -- 22	œÊ»«—Â	ADV	ADVRB	24	„Ãœœßa-1377	„‘Œ’Âßn-12756	no	_	_	_	_	_	_	ArgM-EXT
+no -- 1	»—«Ì	PREP	ADVRB	8	null	null	no	_	_	ArgM-CAU
+no -- 5	«Ì‰	PR	VPP	18	null	null	no	_	_	_	_	Arg3	_
+role_action -- 11	ò—œÂ	V	VCONJ	16	 —ò ò—œ‰ßv-16309	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_	_	_
+role_action -- 18	ò—œÂ	V	VCONJ	23	ÕÌ—  ò—œ‰ßv-8449	—Œœ«œßn-13136	role_action	Y	 ⁄Ã»ùò—œ‰.663	_	_	_	_
+role -- 2	„«	PR	SBJ	6	null	null	role	_	_	Arg0
+no -- 8	»—	PREP	NPP	13	null	null	no	_	_	Arg3	_	_
+role_action -- 14	ò—œ	V	ROOT	0	null	null	role_action	Y	ÊÕÌùò—œ‰.218	_	_	_
+no -- 15	òÂ	SUBR	VCL	14	null	null	no	_	_	Arg1	_	_
+role_action -- 20	ò‰	V	PRD	15	«⁄·«„ œ«‘ ‰ßv-9364	—Œœ«œßn-13136	role_action	Y	«⁄·«„ùò—œ‰.473	_	_	_
+role_action -- 27	¬Ì‰œ	V	AJUCL	20	¬„œ‰ßv-7847	—Œœ«œßn-13136	role_action	Y	¬„œ‰.44	_	_	_
+role_action -- 4	ò—œ	V	VCONJ	9	«⁄·«„ œ«‘ ‰ßv-9364	—Œœ«œßn-13136	role_action	Y	«⁄·«„ùò—œ‰.473	_	_
+role_state -- 8	Õ«÷—	ADJ	MOS	9	„ÂÌ«ßa-2354	„‘Œ’Âßn-12756	role_state	_	_	_	Arg2
+role_action -- 9	‘œ‰œ	V	ROOT	0	„ÂÌ« ”«Œ ‰ßv-17910	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_
+role_action -- 16	ê—› 	V	VCONJ	21	ê—› ‰ßv-7616	—Œœ«œßn-13136	role_action	Y	ê—› ‰.872	_	_
+role_action -- 21	œ«œ	V	ROOT	0	Â‘ ‰ßv-9211	—Œœ«œßn-13136	role_action	Y	Ã«Ìùœ«œ‰.664	_	_
+role -- 1	«Ê	PR	SBJ	26	null	null	role	_	_	_	Arg0
+no -- 23	»Êœ‰œ	V	PRD	20	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+role_action -- 5	¬„œ	V	VCONJ	9	¬„œ‰ßv-7847	—Œœ«œßn-13136	role_action	Y	¬„œ‰.44	_	_	_	_
+role -- 8	«Ê	PR	VPP	9	null	null	role	_	_	_	Arg3	_	_
+role_action -- 9	ŒÊ«” 	V	ROOT	0	ŒÊ«” ‰ßv-19251	—Œœ«œßn-13136	role_action	Y	ŒÊ«” ‰.51	_	_	_	_
+no -- 10	òÂ	SUBR	VCL	9	null	null	no	_	_	_	Arg1	_	_
+role_action -- 12	¬Ê—œÂ	V	VCONJ	17	«Ì„«‰ ¬Ê—œ‰ßv-7966	—Œœ«œßn-13136	role_action	Y	«Ì„«‰ù¬Ê—œ‰.38	_	_	_	_
+role_action -- 17	‘Êœ	V	PRD	10	”Ê«— ò—œ‰ßv-8722	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_	_	_
+role -- 2	«Ê	PR	SBJ	6	null	null	role	_	_	Arg0	Arg0	Arg0	_
+no -- 8	»—	PREP	NPP	11	null	null	no	_	_	_	Arg3	_	_
+role_action -- 16	ê› 	V	ROOT	0	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_	_
+role -- 18	„‰	PR	SBJ	24	ŒÊœßn-13459	‰›—ßn-13075	role	_	_	_	_	_	Arg0
+no -- 19	»—«Ì	PREP	ADVRB	24	null	null	no	_	_	_	_	_	ArgM-PRP
+no -- 1	Å”	SUBR	ROOT	0	Å”ßr-21612	null	no	_	_	_	ArgM-DIS
+role -- 10	„‰	PR	VPP	11	ŒÊœßn-13459	‰›—ßn-13075	role	_	_	_	Arg3
+no -- 5	ê—› 	V	VCONJ	11		null	null	no	Y	ÃÊ‘Ìœ‰ùê—› ‰.694	_	_	_	_
+no -- 22	ò—œ	V	ROOT	0	null	null	no	Y	ò—œ‰.25	_	_	_	_
+location -- 13	ŒÊœ	PR	VPP	14	null	null	location	_	_	Arg3	_	_
+no -- 21	ê—› 	V	ROOT	0	ÅÂ·Ê ê—› ‰ßv-16739	—Œœ«œßn-13136	no	Y	ÅÂ·Êùê—› ‰.681	_	_	_
+no -- 33	¬„œ	V	VCL	21	›—Êœ ¬„œ‰ßv-9200	—Œœ«œßn-13136	no	Y	›—Êœù¬„œ‰.101	_	_	_
+no -- 9	»Êœ‰œ	V	PRD	5	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+location -- 11	ò‰«—	N	ADVRB	15	œÊ—ßn-13705	‘Ì¡ßn-12703	location	_	_	_	ArgM-LOC	_
+role_action -- 15	”«Œ Â	V	VCONJ	21	»‰« ‰Â«œ‰ßv-17672	—Œœ«œßn-13136	role_action	Y	”«Œ ‰.137	_	_	_
+role_action -- 21	œ«œ‰œ	V	ROOT	0	«œ«„Â œ«œ‰ßv-7779	—Œœ«œßn-13136	role_action	Y	«œ«„Âùœ«œ‰.527	_	_	_
+role_action -- 8	‘œ	V	VCONJ	13	ê”Ì· œ«œ‰ßv-21561	ê”Ì· œ«œ‰ßv-21561	role_action	Y	ò—œ‰.25	_	_	_
+role -- 11	«Ê	PR	NPP	12	Õ÷—  ‰ÊÕßn-23928	‰›—ßn-13075	role	_	_	_	Arg3	_
+role_action -- 13	ò—œ	V	ROOT	0	«⁄·«„ œ«‘ ‰ßv-9364	—Œœ«œßn-13136	role_action	Y	«⁄·«„ùò—œ‰.473	_	_	_
+no -- 14	òÂ	SUBR	VCL	13	null	null	no	_	_	_	Arg1	_
+time -- 15	„œ 	N	SBJ	22	„œ ßn-12693	œÊ—Â “„«‰Ìßn-12603	time	_	_	_	_	Arg1
+no -- 18	ç‰Ì‰	PR	OBJ	19	null	null	no	_	_	_	Arg1	_
+role_action -- 19	ò—œ	V	VCONJ	28	null	null	role_action	Y	ò—œ‰.857	_	_	_
+role_action -- 28	ê› 	V	PRD	15	null	null	role_action	Y	·»Ìòùê› ‰.685	_	_	_
+role -- 1	«Ê	PR	SBJ	8	Õ÷—  ‰ÊÕßn-23928	‰›—ßn-13075	role	_	_	Arg0	Arg0
+no -- 2	Â—ê“	ADV	ADVRB	8	»ÂùÂÌçùÊÃÂßr-16470	null	no	_	_	ArgM-NEG	_
+no -- 12	çÊ‰	PREP	TAM	14	null	null	no	_	_	_	Arg2
+time -- 1	«ò‰Ê‰	ADV	ADVRB	10	«ò‰Ê‰ßn-22147	„‘Œ’Âßn-12756	time	_	_	ArgM-TMP
+no -- 2	‰Ì“	ADV	ADVRB	7	null	null	no	_	_	ArgM-ADV
+role_action -- 7	ò—œ	V	ROOT	0	ê—› ‰ßv-8893	—Œœ«œßn-13136	role_action	Y	ﬁ»÷ùò—œ‰.689	_
+role -- 1	«Ì‘«‰	PR	SBJ	5	«»—«ÂÌ„ßn-23925	‰›—ßn-13075	role	_	_	Arg1	_	Arg0
+no -- 12	»ÊœÂ	V	VCONJ	16	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+no -- 11	œ«‘ 	V	ROOT	0	null	null	no	Y	‰«„ùœ«‘ ‰.176	_
+time -- 4	“„«‰	N	MOS	6	“„«‰Âßn-12682	œÊ—Â “„«‰Ìßn-12603	time	_	_	Arg2
+no -- 6	»Êœ	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_
+no -- 10	Œ·«’Â	ADJ	MOS	11	çòÌœÂßa-1312	„‘Œ’Âßn-12756	no	_	_	Arg2	_
+no -- 11	„Ìù‘Êœ	V	ROOT	0	„Œ ’— ò—œ‰ßv-7550	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_
+no -- 11	»Êœ	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_
+role -- 1	«Ê	PR	SBJ	8	null	null	role	_	_	Arg0	Arg0
+role_action -- 16	œ«œ	V	ROOT	0	Œ»— œ«œ‰ßv-9298	—Œœ«œßn-13136	role_action	Y	ê“«—‘ùœ«œ‰.671	_	_
+no -- 10	òÂ	SUBR	VCL	9	null	null	no	_	_	Arg1	_	_
+role_action -- 2	ê› ‰œ	V	ROOT	0	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_	_
+no -- 7	«Ì‰	PR	MOS	8	null	null	no	_	_	_	Arg2	_	_
+no -- 8	«” 	V	VCL	2	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_
+no -- 27	„Ìù‘Êœ	V	PRD	17	«‰Ã«„ œ«œ‰ßv-16592	—Œœ«œßn-13136	no	Y	«‰Ã«„ùœ«œ‰.158	_	_	_	_
+no -- 2	»—«Ì	PREP	ADVRB	12	null	null	no	_	_	_	ArgM-PRP	_	_	_
+role_action -- 10	»êÌ—œ	V	VCL	5	ê—› ‰ßv-9668	—Œœ«œßn-1313	role_action	Y	ê—› ‰.582	_	_	_	_	_
+role_action -- 12	œ«œ	V	ROOT	0	›—„«‰ œ«œ‰ßv-19253	—Œœ«œßn-1313	role_action	Y	œ” Ê—ùœ«œ‰.104	_	_	_	_	_
+no -- 13	òÂ	SUBR	VCL	12	null	null	no	_	_	_	Arg1	_	_	_
+role_state -- 20	Ãœ«	ADJ	MOS	21	Ãœ«ê«‰Âßa-2327	„‘Œ’Âßn-12756	role_state	_	_	_	_	Arg2	_	_
+role_action -- 21	ò‰‰œ	V	VCONJ	31	 ›òÌò ò—œ‰ßv-17068	—Œœ«œßn-1313	role_action	Y	ò—œ‰.25	_	_	_	_	_
+no -- 23	«ê—	SUBR	AJUCL	31	null	null	no	_	_	_	_	_	_	ArgM-CND
+no -- 28	¬„œ	V	PRD	23	»Â œ‰Ì« ¬„œ‰ßv-8079	—Œœ«œßn-13136	no	Y	»Âùœ‰Ì«ù¬„œ‰.36	_	_	_	_	_
+no -- 3	‰Ì“	ADV	ADVRB	11	null	null	no	_	_	ArgM-ADV	_
+no -- 4	»«—Â«	ADV	ADVRB	11	œ” ßn-13141	„‘Œ’Âßn-12756	no	_	_	ArgM-EXT	_
+no -- 5	 Ê”ÿ	PREP	ADVRB	11	null	null	no	_	_	ArgM-INS	_
+no -- 11	‘œ	V	VCONJ	19	¬“„«Ì‘ ò—œ‰ßv-7838	—Œœ«œßn-13136	no	Y	¬“„«Ì‘ùò—œ‰.674	_	_
+role -- 13	ò”Ì	N	SBJ	19	null	null	role	_	_	_	Arg1
+role_action -- 9	œ«‘ 	V	ROOT	0	Å‰Â«‰ œ«‘ ‰ßv-15814	—Œœ«œßn-13136	role_action	Y	œ«‘ ‰.477	_	_
+role_action -- 17	‘œ	V	AJUCL	9	null	null	role_action	Y	ò—œ‰.25	_	_
+no -- 17	«Ì‰Â«	PR	SBJ	19	null	null	no	_	_	_	Arg0	Arg1
+role_action -- 19	œ«—œ	V	VCONJ	23	œ«‘ ‰ßv-8512	—Œœ«œßn-13136	role_action	Y	œ«‘ ‰.39	_	_	_
+time -- 6	“„«‰	N	ADVRB	8	“„«‰Âßn-12682	œÊ—Â “„«‰Ìßn-12603	time	_	_	ArgM-TMP
+role_action -- 8	ò—œ	V	ROOT	0	œ— ò‘Ìœ‰ßv-8607	—Œœ«œßn-13136	role_action	Y	 —”Ì„ùò—œ‰.678	_
+no -- 4	»Êœ	V	VCONJ	10	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+role_action -- 6	ò—œ‰	N	NPP	7	”‰ê”«— ò—œ‰ßv-9601	—Œœ«œßn-13136	role_action	_	_	Arg3	_
+role_action -- 8	ò—œ	V	VCONJ	12	 —” ¬›—Ì‰Ì ò—œ‰ßv-8338	—Œœ«œßn-13136	role_action	Y	 ÂœÌœùò—œ‰.177	_	_
+role -- 11	ŒÊœ	PR	VPP	12	ŒÊœßn-13459	‰›—ßn-13075	role	_	_	_	Arg3
+role_action -- 11	œ«œ	V	ROOT	0	«œ«„Â œ«œ‰ßv-7779	—Œœ«œßn-13136	role_action	Y	«œ«„Âùœ«œ‰.527	_	_
+role_action -- 4	ê› 	V	ROOT	0	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_
+no -- 5	òÂ	SUBR	VCL	4	null	null	no	_	_	Arg1	_
+no -- 8	òÌ	PR_INTG	MOS	9	null	null	no	_	_	_	Arg2
+no -- 3	«‰Ã«„	N	VPP	6	«Ã—« ò—œ‰ßn-10404	—Œœ«œßn-13136	no	_	_	Arg3	_	_
+no -- 8	„Êﬁ «	ADV	ADVRB	12	Å—ÊéÂù«Ìßr-20927	„‘Œ’Âßn-12756	no	_	_	_	ArgM-TMP	_
+role_action -- 12	ò—œ	V	ROOT	0	 —ò ò—œ‰ßv-16309	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_	_
+role -- 18	«Ê	PR	NPP	19	«»—«ÂÌ„ßn-23925	‰›—ßn-13075	role	_	_	_	_	Arg3
+role_action -- 20	»êÌ—œ	V	AJUCL	12	 «Ê«‰ œ«œ‰ßv-8359	—Œœ«œßn-13136	role_action	Y	«‰ ﬁ«„ùê—› ‰.687	_	_	_
+no -- 1	Êﬁ Ì	N	ADVRB	15	null	null	no	_	_	_	ArgM-TMP	_	_	_	_
+no -- 9	‘œ	V	PRD	2	Œ«·Ì ò—œ‰ßv-7754	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_	_	_	_	_
+role -- 10	«Ê	PR	SBJ	15	«»—«ÂÌ„ßn-23925	‰›—ßn-13075	role	_	_	_	Arg0	Arg0	_	Arg0	Arg0
+role_action -- 15	—› 	V	VCONJ	22	ÅÊÌÌœ‰ßv-7700	—Œœ«œßn-13136	role_action	Y	—› ‰.17	_	_	_	_	_	_
+role_action -- 28	ò—œ	V	VCONJ	43	‰«»Êœ ò—œ‰ßv-9575	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_	_	_	_	_
+role_action -- 43	—› 	V	ROOT	0	ÅÊÌÌœ‰ßv-7700	—Œœ«œßn-13136	role_action	Y	—› ‰.17	_	_	_	_	_	_
+role -- 11	«Ê	PR	NPP	12	«»—«ÂÌ„ßn-23925	‰›—ßn-13075	role	_	_	_	Arg3
+role_action -- 13	ò—œ‰œ	V	ROOT	0	Å—”‘ ò—œ‰ßv-8136	—Œœ«œßn-13136	role_action	Y	”Ê«·ùò—œ‰.304	_	_
+role_action -- 7	ò—œ	V	VCONJ	11	«” ›«œÂ ò—œ‰ßv-20683	—Œœ«œßn-13136	role_action	Y	«” ›«œÂùò—œ‰.278	_	_	_
+role_action -- 11	ê› 	V	ROOT	0	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_
+no -- 12	òÂ	SUBR	VCL	11	null	null	no	_	_	_	Arg1	_
+no -- 18	ò—œÂ	V	PRD	12	‰«»Êœ ò—œ‰ßv-9575	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_	_
+time -- 3	Â‰ê«„	N	ADVRB	13		„Êﬁ⁄ßn-12614	œÊ—Â “„«‰Ìßn-12603	time	_	_	_	_	ArgM-TMP
+role -- 4	„—œ„	N	SBJ	13	„—œ„ßn-13215	ê—ÊÂßn-12753	role	_	_	Arg0	_	Arg1
+role_action -- 13	‘œ‰œ	V	ROOT	0	‘—„”«— ò—œ‰ßv-18140	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_	_
+role -- 12	„—œ„	N	NPP	13	„—œ„ßn-13215	ê—ÊÂßn-12753	role	_	_	_	Arg3	_	_	_
+role_action -- 14	œ«œ	V	ROOT	0	›—„«‰ œ«œ‰ßv-19253	—Œœ«œßn-1313	role_action	Y	œ” Ê—ùœ«œ‰.104	_	_	_	_	_
+no -- 15	òÂ	SUBR	VCL	14	null	null	no	_	_	_	Arg3	_	_	_
+role_action -- 20	ò‰‰œ	V	PRD	15	›—«Â„ ¬Ê—œ‰ßv-19820	—Œœ«œßn-1313	role_action	Y	ò—œ‰.25	_	_	_	_	_
+no -- 25	¬‰	PR	ADVRB	26	null	null	no	_	_	_	_	_	ArgM-LOC	_
+no -- 32	‘Êœ	V	AJUCL	20	null	null	no	Y	ò—œ‰.25	_	_	_	_	_
+time -- 3	Â‰ê«„	N	ADVRB	7	„Êﬁ⁄ßn-12614	œÊ—Â “„«‰Ìßn-12603	time	_	_	ArgM-TMP	_	_
+no -- 7	‘œ	V	ROOT	0	’«œ— ò—œ‰ßv-8772	—Œœ«œßn-1313	no	Y	ò—œ‰.25	_	_	_
+no -- 9	«Ì	ADR	VCONJ	14	null	null	no	_	_	_	ArgM-DIS	_
+no -- 11	»—«Ì	PREP	ADVRB	14	null	null	no	_	_	_	ArgM-GOL	_
+no -- 14	»«‘	V	VCONJ	22	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+no -- 16	»—	PREP	ADVRB	22	null	null	no	_	_	_	_	ArgM-GOL
+no -- 22	»«‘	V	NCL	4	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+no -- 2	»—«Ì	PREP	ADVRB	10	null	null	no	_	_	ArgM-TMP	_	_
+no -- 7	»—	PREP	ADVRB	10	null	null	no	_	_	ArgM-GOL	_	_
+no -- 9	 „«„	ADJ	MOS	10	null	null	no	_	_	Arg2	_	_
+role_action -- 10	ò—œ	V	ROOT	0	Œ« „Â œ«œ‰ßv-16579	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_	_
+no -- 13	«ê—	SUBR	AJUCL	30	null	null	no	_	_	_	_	ArgM-CND
+role_state -- 14	»«“	ADV	ADVRB	19	œÊ»«—Âßr-15315	„‘Œ’Âßn-12756	role_state	_	_	_	ArgM-ADV	_
+no -- 15	»—	PREP	VPP	19	null	null	no	_	_	_	Arg3	_
+role_action -- 19	œÂœ	V	PRD	13	«œ«„Â œ«œ‰ßv-7779	—Œœ«œßn-13136	role_action	Y	«œ«„Âùœ«œ‰.527	_	_	_
+location -- 2	¬‰Ã«	N	MOS	4	¬‰Ã«ßr-15232	null	location	_	_	Arg2	_
+no -- 4	»Êœ	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+no -- 7	»Êœ	V	PRD	5	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+location -- 13	¬‰Ã«	N	VPP	16	¬‰Ã«ßr-15232	null	location	_	_	_	Arg3	_	_
+no -- 14	‰Ì“	ADV	ADVRB	16	null	null	no	_	_	_	ArgM-ADV	_	_
+role_action -- 20	—› 	V	PRD	9	ÅÊÌÌœ‰ßv-7700	—Œœ«œßn-13136	role_action	Y	—› ‰.17	_	_	_	_
+role -- 22	ò”Ì	N	SBJ	25	‰›—ßn-13075	‰›—ßn-13075	role	_	_	_	_	_	Arg0
+no -- 8	‘œ	V	VCONJ	16	„‰ ‘— ò—œ‰ßv-7949	—Œœ«œßn-13136	no	Y	ÅŒ‘ùò—œ‰.550	_	_
+role -- 10	„—œ„	N	SBJ	16	„—œ„ßn-13215	ê—ÊÂßn-12753	role	_	_	_	Arg0
+role_action -- 7	ò—œ	V	ROOT	0	Å—”‘ ò—œ‰ßv-8136	—Œœ«œßn-13136	role_action	Y	”Ê«·ùò—œ‰.304	_	_	_	_
+role_action -- 10	ê› 	V	PRD	8	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_	_
+no -- 11	òÂ	SUBR	VCL	10	null	null	no	_	_	_	Arg1	_	_
+role_action -- 2	ê› 	V	ROOT	0	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_
+no -- 3	òÂ	SUBR	VCL	2	null	null	no	_	_	Arg1	_	_
+no -- 6	òÌ	ADV_INTG	MOS	7	null	null	no	_	_	_	Arg2	_
+role_state -- 5	„Ãœœ«	ADV	ADVRB	9	œÊ»«—Âßr-15315	„‘Œ’Âßn-12756	role_state	_	_	ArgM-ADV	_	_	_
+role_action -- 9	ò—œ‰œ	V	VCONJ	13	—Ê«‰Â ‘œ‰ßv-8643	—Œœ«œßn-13136	role_action	Y	Õ—ò ùò—œ‰.186	_	_	_	_
+role_action -- 13	—› Â	V	ROOT	0	ÅÊÌÌœ‰ßv-7700	—Œœ«œßn-13136	role_action	Y	—› ‰.17	_	_	_	_
+no -- 20	»—«Ì	PREP	VPP	22	null	null	no	_	_	_	_	Arg3	_
+role_action -- 3	ò—œ	V	ROOT	0	‰–— ò—œ‰ßn-10691	—Œœ«œßn-13136	role_action	Y	‰–—ùò—œ‰.725	_	_	_
+no -- 4	òÂ	SUBR	VCL	3	null	null	no	_	_	Arg1	_	_
+no -- 5	«ê—	SUBR	AJUCL	15	null	null	no	_	_	_	_	ArgM-CND
+no -- 9	‘Êœ	V	PRD	5	null	null	no	Y	ò—œ‰.25	_	_	_
+no -- 12	»—«Ì	PREP	VPP	15	null	null	no	_	_	_	_	Arg3
+no -- 1	çÊ‰	SUBR	AJUCL	13	null	null	no	_	_	_	ArgM-CAU	_
+no -- 5	»Êœ	V	PRD	1	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+role -- 6	«Ê	PR	SBJ	13	null	null	role	_	_	_	Arg0	_
+no -- 18	‘Êœ	V	AJUCL	13	null	null	no	Y	ò—œ‰.25	_	_	_
+role_action -- 6	ò—œ‰œ	V	VCONJ	16	⁄—Ê”Ì ò—œ‰ßv-7890	—Œœ«œßn-13136	role_action	Y	«“œÊ«Ãùò—œ‰.131	_	_
+no -- 16	‘œ	V	ROOT	0	null	null	no	Y	ò—œ‰.25	_	_
+no -- 2	‰Ì“	ADV	ADVRB	6	null	null	no	_	_	ArgM-ADV	_	_	_
+no -- 6	»Êœ	V	VCONJ	27	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_
+role -- 10	«Ê	PR	VPP	12	null	null	role	_	_	_	Arg3	_	_
+role_action -- 12	œÂœ	V	PRD	7	«⁄ÿ« ò—œ‰ßv-7665	—Œœ«œßn-13136	role_action	Y	œ«œ‰.110	_	_	_	_
+time -- 15	Êﬁ Ì	N	ADVRB	27	null	null	time	_	_	_	_	_	ArgM-TMP
+no -- 26	»Ì‘ —	ADJ	MOS	27	»Ì‘ —ßr-15271	„‘Œ’Âßn-12756	no	_	_	_	_	_	Arg2
+role_action -- 4	ŒÊ«” 	V	ROOT	0	ŒÊ«” ‰ßv-19251	—Œœ«œßn-13136	role_action	Y	ŒÊ«” ‰.51	_	_	_	_
+role_action -- 6	ò‰œ	V	VCONJ	12	œ⁄« ‰„Êœ‰ßv-18655	—Œœ«œßn-13136	role_action	Y	œ⁄«ùò—œ‰.182	_	_	_	_
+no -- 17	ê—œœ	V	AJUCL	12	null	null	no	Y	ò—œ‰.25	_	_	_	_
+no -- 1	”Å”	SUBR	ROOT	0	”Å”ßr-21500	null	no	_	_	ArgM-DIS	_	_	_
+no -- 11	¬„œ	V	PRD	1	»—Ê“ ò—œ‰ßv-19465	—Œœ«œßn-13136	no	Y	ÅœÌœù¬„œ‰.733	_	_	_	_
+no -- 33	»Êœ	V	PRD	12	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_
+role_action -- 45	œÂ‰œ	V	AJUCL	33	«œ«„Â œ«œ‰ßv-7779	—Œœ«œßn-13136	role_action	Y	«œ«„Âùœ«œ‰.527	_	_	_	_
+no -- 4	»Êœ	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+no -- 7	—ÊÌ	N	ADVRB	9	—Êßn-13624	‘Ì¡ßn-12703	no	_	_	_	ArgM-LOC	_
+time -- 11	“„«‰	N	ADVRB	21	“„«‰Âßn-12682	œÊ—Â “„«‰Ìßn-12603	time	_	_	_	_	ArgM-TMP
+no -- 17	 Ê”ÿ	PREP	ADVRB	21	null	null	no	_	_	_	_	ArgM-INS
+role_action -- 4	ŒÊ«” 	V	ROOT	0	ŒÊ«” ‰ßv-19251	—Œœ«œßn-13136	role_action	Y	ŒÊ«” ‰.51	_	_	_	_
+no -- 5	òÂ	SUBR	VCL	4	null	null	no	_	_	Arg1	_	_	_
+role -- 10	«Ê	PR	VPP	12	«»—«ÂÌ„ßn-23925	‰›—ßn-13075	role	_	_	_	Arg3	_	_
+role_action -- 12	œÂœ	V	PRD	5	null	null	role_action	Y	‰‘«‰ùœ«œ‰.128	_	_	_	_
+no -- 13	”Å”	SUBR	AJUCL	12	”Å”ßr-21500	null	no	_	_	_	_	_	ArgM-DIS
+role_action -- 19	¬„œ	V	VCONJ	27	¬„œ‰ßv-7847	—Œœ«œßn-13136	role_action	Y	¬„œ‰.44	_	_	_	_
+role_action -- 27	ò—œ	V	PRD	13	null	null	role_action	Y	Œÿùò‘Ìùò—œ‰.735	_	_	_	_
+role_action -- 9	ò—œ‰œ	V	ROOT	0	»‰« ò—œ‰ßv-8008	—Œœ«œßn-13136	role_action	Y	»‰«ùò—œ‰.193	_
+role_action -- 9	ò—œ	V	VCONJ	17	—Â« ò—œ‰ßv-8249	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_
+no -- 12	ç‰œ	N	ADVRB	17	null	null	no	_	_	_	ArgM-EXT
+no -- 8	òÂ	SUBR	VCL	7	null	null	no	_	_	Arg1	_	_
+role -- 11	«Ê	PR	VPP	13	«»—«ÂÌ„ßn-23925	‰›—ßn-13075	role	_	_	_	Arg3	_
+role_action -- 19	ò‰œ	V	VCL	13	–»Õ ò—œ‰ßv-9404	—Œœ«œßn-13136	role_action	Y	–»Õùò—œ‰.703	_	_	_
+role_action -- 6	ê› 	V	ROOT	0	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_
+role -- 1	çÊ‰	SUBR	AJUCL	8	null	null	role	_	_	_	ArgM-DIS	_
+role_action -- 8	ê—› 	V	ROOT	0	 ’„Ì„ ê—› ‰ßv-16866	—Œœ«œßn-13136	role_action	Y	 ’„Ì„ùê—› ‰.68	_	_	_
+no -- 3	»—	PREP	VPP	6	null	null	no	_	_	Arg3	_
+role_action -- 3	œ«œ	V	ROOT	0	null	null	role_action	Y	‰œ«ùœ«œ‰.741	_	_	_	_
+no -- 5	«Ì	ADR	VCONJ	12	null	null	no	_	_	_	ArgM-DIS	_	_
+role_action -- 12	ò‰	V	PRD	4	Å—ÂÌ“ œ«‘ ‰ßv-7564	—Œœ«œßn-13136	role_action	Y	ŒÊœœ«—Ìùò—œ‰.742	_	_	_	_
+role -- 23	 Ê	PR	SBJ	28	«»—«ÂÌ„ßn-23925	‰›—ßn-13075	role	_	_	_	_	_	Arg1
+role_action -- 28	‘œÌ	V	PRD	13	null	null	role_action	Y	ò—œ‰.25	_	_	_	_
+time -- 1	«Ì‰ò	ADV	ADVRB	5	Õ«·«ßr-15246	„‘Œ’Âßn-12756	time	_	_	ArgM-TMP	_
+role_action -- 5	ê—› Â	V	VCONJ	11	‘ò«— ò—œ‰ßv-7672	—Œœ«œßn-13136	role_action	Y	ê—› ‰.135	_	_
+role_action -- 11	ò‰	V	ROOT	0	–»Õ ò—œ‰ßv-9404	—Œœ«œßn-13136	role_action	Y	–»Õùò—œ‰.703	_	_
+no -- 13	»Êœ	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_
+role -- 1	¬‰Â«	PR	SBJ	4	null	null	role	_	_	Arg0	_	_
+role_action -- 4	ŒÊ«” ‰œ	V	ROOT	0	ŒÊ«” ‰ßv-19251	—Œœ«œßn-13136	role_action	Y	ŒÊ«” ‰.51	_	_	_
+role_action -- 7	»Ì«Ê—œ	V	VCL	4	»«— ¬Ê—œ‰ßv-17661	—Œœ«œßn-13136	role_action	Y	¬Ê—œ‰.526	_	_	_
+no -- 13	»«‘œ	V	AJUCL	7	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+no -- 5	»—«Ì	PREP	ADVRB	7	null	null	no	_	_	ArgM-GOL
+role_action -- 7	¬Ê—œ	V	PRD	1	»«— ¬Ê—œ‰ßv-17661	—Œœ«œßn-13136	role_action	Y	¬Ê—œ‰.526	_
+no -- 4	»—«Ì	PREP	ADVRB	14	null	null	no	_	_	ArgM-PRP	_	_
+role_action -- 21	‘œ	V	VCONJ	22	„«ÌÊ” ò—œ‰ßv-10017	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_	_
+role -- 24	¬‰Â«	PR	NPP	25	null	null	role	_	_	_	_	Arg3
+role_action -- 26	ò—œ	V	PRD	22	„ÿ—Õ ò—œ‰ßv-8792	—Œœ«œßn-13136	role_action	Y	ÅÌ‘‰Â«œùò—œ‰.237	_	_	_
+role_action -- 7	ò—œ‰œ	V	ROOT	0	Å–Ì—› ‰ßv-9413	—Œœ«œßn-13136	role_action	Y	ﬁ»Ê·ùò—œ‰.592	_
+no -- 3	‰Ì“	ADV	ADVRB	7	null	null	no	_	_	ArgM-ADV	_	_
+role_action -- 7	—› Â	V	VCONJ	15	ÅÊÌÌœ‰ßv-7700	—Œœ«œßn-13136	role_action	Y	—› ‰.17	_	_	_
+role_action -- 15	ê› 	V	VCONJ	23	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_
+role -- 22	«Ê	PR	NPP	20	’«·Õßn-23958	‰›—ßn-13075	role	_	_	_	_	Arg3
+no -- 4	«Ì‰êÊ‰Â	ADV	ADVC	6	null	null	no	_	_	Arg2	_
+no -- 6	‘œ	V	ROOT	0	»Â ”— »—œ‰ßv-16581	—Œœ«œßn-13136	no	Y	”Å—Ìùò—œ‰.400	_	_
+no -- 14	—› 	V	PRD	7	«“ œ”  —› ‰ßv-16245	—Œœ«œßn-13136	no	Y	—› ‰.699	_	_
+no -- 1	»«“	ADV	ADVRB	13	null	null	no	_	_	ArgM-ADV2
+role_action -- 13	¬Ê—œ	V	ROOT	0	null	null	role_action	Y	»Âùœ‰Ì«ù¬Ê—œ‰.709	_
+no -- 12	»Êœ‰œ	V	PRD	6	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+role_action -- 17	ê—› ‰œ	V	ROOT	0	 ’„Ì„ ê—› ‰ßv-16866	—Œœ«œßn-13136	role_action	Y	 ’„Ì„ùê—› ‰.68	_	_
+role_action -- 7	ê—› 	V	ROOT	0	 ’„Ì„ ê—› ‰ßv-16866	—Œœ«œßn-13136	role_action	Y	 ’„Ì„ùê—› ‰.68	_
+no -- 6	‰Ì“	ADV	ADVRB	10	null	null	no	_	_	ArgM-ADV
+no -- 7	„Ì«‰	PREP	VPP	10	null	null	no	_	_	Arg3
+no -- 10	‘œ	V	ROOT	0	 Ê“Ì⁄ ò—œ‰ßv-16254	—Œœ«œßn-13136	no	Y	 ﬁ”Ì„ùò—œ‰.86	_
+role -- 9	¬‰Â«	PR	NPP	10	null	null	role	_	_	Arg3
+role_action -- 11	ò—œ	V	ROOT	0	«»·«€ ò—œ‰ßv-9622	—Œœ«œßn-13136	role_action	Y	«»·«€ùò—œ‰.723	_
+no -- 4	‰Ì“	ADV	ADVRB	9	null	null	no	_	_	ArgM-ADV	_
+no -- 7	»—	PREP	VPP	9	null	null	no	_	_	Arg3	_
+role_state -- 16	‰Ì” 	ADJ	MOS	19	null	null	role_state	_	_	_	Arg2
+role -- 1	Â„Â	PR	SBJ	3	null	null	role	_	_	Arg1	_
+no -- 3	‘œ‰œ	V	ROOT	0	‰«»Êœ ò—œ‰ßv-9575	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_
+role -- 11	«Ê	PR	NPP	12	’«·Õßn-23958	‰›—ßn-13075	role	_	_	_	Arg3
+no -- 6	«” 	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+no -- 8	‰«„	N	SBJ	16	‰«„ßn-13061	null	no	_	_	_	Arg1
+role -- 1	«Ì‘«‰	PR	SBJ	8	„Ê”Ìßn-23927	‰›—ßn-13075	role	_	_	Arg0	Arg0	_
+role_action -- 8	ò—œ	V	VCONJ	14	ŸÂÊ— ò—œ‰ßv-21725	—Œœ«œßn-13136	role_action	Y	ŸÂÊ—ùò—œ‰.74	_	_	_
+role -- 13	ŒÊœ	PR	ADVRB	14	ŒÊœßn-13459	‰›—ßn-13075	role	_	_	_	ArgM-ADV	_
+role_action -- 14	ê—› 	V	ROOT	0	ê—› ‰ßv-16547	—Œœ«œßn-13136	role_action	Y	ê—› ‰.135	_	_	_
+no -- 15	çÊ‰	SUBR	AJUCL	14	null	null	no	_	_	_	ArgM-CAU	_
+no -- 17	»œÊ‰	PREP	ADVRB	22	null	null	no	_	_	_	_	ArgM-NEG
+role -- 20	«Ê	PR	NPP	21	„Ê”Ìßn-23927	‰›—ßn-13075	role	_	_	_	_	Arg4
+role_action -- 22	ê› 	V	PRD	15	”Œ‰ ê› ‰ßv-7521	—Œœ«œßn-13136	role_action	Y	”Œ‰ùê› ‰.125	_	_	_
+no -- 13	Œ·«’Â	ADJ	MOS	14	çòÌœÂßa-1312	„‘Œ’Âßn-12756	no	_	_	Arg2
+no -- 14	ò—œ	V	VCL	9	„Œ ’— ò—œ‰ßv-7550	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_
+time -- 4	“„«‰	N	ADVRB	13	“„«‰Âßn-12682	œÊ—Â “„«‰Ìßn-12603	time	_	_	ArgM-TMP
+role_action -- 13	‘œ	V	ROOT	0	null	null	role_action	Y	ò—œ‰.25	_
+role_action -- 10	‘œ	V	VCONJ	14	»Ìœ«— ò—œ‰ßv-9544	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_	_	_
+no -- 18	»—«Ì	PREP	ADVRB	22	null	null	no	_	_	_	_	_	ArgM-PRP
+role_action -- 2	ê› ‰œ	V	ROOT	0	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_
+role_action -- 5	œ«œ	V	ROOT	0	«„— œ«œ‰ßv-9613	—Œœ«œßn-13136	role_action	Y	œ” Ê—ùœ«œ‰.104	_	_
+no -- 9	‘œ‰	N	NPP	13	null	null	no	_	_	_	Arg3
+no -- 14	‘Êœ	V	VCL	5	»«“œ«—Ì ò—œ‰ßv-9157	—Œœ«œßn-13136	no	Y	Ã·ÊêÌ—Ìùò—œ‰.775	_	_
+role_action -- 11	¬„œÂ	V	VCONJ	16	¬„œ‰ßv-7847	—Œœ«œßn-13136	role_action	Y	¬„œ‰.44	_	_	_
+role_action -- 16	‘œ‰œ	V	ROOT	0	null	null	role_action	Y	ò—œ‰.25	_	_	_
+no -- 23	‘œ	V	PRD	17	null	null	no	Y	ò—œ‰.25	_	_	_
+no -- 4	«Ì‰	PR	MOS	5	null	null	no	_	_	Arg2	_	_	_	_
+no -- 5	»Êœ	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_	_
+no -- 13	»«‘‰œ	V	VCONJ	21	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_	_
+no -- 15	«ê—	SUBR	AJUCL	21	null	null	no	_	_	_	_	_	_	ArgM-CND
+no -- 18	»Êœ	V	PRD	15	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_	_
+no -- 4	‘œÂ	V	VCONJ	10	‰‘«‰Â —› ‰ßv-9052	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_	_
+role_action -- 10	œ«œ	V	ROOT	0	Œ»— œ«œ‰ßv-9298	—Œœ«œßn-13136	role_action	Y	œ«œ‰.110	_	_	_
+no -- 6	òÂ	SUBR	VCL	5	null	null	no	_	_	Arg1	_
+no -- 7	»—«Ì	PREP	ADVRB	11	null	null	no	_	_	_	ArgM-PRP	_	_
+role_action -- 11	ê—› 	V	ROOT	0	 ’„Ì„ ê—› ‰ßv-16866	—Œœ«œßn-13136	role_action	Y	 ’„Ì„ùê—› ‰.68	_	_	_	_
+role_action -- 17	œÂœ	V	VCONJ	25	Œ»— œ«œ‰ßv-9298	—Œœ«œßn-13136	role_action	Y	ê“«—‘ùœ«œ‰.671	_	_	_	_
+no -- 25	¬„œ	V	VCL	11	»‰œ ¬„œ‰ßv-8060	—Œœ«œßn-13136	no	Y	»‰œù¬„œ‰.792	_	_	_	_
+no -- 2	»«“	ADV	ADVRB	12	„Ãœœßa-1377	„‘Œ’Âßn-12756	no	_	_	_	ArgM-ADV	_	_	_
+role_action -- 5	ò—œ	V	PRD	3	‰Ì  ò—œ‰ßv-8811		—Œœ«œßn-13136	role_action	Y	ﬁ’œùò—œ‰.793	_	_	_	_	_
+no -- 6	œÊ»«—Â	ADV	ADVRB	12	„Ãœœßa-1377	„‘Œ’Âßn-12756	no	_	_	_	ArgM-EXT	_	_	_
+no -- 11	Ê÷⁄	N	VPP	12	Ê÷⁄ßn-26237	null	no	_	_	_	Arg3	_	_	_
+role_action -- 15	‘œ	V	PRD	13	«ÿ„Ì‰«‰ œ«œ‰ßv-7913	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_	_	_	_
+no -- 20	«” 	V	PRD	16	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_	_
+no -- 21	»—«Ì	PREP	ADVRB	27	null	null	no	_	_	_	_	_	_	ArgM-PRP
+role_action -- 27	ê—› 	V	ROOT	0	 ’„Ì„ ê—› ‰ßv-16866	—Œœ«œßn-13136	role_action	Y	 ’„Ì„ùê—› ‰.68	_	_	_	_	_
+no -- 14	œ—Ê‰	PREP	VPP	16	 Êßn-11857	ê—ÊÂßn-12753	no	_	_	_	Arg3	_	_
+role -- 23	ŒÊœ	PR	ADVRB	24	ŒÊœßn-13459	‰›—ßn-13075	role	_	_	_	_	ArgM-COM	_
+role_action -- 31	œ«œ	V	PRD	17	¬—«„‘ »Œ‘Ìœ‰ßv-9628	—Œœ«œßn-13136	role_action	Y	¬—«„‘ùœ«œ‰.794	_	_	_	_
+location -- 8	ò‰«—	N	ADVRB	13	‰“œÌòßn-10189	Ã«ßn-12733	location	_	_	ArgM-LOC	_	_	_
+no -- 13	»Êœ‰œ	V	PRD	2	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_
+role_action -- 21	œ«œ	V	ROOT	0	«„— œ«œ‰ßv-9613	—Œœ«œßn-13136	role_action	Y	œ” Ê—ùœ«œ‰.104	_	_	_	_
+role_action -- 27	»êÌ—‰œ	V	VCL	21	ê—› ‰ßv-7616	—Œœ«œßn-13136	role_action	Y	ê—› ‰.135	_	_	_	_
+no -- 15	òÂ	SUBR	VCL	14	null	null	no	_	_	_	Arg1	_
+no -- 17	œ—Ê‰	N	ADVC	19	 Êßn-11857	ê—ÊÂßn-12753	no	_	_	_	_	ArgM-LOC
+time -- 1	Â‰ê«„Ì	N	ADVRB	12	„Êﬁ⁄ßn-12614	œÊ—Â “„«‰Ìßn-12603	time	_	_	_	ArgM-TMP	_	_	_	_	_	_
+no -- 3	‰ê«Â	N	SBJ	7	‰ê«Âßn-10631	—Œœ«œßn-13136	no	_	_	Arg0	_	_	_	_	_	_	_
+no -- 12	ò—œ	V	VCONJ	16	Ã·» ò—œ‰ßv-8376	—Œœ«œßn-13136	no	Y	Ã·»ùò—œ‰.796	_	_	_	_	_	_	_	_
+role_action -- 16	‘œ	V	VCONJ	18	„· Â» ò—œ‰ßv-18136	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_	_	_	_	_	_	_
+role_action -- 18	ê› 	V	VCONJ	30	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_	_	_	_	_	_
+no -- 19	òÂ	SUBR	VCL	18	null	null	no	_	_	_	_	_	Arg1	_	_	_	_
+no -- 20	ç—«	ADV_INTG	ADVRB	23	null	null	no	_	_	_	_	_	_	ArgM-CAU	_	_	_
+role -- 21	«Ê	PR	SBJ	23	null	null	role	_	_	_	_	_	_	Arg1	_	_	_
+no -- 30	ò—œ	V	VCONJ	36	’«œ— ò—œ‰ßv-8772	—Œœ«œßn-1313	no	Y	’«œ—ùò—œ‰.292	_	_	_	_	_	_	_	_
+no -- 36	‘œ	V	VCONJ	45	null	null	no	Y	ò—œ‰.25	_	_	_	_	_	_	_	_
+role_action -- 45	ò—œ‰œ	V	ROOT	0	ﬁ»Ê· ò—œ‰ßv-7791	—Œœ«œßn-13136	role_action	Y	ﬁ»Ê·ùò—œ‰.592	_	_	_	_	_	_	_	_
+no -- 3	òÂ	SUBR	VCL	2	null	null	no	_	_	Arg1	_
+role_action -- 5	ê› 	V	ROOT	0	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_	_
+no -- 6	òÂ	SUBR	VCL	5	null	null	no	_	_	Arg1	_	_	_
+role -- 7	„‰	PR	SBJ	10	ŒÊœßn-13459	‰›—ßn-13075	role	_	_	_	Arg0	_	_
+role_state -- 12	Õ«÷—	ADJ	MOS	13	„«Ì·ßa-119	„‘Œ’Âßn-12756	role_state	_	_	_	_	Arg2	_
+no -- 13	«” 	V	PRD	11	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_
+role_action -- 18	œÂœ	V	ACL	12	null	null	role_action	Y	‘Ì—ùœ«œ‰.800	_	_	_	_
+role_action -- 16	‘œ	V	PRD	8	„‘€Ê· œ«‘ ‰ßv-7593	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_
+no -- 12	»Êœ	V	PRD	6	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+role_action -- 14	ò—œ	V	ROOT	0	⁄„· ò—œ‰ßv-7585	—Œœ«œßn-13136	role_action	Y	⁄„·ùò—œ‰.370	_	_
+time -- 1	“„«‰Ì	N	ADVRB	23	„ÕœÊœÂ “„«‰Ìßn-12664	œÊ—Â “„«‰Ìßn-12603	time	_	_	_	_	ArgM-TMP	_
+role_action -- 9	—”Ìœ	V	VCONJ	15	—”Ìœ‰ßv-8616	—Œœ«œßn-13136	role_action	Y	—”Ìœ‰.90	_	_	_	_
+role_intent -- 14	»—ŒÊ—œ«—	ADJ	MOS	15	„ „ ⁄ßa-17760	„‘Œ’Âßn-12756	role_intent	_	_	_	Arg2	_	_
+role_action -- 15	‘œ	V	PRD	2	null	null	role_action	Y	ò—œ‰.25	_	_	_	_
+role_action -- 23	ò—œ	V	VCONJ	27	 —ò ê› ‰ßv-16797	—Œœ«œßn-13136	role_action	Y	 —òùò—œ‰.431	_	_	_	_
+role_action -- 27	‘œ	V	ROOT	0	Ê«—œ ò—œ‰ßv-16928	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_	_	_
+role_action -- 6	‘œ	V	VCONJ	9	‰«—«Õ  ò—œ‰ßv-9184	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_	_
+role_action -- 9	ò—œ	V	ROOT	0	‰«œ„ ‘œ‰ßv-21859	—Œœ«œßn-13136	role_action	Y	 Ê»Âùò—œ‰.544	_	_	_
+no -- 5	‰Ì“	ADV	ADVRB	8	null	null	no	_	_	ArgM-ADV	_
+role -- 10	«Ê	PR	SBJ	15	null	null	role	_	_	_	Arg0
+no -- 12	»Êœ	V	PRD	7	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+role_action -- 17	ê› 	V	ROOT	0	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_
+no -- 8	»Êœ	V	VCONJ	18	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+no -- 18	»Êœ	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+time -- 3	—Ê“	N	ADVRB	6	—Ê‘‰«ÌÌ —Ê“ßn-12637	œÊ—Â “„«‰Ìßn-12603	time	_	_	ArgM-TMP	_
+no -- 5	—«Â	N	MOS	6	—«Âßn-10059	«‰œ«“Âßn-11239	no	_	_	Arg2	_
+no -- 6	»Êœ	V	VCONJ	19	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+role_action -- 19	—”Ìœ	V	ROOT	0	—”Ìœ‰ßv-8613	—Œœ«œßn-13136	role_action	Y	—”Ìœ‰.501	_	_
+role_action -- 12	œ«—‰œ	V	VCONJ	17	œ«‘ ‰ßv-8512	—Œœ«œßn-13136	role_action	Y	œ«‘ ‰.39	_	_	_
+no -- 15	»—«Ì	PREP	ADVRB	20	null	null	no	_	_	_	_	ArgM-PRP
+role_action -- 20	—› 	V	PRD	14	ÅÊÌÌœ‰ßv-7700	—Œœ«œßn-13136	role_action	Y	—› ‰.17	_	_	_
+role_action -- 4	—› Â	V	VCONJ	9	ÅÊÌÌœ‰ßv-7700	—Œœ«œßn-13136	role_action	Y	—› ‰.17	_	_
+role_action -- 7	ò—œ	V	ROOT	0	„«„Ê— ò—œ‰ßv-15650	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_
+no -- 11	»—«Ì	PREP	ADVRB	15	null	null	no	_	_	_	ArgM-PRP
+role_action -- 15	»Ì«Ê—œ	V	VCL	7	¬Ê—œ‰ßv-7850	—Œœ«œßn-13136	role_action	Y	¬Ê—œ‰.452	_	_
+no -- 8	»—«Ì	PREP	NPP	13	null	null	no	_	_	Arg3
+role_action -- 14	ò—œ	V	ROOT	0	 ⁄—Ì› ò—œ‰ßv-8271	—Œœ«œßn-13136	role_action	Y	 ⁄—Ì›ùò—œ‰.855	_
+role_action -- 18	œ«œ	V	ROOT	0	«œ«„Â œ«œ‰ßv-7779	—Œœ«œßn-13136	role_action	Y	«œ«„Âùœ«œ‰.527	_	_	_
+role -- 1	«Ê	PR	SBJ	13	„Ê”Ìßn-23927	‰›—ßn-13075	role	_	_	Arg0	_	_
+role_action -- 13	ê› 	V	ROOT	0	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_
+no -- 14	òÂ	SUBR	VCL	13	null	null	no	_	_	Arg1	_	_
+role_action -- 7	ò—œ	V	ROOT	0	—«Â‰„«ÌÌ œ«œ‰ßv-8593	—Œœ«œßn-13136	role_action	Y	—«Â‰„«ÌÌùò—œ‰.811	_	_	_	_
+location -- 15	¬‰Ã«	PR	MOS	16	¬‰Ã«ßr-15232	null	location	_	_	_	Arg2	_	_
+no -- 16	»Êœ	V	PRD	8	Â” Ìœ‰ßv-9339	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_
+no -- 18	‰«êÂ«‰	ADV	ADVRB	25	ÌòÂÊßr-16463	„‘Œ’Âßn-12756	no	_	_	_	_	ArgM-ADV	_
+no -- 31	ê—› 	V	PRD	26	null	null	no	Y	ﬁ—«—ùê—› ‰.78	_	_	_	_
+role -- 3	«Ê	PR	VPP	4	„Ê”Ìßn-23927	‰›—ßn-13075	role	_	_	Arg3	_	_
+role_action -- 4	ê› 	V	ROOT	0	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_
+no -- 5	òÂ	SUBR	VCL	4	null	null	no	_	_	Arg1	_	_
+role_action -- 4	ê› 	V	ROOT	0	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_
+role -- 13	 Ê	PR	NPP	14	„Ê”Ìßn-23927	‰›—ßn-13075	role	_	_	_	_	Arg3
+no -- 3	¬„œ	V	PRD	1	null	null	no	Y	‰œ«ùœ«œ‰.741	_	_
+no -- 11	çÂ	PR_INTG	OBJ	12	null	null	no	_	_	_	Arg1
+role_action -- 12	œ«—Ì	V	VCL	3	œ«‘ ‰ßv-8512	—Œœ«œßn-13136	role_action	Y	œ«‘ ‰.39	_	_
+role_action -- 2	ê› 	V	ROOT	0	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_	_	_
+no -- 6	«” 	V	VCL	2	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_	_
+no -- 8	»—	PREP	NPP	10	null	null	no	_	_	_	_	Arg3	_	_
+no -- 16	»—«Ì	PREP	ADVRB	19	null	null	no	_	_	_	_	_	Arg4	_
+no -- 24	‰Ì“	ADV	ADVRB	26	null	null	no	_	_	_	_	_	_	ArgM-ADV
+no -- 1	»‰«»—«Ì‰	SUBR	ROOT	0	null	null	no	_	_	ArgM-DIS	_
+no -- 6	»ÊœÂ	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+no -- 8	‰«„	N	SBJ	16	‰«„ßn-13061	null	no	_	_	_	Arg1
+role -- 1	«Ê	PR	SBJ	10	Õ÷—  «ÌÊ»ßn-23945	‰›—ßn-13075	role	_	_	Arg1	Arg0
+role_action -- 6	ò—œ	V	ROOT	0	⁄„— ò—œ‰ßv-8674	—Œœ«œßn-13136	role_action	Y	⁄„—ùò—œ‰.103	_
+role -- 1	ÊÌ	PR	SBJ	4	Õ÷—  «ÌÊ»ßn-23945	‰›—ßn-13075	role	_	_	Arg1	_
+no -- 4	«” 	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+role -- 1	«Ê	PR	SBJ	6	Õ÷—  «ÌÊ»ßn-23945	‰›—ßn-13075	role	_	_	Arg1	Arg1
+no -- 6	»ÊœÂ	V	VCONJ	11	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+role -- 1	«Ì‘«‰	PR	SBJ	5	Õ÷—  «ÌÊ»ßn-23945	‰›—ßn-13075	role	_	_	Arg1	Arg1
+no -- 5	»ÊœÂ	V	VCONJ	12	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+role -- 3	«Ê	PR	POSDEP	2	Õ÷—  «ÌÊ»ßn-23945	‰›—ßn-13075	role	_	_	_	Arg0	Arg1	_	_
+role_action -- 12	œ«œ	V	VCONJ	20	«“ œ”  œ«œ‰ßv-18798	—Œœ«œßn-13136	role_action	Y	«“ùœ” ùœ«œ‰.750	_	_	_	_	_
+no -- 22	Ã“	PREP	ADVRB	35	null	null	no	_	_	_	_	_	_	ArgM-ADV
+no -- 30	»Êœ	V	PRD	25	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_	_
+no -- 33	»—«Ì	PREP	VPP	35	null	null	no	_	_	_	_	_	_	Arg3
+role -- 2	«Ê	PR	SBJ	8	Õ÷—  «ÌÊ»ßn-23945	‰›—ßn-13075	role	_	_	Arg0	Arg0
+no -- 3	¬‰ﬁœ—	ADV	ADVRB	5	¬‰ùﬁœ—ßr-16461	„‘Œ’Âßn-12756	no	_	_	ArgM-EXT	_
+no -- 5	‘œ	V	ROOT	0	ÿÊ·«‰Ì ò—œ‰ßv-7936	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_
+no -- 8	ò”	N	SBJ	13	‰›—ßn-13075	‰›—ßn-13075	no	_	_	_	Arg0
+role -- 10	«Ê	PR	NPP	12	Õ÷—  «ÌÊ»ßn-23945	‰›—ßn-13075	role	_	_	_	Arg3
+no -- 13	‰œ«‘ 	V	PRD	6	—«»ÿÂ »—ﬁ—«— ò—œ‰ßv-7878	—Œœ«œßn-13136	no	Y	—«»ÿÂùœ«‘ ‰.882	_	_
+no -- 11	ò—œ‰œ	V	ROOT	0	«›“«Ì‘ œ«œ‰ßv-7574	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_
+no -- 21	‘œ	V	PRD	14	null	null	no	Y	ò—œ‰.25	_	_
+role_state -- 2	Ê÷⁄	N	SBJ	11	Ê÷⁄ßn-26237	null	role_state	_	_	Arg1
+no -- 11	œ«‘ 	V	ROOT	0	Ã—Ì«‰ œ«‘ ‰ßv-8363	—Œœ«œßn-13136	no	Y	«œ«„Âùœ«‘ ‰.751	_
+role_action -- 8	‘œ	V	PRD	2	‰‘«‰Â —› ‰ßv-9052	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_
+role -- 1	«Ê	PR	SBJ	10	Õ÷—  «ÌÊ»ßn-23945	‰›—ßn-13075	role	_	_	Arg1
+no -- 10	»Êœ	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_
+no -- 3	‰Ì“	ADV	ADVRB	5	null	null	no	_	_	ArgM-ADV
+no -- 4	ç‰Ì‰	PR	OBJ	5	null	null	no	_	_	Arg1
+no -- 22	¬‰	PR	ADVRB	24	¬»ßn-12570	„«œÂßn-14032	no	_	_	_	_	ArgM-LOC
+role_action -- 24	œ«œ	V	PRD	9	¬» “œ‰ßv-9772	—Œœ«œßn-13136	role_action	Y	‘” ‘Êùœ«œ‰.758	_	_	_
+role_intent -- 2	ŒÊ«” 	N	ADVRB	7	ŒÊ«Â‘ßn-13129	Œ»—ßn-13975	role_intent	_	_	ArgM-ADV	_	_	_
+role -- 6	«Ê	PR	VPP	7	Õ÷—  «ÌÊ»ßn-23945	‰›—ßn-13075	role	_	_	Arg3	_	_	_
+no -- 13	—› 	V	ROOT	0	Å«Ì«‰ Ì«› ‰ßv-16241	—Œœ«œßn-13136	no	Y	«“ù»Ì‰ù—› ‰.178	_	_	_	_
+no -- 14	”Å”	SUBR	AJUCL	13	null	null	no	_	_	_	_	_	ArgM-DIS
+no -- 21	‰Ì“	ADV	ADVRB	27	null	null	no	_	_	_	_	_	ArgM-ADV
+role -- 23	«Ê	PR	VPP	27	Õ÷—  «ÌÊ»ßn-23945	‰›—ßn-13075	role	_	_	_	_	_	Arg3
+no -- 6	«” 	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+no -- 8	‰«„	N	SBJ	15	‰«„ßn-13061	null	no	_	_	_	Arg1
+role -- 1	«Ê	PR	SBJ	7	Õ÷—  «·Ì«”ßn-23959	‰›—ßn-13075	role	_	_	Arg1
+no -- 7	«” 	V	ROOT	0	»Êœ‰ßv-9328	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_
+no -- 2	Â‰ê«„Ì	N	ADVRB	18	null	null	no	_	_	_	ArgM-TMP
+role_action -- 10	‘œ	V	PRD	3	”Ê«— ò—œ‰ßv-8723	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_
+no -- 13	»Ì‰	PREP	VPP	18	null	null	no	_	_	_	Arg3
+no -- 7	„Ì«‰	N	MOS	9	null	null	no	_	_	Arg2	_
+no -- 9	»Êœ	V	PRD	4	»Êœ‰ßv-8897	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+no -- 6	»—«Ì	PREP	ADVRB	10	null	null	no	_	_	ArgM-GOL
+role -- 1	„—œ„	N	SBJ	8	«›—«œßn-13188	ê—ÊÂßn-12753	role	_	_	Arg0	Arg0
+role_action -- 8	ò—œ‰œ	V	VCONJ	14	ò „«‰ ò—œ‰ßv-8295	—Œœ«œßn-13136	role_action	Y	 ò–Ì»ùò—œ‰.704	_	_
+time -- 4	“„«‰	N	ADVRB	9	“„«‰Âßn-12682	œÊ—Â “„«‰Ìßn-12603	time	_	_	ArgM-TMP	_
+no -- 9	œ«‘ 	V	ROOT	0	œ«‘ ‰ßv-8512	—Œœ«œßn-13136	no	Y	œ«‘ ‰.39	_	_
+role -- 1	«Ê	PR	SBJ	4	null	null	role	_	_	Arg0	_
+no -- 4	œ«‘ 	V	ROOT	0	œ«‘ ‰ßv-8512	—Œœ«œßn-13136	no	Y	œ«‘ ‰.39	_	_
+role -- 1	«Ê	PR	SBJ	6	null	null	role	_	_	Arg1	Arg0
+role_action -- 6	‘œÂ	V	VCONJ	12	null	null	role_action	Y	ò—œ‰.25	_	_
+role -- 9	¬‰Â«	PR	ADVRB	12	null	null	role	_	_	_	ArgM-ADV
+no -- 12	œ«‘ 	V	ROOT	0	œ«‘ ‰ßv-8512	—Œœ«œßn-13136	no	Y	œ«‘ ‰.39	_	_
+no -- 4	œ«‘ 	V	ROOT	0	œ«‘ ‰ßv-8512	—Œœ«œßn-13136	no	Y	œ«‘ ‰.39	_	_	_
+location -- 8	ò‰«—	N	ADVRB	11	‰“œÌòßn-10189	Ã«ßn-12733	location	_	_	_	ArgM-LOC	_
+role_action -- 11	œ«‘ 	V	VCONJ	16	„«·òÌ  œ«‘ ‰ßv-8513	—Œœ«œßn-13136	role_action	Y	œ«‘ ‰.39	_	_	_
+no -- 13	„Ê—œ	PREP	MOS	16	null	null	no	_	_	_	_	Arg2
+no -- 16	»Êœ	V	PRD	5	»Êœ‰ßv-8897	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+role_action -- 5	œ«œ	V	ROOT	0	null	null	role_action	Y	”Êê‰œùœ«œ‰.715	_	_	_	_
+no -- 6	òÂ	SUBR	VCL	5	null	null	no	_	_	Arg3	_	_	_
+no -- 14	«ê—	SUBR	AJUCL	20	null	null	no	_	_	_	_	ArgM-CND	_
+role -- 24	¬‰Â«	PR	NPP	25	null	null	role	_	_	_	_	_	Arg3
+role_action -- 26	œ«œ	V	PRD	22	«Œÿ«— œ«œ‰ßv-9217	—Œœ«œßn-13136	role_action	Y	Â‘œ«—ùœ«œ‰.640	_	_	_	_
+no -- 3	„Ì«‰	N	ADVRB	9	null	null	no	_	_	ArgM-TMP	_
+no -- 9	‘œ	V	VCONJ	14	null	null	no	Y	ò—œ‰.25	_	_
+no -- 11	»Êœ	V	ROOT	0	»Êœ‰ßv-8897	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+no -- 6	‘œ	V	VCONJ	13	‰«—«Õ  ò—œ‰ßv-9184	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_	_	_	_	_	_
+role_action -- 13	ò—œ	V	ROOT	0	Ê«œ«— ò—œ‰ßv-9058	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_	_	_	_	_	_
+role_action -- 17	—› Â	V	VCONJ	21	ÅÊÌÌœ‰ßv-7700	—Œœ«œßn-13136	role_action	Y	—› ‰.17	_	_	_	_	_	_	_
+role -- 20	«Ê	PR	VPP	21	Õ÷—  «·Ì«”ßn-23959	‰›—ßn-13075	role	_	_	_	_	_	Arg3	_	_	_
+role_action -- 21	»êÊÌœ	V	AJUCL	13	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_	_	_	_	_
+time -- 23	«ò‰Ê‰	ADV	ADVRB	26	«ò‰Ê‰ßn-12609	„‘Œ’Âßn-12756	time	_	_	_	_	_	_	ArgM-TMP	_	_
+role_action -- 30	»Ì«	V	VCL	26	¬„œ‰ßv-7847	—Œœ«œßn-13136	role_action	Y	¬„œ‰.44		_	_	_	_	_	_	_
+no -- 31	òÂ	SUBR	AJUCL	30	null	null	no	_	_	_	_	_	_	_	ArgM-PRP	_
+role -- 2	«Ê	PR	SBJ	5	”·ÿ«‰ßn-13386	‰›—ßn-13075	role	_	_	Arg0	_	Arg0
+role -- 4	„«	PR	VPP	5	null	null	role	_	_	Arg3	_	_
+no -- 10	¬‰çÂ	PR	NPP	16	null	null	no	_	_	_	_	Arg3
+no -- 12	„Ê—œ	PREP	MOS	15	„”«·Âßn-13011	Œ’Ê’Ì  —Ê«‰Ìßn-12725	no	_	_	_	Arg2	_
+no -- 15	«” 	V	PRD	11	»Êœ‰ßv-8897	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+role_action -- 17	œÂœ	V	ROOT	0	›—„«‰ œ«œ‰ßv-19253	—Œœ«œßn-13136	role_action	Y	›—„«‰ùœ«œ‰.300	_	_	_
+role_action -- 6	œÂœ	V	ROOT	0	«„— œ«œ‰ßv-9613	—Œœ«œßn-13136	role_action	Y	œ” Ê—ùœ«œ‰.104	_	_	_
+no -- 7	òÂ	SUBR	VCL	6	null	null	no	_	_	Arg1	_	_
+time -- 1	“„«‰Ì	N	ADVRB	14	“„«‰ßn-12679	«‰œ«“Âßn-12768	time	_	_	_	ArgM-TMP	_
+role_action -- 14	—› 	V	ROOT	0	ÅÊÌÌœ‰ßv-7700	—Œœ«œßn-13136	role_action	Y	—› ‰.17	_	_	_
+role -- 17	«Ê	PR	NPP	18	„‰‘Ìßn-12055	‰›—ßn-13075	role	_	_	_	_	Arg3
+role -- 1	„‰	PR	SBJ	8	ŒÊœßn-13459	‰›—ßn-13075	role	_	_	Arg0	_	_
+role_action -- 16	‘Êœ	V	ACL	7	null	null	role_action	Y	ò—œ‰.25	_	_	_
+no -- 10	ò—œ	V	ROOT	0	null	null	no	Y	ò—œ‰.25	_
+role_action -- 8	ê› 	V	ROOT	0	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_
+no -- 9	òÂ	SUBR	VCL	8	null	null	no	_	_	Arg1	_
+no -- 13	çêÊ‰Â	ADV_INTG	ADVRB	15	null	null	no	_	_	_	ArgM-MNR
+role_action -- 15	œ«œÌ	V	PRD	9	«‰Ã«„ œ«œ‰ßv-8044	—Œœ«œßn-13136	role_action	Y	«‰Ã«„ùœ«œ‰.158	_	_
+no -- 1	”Å”	SUBR	ROOT	0	null	null	no	_	_	_	_	ArgM-DIS
+role_action -- 7	¬„œ	V	VCONJ	14	¬„œ‰ßv-7847	—Œœ«œßn-13136	role_action	Y	¬„œ‰.44	_	_	_
+role_action -- 14	—› 	V	VCONJ	21	ÅÊÌÌœ‰ßv-7700	—Œœ«œßn-13136	role_action	Y	—› ‰.17	_	_	_
+role_action -- 21	‘œ	V	PRD	1	Å‰Â«‰ ”«Œ ‰ßv-9430	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_	_
+no -- 4	„Ãœœ«	ADV	ADVRB	7	œÊ»«—Âßr-15315	„‘Œ’Âßn-12756	no	_	_	ArgM-ADV
+time -- 4	“„«‰	N	MOS	5	“„«‰ßn-12679	«‰œ«“Âßn-12768	time	_	_	Arg2	_	_	_
+no -- 5	»Êœ	V	ROOT	0	»Êœ‰ßv-8897	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_
+no -- 6	òÂ	SUBR	VCL	5	null	null	no	_	_	Arg1	_	_	_
+role -- 9	«Ê	PR	VPP	10	Õ÷—  «·Ì«”ßn-23959	‰›—ßn-13075	role	_	_	_	Arg3	_	_
+role_action -- 10	ê› 	V	PRD	6	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_	_
+no -- 11	òÂ	SUBR	VCL	10	null	null	no	_	_	_	Arg1	_	_
+role -- 15	„‰	PR	VPP	18	ŒÊœßn-13459	‰›—ßn-13075	role	_	_	_	_	_	Arg3
+role_action -- 18	ò‰	V	PRD	11	 ﬁ«÷« œ«‘ ‰ßv-19252	—Œœ«œßn-13136	role_action	Y	 ﬁ«÷«ùò—œ‰.448	_	_	_	_
+role_action -- 7	—› Â	V	VCONJ	11	ÅÊÌÌœ‰ßv-7700	—Œœ«œßn-13136	role_action	Y	—› ‰.17	_	_
+role_action -- 9	‘œ	V	ROOT	0	null	null	role_action	Y	ò—œ‰.25	_	_
+no -- 17	ê—› 	V	PRD	10	ò«„· ‘œ‰ßv-8313	—Œœ«œßn-13136	no	Y	«‰Ã«„ùê—› ‰.763	_	_
+role -- 6	«Ê	PR	VPP	7	Õ÷—  «·Ì«”ßn-23959	‰›—ßn-13075	role	_	_	Arg3	_	_
+role_action -- 7	ŒÊ«” 	V	ROOT	0	ŒÊ«” ‰ßv-19251	—Œœ«œßn-13136	role_action	Y	ŒÊ«” ‰.51	_	_	_
+role_action -- 10	ò‰œ	V	VCL	7	œ⁄« ‰„Êœ‰ßv-18655	—Œœ«œßn-13136	role_action	Y	œ⁄«ùò—œ‰.182	_	_	_
+no -- 12	»«—	N	ADVRB	14	œ” ßn-13141	«‰œ«“Âßn-12768	no	_	_	_	_	ArgM-EXT
+role_action -- 3	ò—œ	V	ROOT	0	œ⁄« ‰„Êœ‰ßv-18655	—Œœ«œßn-13136	role_action	Y	œ⁄«ùò—œ‰.182	_	_	_
+no -- 12	»«—	N	ADVRB	17	œ” ßn-13141	«‰œ«“Âßn-12768	no	_	_	_	_	ArgM-EXT
+no -- 17	‘œ	V	PRD	4	null	null	no	Y	ò—œ‰.25	_	_	_
+role -- 2	„—œ„	N	SBJ	10	«›—«œßn-13188	ê—ÊÂßn-12753	role	_	_	Arg1	Arg0
+no -- 7	»«—	N	ADVRB	10	œ” ßn-13141	«‰œ«“Âßn-12768	no	_	_	ArgM-EXT	_
+role_action -- 10	‘œ‰œ	V	VCONJ	15	ê„—«Â ò—œ‰ßv-9151	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_
+no -- 1	”—«‰Ã«„	ADV	ADVRB	8	‰Â«Ì «ßr-16455	„‘Œ’Âßn-12756	no	_	_	ArgM-ADV
+role_action -- 15	ò—œ	V	ROOT	0	null	null	role_action	Y	⁄—ÊÃùò—œ‰.759	_	_
+no -- 6	«” 	V	ROOT	0	»Êœ‰ßv-8897	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+no -- 8	‰«„	N	SBJ	14	‰«„ßn-13061	null	no	_	_	_	Arg1
+role -- 13	«Ê	PR	SBJ	17	null	null	role	_	_	_	Arg0
+role_action -- 17	ò—œ	V	ROOT	0	⁄„— ò—œ‰ßv-8674	—Œœ«œßn-13136	role_action	Y	⁄„—ùò—œ‰.103	_	_
+role -- 1	«Ê	PR	SBJ	8	null	null	role	_	_	Arg1	_	_	_
+no -- 8	»Êœ	V	ROOT	0	»Êœ‰ßv-8897	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_
+role -- 17	«Ê	PR	VPP	24	null	null	role	_	_	_	_	Arg3	_
+role_action -- 24	œ«œ	V	PRD	9	 œ—Ì” ò—œ‰ßv-9219	—Œœ«œßn-13136	role_action	Y	¬„ÊŒ ‰.230	_	_	_	_
+role -- 4	ò”Ì	N	MOS	5	”—ßn-10152	‰›—ßn-13075	role	_	_	Arg2	_	_
+no -- 5	»Êœ	V	ROOT	0	»Êœ‰ßv-8897	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+role_action -- 8	ò—œ	V	VCONJ	11	œÊŒ  Ê œÊ“ ò—œ‰ßv-8502	—Œœ«œßn-13136	role_action	Y	ŒÌ«ÿÌùò—œ‰.769	_	_	_
+time -- 2	“„«‰	N	ADVRB	7	“„«‰Âßn-12682	œÊ—Â “„«‰Ìßn-12603	time	_	_	ArgM-TMP
+role_action -- 9	ò—œ	V	ROOT	0	ê–‘ ‰ßv-8958	—Œœ«œßn-13136	role_action	Y	⁄»Ê—ùò—œ‰.535	_	_	_	_
+no -- 15	»Êœ	V	PRD	10	»Êœ‰ßv-8897	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_	_
+role -- 19	«Ê	PR	VPP	20	null	null	role	_	_	_	_	Arg3	_
+role_action -- 20	ŒÊ«” 	V	VCL	15	ÿ·» ò—œ‰ßv-8491	—Œœ«œßn-13136	role_action	Y	ŒÊ«” ‰.51	_	_	_	_
+no -- 21	òÂ	SUBR	VCL	20	null	null	no	_	_	_	_	Arg1	_
+role -- 25	«Ê	PR	NPP	26	”·ÿ«‰ßn-13386	‰›—ßn-13075	role	_	_	_	_	_	Arg3
+role_action -- 27	ò‰œ	V	PRD	21	Ê«ê–«— ò—œ‰ßv-16677	—Œœ«œßn-13136	role_action	Y	Ê«ê–«—ùò—œ‰.770	_	_	_	_
+role_action -- 3	ê› 	V	ROOT	0	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_
+no -- 4	òÂ	SUBR	VCL	3	null	null	no	_	_	Arg1	_
+no -- 11	«” 	V	PRD	4	»Êœ‰ßv-8897	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+role_action -- 3	ŒÊ«” 	V	ROOT	0	ŒÊ«” ‰ßv-9670	—Œœ«œßn-13136	role_action	Y	ŒÊ«” ‰.51	_	_
+no -- 5	œÌê—	ADV	ADVRB	10	null	null	no	_	_	_	ArgM-ADV
+no -- 11	„ê—	PREP	ADVRB	10	„ê—ßr-15254	null	no	_	_	_	ArgM-ADV2
+no -- 6	‘œ	V	ROOT	0	ê”Ì· œ«œ‰ßv-21561	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_	_	_
+time -- 1	„œ 	N	SBJ	4	„œ ßn-12613	œÊ—Â “„«‰Ìßn-12603	time	_	_	Arg1	_
+role -- 1	„—œ„	N	SBJ	11	„—œ„ßn-13215	ê—ÊÂßn-12753	role	_	_	Arg0	Arg0
+role_action -- 5	ò—œ	V	ROOT	0	null	null	role_action	Y	ÊÕÌùò—œ‰.218	_	_	_	_
+role -- 11	„‰	PR	SBJ	14	ŒÊœßn-13459	‰›—ßn-13075	role	_	_	_	_	Arg0	_
+role -- 13	¬‰Â«	PR	VPP	14	null	null	role	_	_	_	_	Arg3	_
+role -- 15	 Ê	PR	SBJ	17	null	null	role	_	_	_	_	_	Arg0
+no -- 16	‰Ì“	ADV	ADVRB	17	null	null	no	_	_	_	_	_	ArgM-ADV
+role_action -- 7	ò—œ	V	PRD	1	ﬁÿ⁄ ò—œ‰ßv-17004	—Œœ«œßn-13136	role_action	Y	ﬁÿ⁄ùò—œ‰.209	_	_
+no -- 18	‘œ	V	PRD	8	null	null	no	Y	ò—œ‰.25	_	_
+role_action -- 9	‘œ	V	ROOT	0	null	null	role_action	Y	ò—œ‰.25	_	_
+location -- 12	¬‰Ã«	PR	ADVRB	16	¬‰Ã«ßr-15232	Ã«ßn-12733	location	_	_	_	Arg3
+role_action -- 6	ò—œ	V	ROOT	0	«” œ⁄« ò—œ‰ßv-9400	—Œœ«œßn-13136	role_action	Y	œ—ŒÊ«” ùò—œ‰.63	_
+role_action -- 3	ê› 	V	ROOT	0	ê› ‰ßv-9244	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_
+no -- 4	òÂ	SUBR	VCL	3	null	null	no	_	_	Arg1	_
+no -- 7	çÌ“Ì	N	OBJ	11	null	null	no	_	_	_	Arg1
+role_action -- 9	ê—› 	V	ROOT	0	ê—› ‰ßv-9668	—Œœ«œßn-13136	role_action	Y	ê—› ‰.135	_	_
+role_action -- 20	œ«œ	V	PRD	10	null	null	role_action	Y	Ã«‰ùœ«œ‰.784	_	_
+no -- 6	‘œ	V	VCONJ	14	„ÊÃ» ‘œ‰ßv-7980	—Œœ«œßn-13136	no	Y	»«⁄Àù‘œ‰.296	_	_
+role_action -- 14	œ«œ	V	ROOT	0	null	null	role_action	Y	œ«œ‰.110	_	_
+role_action -- 8	¬Ê—œ	V	ROOT	0	«Ì„«‰ ¬Ê—œ‰ßv-7966	—Œœ«œßn-13136	role_action	Y	«Ì„«‰ù¬Ê—œ‰.38	_
+role -- 1	«Ê	PR	SBJ	8	⁄ÃÊ“ßn-16637	‰›—ßn-13075	role	_	_	Arg0	_	_
+no -- 6	”«Ì—	N	ADVRB	8	”«Ì—ßn-25720	ê—ÊÂßn-12753	no	_	_	Arg3	_	_
+role_action -- 8	œ«œ	V	VCONJ	16	Œ»— œ«œ‰ßv-9298	—Œœ«œßn-13136	role_action	Y	œ«œ‰.110	_	_	_
+role -- 10	„—œ„	N	SBJ	16	„—œ„ßn-13215	ê—ÊÂßn-12753	role	_	_	_	Arg0	Arg0
+role_action -- 16	—› Â	V	VCONJ	21	ÅÊÌÌœ‰ßv-7700	—Œœ«œßn-13136	role_action	Y	—› ‰.17	_	_	_
+role -- 19	«Ê	PR	NPP	20	null	null	role	_	_	_	_	Arg3
+no -- 9	‘œ	V	VCONJ	16	ê”Ì· œ«œ‰ßv-21561	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_
+no -- 16	œ«œ	V	ROOT	0	‰Ã«  »Œ‘Ìœ‰ßv-21949	—Œœ«œßn-13136	no	Y	‰Ã« ùœ«œ‰.61	_	_
+role -- 7	«Ê	PR	NPP	8	„·òßn-11941	Œ’Ê’Ì  —Ê«‰Ìßn-1272	role	_	_	Arg3	_	_	_	_
+role_action -- 27	—› Â	V	VCONJ	33	ÅÊÌÌœ‰ßv-7700	—Œœ«œßn-13136	role_action	Y	—› ‰.17	_	_	_	_	_
+role -- 30	«Ê	PR	ADVRB	33	null	null	role	_	_	_	_	_	_	Arg3
+role_action -- 5	ò—œ	V	ROOT	0	œ⁄« ‰„Êœ‰ßv-18655	—Œœ«œßn-13136	role_action	Y	œ⁄«ùò—œ‰.182	_	_
+role_action -- 11	ò—œ	V	PRD	6	ê–‘ ‰ßv-8813	—Œœ«œßn-13136	role_action	Y	⁄›Êùò—œ‰.787	_	_
+role_action -- 6	ŒÊ«” 	V	ROOT	0	ÿ·» ò—œ‰ßv-8491	—Œœ«œßn-13136	role_action	Y	ŒÊ«” ‰.51	_	_
+no -- 7	òÂ	SUBR	VCL	6	null	null	no	_	_	Arg1	_
+role -- 9	«Ê	PR	ADVRB	11	„·òßn-11941	Œ’Ê’Ì  —Ê«‰Ìßn-1272	role	_	_	_	Arg3
+role_action -- 11	»ŒÊ«Âœ	V	PRD	7	ÿ·» ò—œ‰ßv-8491	—Œœ«œßn-13136	role_action	Y	ŒÊ«” ‰.51	_	_
+role_action -- 4	ò—œ	V	ROOT	0	«” œ⁄« ò—œ‰ßv-9400	—Œœ«œßn-13136	role_action	Y	œ—ŒÊ«” ùò—œ‰.63	_	_
+no -- 5	òÂ	SUBR	VCL	4	null	null	no	_	_	Arg1	_
+role_action -- 10	ò‰œ	V	PRD	5	Å—Ê«“ ò—œ‰ßv-7701	—Œœ«œßn-13136	role_action	Y	Å—Ê«“ùò—œ‰.788	_	_
+no -- 1	Êﬁ Ì	N	ADVRB	6	null	null	no	_	_	ArgM-TMP	_	_
+role_action -- 6	—› 	V	VCONJ	9	ÅÊÌÌœ‰ßv-7700	—Œœ«œßn-13136	role_action	Y	—› ‰.17	_	_	_
+role -- 14	«Ê	PR	NPP	15	null	null	role	_	_	_	_	Arg3
+no -- 8	«” 	V	ROOT	0	»Êœ‰ßv-8897	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+no -- 11	‰«„	N	SBJ	20	‰«„ßn-13061	null	no	_	_	_	Arg1
+no -- 8	»Êœ	V	ROOT	0	»Êœ‰ßv-8897	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+no -- 19	„Ìù—”œ	V	PRD	9	—”Ìœ‰ßv-8616	—Œœ«œßn-13136	no	Y	—”Ìœ‰.69	_	_
+role_action -- 8	ò—œ	V	ROOT	0	ŒÊ«”  ê«—Ì ò—œ‰ßv-19254	—Œœ«œßn-13136	role_action	Y	ŒÊ«” ê«—Ìùò—œ‰.813	_
+no -- 9	»Êœ	V	PRD	3	»Êœ‰ßv-8897	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+no -- 1	”—«‰Ã«„	ADV	ADVRB	13	‰Â«Ì «ßr-16455	„‘Œ’Âßn-12756	no	_	_	_	ArgM-TMP
+no -- 13	‘œ	V	ROOT	0	null	null	no	Y	ò—œ‰.25	_	_
+role_action -- 4	ò—œ	V	ROOT	0	—ÊÌ  ò—œ‰ßv-8581	—Œœ«œßn-13136	role_action	Y	„‘«ÂœÂùò—œ‰.231	_	_	_	_
+no -- 5	òÂ	SUBR	VCL	4	null	null	no	_	_	Arg1	_	_	_
+location -- 7	—ÊÌ	PREP	ADVRB	13	—Êßn-11887	Ã«ßn-12733	location	_	_	_	ArgM-LOC	_	_
+no -- 23	‘œ	V	VCONJ	32	null	null	no	Y	ò—œ‰.25	_	_	_	_
+role_action -- 7	ò—œ	V	VCONJ	10	null	null	role_action	Y	ò—œ‰.25	_	_
+role_action -- 10	‘œ	V	ROOT	0	»«—œ«— ò—œ‰ßv-7827	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_
+role_action -- 7	—› 	V	VCONJ	11	null	null	role_action	Y	«“ùœ‰Ì«ù—› ‰.106	_	_	_	_
+no -- 11	‘œ	V	VCONJ	14	»ÌÊÂ ò—œ‰ßv-19463	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_	_	_
+role_action -- 14	ò—œ	V	ROOT	0	‰–— ò—œ‰ßn-10691	—Œœ«œßn-13136	role_action	Y	‰–—ùò—œ‰.725	_	_	_	_
+no -- 15	òÂ	SUBR	VCL	14	null	null	no	_	_	_	_	Arg1	_
+no -- 5	»Êœ	V	VCONJ	13	»Êœ‰ßv-8897	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_
+role -- 9	«Ê	PR	NPP	12	null	null	role	_	_	_	Arg3
+role_action -- 13	ò—œ	V	ROOT	0	null	null	role_action	Y	⁄ÿ«ùò—œ‰.420	_	_
+role_action -- 11	‘œ	V	ROOT	0	‰«—«Õ  ò—œ‰ßv-9184	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_
+no -- 18	¬‰Ã«	PR	NPP	19	¬‰Ã«ßr-15232	null	no	_	_	_	_	Arg3
+no -- 1	”—«‰Ã«„	ADV	ADVRB	9	‰Â«Ì «ßr-16455	„‘Œ’Âßn-12756	no	_	_	ArgM-TMP	_	_
+no -- 2	»—«Ì	PREP	ADVRB	9	null	null	no	_	_	ArgM-GOL	_	_
+location -- 7	ò‰«—	N	VPP	9	‰“œÌòßn-10189	Ã«ßn-12733	location	_	_	Arg4	_	_
+role_action -- 9	—› Â	V	ROOT	0	ÅÊÌÌœ‰ßv-7700	—Œœ«œßn-13136	role_action	Y	—› ‰.17	_	_	_
+no -- 15	‰Ì“	ADV	ADVRB	18	null	null	no	_	_	_	_	ArgM-ADV
+no -- 16	Ã“	PREP	MOS	18	Ã“¡ßn-13315	çÌ“ßn-10392	no	_	_	_	_	Arg2
+no -- 18	»Êœ	V	PRD	13	»Êœ‰ßv-8897	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+role -- 1	¬‰Â«	PR	SBJ	7	null	null	role	_	_	Arg0	Arg0
+location -- 10	œ—Ê‰	N	VPP	12	œ«Œ·ßn-10241	Ã«ßn-12733	location	_	_	_	Arg3
+role -- 10	«Ê	PR	SBJ	12	„—Ì„ßn-26259	‰›—ßn-13075	role	_	_	_	Arg1	_
+role_state -- 11	»“—ê	ADJ	MOS	12	»“—êßa-81	„‘Œ’Âßn-12756	role_state	_	_	_	Arg2	_
+no -- 12	‘œ	V	VCONJ	16	»«— ¬Ê—œ‰ßv-8043	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_	_
+role -- 1	«Ê	PR	SBJ	4	„—Ì„ßn-26259	‰›—ßn-13075	role	_	_	Arg0	Arg0	_
+role -- 14	ò”	N	SBJ	20	‰›—ßn-13075	‰›—ßn-13075	role	_	_	_	_	Arg1
+location -- 11	ò‰«—	N	ADVRB	15	‰“œÌòßn-10189	Ã«ßn-12733	location	_	_	_	ArgM-LOC	_
+no -- 2	»Êœ	V	ROOT	0	»Êœ‰ßv-8897	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+no -- 11	»Êœ‰œ	V	VCONJ	19	»Êœ‰ßv-8897	—Œœ«œßn-13136	no	Y	»Êœ‰.15	_	_	_
+time -- 13	«ò‰Ê‰	ADV	ADVRB	19	«ò‰Ê‰ßn-12609	„‘Œ’Âßn-12756	time	_	_	_	_	ArgM-TMP
+no -- 2	»«—Â«	ADV	ADVRB	7	œ” ßn-13141	„‘Œ’Âßn-12756	no	_	_	ArgM-TMP	_
+role -- 1	«Ê	PR	SBJ	6	“ò—Ì«ßn-23937	‰›—ßn-13075	role	_	_	Arg1	_	_	_
+role_action -- 6	‘œ	V	ROOT	0	null	null	role_action	Y	ò—œ‰.25	_	_	_	_
+no -- 12	Õ«·	N	MOS	14	Õ«·ßn-13607	„‘Œ’Âßn-12756	no	_	_	_	Arg2	_	_
+role_action -- 14	»Êœ	V	VCONJ	17	»Êœ‰ßv-16430	—Œœ«œßn-13136	role_action	Y	»Êœ‰.15	_	_	_	_
+role_action -- 17	ò—œ	V	PRD	9	—ÊÌ  ò—œ‰ßv-8581	—Œœ«œßn-13136	role_action	Y	„‘«ÂœÂùò—œ‰.231	_	_	_	_
+no -- 18	òÂ	SUBR	VCL	17	null	null	no	_	_	_	_	Arg1	_
+no -- 24	»—«Ì	PREP	VPP	26	null	null	no	_	_	_	_	_	Arg4
+role_action -- 5	—”Ìœ	V	PRD	1	»Â ‰ ÌÃÂ —”Ìœ‰ßv-8088	—Œœ«œßn-13136	role_action	Y	—”Ìœ‰.90	_	_	_	_
+role -- 7	«Ê	PR	SBJ	9	“ò—Ì«ßn-23937	‰›—ßn-13075	role	_	_	_	Arg1	_	_
+role_action -- 13	‘Êœ	V	VCL	9	null	null	role_action	Y	ò—œ‰.25	_	_	_	_
+role_action -- 19	ò—œ	V	VCONJ	28	‘ﬁ ò—œ‰ßv-7736	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_	_	_
+role_state -- 23	ÊÃÊœ	N	ADVRB	28	ÊÃÊœßn-13569	‘Ì¡ßn-12703	role_state	_	_	_	_	_	ArgM-MNR
+role -- 1	«Ê	PR	SBJ	9	“ò—Ì«ßn-23937	‰›—ßn-13075	role	_	_	Arg1
+role_action -- 9	‘œ	V	ROOT	0	‰«ò «Ê  ò—œ‰ßv-16811	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_
+role -- 1	«Ê	PR	SBJ	3	“ò—Ì«ßn-23937	‰›—ßn-13075	role	_	_	Arg0	Arg1	Arg0	_	_	_	_
+role_action -- 9	‘Êœ	V	VCONJ	15	null	null	role_action	Y	ò—œ‰.25	_	_	_	_	_	_	_
+role_action -- 15	ò—œ	V	VCONJ	21	 ﬁ«÷« œ«‘ ‰ßv-19252	—Œœ«œßn-13136	role_action	Y	 ﬁ«÷«ùò—œ‰.448	_	_	_	_	_	_	_
+role -- 19	«Ê	PR	NPP	20	“ò—Ì«ßn-23937	‰›—ßn-13075	role	_	_	_	_	_	Arg3	_	_	_
+role_action -- 21	ò—œ	V	PRD	4	null	null	role_action	Y	ÊÕÌùò—œ‰.218	_	_	_	_	_	_	_
+no -- 22	òÂ	SUBR	VCL	21	null	null	no	_	_	_	_	_	Arg1	_	_	_
+no -- 27	«Ì‰	PR	MOS	28	null	null	no	_	_	_	_	_	_	Arg2	_	_
+role_action -- 28	«” 	V	PRD	22	»Êœ‰ßv-16430	—Œœ«œßn-13136	role_action	Y	»Êœ‰.15	_	_	_	_	_	_	_
+time -- 32	—Ê“	N	ADVRB	37	—Ê“ßn-13556	œÊ—Â “„«‰Ìßn-12603	time	_	_	_	_	_	_	_	ArgM-TMP	_
+role -- 39	 Ê	PR	SBJ	46	“ò—Ì«ßn-23937	‰›—ßn-13075	role	_	_	_	_	_	_	_	_	Arg0
+no -- 40	»—«Ì	PREP	VPP	46	null	null	no	_	_	_	_	_	_	_	_	ArgM-CAU
+role_action -- 46	ò‰	V	PRD	29	null	null	role_action	Y	ò—œ‰.25	_	_	_	_	_	_	_
+role -- 1	«Ê	PR	SBJ	5	“ò—Ì«ßn-23937	‰›—ßn-13075	role	_	_	Arg0	_	_	_
+role_action -- 5	‘œ	V	ROOT	0	‰‘«‰Â —› ‰ßv-9052	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_	_	_
+no -- 6	òÂ	SUBR	VCL	5	null	null	no	_	_	Arg1	_	_	_
+no -- 13	›ﬁÿ	ADV	ADVRB	18	’—›«ßr-15263	„‘Œ’Âßn-12756	no	_	_	_	_	ArgM-ADV	_
+time -- 15	“„«‰	N	VPP	18	 «Ì„ßn-12692	«‰œ«“Âßn-12768	time	_	_	_	_	ArgM-TMP	_
+no -- 17	»«“	ADJ	MOS	18	»«“ßa-15702	„‘Œ’Âßn-12756	no	_	_	_	_	Arg2	_
+no -- 18	„Ìù‘Êœ	V	PRD	6	null	null	no	Y	ò—œ‰.25	_	_	_	_
+role -- 19	«Ê	PR	SBJ	34	“ò—Ì«ßn-23937	‰›—ßn-13075	role	_	_	_	_	_	Arg0
+time -- 23	—Ê“	N	ADVRB	34	—Ê“ßn-13556	œÊ—Â “„«‰Ìßn-12603	time	_	_	_	_	_	ArgM-TMP
+role -- 32	„—œ„	N	NPP	33	„—œ„ßn-13215	ê—ÊÂßn-12753	role	_	_	_	_	_	Arg4
+role_action -- 34	ê› 	V	VCL	18	”Œ‰ ê› ‰ßv-7521	—Œœ«œßn-13136	role_action	Y	”Œ‰ùê› ‰.125	_	_	_	_
+no -- 7	»œÊ‰	PREP	ADVRB	10	null	null	no	_	_	ArgM-MNR	_	_	_
+no -- 10	‘œ	V	PRD	2	»«—œ«— ò—œ‰ßv-7827	—Œœ«œßn-13136	no	Y	ò—œ‰.25	_	_	_	_
+no -- 13	„Ì«‰	N	VPP	15	null	null	no	_	_	_	Arg4	_	_
+role_action -- 15	—› 	V	VCONJ	20	ÅÊÌÌœ‰ßv-7700	—Œœ«œßn-13136	role_action	Y	—› ‰.17	_	_	_	_
+role -- 18	„—œ„	N	NPP	19	„—œ„ßn-13215	ê—ÊÂßn-12753	role	_	_	_	_	Arg3	_
+role_action -- 20	ò—œ	V	ROOT	0	ﬁ»Ê·«‰œ‰ßv-8309	—Œœ«œßn-13136	role_action	Y	«·ﬁ«ùò—œ‰.836	_	_	_	_
+no -- 21	òÂ	SUBR	VCL	20	null	null	no	_	_	_	_	Arg1	_
+no -- 23	‘œ‰	N	SBJ	27	¬»” ‰ ‘œ‰ßv-7826	—Œœ«œßn-13136	no	_	_	_	_	_	Arg1
+role -- 1	„—œ„	N	SBJ	4	„—œ„ßn-13215	ê—ÊÂßn-12753	role	_	_	Arg0	Arg0	_	_
+role -- 3	«Ê	PR	VPP	4	“ò—Ì«ßn-23937	‰›—ßn-13075	role	_	_	Arg3	_	_	_
+role_action -- 10	œ«‘ ‰œ	V	ROOT	0	„‰ŸÊ— œ«‘ ‰ßv-9156	—Œœ«œßn-13136	role_action	Y	ﬁ’œùœ«‘ ‰.515	_	_	_	_
+role_action -- 14	ò—œÂ	V	VCONJ	18	›—«— ò—œ‰ßv-9524	—Œœ«œßn-13136	role_action	Y	›—«—ùò—œ‰.838	_	_	_	_
+role_action -- 18	—› 	V	PRD	11	ÅÊÌÌœ‰ßv-7700	—Œœ«œßn-13136	role_action	Y	—› ‰.17	_	_	_	_
+role_action -- 12	‘œ	V	VCONJ	18	œ«Œ· ò—œ‰ßv-20151	—Œœ«œßn-13136	role_action	Y	ò—œ‰.25	_	_	_
+location -- 10	»Ì—Ê‰	N	ADVC	11	»—Ê‰ßn-11860	Ã«ßn-12733	location	_	_	Arg3	_	_	_	_	_	_
+role_action -- 21	»Êœ‰œ	V	PRD	17	»Êœ‰ßv-16430	—Œœ«œßn-13136	role_action	Y	»Êœ‰.15	_	_	_	_	_	_	_
+role_action -- 22	ê› 	V	ROOT	0	”Œ‰ ê› ‰ßv-7521	—Œœ«œßn-13136	role_action	Y	ê› ‰.35	_	_	_	_	_	_	_
+no -- 23	òÂ	SUBR	VCL	22	null	null	no	_	_	_	_	Arg1	_	_	_	_
+role_action -- 26	ò—œÂ	V	VCONJ	31	Ã«œÊ ò—œ‰ßv-8350	—Œœ«œßn-13136	role_action	Y	Ã«œÊùò—œ‰.840	_	_	_	_	_	_	_
+no -- 35	‰Ì“	ADV	ADVRB	41	null	null	no	_	_	_	_	_	_	_	ArgM-ADV	_
+role_action -- 41	«” 	V	PRD	23	»Êœ‰ßv-16430	—Œœ«œßn-13136	role_action	Y	»Êœ‰.15	_	_	_	_	_	_	_
+role -- 5	„—œ„	N	SBJ	8	„—œ„ßn-13215	ê—ÊÂßn-12753	role	_	_	Arg0	Arg0	Arg0
+role_action -- 8	¬Ê—œÂ	V	VCONJ	18	¬Ê—œ‰ßv-7850	—Œœ«œßn-13136	role_action	Y	¬Ê—œ‰.452	_	_	_
+role_action -- 18	ò—œÂ	V	VCONJ	24	null	null	role_action	Y	ò—œ‰.25	_	_	_
+
+number of each elements are as follows
+------------------------------------------------------------
+role:			142	roleAction:		383
+roleState:		14	roleIntent:		2
+roleEmotion:		0
+------------------------------------------------------------
+dynamic_object:		0	dynamic_objAction:	0
+dynamic_objState:	0
+------------------------------------------------------------
+static_object:		1	static_objState:	0
+------------------------------------------------------------
+location		16
+time:			35
+------------------------------------
+no:			584
+------------------------------------
+all Scene elements are: 593
+no elements are: 584
+words num 1177 ?= all elems 1177
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ «·Õ„œ··Â
