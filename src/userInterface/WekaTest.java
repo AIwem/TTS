@@ -71,7 +71,7 @@ public class WekaTest {
 //		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetStaticObjState.arff");//story1&2&3
 //		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetRole.arff");//story1&2&3
 //		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetRoleAction.arff");//story1&2&3
-		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetRoleState.arff");//story1&2&3
+//		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetRoleState.arff");//story1&2&3
 //		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetRoleIntent.arff");//story1&2&3
 //		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetDynamicObj.arff");//story1&2&3
 //		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetDynamicObjAction.arff");//story1&2&3
@@ -79,7 +79,10 @@ public class WekaTest {
 //		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetLocation.arff");//story1&2&3
 //		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetTime.arff");//story1&2&3
 //		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetSceneGoal.arff");//story1&2&3
-//		
+		
+
+		BufferedReader datafile = readDataFile("dataset/96-02-26MultiClassDataSet.arff");//final dataSet from CSRI
+
 		
 		
  
