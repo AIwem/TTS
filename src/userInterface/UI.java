@@ -34,7 +34,7 @@ public class UI {
 	
 	private String persianStopWordFilePath = "inputStory/persianStopWrods.txt";
 	
-	private String inputDataSetHeaderFilePath = "inputStory/dataSetHeader.txt";
+	private String inputDataSetHeaderFilePath = "inputStory/dataSetHeader.arff";
 //	private String inputSRLDataSetFilePath = "inputStory/story4DataSetToformat.txt";
 //	private String inputDataSetFilePath = "inputStory/srl-stories.conll";
 //	private String inputDataSetFilePath = "inputStory/sampleManualInputDataSetToformat.arff";
@@ -54,6 +54,7 @@ public class UI {
 //	private String inputDataSetSceneCorrectedFilePath = "inputStory/96-02-17fullcleanedJunkScene.arff";
 	private String inputDataSetSceneJunkDashFilePath = "inputStory/96-02-24full_scene_junk_dash.arff";
 	
+	private String outMultiClassDataSet = "dataset/96-02-24MultiClassDataSet.arff";
 	//all sentences from CSRI
 //	private String rawDataSetFilePath = "inputStory/cleanedSRLDataSet - Copy.arff";
 	//2000 words with no semantic tags were deleted manually.
@@ -418,7 +419,7 @@ public class UI {
 		int role_num = 0;int role_action_num = 0;int role_state_num = 0;int role_intent_num = 0; int role_emotion_num = 0;
 		int dynamic_obejct_num = 0;int dynamic_obejct_action_num = 0;int dynamic_obejct_state_num = 0;
 		int static_object_num = 0; int static_object_state = 0; 
-		int location_num = 0; int time_num = 0; int no_num = 0;
+		int location_num = 0; int time_num = 0; int scene_emotion_num = 0; int scene_goal_num = 0; int no_num = 0;
 						
 		//each oneSentence is an ArrayList containing the whole elements of one sentence.
 		for(ArrayList<String> oneSentence:inputs){
@@ -426,6 +427,7 @@ public class UI {
 			SentenceModel sentence = makeSenteces(oneSentence, true);
 								
 			if(sentence != null && sentence.getWords() != null){
+				
 				ArrayList<Word> words = sentence.getWords();
 				
 				for(Word wrd:words){
@@ -482,6 +484,14 @@ public class UI {
 								time_num++;
 								break;
 							}
+							case SCENE_EMOTION:{
+								scene_emotion_num++;
+								break;
+							}
+							case SCENE_GOAL:{
+								scene_goal_num++;
+								break;
+							}
 							case UNKNOWN:{
 //								if(!wrd._dataSetRecord.contains("no"))
 //								print(wrd._dataSetRecord);
@@ -514,6 +524,8 @@ public class UI {
 		print("------------------------------------------------------------");
 		print("location\t\t" + location_num);
 		print("time:\t\t\t" + time_num);
+		print("sceneEmotion:\t\t" + scene_emotion_num);
+		print("sceneGoal:\t\t" + scene_goal_num);
 		print("------------------------------------");
 		print("no:\t\t\t" + no_num);		
 		print("------------------------------------");
@@ -521,11 +533,128 @@ public class UI {
 		int allWords_num = role_num + role_action_num + role_state_num + role_intent_num + role_emotion_num;
 		allWords_num += dynamic_obejct_num + dynamic_obejct_action_num + dynamic_obejct_state_num;
 		allWords_num += static_object_num + static_object_state; 
-		allWords_num += location_num + time_num;
+		allWords_num += location_num + time_num + scene_emotion_num + scene_goal_num;
 				
 		print("all Scene elements are: " + allWords_num);
 		print("no elements are: " + no_num);
 		print("words num " + wordsNum + " ?= all elems " + (allWords_num + no_num));
+	}
+
+	
+	/**
+	 * reformat full human made dataSet file to the final format.
+	 */
+	public void reformatMultiClassDataset(){
+		
+		BufferedReader stream4header = null;
+		PrintWriter writer = null;
+		try
+		{
+			stream4header = new BufferedReader(new InputStreamReader(new FileInputStream(inputDataSetHeaderFilePath), "utf-8"));
+			writer = new PrintWriter(outMultiClassDataSet, "UTF-8");
+			
+			String header = "";
+			
+			while(header != null){
+				
+				header = stream4header.readLine();
+				
+				if (header == null)
+					break;
+				
+				header = header.trim();
+							
+				writer.println(header);					
+			}
+			
+			ArrayList<ArrayList<String>> inputs = importInputDataSetInfo(inputDataSetSceneJunkDashFilePath);
+			
+			//each oneSentence is an ArrayList containing the whole elements of one sentence.
+			for(ArrayList<String> oneSentence:inputs){
+				
+				SentenceModel sentence = makeSenteces(oneSentence, true);
+				
+				if(sentence != null && sentence.getWords() != null && sentence.getWords().size() < 2)
+					continue;
+			
+//				print(sentence.getOrdinalDetailedStr());
+										
+				ArrayList<String> sentRecords = sentence.getDataSetStr();
+				
+				//format: N, OBJ, Arg1, نفر§n-13075, YES, role
+				for(String wordRecord:sentRecords){
+					
+					String[] parts = wordRecord.split(",");
+					
+					if(parts == null || parts.length != 6)
+						MyError.exit("bad dataSetRecord" + wordRecord);
+					
+					String classTagName = parts[5].trim();
+					
+					ScenePart classTag = ScenePart.fromString(classTagName);
+				
+					switch(classTag){
+						case UNKNOWN:{
+							break;
+						}
+						case ROLE:{
+							break;
+						}
+						case ROLE_ACTION:{
+							break;
+						}
+						case ROLE_STATE:{
+							break;
+						}
+						case ROLE_EMOTION:{
+							break;
+						}
+						case ROLE_INTENT:{
+							break;
+						}
+						case DYNAMIC_OBJECT:{
+							break;
+						}
+						case DYNAMIC_OBJECT_ACTION:{
+							break;
+						}
+						case DYNAMIC_OBJECT_STATE:{
+							break;
+						}
+						case STATIC_OBJECT:{
+							break;
+						}
+						case STATIC_OBJECT_STATE:{
+							break;
+						}
+						case LOCATION:{
+							break;
+						}
+						case TIME:{
+							break;
+						}
+						case SCENE_GOAL:{
+							break;
+						}
+						case SCENE_EMOTION:{
+							break;
+						}
+						default:{
+							MyError.exit(wordRecord + ":\n" +  classTag +  " there isn't in none of cases.");							
+						}		
+					}
+					writer.println(wordRecord);
+												
+				}				
+				
+			}
+			writer.close();			
+		}
+		catch (IOException e) {
+
+			e.printStackTrace();
+		}
+		 	
 	}
 
 	
@@ -1144,16 +1273,18 @@ public class UI {
 
 //		ui.clearSRLDataset();
 
-		ui.correctSceneMarker();
+//		ui.correctSceneMarker();
 		
-		ui.checkSemanticTags();
+//		ui.checkSemanticTags();
 		
-		ui.removeJunkWords();
+//		ui.removeJunkWords();
 				
-		ui.checkAndCorrectDataSet();
+//		ui.checkAndCorrectDataSet();
 		
-		ui.getStatistics();
+//		ui.getStatistics();
 
+		ui.reformatMultiClassDataset();
+		
 		//TODO: correct relation name in all of generating dataSet
 		//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 //		ui.reformatDataset();

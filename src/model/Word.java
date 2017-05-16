@@ -207,7 +207,7 @@ public class Word {
 			}
 			
 			for(int i = 8; i < parts.length; i++)
-				if(parts[i] != null && parts[i].matches("-"))
+				if(parts[i] != null && !parts[i].matches("_"))
 					this.set_simpleSemanticTag(parts[i]);				
 		}
 		else{//it lacks some elements of information such as wsd_name, wsd_superNode_name, multiClassTag.
@@ -231,7 +231,7 @@ public class Word {
 			}		
 			
 			for(int i = 5; i < parts.length; i++)
-				if(parts[i] != null && parts[i].matches("-"))
+				if(parts[i] != null && !parts[i].matches("_"))
 					this.set_simpleSemanticTag(parts[i]);			
 		
 		}
@@ -497,8 +497,8 @@ public class Word {
 	}
 	
 	public void set_wsd_superNode_name(String wsd_superNode_name) {
-		if(_wsd_superNode_name != null && !wsd_superNode_name.equals("") && !wsd_superNode_name.equals("-"))
-			this._wsd_name = wsd_superNode_name;
+		if(wsd_superNode_name != null && !wsd_superNode_name.equals("") && !wsd_superNode_name.equals("-"))
+			this._wsd_superNode_name = wsd_superNode_name;
 	}
 	
 	public void set_multiClassTag(String multiClassTag) {
@@ -694,8 +694,8 @@ public class Word {
 			else
 				rs += "\t";
 			
-			if(_semanticTag != null) rs += "" + _semanticTag;
-			else rs += "NULL"; 			
+			if(_simpleSemanticTag != null) rs += "" + _simpleSemanticTag;
+			else rs += "null"; 			
 			
 			len = rs.length();
 			if(len < 52)
@@ -743,24 +743,23 @@ public class Word {
  	public String getStr4DataSet(int verbNum) {	 		
 			String rs = "";
 			if(_gPOS != null) rs += "" + _gPOS + ", ";
-			else rs += "NULL, ";
+			else rs += "UNKNOWN, ";
 			
 			if(_syntaxTag != null) rs += "" + _syntaxTag + ", ";
-			else rs += "NULL, ";
+			else rs += "UNKNOWN, ";
 			
-			if(_semanticTag != null) rs += "" + _semanticTag + ", ";
-			else rs += "NULL, ";
+			if(_simpleSemanticTag != null) rs += "" + _simpleSemanticTag + ", ";
+			else rs += "null, ";
 			
 			if(_wsd_superNode_name != null) rs += "" + _wsd_superNode_name + ", ";
-			else rs += "NULL, ";
+			else rs += "null, ";
 			
 			if(_srcOfSynTag_number == 0 || _srcOfSynTag_number == verbNum)
-				rs += "NO";
-			else rs += "YES";
-			
-			rs += ", --- ";
+				rs += "NO, ";
+			else rs += "YES, ";
+						
 			if(_multiClassTag != null) rs += "" + _multiClassTag.toString().toLowerCase();
-			else rs += "_";
+			else rs += "UNKNOWN";
 			
 			return rs;
 	}
