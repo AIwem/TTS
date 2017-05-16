@@ -21,14 +21,14 @@ N, AJPP, null, نفر§n-13075, YES, role
 N, POSDEP, null, نفر§n-13075, YES, role
 ADJ, MOS, Arg2, ‌مشخصه§n-12756, YES, role_state
 PREP, ADVC, Arg2, مشخصه§n-12756, YES, unknown
-N, POSDEP, null, دوره زماني§n-12603, YES, time
+N, POSDEP, null, دوره_زماني§n-12603, YES, time
 N, NVE, null, رخداد§n-13136, YES, role_action
 N, SBJ, Arg0, نفر§n-13075, YES, role
-N, ADVC, Arg1, دوره زماني§n-12603, YES, unknown
-N, ADVRB, ArgM_TMP, دوره زماني§n-12603, YES, time
+N, ADVC, Arg1, دوره_زماني§n-12603, YES, unknown
+N, ADVRB, ArgM_TMP, دوره_زماني§n-12603, YES, time
 N, OBJ, Arg1, خصوصيت_رواني§n-12725, YES, unknown
 V, PRD, null, رخداد§n-13136, YES, role_action
-N, ADVRB, ArgM_TMP, دوره زماني§n-12603, YES, time
+N, ADVRB, ArgM_TMP, دوره_زماني§n-12603, YES, time
 PREP, VPP, Arg4, جا§n-12733, YES, location
 N, POSDEP, null, نفر§n-13075, YES, role
 N, ADVRB, ArgM_LOC, null, YES, unknown
@@ -197,10 +197,10 @@ N, ADVRB, ArgM_CAU, null, YES, unknown
 N, OBJ, Arg1, نفر§n-13075, YES, role
 UNKNOWN, ADVRB, ArgM_MNR, null, YES, unknown
 N, MOS, Arg2, رخداد§n-13136, YES, role_intent
-N, ADVRB, ArgM_TMP, دوره زماني§n-12603, YES, unknown
+N, ADVRB, ArgM_TMP, دوره_زماني§n-12603, YES, unknown
 N, SBJ, Arg0, نفر§n-13075, YES, role
 N, VPP, Arg3, null, YES, unknown
-N, MOZ, null, دوره زماني§n-12603, YES, role_state
+N, MOZ, null, دوره_زماني§n-12603, YES, role_state
 V, PRD, null, رخداد§n-13136, YES, unknown
 N, SBJ, Arg1, null, YES, role
 PREP, ADVRB, ArgM_CAU, null, YES, unknown
@@ -639,7 +639,7 @@ N, SBJ, Arg0, نفر§n-13075, YES, role
 N, VPRT, null, خصوصيت_رواني§n-12725, YES, role_intent
 N, MOZ, Arg1, خصوصيت_رواني§n-12725, YES, unknown
 N, ADVRB, ArgM_TMP, دوره زمانی§n-12603, YES, time
-N, MOZ, null, دوره زماني§n-12603, YES, role_state
+N, MOZ, null, دوره_زماني§n-12603, YES, role_state
 V, PRD, null, رخداد§n-13136, YES, role_action
 V, VCONJ, null, null, YES, role_action
 N, NPP, Arg3, نفر§n-13075, YES, role
@@ -809,7 +809,7 @@ N, NPP, Arg4, جا§n-12733, YES, location
 N, MOZ, null, null, YES, location
 N, NVE, null, رخداد§n-13136, YES, role_intent
 ADJ, NPREMOD, null, ‌مشخصه§n-12756, YES, time
-N, ADVRB, ArgM_TMP, دوره زماني§n-12603, NO, time
+N, ADVRB, ArgM_TMP, دوره_زماني§n-12603, NO, time
 N, NVE, null, رخداد§n-13136, NO, role_intent
 V, ROOT, null, رخداد§n-13136, NO, role_action
 N, SBJ, Arg0, null, YES, role_state
@@ -838,7 +838,7 @@ ADJ, NPOSTMOD, null, مشخصه§n-12756, YES, role_state
 PREP, VPP, Arg3, null, YES, unknown
 N, POSDEP, null, گروه§n-12753, YES, role
 PR, MOZ, null, نفر§n-13075, YES, role
-N, ADVC, Arg2, دوره زماني§n-12603, YES, time
+N, ADVC, Arg2, دوره_زماني§n-12603, YES, time
 N, NVE, null, رخداد§n-13136, YES, role_intent
 PR, OBJ, Arg1, گروه§n-12753, YES, role
 PREP, NPP, Arg3, null, YES, unknown

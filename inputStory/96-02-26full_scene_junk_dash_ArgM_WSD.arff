@@ -14,18 +14,18 @@
 7	کوچکتر	ADJ	MOS	8	جوان§a-82	‌مشخصه§n-12756	role_state	_	_	Arg2	
 
 2	حدود	PREP	ADVC	6	اندازه§n-13756	مشخصه§n-12756	no	_	_	Arg2	
-4	سال	N	POSDEP	2	سال§n-13471	دوره زماني§n-12603	time	_	_	_	
+4	سال	N	POSDEP	2	سال§n-13471	دوره_زماني§n-12603	time	_	_	_	
 5	زندگي	N	NVE	6	زندگي§n-13552	رخداد§n-13136	role_action	_	_	_	
 
 1	يوسف	N	SBJ	5	يوسف§n-23957	نفر§n-13075	role	_	_	Arg0	Arg0	
-3	سال	N	ADVC	5	سال§n-13471	دوره زماني§n-12603	no	_	_	Arg1	_	
-8	شب	N	ADVRB	11	شب§n-12642	دوره زماني§n-12603	time	_	_	_	ArgM_TMP	
+3	سال	N	ADVC	5	سال§n-13471	دوره_زماني§n-12603	no	_	_	Arg1	_	
+8	شب	N	ADVRB	11	شب§n-12642	دوره_زماني§n-12603	time	_	_	_	ArgM_TMP	
 10	رويايي	N	OBJ	11	رویا§n-15102	خصوصيت_رواني§n-12725	no	_	_	_	Arg1	
 11	ديد	V	PRD	6	ديدن§v-9138	رخداد§n-13136	role_action	Y	ديدن.47	_	_	
 
 #..........	
 
-1	صبح	N	ADVRB	4	صبح§n-12638	دوره زماني§n-12603	time	_	_	ArgM_TMP	_	_	_	
+1	صبح	N	ADVRB	4	صبح§n-12638	دوره_زماني§n-12603	time	_	_	ArgM_TMP	_	_	_	
 2	نزد	PREP	VPP	4	محضر§n-10120	جا§n-12733	location	_	_	Arg4	_	_	_	
 3	پدر	N	POSDEP	2	والد§n-13357	نفر§n-13075	role	_	_	_	_	_	_	
 8	عالم	N	ADVRB	10	null	null	no	_	_	_	_	ArgM_LOC	_	
@@ -225,10 +225,10 @@
 18	به‌خوبي	ADV	ADVRB	20	null	null	no	_	_	_	ArgM_MNR	
 19	تربيت	N	MOS	20	پرورش§n-10180	رخداد§n-13136	role_intent	_	_	_	Arg2	
 
-2	هنگامي	N	ADVRB	18	موقع§n-12614	دوره زماني§n-12603	no	_	_	ArgM_TMP	_	
+2	هنگامي	N	ADVRB	18	موقع§n-12614	دوره_زماني§n-12603	no	_	_	ArgM_TMP	_	
 4	يوسف	N	SBJ	8	يوسف§n-23957	نفر§n-13075	role	_	_	Arg0	_	
 6	سن	N	VPP	8	null	null	no	_	_	Arg3	_	
-7	بلوغ	N	MOZ	6	رسيدگي§n-12629	دوره زماني§n-12603	role_state	_	_	_	_	
+7	بلوغ	N	MOZ	6	رسيدگي§n-12629	دوره_زماني§n-12603	role_state	_	_	_	_	
 8	رسيد	V	PRD	3	رسيدن§v-8616	رخداد§n-13136	no	Y	رسيدن.846	_	_	
 10	زليخا	N	SBJ	18	null	null	role	_	_	_	Arg1	
 11	به‌خاطر	PREP	ADVRB	18	null	null	no	_	_	_	ArgM_CAU	
@@ -757,7 +757,7 @@
 6	ياد	N	VPRT	13	به خاطر آوردن§n-11353	خصوصيت_رواني§n-12725	role_intent	_	_	_	_	_	_	_	_	
 7	خوابي	N	MOZ	6	رويا§n-15102	خصوصيت_رواني§n-12725	no	_	_	Arg1	Arg1	_	_	_	_	
 10	دوران	N	ADVRB	12	دوران§n-13782	دوره زمانی§n-12603	time	_	_	ArgM_TMP	_	_	_	_	_	
-11	کودکي	N	MOZ	10	نوباوگي§n-12628	دوره زماني§n-12603	role_state	_	_	_	_	_	_	_	_	
+11	کودکي	N	MOZ	10	نوباوگي§n-12628	دوره_زماني§n-12603	role_state	_	_	_	_	_	_	_	_	
 12	ديده‌بود	V	PRD	8	رويت کردن§v-8581	رخداد§n-13136	role_action	Y	ديدن.47	_	_	_	_	_	_	
 13	افتاد	V	VCONJ	18	null	null	role_action	Y	به‌ياد‌افتادن.62	_	_	_	_	_	_	
 17	پدر	N	NPP	15	والد§n-13357	نفر§n-13075	role	_	_	_	_	Arg3	_	_	_	
@@ -959,7 +959,7 @@
 10	حضرموت	N	MOZ	9	null	null	location	_	_	_	_	
 11	کوچ	N	NVE	12	کوچ§n-10723	رخداد§n-13136	role_intent	_	_	_	_	
 15	آخر	ADJ	NPREMOD	16	انتهايي§a-1372	‌مشخصه§n-12756	time	_	_	_	_	
-16	عمر	N	ADVRB	20	عمر§n-12622	دوره زماني§n-12603	time	_	_	_	ArgM_TMP	
+16	عمر	N	ADVRB	20	عمر§n-12622	دوره_زماني§n-12603	time	_	_	_	ArgM_TMP	
 19	زندگي	N	NVE	20	زندگي§n-13552	رخداد§n-13136	role_intent	_	_	_	_	
 20	نمودند	V	ROOT	0	زندگي کردن§v-17011	رخداد§n-13136	role_action	Y	زندگي‌کردن.40	_	_	
 
@@ -993,7 +993,7 @@
 2	درميان	PREP	VPP	8	null	null	no	_	_	Arg3	_	_	_	
 3	قوم	N	POSDEP	2	قوم§n-13461	گروه§n-12753	role	_	_	_	_	_	_	
 4	ش	PR	MOZ	3	لوط§n-23932	نفر§n-13075	role	_	_	_	_	_	_	
-6	سال	N	ADVC	8	سال§n-13471	دوره زماني§n-12603	time	_	_	Arg2	_	_	_	
+6	سال	N	ADVC	8	سال§n-13471	دوره_زماني§n-12603	time	_	_	Arg2	_	_	_	
 7	زندگي	N	NVE	8	زندگي§n-13552	رخداد§n-13136	role_intent	_	_	_	_	_	_	
 10	آن‌ها	PR	OBJ	15	قوم§n-13461	گروه§n-12753	role	_	_	_	Arg1	Arg1	_	
 12	به‌سوي	PREP	NPP	14	null	null	no	_	_	_	Arg3	_	_	
