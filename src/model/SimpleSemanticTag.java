@@ -53,45 +53,45 @@ public enum SimpleSemanticTag {
 	
 	
 	// Modifiers
-	COM,	// Commutative
+	ArgM_COM,	// Commutative
 	
-	LOC,	// Locative: They walk [around the countryside],
+	ArgM_LOC,	// Locative: They walk [around the countryside],
 	
-	DIR,	// Directional: They [walk along the road], No one wants the U.S. to pick up its marbles and go [home].
+	ArgM_DIR,	// Directional: They [walk along the road], No one wants the U.S. to pick up its marbles and go [home].
 	
-	GOL,	// Goal
+	ArgM_GOL,	// Goal
 	
-	MNR,	// Manner: He works [well] with others
+	ArgM_MNR,	// Manner: He works [well] with others
 	
-	TMP,	// Temporal: He was born [in 1980]
+	ArgM_TMP,	// Temporal: He was born [in 1980]
 	
-	EXT,	// Extent (amount of change): He raised prices [more than she did], I like her [a lot], they raised the prices [by 150%]!
+	ArgM_EXT,	// Extent (amount of change): He raised prices [more than she did], I like her [a lot], they raised the prices [by 150%]!
 	
-	REC,	// Reciprocal: himself, themselves, itself, together, each, other, jointly, both, etc.: If it were a good idea he would do it [himself]
+	ArgM_REC,	// Reciprocal: himself, themselves, itself, together, each, other, jointly, both, etc.: If it were a good idea he would do it [himself]
 	
-	PRP,	// Purpose
+	ArgM_PRP,	// Purpose
 	
-	CAU,	// Cause
+	ArgM_CAU,	// Cause
 	
-	DIS,	// Discourse Markers: also, however, too, as well, but, and, as we've seen,	before, instead, on the other hand, for instance, etc.:
+	ArgM_DIS,	// Discourse Markers: also, however, too, as well, but, and, as we've seen,	before, instead, on the other hand, for instance, etc.:
 	
-	MOD,	// Modals: will, may, can, must, shall, might, should, could, would, going (to), have (to) and used (to)
+	ArgM_MOD,	// Modals: will, may, can, must, shall, might, should, could, would, going (to), have (to) and used (to)
 	
-	NEG,	// Negation: not, n't, never, no longer, etc.
+	ArgM_NEG,	// Negation: not, n't, never, no longer, etc.
 	
-	ADV,	// Adverbials (modify entire sentence): As opposed to ArgM-MNR, which modify the verb, ARGM-ADVs usually modify the	entire sentence.
+	ArgM_ADV,	// Adverbials (modify entire sentence): As opposed to ArgM-MNR, which modify the verb, ARGM-ADVs usually modify the	entire sentence.
 	
-	CND,	// Condition as [if you send me the money] I will pay you back as soon as possible.
+	ArgM_CND,	// Condition as [if you send me the money] I will pay you back as soon as possible.
 	
-	INS;	// Instrument, He was killed with a sledge hammer.
+	ArgM_INS;	// Instrument, He was killed with a sledge hammer.
 	
 	
 		
 	public static SimpleSemanticTag fromString(String semanticTagName){
 		if (semanticTagName != null){
 			
-			if(semanticTagName.startsWith("ArgM-"))
-				semanticTagName = semanticTagName.substring("ArgM-".length());
+//			if(semanticTagName.startsWith("ArgM-"))
+//				semanticTagName = semanticTagName.substring("ArgM-".length());
 			
 			for (SimpleSemanticTag st : SimpleSemanticTag.values()) 
 				if (semanticTagName.equalsIgnoreCase(st.name())) 
