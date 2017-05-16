@@ -751,7 +751,7 @@ public class Word {
 			if(_simpleSemanticTag != null) rs += "" + _simpleSemanticTag + ", ";
 			else rs += "null, ";
 			
-			if(_wsd_superNode_name != null) rs += "" + _wsd_superNode_name + ", ";
+			if(_wsd_superNode_name != null) rs += "" + _wsd_superNode_name.trim() + ", ";
 			else rs += "null, ";
 			
 			if(_srcOfSynTag_number == 0 || _srcOfSynTag_number == verbNum)

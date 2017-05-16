@@ -53,10 +53,12 @@ public class UI {
 	
 //	private String inputDataSetSceneCorrectedFilePath = "inputStory/96-02-17fullcleanedJunkScene.arff";
 //	private String inputDataSetSceneJunkDashFilePath = "inputStory/96-02-24full_scene_junk_dash.arff";
-	private String inputDataSetSceneJunkDashFilePath = "inputStory/96-02-26full_scene_junk_dash_ArgM.arff";
+//	private String inputDataSetSceneJunkDashFilePath = "inputStory/96-02-26full_scene_junk_dash_ArgM.arff";
+	private String inputDataSetSceneJunkDashFilePath = "inputStory/96-02-26full_scene_junk_dash_ArgM_WSD.arff";
 	
 //	private String outMultiClassDataSet = "dataset/96-02-24MultiClassDataSet.arff";
-	private String outMultiClassDataSet = "dataset/96-02-26MultiClassDataSet.arff";
+//	private String outMultiClassDataSet = "dataset/96-02-26MultiClassDataSet.arff";
+	private String outMultiClassDataSet = "dataset/96-02-26MultiClassDataSet2.arff";
 	
 	//all sentences from CSRI
 //	private String rawDataSetFilePath = "inputStory/cleanedSRLDataSet - Copy.arff";
