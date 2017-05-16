@@ -53,7 +53,7 @@
 3	ش	PR	POSDEP	2	يوسف§n-23957	نفر§n-13075	role	_	_	_	_	_	
 4	روشن	ADJ	MOS	5	گويا§a-268	مشخصه§n-12756	role_intent	_	_	Arg2	_	_	
 5	ساخت	V	PRD	1	کردن§v-8678	رخداد§n-13136	role_action	Y	ساختن.498	_	_	_	
-8	آينده	N	ADVRB	11	فردا§n-12611	دوره زمانی§n-12603	time	_	_	_	ArgM_TMP	_	
+8	آينده	N	ADVRB	11	فردا§n-12611	دوره_زماني§n-12603	time	_	_	_	ArgM_TMP	_	
 9	شخصيتي	N	MOS	11	شخصيت§n-11163	مشخصه§n-12756	role_state	_	_	_	Arg2	_	
 10	برجسته	ADJ	NPOSTMOD	9	null	مشخصه§n-12756	role_state	_	_	_	_	_	
 11	خواهدشد	V	PRD	6	کردن§v-8678	رخداد§n-13136	no	Y	کردن.25	_	_	_	
@@ -174,7 +174,7 @@
 
 1	يوسف	N	SBJ	11	يوسف§n-23957	نفر§n-13075	role	_	_	Arg1	_	_	_	
 4	روز	N	ADVRB	11	روشنايي روز§n-12637	null	time	_	_	ArgM_TMP	_	_	_	
-7	شب	N	NCONJ	4	شب§n-12643	دوره زمانی§n-12603	time	_	_	_	_	_	_	
+7	شب	N	NCONJ	4	شب§n-12643	دوره_زماني§n-12603	time	_	_	_	_	_	_	
 9	درميان	PREP	MOS	11	null	null	no	_	_	Arg2	_	_	_	
 10	چاه	N	POSDEP	9	چاه§n-16033	null	location	_	_	_	_	_	_	
 15	کارواني	N	SBJ	38	قافله§n-14002	نفر§n-13075	role	_	_	_	Arg0	_	Arg0	
@@ -399,8 +399,8 @@
 
 #..........	
 
-3	شبي	N	ADVRB	10	شب§n-12643	دوره زمانی§n-12603	time	_	_	ArgM_TMP	_	
-5	شب‌ها	N	NPP	3	شب§n-12643	دوره زمانی§n-12603	time	_	_	_	_	
+3	شبي	N	ADVRB	10	شب§n-12643	دوره_زماني§n-12603	time	_	_	ArgM_TMP	_	
+5	شب‌ها	N	NPP	3	شب§n-12643	دوره_زماني§n-12603	time	_	_	_	_	
 6	پادشاه	N	SBJ	10	سلطان§n-13386	نفر§n-13075	role	_	_	Arg0	_	
 7	وقت	N	MOZ	6	null	null	no	_	_	_	_	
 8	مصر	N	MOZ	7	مصر§n-20196	گروه§n-12753	location	_	_	_	_	
@@ -756,7 +756,7 @@
 4	يوسف	N	SBJ	13	يوسف§n-23957	نفر§n-13075	role	_	_	Arg0	Arg0	Arg0	Arg0	_	_	
 6	ياد	N	VPRT	13	به خاطر آوردن§n-11353	خصوصيت_رواني§n-12725	role_intent	_	_	_	_	_	_	_	_	
 7	خوابي	N	MOZ	6	رويا§n-15102	خصوصيت_رواني§n-12725	no	_	_	Arg1	Arg1	_	_	_	_	
-10	دوران	N	ADVRB	12	دوران§n-13782	دوره زمانی§n-12603	time	_	_	ArgM_TMP	_	_	_	_	_	
+10	دوران	N	ADVRB	12	دوران§n-13782	دوره_زماني§n-12603	time	_	_	ArgM_TMP	_	_	_	_	_	
 11	کودکي	N	MOZ	10	نوباوگي§n-12628	دوره_زماني§n-12603	role_state	_	_	_	_	_	_	_	_	
 12	ديده‌بود	V	PRD	8	رويت کردن§v-8581	رخداد§n-13136	role_action	Y	ديدن.47	_	_	_	_	_	_	
 13	افتاد	V	VCONJ	18	null	null	role_action	Y	به‌ياد‌افتادن.62	_	_	_	_	_	_	
@@ -1211,7 +1211,7 @@
 15	شمار	N	VPRT	16	null	null	no	_	_	_	_	_	
 16	می‌رفت	V	VCONJ	37	به شمار آمدن§v-8084	رخداد§n-13136	no	Y	به‌شمار‌رفتن.561	_	_	_	
 18	نینوا	N	SBJ	29	null	null	location	_	_	_	Arg1	_	
-21	دوران	N	ADVRB	29	دوره§n-10264	دوره زمانی§n-12603	time	_	_	_	ArgM_TMP	_	
+21	دوران	N	ADVRB	29	دوره§n-10264	دوره_زماني§n-12603	time	_	_	_	ArgM_TMP	_	
 23	غنی‌ترین	ADJ	NPREMOD	26	غنی§a-46	مشخصه§n-12756	static_object_state	_	_	_	_	_	
 25	بزرگترین	ADJ	AJCONJ	23	بزرگ§a-2399	مشخصه§n-12756	static_object_state	_	_	_	_	_	
 26	شهرهای	N	AJPP	28	شهر§n-10272	جا§n-12733	location	_	_	_	_	_	
@@ -1242,7 +1242,7 @@
 19	می‌ورزیدند	V	ROOT	0	اصرار ورزیدن§v-15640	رخداد§n-13136	role_action	Y	اصرار‌کردن.566	_	_	
 
 1	بعداز	PREP	ADVRB	11	null	null	no	_	_	ArgM_TMP	_	_	_	
-3	سال	N	MESU	4	عام§n-12653	دوره زمانی§n-12603	time	_	_	_	_	_	_	
+3	سال	N	MESU	4	عام§n-12653	دوره_زماني§n-12603	time	_	_	_	_	_	_	
 4	دعوت	N	POSDEP	1	دعوت§n-11510	خبر§n-12766	role_intent	_	_	_	_	_	_	
 8	نفر	N	POSDEP	6	سر§n-10152	اندازه§n-12768	no	_	_	_	_	_	_	
 11	نگرویدند	V	ROOT	0	ملحق شدن§v-8974	رخداد§n-13136	role_action	Y	گرویدن.214	_	_	_	_	
@@ -1289,7 +1289,7 @@
 17	نمایند	V	VCL	8	نادم شدن§v-21859	رخداد§n-13136	role_action	Y	توبه‌کردن.544	_	_	_	_	
 
 1	بعداز	PREP	ADVRB	10	null	null	no	_	_	ArgM_TMP	_	_	
-3	وقت	N	POSDEP	1	موقع§n-12614	دوره زمانی§n-12603	time	_	_	_	_	_	
+3	وقت	N	POSDEP	1	موقع§n-12614	دوره_زماني§n-12603	time	_	_	_	_	_	
 4	یونس	N	SBJ	10	یونس§n-23943	نفر§n-13075	role	_	_	Arg0	Arg0	_	
 6	مشاهده	N	MOZ	5	null	null	role_intent	_	_	_	_	_	
 7	عذاب	N	MOZ	6	نکبت§n-11559	رخداد§n-13136	no	_	_	_	_	_	
@@ -1376,7 +1376,7 @@
 10	نرساند	V	VCL	5	آسیب رساندن§v-20940	رخداد§n-13136	dynamic_object_action	Y	آسیب‌رساندن.860	_	_	
 
 1	یونس	N	SBJ	14	یونس§n-23943	نفر§n-13075	role	_	_	Arg0	Arg0	Arg1	
-3	روزی	N	ADVRB	14	روز§n-12632	دوره زمانی§n-12603	time	_	_	ArgM_EXT	_	_	
+3	روزی	N	ADVRB	14	روز§n-12632	دوره_زماني§n-12603	time	_	_	ArgM_EXT	_	_	
 
 #..........	
 
@@ -1435,7 +1435,7 @@
 7	سلامتی	N	OBJ	10	سلامت§n-14056	مشخصه§n-12756	role_state	_	_	_	Arg1	
 10	بازیافت	V	AJUCL	5	باز یافتن§v-16266	رخداد§n-13136	role_action	Y	باز‌یافتن.593	_	_	
 
-3	هنگام	N	ADVRB	8	موقع§n-12614	دوره زمانی§n-12603	time	_	_	ArgM_TMP	_	
+3	هنگام	N	ADVRB	8	موقع§n-12614	دوره_زماني§n-12603	time	_	_	ArgM_TMP	_	
 4	یونس	N	SBJ	8	یونس§n-23943	نفر§n-13075	role	_	_	Arg1	Arg0	
 5	متوجه	ADJ	MOS	8	متوجه§a-706	مشخصه§n-12756	role_state	_	_	Arg2	_	
 6	خطای	N	NEZ	5	ذنب§n-10598	رخداد§n-13136	role_state	_	_	_	_	
@@ -1506,7 +1506,7 @@
 
 15	شهر	N	NEZ	14	شهر§n-10272	جا§n-12733	Location	_	_	_	_	_	_	
 20	ایمان	N	NVE	21	ایمان§n-11400	خصوصيت_رواني§n-12725	role_intent	_	_	_	_	_	_	
-23	سال‌ها	N	ADVRB	29	عام§n-12653	دوره زمانی§n-12603	time	_	_	_	_	_	ArgM_EXT	
+23	سال‌ها	N	ADVRB	29	عام§n-12653	دوره_زماني§n-12603	time	_	_	_	_	_	ArgM_EXT	
 25	رهبری	N	POSDEP	24	سرجنبان§n-13333	نفر§n-13075	role_state	_	_	_	_	_	_	
 27	راهنمایی‌های	N	NCONJ	25	هدایت§n-14315	رخداد§n-13136	role_intent	_	_	_	_	_	_	
 
@@ -1519,7 +1519,7 @@
 13	قدرت	N	POSDEP	12	توانایی§n-12975	خصوصيت_رواني§n-12725	role_state	_	_	_	_	
 14	الهی	ADJ	NPOSTMOD	13	ربانی§a-2083	مشخصه§n-12756	role_state	_	_	_	_	
 
-1	هنگامی	N	ADVRB	23	موقع§n-12614	دوره زمانی§n-12603	time	_	_	_	_	_	ArgM_TMP	
+1	هنگامی	N	ADVRB	23	موقع§n-12614	دوره_زماني§n-12603	time	_	_	_	_	_	ArgM_TMP	
 3	خداوند	N	SBJ	5	باری تعالی§n-11940	خصوصيت_رواني§n-12725	role	_	_	Arg0	_	Arg0	_	
 4	اراده	N	NVE	5	خواست§n-11330	رخداد§n-13136	role_intent	_	_	_	_	_	_	
 8	زمین	N	ADVRB	17	زمین§n-13297	شیء§n-12703	location	_	_	_	_	ArgM_LOC	_	
@@ -1560,7 +1560,7 @@
 21	بهره‌مند	ADJ	MOS	22	متمتع§a-17760	مشخصه§n-12756	role_intent	_	_	_	_	Arg2	
 
 1	انسان	N	SBJ	6	انسان§n-13187	گروه§n-12753	role	_	_	Arg1	_	_	_	_	_	_	
-3	آغاز	N	ADVRB	6	آغاز§n-13261	دوره زمانی§n-12603	no	_	_	ArgM_TMP	_	_	_	_	_	_	
+3	آغاز	N	ADVRB	6	آغاز§n-13261	دوره_زماني§n-12603	no	_	_	ArgM_TMP	_	_	_	_	_	_	
 5	خاک	N	MOS	6	خاک§n-12568	ماده§n-14032	role_state	_	_	Arg2	Arg1	Arg1	Arg1	Arg1	Arg1	Arg1	
 6	بوده‌است	V	ROOT	0	بودن§v-9328	رخداد§n-13136	no	Y	بودن.15	_	_	_	_	_	_	_	
 10	آب	N	AJPP	11	آب§n-12570	ماده§n-14032	static_object	_	_	_	_	_	_	_	_	_	
@@ -1582,7 +1582,7 @@
 41	سفال	N	POSDEP	40	سفال§n-25736	شیء§n-12703	static_object	_	_	_	_	_	_	_	_	_	
 42	گردیده‌است	V	PRD	29	گردیدن§v-9382	رخداد§n-13136	no	Y	کردن.25	_	_	_	_	_	_	_	
 
-1	مرحله	N	SBJ	6	فاز§n-12698	دوره زمانی§n-12603	no	_	_	Arg1	_	
+1	مرحله	N	SBJ	6	فاز§n-12698	دوره_زماني§n-12603	no	_	_	Arg1	_	
 2	تکاملی	ADJ	NPOSTMOD	1	تکاملی§a-2457	مشخصه§n-12756	role_intent	_	_	_	_	
 3	بشر	N	MOZ	1	بشر§n-11988	نفر§n-13075	role	_	_	_	_	
 8	روح	N	SBJ	15	روح§n-10348	مسبب§n-13036	no	_	_	_	Arg0	
@@ -1618,7 +1618,7 @@
 10	بشری	N	OBJ	13	بشر§n-11988	نفر§n-13075	role	_	_	_	_	Arg1	_	_	_	
 12	گل	N	ADVRB	13	گل§n-14235	ماده§n-14032	static_object	_	_	_	_	ArgM_ADV	_	_	_	
 13	می‌آفرینم	V	VCL	7	هست کردن§v-7844	رخداد§n-13136	role_action	Y	آفریدن.187	_	_	_	_	_	_	
-15	هنگامی	N	ADVRB	31	موقع§n-12614	دوره زمانی§n-12603	time	_	_	_	_	_	_	ArgM_TMP	_	
+15	هنگامی	N	ADVRB	31	موقع§n-12614	دوره_زماني§n-12603	time	_	_	_	_	_	_	ArgM_TMP	_	
 19	موزون	ADJ	MOS	20	هماهنگ§a-1604	مشخصه§n-12756	role_state	_	_	_	_	_	Arg2	_	_	
 20	نمودم	V	VCONJ	27	null	null	role_action	Y	کردن.25	_	_	_	_	_	_	
 23	روح	N	ADVRB	27	روح§n-10348	مسبب§n-13036	no	_	_	_	_	_	_	Arg1	_	
@@ -1748,7 +1748,7 @@
 20	اقامت	N	NVE	21	اقامت کردن§n-10696	رخداد§n-13136	role_intent	_	_	_	_	_	_	_	
 26	سازند	V	VCONJ	35	کردن§v-8678	رخداد§n-13136	role_action	Y	ساختن.498	_	_	_	_	_	
 29	پایان	N	ADVRB	35	پایان§n-13269	null	no	_	_	_	_	_	_	ArgM_EXT	
-30	عمر	N	MOZ	29	عمر§n-12622	دوره زمانی§n-12603	no	_	_	_	_	_	_	_	
+30	عمر	N	MOZ	29	عمر§n-12622	دوره_زماني§n-12603	no	_	_	_	_	_	_	_	
 34	بهره‌مند	ADJ	MOS	35	متمتع§a-17760	مشخصه§n-12756	no	_	_	_	_	_	_	Arg2	
 
 1	آدم	N	SBJ	14	آدم§n-14705	نفر§n-13075	role	_	_	Arg1	Arg0	
@@ -1795,7 +1795,7 @@
 50	نمود	V	ROOT	0	سکونت کردن§v-9334	رخداد§n-13136	role_action	Y	سکونت‌کردن.629	_	_	_	_	_	_	
 
 1	آدم	N	SBJ	6	آدم§n-14705	نفر§n-13075	role	_	_	Arg0	Arg0	Arg0	
-3	شبانه‌روز	N	ADVRB	6	24ساعت§n-12634	دوره زمانی§n-12603	time	_	_	ArgM_EXT	_	_	
+3	شبانه‌روز	N	ADVRB	6	24ساعت§n-12634	دوره_زماني§n-12603	time	_	_	ArgM_EXT	_	_	
 5	سجده	N	VPP	6	سجده§n-25850	رخداد§n-13136	role_state	_	_	Arg3	_	_	
 6	پرداخت	V	VCONJ	12	پرداختن§v-19365	رخداد§n-13136	role_action	Y	پرداختن.72	_	_	_	
 9	فراق	N	VPP	12	انفکاک§n-10076	مشخصه§n-12756	role_emotion	_	_	_	Arg3	_	
@@ -1896,7 +1896,7 @@
 11	عراق	N	NCONJ	9	عراق§n-13668	جا§n-12733	location	_	_	_	
 12	بوده‌است	V	ROOT	0	بودن§v-9328	رخداد§n-13136	no	Y	بودن.15	_	
 
-2	عصر	N	MOZ	1	دوره§n-12681	دوره زمانی§n-12603	time	_	_	_	
+2	عصر	N	MOZ	1	دوره§n-12681	دوره_زماني§n-12603	time	_	_	_	
 3	ش	PR	MOZ	2	حضرت نوح§n-23928	نفر§n-13075	role	_	_	_	
 4	غرق	ADJ	MOS	13	غرق§n-16157	مشخصه§n-12756	role_state	_	_	Arg2	
 6	بت‌پرستی	N	AJPP	4	بت‌پرستی§n-20270	رخداد§n-13136	role_state	_	_	_	
@@ -1974,18 +1974,18 @@
 17	برنامه	N	OBJ	21	برنامه§n-11359	خصوصيت_رواني§n-12725	role_intent	_	_	_	Arg1	
 20	دنبال	N	NVE	21	null	null	role_state	_	_	_	_	
 
-1	گاه	ADV	ADVRB	9	موقع§n-12614	دوره زمانی§n-12603	time	_	_	ArgM_TMP	_	_	
+1	گاه	ADV	ADVRB	9	موقع§n-12614	دوره_زماني§n-12603	time	_	_	ArgM_TMP	_	_	
 2	آن‌ها	PR	OBJ	9	null	null	role	_	_	Arg1	_	_	
 4	به‌طور	PREP	ADVRB	9	null	null	no	_	_	ArgM_MNR	_	_	
 5	مخفیانه	ADJ	POSDEP	4	یواشکی§r-15307	مشخصه§n-12756	role_state	_	_	_	_	_	
 7	محرمانه	ADJ	AJCONJ	5	محرمانه§a-1523	مشخصه§n-12756	role_state	_	_	_	_	_	
 8	دعوت	N	NVE	9	دعوت§n-11510	خبر§n-12766	role_intent	_	_	_	_	_	
 9	می‌کرد	V	VCONJ	17	خواندن§v-8493	رخداد§n-13136	role_action	Y	دعوت‌کردن.352	_	_	_	
-12	گاه	ADV	ADVRB	17	موقع§n-12614	دوره زمانی§n-12603	time	_	_	_	ArgM_TMP	_	
+12	گاه	ADV	ADVRB	17	موقع§n-12614	دوره_زماني§n-12603	time	_	_	_	ArgM_TMP	_	
 13	دعوت	N	OBJ	17	دعوت§n-11510	خبر§n-12766	role_intent	_	_	_	Arg1	_	
 14	علنی	ADJ	NPOSTMOD	13	گویا§a-268	مشخصه§n-12756	role_state	_	_	_	_	_	
 16	آشکار	ADJ	AJCONJ	14	گویا§a-268	مشخصه§n-12756	role_state	_	_	_	_	_	
-20	مواقعی	N	ADVRB	30	موقع§n-12614	دوره زمانی§n-12603	time	_	_	_	_	ArgM_TMP	
+20	مواقعی	N	ADVRB	30	موقع§n-12614	دوره_زماني§n-12603	time	_	_	_	_	ArgM_TMP	
 23	روش	PR	NPP	29	نحوه§n-13373	رخداد§n-13136	no	_	_	_	_	Arg3	
 24	آمیختن	N	MOZ	23	آمیختن§v-8662	رخداد§n-13136	role_action	_	_	_	_	_	
 25	دعوت	N	MOZ	24	دعوت§n-11510	خبر§n-12766	role_intent	_	_	_	_	_	
@@ -1996,12 +1996,12 @@
 1	حضرت	N	SBJ	21	null	null	role_state	_	_	Arg1	
 2	نوح	N	MOZ	1	حضرت نوح§n-23928	نفر§n-13075	role	_	_	_	
 4	ع	ARAB	POSDEP	2	null	null	no	_	_	_	
-7	شب	N	ADVRB	21	شب§n-12642	دوره زمانی§n-12603	time	_	_	ArgM_TMP	
+7	شب	N	ADVRB	21	شب§n-12642	دوره_زماني§n-12603	time	_	_	ArgM_TMP	
 11	فکر	N	MOS	21	فکر§n-13030	خصوصيت_رواني§n-12725	role_state	_	_	Arg2	
 12	رستگاری	N	MOZ	11	null	null	role_intent	_	_	_	
 14	نجات	N	NCONJ	12	نجات§n-10402	رخداد§n-13136	role_intent	_	_	_	
 17	چنگال	N	NPP	14	چنگال§n-14226	null	no	_	_	_	
-18	جهل	N	MOZ	17	ظلمت§n-12645	دوره زمانی§n-12603	role_state	_	_	_	
+18	جهل	N	MOZ	17	ظلمت§n-12645	دوره_زماني§n-12603	role_state	_	_	_	
 20	بت‌پرستی	N	NCONJ	18	بت‌پرستی§n-20270	رخداد§n-13136	role_state	_	_	_	
 
 3	کارهایی	N	AJPP	8	کار§n-12781	رخداد§n-13136	role_intent	_	_	_	_	
@@ -2010,7 +2010,7 @@
 8	غمگین	ADJ	MOS	9	کلافه§a-118	مشخصه§n-12756	role_state	_	_	_	Arg2	
 9	مباش	V	PRD	1	بودن§v-9328	رخداد§n-13136	no	Y	بودن.15	_	_	
 
-3	هنگام	N	MOS	4	موقع§n-12614	دوره زمانی§n-12603	time	_	_	Arg2	_	
+3	هنگام	N	MOS	4	موقع§n-12614	دوره_زماني§n-12603	time	_	_	Arg2	_	
 6	خداوند	N	SBJ	17	باری تعالی§n-11940	خصوصيت_رواني§n-12725	role	_	_	_	Arg0	
 7	دستور	N	OBJ	17	امر§n-11505	رخداد§n-13136	no	_	_	_	Arg1	
 8	ساختن	N	MOZ	7	ایجاد§n-10642	رخداد§n-13136	role_intent	_	_	_	_	
@@ -2038,7 +2038,7 @@
 29	لجاجت	N	VPP	31	لجاجت§n-15928	مشخصه§n-12756	role_state	_	_	_	Arg3	
 31	می‌افزودند	V	ROOT	0	افزایش دادن§v-7574	رخداد§n-13136	role_action	Y	افزودن.418	_	_	
 
-3	طول	N	ADVRB	11	طول§n-12618	دوره زمانی§n-12603	no	_	_	ArgM_TMP	_	_	
+3	طول	N	ADVRB	11	طول§n-12618	دوره_زماني§n-12603	no	_	_	ArgM_TMP	_	_	
 7	اندکی	N	POSDEP	6	معدود§a-123	null	no	_	_	_	_	_	
 10	ایمان	N	NVE	11	ایمان§n-11400	خصوصيت_رواني§n-12725	role_state	_	_	_	_	_	
 11	نیاوردند	V	VCONJ	18	ایمان آوردن§v-796	رخداد§n-13136	role_action	Y	ایمان‌آوردن.38	_	_	_	
@@ -2217,7 +2217,7 @@
 3	عمر	N	MOZ	2	عمر§n-12915	مشخصه§n-12756	no	_	_	_	_	_	
 4	جبرییل	N	SBJ	8	null	null	role	_	_	Arg1	_	_	
 7	نازل	ADJ	MOS	8	null	null	role_state	_	_	Arg2	_	_	
-15	مدت	N	SBJ	22	مدت§n-12693	دوره زمانی§n-12603	time	_	_	_	_	Arg1	
+15	مدت	N	SBJ	22	مدت§n-12693	دوره_زماني§n-12603	time	_	_	_	_	Arg1	
 16	نبوت	N	MOZ	15	null	null	role_intent	_	_	_	_	_	
 18	عمر	N	NCONJ	16	عمر§n-12915	مشخصه§n-12756	role_intent	_	_	_	_	_	
 21	سر	N	VPRT	22	null	null	no	_	_	_	_	_	
@@ -2275,14 +2275,14 @@
 
 1	ولادت	N	SBJ	6	تولد§n-11570	رخداد§n-13136	no	_	_	Arg1	
 2	ش	PR	MOZ	1	ابراهیم§n-23925	نفر§n-13075	role	_	_	_	
-4	زمان	N	MOS	6	زمانه§n-12682	دوره زمانی§n-12603	time	_	_	Arg2	
+4	زمان	N	MOS	6	زمانه§n-12682	دوره_زماني§n-12603	time	_	_	Arg2	
 5	نمرود	N	MOZ	4	null	null	role	_	_	_	
 
 1	زندگی	N	SBJ	11	زندگی§n-13552	رخداد§n-13136	role_intent	_	_	Arg1	_	
 2	درخشان	ADJ	NPOSTMOD	1	فروزنده§a-1018	مشخصه§n-12756	no	_	_	_	_	
 3	ابراهیم	N	MOZ	1	ابراهیم§n-23925	نفر§n-13075	role	_	_	_	_	
 5	ع	ARAB	POSDEP	3	null	null	no	_	_	_	_	
-9	دوره	N	AJPP	10	دوره§n-10264	دوره زمانی§n-12603	time	_	_	_	_	
+9	دوره	N	AJPP	10	دوره§n-10264	دوره_زماني§n-12603	time	_	_	_	_	
 13	عبارت	N	MOS	14	عبارت§n-13127	رخداد§n-13136	no	_	_	_	Arg2	
 14	ند	V	PRD	12	بودن§v-9328	رخداد§n-13136	no	Y	بودن.15	_	_	
 17	مقام	N	NPP	13	پایگاه اجتماعی§n-12388	مشخصه§n-12756	no	_	_	_	_	
@@ -2309,7 +2309,7 @@
 14	نمرود	N	NPP	15	null	null	role	_	_	_	Arg3	
 15	گزارش	N	NVE	16	گزارش§n-11530	رخداد§n-13136	role_intent	_	_	_	_	
 
-3	وقت	N	ADVRB	9	موقع§n-12614	دوره زمانی§n-12603	time	_	_	ArgM_TMP2	_	_	
+3	وقت	N	ADVRB	9	موقع§n-12614	دوره_زماني§n-12603	time	_	_	ArgM_TMP2	_	_	
 4	همزمان	ADV	ADVRB	9	مصادف§a-2446	مشخصه§n-12756	time	_	_	ArgM_TMP	_	_	
 5	نمرود	N	SBJ	9	null	null	role	_	_	Arg0	_	_	
 7	عالم	N	ADVRB	9	جهان§n-10094	مشخصه§n-12756	location	_	_	ArgM_LOC	_	_	
@@ -2384,7 +2384,7 @@
 
 1	بدین‌وسیله	ADV	ADVRB	8	null	null	no	_	_	ArgM_DIS	
 2	توحید	N	OBJ	8	یکتاپرستی§n-21598	خصوصيت_رواني§n-12725	no	_	_	Arg1	
-6	زمان	N	ADVRB	8	زمانه§n-12682	دوره زمانی§n-12603	time	_	_	ArgM_TMP	
+6	زمان	N	ADVRB	8	زمانه§n-12682	دوره_زماني§n-12603	time	_	_	ArgM_TMP	
 7	ترسیم	N	NVE	8	کشیدن§n-15005	شیء§n-12703	role_intent	_	_	_	
 
 1	آزر	N	SBJ	4	null	null	role	_	_	Arg1	_	
@@ -2415,7 +2415,7 @@
 5	کار	N	MOZ	3	کار§n-13007	رخداد§n-13136	role_intent	_	_	_	_	_	
 6	بازماند	V	VCONJ	12	توقف کردن§v-9054	رخداد§n-13136	role_action	Y	باز‌ماندن.686	_	_	_	
 11	رها	ADJ	MOS	12	ول§a-1594	مشخصه§n-12756	role_state	_	_	_	Arg2	_	
-15	فرصت	N	ADVRB	20	فرصت§n-12497	دوره زمانی§n-12603	time	_	_	_	_	ArgM_LOC	
+15	فرصت	N	ADVRB	20	فرصت§n-12497	دوره_زماني§n-12603	time	_	_	_	_	ArgM_LOC	
 16	مناسب	ADJ	NPOSTMOD	15	درخور§a-1544	مشخصه§n-12756	no	_	_	_	_	_	
 19	انتقام	N	NVE	20	انتقام§n-19717	مشخصه§n-12756	role_intent	_	_	_	_	_	
 
@@ -2471,7 +2471,7 @@
 15	بت	N	SBJ	18	بت§n-26030	شیء§n-12703	static_object	_	_	_	_	Arg0	
 17	نابود	ADJ	MOS	18	منهدم§a-1202	مشخصه§n-12756	no	_	_	_	_	Arg2	
 
-3	هنگام	N	ADVRB	13	موقع§n-12614	دوره زمانی§n-12603	time	_	_	_	_	ArgM_TMP	
+3	هنگام	N	ADVRB	13	موقع§n-12614	دوره_زماني§n-12603	time	_	_	_	_	ArgM_TMP	
 6	می‌دانستند	V	PRD	5	دانستن§v-8456	رخداد§n-13136	role_action	Y	دانستن.97	_	_	_	
 7	بتها	N	SBJ	9	بت§n-26030	شیء§n-12703	static_object	_	_	_	Arg0	_	
 8	سخنی	N	OBJ	9	سخن§n-12982	خصوصيت_رواني§n-12725	no	_	_	_	Arg1	_	
@@ -2497,7 +2497,7 @@
 28	درس	N	MOS	32	درس§n-13559	خبر§n-12766	no	_	_	_	_	_	_	Arg2	
 29	عبرتی	N	MOZ	28	null	null	no	_	_	_	_	_	_	_	
 
-3	هنگام	N	ADVRB	7	موقع§n-12614	دوره زمانی§n-12603	time	_	_	ArgM_TMP	_	_	
+3	هنگام	N	ADVRB	7	موقع§n-12614	دوره_زماني§n-12603	time	_	_	ArgM_TMP	_	_	
 4	دستور	N	SBJ	7	امر§n-11505	رخداد§n-13136	no	_	_	Arg1	_	_	
 5	الهی	ADJ	NPOSTMOD	4	ربانی§a-2083	مشخصه§n-12756	role_state	_	_	_	_	_	
 6	صادر	ADJ	MOS	7	null	null	no	_	_	Arg2	_	_	
@@ -2531,7 +2531,7 @@
 8	افتاد	V	ROOT	0	null	null	role_action	Y	به‌هراس‌افتادن.708	_	_	_	_	
 9	لذا	SUBR	AJUCL	8	پس§r-21612	null	no	_	_	_	ArgM_DIS	_	_	
 10	پس‌از	PREP	ADVRB	16	null	null	no	_	_	_	ArgM_TMP	_	_	
-11	مدتی	N	POSDEP	10	مدت§n-12613	دوره زمانی§n-12603	time	_	_	_	_	_	_	
+11	مدتی	N	POSDEP	10	مدت§n-12613	دوره_زماني§n-12603	time	_	_	_	_	_	_	
 15	کوچ	N	NVE	16	کوچ§n-10723	رخداد§n-13136	role_intent	_	_	_	_	_	_	
 16	نمود	V	VCONJ	20	کوچ§n-10723	رخداد§n-13136	role_action	Y	کوچ‌کردن.184	_	_	_	_	
 19	جایی	N	VPP	20	جا§n-12733	شیء§n-12703	location	_	_	_	_	Arg4	_	
@@ -2628,7 +2628,7 @@
 15	اسماعیل	N	MOZ	14	اسماعیل§n-23944	نفر§n-13075	role	_	_	_	_	
 
 1	ساره	N	SBJ	6	null	null	role	_	_	Arg1	_	Arg0	_	
-3	سالها	N	ADVRB	6	عام§n-12653	دوره زمانی§n-12603	time	_	_	ArgM_EXT	_	_	_	
+3	سالها	N	ADVRB	6	عام§n-12653	دوره_زماني§n-12603	time	_	_	ArgM_EXT	_	_	_	
 5	انتظار	N	MOS	6	انتظار§n-11647	مشخصه§n-12756	role_state	_	_	Arg2	_	_	_	
 8	خداوند	N	SBJ	12	باری تعالی§n-11940	خصوصيت_رواني§n-12725	role	_	_	_	Arg0	_	_	
 11	فرزندی	N	OBJ	12	بچه§n-13350	نفر§n-13075	role	_	_	_	Arg1	_	_	
@@ -2669,7 +2669,7 @@
 29	اسحاق	N	NCONJ	27	حضرت اسحاق§n-23939	نفر§n-13075	role	_	_	_	_	_	_	
 31	ع	ARAB	POSDEP	27	null	null	no	_	_	_	_	_	_	
 36	عصای	N	MOS	39	عصا§n-25495	شیء§n-12703	static_object	_	_	_	_	Arg2	_	
-37	پیری	N	MOZ	36	سالخوردگی§n-12630	دوره زمانی§n-12603	role_state	_	_	_	_	_	_	
+37	پیری	N	MOZ	36	سالخوردگی§n-12630	دوره_زماني§n-12603	role_state	_	_	_	_	_	_	
 39	گردند	V	VCONJ	45	null	null	no	Y	کردن.25	_	_	_	_	
 44	ادامه	N	NVE	45	دنباله§n-13567	رابطه§n-13628	role_intent	_	_	_	_	_	_	
 
@@ -2678,7 +2678,7 @@
 3	بنایی	N	MOS	4	بنا§n-12761	شیء§n-12703	location	_	_	Arg2	_	_	
 8	زمین	N	MOZ	7	زمین§n-13297	شیء§n-12703	location	_	_	_	_	_	
 9	ساخته‌شد	V	PRD	5	درست کردن§v-8535	رخداد§n-13136	no	Y	ساختن.137	_	_	_	
-11	زمان	N	ADVRB	21	زمانه§n-12682	دوره زمانی§n-12603	time	_	_	_	_	ArgM_TMP	
+11	زمان	N	ADVRB	21	زمانه§n-12682	دوره_زماني§n-12603	time	_	_	_	_	ArgM_TMP	
 12	حضرت	N	MOZ	11	null	null	role_state	_	_	_	_	_	
 13	آدم	N	MOZ	12	آدم§n-14705	نفر§n-13075	role	_	_	_	_	_	
 15	ع	ARAB	POSDEP	13	null	null	no	_	_	_	_	_	
@@ -2714,7 +2714,7 @@
 
 7	مکه	N	AJPP	8	مکه مکرمه§n-23602	جا§n-12733	location	_	_	_	_	
 8	رها	ADJ	MOS	9	ول§a-1594	مشخصه§n-12756	role_state	_	_	Arg2	_	
-13	مدتی	N	POSDEP	12	مدت§n-12613	دوره زمانی§n-12603	time	_	_	_	_	
+13	مدتی	N	POSDEP	12	مدت§n-12613	دوره_زماني§n-12603	time	_	_	_	_	
 15	دیدار	N	VPP	17	دیدار§n-10101	مشخصه§n-12756	role_intent	_	_	_	Arg4	
 17	می‌رفت	V	ROOT	0	پوییدن§v-7700	رخداد§n-13136	role_action	Y	رفتن.17	_	_	
 
@@ -2867,7 +2867,7 @@
 
 3	درخواست	N	ADVRB	13	خواهش§n-13129	خبر§n-12766	no	_	_	ArgM_ADV	
 5	ناقه	N	SBJ	13	null	جانور§n-12239	dynamic_object	_	_	Arg0	
-8	لحظه	N	ADVRB	13	آن§n-13456	دوره زمانی§n-12603	time	_	_	ArgM_TMP	
+8	لحظه	N	ADVRB	13	آن§n-13456	دوره_زماني§n-12603	time	_	_	ArgM_TMP	
 9	بچه‌ای	N	OBJ	13	بچه§n-14590	null	dynamic_object	_	_	Arg1	
 
 #..........	
@@ -2903,8 +2903,8 @@
 6	خداوند	N	MOZ	5	باری تعالی§n-11940	خصوصيت_رواني§n-12725	role	_	_	_	
 10	ابلاغ	N	NVE	11	ابلاغ§n-22599	خبر§n-12766	role_intent	_	_	_	
 
-1	صبح	N	ADVRB	9	صبح§n-12638	دوره زمانی§n-12603	time	_	_	ArgM_TMP	_	
-3	شب	N	MOZ	1	شب§n-12642	دوره زمانی§n-12603	time	_	_	_	_	
+1	صبح	N	ADVRB	9	صبح§n-12638	دوره_زماني§n-12603	time	_	_	ArgM_TMP	_	
+3	شب	N	MOZ	1	شب§n-12642	دوره_زماني§n-12603	time	_	_	_	_	
 5	خداوند	N	SBJ	9	باری تعالی§n-11940	خصوصيت_رواني§n-12725	role	_	_	Arg0	Arg0	
 6	صاعقه‌ای	N	OBJ	9	صاعقه§n-19488	null	static_object	_	_	Arg1	_	
 9	فرستاد	V	VCONJ	19	فرستادن§v-7662	رخداد§n-13136	role_action	Y	فرستادن.341	_	_	
@@ -2933,7 +2933,7 @@
 15	قرآن	N	MOZ	14	مصحف§n-1019	خبر§n-12766	static_object	_	_	_	_	
 16	آمده‌است	V	PRD	7	null	null	no	Y	آمدن.31	_	_	
 
-3	سال	N	ADVRB	8	عام§n-12653	دوره زمانی§n-12603	time	_	_	ArgM_TMP	_	_	
+3	سال	N	ADVRB	8	عام§n-12653	دوره_زماني§n-12603	time	_	_	ArgM_TMP	_	_	
 4	بعداز	PREP	NPP	3	null	null	no	_	_	_	_	_	
 5	حضرت	N	POSDEP	4	null	null	role_state	_	_	_	_	_	
 6	ابراهیم	N	MOZ	5	ابراهیم§n-23925	نفر§n-13075	role	_	_	_	_	_	
@@ -2950,11 +2950,11 @@
 4	موسی	N	MOZ	2	موسی§n-23927	نفر§n-13075	role	_	_	_	
 6	ع	ARAB	POSDEP	4	null	null	no	_	_	_	
 9	می‌توان	V	ROOT	0	null	null	no	_	_	_	
-12	دوره	N	AJPP	13	دوره§n-10264	دوره زمانی§n-12603	no	_	_	_	
+12	دوره	N	AJPP	13	دوره§n-10264	دوره_زماني§n-12603	no	_	_	_	
 
 1	حضرت	N	SBJ	13	null	null	role_state	_	_	Arg1	
 2	موسی	N	MOZ	1	موسی§n-23927	نفر§n-13075	role	_	_	_	
-4	زمان	N	ADVRB	13	زمانه§n-12682	دوره زمانی§n-12603	time	_	_	ArgM_TMP	
+4	زمان	N	ADVRB	13	زمانه§n-12682	دوره_زماني§n-12603	time	_	_	ArgM_TMP	
 5	سلطنت	N	MOZ	4	سلطنت§n-11845	جا§n-12733	role_intent	_	_	_	
 6	رامسیس	N	MOZ	5	null	null	role	_	_	_	
 8	رعمسیس	N	NCONJ	6	null	null	role	_	_	_	
@@ -3014,7 +3014,7 @@
 3	همسر	N	APP	2	عیال§n-12059	نفر§n-13075	role_state	_	_	_	_	_	
 4	عمران	N	MOZ	3	null	null	role	_	_	_	_	_	
 6	نیمه	N	ADVRB	11	نیمه§n-13960	هست§n-12706	no	_	_	ArgM_TMP	_	_	
-8	شب	N	MOZ	6	شب§n-12642	دوره زمانی§n-12603	time	_	_	_	_	_	
+8	شب	N	MOZ	6	شب§n-12642	دوره_زماني§n-12603	time	_	_	_	_	_	
 
 #..........	
 
@@ -3113,7 +3113,7 @@
 
 8	صندوق	N	VPP	9	صندوق§n-14170	شیء§n-12703	static_object	_	_	Arg3	_	_	_	
 9	گذاشت	V	VCONJ	16	هشتن§v-9211	رخداد§n-13136	role_action	Y	گذاشتن.225	_	_	_	_	
-11	صبحگاهان	N	ADVRB	16	صبح§n-12638	دوره زمانی§n-12603	time	_	_	_	ArgM_TMP	_	_	
+11	صبحگاهان	N	ADVRB	16	صبح§n-12638	دوره_زماني§n-12603	time	_	_	_	ArgM_TMP	_	_	
 
 #..........	
 
@@ -3158,7 +3158,7 @@
 18	ش	PR	MOZ	17	صندوق§n-14170	شیء§n-12703	static_object	_	_	_	_	_	
 19	نهفته‌است	V	PRD	15	پوشاندن§v-15813	رخداد§n-13136	no	Y	پوشاندن.321	_	_	_	
 
-1	هنگامی	N	ADVRB	12	موقع§n-12614	دوره زمانی§n-12603	time	_	_	_	ArgM_TMP	_	_	_	_	_	_	
+1	هنگامی	N	ADVRB	12	موقع§n-12614	دوره_زماني§n-12603	time	_	_	_	ArgM_TMP	_	_	_	_	_	_	
 4	آسیه	N	MOZ	3	null	null	role	_	_	_	_	_	_	_	_	_	_	
 6	کودک	N	VPP	7	کودک§n-11966	نفر§n-13075	role	_	_	Arg3	_	_	_	_	_	_	_	
 7	افتاد	V	PRD	2	null	null	role_action	Y	افتادن.780	_	_	_	_	_	_	_	_	
@@ -3179,7 +3179,7 @@
 43	فرزندی	N	ADVRB	45	فرزندی§n-12310	رابطه§n-13628	role	_	_	_	_	_	_	_	_	_	ArgM_ADV	
 44	قبول	N	NVE	45	تقبل§n-16733	رخداد§n-13136	role_state	_	_	_	_	_	_	_	_	_	_	
 
-1	طولی	N	NVE	2	طول§n-14445	دوره زمانی§n-12603	time	_	_	_	_	
+1	طولی	N	NVE	2	طول§n-14445	دوره_زماني§n-12603	time	_	_	_	_	
 2	نکشید	V	ROOT	0	طول کشیدن§v-8803	رخداد§n-13136	no	Y	طول‌کشیدن.443	_	_	
 4	موسی	N	SBJ	6	موسی§n-23927	نفر§n-13075	role	_	_	_	Arg1	
 5	گرسنه	ADJ	MOS	6	گرسنه§a-376	مشخصه§n-12756	role_state	_	_	_	Arg2	
@@ -3216,15 +3216,15 @@
 10	مادر	N	NPP	7	مامان§n-13374	نفر§n-13075	role	_	_	_	_	
 11	ش	PR	MOZ	10	موسی§n-23927	نفر§n-13075	role	_	_	_	_	
 
-1	زمانی	N	ADVRB	23	محدوده زمانی§n-12664	دوره زمانی§n-12603	time	_	_	_	_	ArgM_TMP	_	
+1	زمانی	N	ADVRB	23	محدوده زمانی§n-12664	دوره_زماني§n-12603	time	_	_	_	_	ArgM_TMP	_	
 3	موسی	N	SBJ	9	موسی§n-23927	نفر§n-13075	role	_	_	Arg1	Arg1	Arg0	Arg1	
-5	دوران	N	VPP	9	دوران§n-13782	دوره زمانی§n-12603	time	_	_	Arg3	_	_	_	
+5	دوران	N	VPP	9	دوران§n-13782	دوره_زماني§n-12603	time	_	_	Arg3	_	_	_	
 6	رشد	N	MOZ	5	رشد§n-19737	رخداد§n-13136	role_state	_	_	_	_	_	_	
-8	بلوغ	N	NCONJ	6	رسیدگی§n-12629	دوره زمانی§n-12603	role_state	_	_	_	_	_	_	
+8	بلوغ	N	NCONJ	6	رسیدگی§n-12629	دوره_زماني§n-12603	role_state	_	_	_	_	_	_	
 12	قدرت	N	AJPP	14	توان§n-11224	مشخصه§n-12756	role_emotion	_	_	_	_	_	_	
 13	جسمانی	ADJ	NPOSTMOD	12	جسمانی§a-907	مشخصه§n-12756	role_state	_	_	_	_	_	_	
 17	یکی‌از	ADJ	NPREMOD	18	null	null	no	_	_	_	_	_	_	
-18	روزها	N	ADVRB	23	روز§n-13556	دوره زمانی§n-12603	time	_	_	_	_	ArgM_TMP2	_	
+18	روزها	N	ADVRB	23	روز§n-13556	دوره_زماني§n-12603	time	_	_	_	_	ArgM_TMP2	_	
 19	کاخ	N	OBJ	23	کاخ§n-10991	شیء§n-12703	location	_	_	_	_	Arg1	_	
 20	فرعون	N	MOZ	19	null	null	role	_	_	_	_	_	_	
 22	ترک	N	NVE	23	ترک محل§n-10406	رخداد§n-13136	role_intent	_	_	_	_	_	_	
@@ -3261,7 +3261,7 @@
 16	موسی	N	VPP	17	موسی§n-23927	نفر§n-13075	role	_	_	_	Arg3	
 
 1	موسی	N	SBJ	8	موسی§n-23927	نفر§n-13075	role	_	_	Arg1	Arg1	
-4	سفر	N	ADVRB	8	سفر§n-14470	دوره زمانی§n-12603	time	_	_	ArgM_LOC	_	
+4	سفر	N	ADVRB	8	سفر§n-14470	دوره_زماني§n-12603	time	_	_	ArgM_LOC	_	
 6	زاد‌و‌توشه	N	AJPP	7	null	null	static_object	_	_	_	_	
 7	محروم	ADJ	MOS	8	بی بهره§a-562	مشخصه§n-12756	role_state	_	_	Arg2	_	
 11	نعمت	N	AJPP	17	null	null	no	_	_	_	_	
@@ -3271,7 +3271,7 @@
 17	بهره‌مند	ADJ	MOS	18	متمتع§a-17760	مشخصه§n-12756	role_state	_	_	_	Arg2	
 
 1	موسی	N	SBJ	6	موسی§n-23927	نفر§n-13075	role	_	_	Arg1	_	
-3	روز	N	ADVRB	6	روشنایی روز§n-12637	دوره زمانی§n-12603	time	_	_	ArgM_TMP	_	
+3	روز	N	ADVRB	6	روشنایی روز§n-12637	دوره_زماني§n-12603	time	_	_	ArgM_TMP	_	
 8	پس‌از	PREP	ADVRB	19	null	null	no	_	_	_	ArgM_TMP	
 12	رفتن	N	POSDEP	8	پوییدن§v-7700	رخداد§n-13136	role_action	_	_	_	_	
 16	گیاهان	N	NPP	14	گیاه§n-12700	جان_دار§n-10393	static_object	_	_	_	_	
@@ -3355,11 +3355,11 @@
 17	ادامه	N	NVE	18	دنباله§n-13567	رابطه§n-13628	role_intent	_	_	_	_	_	
 
 2	پس‌از	PREP	ADVRB	13	null	null	no	_	_	ArgM_TMP2	_	_	
-4	سال	N	MESU	5	عام§n-12653	دوره زمانی§n-12603	time	_	_	_	_	_	
+4	سال	N	MESU	5	عام§n-12653	دوره_زماني§n-12603	time	_	_	_	_	_	
 5	سکونت	N	POSDEP	2	اقامت کردن§n-10696	رخداد§n-13136	role_intent	_	_	_	_	_	
 7	مدین	N	NPP	5	null	null	location	_	_	_	_	_	
 9	آخرین	ADJ	NPREMOD	10	انتهایی§a-1372	مشخصه§n-12756	no	_	_	_	_	_	
-10	سال	N	ADVRB	13	عام§n-12653	دوره زمانی§n-12603	time	_	_	ArgM_TMP	_	_	
+10	سال	N	ADVRB	13	عام§n-12653	دوره_زماني§n-12603	time	_	_	ArgM_TMP	_	_	
 12	شعیب	N	VPP	13	شعیب§n-23929	نفر§n-13075	role	_	_	Arg3	_	_	
 15	می‌خواهم	V	PRD	14	خواستن§v-19251	رخداد§n-13136	role_action	Y	خواستن.51	_	_	_	
 17	مصر	N	VPP	18	مصر§n-20196	گروه§n-12753	location	_	_	_	_	Arg3	
@@ -3463,7 +3463,7 @@
 17	گشود	V	ROOT	0	باز کردن§v-7638	رخداد§n-13136	role_action	Y	گشودن.540	_	
 
 2	پس‌از	PREP	ADVRB	10	null	null	no	_	_	ArgM_TMP	_	
-3	بلوغ	N	POSDEP	2	رسیدگی§n-12629	دوره زمانی§n-12603	role_state	_	_	_	_	
+3	بلوغ	N	POSDEP	2	رسیدگی§n-12629	دوره_زماني§n-12603	role_state	_	_	_	_	
 5	ازطرف	PREP	ADVRB	10	null	null	no	_	_	ArgM_ADV	_	
 6	خداوند	N	POSDEP	5	باری تعالی§n-11940	خصوصيت_رواني§n-12725	role	_	_	_	_	
 8	پیامبری	N	AJPP	9	رسول§n-15053	نفر§n-13075	role_state	_	_	_	_	
@@ -3479,8 +3479,8 @@
 
 1	حضرت	N	SBJ	6	null	null	role_state	_	_	Arg0	
 2	ایوب	N	MOZ	1	حضرت ایوب§n-23945	نفر§n-13075	role	_	_	_	
-4	سال	N	ADVC	6	عام§n-12653	دوره زمانی§n-12603	time	_	_	Arg2	
-5	عمر	N	NVE	6	عمر§n-12622	دوره زمانی§n-12603	no	_	_	_	
+4	سال	N	ADVC	6	عام§n-12653	دوره_زماني§n-12603	time	_	_	Arg2	
+5	عمر	N	NVE	6	عمر§n-12622	دوره_زماني§n-12603	no	_	_	_	
 
 2	یکی‌از	ADJ	NPREMOD	3	null	null	no	_	_	_	_	
 3	پیامبرانی	N	MOS	4	رسول§n-15053	نفر§n-13075	role_state	_	_	Arg2	_	
@@ -3551,7 +3551,7 @@
 3	حضرت	N	MOZ	2	null	null	role_state	_	_	_	
 4	ایوب	N	MOZ	3	حضرت ایوب§n-23945	نفر§n-13075	role	_	_	_	
 6	ع	ARAB	POSDEP	4	null	null	no	_	_	_	
-9	سال	N	ADVC	11	عام§n-12653	دوره زمانی§n-12603	time	_	_	Arg2	
+9	سال	N	ADVC	11	عام§n-12653	دوره_زماني§n-12603	time	_	_	Arg2	
 10	ادامه	N	NVE	11	دنباله§n-13567	رابطه§n-13628	no	_	_	_	
 
 1	وقتی‌	N	ADVRB	14	null	null	no	_	_	_	ArgM_TMP	
@@ -3573,7 +3573,7 @@
 10	خویشتن‌دار	N	NCONJ	8	خوددار§a-529	null	role_state	_	_	_	
 11	می‌خواند	V	ROOT	0	خواندن§v-7906	رخداد§n-13136	no	Y	خواندن.133	_	
 
-3	سال	N	ADVRB	10	عام§n-12653	دوره زمانی§n-12603	time	_	_	ArgM_EXT	
+3	سال	N	ADVRB	10	عام§n-12653	دوره_زماني§n-12603	time	_	_	ArgM_EXT	
 4	به‌طور	PREP	ADVRB	10	null	null	no	_	_	ArgM_MNR	
 7	رنج	N	MOS	10	رنج§n-13155	مشخصه§n-12756	role_emotion	_	_	Arg2	
 9	عذاب	N	NCONJ	7	نکبت§n-11559	رخداد§n-13136	role_state	_	_	_	
@@ -3595,7 +3595,7 @@
 23	شستشو	N	NVE	24	شستشو§n-15013	رخداد§n-13136	role_intent	_	_	_	_	_	
 
 3	خداوند	N	MOZ	2	باری تعالی§n-11940	خصوصيت_رواني§n-12725	role	_	_	_	_	_	_	
-4	جوانی	N	SBJ	7	جوانی§n-15554	دوره زمانی§n-12603	role_state	_	_	Arg0	_	_	_	
+4	جوانی	N	SBJ	7	جوانی§n-15554	دوره_زماني§n-12603	role_state	_	_	Arg0	_	_	_	
 7	برگشت	V	VCONJ	13	برگشتن§v-8032	رخداد§n-13136	no	Y	برگشتن.825	_	_	_	_	
 9	امراض	N	SBJ	13	بیماری§n-12437	null	no	_	_	_	Arg1	_	_	
 10	ش	PR	MOZ	9	حضرت ایوب§n-23945	نفر§n-13075	role	_	_	_	_	_	_	
@@ -3662,7 +3662,7 @@
 14	ننمودند	V	ROOT	0	پیروی کردن§v-7554	رخداد§n-13136	role_action	Y	اطاعت‌کردن.702	_	_	
 
 1	بعلبک	N	SBJ	9	null	null	location	_	_	Arg0	_	
-4	زمان	N	ADVRB	9	زمانه§n-12682	دوره زمانی§n-12603	time	_	_	ArgM_TMP	_	
+4	زمان	N	ADVRB	9	زمانه§n-12682	دوره_زماني§n-12603	time	_	_	ArgM_TMP	_	
 5	پادشاهی	N	OBJ	9	سلطان§n-13386	نفر§n-13075	role	_	_	Arg1	Arg0	
 8	لاجب	N	MOZ	7	null	null	role	_	_	_	_	
 14	پرستش	N	NPP	16	پرستش§n-10683	رخداد§n-13136	role_intent	_	_	_	Arg3	
@@ -3720,7 +3720,7 @@
 1	حضرت	N	SBJ	10	null	null	role_state	_	_	Arg0	
 2	الیاس	N	MOZ	1	حضرت الیاس§n-23959	نفر§n-13075	role	_	_	_	
 4	ع	ARAB	POSDEP	2	null	null	no	_	_	_	
-7	سال	N	OBJ	10	عام§n-12653	دوره زمانی§n-12603	time	_	_	Arg1	
+7	سال	N	OBJ	10	عام§n-12653	دوره_زماني§n-12603	time	_	_	Arg1	
 8	بدین	PREP	ADVC	10	null	null	no	_	_	Arg2	
 9	منوال	N	POSDEP	8	شیوه§n-10396	رخداد§n-13136	no	_	_	_	
 10	گذراند	V	ROOT	0	به سر بردن§v-16581	رخداد§n-13136	role_action	Y	گذراندن.722	_	
@@ -3821,12 +3821,12 @@
 
 1	مرگ	N	SBJ	10	درگذشت§n-11584	رخداد§n-13136	role_state	_	_	Arg0	
 2	پسر	N	MOZ	1	پسر§n-13367	نفر§n-13075	role	_	_	_	
-4	مدتی	N	ADVRB	10	مدت§n-12613	دوره زمانی§n-12603	time	_	_	ArgM_EXT	
+4	مدتی	N	ADVRB	10	مدت§n-12613	دوره_زماني§n-12603	time	_	_	ArgM_EXT	
 5	شاه	N	OBJ	10	سلطان§n-13386	نفر§n-13075	role	_	_	Arg1	
 9	غافل	ADJ	MOS	10	غافل§a-599	مشخصه§n-12756	role_state	_	_	Arg2	
 
 2	بعداز	PREP	ADVRB	8	null	null	no	_	_	ArgM_TMP	_	
-3	مدتی	N	POSDEP	2	مدت§n-12613	دوره زمانی§n-12603	time	_	_	_	_	
+3	مدتی	N	POSDEP	2	مدت§n-12613	دوره_زماني§n-12603	time	_	_	_	_	
 4	طولانی	ADJ	NPOSTMOD	3	طویل§a-42	مشخصه§n-12756	no	_	_	_	_	
 6	منشی	N	VPP	8	منشی§n-12055	نفر§n-13075	role	_	_	Arg3	_	
 10	ماموریت	N	OBJ	15	ماموریت§n-13144	رخداد§n-13136	role_intent	_	_	_	Arg1	
@@ -3868,7 +3868,7 @@
 6	نمود	V	ROOT	0	خواستن§v-19251	رخداد§n-13136	role_action	Y	تقاضا‌کردن.448	_	
 
 1	خداوند	N	SBJ	9	باری تعالی§n-11940	خصوصيت_رواني§n-12725	role	_	_	Arg0	
-3	سال	N	ADVRB	9	عام§n-12653	دوره زمانی§n-12603	time	_	_	ArgM_EXT	
+3	سال	N	ADVRB	9	عام§n-12653	دوره_زماني§n-12603	time	_	_	ArgM_EXT	
 4	قحطی	N	OBJ	9	نایابی§n-19336	مشخصه§n-12756	no	_	_	Arg1	
 7	بنی‌اسراییل	N	POSDEP	6	null	null	role	_	_	_	
 8	مسلط	ADJ	MOS	9	مستولی§a-719	مشخصه§n-12756	no	_	_	Arg2	
@@ -3957,8 +3957,8 @@
 7	آدم	N	VPP	11	آدم§n-14705	نفر§n-13075	role	_	_	Arg3	_	
 9	ع	ARAB	POSDEP	7	null	null	no	_	_	_	_	
 11	میرسد	V	VCONJ	17	رسیدن§v-9237	رخداد§n-13136	role_action	Y	رسیدن.69	_	_	
-15	سال	N	ADVC	17	سال§n-13471	دوره زمانی§n-12603	time	_	_	_	Arg2	
-16	عمر	N	NVE	17	عمر§n-12622	دوره زمانی§n-12603	no	_	_	_	_	
+15	سال	N	ADVC	17	سال§n-13471	دوره_زماني§n-12603	time	_	_	_	Arg2	
+16	عمر	N	NVE	17	عمر§n-12622	دوره_زماني§n-12603	no	_	_	_	_	
 
 2	صحیفه	N	SBJ	9	null	null	no	_	_	Arg1	
 4	کتابهای	N	ADVRB	9	مصحف§n-10198	خبر§n-12766	static_object	_	_	ArgM_ADV	
@@ -3988,14 +3988,14 @@
 10	لباس	N	OBJ	11	پوشاک§n-12804	شیء§n-12703	static_object	_	_	_	_	Arg1	
 11	دوخت	V	PRD	6	کوک زدن§v-8566	رخداد§n-13136	role_action	Y	دوختن.395	_	_	_	
 
-2	زمان	N	ADVRB	7	زمانه§n-12682	دوره زمانی§n-12603	time	_	_	ArgM_TMP	
+2	زمان	N	ADVRB	7	زمانه§n-12682	دوره_زماني§n-12603	time	_	_	ArgM_TMP	
 3	ادریس	N	MOZ	2	null	null	role	_	_	_	
 4	پادشاهی	N	SBJ	7	سلطان§n-13386	نفر§n-13075	role	_	_	Arg0	
 5	ستمگر	ADJ	NPOSTMOD	4	غدار§a-748	مشخصه§n-12756	role_state	_	_	_	
 6	زندگی	N	NVE	7	زندگی§n-12396	مشخصه§n-12756	role_intent	_	_	_	
 7	می‌کرد	V	ROOT	0	عمر کردن§v-8674	رخداد§n-13136	role_action	Y	زندگی‌کردن.40	_	
 
-1	روزی	N	ADVRB	9	روز§n-13556	دوره زمانی§n-12603	time	_	_	ArgM_TMP	_	_	_	
+1	روزی	N	ADVRB	9	روز§n-13556	دوره_زماني§n-12603	time	_	_	ArgM_TMP	_	_	_	
 2	پادشاه	N	SBJ	9	سلطان§n-13386	نفر§n-13075	role	_	_	Arg0	_	_	_	
 
 #..........	
@@ -4036,8 +4036,8 @@
 18	سگها	N	MOZ	17	هاپو§n-14107	جانور§n-12239	dynamic_object	_	_	_	_	_	_	
 19	گشت	V	VCL	6	null	null	no	Y	کردن.25	_	_	_	_	
 
-1	مدت	N	SBJ	4	مدت§n-12613	دوره زمانی§n-12603	time	_	_	Arg1	_	
-3	سال	N	MOZ	1	عام§n-12653	دوره زمانی§n-12603	time	_	_	_	_	
+1	مدت	N	SBJ	4	مدت§n-12613	دوره_زماني§n-12603	time	_	_	Arg1	_	
+3	سال	N	MOZ	1	عام§n-12653	دوره_زماني§n-12603	time	_	_	_	_	
 4	گذشت	V	VCONJ	9	گذشتن§v-18384	رخداد§n-13136	no	Y	گذشتن.43	_	_	
 7	آسمان	N	ADVRB	9	هوا§n-14952	جا§n-12733	location	_	_	_	Arg3	
 8	بارانی	N	SBJ	9	باران§n-12110	null	dynamic_object	_	_	_	Arg1	
@@ -4253,7 +4253,7 @@
 11	همسر	N	MOS	13	عیال§n-12059	نفر§n-13075	role	_	_	_	Arg2	
 12	عمران	N	MOZ	11	null	null	role	_	_	_	_	
 
-1	سالها	N	SBJ	8	عام§n-12653	دوره زمانی§n-12603	time	_	_	Arg1	_	_	
+1	سالها	N	SBJ	8	عام§n-12653	دوره_زماني§n-12603	time	_	_	Arg1	_	_	
 3	زندگی	N	POSDEP	1	زندگی§n-12396	مشخصه§n-12756	role_intent	_	_	_	_	_	
 4	عمران	N	MOZ	3	null	null	role	_	_	_	_	_	
 6	همسر	N	NCONJ	4	عیال§n-12059	نفر§n-13075	role	_	_	_	_	_	
@@ -4267,7 +4267,7 @@
 18	رنج	N	NVE	19	رنج§n-13155	مشخصه§n-12756	role_emotion	_	_	_	_	_	
 19	می‌داد	V	ROOT	0	رنج دادن§v-9411	رخداد§n-13136	no	Y	رنج‌دادن.816	_	_	_	
 
-1	روزی	N	ADVRB	4	روز§n-13556	دوره زمانی§n-12603	time	_	_	ArgM_TMP	_	_	_	
+1	روزی	N	ADVRB	4	روز§n-13556	دوره_زماني§n-12603	time	_	_	ArgM_TMP	_	_	_	
 2	حنه	N	SBJ	4	null	null	role	_	_	Arg0	_	_	Arg0	
 3	مشاهده	N	NVE	4	null	null	role_state	_	_	_	_	_	_	
 6	پرنده‌ای	N	SBJ	13	پرنده§n-13851	جانور§n-12239	dynamic_object	_	_	_	Arg0	_	_	
@@ -4354,17 +4354,17 @@
 
 1	زکریا	N	SBJ	8	زکریا§n-23937	نفر§n-13075	role	_	_	Arg0	_	_	
 3	نگهبانی	N	VPP	8	پاسداری§n-10620	رخداد§n-13136	role_intent	_	_	Arg3	_	_	
-5	مراقبت	N	NCONJ	3	مراقبت§n-19067	دوره زمانی§n-12603	role_intent	_	_	_	_	_	
+5	مراقبت	N	NCONJ	3	مراقبت§n-19067	دوره_زماني§n-12603	role_intent	_	_	_	_	_	
 7	مریم	N	NPP	5	مریم§n-26259	نفر§n-13075	role	_	_	_	_	_	
 8	پرداخت	V	ROOT	0	پرداختن§v-19365	رخداد§n-13136	role_action	Y	پرداختن.72	_	_	_	
 14	متولی	N	MOS	16	متولی§a-2120	null	role_intent	_	_	_	_	Arg2	
 15	بیت‌المقدس	N	MOZ	14	اورشلیم§n-23173	جا§n-12733	location	_	_	_	_	_	
 16	گردید	V	AJUCL	8	null	null	no	Y	کردن.25	_	_	_	
 
-2	روزها	N	ADVRB	4	روشنایی روز§n-12637	دوره زمانی§n-12603	time	_	_	ArgM_TMP	_	_	
+2	روزها	N	ADVRB	4	روشنایی روز§n-12637	دوره_زماني§n-12603	time	_	_	ArgM_TMP	_	_	
 3	روزه	N	NVE	4	روزه داری§n-10702	مشخصه§n-12756	role_intent	_	_	_	_	_	
 4	می‌گرفت	V	VCONJ	9	روزه گرفتن§v-7568	رخداد§n-13136	role_action	Y	روزه‌گرفتن.163	_	_	_	
-6	شبها	N	ADVRB	9	شب§n-12642	دوره زمانی§n-12603	time	_	_	_	ArgM_TMP	_	
+6	شبها	N	ADVRB	9	شب§n-12642	دوره_زماني§n-12603	time	_	_	_	ArgM_TMP	_	
 8	عبادت	N	VPP	9	پرستش§n-10683	رخداد§n-13136	role_intent	_	_	_	Arg3	_	
 9	می‌پرداخت	V	VCONJ	20	پرداختن§v-19365	رخداد§n-13136	role_action	Y	پرداختن.72	_	_	_	
 12	بنی‌اسراییل	N	ADVRB	20	null	null	role	_	_	_	_	ArgM_LOC	
@@ -4373,7 +4373,7 @@
 18	پای	N	VPP	20	پا§n-14956	رابطه§n-13628	no	_	_	_	_	Arg3	
 20	نمی‌رسید	V	ROOT	0	رسیدن§v-8613	رخداد§n-13136	role_action	Y	رسیدن.90	_	_	_	
 
-2	وقت	N	ADVRB	15	موقع§n-12614	دوره زمانی§n-12603	time	_	_	_	ArgM_TMP	_	
+2	وقت	N	ADVRB	15	موقع§n-12614	دوره_زماني§n-12603	time	_	_	_	ArgM_TMP	_	
 3	زکریا	N	SBJ	7	زکریا§n-23937	نفر§n-13075	role	_	_	Arg0	Arg0	_	
 
 #..........	
@@ -4390,7 +4390,7 @@
 19	ش	PR	MOZ	18	زکریا§n-23937	نفر§n-13075	role	_	_	_	_	_	
 20	می‌شد	V	PRD	16	null	null	no	Y	کردن.25	_	_	_	
 
-1	سالها	N	SBJ	2	عام§n-12653	دوره زمانی§n-12603	time	_	_	Arg1	_	_	
+1	سالها	N	SBJ	2	عام§n-12653	دوره_زماني§n-12603	time	_	_	Arg1	_	_	
 4	حضرت	N	SBJ	11	null	null	role_state	_	_	_	Arg1	_	
 5	زکریا	N	MOZ	4	زکریا§n-23937	نفر§n-13075	role	_	_	_	_	_	
 7	همسر	N	NCONJ	5	عیال§n-12059	نفر§n-13075	role	_	_	_	_	_	
@@ -4398,8 +4398,8 @@
 9	اشیاع	N	APP	7	null	null	role	_	_	_	_	_	
 10	عقیم	ADJ	MOS	11	عقیم§a-935	مشخصه§n-12756	role_state	_	_	_	Arg2	_	
 13	اکنون	ADV	ADVRB	19	اکنون§n-12609	مشخصه§n-12756	time	_	_	_	_	ArgM_TMP	
-15	دوران	N	VPP	19	دوران§n-13782	دوره زمانی§n-12603	time	_	_	_	_	Arg3	
-16	پیری	N	MOZ	15	سالخوردگی§n-12630	دوره زمانی§n-12603	role_state	_	_	_	_	_	
+15	دوران	N	VPP	19	دوران§n-13782	دوره_زماني§n-12603	time	_	_	_	_	Arg3	
+16	پیری	N	MOZ	15	سالخوردگی§n-12630	دوره_زماني§n-12603	role_state	_	_	_	_	_	
 18	سر	N	VPRT	19	null	null	no	_	_	_	_	_	
 19	می‌بردند	V	PRD	3	به سر بردن§v-16581	رخداد§n-13136	role_action	Y	به‌سر‌بردن.833	_	_	_	
 
@@ -4412,7 +4412,7 @@
 11	وارثی	N	OBJ	12	وارث§n-25674	نفر§n-13075	role	_	_	_	Arg1	
 12	داشته‌باشد	V	VCL	7	داشتن§v-8512	رخداد§n-13136	role_action	Y	داشتن.39	_	_	
 
-2	روزی	N	ADVRB	6	روز§n-13556	دوره زمانی§n-12603	time	_	_	ArgM_TMP	_	_	_	
+2	روزی	N	ADVRB	6	روز§n-13556	دوره_زماني§n-12603	time	_	_	ArgM_TMP	_	_	_	
 4	مریم	N	POSDEP	3	مریم§n-26259	نفر§n-13075	role	_	_	_	_	_	_	
 
 #..........	
@@ -4424,15 +4424,15 @@
 16	مشاهده	N	NVE	17	null	null	role_state	_	_	_	_	_	_	
 19	میوه‌های	N	SBJ	26	میوه§n-13173	شیء§n-12703	static_object	_	_	_	_	_	Arg0	
 20	تابستانی	ADJ	NPOSTMOD	19	تابستانی§a-16	مشخصه§n-12756	static_object_state	_	_	_	_	_	_	
-22	فصل	N	ADVRB	26	فصل§n-12676	دوره زمانی§n-12603	time	_	_	_	_	_	ArgM_TMP	
-23	زمستان	N	MOZ	22	شتا§n-12674	دوره زمانی§n-12603	time	_	_	_	_	_	_	
+22	فصل	N	ADVRB	26	فصل§n-12676	دوره_زماني§n-12603	time	_	_	_	_	_	ArgM_TMP	
+23	زمستان	N	MOZ	22	شتا§n-12674	دوره_زماني§n-12603	time	_	_	_	_	_	_	
 25	ش	PR	POSDEP	24	null	null	no	_	_	_	_	_	_	
 26	آمده‌است	V	PRD	18	آمدن§v-7847	رخداد§n-13136	no	Y	آمدن.44	_	_	_	_	
 
 1	لذا	SUBR	ROOT	0	پس§r-21612	null	no	_	_	_	_	_	_	
 4	نتیجه	N	VPP	5	نتیجه نهایی§n-11549	رخداد§n-13136	no	_	_	Arg3	_	_	_	
 9	می‌تواند	V_MODL	PRD	6	null	null	role_action	_	_	_	_	_	_	
-11	پیری	N	ADVRB	13	سالخوردگی§n-12630	دوره زمانی§n-12603	role_state	_	_	_	ArgM_TMP	_	_	
+11	پیری	N	ADVRB	13	سالخوردگی§n-12630	دوره_زماني§n-12603	role_state	_	_	_	ArgM_TMP	_	_	
 12	بچه‌دار	ADJ	MOS	13	null	null	no	_	_	_	Arg2	_	_	
 15	دست	N	SBJ	19	ید§n-13538	رابطه§n-13628	static_object	_	_	_	_	Arg1	_	
 17	آسمان	N	ADVRB	18	هوا§n-14952	جا§n-12733	location	_	_	_	_	_	_	
@@ -4449,7 +4449,7 @@
 
 2	باور	N	NVE	3	اعتقاد§n-13034	خصوصيت_رواني§n-12725	role_emotion	_	_	_	_	_	_	_	_	_	
 3	نمی‌کرد	V	ROOT	0	باور کردن§v-9412	رخداد§n-13136	role_action	Y	باور‌کردن.599	_	_	_	_	_	_	_	
-7	سن	N	ADVRB	9	سن§n-12627	دوره زمانی§n-12603	time	_	_	_	ArgM_ADV	_	_	_	_	_	
+7	سن	N	ADVRB	9	سن§n-12627	دوره_زماني§n-12603	time	_	_	_	ArgM_ADV	_	_	_	_	_	
 8	بچه‌دار	ADJ	MOS	9	null	null	no	_	_	_	Arg2	_	_	_	_	_	
 12	خدا	N	NPP	13	باری تعالی§n-11940	خصوصيت_رواني§n-12725	no	_	_	_	_	Arg3	_	_	_	_	
 13	تقاضای	N	NVE	15	خواهش§n-13129	خبر§n-12766	role_state	_	_	_	_	_	_	_	_	_	
@@ -4458,7 +4458,7 @@
 20	وحی	N	NVE	21	وحی§n-15103	خصوصيت_رواني§n-12725	role_intent	_	_	_	_	_	_	_	_	_	
 23	نشانه	N	SBJ	28	دلیل§n-12446	خصوصيت_رواني§n-12725	no	_	_	_	_	_	_	Arg1	_	_	
 24	بچه‌دار	ADJ	NE	25	null	null	no	_	_	_	_	_	_	_	_	_	
-32	روز	N	ADVRB	37	روز§n-13556	دوره زمانی§n-12603	time	_	_	_	_	_	_	_	ArgM_TMP	_	
+32	روز	N	ADVRB	37	روز§n-13556	دوره_زماني§n-12603	time	_	_	_	_	_	_	_	ArgM_TMP	_	
 33	زبان	N	SBJ	37	لسان§n-11270	رابطه§n-13628	no	_	_	_	_	_	_	_	Arg1	_	
 36	کار	N	VPP	37	null	null	no	_	_	_	_	_	_	_	_	_	
 37	خواهدافتاد	V	VCONJ	46	خوابیدن§v-7888	رخداد§n-13136	no	Y	از‌کار‌افتادن.835	_	_	_	_	_	_	_	
@@ -4474,7 +4474,7 @@
 11	افتاده	V	VCONJ	18	خوابیدن§v-7888	رخداد§n-13136	no	Y	از‌کار‌افتادن.835	_	_	_	_	
 15	زمان	N	VPP	18	تایم§n-12692	اندازه§n-12768	time	_	_	_	_	ArgM_TMP	_	
 16	عبادت	N	MOZ	15	پرستش§n-10683	رخداد§n-13136	role_intent	_	_	_	_	_	_	
-23	روز	N	ADVRB	34	روز§n-13556	دوره زمانی§n-12603	time	_	_	_	_	_	ArgM_TMP	
+23	روز	N	ADVRB	34	روز§n-13556	دوره_زماني§n-12603	time	_	_	_	_	_	ArgM_TMP	
 25	اشاره	N	ADVRB	34	ایما§n-10500	خبر§n-12766	role_state	_	_	_	_	_	ArgM_MNR	
 26	لبها	N	MOZ	25	لب§n-14192	رابطه§n-13628	no	_	_	_	_	_	_	
 28	تکان	N	NCONJ	26	تکان§n-10498	رخداد§n-13136	no	_	_	_	_	_	_	
