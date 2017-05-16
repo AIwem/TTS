@@ -191,7 +191,7 @@
 2	آن‌ها	PR	SBJ	11	افله§n-14002	نفر§n-13075	role	_	_	Arg0	Arg0	
 3	به‌جاي	PREP	ADVRB	11	null	null	no	_	_	ArgM_ADV	_	
 4	آب	N	POSDEP	3	آب شرب§n-14289	ماده§n-14032	static_object	_	_	_	_	
-6	چشم	N	NVE	11	عين§n-10314	چيز§n-10392	no	_	_	_	_	
+6	چشم	N	NVE	11	عين§n-10314	هست§n-12706	no	_	_	_	_	
 9	پسري	N	VPP	11	پسر§n-13367	نفر§n-13075	role	_	_	Arg3	_	
 10	ماه‌چهره	ADJ	NPOSTMOD	9	null	null	role_state	_	_	_	_	
 11	افتاد	V	VCONJ	14	به چشم خوردن§v-8071	رخداد§n-13136	role_action	Y	چشم‌افتادن.510	_	_	
@@ -507,7 +507,7 @@
 
 1	آن‌ها	PR	SBJ	8	بچه§n-13350	نفر§n-13075	role	_	_	Arg1	
 3	تهيه	N	POSDEP	2	آماده سازي§n-10697	رخداد§n-13136	role_intent	_	_	_	
-4	مايحتاج	N	MOZ	3	مايحتاج§n-16671	چيز§n-10392	static_object	_	_	_	
+4	مايحتاج	N	MOZ	3	مايحتاج§n-16671	هست§n-12706	static_object	_	_	_	
 6	روانه	ADJ	MOS	8	عازم§a-1336	‌مشخصه§n-12756	role_state	_	_	Arg2	
 7	مصر	N	NEZ	6	مصر§n-20196	گروه§n-12753	location	_	_	_	
 
@@ -3635,7 +3635,7 @@
 18	نمود	V	ROOT	0	تقسیم کردن§v-8288	رخداد§n-13136	role_action	Y	تقسیم‌کردن.86	_	_	
 
 1	یکی‌از	ADJ	NPREMOD	3	null	null	no	_	_	_	_	
-3	گروهها	N	SBJ	14	گروه§n-22146	گروه§n-13239	no	_	_	_	Arg0	
+3	گروهها	N	SBJ	14	گروه§n-22146	گروه§n-12753	no	_	_	_	Arg0	
 5	الیاس	N	SBJ	9	حضرت الیاس§n-23959	نفر§n-13075	role	_	_	Arg1	_	
 11	سرزمین	N	NPP	13	خطه§n-13265	جا§n-12733	location	_	_	_	Arg3	
 12	بعلبک	N	MOZ	11	null	null	location	_	_	_	_	
@@ -4524,7 +4524,7 @@
 6	ش	PR	MOZ	5	زکریا§n-23937	نفر§n-13075	role	_	_	_	_	_	_	_	_	_	
 9	درخت	N	ADVRB	11	درخت§n-12142	جان_دار§n-10393	static_object	_	_	ArgM_ADV	_	_	_	_	_	_	
 11	گذاشت	V	VCONJ	22	هشتن§v-9211	رخداد§n-13136	role_action	Y	گذاشتن.225	_	_	_	_	_	_	_	
-14	گروهی	N	VPP	22	گروه§n-22146	گروه§n-13239	role	_	_	_	_	Arg3	_	_	_	_	
+14	گروهی	N	VPP	22	گروه§n-22146	گروه§n-12753	role	_	_	_	_	Arg3	_	_	_	_	
 19	جستجوی	N	MOS	21	جستجو§n-12249	null	no	_	_	_	Arg2	_	_	_	_	_	
 24	زکریا	N	SBJ	26	زکریا§n-23937	نفر§n-13075	role	_	_	_	_	_	Arg0	Arg1	_	_	
 25	جادو	N	NVE	26	جادو§n-15611	رخداد§n-13136	role_intent	_	_	_	_	_	_	_	_	_	
