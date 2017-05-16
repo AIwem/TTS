@@ -8,6 +8,9 @@
 @attribute depended {YES, NO}
 @attribute class {time, not_time}
 
+N	OBJ	5	‰›—ßn-13075	role	_	_	Arg1	_	
+POS,synTag,depended,superWsd,class,semTag
+
 @data
 %sentence:Å”—ò «„—Ê“ œ— —«Â Œ«‰Â Ìò ò»Ê — “Œ„Ì —« œÌœ.
 %
