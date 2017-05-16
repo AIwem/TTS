@@ -1286,9 +1286,9 @@ public class UI {
 				
 //		ui.checkAndCorrectDataSet();
 		
-//		ui.getStatistics();
+		ui.getStatistics();
 
-		ui.reformatMultiClassDataset();
+//		ui.reformatMultiClassDataset();
 		
 		//TODO: correct relation name in all of generating dataSet
 		//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
