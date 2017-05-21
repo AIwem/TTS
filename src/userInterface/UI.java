@@ -181,6 +181,51 @@ public class UI {
 		}
 		 	
 	}
+
+	/**
+	 * clear SRLDataset from classTag column.
+	 * input format:
+	 * 4	برادر	N	OBJ	5	برادر§n-14090	نفر§n-13075	role	_	_	Arg1	_	
+	 * 
+	 * output format:
+	 * 4	برادر	N	OBJ	5	برادر§n-14090	نفر§n-13075	_	_	Arg1	_  
+	 * @return
+	 */
+	public void toSendforCSRIDataset(){
+		
+		try {
+			
+			PrintWriter writer = new PrintWriter("output\\WSDSRLDataSet.arff", "UTF-8");
+
+			ArrayList<String> inputs = importInputTexts(inputDataSetSceneJunkDashFilePath);
+				
+			for(String record:inputs){
+				
+				String toWrtite = "";
+				
+				String[] parts = record.split("(\t)+");
+				
+				//discarding parts[7]
+				if(parts.length > 6){
+					toWrtite += parts[0] + "\t" + parts[1] + "\t";
+					toWrtite += parts[2] + "\t" + parts[3] + "\t"; 
+					toWrtite += parts[4] + "\t" + parts[5] + "\t";
+					toWrtite += parts[6] + "\t";					
+				}
+				for(int i = 8; i < parts.length; i++)
+					toWrtite +=  parts[i] + "\t";
+								
+				writer.println(toWrtite);				
+			}							
+			writer.close();
+			
+		} catch (FileNotFoundException | UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		 	
+	}
+
 	
 	private SentenceModel makeSenteces(ArrayList<String> oneSentence, boolean isRecordFull){
 		if(oneSentence == null)
@@ -1290,6 +1335,7 @@ public class UI {
 
 //		ui.reformatMultiClassDataset();
 		
+//		ui.toSendforCSRIDataset();
 		//TODO: correct relation name in all of generating dataSet
 		//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 //		ui.reformatDataset();
