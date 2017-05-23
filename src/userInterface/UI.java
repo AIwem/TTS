@@ -58,7 +58,8 @@ public class UI {
 	
 //	private String outMultiClassDataSet = "dataset/96-02-24MultiClassDataSet.arff";
 //	private String outMultiClassDataSet = "dataset/96-02-26MultiClassDataSet.arff";
-	private String outMultiClassDataSet = "dataset/96-02-26MultiClassDataSet2.arff";
+//	private String outMultiClassDataSet = "dataset/96-02-26MultiClassDataSet2.arff";
+	private String outMultiClassDataSet = "dataset/96-03-02MultiClassRemoveUnknownDataSet.arff";
 	
 	//all sentences from CSRI
 //	private String rawDataSetFilePath = "inputStory/cleanedSRLDataSet - Copy.arff";
@@ -707,6 +708,71 @@ public class UI {
 		 	
 	}
 
+	/**
+	 * reformat full human made dataSet file to the final format.
+	 */
+	public void reformatMultiClass_removeUnknownClass_Dataset(){
+		
+		BufferedReader stream4header = null;
+		PrintWriter writer = null;
+		try
+		{
+			stream4header = new BufferedReader(new InputStreamReader(new FileInputStream(inputDataSetHeaderFilePath), "utf-8"));
+			writer = new PrintWriter(outMultiClassDataSet, "UTF-8");
+			
+			String header = "";
+			
+			while(header != null){
+				
+				header = stream4header.readLine();
+				
+				if (header == null)
+					break;
+				
+				header = header.trim();
+							
+				writer.println(header);					
+			}
+			
+			ArrayList<ArrayList<String>> inputs = importInputDataSetInfo(inputDataSetSceneJunkDashFilePath);
+			
+			//each oneSentence is an ArrayList containing the whole elements of one sentence.
+			for(ArrayList<String> oneSentence:inputs){
+				
+				SentenceModel sentence = makeSenteces(oneSentence, true);
+				
+				if(sentence != null && sentence.getWords() != null && sentence.getWords().size() < 2)
+					continue;
+			
+//				print(sentence.getOrdinalDetailedStr());
+										
+				ArrayList<String> sentRecords = sentence.getDataSetStr();
+				
+				//format: N, OBJ, Arg1, نفر§n-13075, YES, role
+				for(String wordRecord:sentRecords){
+					
+					String[] parts = wordRecord.split(",");
+					
+					if(parts == null || parts.length != 6)
+						MyError.exit("bad dataSetRecord" + wordRecord);
+					
+					String classTagName = parts[5].trim();
+					
+					ScenePart classTag = ScenePart.fromString(classTagName);
+				
+					if(classTag == ScenePart.UNKNOWN)
+						continue;						
+										
+					writer.println(wordRecord);												
+				}								
+			}
+			writer.close();			
+		}
+		catch (IOException e) {
+
+			e.printStackTrace();
+		}		 	
+	}
 	
 
 	/**
@@ -1334,6 +1400,8 @@ public class UI {
 		ui.getStatistics();
 
 //		ui.reformatMultiClassDataset();
+		
+		ui.reformatMultiClass_removeUnknownClass_Dataset();
 		
 //		ui.toSendforCSRIDataset();
 		//TODO: correct relation name in all of generating dataSet

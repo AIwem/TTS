@@ -1,0 +1,25 @@
+»”„ «··Â «·—Õ„‰ «·—ÕÌ„ Ê  Êò·  ⁄·Ì «··Â 
+sentence numbers: 502 -- words numner 3821
+
+number of each elements are as follows
+------------------------------------------------------------
+role:			945	roleAction:		385
+roleState:		478	roleIntent:		380
+roleEmotion:		30
+------------------------------------------------------------
+dynamic_object:		45	dynamic_objAction:	8
+dynamic_objState:	6
+------------------------------------------------------------
+static_object:		136	static_objState:	29
+------------------------------------------------------------
+location		247
+time:			112
+sceneEmotion:		0
+sceneGoal:		0
+------------------------------------
+no:			1011
+------------------------------------
+all Scene elements are: 2801
+no elements are: 1011
+words num 3821 ?= all elems 3812
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ «·Õ„œ··Â
