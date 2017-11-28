@@ -81,7 +81,10 @@ public class WekaTest {
 //		BufferedReader datafile = readDataFile("dataset/95-10-13DateSetSceneGoal.arff");//story1&2&3
 		
 
-		BufferedReader datafile = readDataFile("dataset/96-02-26MultiClassDataSet2.arff");//final dataSet from CSRI
+//		BufferedReader datafile = readDataFile("dataset/96-02-26MultiClassDataSet2.arff");//final dataSet from CSRI
+//		BufferedReader datafile = readDataFile("dataset/96-03-02MultiClassDataSet_removingSceneGoal.arff");//final dataSet from CSRI		
+		BufferedReader datafile = readDataFile("dataset/96-03-02MultiClassRemoveUnknownDataSet.arff");//final dataSet from CSRI
+		
 
 		
 		

@@ -15,4 +15,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>Mallet-master</name>
+			<type>2</type>
+			<location>D:/education/PhD khanom/project/source/Mallet-master</location>
+		</link>
+	</linkedResources>
 </projectDescription>
