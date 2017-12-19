@@ -1,5 +1,7 @@
 package userInterface;
 
+import java.io.File;
+
 import cc.mallet.classify.*;
 import cc.mallet.fst.*;
 import cc.mallet.optimize.Optimizable;
@@ -13,7 +15,9 @@ public class CRFTest {
 
 	public static void main(String[] args) {
 		CRFTest crfTester = new CRFTest();
-//		crfTester.run(trainingData, testingData);
+		InstanceList trainingData = InstanceList.load(new File("src/userInterface/trainFile.txt"));
+		InstanceList testingData = InstanceList.load(new File("src/userInterface/testFile.txt"));
+		crfTester.run(trainingData, testingData);
 	}
 	public void run (InstanceList trainingData, InstanceList testingData) {
       // setup:
@@ -74,7 +78,20 @@ public class CRFTest {
       // FileOutputStream fos = new FileOutputStream("ner_crf.model");
       // ObjectOutputStream oos = new ObjectOutputStream(fos);
       // oos.writeObject(crf);
+      
+  	  // *Note*: the output size can grow very big very quickly
+      ViterbiWriter viterbiWriter = new ViterbiWriter(
+    		  "ner_crf", // output file prefix
+          new InstanceList[] { trainingData, testingData }, new String[] { "train", "test" }) {
+        @Override
+        public boolean precondition (TransducerTrainer tt) {
+          return tt.getIteration() % Integer.MAX_VALUE == 0;
+        }
+      };
+      crfTrainer.addEvaluator(viterbiWriter);
+
     }
+	
 		  
 
 }

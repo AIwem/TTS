@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/Semantic"/>
 	<classpathentry kind="lib" path="lib/collections-generic-4.01.jar"/>
 	<classpathentry kind="lib" path="lib/commons-io-2.3.jar"/>
 	<classpathentry kind="lib" path="lib/commons-lang3-3.3.2.jar"/>
@@ -13,10 +12,11 @@
 	<classpathentry kind="lib" path="lib/jung-visualization-2.0.1.jar"/>
 	<classpathentry kind="lib" path="lib/opencsv-2.3.jar"/>
 	<classpathentry kind="lib" path="lib/ParsiPardazLib.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre7"/>
-	<classpathentry kind="lib" path="D:/education/PhD khanom/project/source/weka/stable-3-8/weka/weka.jar"/>
-	<classpathentry kind="lib" path="D:/education/PhD khanom/project/source/weka/stable-3-8/weka/weka-src.jar"/>
-	<classpathentry kind="lib" path="D:/education/PhD khanom/project/source/Mallet-master/dist/mallet.jar" sourcepath="Mallet-master"/>
-	<classpathentry kind="lib" path="D:/education/PhD khanom/project/source/Mallet-master"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="D:/education/PhD khanom/project/source/weka/stable-3-8/weka/weka.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/education/PhD khanom/project/source/weka/stable-3-8/weka/weka-src.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/education/PhD khanom/project/source/Mallet-master/dist/mallet.jar" sourcepath="Mallet-master"/>
+	<classpathentry exported="true" kind="lib" path="D:/education/PhD khanom/project/source/Mallet-master"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/HPR"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
