@@ -15,8 +15,10 @@ public class CRFTest {
 
 	public static void main(String[] args) {
 		CRFTest crfTester = new CRFTest();
-		InstanceList trainingData = InstanceList.load(new File("src/userInterface/trainFile.txt"));
-		InstanceList testingData = InstanceList.load(new File("src/userInterface/testFile.txt"));
+		InstanceList trainingData = InstanceList.load(new File("dataset/train.txt"));
+//		InstanceList trainingData = InstanceList.load(new File("dataset/96-09-29CRFTrainFile.arff"));
+//		InstanceList trainingData = InstanceList.load(new File("src/userInterface/hill.txt"));
+		InstanceList testingData = InstanceList.load(new File("dataset/96-09-29CRFTestFile.arff"));
 		crfTester.run(trainingData, testingData);
 	}
 	public void run (InstanceList trainingData, InstanceList testingData) {
@@ -95,3 +97,4 @@ public class CRFTest {
 		  
 
 }
+

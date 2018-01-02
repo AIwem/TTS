@@ -1,0 +1,3 @@
+Bill LOWERCASE CAPITALIZED noun
+slept LOWERCASE non-noun
+here LOWERCASE STOPWORD non-noun
