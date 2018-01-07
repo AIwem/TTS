@@ -304,7 +304,7 @@ public class SceneModel {
 	 */
 	public SceneElement getSceneElement(SceneElement sceneElement) {
 		
-		if(sceneElement == null || sceneElement.scenePart == null || sceneElement.scenePart == ScenePart.UNKNOWN){
+		if(sceneElement == null || sceneElement.scenePart == null || sceneElement.scenePart == ScenePart.NO){
 			MyError.error("null input parameter for getSceneElement!");
 			return null;
 		}								
@@ -529,7 +529,7 @@ public class SceneModel {
 	 * @param sceneElement the new  SceneElement which is to be added to this SceneModel.  
 	 */
 	public void addToPrimarySceneModel(SceneElement sceneElement){
-		if(sceneElement == null || sceneElement.scenePart == null || sceneElement.scenePart == ScenePart.UNKNOWN){		
+		if(sceneElement == null || sceneElement.scenePart == null || sceneElement.scenePart == ScenePart.NO){		
 			MyError.error("null or UNKNOWN input parameter for addToPrimarySceneModel !");
 			return;
 		}								
@@ -722,7 +722,7 @@ public class SceneModel {
 	
 	public boolean hasSceneElement(SceneElement sceneElement) {
 		
-		if(sceneElement == null || sceneElement.scenePart == null || sceneElement.scenePart == ScenePart.UNKNOWN){
+		if(sceneElement == null || sceneElement.scenePart == null || sceneElement.scenePart == ScenePart.NO){
 			MyError.error("null input parameter for hasSceneElement!");
 			return false;
 		}								
@@ -782,7 +782,7 @@ public class SceneModel {
 	
 	public SceneElement createSceneElement(Word word, ScenePart scenePart){
 		
-		if(word == null || scenePart == null || scenePart == ScenePart.UNKNOWN){
+		if(word == null || scenePart == null || scenePart == ScenePart.NO){
 			MyError.error("null input parameter for createSceneElement !");
 			return null;
 		}								

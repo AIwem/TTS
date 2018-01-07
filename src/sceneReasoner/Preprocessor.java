@@ -467,7 +467,7 @@ public class Preprocessor {
 				//reasoning ScenePart from KB, ROLE,DYNAMIC_OBJECT, STATIC_OBJECT, ....
 				ScenePart scenePart = _ttsEngine.whichScenePart(semArgWord);
 								
-				if(scenePart == null || scenePart == ScenePart.UNKNOWN){
+				if(scenePart == null || scenePart == ScenePart.NO){
 					MyError.error("the " + semanticTag +": " + semArgWord + " ScenePart was not found!");
 					return null;
 				}

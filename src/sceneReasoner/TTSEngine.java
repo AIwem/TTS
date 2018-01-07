@@ -356,7 +356,7 @@ public class TTSEngine {
 	 * @param scenePart if scenePart equals to "ScenePart.UNKNOWN" nothing will be added to scene_parts.
 	 */
 	private void addTo_seen_sceneParts(String pure_name, ScenePart scenePart) {
-		if(pure_name == null || pure_name.equals("") || scenePart == null || scenePart == ScenePart.UNKNOWN)
+		if(pure_name == null || pure_name.equals("") || scenePart == null || scenePart == ScenePart.NO)
 			return;
 		
 		if(seen_sceneParts.containsKey(pure_name))
@@ -933,7 +933,7 @@ public class TTSEngine {
 		//---------------------------------------			
 		
 		if(pureNode == null || pos == null || semanticTag == null)
-			return ScenePart.UNKNOWN;
+			return ScenePart.NO;
 
 		//It is a mainSemanticTag
 		if(semanticTag.isMainSemanticTag()){
@@ -941,7 +941,7 @@ public class TTSEngine {
 			
 			if(mainSemTag == null){
 				MyError.error("wrong MainsemanticTag" + semanticTag);
-				return ScenePart.UNKNOWN;
+				return ScenePart.NO;
 			}
 				
 			if(mainSemTag.isArg0())
@@ -967,12 +967,12 @@ public class TTSEngine {
 			
 			if(subSemArg == null){
 				MyError.error("wrong SubSemanticTag" + semanticTag);
-				return ScenePart.UNKNOWN;
+				return ScenePart.NO;
 			}
 			
 			return getSubArgScenePart(pureNode, subSemArg, pos);
 		}				
-		return ScenePart.UNKNOWN;
+		return ScenePart.NO;
 	}		
 	
 	/**
@@ -1113,7 +1113,7 @@ public class TTSEngine {
 			return ScenePart.SCENE_GOAL;
 		}
 		
-		return ScenePart.UNKNOWN;
+		return ScenePart.NO;
 	}
 
 	/**
@@ -1165,7 +1165,7 @@ public class TTSEngine {
 			if(isLocation(pureNode))
 				return ScenePart.LOCATION;
 		}		
-		return ScenePart.UNKNOWN;
+		return ScenePart.NO;
 	}
 	
 	/**
@@ -1186,7 +1186,7 @@ public class TTSEngine {
 		if(isLocation(pureNode))
 			return  ScenePart.LOCATION;
 		
-		return ScenePart.UNKNOWN;
+		return ScenePart.NO;
 	}
 	
 	/**
@@ -1302,7 +1302,7 @@ public class TTSEngine {
 			return ScenePart.STATIC_OBJECT;
 		}		
 		
-		return ScenePart.UNKNOWN;
+		return ScenePart.NO;
 	}
 	
 //	/**
@@ -1422,14 +1422,14 @@ public class TTSEngine {
 		print(word + " ............. in whichScenePart ....................");
 		
 		if(word == null || word._wsd == null)
-			return ScenePart.UNKNOWN;
+			return ScenePart.NO;
 		
 		Node partNode = word._wsd;
 		
 		String pureName = makePureName(partNode);
 		
 		if(pureName == null || pureName.equals(""))
-			return ScenePart.UNKNOWN;	
+			return ScenePart.NO;	
 		
 		ScenePart sp = null;	
 		boolean flag = false;
@@ -1451,7 +1451,7 @@ public class TTSEngine {
 			sp = getGeneralScenePart(pureNode);		
 		}
 		
-		if(!flag && sp != null && sp != ScenePart.UNKNOWN)
+		if(!flag && sp != null && sp != ScenePart.NO)
 			addTo_seen_sceneParts(pureName, sp);
 		
 		print(partNode + " ScenePart is " + sp);			

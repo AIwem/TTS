@@ -392,7 +392,7 @@ public class SceneReasoner {
 													
 													ScenePart scenePart = _ttsEngine.whichScenePart(innerDirection);
 													
-													if(scenePart != null || scenePart != ScenePart.UNKNOWN){												
+													if(scenePart != null || scenePart != ScenePart.NO){												
 														currentScene.setLocation(new Location(currentScene, innerDirection._wordName, innerDirection._wsd));
 														print("the lastScene ArgM_Dir innerDirection " + currentScene.getLocation() +" %%%%%%%%%%%%%%%%%%%%%%%%% has been set!");
 														break;
