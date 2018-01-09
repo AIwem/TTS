@@ -30,6 +30,14 @@ public enum ScenePart {
 	STATIC_OBJECT_STATE,
 	DYNAMIC_OBJECT_STATE,
 		
-	NO
+	NO;
 //	UNKNOWN
+	
+	public static ScenePart fromString(String scenePart){
+		if (scenePart != null)
+			for (ScenePart sp : ScenePart.values()) 
+				if (scenePart.equalsIgnoreCase(sp.name())) 
+					return sp;
+       return NO;
+	}
 }

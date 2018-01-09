@@ -1,6 +1,6 @@
 #..........	
 
-4	برادر	N	OBJ	5	برادر§n-14090	نفر§n-13075	role	_	_	Arg1	_	
+4	برادر	N	OBJ	5	برادر§n-14090	نفر§n-13075	role:	_	_	Arg1	_	
 8	ميان	N	ADVRB	17	null	null	no	_	_	_	ArgM_ADV	
 9	آن‌ها	PR	MOZ	8	برادر§n-14090	نفر§n-13075	role	_	_	_	_	
 11	بنيامين	N	SBJ	17	null	null	role	_	_	_	Arg1	
@@ -93,7 +93,7 @@
 #..........	
 
 2	يکي‌از	ADJ	NPREMOD	3	null	null	no	_	_	_	_	_	_	
-3	روزها	N	ADVRB	7	روز§n-12632	دوره_زماني§n-12603	time	_	_	ArgM_TMP	_	_	_	
+3	روزها	N	ADVRB	7	روز§r-22016	null	time	_	_	ArgM_TMP	_	_	_	
 4	نزد	PREP	VPP	7	محضر§n-10120	جا§n-12733	location	_	_	Arg4	_	_	_	
 5	پدر	N	POSDEP	4	والد§n-13357	نفر§n-13075	role	_	_	_	_	_	_	
 7	آمدند	V	VCONJ	11	آمدن§v-7847	رخداد§n-13136	role_action	Y	آمدن.44	_	_	_	_	
@@ -239,7 +239,7 @@
 #..........	
 
 3	يکي‌از	ADJ	NPREMOD	4	null	null	no	_	_	_	_	_	_	
-4	روزها	N	ADVRB	11	روز§n-12632	دوره_زماني§n-12603	time	_	_	ArgM_TMP	_	_	_	
+4	روزها	N	ADVRB	11	روز§r-22016	null	time	_	_	ArgM_TMP	_	_	_	
 5	يوسف	N	OBJ	11	يوسف§n-23957	نفر§n-13075	role	_	_	Arg1	_	_	_	
 8	خانه	N	ADVRB	11	سرا§n-12809	جا§n-12733	location	_	_	Arg3	_	_	_	
 11	يافت	V	VCONJ	15	جستن§v-8367	رخداد§n-13136	role_action	Y	يافتن.848	_	_	_	_	
@@ -546,7 +546,7 @@
 
 1	برادران	N	SBJ	8	برادر§n-14090	نفر§n-13075	role	_	_	Arg0	Arg0	Arg0	
 2	بعداز	PREP	ADVRB	8	null	null	no	_	_	ArgM_TMP	_	_	
-4	روز	N	POSDEP	2	روز§n-12632	دوره_زماني§n-12603	time	_	_	_	_	_	
+4	روز	N	POSDEP	2	روز§r-22016	null	time	_	_	_	_	_	
 7	مصر	N	VPP	8	مصر§n-20196	گروه§n-12753	location	_	_	Arg4	_	_	
 8	رسيدند	V	VCONJ	12	رسيدن§v-8613	رخداد§n-13136	role_action	Y	رسيدن.501	_	_	_	
 
