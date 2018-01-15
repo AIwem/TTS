@@ -1,0 +1,1212 @@
+16	او	PR	MOZ	12	_	_	_	_
+
+3	همه	ADJ	NPREMOD	4	_	_	_
+5	جز	PREP	POSDEP	4	_	_	_
+
+
+6	که	SUBR	NCL	1	_	_	_	_
+
+
+3	که	SUBR	NCL	2	_	_	_	_	_
+13	خود	PR	MOZ	12	_	_	_	_	_
+
+12	که	SUBR	NCL	9	_	_	_	_	_
+
+3	او	PR	PREDEP	4	_	_	_	_
+
+7	دیگر	PR	MOZ	6	_	_	_	_
+10	که	SUBR	NCL	8	_	_	_	_
+
+
+2	این	ADJ	NPREMOD	3	_	_	_
+
+6	شان	PR	MOZ	5	_	_	_	_	_	_
+16	خود	PR	MOZ	15	_	_	_	_	_	_
+
+2	آن	PR	POSDEP	1	_	_	_	_	_	_	_	_	_
+3	که	SUBR	NCL	2	_	_	_	_	_	_	_	_	_
+
+3	او	PR	PREDEP	4	_	_	_	_
+
+2	که	SUBR	NCL	1	_	_	_	_	_	_
+9	شان	PR	MOZ	8	_	_	_	_	_	_
+14	شان	PR	MOZ	13	_	_	_	_	_	_
+
+
+
+5	که	SUBR	NCL	2	_	_	_	_	_	_
+19	او	PR	PREDEP	20	_	_	_	_	_	_
+22	خود	PR	MOZ	21	_	_	_	_	_	_
+
+13	این	PR	ADVRB	11	_	_	_	_	_	_
+14	که	SUBR	NCL	13	_	_	_	_	_	_
+16	که	SUBR	NCL	15	_	_	_	_	_	_
+26	استفاده	N	NCONJ	23	_	_	_	_	_	_
+31	همان	ADJ	NPREMOD	32	_	_	_	_	_	_
+33	که	SUBR	NCL	32	_	_	_	_	_	_
+
+7	شان	PR	MOZ	6	_	_	_	_
+
+2	او	PR	PREDEP	3	_	_	_
+
+2	که	SUBR	NCL	1	_	_	_	_
+
+8	داشتن	N	MOZ	7	_	_	_	_
+14	همین	ADJ	NPREMOD	15	_	_	_	_
+
+3	که	SUBR	NCL	2	_	_	_	_
+17	او	PR	NEZ	14	_	_	_	_
+
+9	خود	PR	MOZ	8	_	_	_	_	_	_
+19	خود	PR	PREDEP	20	_	_	_	_	_	_
+21	برای	PREP	AJPP	23	_	_	_	_	_	_
+22	ت	PR	POSDEP	21	_	_	_	_	_	_
+
+2	آن	ADJ	NPREMOD	3	_	_	_	_
+15	که	SUBR	VCL	14	_	_	_	_
+16	این	ADJ	NPREMOD	17	_	_	_	_
+
+3	این	ADJ	NPREMOD	4	_	_	_	_
+14	این	ADJ	APREMOD	15	_	_	_	_
+
+
+2	این	ADJ	NPREMOD	3	_	_	_	_	_
+5	رو	N	NVE	9	_	_	_	_	_
+15	این	ADJ	NPREMOD	16	_	_	_	_	_
+22	شما	PR	MOZ	20	_	_	_	_	_
+
+17	نشان	N	NVE	18	_	_	_	_	_
+
+5	اش	PR	MOZ	4	_	_	_	_
+11	تمام	ADJ	NPREMOD	12	_	_	_	_
+20	خود	PR	MOZ	19	_	_	_	_
+
+4	خود	PR	MOZ	3	_	_	_	_
+
+
+4	هر	ADJ	NPREMOD	5	_	_	_	_
+5	کدام	N	MOZ	3	_	_	_	_
+8	خود	PR	MOZ	7	_	_	_	_
+
+10	او	PR	MOZ	7	_	_	_	_
+15	خود	PR	MOZ	14	_	_	_	_
+
+
+4	او	PR	MOZ	3	_	_	_
+
+3	که	SUBR	NCL	2	_	_	_	_	_
+6	این	ADJ	NPREMOD	7	_	_	_	_	_
+16	این	PR	POSDEP	15	_	_	_	_	_
+17	که	SUBR	NCL	16	_	_	_	_	_
+18	این	ADJ	NPREMOD	19	_	_	_	_	_
+23	خود	PR	PREDEP	24	_	_	_	_	_
+28	کردن	N	MOZ	26	_	_	_	_	_
+
+1	که	SUBR	ROOT	0	_	_	_
+4	هر	ADJ	APREMOD	5	_	_	_
+
+7	که	SUBR	NCL	5	_	_	_	_	_
+17	دار	N	VPRT	19	_	_	_	_	_
+
+4	که	SUBR	NCL	3	_	_	_	_	_
+
+11	که	SUBR	NCL	9	_	_	_	_
+12	او	PR	PREDEP	13	_	_	_	_
+
+2	این	ADJ	NPREMOD	3	_	_	_	_	_	_	_
+5	که	SUBR	NCL	4	_	_	_	_	_	_	_
+28	که	SUBR	NCL	24	_	_	_	_	_	_	_
+31	شما	PR	MOZ	30	_	_	_	_	_	_	_
+
+
+17	او	PR	PREDEP	18	_	_	_	_	_	_
+
+10	بیرون	N	NVE	11	_	_	_	_	_	_
+17	که	SUBR	NCL	16	_	_	_	_	_	_
+
+
+6	هیچ	ADJ	NPREMOD	7	_	_	_	_
+11	او	PR	NPP	7	_	_	_	_
+
+6	خود	PR	MOZ	5	_	_	_
+
+2	که	SUBR	NCL	1	_	_	_	_	_
+
+8	این	ADJ	NPREMOD	9	_	_	_
+
+2	همین	PR	POSDEP	1	_	_	_	_	_
+6	خود	PR	MOZ	5	_	_	_	_	_
+14	خود	PR	MOZ	13	_	_	_	_	_
+
+5	خود	PR	MOZ	4	_	_	_
+
+2	که	SUBR	NCL	1	_	_	_	_	_
+10	خود	PR	MOZ	9	_	_	_	_	_
+15	که	SUBR	NCL	14	_	_	_	_	_
+
+8	شان	PR	MOZ	7	_	_	_	_
+
+
+3	چند	ADJ	NPREMOD	4	_	_	_	_	_
+4	روز	N	POSDEP	2	_	_	_	_	_
+15	خود	PR	MOZ	14	_	_	_	_	_
+
+20	خود	PR	PREDEP	21	_	_	_	_	_	_
+28	خود	PR	MOZ	27	_	_	_	_	_	_
+
+3	این	PR	POSDEP	2	_	_	_	_
+4	که	SUBR	NCL	3	_	_	_	_
+10	خود	PR	POSDEP	9	_	_	_	_
+17	این	ADJ	NPREMOD	18	_	_	_	_
+
+
+3	باز	ADJ	PREDEP	4	_	_	_	_
+4	کردن	N	POSDEP	2	_	_	_	_
+6	که	SUBR	NCL	5	_	_	_	_
+
+4	آن	ADJ	NPREMOD	5	_	_	_
+5	زمان	N	MOZ	3	_	_	_
+
+1	او	PR	APP	4	_	_	_	_
+
+
+15	که	SUBR	NCL	14	_	_	_	_	_	_	_
+26	خود	PR	PREDEP	27	_	_	_	_	_	_	_
+
+5	این	ADJ	NPREMOD	6	_	_	_	_	_
+15	که	SUBR	VCL	14	_	_	_	_	_
+
+1	این	ADJ	NPREMOD	2	_	_	_	_
+7	که	SUBR	NCL	2	_	_	_	_
+
+4	شان	PR	MOZ	3	_	_	_	_	_
+17	خویش	PR	MOZ	14	_	_	_	_	_
+18	ما	PR	PREDEP	19	_	_	_	_	_
+
+7	که	SUBR	NCL	2	_	_	_	_	_
+14	ام	PR	MOZ	9	_	_	_	_	_
+
+4	گذشته	ADJ	NPOSTMOD	3	_	_	_
+
+
+2	این	ADJ	NPREMOD	3	_	_	_	_	_	_	_
+20	آن	PR	PREDEP	21	_	_	_	_	_	_	_
+27	او	PR	PREDEP	28	_	_	_	_	_	_	_
+30	من	PR	POSDEP	29	_	_	_	_	_	_	_
+
+
+17	خود	PR	MOZ	16	_	_	_	_
+
+
+2	این	ADJ	NPREMOD	3	_	_	_	_	_	_	_	_
+8	که	SUBR	NCL	7	_	_	_	_	_	_	_	_
+15	رو	N	NVE	18	_	_	_	_	_	_	_	_
+22	ای	ADR	VCONJ	29	_	_	_	_	_	_	_	_
+27	سابق	ADJ	NPOSTMOD	26	_	_	_	_	_	_	_	_
+28	من	PR	MOZ	26	_	_	_	_	_	_	_	_
+30	که	SUBR	NCL	26	_	_	_	_	_	_	_	_
+32	آن	PR	PREDEP	33	_	_	_	_	_	_	_	_
+
+8	اش	PR	MOZ	7	_	_	_	_
+
+5	او	PR	PREDEP	6	_	_	_	_	_
+15	وجود	N	MOZ	14	_	_	_	_	_
+
+7	که	SUBR	NCL	4	_	_	_	_	_
+21	ایشان	PR	MOZ	20	_	_	_	_	_
+
+
+3	این	ADJ	NPREMOD	4	_	_	_
+8	بین	PREP	POSDEP	6	_	_	_
+
+
+4	آباد	ADJ	NPOSTMOD	3	_	_	_
+
+
+8	خود	PR	MOZ	6	_	_	_	_	_
+12	حق	N	POSDEP	11	_	_	_	_	_
+
+3	خود	PR	MOZ	2	_	_	_	_	_
+
+1	این	ADJ	NPREMOD	2	_	_	_	_
+
+10	هیچ	ADJ	NPREMOD	11	_	_	_	_
+
+6	این	PR	POSDEP	5	_	_	_	_
+7	که	SUBR	NCL	6	_	_	_	_
+
+3	این	ADJ	NPREMOD	4	_	_	_	_	_	_
+5	استفاده	N	NVE	6	_	_	_	_	_	_
+
+3	مردم	N	NPP	1	_	_	_	_
+
+3	بر	PREP	AJPP	5	_	_	_	_
+13	شان	PR	MOZ	12	_	_	_	_
+
+6	خود	PR	MOZ	5	_	_	_	_	_
+11	که	SUBR	NCL	10	_	_	_	_	_
+12	این	ADJ	NPREMOD	13	_	_	_	_	_
+13	بار	N	ADVRB	19	_	_	_	_	_
+17	این	PR	POSDEP	16	_	_	_	_	_
+20	که	SUBR	NCL	17	_	_	_	_	_
+23	بر	PREP	AJPP	25	_	_	_	_	_
+
+4	بسیار	ADV	APREMOD	5	_	_	_	_	_	_	_	_
+6	بر	PREP	AJPP	8	_	_	_	_	_	_	_	_
+10	که	SUBR	NCL	3	_	_	_	_	_	_	_	_
+17	روز	N	NCONJ	14	_	_	_	_	_	_	_	_
+31	شان	PR	MOZ	30	_	_	_	_	_	_	_	_
+36	که	SUBR	POSDEP	35	_	_	_	_	_	_	_	_
+50	این	ADJ	NPREMOD	51	_	_	_	_	_	_	_	_
+
+
+9	کنونی	ADJ	NPOSTMOD	8	_	_	_	_	_	_
+11	مردم	N	PREDEP	12	_	_	_	_	_	_
+22	که	SUBR	NCL	20	_	_	_	_	_	_
+24	آن	ADJ	NPREMOD	25	_	_	_	_	_	_
+35	او	PR	MOZ	34	_	_	_	_	_	_
+
+12	آن	ADJ	NPREMOD	13	_	_	_	_
+
+20	بر	PREP	VPRT	22	_	_	_	_	_	_
+26	آن	ADJ	NPREMOD	27	_	_	_	_	_	_
+
+3	خود	PR	MOZ	2	_	_	_	_	_	_	_
+14	او	PR	MOZ	13	_	_	_	_	_	_	_
+15	بر	PREP	VPRT	17	_	_	_	_	_	_	_
+24	شما	PR	POSDEP	23	_	_	_	_	_	_	_
+31	او	PR	MOZ	30	_	_	_	_	_	_	_
+
+8	خود	PR	MOZ	5	_	_	_	_	_	_	_
+25	انجام	N	NVE	26	_	_	_	_	_	_	_
+30	خود	PR	MOZ	29	_	_	_	_	_	_	_
+
+2	این	ADJ	NPREMOD	3	_	_	_	_
+4	چند	ADJ_INTG	NPREMOD	5	_	_	_	_
+8	این	ADJ	NPREMOD	9	_	_	_	_
+11	هیچ	ADJ	NPREMOD	12	_	_	_	_
+
+12	که	SUBR	NCL	11	_	_	_	_	_
+15	آنان	PR	MOZ	14	_	_	_	_	_
+
+1	چند	ADJ	NPREMOD	2	_	_	_	_
+
+3	این	ADJ	NPREMOD	4	_	_	_
+
+11	تو	PR	MOZ	10	_	_	_	_	_	_
+
+21	خویش	PR	MOZ	20	_	_	_	_
+
+
+14	نگاه	N	NVE	15	_	_	_	_
+
+3	که	SUBR	NCL	2	_	_	_	_	_
+
+9	این	ADJ	NPREMOD	10	_	_	_	_
+12	خود	PR	MOZ	10	_	_	_	_
+
+4	زیر	PREP	VPRT	6	_	_	_
+5	بار	N	POSDEP	4	_	_	_
+
+2	که	SUBR	NCL	1	_	_	_	_	_
+11	خود	PR	PREDEP	12	_	_	_	_	_
+
+3	خود	PR	MOZ	2	_	_	_
+
+4	شان	PR	MOZ	3	_	_	_
+
+9	ت	PR	MOZ	8	_	_	_	_
+
+3	که	SUBR	VCL	2	_	_	_	_	_
+
+12	این	ADJ	NPREMOD	13	_	_	_	_	_	_
+18	ت	PR	MOZ	17	_	_	_	_	_	_
+25	باید	V_MODL	PRD	23	_	_	_	_	_	_
+
+12	چند	ADJ	NPREMOD	13	_	_	_	_	_
+18	نام	N	NPP	16	_	_	_	_	_
+31	ایشان	PR	MOZ	30	_	_	_	_	_
+
+9	که	SUBR	NCL	6	_	_	_	_
+
+3	این	PR	POSDEP	2	_	_	_	_
+4	که	SUBR	NCL	3	_	_	_	_
+
+2	ایشان	PR	MOZ	1	_	_	_
+
+9	کنونی	ADJ	NPOSTMOD	8	_	_	_	_	_
+20	آن	ADJ	NPREMOD	21	_	_	_	_	_
+
+6	آنان	PR	POSDEP	5	_	_	_
+
+17	خود	PR	MOZ	16	_	_	_	_
+
+12	که	SUBR	NCL	8	_	_	_	_	_	_
+14	آن	ADJ	APREMOD	15	_	_	_	_	_	_
+21	که	SUBR	NCL	19	_	_	_	_	_	_
+31	نام	N	NPP	27	_	_	_	_	_	_
+33	نام	N	NVE	34	_	_	_	_	_	_
+
+2	که	SUBR	NCL	1	_	_	_	_	_
+10	مردم	N	PREDEP	12	_	_	_	_	_
+
+6	این	ADJ	NPREMOD	7	_	_	_	_	_
+
+
+3	مردم	N	POSDEP	2	_	_	_	_	_	_
+
+2	چند	ADJ	NPREMOD	3	_	_	_	_	_
+
+9	که	SUBR	NCL	8	_	_	_	_	_
+10	او	PR	PREDEP	11	_	_	_	_	_
+18	مردم	N	MOZ	17	_	_	_	_	_
+
+4	این	ADJ	NPREMOD	5	_	_	_	_	_	_
+
+5	که	SUBR	NCL	3	_	_	_	_
+
+3	راه	N	POSDEP	2	_	_	_	_	_	_
+15	خود	PR	MOZ	14	_	_	_	_	_	_
+
+1	هر	ADJ	NPREMOD	2	_	_	_	_	_	_
+9	او	PR	PREDEP	10	_	_	_	_	_	_
+19	او	PR	PREDEP	20	_	_	_	_	_	_
+
+
+2	چند	ADJ	NPREMOD	3	_	_	_	_	_
+24	خود	PR	MOZ	23	_	_	_	_	_
+
+4	اش	PR	MOZ	3	_	_	_	_	_	_	_
+14	او	PR	PREDEP	15	_	_	_	_	_	_	_
+
+4	گرفته	ADJ	NPOSTMOD	3	_	_	_	_
+
+8	خود	PR	MOZ	7	_	_	_	_
+
+2	این	ADJ	NPREMOD	3	_	_	_	_
+7	خود	PR	MOZ	6	_	_	_	_
+
+
+10	آن	ADJ	NPREMOD	11	_	_	_	_	_
+
+4	که	SUBR	ACL	2	_	_	_	_
+5	این	ADJ	NPREMOD	6	_	_	_	_
+
+
+2	که	SUBR	NCL	1	_	_	_	_	_	_
+4	چنین	N	PREDEP	6	_	_	_	_	_	_
+18	او	PR	PREDEP	19	_	_	_	_	_	_
+
+8	برای	PREP	NPP	12	_	_	_	_
+
+2	همان	ADJ	NPREMOD	3	_	_	_	_
+
+3	این	ADJ	NPREMOD	4	_	_	_	_	_	_
+10	او	PR	PREDEP	11	_	_	_	_	_	_
+28	او	PR	MOZ	25	_	_	_	_	_	_
+
+12	بر	PREP	NPP	10	_	_	_	_
+
+2	که	SUBR	NCL	1	_	_	_	_	_	_
+12	که	SUBR	NCL	9	_	_	_	_	_	_
+20	این	ADJ	NPREMOD	21	_	_	_	_	_	_
+
+2	خود	PR	PREDEP	3	_	_	_
+
+6	که	SUBR	NCL	4	_	_	_	_	_	_
+7	بر	PREP	AJPP	9	_	_	_	_	_	_
+8	آنان	PR	POSDEP	7	_	_	_	_	_	_
+15	چیزی	N	PREDEP	16	_	_	_	_	_	_
+18	که	SUBR	NCL	15	_	_	_	_	_	_
+
+20	آن	PR	AJPP	21	_	_	_	_	_
+
+
+7	که	SUBR	NCL	5	_	_	_	_
+
+17	او	PR	PREDEP	18	_	_	_	_	_	_	_
+22	یعنی	PSUS	ROOT	0	Y	معنی‌دادن.303	_	_	_	_	_
+31	چنین	ADJ	NPREMOD	32	_	_	_	_	_	_	_
+
+16	که	SUBR	NCL	15	_	_	_	_	_	_	_	_
+17	آن	PR	PREDEP	18	_	_	_	_	_	_	_	_
+24	خودم	PR	MOZ	23	_	_	_	_	_	_	_	_
+29	آن	PR	POSDEP	28	_	_	_	_	_	_	_	_
+
+5	آن	ADJ	NPREMOD	6	_	_	_	_
+9	که	SUBR	NCL	6	_	_	_	_
+
+2	چنین	ADJ	NPREMOD	3	_	_	_	_
+
+2	او	PR	MOZ	1	_	_	_	_
+6	بودن	N	MOZ	4	_	_	_	_
+9	او	PR	PREDEP	10	_	_	_	_
+18	او	PR	MOZ	17	_	_	_	_
+22	بودن	N	MOZ	20	_	_	_	_
+24	او	PR	PREDEP	25	_	_	_	_
+
+21	یعنی	PSUS	ROOT	0	_	_	_	_	_
+
+13	او	PR	MOZ	12	_	_	_	_	_
+16	وجود	N	VPRT	17	_	_	_	_	_
+
+2	او	PR	MOZ	1	_	_	_	_	_	_
+6	که	SUBR	NCL	3	_	_	_	_	_	_
+18	او	PR	NPP	20	_	_	_	_	_	_
+
+
+
+4	آنان	PR	POSDEP	3	_	_	_	_	_
+18	شان	PR	MOZ	17	_	_	_	_	_
+
+8	شان	PR	MOZ	7	_	_	_
+
+8	خود	PR	MOZ	7	_	_	_	_
+
+16	که	SUBR	ACL	14	_	_	_	_	_	_	_
+17	باید	V_MODL	PRD	16	_	_	_	_	_	_	_
+23	آن	PR	PREDEP	24	_	_	_	_	_	_	_
+31	شان	PR	MOZ	30	_	_	_	_	_	_	_
+33	آن	PR	AJPP	34	_	_	_	_	_	_	_
+
+
+7	کنار	N	NPP	4	_	_	_	_	_	_	_	_
+12	آن	PR	PREDEP	13	_	_	_	_	_	_	_	_
+17	که	SUBR	NCL	15	_	_	_	_	_	_	_	_
+26	آنجا	N	AJPP	27	_	_	_	_	_	_	_	_
+37	یعنی	PSUS	NCL	35	_	_	_	_	_	_	_	_
+39	که	SUBR	NCL	38	_	_	_	_	_	_	_	_
+
+16	خود	PR	MOZ	15	_	_	_	_	_
+
+14	خود	PR	MOZ	12	_	_	_	_
+
+24	حق	N	MOZ	23	_	_	_	_	_
+
+12	او	PR	POSDEP	11	_	_	_	_	_	_	_	_	_
+32	این	ADJ	NPREMOD	33	_	_	_	_	_	_	_	_	_
+
+8	که	SUBR	NCL	4	_	_	_	_	_
+22	ایشان	PR	MOZ	21	_	_	_	_	_
+
+6	که	SUBR	NCL	3	_	_	_	_	_
+
+5	او	PR	MOZ	2	_	_	_
+
+
+6	خود	PR	MOZ	4	_	_	_	_	_	_
+9	که	SUBR	AVCL	2	_	_	_	_	_	_
+17	خود	PR	MOZ	15	_	_	_	_	_	_
+
+24	خود	PR	MOZ	23	_	_	_	_	_
+41	بر	PREP	VPRT	43	_	_	_	_	_
+
+24	این	ADJ	NPREMOD	25	_	_	_	_	_
+
+4	خود	PR	MOZ	3	_	_	_	_
+
+6	این	PR	POSDEP	5	_	_	_	_
+7	که	SUBR	NCL	6	_	_	_	_
+11	آن	ADJ	NPREMOD	12	_	_	_	_
+18	مختلف	ADJ	NPOSTMOD	17	_	_	_	_
+
+29	استفاده	N	NVE	30	_	_	_	_	_
+
+9	روز	N	NCONJ	7	_	_	_
+15	مردم	N	MOZ	12	_	_	_
+
+4	که	SUBR	NCL	3	_	_	_	_
+6	انجام	N	NVE	7	_	_	_	_
+
+2	این	ADJ	NPREMOD	3	_	_	_	_
+5	که	SUBR	NCL	3	_	_	_	_
+
+12	خود	PR	MOZ	11	_	_	_	_
+22	بر	PREP	VPRT	24	_	_	_	_
+30	خود	PR	MOZ	29	_	_	_	_
+
+4	این	ADJ	NPREMOD	5	_	_	_	_	_
+5	مدت	N	MOZ	3	_	_	_	_	_
+13	او	PR	PREDEP	14	_	_	_	_	_
+22	او	PR	MOZ	21	_	_	_	_	_
+
+6	که	SUBR	AVCL	2	_	_	_	_	_	_	_
+20	خود	PR	MOZ	19	_	_	_	_	_	_	_
+
+2	همین	N	POSDEP	1	_	_	_
+
+6	که	SUBR	NCL	5	_	_	_	_	_	_
+15	رو	N	NVE	16	_	_	_	_	_	_
+20	او	PR	PREDEP	21	_	_	_	_	_	_
+
+3	شما	PR	PREDEP	4	_	_	_
+
+3	یافتن	N	MOZ	2	_	_	_	_	_
+19	اعلام	N	NVE	20	_	_	_	_	_
+22	همه	ADJ	NPREMOD	23	_	_	_	_	_
+26	تو	PR	POSDEP	25	_	_	_	_	_
+
+2	اعلام	N	NVE	4	_	_	_	_
+6	همه	ADJ	NPREMOD	7	_	_	_	_
+
+6	هر	ADJ	NPREMOD	7	_	_	_	_
+7	نوع	N	MESU	8	_	_	_	_
+20	جای	N	NVE	21	_	_	_	_
+
+8	خود	PR	MOZ	7	_	_	_	_
+20	که	SUBR	NCL	15	_	_	_	_
+
+4	خود	PR	MOZ	3	_	_	_	_	_	_
+14	بر	PREP	AJPP	16	_	_	_	_	_	_
+
+10	خود	PR	MOZ	9	_	_	_	_	_	_
+21	خود	PR	MOZ	20	_	_	_	_	_	_
+
+2	آنچه	PR	PREDEP	3	_	_	_	_
+4	که	SUBR	NCL	2	_	_	_	_
+6	آن	PR	AJPP	7	_	_	_	_
+
+13	همه	ADJ	NPREMOD	14	_	_	_	_	_	_
+18	خود	PR	MOZ	17	_	_	_	_	_	_
+
+
+5	که	SUBR	NCL	2	_	_	_	_	_
+19	خود	PR	MOZ	18	_	_	_	_	_
+
+5	بر	PREP	AJPP	7	_	_	_	_	_
+6	او	PR	POSDEP	5	_	_	_	_	_
+12	اعلام	N	NVE	13	_	_	_	_	_
+19	ت	PR	MOZ	16	_	_	_	_	_
+
+2	باید	V_MODL	ROOT	0	_	_	_	_	_
+11	ت	PR	MOZ	10	_	_	_	_	_
+16	آن	ADJ	NPREMOD	17	_	_	_	_	_
+23	خود	PR	MOZ	22	_	_	_	_	_
+25	حق	N	MOZ	24	_	_	_	_	_
+
+5	این	ADJ	NPREMOD	6	_	_	_	_
+10	خود	PR	PREDEP	11	_	_	_	_
+
+3	خود	PR	MOZ	2	_	_	_
+8	من	PR	MOZ	7	_	_	_
+9	انجام	N	NVE	10	_	_	_
+
+4	او	PR	MOZ	3	_	_	_
+
+6	که	SUBR	NCL	3	_	_	_	_	_
+
+10	نام	N	NVE	11	_	_	_
+
+
+12	که	SUBR	NCL	9	_	_	_	_
+
+8	مختلف	ADJ	NPOSTMOD	7	_	_	_
+
+3	خود	PR	PREDEP	4	_	_	_	_
+10	این	ADJ	NPREMOD	11	_	_	_	_
+
+2	همین	ADJ	NPREMOD	3	_	_	_	_	_
+17	آن	PR	MOZ	16	_	_	_	_	_
+18	بر	PREP	AJPP	24	_	_	_	_	_
+
+5	این	ADJ	NPREMOD	6	_	_	_	_	_	_
+9	که	SUBR	NCL	7	_	_	_	_	_	_
+17	که	SUBR	NCL	13	_	_	_	_	_	_
+19	تو	PR	MOZ	18	_	_	_	_	_	_
+22	تو	PR	MOZ	21	_	_	_	_	_	_
+25	او	PR	MOZ	24	_	_	_	_	_	_
+26	انجام	N	NVE	27	_	_	_	_	_	_
+
+3	این	PR	POSDEP	2	_	_	_	_	_	_	_
+4	که	SUBR	NCL	3	_	_	_	_	_	_	_
+5	بتواند	V_MODL	PRD	4	_	_	_	_	_	_	_
+7	این	ADJ	NPREMOD	8	_	_	_	_	_	_	_
+19	هم	PR	AJPP	20	_	_	_	_	_	_	_
+29	آن	PR	PREDEP	30	_	_	_	_	_	_	_
+
+16	بودن	N	AJPP	18	_	_	_	_
+17	او	PR	MOZ	16	_	_	_	_
+
+2	وجود	N	PREDEP	4	_	_	_	_
+3	او	PR	MOZ	2	_	_	_	_
+
+8	سایر	N	NCONJ	6	_	_	_	_	_
+11	این	ADJ	NPREMOD	12	_	_	_	_	_
+15	که	SUBR	NCL	12	_	_	_	_	_
+16	همه	ADJ	NPREMOD	17	_	_	_	_	_
+
+5	آن	ADJ	NPREMOD	6	_	_	_
+
+7	او	PR	PREDEP	8	_	_	_	_
+
+2	او	PR	PREDEP	3	_	_	_	_
+
+9	خود	PR	MOZ	8	_	_	_	_
+
+7	تو	PR	MOZ	6	_	_	_	_
+
+4	این	ADJ	NPREMOD	5	_	_	_	_	_
+9	او	PR	PREDEP	10	_	_	_	_	_
+
+4	مختلف	ADJ	NPOSTMOD	3	_	_	_	_
+10	سایر	ADJ	NPREMOD	11	_	_	_	_
+11	مردم	N	NCONJ	8	_	_	_	_
+16	هیچ	ADJ	NPREMOD	17	_	_	_	_
+
+5	وجود	N	AJPP	8	_	_	_	_	_	_	_	_
+6	مردم	N	MOZ	5	_	_	_	_	_	_	_	_
+7	کاملا	ADV	APREMOD	8	_	_	_	_	_	_	_	_
+13	بزرگ	ADJ	NPOSTMOD	12	_	_	_	_	_	_	_	_
+24	همه	ADJ	NPREMOD	25	_	_	_	_	_	_	_	_
+32	بزرگ	ADJ	NPOSTMOD	31	_	_	_	_	_	_	_	_
+33	که	SUBR	NCL	31	_	_	_	_	_	_	_	_
+38	او	PR	MOZ	37	_	_	_	_	_	_	_	_
+
+8	جریان	N	PREDEP	9	_	_	_	_
+
+4	این	ADJ	NPREMOD	5	_	_	_	_	_
+6	استفاده	N	NVE	7	_	_	_	_	_
+16	بزرگ	ADJ	NPOSTMOD	15	_	_	_	_	_
+
+2	این	ADJ	NPREMOD	3	_	_	_	_	_
+5	که	SUBR	NCL	4	_	_	_	_	_
+
+3	این	ADJ	NPREMOD	4	_	_	_	_	_	_	_
+17	بسیاری	ADJ	NPOSTMOD	16	_	_	_	_	_	_	_
+30	برای	PREP	NPP	29	_	_	_	_	_	_	_
+31	دیگران	PR	POSDEP	30	_	_	_	_	_	_	_
+
+2	این	ADJ	NPREMOD	3	_	_	_	_	_
+
+4	بار	N	POSDEP	2	_	_	_	_	_
+8	او	PR	POSDEP	7	_	_	_	_	_
+17	خود	PR	MOZ	16	_	_	_	_	_
+27	او	PR	MOZ	25	_	_	_	_	_
+
+5	که	SUBR	NCL	3	_	_	_	_
+
+5	او	PR	MOZ	4	_	_	_	_	_	_
+21	که	SUBR	NCL	19	_	_	_	_	_	_
+23	او	PR	PREDEP	24	_	_	_	_	_	_
+
+4	او	PR	MOZ	3	_	_	_	_
+15	او	PR	MOZ	14	_	_	_	_
+
+14	تو	PR	MOZ	13	_	_	_	_	_	_
+19	ت	PR	POSDEP	18	_	_	_	_	_	_
+
+4	این	ADJ	NPREMOD	5	_	_	_	_	_
+8	که	SUBR	NCL	5	_	_	_	_	_
+11	تو	PR	MOZ	10	_	_	_	_	_
+
+3	این	ADJ	NPREMOD	4	_	_	_	_	_	_
+14	که	SUBR	VCL	13	_	_	_	_	_	_
+18	آن	PR	MOZ	16	_	_	_	_	_	_
+
+10	او	PR	PREDEP	11	_	_	_	_	_
+
+16	او	PR	AJPP	17	_	_	_	_	_
+
+9	این	ADJ	NPREMOD	10	_	_	_	_
+14	نام	N	NPP	12	_	_	_	_
+
+7	که	SUBR	NCL	5	_	_	_	_	_	_
+16	که	SUBR	NCL	15	_	_	_	_	_	_
+24	داشتن	N	NPP	21	_	_	_	_	_	_
+
+
+26	نام	N	NPP	23	_	_	_	_	_	_
+38	او	PR	MOZ	37	_	_	_	_	_	_
+41	راه	N	PREDEP	43	_	_	_	_	_	_
+42	او	PR	MOZ	41	_	_	_	_	_	_
+
+5	که	SUBR	NCL	3	_	_	_	_	_
+10	که	SUBR	NCL	3	_	_	_	_	_
+18	خود	PR	POSDEP	17	_	_	_	_	_
+19	او	PR	MOZ	18	_	_	_	_	_
+
+11	نشان	N	NVE	12	_	_	_	_	_	_
+21	همان	ADJ	NPREMOD	22	_	_	_	_	_	_
+23	سابق	ADJ	NPOSTMOD	22	_	_	_	_	_	_
+
+
+11	هر	ADJ	NPREMOD	12	_	_	_	_
+16	او	PR	MOZ	15	_	_	_	_
+
+
+9	او	PR	MOZ	8	_	_	_	_	_
+16	بیشتری	ADJ	NPOSTMOD	15	_	_	_	_	_
+17	او	PR	PREDEP	18	_	_	_	_	_
+
+
+12	عمل	N	NVE	13	_	_	_	_
+
+10	ت	PR	MOZ	9	_	_	_	_	_	_
+19	تو	PR	MOZ	16	_	_	_	_	_	_
+25	این	ADJ	NPREMOD	26	_	_	_	_	_	_
+
+2	این	ADJ	NPREMOD	3	_	_	_	_
+9	ت	PR	MOZ	8	_	_	_	_
+
+12	آنها	PR	POSDEP	13	_	_	_	_
+
+3	آنها	PR	MOZ	2	_	_	_
+
+2	آنها	PR	PREDEP	3	_	_	_	_
+5	این	ADJ	NPREMOD	6	_	_	_	_
+12	آنها	PR	MOZ	11	_	_	_	_
+
+10	بر	PREP	NPP	9	_	_	_	_	_
+
+6	آنها	PR	POSDEP	5	_	_	_
+
+3	که	SUBR	NCL	2	_	_	_	_	_
+8	آنها	PR	PREDEP	9	_	_	_	_	_
+12	مختلف	ADJ	NPOSTMOD	11	_	_	_	_	_
+
+3	این	ADJ	NPREMOD	4	_	_	_
+
+5	آن	ADJ	NPREMOD	6	_	_	_	_	_
+10	خود	PR	MOZ	9	_	_	_	_	_
+19	هیچ	ADJ	NPREMOD	20	_	_	_	_	_
+
+3	روز	N	MOZ	1	_	_	_	_
+9	مردم	N	MOZ	8	_	_	_	_
+
+4	مردم	N	MOZ	3	_	_	_
+7	همان	ADJ	NPREMOD	8	_	_	_
+
+6	که	SUBR	NCL	2	_	_	_	_
+
+
+5	آن	PR	MOZ	4	_	_	_
+
+
+2	آن	ADJ	NPREMOD	3	_	_	_	_
+8	آنها	PR	POSDEP	7	_	_	_	_
+14	شان	PR	MOZ	11	_	_	_	_
+
+9	که	SUBR	NCL	7	_	_	_	_
+
+7	که	SUBR	NCL	4	_	_	_	_
+
+
+
+
+1	سپس	SUBR	ROOT	0	_	_	_
+
+
+9	که	SUBR	NCL	3	_	_	_	_	_
+10	تو	PR	PREDEP	14	_	_	_	_	_
+13	ت	PR	MOZ	12	_	_	_	_	_
+
+
+7	همان	ADJ	NPREMOD	8	_	_	_	_	_
+17	که	SUBR	VCL	16	_	_	_	_	_
+
+2	دیگر	ADJ	NPOSTMOD	1	_	_	_	_	_	_	_
+6	که	SUBR	NCL	4	_	_	_	_	_	_	_
+19	او	PR	PREDEP	20	_	_	_	_	_	_	_
+
+7	که	SUBR	NCL	6	_	_	_	_
+
+11	پس	SUBR	VCL	10	_	_	_	_	_
+
+
+2	که	SUBR	NCL	1	_	_	_	_	_	_
+8	گرفتن	N	POSDEP	7	_	_	_	_	_	_
+
+3	که	SUBR	AVCL	2	_	_	_	_	_	_	_
+10	همان	ADJ	NPREMOD	11	_	_	_	_	_	_	_
+13	پس	SUBR	AJUCL	12	_	_	_	_	_	_	_
+16	که	SUBR	VCL	15	_	_	_	_	_	_	_
+22	همین	PR	POSDEP	21	_	_	_	_	_	_	_
+
+12	او	PR	PREDEP	13	_	_	_	_	_	_
+17	سپس	SUBR	AJUCL	16	_	_	_	_	_	_
+
+2	که	SUBR	NCL	1	_	_	_	_	_	_
+15	شان	PR	MOZ	14	_	_	_	_	_	_
+
+2	گرفتن	N	POSDEP	1	_	_	_	_	_
+8	آن	PR	MOZ	7	_	_	_	_	_
+
+2	که	SUBR	NCL	1	_	_	_	_	_	_	_	_	_	_
+27	او	PR	MOZ	26	_	_	_	_	_	_	_	_	_	_
+34	این	ADJ	NPREMOD	35	_	_	_	_	_	_	_	_	_	_
+40	او	PR	PREDEP	41	_	_	_	_	_	_	_	_	_	_
+
+
+2	این	ADJ	NPREMOD	3	_	_	_	_	_	_
+11	که	SUBR	NCL	8	_	_	_	_	_	_
+14	این	ADJ	NPREMOD	15	_	_	_	_	_	_
+
+
+5	اش	PR	MOZ	4	_	_	_	_
+6	که	SUBR	NCL	4	_	_	_	_
+13	عمل	N	NVE	14	_	_	_	_
+
+2	که	SUBR	NCL	1	_	_	_	_	_	_
+
+3	این	ADJ	NPREMOD	4	_	_	_	_	_
+10	پس	SUBR	VCL	9	_	_	_	_	_
+13	اش	PR	MOZ	12	_	_	_	_	_
+
+2	دیگر	ADJ	POSDEP	1	_	_	_	_
+4	دیروز	N	MOZ	3	_	_	_	_
+
+2	این	ADJ	NPREMOD	3	_	_	_	_
+7	که	SUBR	NCL	5	_	_	_	_
+10	او	PR	MOZ	9	_	_	_	_
+
+3	این	ADJ	NPREMOD	4	_	_	_	_
+
+2	چندین	ADJ	NPREMOD	3	_	_	_	_
+10	روز	N	ADVRB	12	_	_	_	_
+11	راه	N	NE	12	_	_	_	_
+14	استفاده	N	NCONJ	12	_	_	_	_
+
+8	که	SUBR	ACL	6	_	_	_	_	_
+15	او	PR	POSDEP	14	_	_	_	_	_
+
+
+
+
+7	راه	N	VPRT	8	_	_	_	_
+
+6	خود	PR	MOZ	5	_	_	_
+
+14	خود	PR	MOZ	13	_	_	_	_	_
+
+
+2	او	PR	PREDEP	3	_	_	_	_	_	_
+8	که	SUBR	NCL	5	_	_	_	_	_	_
+9	چند	ADJ_INTG	NPREMOD	10	_	_	_	_	_	_
+13	گذشته	ADJ	NPOSTMOD	12	_	_	_	_	_	_
+17	که	SUBR	NCL	15	_	_	_	_	_	_
+24	او	PR	POSDEP	23	_	_	_	_	_	_
+
+6	آن	PR	PREDEP	7	_	_	_	_	_
+11	دیگری	ADJ	NPOSTMOD	10	_	_	_	_	_
+
+5	همان	PR	PREDEP	6	_	_	_	_	_
+8	که	SUBR	VCL	7	_	_	_	_	_
+10	آن	PR	PREDEP	11	_	_	_	_	_
+
+2	این	ADJ	NPREMOD	3	_	_	_	_
+6	خود	PR	MOZ	5	_	_	_	_
+9	سپس	SUBR	VCL	8	_	_	_	_
+
+1	سپس	SUBR	ROOT	0	_	_	_	_
+5	ای	ADR	VCONJ	12	_	_	_	_
+
+5	من	PR	MOZ	4	_	_	_	_	_	_	_
+7	که	SUBR	NCL	4	_	_	_	_	_	_	_
+9	آن	PR	POSDEP	8	_	_	_	_	_	_	_
+22	دیگری	ADJ	NPOSTMOD	21	_	_	_	_	_	_	_
+25	انجام	N	NVE	26	_	_	_	_	_	_	_
+
+6	این	ADJ	APREMOD	7	_	_	_	_
+15	او	PR	MOZ	14	_	_	_	_
+
+7	که	SUBR	NCL	4	_	_	_	_
+
+
+12	مردم	N	PREDEP	15	_	_	_	_
+13	آن	ADJ	NPREMOD	14	_	_	_	_
+
+
+5	که	SUBR	NCL	3	_	_	_	_
+10	او	PR	MOZ	7	_	_	_	_
+
+
+
+2	بر	PREP	NPP	1	_	_	_	_	_	_	_
+5	که	SUBR	NCL	1	_	_	_	_	_	_	_
+6	همه	ADJ	NPREMOD	7	_	_	_	_	_	_	_
+8	خود	PR	MOZ	7	_	_	_	_	_	_	_
+25	که	SUBR	NCL	23	_	_	_	_	_	_	_
+
+5	این	ADJ	NPREMOD	6	_	_	_	_
+
+2	او	PR	MOZ	1	_	_	_	_
+6	که	SUBR	AVCL	3	_	_	_	_
+11	هیچ	ADJ	NPREMOD	12	_	_	_	_
+
+1	همه	ADJ	NPREMOD	3	_	_	_	_
+2	این	ADJ	NPREMOD	3	_	_	_	_
+14	که	SUBR	NCL	13	_	_	_	_
+16	او	PR	MOZ	15	_	_	_	_
+
+1	این	ADJ	NPREMOD	2	_	_	_
+
+2	که	SUBR	NCL	1	_	_	_	_
+11	خود	PR	MOZ	10	_	_	_	_
+
+2	ایشان	PR	PREDEP	3	_	_	_
+
+5	دایم	ADJ	POSDEP	4	_	_	_
+
+1	آن	ADJ	NPREMOD	2	_	_	_
+
+9	که	SUBR	VCL	8	_	_	_	_	_
+14	آن	ADJ	NPREMOD	15	_	_	_	_	_
+19	خود	PR	MOZ	18	_	_	_	_	_
+
+12	بین	N	VPRT	13	_	_	_	_	_	_
+15	تمام	ADJ	NPREMOD	16	_	_	_	_	_	_
+17	که	SUBR	NCL	16	_	_	_	_	_	_
+
+7	که	SUBR	NCL	4	_	_	_	_
+
+
+3	که	SUBR	NCL	2	_	_	_	_
+6	بر	PREP	AJPP	9	_	_	_	_
+11	آن	PR	PREDEP	12	_	_	_	_
+
+2	آن	ADJ	NPREMOD	3	_	_	_	_
+4	که	SUBR	NCL	3	_	_	_	_
+8	شان	PR	MOZ	7	_	_	_	_
+
+8	مردم	N	MOZ	7	_	_	_
+
+2	این	ADJ	NPREMOD	3	_	_	_	_
+12	او	PR	MOZ	11	_	_	_	_
+
+3	آن	ADJ	NPREMOD	4	_	_	_	_
+7	نام	N	NPP	5	_	_	_	_
+10	که	SUBR	NCL	5	_	_	_	_
+11	مردم	N	PREDEP	12	_	_	_	_
+
+5	که	SUBR	NCL	2	_	_	_	_
+12	او	PR	MOZ	11	_	_	_	_
+
+11	بسیاری	ADJ	NPOSTMOD	10	_	_	_	_
+
+5	که	SUBR	NCL	2	_	_	_	_	_
+
+
+4	آنها	PR	MOZ	3	_	_	_	_
+
+
+2	این	ADJ	NPREMOD	3	_	_	_	_
+12	او	PR	MOZ	11	_	_	_	_
+
+7	برای	PREP	NPP	4	_	_	_
+9	او	PR	MOZ	8	_	_	_
+
+2	که	SUBR	NCL	1	_	_	_	_
+5	آنها	PR	MOZ	4	_	_	_	_
+
+3	این	ADJ	NPREMOD	4	_	_	_	_	_	_	_	_	_
+10	خود	PR	MOZ	8	_	_	_	_	_	_	_	_	_
+29	ما	PR	POSDEP	28	_	_	_	_	_	_	_	_	_
+
+7	ما	PR	PREDEP	8	_	_	_	_	_
+11	که	SUBR	NCL	10	_	_	_	_	_
+
+
+2	که	SUBR	NCL	1	_	_	_	_	_
+5	او	PR	MOZ	4	_	_	_	_	_
+
+6	آنقدر	ADV	ADVRB	7	_	_	_	_	_
+
+8	او	PR	AJPP	9	_	_	_
+
+7	خود	PR	MOZ	6	_	_	_	_
+11	ت	PR	MOZ	10	_	_	_	_
+14	انجام	N	NVE	15	_	_	_	_
+
+19	آنجا	PR	AJPP	20	_	_	_	_	_
+
+3	آن	PR	POSDEP	2	_	_	_
+
+3	این	ADJ	NPREMOD	4	_	_	_	_	_	_
+12	هر	ADJ	NPREMOD	13	_	_	_	_	_	_
+
+
+6	بر	PREP	AJPP	8	_	_	_
+
+6	او	PR	POSDEP	5	_	_	_	_
+
+6	خود	PR	MOZ	5	_	_	_	_
+12	بین	PREP	NPP	11	_	_	_	_
+13	او	PR	POSDEP	12	_	_	_	_
+16	انجام	N	NVE	17	_	_	_	_
+
+13	دیگر	ADJ	NPOSTMOD	12	_	_	_	_	_
+
+13	دیگر	ADJ	NPOSTMOD	12	_	_	_	_	_
+14	بر	PREP	AJPP	16	_	_	_	_	_
+15	آنجا	PR	POSDEP	14	_	_	_	_	_
+
+8	دیگر	ADJ	NPOSTMOD	7	_	_	_	_
+
+5	بر	PREP	AJPP	7	_	_	_
+6	آنها	PR	POSDEP	5	_	_	_
+
+3	آن	ADJ	NPREMOD	4	_	_	_	_
+6	خود	PR	MOZ	5	_	_	_	_
+
+7	که	SUBR	NCL	4	_	_	_	_
+
+
+6	بر	PREP	AJPP	8	_	_	_
+7	او	PR	POSDEP	6	_	_	_
+
+9	که	SUBR	NCL	7	_	_	_	_	_	_
+25	که	SUBR	NCL	18	_	_	_	_	_	_
+27	او	PR	MOZ	26	_	_	_	_	_	_
+
+6	که	SUBR	NCL	4	_	_	_	_	_
+
+
+10	که	SUBR	VCL	9	_	_	_	_	_	_
+
+6	خود	PR	MOZ	5	_	_	_	_
+9	آن	PR	AJPP	10	_	_	_	_
+
+8	آن	ADJ	NPREMOD	9	_	_	_	_
+13	خواست	N	POSDEP	11	_	_	_	_
+14	من	PR	MOZ	13	_	_	_	_
+
+2	دیگر	ADJ	POSDEP	1	_	_	_	_	_	_
+
+
+
+6	که	SUBR	VCL	5	_	_	_	_	_	_
+
+3	زیر	PREP	VPRT	5	_	_	_
+4	بار	N	POSDEP	3	_	_	_
+
+8	که	SUBR	VCL	7	_	_	_	_
+9	این	ADJ	NPREMOD	10	_	_	_	_
+
+10	که	SUBR	VCL	9	_	_	_	_
+15	تازه	ADJ	NE	14	_	_	_	_
+
+
+8	برای	PREP	ADVRB	11	_	_	_	_
+9	ما	PR	POSDEP	8	_	_	_	_
+
+14	این	ADJ	NPREMOD	15	_	_	_	_
+
+10	دوباره	ADV	ADVRB	9	_	_	_	_
+12	آن	ADJ	NPREMOD	13	_	_	_	_
+
+2	این	ADJ	NPREMOD	3	_	_	_
+
+2	این	ADJ	NPREMOD	3	_	_	_	_	_
+7	مردم	N	MOZ	6	_	_	_	_	_
+15	او	PR	MOZ	14	_	_	_	_	_
+
+6	بر	PREP	AJPP	8	_	_	_	_
+7	آنان	PR	POSDEP	6	_	_	_	_
+11	آنان	PR	PREDEP	12	_	_	_	_
+
+2	که	SUBR	NCL	1	_	_	_	_	_	_	_
+16	او	PR	PREDEP	17	_	_	_	_	_	_	_
+
+2	او	PR	PREDEP	3	_	_	_	_
+6	پس	SUBR	VCL	5	_	_	_	_
+
+
+
+10	که	SUBR	VCL	9	_	_	_	_	_
+15	نگاه	N	NVE	16	_	_	_	_	_
+
+2	او	PR	PREDEP	3	_	_	_
+
+10	که	SUBR	NCL	2	_	_	_	_
+
+9	که	SUBR	NCL	1	_	_	_	_
+
+
+3	که	SUBR	NCL	2	_	_	_	_
+7	بزرگ	ADJ	NCONJ	5	_	_	_	_
+
+
+14	این	ADJ	NPREMOD	15	_	_	_	_	_
+
+11	اش	PR	MOZ	10	_	_	_	_	_	_
+14	که	SUBR	VCL	13	_	_	_	_	_	_
+15	این	ADJ	NPREMOD	16	_	_	_	_	_	_
+19	شدن	N	NEZ	17	_	_	_	_	_	_
+
+2	نیز	ADV	ADVRB	7	_	_	_	_
+4	او	PR	MOZ	3	_	_	_	_
+
+2	این	ADJ	NPREMOD	3	_	_	_	_	_	_
+17	اش	PR	MOZ	16	_	_	_	_	_	_
+
+
+1	چون	SUBR	AJUCL	11	_	_	_	_
+
+5	نام	N	NVE	9	_	_	_	_	_
+6	او	PR	PREDEP	7	_	_	_	_	_
+11	او	PR	PREDEP	12	_	_	_	_	_
+
+4	گرفتن	N	MOZ	3	_	_	_	_	_
+5	او	PR	MOZ	4	_	_	_	_	_
+13	که	SUBR	VCL	12	_	_	_	_	_
+17	آنان	PR	POSDEP	16	_	_	_	_	_
+
+3	خود	PR	MOZ	2	_	_	_	_
+5	روی	PREP	VPP	7	_	_	_	_
+
+
+13	هیچ	ADJ	NPREMOD	14	_	_	_	_	_
+19	او	PR	MOZ	18	_	_	_	_	_
+
+1	هر	ADJ	NPREMOD	2	_	_	_	_	_
+6	او	PR	MOZ	5	_	_	_	_	_
+13	او	PR	MOZ	12	_	_	_	_	_
+16	که	SUBR	VCL	15	_	_	_	_	_
+
+3	که	SUBR	VCL	2	_	_	_	_	_
+
+10	خود	PR	POSDEP	9	_	_	_	_
+
+3	بر	PREP	AJPP	5	_	_	_	_	_	_
+9	که	SUBR	NCL	8	_	_	_	_	_	_
+
+3	این	ADJ	NPREMOD	4	_	_	_	_	_	_
+6	که	SUBR	NCL	4	_	_	_	_	_	_
+8	هم	ADV	ADVRB	9	_	_	_	_	_	_
+14	سپس	SUBR	VCL	13	_	_	_	_	_	_
+22	تمام	ADJ	NPREMOD	23	_	_	_	_	_	_
+
+4	این	ADJ	NPREMOD	5	_	_	_
+
+4	که	SUBR	VCL	3	_	_	_	_	_	_	_	_	_
+6	این	ADJ	NPREMOD	7	_	_	_	_	_	_	_	_	_
+25	شدن	N	MOZ	23	_	_	_	_	_	_	_	_	_
+26	ت	PR	MOZ	25	_	_	_	_	_	_	_	_	_
+29	که	SUBR	NCL	27	_	_	_	_	_	_	_	_	_
+34	ت	PR	MOZ	33	_	_	_	_	_	_	_	_	_
+41	این	ADJ	NPREMOD	42	_	_	_	_	_	_	_	_	_
+
+3	این	ADJ	POSDEP	2	_	_	_	_	_	_
+21	این	ADJ	APREMOD	22	_	_	_	_	_	_
+29	دادن	N	MOZ	25	_	_	_	_	_	_
+
+1	هنگامی	N	ADVRB	20	_	_	_	_	_	_
+2	که	SUBR	NCL	1	_	_	_	_	_	_
+24	او	PR	MOZ	23	_	_	_	_	_	_
+
+8	او	PR	MOZ	7	_	_	_	_	_	_
+11	که	SUBR	VCL	10	_	_	_	_	_	_
+
+2	او	PR	PREDEP	3	_	_	_	_	_
+16	خود	PR	MOZ	15	_	_	_	_	_
+
+16	مردم	N	NPP	14	_	_	_	_	_	_	_	_	_
+17	که	SUBR	NCL	16	_	_	_	_	_	_	_	_	_
+20	او	PR	MOZ	19	_	_	_	_	_	_	_	_	_
+34	اش	PR	MOZ	33	_	_	_	_	_	_	_	_	_
+36	این	ADJ	NPREMOD	37	_	_	_	_	_	_	_	_	_
+42	که	SUBR	NCL	37	_	_	_	_	_	_	_	_	_
+
+1	سپس	SUBR	ROOT	0	_	_	_	_	_
+20	او	PR	PREDEP	21	_	_	_	_	_
+

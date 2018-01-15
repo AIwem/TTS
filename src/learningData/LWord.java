@@ -91,13 +91,13 @@ public class LWord {
 	 *  
 	 * The adjectives of this Word. 
 	 */
-	private ArrayList<LWord> adjectives;
+//	private ArrayList<LWord> adjectives;
 	
 	/**
 	 *  
 	 * The mozaf_elaih of this Word. 
 	 */	
-	private ArrayList<LWord> mozaf_elaih;
+//	private ArrayList<LWord> mozaf_elaih;
 
 	public LWord(String wordStr) {
 		
@@ -139,6 +139,11 @@ public class LWord {
 				_semanticTags.add(SemanticTag.fromString(parts[i]));
 		
 	}
+	
+	public String getWordRecord(){
+		return _wordRecord;
+	}
+	
 	//	wordRecord format: 4	برادر	N	OBJ	5	برادر§n-14090	نفر§n-13075	role	_	_	Arg1	_	
 	public String toString(){
 		String str = "";
