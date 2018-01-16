@@ -18,24 +18,26 @@ import model.ScenePart;
 public class EvaluateModel {
 	
 	private ArrayList<Instance> testData = new ArrayList<Instance>();
-	private Map<ScenePart, Map<ScenePart, ArrayList<Instance>>> confusionMatrix = new HashedMap<ScenePart, Map<ScenePart,ArrayList<Instance>>>();
 	private Map<ScenePart, Map<ScenePart, Integer>> numericalConfusionMatrix = new HashedMap<ScenePart, Map<ScenePart, Integer>>();
+	private Map<ScenePart, Map<ScenePart, ArrayList<Instance>>> confusionMatrix = new HashedMap<ScenePart, Map<ScenePart,ArrayList<Instance>>>();
 	private Map<ScenePart, Double> precisions = new HashedMap<ScenePart, Double>();
 	private Map<ScenePart, Double> recalls = new HashedMap<ScenePart, Double>();
 	private double averageAccuracy = -1;
+	private int testDataNumber = -1;
 		
 	public EvaluateModel(String testFilename, String outputFilename){
 		
 		importInstances(testFilename, outputFilename);
 	}
 	
+	@SuppressWarnings("resource")
 	private void importInstances(String testFilename, String outputFilename){		
 				
 		BufferedReader testStream = null;
 		BufferedReader outputStream = null;
 		
 		try
-		{
+		{	int testDataNum = 0;
 			testStream = new BufferedReader(new InputStreamReader(new FileInputStream(testFilename), "utf-8"));		
 			outputStream = new BufferedReader(new InputStreamReader(new FileInputStream(outputFilename), "utf-8"));
 		
@@ -44,7 +46,7 @@ public class EvaluateModel {
 			
 			while (testLine != null && outputLine != null)
 			{
-				//line format: N MOZ null هست§n-12706 YES static_object
+				//line format: N ADVRB  ArgM_MNR خصوصيت_رواني§n-12725 role_state
 				testLine = testStream.readLine();
 				
 				//output format: static_object 
@@ -55,13 +57,18 @@ public class EvaluateModel {
 					testLine = testLine.trim();
 					outputLine = outputLine.trim();
 					
-					System.out.println(testLine);
-					String[] recordElem = testLine.split("( )");
+					if(testLine.equalsIgnoreCase("") || outputLine.equalsIgnoreCase("")){
+						System.out.println();	
+						continue;
+					}
+					testDataNum++;
+//					System.out.println(testLine);
+					String[] recordElem = testLine.split("( )+");
 					
 					Instance record = null;
 					
-					if(recordElem != null && recordElem.length == 6){
-						record = new Instance(testLine, recordElem[5], outputLine);
+					if(recordElem != null && recordElem.length == 5){
+						record = new Instance(testLine, recordElem[4], outputLine);
 						testData.add(record);
 					}
 					else{
@@ -69,16 +76,15 @@ public class EvaluateModel {
 						throw new Exception("bad format in testFile: " + testFilename);
 					}
 				}
-				
-				
 			}
+			testDataNumber = testDataNum;
+			
 			testStream.close();
-			outputStream.close();
+			outputStream.close();			
 		}
 		catch(Exception e){
 			e.printStackTrace();
-		}
-			
+		}			
 	}
 	
 	private void populateConfusionMatrix(){
@@ -88,21 +94,28 @@ public class EvaluateModel {
 		for(Instance record : testData){
 			
 			System.out.println(record + " --- " + record.classifiedSceneElement);
+			
 			boolean hasRow = false;
+			
 			hasRow = confusionMatrix.containsKey(record.trueSceneElement);
+			
 			Map<ScenePart, ArrayList<Instance>> row = null;
 			
 			if(hasRow == false){//it is a new row!
 				ArrayList<Instance> newList = new ArrayList<Instance>();
 				newList.add(record);
+				
 				row = new HashedMap<ScenePart, ArrayList<Instance>>();
+				
 				row.put(record.classifiedSceneElement, newList);
+				
 				confusionMatrix.put(record.trueSceneElement, row);
 			}
 			else{
 				row = confusionMatrix.get(record.trueSceneElement);
 				if(row != null){
 					ArrayList<Instance> intendedList = null;
+
 					if(row.containsKey(record.classifiedSceneElement)){
 						intendedList = row.get(record.classifiedSceneElement);
 						intendedList.add(record);
@@ -190,7 +203,7 @@ public class EvaluateModel {
 		System.out.println("\nconfusionMatrix\n");
 		
 		for(ScenePart row: confusionMatrix.keySet()){
-			System.out.println("------------------row: " + row);
+			System.out.println("true------------------row: " + row);
 			Map<ScenePart, ArrayList<Instance>> rowMap  = confusionMatrix.get(row);
 			for(ScenePart column:rowMap.keySet()){				
 				ArrayList<Instance> list = rowMap.get(column);
@@ -205,7 +218,7 @@ public class EvaluateModel {
 		System.out.println("\nNumericalConfusionMatrix\n");
 		
 		for(ScenePart row: numericalConfusionMatrix.keySet()){
-			System.out.println("------------------row: " + row);
+			System.out.println("true------------------row: " + row);
 			Map<ScenePart, Integer> rowMap  = numericalConfusionMatrix.get(row);
 			
 //			System.out.println();
@@ -243,7 +256,7 @@ public class EvaluateModel {
 		System.out.println("\naverage accuracy\n");
 		
 		int sorat = 0;
-		int makhraj = 500;
+		int makhraj = testDataNumber;//1454
 		
 		for(ScenePart row: numericalConfusionMatrix.keySet()){
 			Map<ScenePart, Integer> rowMap  = numericalConfusionMatrix.get(row);
@@ -251,16 +264,46 @@ public class EvaluateModel {
 				sorat += rowMap.get(row);
 			}
 		}
+		System.out.println(sorat + " sorat");
+		System.out.println(makhraj + " makhraj");
+		averageAccuracy = (sorat*1.0)/(makhraj*1.0);	
+		System.out.println(averageAccuracy*100);		
+	}
+	
+	public void printAverageAccuracyForPositiveClasses(){
+		
+		System.out.println("\naverage accuracy for positive classes (excluding no and junk)\n");
+		
+		int sorat = 0;
+		int makhraj = 528;//519;//519  for normal testSet and 528 for num2 testset
+		
+		for(ScenePart row: numericalConfusionMatrix.keySet()){
+			Map<ScenePart, Integer> rowMap  = numericalConfusionMatrix.get(row);
+			
+			if(rowMap.containsKey(row))			
+				if(row != ScenePart.NO && row != ScenePart.JUNK)
+					sorat += rowMap.get(row);		
+		}
+		
+		System.out.println(sorat + " sorat");
+		System.out.println(makhraj + " makhraj");
+		
 		averageAccuracy = (sorat*1.0)/(makhraj*1.0);	
 		System.out.println(averageAccuracy*100);		
 	}
 	
 	public static void main(String[] args) {
-		EvaluateModel evaluator = new EvaluateModel("dataset/96-09-29CRFTestFile.arff", "dataset/out_12.arff");
-			
+		System.out.println("بسم الله الرحمن الرحیم و توکلت علی الله");
+//		EvaluateModel evaluator = new EvaluateModel("dataset/96-10-25CRFTestdataset.arff", "dataset/96-10-25out.arff");
+//		EvaluateModel evaluator = new EvaluateModel("dataset/96-10-26CRFTestdataset-junk.arff", "dataset/96-10-26out-junk.arff");
+//		EvaluateModel evaluator = new EvaluateModel("dataset/96-10-26CRFTestdataset-junk-num.arff", "dataset/96-10-26out-junk-num.arff");
+		EvaluateModel evaluator = new EvaluateModel("dataset/96-10-26CRFTestdataset-junk-num2.arff", "dataset/96-10-26out-junk-num2.arff");
+		
 		evaluator.populateConfusionMatrix();
 		
 		evaluator.populateNumericalConfusionMatrix();
+		
+//		evaluator.printConfusionMatrix();
 		
 		evaluator.printNumericalConfusionMatrix();
 
@@ -275,5 +318,9 @@ public class EvaluateModel {
 		evaluator.printPrecisions_recalls();
 		
 		evaluator.printAverageAccuracy();
+		
+		evaluator.printAverageAccuracyForPositiveClasses();
+		
+		System.out.println("الحمدلله رب العالمین");
 	}	
 }

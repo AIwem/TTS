@@ -3,7 +3,10 @@ package model;
 public enum SemanticTag {
 	// Main arguments
 	Arg0, Arg1, Arg2, Arg3, Arg4, Arg5,
-	ArgM_COM,ArgM_LOC,ArgM_DIR,ArgM_GOL,ArgM_MNR,ArgM_TMP,ArgM_EXT,ArgM_REC,ArgM_PRP,ArgM_CAU,ArgM_DIS,ArgM_MOD,ArgM_NEG,ArgM_ADV,ArgM_CND, ArgM_INS;
+	ArgM_COM, ArgM_LOC, ArgM_DIR, ArgM_GOL, 
+	ArgM_MNR, ArgM_TMP, ArgM_EXT, ArgM_REC,
+	ArgM_PRP, ArgM_CAU, ArgM_DIS, ArgM_MOD,
+	ArgM_NEG, ArgM_ADV, ArgM_CND, ArgM_INS;
 		
 //	ARG0_AGENT,				// Agent of event
 //	

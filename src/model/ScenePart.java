@@ -30,7 +30,8 @@ public enum ScenePart {
 	STATIC_OBJECT_STATE,
 	DYNAMIC_OBJECT_STATE,
 		
-	NO;
+	NO, 
+	JUNK;
 //	UNKNOWN
 	
 	public static ScenePart fromString(String scenePart){

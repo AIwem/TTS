@@ -2,9 +2,11 @@ package userInterface;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 import learningData.LSentence;
@@ -14,11 +16,12 @@ import model.ScenePart;
 public class LUI {
 	
 	public static String removedCorpora = "inputStory/96-10-23full_scene_junk_dash_ArgM_WSD_space_corr2_ya_quran-dyn-made-rolle-loocation-rooz-dore-rSharp.arff";
-	public static String oldFullCorpora = "inputStory/96-10-24cleanedWrongSemSRLDataSet.arff";
+	public static String oldFullCorpora = "inputStory/96-10-25cleanedWrongSemSRLDataSet.arff";
 //	public static String junkCorpora = "inputStory/junks.arff";
 //	public static String deletedStopWordCorpora = "inputStory/deletedStopWords.arff";
 	
-	public static String CRFcorpora = "dataset/96-10-24CRFdataset.arff";
+	public static String CRFcorpora = "dataset/96-10-26CRFcorpora-junk.arff";
+	public static String CRFDatasetFile = "dataset/96-10-26CRFdataset-junk.arff";
 	
 	public static ArrayList<LSentence> LoadDataset(String corporaName){
 		
@@ -74,6 +77,7 @@ public class LUI {
 		}
 		return sentences;		
 	}
+	
 	/**
 	 * replace sentences with full information from file:
 	 * 96-10-23full_scene_junk_dash_ArgM_WSD_space_corr2_ya_quran-dyn-made-rolle-loocation-rooz-dore-rSharp
@@ -102,16 +106,24 @@ public class LUI {
 //				print(oldFullSent);
 				
 				for(LWord oldWord:oldFullSent.getWords()){
-					if(removedSent.hasWordwithNumber(oldWord._number))
-						compSent.addWord(removedSent.getWordwithNumber(oldWord._number));
-					else{
+//					print("-" + oldWord);
+					
+					if(removedSent.hasWordwithNumber(oldWord._number)){
+						LWord compWord = removedSent.getWordwithNumber(oldWord._number);
+						compSent.addWord(compWord);
+//						print(" " + compWord.getCorporaStr()+ "\n");
+					}
+					else{						
 						oldWord._wsd_name = "null";
 						oldWord._super_wsd_name = "null";
-						oldWord._scenePart = ScenePart.NO;
+						oldWord._scenePart = ScenePart.JUNK;
+						oldWord.makeNLRecord();
 						compSent.addWord(oldWord);
+//						print(" " + oldWord.getCorporaStr()+ "\n");
 					}
+					
 				}
-				print(compSent);
+//				print(compSent.getCompleteStr());
 				CRFcorp.println(compSent.getCompleteStr());			
 			}
 						
@@ -123,7 +135,8 @@ public class LUI {
 
 		
 	}
-		
+
+	@SuppressWarnings("unused")
 	public static void completeSentences(){
 			
 		try {
@@ -131,7 +144,7 @@ public class LUI {
 			ArrayList<LSentence> oldFullSentences =  LoadDataset(oldFullCorpora);
 //			ArrayList<LSentence> junks =  LoadDataset(junkCorpora);
 //			ArrayList<LSentence> deletedStopWords =  LoadDataset(deletedStopWordCorpora);
-//			@SuppressWarnings("unused")
+//			
 			ArrayList<LSentence> cleanedWords =  LoadDataset("inputStory/cleanedWrongSemSRLDataSet.arff");
 			
 			
@@ -233,6 +246,7 @@ public class LUI {
 		System.out.println(s);
 	}
 	
+	@SuppressWarnings("unused")
 	private static void print(LSentence sentence){
 		if(sentence == null)
 			System.out.println("");
@@ -246,12 +260,44 @@ public class LUI {
 		System.out.println();
 	}
 
+	public static void createDataSet(){
+		ArrayList<LSentence> crfSentences =  LoadDataset(CRFcorpora);
+		if(crfSentences == null)
+			return;
+		try {
+			PrintWriter CRFdataset = new PrintWriter(CRFDatasetFile, "UTF-8");
+		
+			int wordNum = 0;
+			int sentNum = 0;
+			for(LSentence crfSent:crfSentences){
+				
+				ArrayList<String> sentRecords = crfSent.getDatasetStr();
+				
+				for(String wordRecord:sentRecords){
+					CRFdataset.println(wordRecord);
+					wordNum++;
+				}
+				
+				CRFdataset.println();
+				sentNum++;
+			}
+			
+			print("words: " + wordNum + "  sentences: " + sentNum + " in file: \"" + CRFDatasetFile.substring(CRFDatasetFile.indexOf("/")+1) + "\"");
+			
+			CRFdataset.close();
+		
+		} catch (FileNotFoundException | UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		
+	}
 	
 	public static void main(String[] args){
 		print("بسم الله الرحمن الرحیم و توکلت علی الله");
 		
 //		ArrayList<LSentence> allSentences =  LoadDataset(removedCorpora);
-		completeSentences2();
+//		completeSentences2();
+		createDataSet();
 		
 		print("الحمدلله رب العالمین");
 	}

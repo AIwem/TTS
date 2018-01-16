@@ -99,13 +99,17 @@ public class LWord {
 	 */	
 //	private ArrayList<LWord> mozaf_elaih;
 
+	/**
+	 * This constructor based on the format of wordStr make imperfect of perfect LWord object. 
+	 * @param wordStr
+	 */
 	public LWord(String wordStr) {
 		
 		_wordRecord = wordStr;
 		
 		_wordRecord = _wordRecord.trim();
 		
-		//wordRecord format: 4	برادر	N	OBJ	5	برادر§n-14090	نفر§n-13075	role	_	_	Arg1	_	
+		//perfect wordRecord format: 4	برادر	N	OBJ	5	برادر§n-14090	نفر§n-13075	role	_	_	Arg1	_	
 		String[] parts = _wordRecord.split("(\t)+");
 		
 		if(parts == null)
@@ -125,23 +129,88 @@ public class LWord {
 		_syntaxTag = DependencyRelationType.fromString(parts[3]);
 		
 		_srcOfSynTag_number = Integer.parseInt(parts[4]);
+
+		int index = -1;
 		
-		_wsd_name = parts[5];
+		//sign of imperfect wordRecord
+		//imperfect wordRecord foramt: 1	او	PR	SBJ	5	_	_	Arg0	_
+		if(parts[5].equalsIgnoreCase("_") || parts[5].equalsIgnoreCase("Y"))
+			index = 7;
 		
-		_super_wsd_name = parts[6];
-		
-		_scenePart = ScenePart.fromString(parts[7]);
-		
+		//perfect wordRecord foramt: 4	برادر	N	OBJ	5	برادر§n-14090	نفر§n-13075	role	_	_	Arg1	_				
+		else{
+			_wsd_name = parts[5];
+			
+			_super_wsd_name = parts[6];
+			
+			_scenePart = ScenePart.fromString(parts[7]);
+			
+			index = 10;
+		}
 		_semanticTags = new ArrayList<SemanticTag>();
 		
-		for(int i = 10; i < parts.length; i++)
+		for(int i = index; i < parts.length; i++)
 			if(parts[i] != null && !parts[i].equalsIgnoreCase("_"))
-				_semanticTags.add(SemanticTag.fromString(parts[i]));
-		
+				_semanticTags.add(SemanticTag.fromString(parts[i]));		
 	}
 	
 	public String getWordRecord(){
 		return _wordRecord;
+	}
+	
+	//wordRecord format: 4	برادر	N	OBJ	5	برادر§n-14090	نفر§n-13075	role	_	_	Arg1	_
+	/**
+	 * This method update _wordRecord of this Lword to include _wsd_name, _super_wsd_name, and _scenePart
+	 */
+	public void makeNLRecord() {
+		//2	مجموعا	ADV	ADVRB	5	_	_	ArgM-ADV	_
+		String oldRecord = _wordRecord;
+		String[] elems = oldRecord.split("(\t)+");
+		
+		if(elems == null)
+			return;
+				
+		//wordRecord format: 4	برادر	N	OBJ	5
+		String newRecord = "" + elems[0] + "\t" + elems[1] + "\t"+ elems[2] + "\t"+ elems[3] + "\t" + elems[4] + "\t";
+
+		//sign of imperfect wordRecord
+		if(elems[5].trim() != null && (elems[5].trim().equalsIgnoreCase("_") || elems[5].equalsIgnoreCase("Y")))
+			newRecord += _wsd_name + "\t" + _super_wsd_name + "\t" + _scenePart.toString().toLowerCase() + "\t";
+		
+		for(int i = 5; i < elems.length; i++)
+			newRecord += elems[i] + "\t";
+		
+//		newRecord = newRecord.replace("-", "_");
+		_wordRecord = newRecord.trim();		
+	}
+	
+	//wordRecord format: 4	برادر	N	OBJ	5	برادر§n-14090	نفر§n-13075	role	_	_	Arg1	_
+	public String getCorporaStr(){
+		
+		return _wordRecord;
+	}
+	
+	//PR MOZ null نفر§n-13075 YES role
+	public ArrayList<String> getDatasetRecord(){
+		ArrayList<String> records = new ArrayList<String>();
+		String str = "";
+		
+		str += _gPOS + " " + _syntaxTag + " "; 
+		
+		if(_semanticTags == null || _semanticTags.size() == 0){
+			str += "null " +  _super_wsd_name + " " + _scenePart.toString().toLowerCase();
+			records.add(str);
+		}
+		else{
+			String temp = str;
+			for(SemanticTag st:_semanticTags){
+				
+				str = temp + " " + st + " " +  _super_wsd_name + " " + _scenePart.toString().toLowerCase();
+				records.add(str);
+			}
+		}
+		
+		return records;
 	}
 	
 	//	wordRecord format: 4	برادر	N	OBJ	5	برادر§n-14090	نفر§n-13075	role	_	_	Arg1	_	

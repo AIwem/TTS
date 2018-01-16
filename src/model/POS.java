@@ -5,6 +5,7 @@ public enum POS
 	N,
 	V,
 	ADJ,
+	ADV,
 	ADR,
 	CONJ,
 	NUM,
@@ -17,7 +18,7 @@ public enum POS
 	LATIN,          
 	ARAB,
 	UNKNOWN;				
-
+	
 	public static POS fromString(String posTag){
 		if (posTag != null)
 			for (POS pos : POS.values()) 

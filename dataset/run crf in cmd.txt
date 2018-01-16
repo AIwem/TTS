@@ -1,6 +1,6 @@
 root folder: فلودری که tarinFile , testFile توش هستند.
 train:
-java -cp "D:\education\PhD khanom\project\search\CRF\source\mallet-2.0.8\mallet-2.0.8\class;D:\education\PhD khanom\project\search\CRF\source\mallet-2.0.8\mallet-2.0.8\lib\mallet-deps.jar" cc.mallet.fst.SimpleTagger --train true --model-file 96-10-24crfModel  96-10-24CRFTrainFile.arff
+java -cp "D:\education\PhD khanom\project\search\CRF\source\mallet-2.0.8\mallet-2.0.8\class;D:\education\PhD khanom\project\search\CRF\source\mallet-2.0.8\mallet-2.0.8\lib\mallet-deps.jar" cc.mallet.fst.SimpleTagger --train true --model-file 96-10-25crfModel  96-10-25CRFTraindataset.arff
 
 test:
-java -cp "D:\education\PhD khanom\project\search\CRF\source\mallet-2.0.8\mallet-2.0.8\class;D:\education\PhD khanom\project\search\CRF\source\mallet-2.0.8\mallet-2.0.8\lib\mallet-deps.jar" cc.mallet.fst.SimpleTagger --model-file 966-10-24crfModel 96-10-24CRFTestFile.arff
+java -cp "D:\education\PhD khanom\project\search\CRF\source\mallet-2.0.8\mallet-2.0.8\class;D:\education\PhD khanom\project\search\CRF\source\mallet-2.0.8\mallet-2.0.8\lib\mallet-deps.jar" cc.mallet.fst.SimpleTagger --model-file 96-10-25crfModel 96-10-25CRFTestdataset.arff > 96-10-25out.arff

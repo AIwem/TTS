@@ -135,10 +135,22 @@ public class LSentence {
 		
 		String comp = "";
 		for(LWord wrd:_words)
-			comp += wrd.getWordRecord() + "\n";
+			comp += wrd.getCorporaStr() + "\n";
 //			comp += wrd.toString() + "\n";
 		
 		return comp;
+	}
+	
+	public ArrayList<String> getDatasetStr(){
+		if (_words == null || _words.size() == 0)
+			return null;
+		
+		ArrayList<String> sentRecords = new ArrayList<String>();
+		
+		for(LWord wrd:_words)
+			sentRecords.addAll(wrd.getDatasetRecord());
+		
+		return sentRecords;
 	}
 	
 	public String toString(){
