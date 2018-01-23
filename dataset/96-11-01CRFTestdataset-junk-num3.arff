@@ -1510,3 +1510,41 @@ ADJ MOS  Arg2 null no
 V ROOT null رخداد§n-13136 no
 PUNC PUNC null null junk
 
+CONJ VCONJ  ArgM_DIS null junk
+N SBJ  Arg0 جانور§n-12239 dynamic_object
+N SBJ  Arg0 جانور§n-12239 dynamic_object
+PREP VPRT null null junk
+N VPRT null خصوصيت_رواني§n-12725 role_state
+V PREDEP null null junk
+CONJ VCONJ null null junk
+N NVE null خصوصيت_رواني§n-12725 dynamic_object_state
+V ROOT null null junk
+SUBR VCL  Arg1 null junk
+ADJ NPREMOD null null junk
+N SBJ  Arg1 نفر§n-13075 role
+N MOS  Arg2 نفر§n-13075 role
+V PRD null null junk
+PUNC PUNC null null junk
+
+SUBR AJUCL  ArgM_CND null junk
+N SBJ  Arg0 جان_دار§n-10393 dynamic_object
+PR PREDEP null null junk
+POSTP OBJ  Arg1 null junk
+V PRD null رخداد§n-13136 dynamic_object_action
+PR SBJ  Arg1 null junk
+PREP MOS  Arg2 null junk
+N MOS  Arg2 مشخصه§n-12756 role_state
+V ROOT null رخداد§n-13136 role_action
+PUNC PUNC null null junk
+
+N SBJ  Arg0 خصوصيت_رواني§n-12725 role
+PREP NPP  Arg3 null junk
+N NPP  Arg3 جانور§n-12239 dynamic_object
+N NVE null خصوصيت_رواني§n-12725 role_intent
+V ROOT null null role_action
+SUBR VCL  Arg1 null junk
+PREP NPP  Arg3 null junk
+PR POSDEP null null junk
+N NVE null مشخصه§n-12756 role_state
+V VCL null رخداد§n-13136 dynamic_object_action
+PUNC PUNC null null junk

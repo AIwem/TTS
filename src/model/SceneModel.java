@@ -793,7 +793,7 @@ public class SceneModel {
 			return new RoleAction(this, word._wordName, word._wsd);
 		else if(scenePart == ScenePart.DYNAMIC_OBJECT)
 			return new DynamicObject(this, word._wordName, word._wsd);
-		else if(scenePart == ScenePart.OBJECT_ACTION)
+		else if(scenePart == ScenePart.DYNAMIC_OBJECT_ACTION)
 			return new ObjectAction(this, word._wordName, word._wsd);
 		else if(scenePart == ScenePart.STATIC_OBJECT)
 			return new StaticObject(this, word._wordName, word._wsd);				

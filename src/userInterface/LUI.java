@@ -21,7 +21,7 @@ public class LUI {
 //	public static String deletedStopWordCorpora = "inputStory/deletedStopWords.arff";
 	
 	public static String CRFcorpora = "dataset/96-10-26CRFcorpora-junk.arff";
-	public static String CRFDatasetFile = "dataset/96-10-26CRFdataset-junk.arff";
+	public static String CRFDatasetFile = "dataset/96-11-01CRFdataset-junk.arff";
 	
 	public static ArrayList<LSentence> LoadDataset(String corporaName){
 		

@@ -1,6 +1,6 @@
-root folder: فلودری که tarinFile , testFile توش هستند.
+﻿root folder: فلودری که tarinFile , testFile توش هستند.
 train:
-java -cp "D:\education\PhD khanom\project\search\CRF\source\mallet-2.0.8\mallet-2.0.8\class;D:\education\PhD khanom\project\search\CRF\source\mallet-2.0.8\mallet-2.0.8\lib\mallet-deps.jar" cc.mallet.fst.SimpleTagger --train true --model-file 96-10-25crfModel  96-10-25CRFTraindataset.arff
+java -cp "D:\education\PhD khanom\project\search\CRF\source\mallet-2.0.8\mallet-2.0.8\class;D:\education\PhD khanom\project\search\CRF\source\mallet-2.0.8\mallet-2.0.8\lib\mallet-deps.jar" cc.mallet.fst.SimpleTagger --train true --model-file 96-11-01crfModel  96-11-01CRFTraindataset-junk-num3.arff
 
 test:
-java -cp "D:\education\PhD khanom\project\search\CRF\source\mallet-2.0.8\mallet-2.0.8\class;D:\education\PhD khanom\project\search\CRF\source\mallet-2.0.8\mallet-2.0.8\lib\mallet-deps.jar" cc.mallet.fst.SimpleTagger --model-file 96-10-25crfModel 96-10-25CRFTestdataset.arff > 96-10-25out.arff
+java -cp "D:\education\PhD khanom\project\search\CRF\source\mallet-2.0.8\mallet-2.0.8\class;D:\education\PhD khanom\project\search\CRF\source\mallet-2.0.8\mallet-2.0.8\lib\mallet-deps.jar" cc.mallet.fst.SimpleTagger --model-file 96-11-01crfModel 96-11-01CRFTestdataset-junk-num3.arff > 96-11-01out-junk-num3.arff

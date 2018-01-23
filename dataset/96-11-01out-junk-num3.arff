@@ -10,7 +10,7 @@ junk
 role_action 
 junk 
 junk 
-role_state 
+no 
 role_action 
 junk 
 junk 
@@ -22,7 +22,7 @@ junk
 time 
 junk 
 junk 
-no 
+role 
 junk 
 role 
 junk 
@@ -97,7 +97,7 @@ junk
 junk 
 
 role 
-role 
+role_state 
 role 
 junk 
 junk 
@@ -173,8 +173,8 @@ junk
 role_intent 
 junk 
 junk 
-role 
 no 
+role_state 
 junk 
 junk 
 role_action 
@@ -280,9 +280,9 @@ junk
 junk 
 
 role 
-no 
+role 
 junk 
-no 
+role_state 
 junk 
 static_object 
 role_action 
@@ -298,7 +298,7 @@ junk
 no 
 location 
 static_object 
-no 
+junk 
 junk 
 
 role 
@@ -403,7 +403,7 @@ role
 junk 
 junk 
 junk 
-location 
+no 
 role_intent 
 junk 
 junk 
@@ -805,7 +805,7 @@ junk
 junk 
 
 junk 
-junk 
+role 
 junk 
 role 
 junk 
@@ -858,7 +858,7 @@ junk
 junk 
 role_state 
 role_action 
-no 
+junk 
 junk 
 junk 
 junk 
@@ -1152,9 +1152,9 @@ junk
 junk 
 junk 
 junk 
-time 
-no 
-no 
+role_state 
+role_state 
+role_intent 
 role_action 
 junk 
 location 
@@ -1195,12 +1195,12 @@ junk
 junk 
 junk 
 no 
-role_intent 
-role_action 
+role_state 
+no 
 junk 
 junk 
-junk 
-role_intent 
+no 
+no 
 role_state 
 junk 
 role_state 
@@ -1358,7 +1358,7 @@ location
 junk 
 junk 
 junk 
-role_intent 
+no 
 no 
 role_action 
 junk 
@@ -1507,6 +1507,45 @@ no
 junk 
 junk 
 no 
+role_action 
+junk 
+
+junk 
+dynamic_object 
+dynamic_object 
+junk 
+role_state 
+junk 
+junk 
+role_intent 
+junk 
+junk 
+junk 
+role 
+role 
+junk 
+junk 
+
+junk 
+static_object 
+junk 
+junk 
+role_action 
+junk 
+junk 
+role_state 
+role_action 
+junk 
+
+role 
+junk 
+dynamic_object 
+role_intent 
+junk 
+junk 
+junk 
+junk 
+role_intent 
 role_action 
 junk 
 

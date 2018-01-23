@@ -256,14 +256,16 @@ public class EvaluateModel {
 		System.out.println("\naverage accuracy\n");
 		
 		int sorat = 0;
-		int makhraj = testDataNumber;//1454
+		int makhraj = testDataNumber;//1465
 		
 		for(ScenePart row: numericalConfusionMatrix.keySet()){
 			Map<ScenePart, Integer> rowMap  = numericalConfusionMatrix.get(row);
+		
 			if(rowMap.containsKey(row)){
 				sorat += rowMap.get(row);
 			}
 		}
+				
 		System.out.println(sorat + " sorat");
 		System.out.println(makhraj + " makhraj");
 		averageAccuracy = (sorat*1.0)/(makhraj*1.0);	
@@ -275,14 +277,22 @@ public class EvaluateModel {
 		System.out.println("\naverage accuracy for positive classes (excluding no and junk)\n");
 		
 		int sorat = 0;
-		int makhraj = 528;//519;//519  for normal testSet and 528 for num2 testset
+		int makhraj = 0;
 		
 		for(ScenePart row: numericalConfusionMatrix.keySet()){
 			Map<ScenePart, Integer> rowMap  = numericalConfusionMatrix.get(row);
 			
-			if(rowMap.containsKey(row))			
-				if(row != ScenePart.NO && row != ScenePart.JUNK)
+			if(row != ScenePart.NO && row != ScenePart.JUNK)
+				if(rowMap.containsKey(row))				
 					sorat += rowMap.get(row);		
+		}
+				
+		for(ScenePart row: numericalConfusionMatrix.keySet()){
+			Map<ScenePart, Integer> rowMap  = numericalConfusionMatrix.get(row);
+		
+			if(row != ScenePart.NO && row != ScenePart.JUNK)
+				for(ScenePart column:rowMap.keySet())
+					makhraj += rowMap.get(column);			
 		}
 		
 		System.out.println(sorat + " sorat");
@@ -297,7 +307,9 @@ public class EvaluateModel {
 //		EvaluateModel evaluator = new EvaluateModel("dataset/96-10-25CRFTestdataset.arff", "dataset/96-10-25out.arff");
 //		EvaluateModel evaluator = new EvaluateModel("dataset/96-10-26CRFTestdataset-junk.arff", "dataset/96-10-26out-junk.arff");
 //		EvaluateModel evaluator = new EvaluateModel("dataset/96-10-26CRFTestdataset-junk-num.arff", "dataset/96-10-26out-junk-num.arff");
-		EvaluateModel evaluator = new EvaluateModel("dataset/96-10-26CRFTestdataset-junk-num2.arff", "dataset/96-10-26out-junk-num2.arff");
+//		EvaluateModel evaluator = new EvaluateModel("dataset/96-10-26CRFTestdataset-junk-num2.arff", "dataset/96-10-26out-junk-num2.arff");
+//		EvaluateModel evaluator = new EvaluateModel("dataset/96-11-01CRFTestdataset-junk-num3.arff", "dataset/96-11-01out-junk-num3.arff");
+		EvaluateModel evaluator = new EvaluateModel("dataset/96-11-03CRFTestdataset-junk-num3-remove.arff", "dataset/96-11-03out-junk-num3-remove.arff");
 		
 		evaluator.populateConfusionMatrix();
 		

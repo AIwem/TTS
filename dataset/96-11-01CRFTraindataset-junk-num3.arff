@@ -303,7 +303,7 @@ PR PREDEP null null junk
 POSTP OBJ  Arg1 null junk
 N MOS  Arg2 شيء§n-12703 no
 PR MOZ null null junk
-V PRD null رخداد§n-13136 no
+V PRD null رخداد§n-13136 dynamic_object_action
 PUNC PUNC null null junk
 
 N SBJ  Arg1 نفر§n-13075 role
@@ -2532,7 +2532,7 @@ V PREDEP null null junk
 CONJ VCONJ null null junk
 N NVE null رخداد§n-13136 role_intent
 N MOZ  Arg1 null static_object
-V PRD null رخداد§n-13136 no
+V PRD null رخداد§n-13136 dynamic_object_action
 PUNC PUNC null null junk
 
 ADJ NPREMOD null null junk
@@ -2557,24 +2557,12 @@ ADV ADVRB  ArgM_ADV null junk
 ADV ADVRB  ArgM_TMP مشخصه§n-12756 no
 PR PREDEP null null junk
 POSTP OBJ  Arg1 null junk
-V VCONJ null رخداد§n-13136 no
+V VCONJ null رخداد§n-13136 dynamic_object_action
 CONJ VCONJ null null junk
 PREP VPP  Arg3 null junk
 N VPP  Arg3 جا§n-12733 location
 N MOZ null ماده§n-14032 static_object
-V PRD null رخداد§n-13136 no
-PUNC PUNC null null junk
-
-N SBJ  Arg0 خصوصيت_رواني§n-12725 role
-PREP NPP  Arg3 null junk
-N NPP  Arg3 جانور§n-12239 dynamic_object
-N NVE null خصوصيت_رواني§n-12725 role_intent
-V ROOT null null role_action
-SUBR VCL  Arg1 null junk
-PREP NPP  Arg3 null junk
-PR POSDEP null null junk
-N NVE null مشخصه§n-12756 role_state
-V VCL null رخداد§n-13136 no
+V PRD null رخداد§n-13136 dynamic_object_action
 PUNC PUNC null null junk
 
 N SBJ  Arg0 نفر§n-13075 role
@@ -2625,10 +2613,10 @@ POSTP OBJ  Arg1 null junk
 POSTP OBJ  Arg1 null junk
 PREP VPP  Arg4 null junk
 N VPP  Arg4 جا§n-12733 location
-V PREDEP null رخداد§n-13136 no
+V PREDEP null رخداد§n-13136 dynamic_object_action
 CONJ VCONJ null null junk
 ADJ MOS  Arg2 مشخصه§n-12756 role_intent
-V VCL null رخداد§n-13136 no
+V VCL null رخداد§n-13136 dynamic_object_action
 SUBR AJUCL  ArgM_DIS null junk
 N SBJ  Arg0 جانور§n-12239 dynamic_object
 ADV ADVRB  ArgM_ADV null junk
@@ -5988,8 +5976,6 @@ N VPP  Arg3 ماده§n-14032 static_object
 V PRD null null junk
 PUNC PUNC null null junk
 
-
-
 PR SBJ  Arg1 null junk
 ADJ MOS  Arg2 null role_state
 CONJ AJCONJ null null junk
@@ -7014,7 +7000,7 @@ PR PREDEP null null junk
 POSTP OBJ  Arg1 null junk
 PREP VPP  Arg3 null junk
 N VPP  Arg3 جا§n-12733 location
-V VCONJ null رخداد§n-13136 no
+V VCONJ null رخداد§n-13136 dynamic_object_action
 CONJ VCONJ null null junk
 N SBJ  Arg1 نفر§n-13075 role
 PREP MOS  Arg2 null no
@@ -7026,7 +7012,7 @@ N SBJ  Arg0 جان_دار§n-10393 dynamic_object
 N OBJ  Arg1 مشخصه§n-12756 no
 PR MOZ null null junk
 POSTP OBJ  Arg1 null junk
-V ROOT null رخداد§n-13136 no
+V ROOT null رخداد§n-13136 dynamic_object_action
 PUNC PUNC null null junk
 
 CONJ VCONJ null null junk
